@@ -1,0 +1,15 @@
+## Interface: 11500
+## Title: LootTableExtreme
+## Notes: View enemy loot tables and item drop sources for WoW Classic
+## Author: YourName
+## Version: 1.0.0
+## SavedVariables: LootTableExtremeDB
+
+# Core files
+Core.lua
+Database.lua
+
+# UI files
+UI.xml
+LootFrame.lua
+Tooltip.lua
