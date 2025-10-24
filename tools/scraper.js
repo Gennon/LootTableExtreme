@@ -393,6 +393,12 @@ class WowheadScraper {
                                             return;
                                         }
                                         
+                                        // Skip Season of Discovery items (seasonId: 2)
+                                        if (item.seasonId === 2) {
+                                            console.log(`  ⊗ Skipping SoD item: ${itemName} (ID: ${itemId})`);
+                                            return;
+                                        }
+                                        
                                         const isQuestItem = item.classs === 12;
                                         
                                         if (itemName) {
@@ -780,7 +786,7 @@ async function main() {
     await scraper.initialize();
 
     const allLuaCode = [];
-    const outputFile = path.join(__dirname, 'scraped_database.lua');
+    const outputFile = path.join(__dirname, '..', 'ScrapedDatabase.lua');
 
     console.log(`\n========================================`);
     console.log(`Processing ${urls.length} URL(s)...`);
@@ -828,16 +834,28 @@ async function main() {
 
     await scraper.close();
 
-    // Write output
+    // Write output as a complete Lua module
     if (allLuaCode.length > 0) {
         const header = `-- Auto-generated loot table database from Wowhead Classic
 -- Generated: ${new Date().toISOString()}
 -- Total enemies: ${allLuaCode.length}
+-- 
+-- This file is automatically loaded by Database.lua
+-- DO NOT manually edit this file - it will be overwritten by the scraper
 
--- Add these entries to your Database.lua file in the DB.EnemyLoot table
+local DB = LootTableExtreme.Database
 
+-- Scraped enemy loot data
+DB.ScrapedLoot = {
 `;
-        const output = header + allLuaCode.join('\n\n');
+        const footer = `}
+
+-- Merge scraped data into main EnemyLoot table
+for enemyName, data in pairs(DB.ScrapedLoot) do
+    DB.EnemyLoot[enemyName] = data
+end
+`;
+        const output = header + allLuaCode.join('\n\n') + footer;
         
         fs.writeFileSync(outputFile, output, 'utf-8');
         
@@ -846,7 +864,7 @@ async function main() {
         console.log(`========================================`);
         console.log(`Generated ${allLuaCode.length} enemy entries`);
         console.log(`Output saved to: ${outputFile}`);
-        console.log(`\nCopy the generated code into your Database.lua file.`);
+        console.log(`\nThe file is ready to be loaded by WoW - no manual copying needed!`);
     } else {
         console.log('\n✗ No data was scraped.');
     }

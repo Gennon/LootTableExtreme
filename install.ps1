@@ -42,6 +42,7 @@ $filesToCopy = @(
     "LootTableExtreme.toc",
     "Core.lua",
     "Database.lua",
+    "ScrapedDatabase.lua",
     "UI.xml",
     "LootFrame.lua",
     "Tooltip.lua"

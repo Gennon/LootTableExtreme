@@ -1,9 +1,14 @@
 -- Auto-generated loot table database from Wowhead Classic
--- Generated: 2025-10-24T10:17:56.405Z
+-- Generated: 2025-10-24T12:01:25.503Z
 -- Total enemies: 1
+-- 
+-- This file is automatically loaded by Database.lua
+-- DO NOT manually edit this file - it will be overwritten by the scraper
 
--- Add these entries to your Database.lua file in the DB.EnemyLoot table
+local DB = LootTableExtreme.Database
 
+-- Scraped enemy loot data
+DB.ScrapedLoot = {
     -- Bristleback Water Seeker
     ["Bristleback Water Seeker"] = {
         npcId = 3260,
@@ -34,10 +39,8 @@
             {itemId = 2216, dropChance = 0.2},
             {itemId = 1816, dropChance = 0.2},
             {itemId = 1767, dropChance = 0.2},
-            {itemId = 211838, dropChance = 0.2},
             {itemId = 1766, dropChance = 0.2},
             {itemId = 1768, dropChance = 0.2},
-            {itemId = 211821, dropChance = 0.2},
             {itemId = 1764, dropChance = 0.2},
             {itemId = 3376, dropChance = 0.2},
             {itemId = 3377, dropChance = 0.2},
@@ -48,7 +51,6 @@
             {itemId = 1794, dropChance = 0.2},
             {itemId = 1791, dropChance = 0.2},
             {itemId = 1739, dropChance = 0.2},
-            {itemId = 211834, dropChance = 0.2},
             {itemId = 1790, dropChance = 0.2},
             {itemId = 1792, dropChance = 0.2},
             {itemId = 1740, dropChance = 0.1},
@@ -58,14 +60,15 @@
             {itemId = 1744, dropChance = 0.1},
             {itemId = 1789, dropChance = 0.1},
             {itemId = 1788, dropChance = 0.1},
-            {itemId = 211820, dropChance = 0.1},
             {itemId = 1742, dropChance = 0.1},
             {itemId = 1787, dropChance = 0.1},
             {itemId = 1745, dropChance = 0.1},
-            {itemId = 211819, dropChance = 0.1},
-            {itemId = 211833, dropChance = 0.1},
-            {itemId = 211836, dropChance = 0.1},
             {itemId = 1743, dropChance = 0.1},
             {itemId = 15210, dropChance = 0.1}
         },
-    },
+    },}
+
+-- Merge scraped data into main EnemyLoot table
+for enemyName, data in pairs(DB.ScrapedLoot) do
+    DB.EnemyLoot[enemyName] = data
+end
