@@ -1,0 +1,9 @@
+# Wowhead Classic Enemy URLs
+# Add one URL per line to batch scrape multiple enemies
+# Lines starting with # are comments
+
+# Example entries:
+https://www.wowhead.com/classic/npc=3260/bristleback-water-seeker
+# https://www.wowhead.com/classic/npc=116/defias-bandit
+# https://www.wowhead.com/classic/npc=40/kobold-tunneler
+# https://www.wowhead.com/classic/npc=448/hogger

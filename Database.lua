@@ -110,11 +110,59 @@ function DB:BuildItemSourcesCache()
 end
 
 -- Get loot table for a specific enemy
+-- Enriches the data with item information from WoW API
 function DB:GetEnemyLoot(enemyName)
-    return self.EnemyLoot[enemyName]
+    local enemyData = self.EnemyLoot[enemyName]
+    if not enemyData then
+        return nil
+    end
+    
+    -- Enrich loot data with WoW item information
+    if enemyData.loot then
+        for _, item in ipairs(enemyData.loot) do
+            if not item.name then
+                -- Fetch item data from WoW API
+                local itemName, itemLink, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
+                if itemName then
+                    item.name = itemName
+                    item.quality = itemQuality or DB.Quality.COMMON
+                    item.texture = itemTexture
+                    
+                    -- Check if it's a quest item by scanning tooltip
+                    item.isQuestItem = self:IsQuestItem(item.itemId)
+                end
+            end
+        end
+    end
+    
+    return enemyData
 end
 
--- Get top N sources for an item
+-- Check if an item is a quest item
+function DB:IsQuestItem(itemId)
+    -- Create a hidden tooltip to scan the item
+    if not self.scanTooltip then
+        self.scanTooltip = CreateFrame("GameTooltip", "LootTableExtremeScanTooltip", nil, "GameTooltipTemplate")
+        self.scanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+    end
+    
+    self.scanTooltip:ClearLines()
+    self.scanTooltip:SetHyperlink("item:" .. itemId)
+    
+    -- Check tooltip lines for quest-related text
+    for i = 1, self.scanTooltip:NumLines() do
+        local line = getglobal("LootTableExtremeScanTooltipTextLeft" .. i)
+        if line then
+            local text = line:GetText()
+            if text and (string.find(text, "Quest") or string.find(text, "Unique")) then
+                return true
+            end
+        end
+    end
+    
+    return false
+end
+
 function DB:GetTopItemSources(itemId, maxResults)
     maxResults = maxResults or 3
     local sources = self.ItemSources[itemId]

@@ -1,0 +1,25 @@
+{
+  "name": "loottable-scraper",
+  "version": "1.0.0",
+  "description": "Wowhead Classic loot table scraper for LootTableExtreme",
+  "main": "scraper.js",
+  "scripts": {
+    "scrape": "node scraper.js",
+    "scrape-list": "node scraper.js --list enemies.txt",
+    "test": "node scraper.js --url https://www.wowhead.com/classic/npc=3260/bristleback-water-seeker",
+    "test-debug": "node scraper.js --url https://www.wowhead.com/classic/npc=3260/bristleback-water-seeker --debug"
+  },
+  "keywords": [
+    "wow",
+    "classic",
+    "loot",
+    "scraper",
+    "wowhead"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
