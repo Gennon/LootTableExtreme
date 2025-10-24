@@ -1,0 +1,1 @@
+tools/wowhead_loot.db filter=lfs diff=lfs merge=lfs -text
