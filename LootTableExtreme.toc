@@ -8,6 +8,7 @@
 # Core files
 Core.lua
 Database.lua
+ScrapedDatabase.lua
 
 # UI files
 UI.xml
