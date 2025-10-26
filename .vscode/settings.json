@@ -21,7 +21,8 @@
     "FauxScrollFrame_GetOffset",
     "FauxScrollFrame_OnVerticalScroll",
     "UIParent",
-    "getglobal"
+    "getglobal",
+    "FauxScrollFrame_SetOffset"
   ],
   "Lua.type.weakUnionCheck": true
 }

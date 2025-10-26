@@ -18,6 +18,13 @@ local lootRows = {}
 
 -- Initialize the loot frame
 function LootTableExtreme:InitializeLootFrame()
+    -- Add background textures manually for Classic 1.12 compatibility
+    local bg = frame:CreateTexture(nil, "BACKGROUND")
+    bg:SetAllPoints(frame)
+    bg:SetTexture("Interface\\DialogFrame\\UI-DialogBox-Background")
+    bg:SetHorizTile(true)
+    bg:SetVertTile(true)
+    
     -- Create loot rows
     for i = 1, MAX_DISPLAYED_ROWS do
         local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. i, frame)
@@ -151,6 +158,10 @@ function LootTableExtreme:ShowEnemyLoot(enemyName)
     
     currentEnemy = enemyName
     
+    -- Reset scroll position to top
+    FauxScrollFrame_SetOffset(scrollFrame, 0)
+    scrollFrame:SetVerticalScroll(0)
+    
     -- Update header
     LootTableExtremeFrameHeaderTitle:SetText(enemyName)
     local subtitle = string.format("Level %d-%d | %s", enemyData.level[1], enemyData.level[2], enemyData.zone or "Unknown")
@@ -234,6 +245,19 @@ function LootTableExtreme:UpdateLootDisplay()
             local item = filteredLoot[index]
             local color = self.Database:GetQualityColor(item.quality)
             
+            -- Set item icon
+            if item.itemId then
+                local _, _, _, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
+                if itemTexture then
+                    row.icon:SetTexture(itemTexture)
+                    row.icon:Show()
+                else
+                    row.icon:Hide()
+                end
+            else
+                row.icon:Hide()
+            end
+            
             -- Set item name with quality color
             row.name:SetText(item.name)
             row.name:SetTextColor(color.r, color.g, color.b)
@@ -282,6 +306,29 @@ function LootTableExtreme:ShowTargetLoot()
     end
     
     self:ShowEnemyLoot(targetName)
+end
+
+-- Handle target change event
+function LootTableExtreme:OnTargetChanged()
+    -- Only auto-refresh if the frame is visible and the user has settings enabled for it
+    if not frame:IsShown() then
+        return
+    end
+    
+    -- Check if we have a valid target
+    if not UnitExists("target") then
+        return
+    end
+    
+    -- Only update if target is an NPC (not a player)
+    if UnitIsPlayer("target") then
+        return
+    end
+    
+    local targetName = UnitName("target")
+    if targetName and self.Database:GetEnemyLoot(targetName) then
+        self:ShowEnemyLoot(targetName)
+    end
 end
 
 -- Search for enemy and show loot

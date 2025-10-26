@@ -84,8 +84,11 @@ end
 -- Event frame
 local eventFrame = CreateFrame("Frame")
 eventFrame:RegisterEvent("ADDON_LOADED")
+eventFrame:RegisterEvent("PLAYER_TARGET_CHANGED")
 eventFrame:SetScript("OnEvent", function(self, event, arg1)
     if event == "ADDON_LOADED" and arg1 == "LootTableExtreme" then
         LootTableExtreme:Initialize()
+    elseif event == "PLAYER_TARGET_CHANGED" then
+        LootTableExtreme:OnTargetChanged()
     end
 end)
