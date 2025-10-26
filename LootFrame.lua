@@ -28,9 +28,9 @@ function LootTableExtreme:InitializeLootFrame()
     -- Create loot rows
     for i = 1, MAX_DISPLAYED_ROWS do
         local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. i, frame)
-        row:SetWidth(530)
         row:SetHeight(LOOT_ROW_HEIGHT)
         row:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 5, -(i-1) * LOOT_ROW_HEIGHT)
+        row:SetPoint("RIGHT", scrollFrame, "RIGHT", -25, 0)  -- Auto-width
         
         -- Item icon
         row.icon = row:CreateTexture(nil, "ARTWORK")
@@ -41,7 +41,7 @@ function LootTableExtreme:InitializeLootFrame()
         -- Item name
         row.name = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
         row.name:SetPoint("LEFT", row.icon, "RIGHT", 5, 0)
-        row.name:SetWidth(300)
+        row.name:SetPoint("RIGHT", row, "RIGHT", -100, 0)  -- Auto-width, leave space for drop chance
         row.name:SetJustifyH("LEFT")
         
         -- Drop chance
@@ -388,18 +388,36 @@ function LootTableExtreme:UpdateModeDisplay()
     local modeToggle = LootTableExtremeFrameModeToggle
     
     if advancedMode then
-        -- Show all advanced features
+        -- Advanced mode: larger window with all features
+        frame:SetWidth(600)
+        frame:SetHeight(500)
         filtersFrame:Show()
         searchBox:Show()
         searchButton:Show()
         showTargetButton:Show()
         modeToggle:SetText("Simple")
+        
+        -- Reposition scroll frame for advanced mode
+        scrollFrame:ClearAllPoints()
+        scrollFrame:SetPoint("TOP", filtersFrame, "BOTTOM", 0, -10)
+        scrollFrame:SetPoint("LEFT", frame, "LEFT", 25, 0)
+        scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -25, 0)
+        scrollFrame:SetPoint("BOTTOM", searchBox, "TOP", 0, 10)
     else
-        -- Hide advanced features (simple mode)
+        -- Simple mode: compact window
+        frame:SetWidth(400)
+        frame:SetHeight(350)
         filtersFrame:Hide()
         searchBox:Hide()
         searchButton:Hide()
         showTargetButton:Hide()
         modeToggle:SetText("Advanced")
+        
+        -- Reposition scroll frame for simple mode (auto-fit to window)
+        scrollFrame:ClearAllPoints()
+        scrollFrame:SetPoint("TOP", LootTableExtremeFrameHeader, "BOTTOM", 0, -10)
+        scrollFrame:SetPoint("LEFT", frame, "LEFT", 15, 0)
+        scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -25, 0)  -- Less padding on right for scrollbar
+        scrollFrame:SetPoint("BOTTOM", frame, "BOTTOM", 0, 15)
     end
 end
