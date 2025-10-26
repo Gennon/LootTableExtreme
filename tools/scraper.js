@@ -205,7 +205,7 @@ class WowheadScraper {
             
             // Wait for the page to load completely
             console.log('⏳ Waiting for page to stabilize...');
-            await this.page.waitForTimeout(3000);
+            await this.page.waitForTimeout(500);
             
             // Take initial screenshot
             await this.takeScreenshot('01_page_loaded');
@@ -297,7 +297,7 @@ class WowheadScraper {
             console.log('⏳ Waiting for loot table...');
             
             // Wait for the drops tab to be available
-            await this.page.waitForTimeout(2000);
+            await this.page.waitForTimeout(500);
             
             // Try to click the "Drops" tab if it exists
             const dropsTabClicked = await this.page.evaluate(() => {
@@ -313,7 +313,7 @@ class WowheadScraper {
             
             if (dropsTabClicked) {
                 console.log('✓ Clicked Drops tab');
-                await this.page.waitForTimeout(2000); // Wait for content to load
+                await this.page.waitForTimeout(500); // Wait for content to load
             }
             
             // Scroll through the page to trigger lazy-loaded content
@@ -321,7 +321,7 @@ class WowheadScraper {
             await this.page.evaluate(() => {
                 window.scrollTo(0, document.body.scrollHeight / 2);
             });
-            await this.page.waitForTimeout(1000);
+            await this.page.waitForTimeout(500);
             
             await this.takeScreenshot('02_before_loot_extraction');
 
@@ -390,6 +390,7 @@ class WowheadScraper {
                                         
                                         // Skip items with very low drop rates
                                         if (dropChance < 0.1) {
+                                            console.log(`  ⊗ Skipping low drop: ${itemName} (ID: ${itemId}, Drop: ${dropChance.toFixed(4)}%)`);
                                             return;
                                         }
                                         
@@ -788,57 +789,133 @@ async function main() {
     const allLuaCode = [];
     const outputFile = path.join(__dirname, '..', 'ScrapedDatabase.lua');
 
+    // Check for existing progress and load already-scraped NPCs
+    const alreadyScraped = new Set();
+    let existingEntries = [];
+    
+    if (fs.existsSync(outputFile)) {
+        console.log(`\n📂 Found existing ${path.basename(outputFile)}`);
+        try {
+            const existingContent = fs.readFileSync(outputFile, 'utf-8');
+            
+            // Parse NPC IDs from existing file
+            const npcIdMatches = existingContent.matchAll(/npcId\s*=\s*(\d+)/g);
+            for (const match of npcIdMatches) {
+                alreadyScraped.add(parseInt(match[1]));
+            }
+            
+            // Extract each enemy entry to preserve them
+            const entryMatches = existingContent.matchAll(/    -- (.+?)\n    \[.+?\] = \{[\s\S]*?    \},\n/g);
+            for (const match of entryMatches) {
+                existingEntries.push(match[0]);
+            }
+            
+            console.log(`✓ Loaded ${alreadyScraped.size} already-scraped NPCs`);
+            console.log(`✓ Resume: Will skip ${alreadyScraped.size} and process remaining NPCs`);
+        } catch (error) {
+            console.log(`⚠️  Could not parse existing file: ${error.message}`);
+            console.log(`   Starting fresh...`);
+        }
+    }
+
+    // Filter out already-scraped URLs
+    const originalCount = urls.length;
+    urls = urls.filter(url => {
+        const npcIdMatch = url.match(/npc[=/](\d+)/);
+        if (npcIdMatch) {
+            const npcId = parseInt(npcIdMatch[1]);
+            return !alreadyScraped.has(npcId);
+        }
+        return true; // Keep URLs we can't parse
+    });
+
+    if (urls.length < originalCount) {
+        console.log(`\n🔄 Resume mode: Skipping ${originalCount - urls.length} already-scraped NPCs`);
+    }
+
     console.log(`\n========================================`);
     console.log(`Processing ${urls.length} URL(s)...`);
+    if (alreadyScraped.size > 0) {
+        console.log(`(${alreadyScraped.size} already completed)`);
+    }
     console.log(`========================================`);
 
-    for (const url of urls) {
-        const enemyData = await scraper.scrapeEnemyData(url);
+    let successCount = 0;
+    let failureCount = 0;
+    const startTime = Date.now();
+
+    for (let i = 0; i < urls.length; i++) {
+        const url = urls[i];
+        const progress = `[${i + 1}/${urls.length}]`;
+        const elapsed = Math.floor((Date.now() - startTime) / 1000);
+        const rate = i > 0 ? elapsed / i : 0;
+        const remaining = i > 0 ? Math.floor(rate * (urls.length - i)) : 0;
         
-        if (enemyData && enemyData.loot) {
-            // Check if we need to fetch item names
-            const missingNames = enemyData.loot.filter(item => !item.name || item.name.match(/^\d+-\d+$/));
+        console.log(`\n${progress} Progress: ${successCount} success, ${failureCount} failed | Elapsed: ${elapsed}s | ETA: ~${remaining}s`);
+        
+        try {
+            const enemyData = await scraper.scrapeEnemyData(url);
             
-            if (missingNames.length > 0) {
-                console.log(`\n📡 Fetching names for ${missingNames.length} items...`);
-                const itemIds = missingNames.map(item => item.itemId);
-                const itemData = await fetchItemNames(itemIds, enemyData.npcId);
+            if (enemyData && enemyData.loot) {
+                // Check if we need to fetch item names
+                const missingNames = enemyData.loot.filter(item => !item.name || item.name.match(/^\d+-\d+$/));
                 
-                // Update items with fetched names and drop rates
-                enemyData.loot.forEach(item => {
-                    if (itemData[item.itemId]) {
-                        item.name = itemData[item.itemId].name;
-                        item.quality = `q${itemData[item.itemId].quality}`;
-                        // Use fetched drop rate if current one is 0
-                        if (item.dropChance === 0 && itemData[item.itemId].dropChance > 0) {
-                            item.dropChance = itemData[item.itemId].dropChance;
+                if (missingNames.length > 0) {
+                    console.log(`\n📡 Fetching names for ${missingNames.length} items...`);
+                    const itemIds = missingNames.map(item => item.itemId);
+                    const itemData = await fetchItemNames(itemIds, enemyData.npcId);
+                    
+                    // Update items with fetched names and drop rates
+                    enemyData.loot.forEach(item => {
+                        if (itemData[item.itemId]) {
+                            item.name = itemData[item.itemId].name;
+                            item.quality = `q${itemData[item.itemId].quality}`;
+                            // Use fetched drop rate if current one is 0
+                            if (item.dropChance === 0 && itemData[item.itemId].dropChance > 0) {
+                                item.dropChance = itemData[item.itemId].dropChance;
+                            }
                         }
-                    }
-                });
+                    });
+                    
+                    // Remove items that still don't have names
+                    enemyData.loot = enemyData.loot.filter(item => item.name && !item.name.match(/^\d+-\d+$/));
+                    console.log(`✓ Successfully enriched data. Total items: ${enemyData.loot.length}`);
+                }
                 
-                // Remove items that still don't have names
-                enemyData.loot = enemyData.loot.filter(item => item.name && !item.name.match(/^\d+-\d+$/));
-                console.log(`✓ Successfully enriched data. Total items: ${enemyData.loot.length}`);
+                const luaCode = scraper.generateLuaCode(enemyData);
+                if (luaCode) {
+                    allLuaCode.push(luaCode);
+                    successCount++;
+                    console.log(`✓ ${progress} Successfully processed: ${enemyData.enemyName}`);
+                }
+            } else {
+                failureCount++;
+                console.log(`✗ ${progress} No data extracted from ${url}`);
             }
-            
-            const luaCode = scraper.generateLuaCode(enemyData);
-            if (luaCode) {
-                allLuaCode.push(luaCode);
-                console.log(`✓ Successfully processed: ${enemyData.enemyName}`);
-            }
+        } catch (error) {
+            failureCount++;
+            console.error(`✗ ${progress} Error processing ${url}:`, error.message);
+            // Continue with next URL even if one fails
         }
         
-        // Be nice to Wowhead servers
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        // Small delay to be polite (reduced from 2s to 500ms since we already have waits in scrapeEnemyData)
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
+        // Save progress every 10 NPCs
+        if ((i + 1) % 10 === 0 && allLuaCode.length > 0) {
+            const tempOutput = generateLuaOutput(allLuaCode);
+            fs.writeFileSync(outputFile, tempOutput, 'utf-8');
+            console.log(`💾 Progress saved (${successCount} enemies)`);
+        }
     }
 
     await scraper.close();
 
-    // Write output as a complete Lua module
-    if (allLuaCode.length > 0) {
+    // Helper function to generate Lua output
+    function generateLuaOutput(luaCodeArray) {
         const header = `-- Auto-generated loot table database from Wowhead Classic
 -- Generated: ${new Date().toISOString()}
--- Total enemies: ${allLuaCode.length}
+-- Total enemies: ${existingEntries.length + luaCodeArray.length}
 -- 
 -- This file is automatically loaded by Database.lua
 -- DO NOT manually edit this file - it will be overwritten by the scraper
@@ -855,18 +932,40 @@ for enemyName, data in pairs(DB.ScrapedLoot) do
     DB.EnemyLoot[enemyName] = data
 end
 `;
-        const output = header + allLuaCode.join('\n\n') + footer;
+        // Combine existing entries with new ones
+        const allEntries = [...existingEntries, ...luaCodeArray];
+        return header + allEntries.join('\n\n') + footer;
+    }
+
+    // Write final output as a complete Lua module
+    if (allLuaCode.length > 0 || existingEntries.length > 0) {
+        const output = generateLuaOutput(allLuaCode);
         
         fs.writeFileSync(outputFile, output, 'utf-8');
         
+        const totalTime = Math.floor((Date.now() - startTime) / 1000);
+        const avgTime = urls.length > 0 ? totalTime / urls.length : 0;
+        const totalNpcs = existingEntries.length + allLuaCode.length;
+        
         console.log(`\n========================================`);
-        console.log(`✓ Success!`);
+        console.log(`✓ Scraping Complete!`);
         console.log(`========================================`);
-        console.log(`Generated ${allLuaCode.length} enemy entries`);
-        console.log(`Output saved to: ${outputFile}`);
-        console.log(`\nThe file is ready to be loaded by WoW - no manual copying needed!`);
+        if (urls.length > 0) {
+            console.log(`Session stats:`);
+            console.log(`  Processed: ${urls.length} URLs`);
+            console.log(`  Success: ${successCount}`);
+            console.log(`  Failed: ${failureCount}`);
+            console.log(`  Time: ${totalTime}s (avg ${avgTime.toFixed(1)}s per NPC)`);
+        }
+        console.log(`\nTotal database:`);
+        console.log(`  Total NPCs: ${totalNpcs} (${existingEntries.length} existing + ${allLuaCode.length} new)`);
+        console.log(`  Output: ${outputFile}`);
+        console.log(`\n✓ The file is ready to be loaded by WoW!`);
     } else {
-        console.log('\n✗ No data was scraped.');
+        console.log('\n✗ No new data was scraped.');
+        if (alreadyScraped.size > 0) {
+            console.log(`(Existing database has ${alreadyScraped.size} NPCs)`);
+        }
     }
 }
 
