@@ -88,6 +88,15 @@ function LootTableExtreme:InitializeLootFrame()
         LootTableExtreme:ShowTargetLoot()
     end)
     
+    -- Setup mode toggle button
+    local modeToggle = LootTableExtremeFrameModeToggle
+    modeToggle:SetScript("OnClick", function()
+        LootTableExtreme:ToggleMode()
+    end)
+    
+    -- Set initial mode
+    self:UpdateModeDisplay()
+    
     -- Close button
     LootTableExtremeFrameTitle:SetScript("OnClick", function()
         frame:Hide()
@@ -183,37 +192,45 @@ function LootTableExtreme:ApplyFilters()
     if not enemyData or not enemyData.loot then return end
     
     local filters = LootTableExtremeDB.filters
+    local advancedMode = LootTableExtremeDB.ui.advancedMode
     filteredLoot = {}
     
     for _, item in ipairs(enemyData.loot) do
         local include = true
         
-        -- Check quality filters
-        if item.quality == self.Database.Quality.POOR and not filters.showPoor then
-            include = false
-        elseif item.quality == self.Database.Quality.COMMON and not filters.showCommon then
-            include = false
-        elseif item.quality == self.Database.Quality.UNCOMMON and not filters.showUncommon then
-            include = false
-        elseif item.quality == self.Database.Quality.RARE and not filters.showRare then
-            include = false
-        elseif item.quality == self.Database.Quality.EPIC and not filters.showEpic then
-            include = false
-        end
-        
-        -- Check quest item filter
-        if item.isQuestItem and not filters.showQuestItems then
-            include = false
-        end
-        
-        -- Check minimum drop chance
-        if item.dropChance < filters.minDropChance then
-            include = false
-        end
-        
-        -- Override: Always show quest items if quest filter is on
-        if item.isQuestItem and filters.showQuestItems then
-            include = true
+        -- In simple mode, show all items
+        if advancedMode then
+            -- Check quality filters
+            if item.quality == self.Database.Quality.POOR and not filters.showPoor then
+                include = false
+            elseif item.quality == self.Database.Quality.COMMON and not filters.showCommon then
+                include = false
+            elseif item.quality == self.Database.Quality.UNCOMMON and not filters.showUncommon then
+                include = false
+            elseif item.quality == self.Database.Quality.RARE and not filters.showRare then
+                include = false
+            elseif item.quality == self.Database.Quality.EPIC and not filters.showEpic then
+                include = false
+            end
+            
+            -- Check quest item filter
+            if item.isQuestItem and not filters.showQuestItems then
+                include = false
+            end
+            
+            -- Check minimum drop chance
+            if item.dropChance < filters.minDropChance then
+                include = false
+            end
+            
+            -- Override: Always show quest items if quest filter is on
+            if item.isQuestItem and filters.showQuestItems then
+                include = true
+            end
+            -- Override: Always show quest items if quest filter is on
+            if item.isQuestItem and filters.showQuestItems then
+                include = true
+            end
         end
         
         if include then
@@ -347,5 +364,42 @@ function LootTableExtreme:SearchAndShowEnemy(searchTerm)
         if #results > 5 then
             self:Print("  ... and " .. (#results - 5) .. " more")
         end
+    end
+end
+
+-- Toggle between simple and advanced mode
+function LootTableExtreme:ToggleMode()
+    LootTableExtremeDB.ui.advancedMode = not LootTableExtremeDB.ui.advancedMode
+    self:UpdateModeDisplay()
+    
+    -- Reapply filters when switching modes
+    if currentEnemy then
+        self:ApplyFilters()
+    end
+end
+
+-- Update UI based on current mode
+function LootTableExtreme:UpdateModeDisplay()
+    local advancedMode = LootTableExtremeDB.ui.advancedMode
+    local filtersFrame = LootTableExtremeFrameFilters
+    local searchBox = LootTableExtremeFrameSearchBox
+    local searchButton = LootTableExtremeFrameSearchButton
+    local showTargetButton = LootTableExtremeFrameShowTargetButton
+    local modeToggle = LootTableExtremeFrameModeToggle
+    
+    if advancedMode then
+        -- Show all advanced features
+        filtersFrame:Show()
+        searchBox:Show()
+        searchButton:Show()
+        showTargetButton:Show()
+        modeToggle:SetText("Simple")
+    else
+        -- Hide advanced features (simple mode)
+        filtersFrame:Hide()
+        searchBox:Hide()
+        searchButton:Hide()
+        showTargetButton:Hide()
+        modeToggle:SetText("Advanced")
     end
 end
