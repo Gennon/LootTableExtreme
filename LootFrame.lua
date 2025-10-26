@@ -29,8 +29,8 @@ function LootTableExtreme:InitializeLootFrame()
     for i = 1, MAX_DISPLAYED_ROWS do
         local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. i, frame)
         row:SetHeight(LOOT_ROW_HEIGHT)
+        row:SetWidth(350)  -- Set default width
         row:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 5, -(i-1) * LOOT_ROW_HEIGHT)
-        row:SetPoint("RIGHT", scrollFrame, "RIGHT", -25, 0)  -- Auto-width
         
         -- Item icon
         row.icon = row:CreateTexture(nil, "ARTWORK")
@@ -41,7 +41,7 @@ function LootTableExtreme:InitializeLootFrame()
         -- Item name
         row.name = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
         row.name:SetPoint("LEFT", row.icon, "RIGHT", 5, 0)
-        row.name:SetPoint("RIGHT", row, "RIGHT", -100, 0)  -- Auto-width, leave space for drop chance
+        row.name:SetWidth(250)  -- Set default width
         row.name:SetJustifyH("LEFT")
         
         -- Drop chance
@@ -179,6 +179,9 @@ function LootTableExtreme:ShowEnemyLoot(enemyName)
     end
     LootTableExtremeFrameHeaderSubtitle:SetText(subtitle)
     
+    -- Ensure mode display is updated (fixes initial display issue)
+    self:UpdateModeDisplay()
+    
     -- Apply filters and show
     self:ApplyFilters()
     frame:Show()
@@ -278,9 +281,11 @@ function LootTableExtreme:UpdateLootDisplay()
             -- Set item name with quality color
             row.name:SetText(item.name)
             row.name:SetTextColor(color.r, color.g, color.b)
+            row.name:Show()
             
             -- Set drop chance
             row.chance:SetText(string.format("%.1f%%", item.dropChance))
+            row.chance:Show()
             
             -- Show quest marker if applicable
             if item.isQuestItem then
@@ -419,5 +424,13 @@ function LootTableExtreme:UpdateModeDisplay()
         scrollFrame:SetPoint("LEFT", frame, "LEFT", 15, 0)
         scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -25, 0)  -- Less padding on right for scrollbar
         scrollFrame:SetPoint("BOTTOM", frame, "BOTTOM", 0, 15)
+    end
+    
+    -- Resize rows based on mode
+    local rowWidth = advancedMode and 520 or 340
+    local nameWidth = advancedMode and 320 or 240
+    for i = 1, MAX_DISPLAYED_ROWS do
+        lootRows[i]:SetWidth(rowWidth)
+        lootRows[i].name:SetWidth(nameWidth)
     end
 end
