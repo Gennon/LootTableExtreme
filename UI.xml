@@ -131,6 +131,16 @@
                     </Anchor>
                 </Anchors>
             </Button>
+            
+            <!-- Mode Toggle Button -->
+            <Button name="$parentModeToggle" inherits="UIPanelButtonTemplate" text="Advanced">
+                <Size x="100" y="25"/>
+                <Anchors>
+                    <Anchor point="TOPRIGHT">
+                        <Offset x="-40" y="-10"/>
+                    </Anchor>
+                </Anchors>
+            </Button>
         </Frames>
         
         <Scripts>
