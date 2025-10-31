@@ -25,9 +25,12 @@ function LootTableExtreme:InitializeLootFrame()
     bg:SetHorizTile(true)
     bg:SetVertTile(true)
     
+    -- Ensure scroll frame clips its children
+    scrollFrame:SetClipsChildren(true)
+    
     -- Create loot rows
     for i = 1, MAX_DISPLAYED_ROWS do
-        local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. i, frame)
+        local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. i, scrollFrame)
         row:SetHeight(LOOT_ROW_HEIGHT)
         row:SetWidth(350)  -- Set default width
         row:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 5, -(i-1) * LOOT_ROW_HEIGHT)
@@ -423,7 +426,7 @@ function LootTableExtreme:UpdateModeDisplay()
         scrollFrame:SetPoint("TOP", LootTableExtremeFrameHeader, "BOTTOM", 0, -10)
         scrollFrame:SetPoint("LEFT", frame, "LEFT", 15, 0)
         scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -25, 0)  -- Less padding on right for scrollbar
-        scrollFrame:SetPoint("BOTTOM", frame, "BOTTOM", 0, 15)
+        scrollFrame:SetPoint("BOTTOM", frame, "BOTTOM", 0, 50)  -- Increased padding to fit within background
     end
     
     -- Resize rows based on mode
