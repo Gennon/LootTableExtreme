@@ -15,6 +15,7 @@ local MAX_DISPLAYED_ROWS = 15
 local currentEnemy = nil
 local filteredLoot = {}
 local lootRows = {}
+local updateTimer = nil
 
 -- Initialize the loot frame
 function LootTableExtreme:InitializeLootFrame()
@@ -259,6 +260,7 @@ function LootTableExtreme:UpdateLootDisplay()
     FauxScrollFrame_Update(scrollFrame, numLoot, MAX_DISPLAYED_ROWS, LOOT_ROW_HEIGHT)
     
     local offset = FauxScrollFrame_GetOffset(scrollFrame)
+    local needsRetry = false
     
     for i = 1, MAX_DISPLAYED_ROWS do
         local row = lootRows[i]
@@ -268,21 +270,30 @@ function LootTableExtreme:UpdateLootDisplay()
             local item = filteredLoot[index]
             local color = self.Database:GetQualityColor(item.quality)
             
-            -- Set item icon
+            -- Set item icon and get item info
             if item.itemId then
-                local _, _, _, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
+                local itemName, _, _, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
                 if itemTexture then
                     row.icon:SetTexture(itemTexture)
                     row.icon:Show()
                 else
                     row.icon:Hide()
+                    needsRetry = true
+                end
+                
+                -- Use server item name if available, otherwise use cached name
+                if itemName then
+                    row.name:SetText(itemName)
+                else
+                    row.name:SetText(item.name)
+                    needsRetry = true
                 end
             else
                 row.icon:Hide()
+                row.name:SetText(item.name)
             end
             
-            -- Set item name with quality color
-            row.name:SetText(item.name)
+            -- Set item name color
             row.name:SetTextColor(color.r, color.g, color.b)
             row.name:Show()
             
@@ -301,6 +312,18 @@ function LootTableExtreme:UpdateLootDisplay()
         else
             row:Hide()
         end
+    end
+    
+    -- Schedule a retry if some items weren't loaded yet
+    if needsRetry then
+        if updateTimer then
+            updateTimer:Cancel()
+        end
+        updateTimer = C_Timer.NewTimer(0.5, function()
+            if frame:IsShown() then
+                LootTableExtreme:UpdateLootDisplay()
+            end
+        end)
     end
 end
 
