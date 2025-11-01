@@ -76,5 +76,4 @@ Write-Host "1. Start World of Warcraft Classic Era" -ForegroundColor White
 Write-Host "2. Type /reload to reload the UI" -ForegroundColor White
 Write-Host "3. Type /lte to open the addon" -ForegroundColor White
 Write-Host ""
-Write-Host "Press any key to exit..."
-$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+
