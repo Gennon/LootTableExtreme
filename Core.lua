@@ -34,6 +34,9 @@ function LootTableExtreme:Initialize()
     -- Merge defaults with saved settings
     self:MergeDefaults(LootTableExtremeDB, defaults)
     
+    -- Build database caches (must be done after ScrapedDatabase.lua is loaded)
+    self.Database:BuildItemSourcesCache()
+    
     self:Print("Loaded v" .. self.version)
     self:Print("Type /lte to open the loot table viewer")
     

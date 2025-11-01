@@ -16,6 +16,7 @@ local currentEnemy = nil
 local filteredLoot = {}
 local lootRows = {}
 local updateTimer = nil
+local scrollChild = nil
 
 -- Initialize the loot frame
 function LootTableExtreme:InitializeLootFrame()
@@ -26,15 +27,24 @@ function LootTableExtreme:InitializeLootFrame()
     bg:SetHorizTile(true)
     bg:SetVertTile(true)
     
-    -- Ensure scroll frame clips its children
+    -- Ensure scroll frame is visible and clips its children
+    scrollFrame:Show()
     scrollFrame:SetClipsChildren(true)
     
-    -- Create loot rows
+    -- Create scrollChild frame for proper scrolling
+    scrollChild = CreateFrame("Frame", "LootTableExtremeScrollChild", scrollFrame)
+    scrollChild:SetWidth(scrollFrame:GetWidth())
+    scrollChild:SetHeight(MAX_DISPLAYED_ROWS * LOOT_ROW_HEIGHT)
+    scrollChild:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 0, 0)  -- Explicit positioning
+    scrollChild:Show()  -- Explicitly show the scrollChild
+    scrollFrame:SetScrollChild(scrollChild)
+    
+    -- Create loot rows (parent them to scrollChild, not scrollFrame)
     for i = 1, MAX_DISPLAYED_ROWS do
-        local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. i, scrollFrame)
+        local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. i, scrollChild)
         row:SetHeight(LOOT_ROW_HEIGHT)
         row:SetWidth(350)  -- Set default width
-        row:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 5, -(i-1) * LOOT_ROW_HEIGHT)
+        -- Don't set fixed position - will be positioned dynamically in UpdateLootDisplay
         
         -- Item icon
         row.icon = row:CreateTexture(nil, "ARTWORK")
@@ -160,12 +170,20 @@ function LootTableExtreme:CreateFilterCheckboxes()
     end)
 end
 
--- Show loot for a specific enemy
-function LootTableExtreme:ShowEnemyLoot(enemyName)
-    local enemyData = self.Database:GetEnemyLoot(enemyName)
+-- Show loot for a specific enemy (by name or NPC ID)
+function LootTableExtreme:ShowEnemyLoot(enemyNameOrId)
+    local enemyData, enemyName
+    
+    -- Check if it's an NPC ID (number) or name (string)
+    if type(enemyNameOrId) == "number" then
+        enemyData, enemyName = self.Database:GetEnemyLootByNpcId(enemyNameOrId)
+    else
+        enemyName = enemyNameOrId
+        enemyData = self.Database:GetEnemyLoot(enemyName)
+    end
     
     if not enemyData then
-        self:Print("No loot data found for: " .. enemyName)
+        self:Print("No loot data found for: " .. tostring(enemyNameOrId))
         return
     end
     
@@ -193,16 +211,21 @@ end
 
 -- Apply current filters to loot table
 function LootTableExtreme:ApplyFilters()
-    if not currentEnemy then return end
+    if not currentEnemy then 
+        return 
+    end
     
     local enemyData = self.Database:GetEnemyLoot(currentEnemy)
-    if not enemyData or not enemyData.loot then return end
+    
+    if not enemyData or not enemyData.loot then 
+        return 
+    end
     
     local filters = LootTableExtremeDB.filters
     local advancedMode = LootTableExtremeDB.ui.advancedMode
     filteredLoot = {}
     
-    for _, item in ipairs(enemyData.loot) do
+    for i, item in ipairs(enemyData.loot) do
         local include = true
         
         -- In simple mode, show all items
@@ -234,10 +257,6 @@ function LootTableExtreme:ApplyFilters()
             if item.isQuestItem and filters.showQuestItems then
                 include = true
             end
-            -- Override: Always show quest items if quest filter is on
-            if item.isQuestItem and filters.showQuestItems then
-                include = true
-            end
         end
         
         if include then
@@ -257,9 +276,14 @@ end
 function LootTableExtreme:UpdateLootDisplay()
     local numLoot = #filteredLoot
     
+    -- Calculate content height - Classic 1.12 requires minimum 480px to render
+    local contentHeight = math.max(numLoot * LOOT_ROW_HEIGHT, 480)
+    scrollChild:SetHeight(contentHeight)
+    
     FauxScrollFrame_Update(scrollFrame, numLoot, MAX_DISPLAYED_ROWS, LOOT_ROW_HEIGHT)
     
     local offset = FauxScrollFrame_GetOffset(scrollFrame)
+    
     local needsRetry = false
     
     for i = 1, MAX_DISPLAYED_ROWS do
@@ -268,51 +292,64 @@ function LootTableExtreme:UpdateLootDisplay()
         
         if index <= numLoot then
             local item = filteredLoot[index]
-            local color = self.Database:GetQualityColor(item.quality)
             
-            -- Set item icon and get item info
-            if item.itemId then
-                local itemName, _, _, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
-                if itemTexture then
-                    row.icon:SetTexture(itemTexture)
-                    row.icon:Show()
+            if not item then
+                row:Hide()
+            else
+                local color = self.Database:GetQualityColor(item.quality)
+                
+                -- Set item icon and get item info
+                if item.itemId then
+                    local itemName, _, _, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
+                    if itemTexture then
+                        row.icon:SetTexture(itemTexture)
+                        row.icon:Show()
+                    else
+                        row.icon:Hide()
+                        needsRetry = true
+                    end
+                    
+                    -- Use server item name if available, otherwise use cached name
+                    if itemName then
+                        row.name:SetText(itemName)
+                    else
+                        row.name:SetText(item.name)
+                        needsRetry = true
+                    end
                 else
                     row.icon:Hide()
-                    needsRetry = true
+                    row.name:SetText(item.name)
                 end
                 
-                -- Use server item name if available, otherwise use cached name
-                if itemName then
-                    row.name:SetText(itemName)
+                -- Set item name color
+                row.name:SetTextColor(color.r, color.g, color.b)
+                
+                -- Set drop chance
+                row.chance:SetText(string.format("%.1f%%", item.dropChance))
+                
+                -- Show quest marker if applicable
+                if item.isQuestItem then
+                    row.questMarker:Show()
                 else
-                    row.name:SetText(item.name)
-                    needsRetry = true
+                    row.questMarker:Hide()
                 end
-            else
-                row.icon:Hide()
-                row.name:SetText(item.name)
+                
+                -- Position row dynamically based on index
+                row:ClearAllPoints()
+                row:SetPoint("TOPLEFT", scrollChild, "TOPLEFT", 5, -(index-1) * LOOT_ROW_HEIGHT)
+                
+                row:Show()
             end
-            
-            -- Set item name color
-            row.name:SetTextColor(color.r, color.g, color.b)
-            row.name:Show()
-            
-            -- Set drop chance
-            row.chance:SetText(string.format("%.1f%%", item.dropChance))
-            row.chance:Show()
-            
-            -- Show quest marker if applicable
-            if item.isQuestItem then
-                row.questMarker:Show()
-            else
-                row.questMarker:Hide()
-            end
-            
-            row:Show()
         else
             row:Hide()
         end
     end
+    
+    -- Force a complete refresh of frames
+    scrollChild:Hide()
+    scrollChild:Show()
+    scrollFrame:Hide()
+    scrollFrame:Show()
     
     -- Schedule a retry if some items weren't loaded yet
     if needsRetry then
@@ -347,18 +384,26 @@ function LootTableExtreme:ShowTargetLoot()
         return
     end
     
-    local targetName = UnitName("target")
-    if not targetName then
-        self:Print("Unable to get target name")
+    -- Get NPC ID from GUID
+    local guid = UnitGUID("target")
+    if not guid then
+        self:Print("Unable to get target GUID")
         return
     end
     
-    self:ShowEnemyLoot(targetName)
+    local npcId = tonumber(guid:match("-(%d+)-%x+$"))
+    
+    if not npcId then
+        self:Print("Unable to extract NPC ID from GUID")
+        return
+    end
+    
+    self:ShowEnemyLoot(npcId)
 end
 
 -- Handle target change event
 function LootTableExtreme:OnTargetChanged()
-    -- Only auto-refresh if the frame is visible and the user has settings enabled for it
+    -- Only auto-refresh if the frame is visible
     if not frame:IsShown() then
         return
     end
@@ -373,9 +418,21 @@ function LootTableExtreme:OnTargetChanged()
         return
     end
     
-    local targetName = UnitName("target")
-    if targetName and self.Database:GetEnemyLoot(targetName) then
-        self:ShowEnemyLoot(targetName)
+    -- Get NPC ID from GUID
+    local guid = UnitGUID("target")
+    if not guid then
+        return
+    end
+    
+    local npcId = tonumber(guid:match("-(%d+)-%x+$"))
+    if not npcId then
+        return
+    end
+    
+    -- Lookup and display by NPC ID
+    local enemyData, enemyName = self.Database:GetEnemyLootByNpcId(npcId)
+    if enemyData then
+        self:ShowEnemyLoot(npcId)
     end
 end
 
