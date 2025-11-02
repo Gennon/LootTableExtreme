@@ -8,6 +8,10 @@
     "scrape-list": "node scraper.js --list enemies.txt",
     "collect-npcs": "node collectNpcs.js",
     "collect-npcs-debug": "node collectNpcs.js --debug",
+    "export": "node exportLua.js",
+    "export-filtered": "node exportLua.js --min-sample 10",
+    "query": "node queryDb.js",
+    "db-stats": "node queryDb.js stats",
     "test": "node scraper.js --url https://www.wowhead.com/classic/npc=3260/bristleback-water-seeker",
     "test-debug": "node scraper.js --url https://www.wowhead.com/classic/npc=3260/bristleback-water-seeker --debug"
   },
@@ -21,7 +25,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
     "playwright": "^1.40.0",
-    "cheerio": "^1.0.0-rc.12"
+    "sqlite3": "^5.1.7"
   }
 }

@@ -1,12 +1,12 @@
 /**
  * Wowhead Classic Loot Table Scraper
- * Extracts enemy loot data from Wowhead Classic and generates Lua database format
+ * Extracts enemy loot data from Wowhead Classic and stores in SQLite database
  */
 
 const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
-const { fetchItemNames } = require('./fetchItemNames');
+const { ScraperDatabase } = require('./database');
 
 // Quality mapping from Wowhead to our database
 const QUALITY_MAP = {
@@ -24,6 +24,7 @@ class WowheadScraper {
         this.page = null;
         this.debug = options.debug || false;
         this.screenshotDir = path.join(__dirname, 'screenshots');
+        this.database = options.database || null;
         
         // Create screenshots directory if in debug mode
         if (this.debug && !fs.existsSync(this.screenshotDir)) {
@@ -403,13 +404,20 @@ class WowheadScraper {
                                         const isQuestItem = item.classs === 12;
                                         
                                         if (itemName) {
-                                            console.log(`  ✓ Item ${index}: ${itemName} (ID: ${itemId}, Drop: ${dropChance.toFixed(2)}%)`);
+                                            console.log(`  ✓ Item ${index}: ${itemName} (ID: ${itemId}, Drop: ${dropChance.toFixed(2)}%, Sample: ${item.count || '?'}/${item.outof || '?'})`);
                                             lootItems.push({
                                                 itemId,
                                                 name: itemName,
                                                 quality,
                                                 dropChance,
-                                                isQuestItem
+                                                isQuestItem,
+                                                // Store ALL available data
+                                                dropCount: item.count || null,
+                                                sampleSize: item.outof || null,
+                                                classId: item.classs || null,
+                                                subclassId: item.subclass || null,
+                                                stackSize: item.stack || null,
+                                                seasonId: item.seasonId || null
                                             });
                                         }
                                     } catch (e) {
@@ -456,13 +464,20 @@ class WowheadScraper {
                                     const isQuestItem = item.classs === 12;
                                     
                                     if (itemName) {
-                                        console.log(`  ✓ Item ${index}: ${itemName} (ID: ${itemId}, Quality: ${quality}, Drop: ${dropChance.toFixed(2)}%)`);
+                                        console.log(`  ✓ Item ${index}: ${itemName} (ID: ${itemId}, Quality: ${quality}, Drop: ${dropChance.toFixed(2)}%, Sample: ${item.count || '?'}/${item.outof || '?'})`);
                                         lootItems.push({
                                             itemId,
                                             name: itemName,
                                             quality,
                                             dropChance,
-                                            isQuestItem
+                                            isQuestItem,
+                                            // Store ALL available data
+                                            dropCount: item.count || null,
+                                            sampleSize: item.outof || null,
+                                            classId: item.classs || null,
+                                            subclassId: item.subclass || null,
+                                            stackSize: item.stack || null,
+                                            seasonId: item.seasonId || null
                                         });
                                     }
                                 } catch (e) {
@@ -501,13 +516,20 @@ class WowheadScraper {
                             const isQuestItem = item.classs === 12 || (item.flags && (item.flags & 0x1000));
                             
                             if (itemName) {
-                                console.log(`  ✓ Item ${index}: ${itemName} (ID: ${itemId}, Quality: ${quality}, Drop: ${dropChance.toFixed(2)}%)`);
+                                console.log(`  ✓ Item ${index}: ${itemName} (ID: ${itemId}, Quality: ${quality}, Drop: ${dropChance.toFixed(2)}%, Sample: ${item.count || '?'}/${item.outof || '?'})`);
                                 lootItems.push({
                                     itemId,
                                     name: itemName,
                                     quality,
                                     dropChance,
-                                    isQuestItem
+                                    isQuestItem,
+                                    // Store ALL available data
+                                    dropCount: item.count || null,
+                                    sampleSize: item.outof || null,
+                                    classId: item.classs || null,
+                                    subclassId: item.subclass || null,
+                                    stackSize: item.stack || null,
+                                    seasonId: item.seasonId || null
                                 });
                             }
                         } catch (e) {
@@ -695,6 +717,52 @@ class WowheadScraper {
         }
     }
 
+    /**
+     * Save scraped enemy data to database
+     */
+    async saveToDatabase(enemyData, url) {
+        if (!this.database || !enemyData) {
+            return;
+        }
+
+        try {
+            // Save NPC data
+            await this.database.upsertNpc({
+                npcId: enemyData.npcId,
+                name: enemyData.enemyName,
+                levelMin: enemyData.level[0],
+                levelMax: enemyData.level[1],
+                zone: enemyData.zone,
+                elite: enemyData.elite,
+                url: url
+            });
+
+            // Save all loot drops
+            for (const item of enemyData.loot) {
+                const qualityNum = parseInt(item.quality.replace('q', ''));
+                
+                await this.database.upsertLootDrop({
+                    npcId: enemyData.npcId,
+                    itemId: item.itemId,
+                    itemName: item.name,
+                    quality: qualityNum,
+                    dropCount: item.dropCount,
+                    sampleSize: item.sampleSize,
+                    dropPercent: item.dropChance,
+                    isQuestItem: item.isQuestItem,
+                    classId: item.classId,
+                    subclassId: item.subclassId,
+                    stackSize: item.stackSize,
+                    seasonId: item.seasonId
+                });
+            }
+
+            console.log(`💾 Saved to database: ${enemyData.enemyName} with ${enemyData.loot.length} items`);
+        } catch (error) {
+            console.error(`Error saving to database:`, error.message);
+        }
+    }
+
     generateLuaCode(enemyData) {
         if (!enemyData || !enemyData.enemyName) {
             return null;
@@ -783,39 +851,28 @@ async function main() {
         console.log('🌐 Browser will be visible');
     }
 
-    const scraper = new WowheadScraper({ debug: debugMode });
+    // Initialize database
+    console.log('\n📦 Initializing database...');
+    const database = new ScraperDatabase();
+    await database.initialize();
+    
+    const sessionId = await database.startSession();
+    console.log(`✓ Started scraping session #${sessionId}`);
+
+    const scraper = new WowheadScraper({ debug: debugMode, database: database });
     await scraper.initialize();
 
     const allLuaCode = [];
     const outputFile = path.join(__dirname, '..', 'ScrapedDatabase.lua');
 
-    // Check for existing progress and load already-scraped NPCs
-    const alreadyScraped = new Set();
-    let existingEntries = [];
+    // Check database for already-scraped NPCs
+    console.log(`\n📂 Checking database for existing NPCs...`);
+    const existingNpcs = await database.all('SELECT npc_id FROM npcs');
+    const alreadyScraped = new Set(existingNpcs.map(row => row.npc_id));
     
-    if (fs.existsSync(outputFile)) {
-        console.log(`\n📂 Found existing ${path.basename(outputFile)}`);
-        try {
-            const existingContent = fs.readFileSync(outputFile, 'utf-8');
-            
-            // Parse NPC IDs from existing file
-            const npcIdMatches = existingContent.matchAll(/npcId\s*=\s*(\d+)/g);
-            for (const match of npcIdMatches) {
-                alreadyScraped.add(parseInt(match[1]));
-            }
-            
-            // Extract each enemy entry to preserve them
-            const entryMatches = existingContent.matchAll(/    -- (.+?)\n    \[.+?\] = \{[\s\S]*?    \},\n/g);
-            for (const match of entryMatches) {
-                existingEntries.push(match[0]);
-            }
-            
-            console.log(`✓ Loaded ${alreadyScraped.size} already-scraped NPCs`);
-            console.log(`✓ Resume: Will skip ${alreadyScraped.size} and process remaining NPCs`);
-        } catch (error) {
-            console.log(`⚠️  Could not parse existing file: ${error.message}`);
-            console.log(`   Starting fresh...`);
-        }
+    if (alreadyScraped.size > 0) {
+        console.log(`✓ Found ${alreadyScraped.size} NPCs already in database`);
+        console.log(`✓ Resume: Will skip these and process only new NPCs`);
     }
 
     // Filter out already-scraped URLs
@@ -831,12 +888,13 @@ async function main() {
 
     if (urls.length < originalCount) {
         console.log(`\n🔄 Resume mode: Skipping ${originalCount - urls.length} already-scraped NPCs`);
+        console.log(`   Processing ${urls.length} new NPCs`);
     }
 
     console.log(`\n========================================`);
     console.log(`Processing ${urls.length} URL(s)...`);
     if (alreadyScraped.size > 0) {
-        console.log(`(${alreadyScraped.size} already completed)`);
+        console.log(`(${alreadyScraped.size} already in database)`);
     }
     console.log(`========================================`);
 
@@ -882,6 +940,9 @@ async function main() {
                     console.log(`✓ Successfully enriched data. Total items: ${enemyData.loot.length}`);
                 }
                 
+                // Save to database
+                await scraper.saveToDatabase(enemyData, url);
+                
                 const luaCode = scraper.generateLuaCode(enemyData);
                 if (luaCode) {
                     allLuaCode.push(luaCode);
@@ -901,72 +962,90 @@ async function main() {
         // Small delay to be polite (reduced from 2s to 500ms since we already have waits in scrapeEnemyData)
         await new Promise(resolve => setTimeout(resolve, 500));
         
-        // Save progress every 10 NPCs
-        if ((i + 1) % 10 === 0 && allLuaCode.length > 0) {
-            const tempOutput = generateLuaOutput(allLuaCode);
-            fs.writeFileSync(outputFile, tempOutput, 'utf-8');
-            console.log(`💾 Progress saved (${successCount} enemies)`);
+        // Progress is automatically saved to database after each NPC
+        if ((i + 1) % 10 === 0) {
+            console.log(`💾 Progress: ${successCount} NPCs saved to database`);
         }
     }
 
     await scraper.close();
 
-    // Helper function to generate Lua output
-    function generateLuaOutput(luaCodeArray) {
-        const header = `-- Auto-generated loot table database from Wowhead Classic
+    // Note: Lua file generation is now handled by exportLua.js
+    // The scraper only populates the database
+    // To generate the Lua file, run: node exportLua.js
+
+    // Write final output as a complete Lua module (for backwards compatibility)
+    if (allLuaCode.length > 0) {
+        console.log(`\n📝 Generating Lua file for ${allLuaCode.length} NPCs...`);
+        const output = generateBasicLuaOutput(allLuaCode);
+        fs.writeFileSync(outputFile, output, 'utf-8');
+        console.log(`✓ Basic Lua file written to: ${outputFile}`);
+        console.log(`   For filtered exports, use: node exportLua.js`);
+    }
+
+    const totalTime = Math.floor((Date.now() - startTime) / 1000);
+    const avgTime = urls.length > 0 ? totalTime / urls.length : 0;
+
+    console.log(`\n========================================`);
+    console.log(`✓ Scraping Complete!`);
+    console.log(`========================================`);
+    
+    if (urls.length > 0) {
+        console.log(`Session stats:`);
+        console.log(`  Processed: ${urls.length} URLs`);
+        console.log(`  Success: ${successCount}`);
+        console.log(`  Failed: ${failureCount}`);
+        console.log(`  Time: ${totalTime}s (avg ${avgTime.toFixed(1)}s per NPC)`);
+    }
+    
+    // Complete database session
+    await database.completeSession(sessionId, {
+        npcsScraped: successCount,
+        itemsFound: allLuaCode.length,
+        errors: failureCount
+    });
+    
+    // Show database statistics
+    const stats = await database.getStats();
+    console.log(`\n📊 Database Statistics:`);
+    console.log(`  Total NPCs: ${stats.total_npcs}`);
+    console.log(`  Total Drops: ${stats.total_drops}`);
+    console.log(`  Unique Items: ${stats.unique_items}`);
+    if (stats.avg_sample_size) {
+        console.log(`  Avg Sample Size: ${Math.round(stats.avg_sample_size)}`);
+    }
+    
+    if (allLuaCode.length > 0) {
+        console.log(`\n💡 Tip: Use exportLua.js to generate filtered Lua files`);
+        console.log(`   Example: node exportLua.js --min-sample 10`);
+    }
+    
+    await database.close();
+}
+
+// Helper function to generate basic Lua output (for backwards compatibility)
+function generateBasicLuaOutput(luaCodeArray) {
+    const header = `-- Auto-generated loot table database from Wowhead Classic
 -- Generated: ${new Date().toISOString()}
--- Total enemies: ${existingEntries.length + luaCodeArray.length}
+-- Total enemies: ${luaCodeArray.length}
+-- 
+-- ⚠️  This is a basic export. For filtered exports, use: node exportLua.js
 -- 
 -- This file is automatically loaded by Database.lua
--- DO NOT manually edit this file - it will be overwritten by the scraper
 
 local DB = LootTableExtreme.Database
 
 -- Scraped enemy loot data
 DB.ScrapedLoot = {
 `;
-        const footer = `}
+    const footer = `}
 
 -- Merge scraped data into main EnemyLoot table
 for enemyName, data in pairs(DB.ScrapedLoot) do
     DB.EnemyLoot[enemyName] = data
 end
 `;
-        // Combine existing entries with new ones
-        const allEntries = [...existingEntries, ...luaCodeArray];
-        return header + allEntries.join('\n\n') + footer;
-    }
-
-    // Write final output as a complete Lua module
-    if (allLuaCode.length > 0 || existingEntries.length > 0) {
-        const output = generateLuaOutput(allLuaCode);
-        
-        fs.writeFileSync(outputFile, output, 'utf-8');
-        
-        const totalTime = Math.floor((Date.now() - startTime) / 1000);
-        const avgTime = urls.length > 0 ? totalTime / urls.length : 0;
-        const totalNpcs = existingEntries.length + allLuaCode.length;
-        
-        console.log(`\n========================================`);
-        console.log(`✓ Scraping Complete!`);
-        console.log(`========================================`);
-        if (urls.length > 0) {
-            console.log(`Session stats:`);
-            console.log(`  Processed: ${urls.length} URLs`);
-            console.log(`  Success: ${successCount}`);
-            console.log(`  Failed: ${failureCount}`);
-            console.log(`  Time: ${totalTime}s (avg ${avgTime.toFixed(1)}s per NPC)`);
-        }
-        console.log(`\nTotal database:`);
-        console.log(`  Total NPCs: ${totalNpcs} (${existingEntries.length} existing + ${allLuaCode.length} new)`);
-        console.log(`  Output: ${outputFile}`);
-        console.log(`\n✓ The file is ready to be loaded by WoW!`);
-    } else {
-        console.log('\n✗ No new data was scraped.');
-        if (alreadyScraped.size > 0) {
-            console.log(`(Existing database has ${alreadyScraped.size} NPCs)`);
-        }
-    }
+    return header + luaCodeArray.join('\n\n') + footer;
 }
 
 // Run the scraper
