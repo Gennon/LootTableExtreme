@@ -296,11 +296,18 @@ function LootTableExtreme:UpdateLootDisplay()
             if not item then
                 row:Hide()
             else
-                local color = self.Database:GetQualityColor(item.quality)
-                
-                -- Set item icon and get item info
+                -- Get item info from server if available
+                local itemName, _, itemQuality, _, _, _, _, _, _, itemTexture
                 if item.itemId then
-                    local itemName, _, _, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
+                    itemName, _, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
+                end
+                
+                -- Use server quality if available, otherwise use cached quality
+                local quality = itemQuality or item.quality
+                local color = self.Database:GetQualityColor(quality)
+                
+                -- Set item icon
+                if item.itemId then
                     if itemTexture then
                         row.icon:SetTexture(itemTexture)
                         row.icon:Show()
