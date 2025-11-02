@@ -1,11 +1,10 @@
 -- LootTableExtreme Loot Frame
--- Main UI for displaying enemy loot tables
+-- Main UI for displaying enemy loot tables and scroll rendering
 
 local frame = LootTableExtremeFrame
 local scrollFrame = LootTableExtremeFrameScrollFrame
-local searchBox = LootTableExtremeFrameSearchBox
-local searchButton = LootTableExtremeFrameSearchButton
-local showTargetButton = LootTableExtremeFrameShowTargetButton
+local scrollChild = nil
+local lootRows = {}
 
 -- Constants
 local LOOT_ROW_HEIGHT = 20
@@ -14,9 +13,7 @@ local MAX_DISPLAYED_ROWS = 15
 -- Current state
 local currentEnemy = nil
 local filteredLoot = {}
-local lootRows = {}
 local updateTimer = nil
-local scrollChild = nil
 
 -- Initialize the loot frame
 function LootTableExtreme:InitializeLootFrame()
@@ -86,25 +83,24 @@ function LootTableExtreme:InitializeLootFrame()
     self:CreateFilterCheckboxes()
     
     -- Setup search functionality
-    searchButton:SetScript("OnClick", function()
-        local searchTerm = searchBox:GetText()
+    LootTableExtremeFrameSearchButton:SetScript("OnClick", function()
+        local searchTerm = LootTableExtremeFrameSearchBox:GetText()
         if searchTerm and searchTerm ~= "" then
             LootTableExtreme:SearchAndShowEnemy(searchTerm)
         end
     end)
     
-    searchBox:SetScript("OnEnterPressed", function()
-        searchButton:Click()
+    LootTableExtremeFrameSearchBox:SetScript("OnEnterPressed", function()
+        LootTableExtremeFrameSearchButton:Click()
     end)
     
     -- Setup show target button
-    showTargetButton:SetScript("OnClick", function()
+    LootTableExtremeFrameShowTargetButton:SetScript("OnClick", function()
         LootTableExtreme:ShowTargetLoot()
     end)
     
     -- Setup mode toggle button
-    local modeToggle = LootTableExtremeFrameModeToggle
-    modeToggle:SetScript("OnClick", function()
+    LootTableExtremeFrameModeToggle:SetScript("OnClick", function()
         LootTableExtreme:ToggleMode()
     end)
     
@@ -114,59 +110,6 @@ function LootTableExtreme:InitializeLootFrame()
     -- Close button
     LootTableExtremeFrameTitle:SetScript("OnClick", function()
         frame:Hide()
-    end)
-end
-
--- Create filter checkboxes
-function LootTableExtreme:CreateFilterCheckboxes()
-    local filtersFrame = LootTableExtremeFrameFilters
-    local DB = self.Database
-    
-    local filters = {
-        {key = "showQuestItems", label = "Quest Items", x = 20, y = -25},
-        {key = "showPoor", label = "Poor", x = 130, y = -25, quality = DB.Quality.POOR},
-        {key = "showCommon", label = "Common", x = 200, y = -25, quality = DB.Quality.COMMON},
-        {key = "showUncommon", label = "Uncommon", x = 280, y = -25, quality = DB.Quality.UNCOMMON},
-        {key = "showRare", label = "Rare", x = 380, y = -25, quality = DB.Quality.RARE},
-        {key = "showEpic", label = "Epic", x = 450, y = -25, quality = DB.Quality.EPIC},
-    }
-    
-    for _, filter in ipairs(filters) do
-        local checkbox = CreateFrame("CheckButton", "LTE_Filter_" .. filter.key, filtersFrame, "UICheckButtonTemplate")
-        checkbox:SetPoint("TOPLEFT", filter.x, filter.y)
-        checkbox:SetChecked(LootTableExtremeDB.filters[filter.key])
-        
-        local label = checkbox:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
-        label:SetPoint("LEFT", checkbox, "RIGHT", 5, 0)
-        label:SetText(filter.label)
-        
-        if filter.quality then
-            local color = DB:GetQualityColor(filter.quality)
-            label:SetTextColor(color.r, color.g, color.b)
-        end
-        
-        checkbox:SetScript("OnClick", function()
-            LootTableExtremeDB.filters[filter.key] = checkbox:GetChecked()
-            LootTableExtreme:ApplyFilters()
-        end)
-    end
-    
-    -- Min drop chance slider
-    local slider = CreateFrame("Slider", "LTE_MinDropChanceSlider", filtersFrame, "OptionsSliderTemplate")
-    slider:SetPoint("TOPLEFT", 20, -50)
-    slider:SetMinMaxValues(0, 50)
-    slider:SetValue(LootTableExtremeDB.filters.minDropChance)
-    slider:SetValueStep(1)
-    slider:SetWidth(200)
-    
-    getglobal(slider:GetName() .. "Low"):SetText("0%")
-    getglobal(slider:GetName() .. "High"):SetText("50%")
-    getglobal(slider:GetName() .. "Text"):SetText("Min Drop Chance: " .. LootTableExtremeDB.filters.minDropChance .. "%")
-    
-    slider:SetScript("OnValueChanged", function(self, value)
-        getglobal(self:GetName() .. "Text"):SetText("Min Drop Chance: " .. math.floor(value) .. "%")
-        LootTableExtremeDB.filters.minDropChance = value
-        LootTableExtreme:ApplyFilters()
     end)
 end
 
@@ -221,55 +164,17 @@ function LootTableExtreme:ApplyFilters()
         return 
     end
     
-    local filters = LootTableExtremeDB.filters
     local advancedMode = LootTableExtremeDB.ui.advancedMode
-    filteredLoot = {}
-    
-    for i, item in ipairs(enemyData.loot) do
-        local include = true
-        
-        -- In simple mode, show all items
-        if advancedMode then
-            -- Check quality filters
-            if item.quality == self.Database.Quality.POOR and not filters.showPoor then
-                include = false
-            elseif item.quality == self.Database.Quality.COMMON and not filters.showCommon then
-                include = false
-            elseif item.quality == self.Database.Quality.UNCOMMON and not filters.showUncommon then
-                include = false
-            elseif item.quality == self.Database.Quality.RARE and not filters.showRare then
-                include = false
-            elseif item.quality == self.Database.Quality.EPIC and not filters.showEpic then
-                include = false
-            end
-            
-            -- Check quest item filter
-            if item.isQuestItem and not filters.showQuestItems then
-                include = false
-            end
-            
-            -- Check minimum drop chance
-            if item.dropChance < filters.minDropChance then
-                include = false
-            end
-            
-            -- Override: Always show quest items if quest filter is on
-            if item.isQuestItem and filters.showQuestItems then
-                include = true
-            end
-        end
-        
-        if include then
-            table.insert(filteredLoot, item)
-        end
-    end
-    
-    -- Sort by drop chance (highest first)
-    table.sort(filteredLoot, function(a, b)
-        return a.dropChance > b.dropChance
-    end)
+    filteredLoot = self:FilterLootData(enemyData.loot, advancedMode)
     
     self:UpdateLootDisplay()
+end
+
+-- Refresh current display (for mode changes)
+function LootTableExtreme:RefreshCurrentDisplay()
+    if currentEnemy then
+        self:ApplyFilters()
+    end
 end
 
 -- Update the loot display
@@ -371,6 +276,16 @@ function LootTableExtreme:UpdateLootDisplay()
     end
 end
 
+-- Resize loot rows based on mode
+function LootTableExtreme:ResizeLootRows(advancedMode)
+    local rowWidth = advancedMode and 520 or 340
+    local nameWidth = advancedMode and 320 or 240
+    for i = 1, MAX_DISPLAYED_ROWS do
+        lootRows[i]:SetWidth(rowWidth)
+        lootRows[i].name:SetWidth(nameWidth)
+    end
+end
+
 -- Toggle loot frame visibility
 function LootTableExtreme:ToggleLootFrame()
     if frame:IsShown() then
@@ -381,146 +296,5 @@ function LootTableExtreme:ToggleLootFrame()
         else
             self:Print("No enemy selected. Target an enemy and use /lte target")
         end
-    end
-end
-
--- Show loot for current target
-function LootTableExtreme:ShowTargetLoot()
-    if not UnitExists("target") then
-        self:Print("No target selected")
-        return
-    end
-    
-    -- Get NPC ID from GUID
-    local guid = UnitGUID("target")
-    if not guid then
-        self:Print("Unable to get target GUID")
-        return
-    end
-    
-    local npcId = tonumber(guid:match("-(%d+)-%x+$"))
-    
-    if not npcId then
-        self:Print("Unable to extract NPC ID from GUID")
-        return
-    end
-    
-    self:ShowEnemyLoot(npcId)
-end
-
--- Handle target change event
-function LootTableExtreme:OnTargetChanged()
-    -- Only auto-refresh if the frame is visible
-    if not frame:IsShown() then
-        return
-    end
-    
-    -- Check if we have a valid target
-    if not UnitExists("target") then
-        return
-    end
-    
-    -- Only update if target is an NPC (not a player)
-    if UnitIsPlayer("target") then
-        return
-    end
-    
-    -- Get NPC ID from GUID
-    local guid = UnitGUID("target")
-    if not guid then
-        return
-    end
-    
-    local npcId = tonumber(guid:match("-(%d+)-%x+$"))
-    if not npcId then
-        return
-    end
-    
-    -- Lookup and display by NPC ID
-    local enemyData, enemyName = self.Database:GetEnemyLootByNpcId(npcId)
-    if enemyData then
-        self:ShowEnemyLoot(npcId)
-    end
-end
-
--- Search for enemy and show loot
-function LootTableExtreme:SearchAndShowEnemy(searchTerm)
-    local results = self.Database:SearchEnemies(searchTerm)
-    
-    if #results == 0 then
-        self:Print("No enemies found matching: " .. searchTerm)
-    elseif #results == 1 then
-        self:ShowEnemyLoot(results[1].name)
-    else
-        self:Print("Multiple enemies found:")
-        for i = 1, math.min(5, #results) do
-            self:Print("  " .. results[i].name .. " (" .. results[i].zone .. ")")
-        end
-        if #results > 5 then
-            self:Print("  ... and " .. (#results - 5) .. " more")
-        end
-    end
-end
-
--- Toggle between simple and advanced mode
-function LootTableExtreme:ToggleMode()
-    LootTableExtremeDB.ui.advancedMode = not LootTableExtremeDB.ui.advancedMode
-    self:UpdateModeDisplay()
-    
-    -- Reapply filters when switching modes
-    if currentEnemy then
-        self:ApplyFilters()
-    end
-end
-
--- Update UI based on current mode
-function LootTableExtreme:UpdateModeDisplay()
-    local advancedMode = LootTableExtremeDB.ui.advancedMode
-    local filtersFrame = LootTableExtremeFrameFilters
-    local searchBox = LootTableExtremeFrameSearchBox
-    local searchButton = LootTableExtremeFrameSearchButton
-    local showTargetButton = LootTableExtremeFrameShowTargetButton
-    local modeToggle = LootTableExtremeFrameModeToggle
-    
-    if advancedMode then
-        -- Advanced mode: larger window with all features
-        frame:SetWidth(600)
-        frame:SetHeight(500)
-        filtersFrame:Show()
-        searchBox:Show()
-        searchButton:Show()
-        showTargetButton:Show()
-        modeToggle:SetText("Simple")
-        
-        -- Reposition scroll frame for advanced mode
-        scrollFrame:ClearAllPoints()
-        scrollFrame:SetPoint("TOP", filtersFrame, "BOTTOM", 0, -10)
-        scrollFrame:SetPoint("LEFT", frame, "LEFT", 25, 0)
-        scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -25, 0)
-        scrollFrame:SetPoint("BOTTOM", searchBox, "TOP", 0, 10)
-    else
-        -- Simple mode: compact window
-        frame:SetWidth(400)
-        frame:SetHeight(350)
-        filtersFrame:Hide()
-        searchBox:Hide()
-        searchButton:Hide()
-        showTargetButton:Hide()
-        modeToggle:SetText("Advanced")
-        
-        -- Reposition scroll frame for simple mode (auto-fit to window)
-        scrollFrame:ClearAllPoints()
-        scrollFrame:SetPoint("TOP", LootTableExtremeFrameHeader, "BOTTOM", 0, -10)
-        scrollFrame:SetPoint("LEFT", frame, "LEFT", 15, 0)
-        scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -25, 0)  -- Less padding on right for scrollbar
-        scrollFrame:SetPoint("BOTTOM", frame, "BOTTOM", 0, 50)  -- Increased padding to fit within background
-    end
-    
-    -- Resize rows based on mode
-    local rowWidth = advancedMode and 520 or 340
-    local nameWidth = advancedMode and 320 or 240
-    for i = 1, MAX_DISPLAYED_ROWS do
-        lootRows[i]:SetWidth(rowWidth)
-        lootRows[i].name:SetWidth(nameWidth)
     end
 end

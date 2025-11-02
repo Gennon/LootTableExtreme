@@ -12,5 +12,8 @@ ScrapedDatabase.lua
 
 # UI files
 UI.xml
+Filters.lua
+ModeManager.lua
+TargetHandler.lua
 LootFrame.lua
 Tooltip.lua
