@@ -991,7 +991,26 @@ class WowheadScraper {
             // Save all loot drops
             for (const item of enemyData.loot) {
                 const qualityNum = parseInt(item.quality.replace('q', ''));
-                
+                // Upsert canonical item metadata first (best-effort)
+                try {
+                    await this.database.upsertItem({
+                        itemId: item.itemId,
+                        name: item.name || null,
+                        quality: qualityNum || null,
+                        itemLevel: item.itemLevel || null,
+                        requiredLevel: item.requiredLevel || null,
+                        classId: item.classId || null,
+                        subclassId: item.subclassId || null,
+                        icon: item.icon || null,
+                        isQuestItem: item.isQuestItem ? 1 : 0,
+                        bindType: item.bindType || null,
+                        uniqueEquipped: item.uniqueEquipped ? 1 : 0,
+                        maxStack: item.maxStack || null
+                    });
+                } catch (e) {
+                    console.warn('Could not upsert item metadata for', item.itemId, e.message);
+                }
+
                 await this.database.upsertLootDrop({
                     npcId: enemyData.npcId,
                     itemId: item.itemId,
@@ -1011,7 +1030,26 @@ class WowheadScraper {
             // Save vendor items
             for (const item of enemyData.vendor || []) {
                 const qualityNum = parseInt(item.quality.replace('q', ''));
-                
+                // Upsert canonical item metadata first
+                try {
+                    await this.database.upsertItem({
+                        itemId: item.itemId,
+                        name: item.name || null,
+                        quality: qualityNum || null,
+                        itemLevel: item.itemLevel || null,
+                        requiredLevel: item.requiredLevel || null,
+                        classId: item.classId || null,
+                        subclassId: item.subclassId || null,
+                        icon: item.icon || null,
+                        isQuestItem: 0,
+                        bindType: item.bindType || null,
+                        uniqueEquipped: item.uniqueEquipped ? 1 : 0,
+                        maxStack: item.maxStack || null
+                    });
+                } catch (e) {
+                    console.warn('Could not upsert vendor item metadata for', item.itemId, e.message);
+                }
+
                 await this.database.upsertVendorItem({
                     npcId: enemyData.npcId,
                     itemId: item.itemId,
@@ -1033,7 +1071,26 @@ class WowheadScraper {
             // Save pickpocket loot
             for (const item of enemyData.pickpocket || []) {
                 const qualityNum = parseInt(item.quality.replace('q', ''));
-                
+                // Upsert canonical item metadata first
+                try {
+                    await this.database.upsertItem({
+                        itemId: item.itemId,
+                        name: item.name || null,
+                        quality: qualityNum || null,
+                        itemLevel: item.itemLevel || null,
+                        requiredLevel: item.requiredLevel || null,
+                        classId: item.classId || null,
+                        subclassId: item.subclassId || null,
+                        icon: item.icon || null,
+                        isQuestItem: 0,
+                        bindType: item.bindType || null,
+                        uniqueEquipped: item.uniqueEquipped ? 1 : 0,
+                        maxStack: item.maxStack || null
+                    });
+                } catch (e) {
+                    console.warn('Could not upsert pickpocket item metadata for', item.itemId, e.message);
+                }
+
                 await this.database.upsertPickpocketLoot({
                     npcId: enemyData.npcId,
                     itemId: item.itemId,
