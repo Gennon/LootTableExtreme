@@ -24,6 +24,7 @@ class ScraperDatabase {
                 }
                 console.log(`📦 Database initialized: ${this.dbPath}`);
                 this.createTables()
+                    .then(() => this.seedDefaultNpcTypes())
                     .then(() => resolve())
                     .catch(reject);
             });
@@ -185,6 +186,38 @@ class ScraperDatabase {
             return this.run(sql);
         }
         return Promise.resolve();
+    }
+
+    /**
+     * Seed default npc_types if table is empty
+     */
+    async seedDefaultNpcTypes() {
+        try {
+            const row = await this.get('SELECT COUNT(*) as cnt FROM npc_types');
+            if (row && row.cnt > 0) return;
+
+            const defaults = [
+                [1, 'Beast'],
+                [2, 'Dragonkin'],
+                [3, 'Demon'],
+                [4, 'Elemental'],
+                [5, 'Giant'],
+                [6, 'Undead'],
+                [7, 'Humanoid'],
+                [8, 'Critter'],
+                [9, 'Mechanical'],
+                [10, 'Not specified']
+            ];
+
+            for (const [id, label] of defaults) {
+                await this.upsertNpcType(id, label);
+            }
+
+            console.log('✓ Seeded default npc_types');
+        } catch (e) {
+            // Non-fatal: if something goes wrong, don't block initialization
+            console.warn('Could not seed default npc_types:', e.message);
+        }
     }
 
     /**
