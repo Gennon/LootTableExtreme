@@ -580,6 +580,8 @@ class ScraperDatabase {
         const {
             minDropPercent = 0.1,
             minSampleSize = 0,
+            // fraction (0.1 = 10%) of tolerance around max sample to keep items
+            sampleTolerance = 0.1,
             excludeQuestItems = false,
             excludeSeasonItems = true
         } = options;
@@ -628,6 +630,21 @@ DB.ScrapedLoot = {
 
             if (drops.length === 0) continue;
 
+            // Apply relative sample-size filtering similar to CLI: remove items with sample_size
+            // significantly smaller than the most-sampled item for this NPC.
+            if (sampleTolerance > 0) {
+                const sampleSizes = drops.map(d => d.sample_size || 0);
+                const maxSample = Math.max(...sampleSizes);
+                if (maxSample > 0) {
+                    const threshold = Math.max(minSampleSize, Math.ceil(maxSample * (1 - sampleTolerance)));
+                    const filtered = drops.filter(d => (d.sample_size || 0) >= threshold);
+                    if (filtered.length > 0) {
+                        // replace drops with filtered list
+                        drops.length = 0;
+                        Array.prototype.push.apply(drops, filtered);
+                    }
+                }
+            }
             lua += `    -- ${npc.name}\n`;
             lua += `    ["${npc.name}"] = {\n`;
             lua += `        npcId = ${npc.npc_id},\n`;
