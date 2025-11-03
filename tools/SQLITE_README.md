@@ -48,7 +48,7 @@ Installs:
 # Scrape Wowhead's NPC list to get all Classic NPCs
 npm run collect-npcs
 
-# Output: enemies.txt (thousands of NPC URLs)
+# Output: npcs.txt (thousands of NPC URLs)
 ```
 
 ### Step 2: Scrape Loot Data
@@ -57,7 +57,7 @@ npm run collect-npcs
 # Test with single NPC
 npm test
 
-# Scrape all NPCs from enemies.txt
+# Scrape all NPCs from npcs.txt
 npm run scrape-list
 
 # Debug mode (visible browser, screenshots)
@@ -300,7 +300,7 @@ tools/
 ├── collectNpcs.js      - Collect NPC URLs
 ├── fetchItemNames.js   - Fetch item details
 ├── package.json        - Dependencies & scripts
-├── enemies.txt         - List of NPC URLs
+├── npcs.txt            - List of NPC URLs
 └── wowhead_loot.db     - SQLite database (created on first run)
 ```
 

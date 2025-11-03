@@ -5,7 +5,7 @@
   "main": "scraper.js",
   "scripts": {
     "scrape": "node scraper.js",
-    "scrape-list": "node scraper.js --list enemies.txt",
+    "scrape-list": "node scraper.js --list npcs.txt",
     "collect-npcs": "node collectNpcs.js",
     "collect-npcs-debug": "node collectNpcs.js --debug",
     "export": "node exportLua.js",

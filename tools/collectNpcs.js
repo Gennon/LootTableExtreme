@@ -429,7 +429,7 @@ async function main() {
     await collector.close();
     
     if (npcs.length > 0) {
-        const outputFile = path.join(__dirname, 'enemies.txt');
+    const outputFile = path.join(__dirname, 'npcs.txt');
         const urls = npcs.map(npc => 
             `https://www.wowhead.com/classic/npc=${npc.id}/${npc.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`
         );
