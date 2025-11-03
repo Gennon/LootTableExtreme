@@ -76,6 +76,46 @@ class ScraperDatabase {
                 UNIQUE(npc_id, item_id)
             );
 
+            -- Vendor (sold) items table
+            CREATE TABLE IF NOT EXISTS vendor_items (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                npc_id INTEGER NOT NULL,
+                item_id INTEGER NOT NULL,
+                item_name TEXT,
+                quality INTEGER,
+                cost_amount INTEGER,
+                cost_currency TEXT,
+                stock INTEGER,
+                is_limited INTEGER DEFAULT 0,
+                required_level INTEGER,
+                required_faction TEXT,
+                required_reputation TEXT,
+                class_id INTEGER,
+                subclass_id INTEGER,
+                stack_size TEXT,
+                scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (npc_id) REFERENCES npcs(npc_id),
+                UNIQUE(npc_id, item_id)
+            );
+
+            -- Pickpocket loot table
+            CREATE TABLE IF NOT EXISTS pickpocket_loot (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                npc_id INTEGER NOT NULL,
+                item_id INTEGER NOT NULL,
+                item_name TEXT,
+                quality INTEGER,
+                drop_count INTEGER,
+                sample_size INTEGER,
+                drop_percent REAL,
+                class_id INTEGER,
+                subclass_id INTEGER,
+                stack_size TEXT,
+                scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (npc_id) REFERENCES npcs(npc_id),
+                UNIQUE(npc_id, item_id)
+            );
+
             -- Items table (for reference)
             CREATE TABLE IF NOT EXISTS items (
                 item_id INTEGER PRIMARY KEY,
@@ -109,11 +149,42 @@ class ScraperDatabase {
             CREATE INDEX IF NOT EXISTS idx_loot_item ON loot_drops(item_id);
             CREATE INDEX IF NOT EXISTS idx_loot_quality ON loot_drops(quality);
             CREATE INDEX IF NOT EXISTS idx_loot_percent ON loot_drops(drop_percent);
+            CREATE INDEX IF NOT EXISTS idx_vendor_npc ON vendor_items(npc_id);
+            CREATE INDEX IF NOT EXISTS idx_vendor_item ON vendor_items(item_id);
+            CREATE INDEX IF NOT EXISTS idx_pickpocket_npc ON pickpocket_loot(npc_id);
+            CREATE INDEX IF NOT EXISTS idx_pickpocket_item ON pickpocket_loot(item_id);
             CREATE INDEX IF NOT EXISTS idx_npc_name ON npcs(name);
             CREATE INDEX IF NOT EXISTS idx_npc_zone ON npcs(zone);
+            
+            -- NPC types mapping table (maps numeric type codes to human labels)
+            CREATE TABLE IF NOT EXISTS npc_types (
+                type_id INTEGER PRIMARY KEY,
+                label TEXT NOT NULL,
+                description TEXT,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+            CREATE INDEX IF NOT EXISTS idx_npc_types_label ON npc_types(label);
         `;
 
-        return this.runMultiple(schema);
+        await this.runMultiple(schema);
+
+        // Ensure newer optional columns exist on older DBs (migration)
+        await this.ensureColumn('npcs', 'type_id', 'INTEGER');
+
+        return;
+    }
+
+    /**
+     * Ensure a column exists on a table (adds column if missing)
+     */
+    async ensureColumn(table, column, definition) {
+        const info = await this.all(`PRAGMA table_info(${table})`);
+        const found = info.find(c => c.name === column);
+        if (!found) {
+            const sql = `ALTER TABLE ${table} ADD COLUMN ${column} ${definition}`;
+            return this.run(sql);
+        }
+        return Promise.resolve();
     }
 
     /**
@@ -219,7 +290,8 @@ class ScraperDatabase {
                 scraped_at = CURRENT_TIMESTAMP
         `;
 
-        return this.run(sql, [
+        // If caller provided typeId, store it into the type_id column as well
+        const params = [
             npcData.npcId,
             npcData.name,
             npcData.levelMin,
@@ -236,7 +308,39 @@ class ScraperDatabase {
             npcData.reactionAlliance,
             npcData.reactionHorde,
             npcData.url
-        ]);
+        ];
+
+        const result = await this.run(sql, params);
+
+        if (npcData.typeId) {
+            // Save canonical type_id separately to avoid changing existing type column semantics
+            await this.run(`UPDATE npcs SET type_id = ?, scraped_at = CURRENT_TIMESTAMP WHERE npc_id = ?`, [npcData.typeId, npcData.npcId]);
+        }
+
+        return result;
+    }
+
+    /**
+     * Insert or update an npc type mapping
+     */
+    async upsertNpcType(typeId, label, description = null) {
+        const sql = `
+            INSERT INTO npc_types (type_id, label, description) VALUES (?, ?, ?)
+            ON CONFLICT(type_id) DO UPDATE SET
+                label = excluded.label,
+                description = excluded.description,
+                updated_at = CURRENT_TIMESTAMP
+        `;
+
+        return this.run(sql, [typeId, label, description]);
+    }
+
+    /**
+     * Get label for a given type_id
+     */
+    async getNpcTypeLabel(typeId) {
+        const row = await this.get(`SELECT label FROM npc_types WHERE type_id = ?`, [typeId]);
+        return row ? row.label : null;
     }
 
     /**
@@ -317,6 +421,86 @@ class ScraperDatabase {
             itemData.bindType,
             itemData.uniqueEquipped ? 1 : 0,
             itemData.maxStack
+        ]);
+    }
+
+    /**
+     * Insert or update vendor item data
+     */
+    async upsertVendorItem(vendorData) {
+        const sql = `
+            INSERT INTO vendor_items (
+                npc_id, item_id, item_name, quality, cost_amount,
+                cost_currency, stock, is_limited, required_level,
+                required_faction, required_reputation, class_id,
+                subclass_id, stack_size
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(npc_id, item_id) DO UPDATE SET
+                item_name = excluded.item_name,
+                quality = excluded.quality,
+                cost_amount = excluded.cost_amount,
+                cost_currency = excluded.cost_currency,
+                stock = excluded.stock,
+                is_limited = excluded.is_limited,
+                required_level = excluded.required_level,
+                required_faction = excluded.required_faction,
+                required_reputation = excluded.required_reputation,
+                class_id = excluded.class_id,
+                subclass_id = excluded.subclass_id,
+                stack_size = excluded.stack_size,
+                scraped_at = CURRENT_TIMESTAMP
+        `;
+
+        return this.run(sql, [
+            vendorData.npcId,
+            vendorData.itemId,
+            vendorData.itemName,
+            vendorData.quality,
+            vendorData.costAmount,
+            vendorData.costCurrency,
+            vendorData.stock,
+            vendorData.isLimited ? 1 : 0,
+            vendorData.requiredLevel,
+            vendorData.requiredFaction,
+            vendorData.requiredReputation,
+            vendorData.classId,
+            vendorData.subclassId,
+            vendorData.stackSize
+        ]);
+    }
+
+    /**
+     * Insert or update pickpocket loot data
+     */
+    async upsertPickpocketLoot(pickpocketData) {
+        const sql = `
+            INSERT INTO pickpocket_loot (
+                npc_id, item_id, item_name, quality, drop_count,
+                sample_size, drop_percent, class_id, subclass_id, stack_size
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(npc_id, item_id) DO UPDATE SET
+                item_name = excluded.item_name,
+                quality = excluded.quality,
+                drop_count = excluded.drop_count,
+                sample_size = excluded.sample_size,
+                drop_percent = excluded.drop_percent,
+                class_id = excluded.class_id,
+                subclass_id = excluded.subclass_id,
+                stack_size = excluded.stack_size,
+                scraped_at = CURRENT_TIMESTAMP
+        `;
+
+        return this.run(sql, [
+            pickpocketData.npcId,
+            pickpocketData.itemId,
+            pickpocketData.itemName,
+            pickpocketData.quality,
+            pickpocketData.dropCount,
+            pickpocketData.sampleSize,
+            pickpocketData.dropPercent,
+            pickpocketData.classId,
+            pickpocketData.subclassId,
+            pickpocketData.stackSize
         ]);
     }
 
