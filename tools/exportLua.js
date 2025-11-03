@@ -9,14 +9,23 @@ const path = require('path');
 
 async function main() {
     const args = process.argv.slice(2);
+    console.log('DEBUG: raw args ->', args);
     
     // Parse command line options
     const options = {
         minDropPercent: 0.1,
         minSampleSize: 0,
+        // Relative tolerance around the largest sample size for this NPC.
+        // Items with sample_size < max_sample * (1 - sampleTolerance) will be excluded.
+        // e.g. 0.10 = 10% tolerance
+        sampleTolerance: 0.1,
         excludeQuestItems: false,
         excludeSeasonItems: true,
-        outputFile: path.join(__dirname, '..', 'ScrapedDatabase.lua')
+    pruneLegacy: false,
+        outputDir: path.join(__dirname, '..'),
+        lootFile: 'ScrapedDatabase.lua',
+        vendorFile: 'VendorDatabase.lua',
+        pickpocketFile: 'PickpocketDatabase.lua'
     };
     
     // Parse arguments
@@ -26,7 +35,10 @@ async function main() {
                 options.minDropPercent = parseFloat(args[++i]);
                 break;
             case '--min-sample':
-                options.minSampleSize = parseInt(args[++i]);
+                options.minSampleSize = parseInt(args[++i], 10);
+                break;
+            case '--sample-tolerance':
+                options.sampleTolerance = parseFloat(args[++i]);
                 break;
             case '--exclude-quest':
                 options.excludeQuestItems = true;
@@ -34,9 +46,12 @@ async function main() {
             case '--include-season':
                 options.excludeSeasonItems = false;
                 break;
-            case '--output':
-            case '-o':
-                options.outputFile = args[++i];
+            case '--prune-legacy':
+                options.pruneLegacy = true;
+                break;
+            case '--output-dir':
+            case '-d':
+                options.outputDir = args[++i];
                 break;
             case '--help':
             case '-h':
@@ -45,12 +60,32 @@ async function main() {
         }
     }
     
-    console.log('� Exporting database to Lua with smart merging...');
-    console.log(`Output: ${options.outputFile}`);
+    console.log('📤 Exporting database to Lua files...');
+    console.log(`Output directory: ${options.outputDir}`);
+    // Coerce/validate numeric options to avoid NaN or string values
+    if (!Number.isFinite(options.minDropPercent)) options.minDropPercent = 0.1;
+    if (!Number.isFinite(options.minSampleSize)) options.minSampleSize = 0;
+    if (!Number.isFinite(options.sampleTolerance)) options.sampleTolerance = 0.1;
+
+    console.log('DEBUG: parsed options ->', options);
     console.log(`Filters: minDrop=${options.minDropPercent}%, minSample=${options.minSampleSize}`);
+    console.log(`         sampleTolerance=${options.sampleTolerance * 100}%`);
+    console.log(`         pruneLegacy=${options.pruneLegacy}`);
     
     const db = new ScraperDatabase();
     await db.initialize();
+    
+    // Export all three datasets
+    await exportLootData(db, options);
+    await exportVendorData(db, options);
+    await exportPickpocketData(db, options);
+    
+    await db.close();
+}
+
+async function exportLootData(db, options) {
+    console.log('\n💀 Exporting loot data...');
+    const outputFile = path.join(options.outputDir, options.lootFile);
     
     // Get all NPCs from database
     const dbNpcs = await db.all(`
@@ -64,9 +99,9 @@ async function main() {
     
     // Parse existing Lua file if it exists
     const existingNpcs = new Map();
-    if (fs.existsSync(options.outputFile)) {
+    if (fs.existsSync(outputFile)) {
         console.log(`📂 Loading existing Lua file...`);
-        const existingContent = fs.readFileSync(options.outputFile, 'utf-8');
+        const existingContent = fs.readFileSync(outputFile, 'utf-8');
         
         // Extract each NPC entry with its full content
         // Pattern matches: comment line, NPC name line, everything until closing brace
@@ -149,10 +184,37 @@ async function main() {
         ]);
         
         if (drops.length === 0) continue;
+
+        // Apply relative sample-size filtering: exclude items with a much smaller
+        // sample size than the most-sampled item for this NPC. This avoids
+        // keeping rare-looking drops based on very small sample counts.
+        if (options.sampleTolerance > 0) {
+            const sampleSizes = drops.map(d => d.sample_size || 0);
+            const maxSample = Math.max(...sampleSizes);
+            if (maxSample > 0) {
+                const threshold = Math.max(options.minSampleSize, Math.ceil(maxSample * (1 - options.sampleTolerance)));
+                const before = drops.length;
+                // keep drops that have sample_size >= threshold
+                const filtered = drops.filter(d => (d.sample_size || 0) >= threshold);
+                // If filtering would remove all drops (edge case), keep original drops
+                if (filtered.length > 0) {
+                    drops.length = 0;
+                    Array.prototype.push.apply(drops, filtered);
+                }
+                const removed = before - drops.length;
+                if (removed > 0) {
+                    console.log(`  ⚠️  Removed ${removed} low-sample item(s) for NPC ${npc.name} (threshold=${threshold}, max=${maxSample})`);
+                }
+            }
+        }
         
-        // Generate Lua entry
-        let entry = `    -- ${npc.name}\n`;
-        entry += `    ["${npc.name}"] = {\n`;
+    // Sanitize NPC name for safe Lua output: replace any double-quotes with single-quotes
+    // and escape backslashes so the resulting string won't break Lua syntax.
+    const sanitizedName = (npc.name || '').toString().replace(/"/g, "'").replace(/\\/g, "\\\\");
+
+    // Generate Lua entry
+    let entry = `    -- ${sanitizedName}\n`;
+    entry += `    ["${sanitizedName}"] = {\n`;
         entry += `        npcId = ${npc.npc_id},\n`;
         entry += `        level = {${npc.level_min}, ${npc.level_max}},\n`;
         entry += `        zone = "${npc.zone || 'Unknown'}",\n`;
@@ -173,10 +235,12 @@ async function main() {
     }
     
     // Combine: keep existing entries that aren't in DB, add updated/new entries from DB
-    const allEntries = [
-        ...toKeep.map(item => item.entry),
-        ...newEntries
-    ];
+    // If pruneLegacy is set, do not preserve Lua-only entries (they cannot be
+    // re-validated against the DB filters). This makes --min-sample and other
+    // filters apply to the whole output when requested.
+    const allEntries = options.pruneLegacy ?
+        [...newEntries] :
+        [...toKeep.map(item => item.entry), ...newEntries];
     
     // Sort entries alphabetically by NPC name
     allEntries.sort((a, b) => {
@@ -211,25 +275,14 @@ end
     const output = header + allEntries.join('\n') + footer;
     
     // Write to file
-    fs.writeFileSync(options.outputFile, output, 'utf-8');
+    fs.writeFileSync(outputFile, output, 'utf-8');
     
-    // Show statistics
-    const stats = await db.getStats();
-    console.log(`\n✅ Export complete!`);
-    console.log(`\n📊 Database statistics:`);
-    console.log(`  Total NPCs: ${stats.total_npcs}`);
-    console.log(`  Total Drops: ${stats.total_drops}`);
-    console.log(`  Unique Items: ${stats.unique_items}`);
-    if (stats.avg_sample_size) {
-        console.log(`  Avg Sample Size: ${Math.round(stats.avg_sample_size)}`);
-    }
-    
-    console.log(`\n📄 Exported Lua file:`);
+    console.log(`✅ Loot data exported!`);
     console.log(`  Total Entries: ${allEntries.length}`);
     console.log(`  Updated: ${toUpdate.length}`);
     console.log(`  Preserved: ${toKeep.length}`);
     console.log(`  New: ${toAdd.length}`);
-    console.log(`  Output: ${options.outputFile}`);
+    console.log(`  Output: ${outputFile}`);
     
     // Show filtering impact
     const totalDropsInDb = await db.get(`
@@ -251,24 +304,193 @@ end
         console.log(`  Exported: ${exportedDrops}`);
         console.log(`  Filtered out: ${filtered} (${percent}%)`);
     }
+}
+
+async function exportVendorData(db, options) {
+    console.log('\n🛒 Exporting vendor data...');
+    const outputFile = path.join(options.outputDir, options.vendorFile);
     
-    await db.close();
+    // Get all NPCs that sell items
+    const vendors = await db.all(`
+        SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone
+        FROM npcs n
+        INNER JOIN vendor_items v ON n.npc_id = v.npc_id
+        ORDER BY n.name
+    `);
+    
+    console.log(`� Found ${vendors.length} vendors in database`);
+    
+    if (vendors.length === 0) {
+        console.log('⚠️  No vendor data to export');
+        return;
+    }
+    
+    // Generate Lua content
+    const header = `-- Auto-generated vendor database from Wowhead Classic
+-- Generated: ${new Date().toISOString()}
+-- Total vendors: ${vendors.length}
+-- 
+-- This file is automatically loaded by Database.lua
+
+local DB = LootTableExtreme.Database
+
+-- Vendor (sold) items
+DB.VendorItems = {
+`;
+    
+    const entries = [];
+    for (const vendor of vendors) {
+        const items = await db.all(`
+            SELECT item_id, item_name, quality, cost_amount, cost_currency, 
+                   stock, required_level, required_faction
+            FROM vendor_items
+            WHERE npc_id = ?
+            ORDER BY cost_amount ASC
+        `, [vendor.npc_id]);
+        
+        if (items.length === 0) continue;
+        
+    const sanitizedVendorName = (vendor.name || '').toString().replace(/"/g, "'").replace(/\\/g, "\\\\");
+
+    let entry = `    -- ${sanitizedVendorName}\n`;
+    entry += `    ["${sanitizedVendorName}"] = {\n`;
+        entry += `        npcId = ${vendor.npc_id},\n`;
+        entry += `        level = {${vendor.level_min}, ${vendor.level_max}},\n`;
+        entry += `        zone = "${vendor.zone || 'Unknown'}",\n`;
+        entry += `        items = {\n`;
+        
+        items.forEach((item, index) => {
+            const comma = index < items.length - 1 ? ',' : '';
+            entry += `            {itemId = ${item.item_id}, cost = ${item.cost_amount}}${comma}\n`;
+        });
+        
+        entry += `        }\n`;
+        entry += `    },\n`;
+        entries.push(entry);
+    }
+    
+    const footer = `}\n`;
+    const output = header + entries.join('\n') + footer;
+    
+    fs.writeFileSync(outputFile, output, 'utf-8');
+    
+    console.log(`✅ Vendor data exported!`);
+    console.log(`  Total Vendors: ${vendors.length}`);
+    console.log(`  Output: ${outputFile}`);
+}
+
+async function exportPickpocketData(db, options) {
+    console.log('\n🥷 Exporting pickpocket data...');
+    const outputFile = path.join(options.outputDir, options.pickpocketFile);
+    
+    // Get all NPCs with pickpocket loot
+    const npcs = await db.all(`
+        SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone
+        FROM npcs n
+        INNER JOIN pickpocket_loot p ON n.npc_id = p.npc_id
+        ORDER BY n.name
+    `);
+    
+    console.log(`� Found ${npcs.length} NPCs with pickpocket loot`);
+    
+    if (npcs.length === 0) {
+        console.log('⚠️  No pickpocket data to export');
+        return;
+    }
+    
+    // Generate Lua content
+    const header = `-- Auto-generated pickpocket database from Wowhead Classic
+-- Generated: ${new Date().toISOString()}
+-- Total NPCs: ${npcs.length}
+-- 
+-- This file is automatically loaded by Database.lua
+
+local DB = LootTableExtreme.Database
+
+-- Pickpocket loot table
+DB.PickpocketLoot = {
+`;
+    
+    const entries = [];
+    for (const npc of npcs) {
+                const items = await db.all(`
+                        SELECT item_id, item_name, quality, drop_percent, drop_count, sample_size
+                        FROM pickpocket_loot
+                        WHERE npc_id = ?
+                            AND drop_percent >= ?
+                            AND (? = 0 OR sample_size >= ?)
+                        ORDER BY drop_percent DESC
+                `, [npc.npc_id, options.minDropPercent, options.minSampleSize, options.minSampleSize]);
+        
+        if (items.length === 0) continue;
+
+        // apply relative sample-size filter for pickpocket as well
+        if (options.sampleTolerance > 0) {
+            const sampleSizes = items.map(d => d.sample_size || 0);
+            const maxSample = Math.max(...sampleSizes);
+            if (maxSample > 0) {
+                const threshold = Math.max(options.minSampleSize, Math.ceil(maxSample * (1 - options.sampleTolerance)));
+                const before = items.length;
+                const filtered = items.filter(d => (d.sample_size || 0) >= threshold);
+                if (filtered.length > 0) {
+                    items.length = 0;
+                    Array.prototype.push.apply(items, filtered);
+                }
+                const removed = before - items.length;
+                if (removed > 0) {
+                    console.log(`  ⚠️  Removed ${removed} low-sample pickpocket item(s) for NPC ${npc.name} (threshold=${threshold}, max=${maxSample})`);
+                }
+            }
+        }
+        
+    const sanitizedName = (npc.name || '').toString().replace(/"/g, "'").replace(/\\/g, "\\\\");
+
+    let entry = `    -- ${sanitizedName}\n`;
+    entry += `    ["${sanitizedName}"] = {\n`;
+        entry += `        npcId = ${npc.npc_id},\n`;
+        entry += `        level = {${npc.level_min}, ${npc.level_max}},\n`;
+        entry += `        zone = "${npc.zone || 'Unknown'}",\n`;
+        entry += `        loot = {\n`;
+        
+        items.forEach((item, index) => {
+            const comma = index < items.length - 1 ? ',' : '';
+            entry += `            {itemId = ${item.item_id}, dropChance = ${item.drop_percent.toFixed(1)}}${comma}\n`;
+        });
+        
+        entry += `        }\n`;
+        entry += `    },\n`;
+        entries.push(entry);
+    }
+    
+    const footer = `}\n`;
+    const output = header + entries.join('\n') + footer;
+    
+    fs.writeFileSync(outputFile, output, 'utf-8');
+    
+    console.log(`✅ Pickpocket data exported!`);
+    console.log(`  Total NPCs: ${npcs.length}`);
+    console.log(`  Output: ${outputFile}`);
 }
 
 function printHelp() {
     console.log(`
 Usage: node exportLua.js [options]
 
+Exports data to three separate Lua files:
+  - ScrapedDatabase.lua    (loot drops from kills)
+  - VendorDatabase.lua     (items sold by NPCs)
+  - PickpocketDatabase.lua (rogue pickpocket loot)
+
 Options:
   --min-drop <percent>     Minimum drop rate to include (default: 0.1)
   --min-sample <count>     Minimum sample size to include (default: 0)
-  --exclude-quest          Exclude quest items from export
+  --exclude-quest          Exclude quest items from loot export
   --include-season         Include Season of Discovery items (excluded by default)
-  --output, -o <file>      Output file path (default: ../ScrapedDatabase.lua)
+  --output-dir, -d <dir>   Output directory (default: ../)
   --help, -h               Show this help message
 
 Examples:
-  # Export with default settings
+  # Export all data with default settings
   node exportLua.js
 
   # Only include items with at least 10 drops
@@ -277,11 +499,8 @@ Examples:
   # Only include items with > 1% drop rate and 5+ samples
   node exportLua.js --min-drop 1.0 --min-sample 5
 
-  # Export to custom file
-  node exportLua.js --output ./custom_loot.lua
-
-  # Exclude quest items and require reliable data
-  node exportLua.js --exclude-quest --min-sample 10
+  # Export to custom directory
+  node exportLua.js --output-dir ./output
 `);
 }
 
