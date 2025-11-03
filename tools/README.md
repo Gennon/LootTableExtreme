@@ -28,7 +28,7 @@ npm test
 ```
 
 #### Scrape multiple enemies from a list:
-1. Edit `enemies.txt` and add Wowhead URLs (one per line)
+1. Edit `npcs.txt` and add Wowhead URLs (one per line)
 2. Run:
 ```bash
 npm run scrape-list
@@ -37,7 +37,7 @@ npm run scrape-list
 #### Direct command:
 ```bash
 node scraper.js --url <wowhead-url>
-node scraper.js --list enemies.txt
+node scraper.js --list npcs.txt
 ```
 
 ### Output
