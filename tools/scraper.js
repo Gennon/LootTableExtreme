@@ -294,6 +294,41 @@ class WowheadScraper {
                 return classification && classification.textContent.includes('Elite');
             });
 
+            // Extract creature type strictly from Wowhead's structured page object
+            const creatureInfo = await this.page.evaluate((npcId) => {
+                const info = { type: null, source: null };
+                try {
+                    // Prefer structured g_npcs data when available
+                    if (typeof window.g_npcs !== 'undefined' && window.g_npcs && window.g_npcs[npcId]) {
+                        const entry = window.g_npcs[npcId];
+                        if (entry && entry.type) {
+                            info.type = entry.type;
+                            info.source = 'g_npcs';
+                            return info;
+                        }
+                        // Some pages might store type under 'creatureType' or 'race'
+                        if (entry && entry.creatureType) {
+                            info.type = entry.creatureType;
+                            info.source = 'g_npcs.creatureType';
+                            return info;
+                        }
+                        if (entry && entry.race) {
+                            info.type = entry.race;
+                            info.source = 'g_npcs.race';
+                            return info;
+                        }
+                    }
+
+                    // If g_npcs isn't present or doesn't have the type, leave type null
+                } catch (e) {
+                    // ignore errors
+                }
+
+                return info;
+            }, npcId);
+
+            console.log(`✓ Type: ${creatureInfo.type || 'Unknown'}${creatureInfo.source ? ` (source: ${creatureInfo.source})` : ''}`);
+
             // Wait for loot table to load and click the tab
             console.log('⏳ Waiting for loot table...');
             
@@ -389,11 +424,7 @@ class WowheadScraper {
                                             dropChance = parseFloat(item.percent);
                                         }
                                         
-                                        // Skip items with very low drop rates
-                                        if (dropChance < 0.1) {
-                                            console.log(`  ⊗ Skipping low drop: ${itemName} (ID: ${itemId}, Drop: ${dropChance.toFixed(4)}%)`);
-                                            return;
-                                        }
+                                        // Include all items (do not skip low drop rates); keep everything in DB for post-filtering
                                         
                                         // Skip Season of Discovery items (seasonId: 2)
                                         if (item.seasonId === 2) {
@@ -456,10 +487,7 @@ class WowheadScraper {
                                         dropChance = parseFloat(item.percent);
                                     }
                                     
-                                    // Skip items with very low drop rates
-                                    if (dropChance < 0.1) {
-                                        return;
-                                    }
+                                    // Include all items (do not skip low drop rates)
                                     
                                     const isQuestItem = item.classs === 12;
                                     
@@ -508,10 +536,7 @@ class WowheadScraper {
                                 dropChance = parseFloat(item.percent);
                             }
                             
-                            // Skip items with very low drop rates
-                            if (dropChance < 0.1) {
-                                return;
-                            }
+                            // Include all items (do not skip low drop rates)
                             
                             const isQuestItem = item.classs === 12 || (item.flags && (item.flags & 0x1000));
                             
@@ -631,43 +656,44 @@ class WowheadScraper {
                             // Wowhead typically shows percentages in the format "XX.X%" or "XX%"
                             let dropChance = 0;
                             const allCells = row.querySelectorAll('td');
-                            
+
                             // The percentage is typically in one of the last cells
                             // Look through cells from right to left
                             for (let i = allCells.length - 1; i >= 0; i--) {
                                 const cell = allCells[i];
                                 const cellText = cell.textContent.trim();
-                                
+
                                 // Check for exact percentage match
                                 const percentMatch = cellText.match(/^(\d+(?:\.\d+)?)\s*%$/);
                                 if (percentMatch) {
                                     dropChance = parseFloat(percentMatch[1]);
                                     break;
                                 }
-                                
+
                                 // Also check for percentages within other text
                                 const anyPercentMatch = cellText.match(/(\d+(?:\.\d+)?)\s*%/);
                                 if (anyPercentMatch && dropChance === 0) {
                                     dropChance = parseFloat(anyPercentMatch[1]);
                                 }
                             }
-                            
-                            // If still no percentage, look in data attributes
+
+                            // If still no percentage, look in data attributes (count/outof)
                             if (dropChance === 0) {
                                 const firstCell = row.querySelector('td');
                                 if (firstCell) {
-                                    // Check for data-percent or similar attributes
-                                    const dataPercent = firstCell.getAttribute('data-percent') || 
-                                                       firstCell.getAttribute('data-drop-rate') ||
-                                                       row.getAttribute('data-percent');
-                                    if (dataPercent) {
-                                        dropChance = parseFloat(dataPercent);
+                                    const countAttr = firstCell.getAttribute('data-count');
+                                    const outofAttr = firstCell.getAttribute('data-outof');
+                                    if (countAttr && outofAttr) {
+                                        const count = parseInt(countAttr) || 0;
+                                        const outof = parseInt(outofAttr) || 0;
+                                        if (outof > 0) {
+                                            dropChance = (count / outof) * 100;
+                                        }
                                     }
                                 }
                             }
 
                             // Check if this is a quest item
-                            // Quest items usually have specific styling or icons
                             const isQuestItem = itemLink.classList.contains('quest') ||
                                               itemLink.classList.contains('q-start') ||
                                               row.querySelector('.icon-quest') !== null ||
@@ -702,18 +728,200 @@ class WowheadScraper {
             
             await this.takeScreenshot('03_after_loot_extraction');
 
+            // Extract vendor (sold) items
+            console.log('\n🛒 Scraping vendor items...');
+            const vendorData = await this.extractVendorItems();
+            console.log(`✓ Found ${vendorData.length} vendor items`);
+
+            // Extract pickpocket loot
+            console.log('\n🥷 Scraping pickpocket loot...');
+            const pickpocketData = await this.extractPickpocketLoot();
+            console.log(`✓ Found ${pickpocketData.length} pickpocket items`);
+
             return {
                 enemyName,
                 npcId,
                 level: levelInfo,
                 zone,
                 elite: isElite,
-                loot: lootData
+                type: creatureInfo.type,
+                family: creatureInfo.family,
+                loot: lootData,
+                vendor: vendorData,
+                pickpocket: pickpocketData
             };
 
         } catch (error) {
             console.error(`Error scraping ${url}:`, error.message);
             return null;
+        }
+    }
+
+    /**
+     * Extract vendor (sold) items from the Sells tab
+     */
+    async extractVendorItems() {
+        try {
+            const vendorItems = await this.page.evaluate(() => {
+                const items = [];
+                
+                // Look for Listview data for 'sells' tab
+                const scripts = document.querySelectorAll('script');
+                for (const script of scripts) {
+                    const scriptText = script.textContent;
+                    if (scriptText.includes('new Listview') && scriptText.includes("id: 'sells'")) {
+                        try {
+                            const dataMatch = scriptText.match(/data:\s*(\[[\s\S]*?\])\s*(?:,\s*computeDataFunc|}\))/);
+                            if (dataMatch) {
+                                const dataStr = dataMatch[1];
+                                const data = eval('(' + dataStr + ')');
+                                
+                                data.forEach((item) => {
+                                    try {
+                                        const itemId = parseInt(item.id);
+                                        const itemName = item.name || '';
+                                        const quality = `q${item.quality || 1}`;
+                                        
+                                        // Parse cost (usually in copper)
+                                        let costAmount = 0;
+                                        let costCurrency = 'copper';
+                                        
+                                        if (item.cost && Array.isArray(item.cost) && item.cost.length > 0) {
+                                            // Cost is typically [amount, currencyType]
+                                            costAmount = parseInt(item.cost[0]) || 0;
+                                            // Currency types: 0=money, others are item currencies
+                                            costCurrency = item.cost.length > 1 && item.cost[1] !== 0 ? 
+                                                `item_${item.cost[1]}` : 'copper';
+                                        }
+                                        
+                                        // Parse stack size
+                                        let stackSize = null;
+                                        if (item.stack && Array.isArray(item.stack)) {
+                                            stackSize = JSON.stringify(item.stack);
+                                        } else if (item.stack) {
+                                            stackSize = String(item.stack);
+                                        }
+                                        
+                                        if (itemName) {
+                                            items.push({
+                                                itemId,
+                                                name: itemName,
+                                                quality,
+                                                costAmount,
+                                                costCurrency,
+                                                stock: item.stock || null,
+                                                isLimited: item.stock && item.stock > 0,
+                                                requiredLevel: item.reqlevel || null,
+                                                requiredFaction: item.side || null,
+                                                requiredReputation: item.standing || null,
+                                                classId: item.classs || null,
+                                                subclassId: item.subclass || null,
+                                                stackSize
+                                            });
+                                        }
+                                    } catch (e) {
+                                        console.error(`Error parsing vendor item:`, e.message);
+                                    }
+                                });
+                                
+                                return items;
+                            }
+                        } catch (e) {
+                            console.error('Error extracting vendor data:', e.message);
+                        }
+                    }
+                }
+                
+                return items;
+            });
+            
+            return vendorItems || [];
+        } catch (error) {
+            console.error('Error extracting vendor items:', error.message);
+            return [];
+        }
+    }
+
+    /**
+     * Extract pickpocket loot from the Pick Pocketing tab
+     */
+    async extractPickpocketLoot() {
+        try {
+            const pickpocketItems = await this.page.evaluate(() => {
+                const items = [];
+                
+                // Look for Listview data with id: 'pickpocketing'
+                const scripts = document.querySelectorAll('script');
+                
+                for (const script of scripts) {
+                    const scriptText = script.textContent;
+                    // Look specifically for the pickpocketing Listview
+                    if (scriptText.includes('new Listview') && scriptText.includes(`id: 'pickpocketing'`)) {
+                        console.log(`✓ Found pickpocketing Listview`);
+                        try {
+                            const dataMatch = scriptText.match(/data:\s*(\[[\s\S]*?\])\s*(?:,\s*computeDataFunc|}\))/);
+                            if (dataMatch) {
+                                const dataStr = dataMatch[1];
+                                const data = eval('(' + dataStr + ')');
+                                
+                                console.log(`Total items in pickpocketing Listview: ${data.length}`);
+                                
+                                // Filter for actual pickpocket items (source includes 21 = pickpocket)
+                                const pickpocketOnly = data.filter(item => 
+                                    item.source && Array.isArray(item.source) && item.source.includes(21)
+                                );
+                                
+                                console.log(`Filtered pickpocket items (source=21): ${pickpocketOnly.length}`);
+                                
+                                pickpocketOnly.forEach((item) => {
+                                    try {
+                                        const itemId = parseInt(item.id);
+                                        const itemName = item.name || '';
+                                        const quality = `q${item.quality || 1}`;
+                                        
+                                        // Calculate drop chance from count/outof
+                                        let dropChance = 0;
+                                        if (item.count && item.outof) {
+                                            dropChance = (item.count / item.outof) * 100;
+                                        } else if (item.percent) {
+                                            dropChance = parseFloat(item.percent);
+                                        }
+                                        
+                                        // Include all items (do not skip low drop rates)
+                                        
+                                        if (itemName) {
+                                            items.push({
+                                                itemId,
+                                                name: itemName,
+                                                quality,
+                                                dropChance,
+                                                dropCount: item.count || null,
+                                                sampleSize: item.outof || null,
+                                                classId: item.classs || null,
+                                                subclassId: item.subclass || null,
+                                                stackSize: item.stack || null
+                                            });
+                                        }
+                                    } catch (e) {
+                                        console.error(`Error parsing pickpocket item:`, e.message);
+                                    }
+                                });
+                                
+                                return items;
+                            }
+                        } catch (e) {
+                            console.error('Error extracting pickpocket data:', e.message);
+                        }
+                    }
+                }
+                
+                return items;
+            });
+            
+            return pickpocketItems || [];
+        } catch (error) {
+            console.error('Error extracting pickpocket items:', error.message);
+            return [];
         }
     }
 
@@ -726,6 +934,46 @@ class WowheadScraper {
         }
 
         try {
+            // Normalize type: g_npcs sometimes returns numeric codes. Try to map them to labels.
+            let typeId = null;
+            let typeLabel = null;
+
+            // Default in-memory mapping for common Wowhead numeric type codes
+            const DEFAULT_TYPE_MAP = {
+                1: 'Beast',
+                2: 'Dragonkin',
+                3: 'Demon',
+                4: 'Elemental',
+                5: 'Giant',
+                6: 'Undead',
+                7: 'Humanoid',
+                8: 'Critter',
+                9: 'Mechanical',
+                10: 'Not specified'
+            };
+
+            if (enemyData.type !== null && enemyData.type !== undefined) {
+                if (typeof enemyData.type === 'number' || /^\d+$/.test(String(enemyData.type))) {
+                    typeId = parseInt(enemyData.type);
+                    // Check DB first for an override label
+                    try {
+                        const dbLabel = await this.database.getNpcTypeLabel(typeId);
+                        if (dbLabel) {
+                            typeLabel = dbLabel;
+                        } else if (DEFAULT_TYPE_MAP[typeId]) {
+                            typeLabel = DEFAULT_TYPE_MAP[typeId];
+                        } else {
+                            typeLabel = String(typeId);
+                        }
+                    } catch (e) {
+                        // If DB helper not present or fails, fall back to defaults
+                        typeLabel = DEFAULT_TYPE_MAP[typeId] || String(typeId);
+                    }
+                } else {
+                    typeLabel = String(enemyData.type);
+                }
+            }
+
             // Save NPC data
             await this.database.upsertNpc({
                 npcId: enemyData.npcId,
@@ -734,7 +982,10 @@ class WowheadScraper {
                 levelMax: enemyData.level[1],
                 zone: enemyData.zone,
                 elite: enemyData.elite,
-                url: url
+                url: url,
+                type: typeLabel || enemyData.type,
+                family: enemyData.family,
+                typeId: typeId
             });
 
             // Save all loot drops
@@ -757,48 +1008,55 @@ class WowheadScraper {
                 });
             }
 
-            console.log(`💾 Saved to database: ${enemyData.enemyName} with ${enemyData.loot.length} items`);
+            // Save vendor items
+            for (const item of enemyData.vendor || []) {
+                const qualityNum = parseInt(item.quality.replace('q', ''));
+                
+                await this.database.upsertVendorItem({
+                    npcId: enemyData.npcId,
+                    itemId: item.itemId,
+                    itemName: item.name,
+                    quality: qualityNum,
+                    costAmount: item.costAmount,
+                    costCurrency: item.costCurrency,
+                    stock: item.stock,
+                    isLimited: item.isLimited,
+                    requiredLevel: item.requiredLevel,
+                    requiredFaction: item.requiredFaction,
+                    requiredReputation: item.requiredReputation,
+                    classId: item.classId,
+                    subclassId: item.subclassId,
+                    stackSize: item.stackSize
+                });
+            }
+
+            // Save pickpocket loot
+            for (const item of enemyData.pickpocket || []) {
+                const qualityNum = parseInt(item.quality.replace('q', ''));
+                
+                await this.database.upsertPickpocketLoot({
+                    npcId: enemyData.npcId,
+                    itemId: item.itemId,
+                    itemName: item.name,
+                    quality: qualityNum,
+                    dropCount: item.dropCount,
+                    sampleSize: item.sampleSize,
+                    dropPercent: item.dropChance,
+                    classId: item.classId,
+                    subclassId: item.subclassId,
+                    stackSize: item.stackSize
+                });
+            }
+
+            console.log(`💾 Saved to database: ${enemyData.enemyName} with ${enemyData.loot.length} loot, ${enemyData.vendor?.length || 0} vendor, ${enemyData.pickpocket?.length || 0} pickpocket items`);
         } catch (error) {
             console.error(`Error saving to database:`, error.message);
         }
     }
 
-    generateLuaCode(enemyData) {
-        if (!enemyData || !enemyData.enemyName) {
-            return null;
-        }
-
-        const lines = [];
-        lines.push(`    -- ${enemyData.enemyName}`);
-        lines.push(`    ["${enemyData.enemyName}"] = {`);
-        
-        if (enemyData.npcId) {
-            lines.push(`        npcId = ${enemyData.npcId},`);
-        }
-        
-        lines.push(`        level = {${enemyData.level[0]}, ${enemyData.level[1]}},`);
-        lines.push(`        zone = "${enemyData.zone}",`);
-        
-        if (enemyData.elite) {
-            lines.push(`        elite = true,`);
-        }
-        
-        lines.push(`        loot = {`);
-
-        // Sort loot by drop chance (highest first)
-        const sortedLoot = enemyData.loot.sort((a, b) => b.dropChance - a.dropChance);
-
-        sortedLoot.forEach((item, index) => {
-            const comma = index < sortedLoot.length - 1 ? ',' : '';
-            // Only store itemId and dropChance - WoW API will provide name, quality, etc.
-            lines.push(`            {itemId = ${item.itemId}, dropChance = ${item.dropChance.toFixed(1)}}${comma}`);
-        });
-
-        lines.push(`        },`);
-        lines.push(`    },`);
-
-        return lines.join('\n');
-    }
+    // Note: Lua generation/exports were removed from the scraper.
+    // Exporting to Lua is now handled by tools/exportLua.js which reads the
+    // SQLite database and emits the desired filtered Lua files.
 
     async close() {
         if (this.page && !this.page.isClosed()) {
@@ -862,8 +1120,8 @@ async function main() {
     const scraper = new WowheadScraper({ debug: debugMode, database: database });
     await scraper.initialize();
 
-    const allLuaCode = [];
-    const outputFile = path.join(__dirname, '..', 'ScrapedDatabase.lua');
+    // The scraper only populates the SQLite database now. Use tools/exportLua.js
+    // to generate Lua exports from the DB: `node exportLua.js`
 
     // Check database for already-scraped NPCs
     console.log(`\n📂 Checking database for existing NPCs...`);
@@ -940,15 +1198,10 @@ async function main() {
                     console.log(`✓ Successfully enriched data. Total items: ${enemyData.loot.length}`);
                 }
                 
-                // Save to database
+                // Save to database (counts as a successful scrape)
                 await scraper.saveToDatabase(enemyData, url);
-                
-                const luaCode = scraper.generateLuaCode(enemyData);
-                if (luaCode) {
-                    allLuaCode.push(luaCode);
-                    successCount++;
-                    console.log(`✓ ${progress} Successfully processed: ${enemyData.enemyName}`);
-                }
+                successCount++;
+                console.log(`✓ ${progress} Successfully processed and saved: ${enemyData.enemyName}`);
             } else {
                 failureCount++;
                 console.log(`✗ ${progress} No data extracted from ${url}`);
@@ -974,14 +1227,8 @@ async function main() {
     // The scraper only populates the database
     // To generate the Lua file, run: node exportLua.js
 
-    // Write final output as a complete Lua module (for backwards compatibility)
-    if (allLuaCode.length > 0) {
-        console.log(`\n📝 Generating Lua file for ${allLuaCode.length} NPCs...`);
-        const output = generateBasicLuaOutput(allLuaCode);
-        fs.writeFileSync(outputFile, output, 'utf-8');
-        console.log(`✓ Basic Lua file written to: ${outputFile}`);
-        console.log(`   For filtered exports, use: node exportLua.js`);
-    }
+    // Note: Lua output generation was removed from the scraper. Use
+    // tools/exportLua.js to create filtered Lua files from the database.
 
     const totalTime = Math.floor((Date.now() - startTime) / 1000);
     const avgTime = urls.length > 0 ? totalTime / urls.length : 0;
@@ -1001,7 +1248,7 @@ async function main() {
     // Complete database session
     await database.completeSession(sessionId, {
         npcsScraped: successCount,
-        itemsFound: allLuaCode.length,
+        itemsFound: successCount,
         errors: failureCount
     });
     
@@ -1015,38 +1262,14 @@ async function main() {
         console.log(`  Avg Sample Size: ${Math.round(stats.avg_sample_size)}`);
     }
     
-    if (allLuaCode.length > 0) {
-        console.log(`\n💡 Tip: Use exportLua.js to generate filtered Lua files`);
-        console.log(`   Example: node exportLua.js --min-sample 10`);
-    }
+    console.log(`\n💡 Tip: Use tools/exportLua.js to generate filtered Lua files from the database`);
+    console.log(`   Example: node exportLua.js --min-sample 10`);
     
     await database.close();
 }
+// Export the scraper when required as a module, and only run main when executed directly
+module.exports = { WowheadScraper };
 
-// Helper function to generate basic Lua output (for backwards compatibility)
-function generateBasicLuaOutput(luaCodeArray) {
-    const header = `-- Auto-generated loot table database from Wowhead Classic
--- Generated: ${new Date().toISOString()}
--- Total enemies: ${luaCodeArray.length}
--- 
--- ⚠️  This is a basic export. For filtered exports, use: node exportLua.js
--- 
--- This file is automatically loaded by Database.lua
-
-local DB = LootTableExtreme.Database
-
--- Scraped enemy loot data
-DB.ScrapedLoot = {
-`;
-    const footer = `}
-
--- Merge scraped data into main EnemyLoot table
-for enemyName, data in pairs(DB.ScrapedLoot) do
-    DB.EnemyLoot[enemyName] = data
-end
-`;
-    return header + luaCodeArray.join('\n\n') + footer;
+if (require.main === module) {
+    main().catch(console.error);
 }
-
-// Run the scraper
-main().catch(console.error);
