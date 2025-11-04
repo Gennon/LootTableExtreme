@@ -1,5 +1,5 @@
 -- Auto-generated vendor database from Wowhead Classic
--- Generated: 2025-11-03T16:31:54.961Z
+-- Generated: 2025-11-04T06:09:32.712Z
 -- Total vendors: 955
 -- 
 -- This file is automatically loaded by Database.lua

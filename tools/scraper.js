@@ -850,9 +850,115 @@ class WowheadScraper {
             const pickpocketItems = await this.page.evaluate(() => {
                 const items = [];
                 
-                // Look for Listview data with id: 'pickpocketing'
+                // Prefer newer g_listviews.pickpocketing data when available (more reliable counts)
+                try {
+                    if (window.g_listviews && window.g_listviews.pickpocketing && Array.isArray(window.g_listviews.pickpocketing.data)) {
+                        const data = window.g_listviews.pickpocketing.data;
+                        console.log(`✓ Found g_listviews.pickpocketing with ${data.length} entries`);
+
+                        const pickpocketOnly = data.filter(item => {
+                            // Some entries may have source array; keep items that include 21 (pickpocket)
+                            return item.source && Array.isArray(item.source) && item.source.includes(21);
+                        });
+
+                        console.log(`Filtered pickpocket items (source=21): ${pickpocketOnly.length}`);
+
+                        pickpocketOnly.forEach((item) => {
+                            try {
+                                const itemId = parseInt(item.id);
+                                const itemName = item.name || '';
+                                const quality = `q${item.quality || 1}`;
+
+                                // Determine drop counts and sample sizes. Wowhead sometimes stores per-season data
+                                // in item.itemSeasonPhaseData, or top-level count/outof, or _count/outof, or percent.
+                                let dropCount = null;
+                                let sampleSize = null;
+                                let dropChance = null;
+
+                                // If itemSeasonPhaseData exists, try to extract the most general (season 0, phase 0)
+                                if (item.itemSeasonPhaseData) {
+                                    try {
+                                        // Prefer Classic season/phase/mode: '0' -> '0' -> '0' when available
+                                        const s0 = item.itemSeasonPhaseData['0'];
+                                        if (s0 && s0['0'] && s0['0']['0'] && typeof s0['0']['0'].count === 'number' && typeof s0['0']['0'].outof === 'number') {
+                                            dropCount = s0['0']['0'].count;
+                                            sampleSize = s0['0']['0'].outof;
+                                        } else {
+                                            // Fallback: scan any available season/phase/mode for the first valid entry
+                                            const seasons = Object.keys(item.itemSeasonPhaseData);
+                                            for (const s of seasons) {
+                                                const phases = Object.keys(item.itemSeasonPhaseData[s] || {});
+                                                for (const p of phases) {
+                                                    const modes = Object.keys(item.itemSeasonPhaseData[s][p] || {});
+                                                    for (const m of modes) {
+                                                        const entry = item.itemSeasonPhaseData[s][p][m];
+                                                        if (entry && typeof entry.count === 'number' && typeof entry.outof === 'number') {
+                                                            dropCount = entry.count;
+                                                            sampleSize = entry.outof;
+                                                            break;
+                                                        }
+                                                    }
+                                                    if (dropCount && sampleSize) break;
+                                                }
+                                                if (dropCount && sampleSize) break;
+                                            }
+                                        }
+                                    } catch (e) {
+                                        // ignore and continue to other fallbacks
+                                    }
+                                }
+
+                                // Prefer explicit _count and outof if present (after season data)
+                                if ((!dropCount || !sampleSize) && typeof item._count === 'number' && typeof item.outof === 'number') {
+                                    dropCount = item._count;
+                                    sampleSize = item.outof;
+                                }
+
+                                // Top-level count/outof
+                                if ((!dropCount || !sampleSize) && typeof item.count === 'number' && typeof item.outof === 'number') {
+                                    dropCount = item.count;
+                                    sampleSize = item.outof;
+                                }
+
+                                // If we have counts, compute percent
+                                if (typeof dropCount === 'number' && typeof sampleSize === 'number' && sampleSize > 0) {
+                                    dropChance = (dropCount / sampleSize) * 100;
+                                } else if (item.percent) {
+                                    dropChance = parseFloat(item.percent) || null;
+                                }
+
+                                // _count fallback (some pages expose _count only)
+                                if (!dropCount && typeof item._count === 'number') {
+                                    dropCount = item._count;
+                                }
+
+                                if (itemName) {
+                                    items.push({
+                                        itemId,
+                                        name: itemName,
+                                        quality,
+                                        dropChance: dropChance !== null ? dropChance : null,
+                                        dropCount: dropCount || null,
+                                        sampleSize: sampleSize || null,
+                                        classId: item.classs || null,
+                                        subclassId: item.subclass || null,
+                                        stackSize: item.stack || null
+                                    });
+                                }
+                            } catch (e) {
+                                console.error(`Error parsing pickpocket item:`, e.message);
+                            }
+                        });
+
+                        return items;
+                    }
+                } catch (e) {
+                    console.error('Error reading g_listviews.pickpocketing:', e && e.message ? e.message : e);
+                }
+
+                // Fallback: look for older Listview data embedded in scripts
                 const scripts = document.querySelectorAll('script');
-                
+
                 for (const script of scripts) {
                     const scriptText = script.textContent;
                     // Look specifically for the pickpocketing Listview
@@ -863,22 +969,22 @@ class WowheadScraper {
                             if (dataMatch) {
                                 const dataStr = dataMatch[1];
                                 const data = eval('(' + dataStr + ')');
-                                
+
                                 console.log(`Total items in pickpocketing Listview: ${data.length}`);
-                                
+
                                 // Filter for actual pickpocket items (source includes 21 = pickpocket)
                                 const pickpocketOnly = data.filter(item => 
                                     item.source && Array.isArray(item.source) && item.source.includes(21)
                                 );
-                                
+
                                 console.log(`Filtered pickpocket items (source=21): ${pickpocketOnly.length}`);
-                                
+
                                 pickpocketOnly.forEach((item) => {
                                     try {
                                         const itemId = parseInt(item.id);
                                         const itemName = item.name || '';
                                         const quality = `q${item.quality || 1}`;
-                                        
+
                                         // Calculate drop chance from count/outof
                                         let dropChance = 0;
                                         if (item.count && item.outof) {
@@ -886,9 +992,7 @@ class WowheadScraper {
                                         } else if (item.percent) {
                                             dropChance = parseFloat(item.percent);
                                         }
-                                        
-                                        // Include all items (do not skip low drop rates)
-                                        
+
                                         if (itemName) {
                                             items.push({
                                                 itemId,
@@ -906,7 +1010,7 @@ class WowheadScraper {
                                         console.error(`Error parsing pickpocket item:`, e.message);
                                     }
                                 });
-                                
+
                                 return items;
                             }
                         } catch (e) {
@@ -1134,6 +1238,9 @@ async function main() {
     
     let urls = [];
     let debugMode = args.includes('--debug') || args.includes('-d');
+    let forceMode = args.includes('--force') || args.includes('-f');
+    let refreshPickpocket = args.includes('--refresh-pickpocket');
+    let dryRun = args.includes('--dry-run');
     
     // Parse command line arguments
     if (args.includes('--url')) {
@@ -1184,26 +1291,72 @@ async function main() {
     console.log(`\n📂 Checking database for existing NPCs...`);
     const existingNpcs = await database.all('SELECT npc_id FROM npcs');
     const alreadyScraped = new Set(existingNpcs.map(row => row.npc_id));
-    
+
     if (alreadyScraped.size > 0) {
         console.log(`✓ Found ${alreadyScraped.size} NPCs already in database`);
-        console.log(`✓ Resume: Will skip these and process only new NPCs`);
+        if (forceMode) {
+            console.log('⚠️  Force mode enabled: will reprocess all provided URLs regardless of existing data');
+        } else if (refreshPickpocket) {
+            console.log('ℹ️  Refresh-pickpocket enabled: will reprocess NPCs that are missing pickpocket entries');
+        } else {
+            console.log(`✓ Resume: Will skip these and process only new NPCs`);
+        }
     }
 
-    // Filter out already-scraped URLs
-    const originalCount = urls.length;
-    urls = urls.filter(url => {
-        const npcIdMatch = url.match(/npc[=/](\d+)/);
-        if (npcIdMatch) {
-            const npcId = parseInt(npcIdMatch[1]);
-            return !alreadyScraped.has(npcId);
+    // If refreshPickpocket is requested, get NPCs that already have pickpocket data
+    let pickpocketNpcs = new Set();
+    if (refreshPickpocket && !forceMode) {
+        try {
+            const rows = await database.all('SELECT DISTINCT npc_id FROM pickpocket_loot');
+            rows.forEach(r => pickpocketNpcs.add(r.npc_id));
+            console.log(`✓ Found ${pickpocketNpcs.size} NPCs with pickpocket entries in DB`);
+        } catch (e) {
+            console.warn('Could not query pickpocket_loot table:', e.message);
         }
-        return true; // Keep URLs we can't parse
-    });
+    }
+
+    // Filter URLs depending on mode
+    const originalCount = urls.length;
+    if (!forceMode) {
+        if (refreshPickpocket) {
+            // Only process NPCs that have pickpocket entries (we want to refresh those)
+            urls = urls.filter(url => {
+                const npcIdMatch = url.match(/npc[=/](\d+)/);
+                if (npcIdMatch) {
+                    const npcId = parseInt(npcIdMatch[1]);
+                    return pickpocketNpcs.has(npcId);
+                }
+                return false; // if we can't parse the NPC id, skip it in refresh mode
+            });
+        } else {
+            // Default resume behavior: skip NPCs already in npcs table
+            urls = urls.filter(url => {
+                const npcIdMatch = url.match(/npc[=/](\d+)/);
+                if (npcIdMatch) {
+                    const npcId = parseInt(npcIdMatch[1]);
+                    return !alreadyScraped.has(npcId);
+                }
+                return true; // Keep URLs we can't parse
+            });
+        }
+    }
 
     if (urls.length < originalCount) {
         console.log(`\n🔄 Resume mode: Skipping ${originalCount - urls.length} already-scraped NPCs`);
-        console.log(`   Processing ${urls.length} new NPCs`);
+        console.log(`   Processing ${urls.length} NPCs`);
+    }
+
+    // Dry-run support: print a sample of URLs that would be processed and exit
+    if (dryRun) {
+        console.log('\n🧪 Dry run: the following URLs would be processed:');
+        const sample = urls.slice(0, 20);
+        sample.forEach((u, i) => console.log(`  ${i + 1}. ${u}`));
+        if (urls.length > sample.length) console.log(`  ... and ${urls.length - sample.length} more`);
+        console.log(`\nTotal: ${urls.length} URL(s)`);
+        await scraper.close();
+        await database.completeSession(sessionId, { npcsScraped: 0, itemsFound: 0, errors: 0 });
+        await database.close();
+        process.exit(0);
     }
 
     console.log(`\n========================================`);
