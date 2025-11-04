@@ -43,9 +43,11 @@ $filesToCopy = @(
     "Core.lua",
     "Database.lua",
     "ScrapedDatabase.lua",
-    "UI.xml",
+    "UI_simple.xml",
+    "UI_settings.xml",
     "Filters.lua",
     "ModeManager.lua",
+    "Settings.lua",
     "TargetHandler.lua",
     "LootFrame.lua",
     "Tooltip.lua"
