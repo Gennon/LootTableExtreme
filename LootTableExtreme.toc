@@ -11,7 +11,9 @@ Database.lua
 ScrapedDatabase.lua
 
 # UI files
-UI.xml
+UI_simple.xml
+UI_settings.xml
+Settings.lua
 Filters.lua
 ModeManager.lua
 TargetHandler.lua
