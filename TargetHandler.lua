@@ -50,11 +50,9 @@ function LootTableExtreme:OnTargetChanged()
         return
     end
     
-    -- Lookup and display by NPC ID
-    local enemyData, enemyName = self.Database:GetEnemyLootByNpcId(npcId)
-    if enemyData then
-        self:ShowEnemyLoot(npcId)
-    end
+    -- Lookup and display by NPC ID. Call ShowEnemyLoot regardless of whether
+    -- the database has a record so the UI updates when switching to unknown NPCs.
+    self:ShowEnemyLoot(npcId)
 end
 
 -- Search for enemy and show loot
