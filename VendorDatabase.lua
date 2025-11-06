@@ -1,5 +1,5 @@
 -- Auto-generated vendor database from Wowhead Classic
--- Generated: 2025-11-04T06:09:32.712Z
+-- Generated: 2025-11-06T06:27:36.047Z
 -- Total vendors: 955
 -- 
 -- This file is automatically loaded by Database.lua
@@ -8,8 +8,8 @@ local DB = LootTableExtreme.Database
 
 -- Vendor (sold) items
 DB.VendorItems = {
-    -- Abe Winters <Apprentice Armorer>
-    ["Abe Winters <Apprentice Armorer>"] = {
+    -- Abe Winters
+    ["Abe Winters"] = {
         npcId = 2135,
         level = {14, 14},
         zone = "Tirisfal Glades",
@@ -25,8 +25,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Abigail Sawyer <Bow Merchant>
-    ["Abigail Sawyer <Bow Merchant>"] = {
+    -- Abigail Sawyer
+    ["Abigail Sawyer"] = {
         npcId = 4604,
         level = {30, 30},
         zone = "Undercity",
@@ -45,8 +45,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Abigail Shiel <Trade Supplies>
-    ["Abigail Shiel <Trade Supplies>"] = {
+    -- Abigail Shiel
+    ["Abigail Shiel"] = {
         npcId = 2118,
         level = {9, 9},
         zone = "Tirisfal Glades",
@@ -69,8 +69,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Adair Gilroy <Librarian>
-    ["Adair Gilroy <Librarian>"] = {
+    -- Adair Gilroy
+    ["Adair Gilroy"] = {
         npcId = 1316,
         level = {60, 60},
         zone = "Stormwind City",
@@ -90,8 +90,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Adlin Pridedrift <General Supplies>
-    ["Adlin Pridedrift <General Supplies>"] = {
+    -- Adlin Pridedrift
+    ["Adlin Pridedrift"] = {
         npcId = 829,
         level = {5, 5},
         zone = "Dun Morogh",
@@ -134,8 +134,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Aeolynn <Clothier>
-    ["Aeolynn <Clothier>"] = {
+    -- Aeolynn
+    ["Aeolynn"] = {
         npcId = 3952,
         level = {22, 22},
         zone = "Ashenvale",
@@ -167,8 +167,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Agustus Moulaine <Mail Armor Merchant>
-    ["Agustus Moulaine <Mail Armor Merchant>"] = {
+    -- Agustus Moulaine
+    ["Agustus Moulaine"] = {
         npcId = 1349,
         level = {30, 30},
         zone = "Stormwind City",
@@ -209,8 +209,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ahanu <Leather Armor Merchant>
-    ["Ahanu <Leather Armor Merchant>"] = {
+    -- Ahanu
+    ["Ahanu"] = {
         npcId = 8359,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -230,8 +230,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Alaindia <Reagent Vendor>
-    ["Alaindia <Reagent Vendor>"] = {
+    -- Alaindia
+    ["Alaindia"] = {
         npcId = 3562,
         level = {30, 30},
         zone = "Darnassus",
@@ -268,8 +268,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Alchemist Pestlezugg <Alchemy Supplies>
-    ["Alchemist Pestlezugg <Alchemy Supplies>"] = {
+    -- Alchemist Pestlezugg
+    ["Alchemist Pestlezugg"] = {
         npcId = 5594,
         level = {45, 45},
         zone = "Tanaris",
@@ -286,8 +286,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Aldia <General Supplies>
-    ["Aldia <General Supplies>"] = {
+    -- Aldia
+    ["Aldia"] = {
         npcId = 3608,
         level = {17, 17},
         zone = "Teldrassil",
@@ -307,8 +307,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Aldren Cordon <Clothier>
-    ["Aldren Cordon <Clothier>"] = {
+    -- Aldren Cordon
+    ["Aldren Cordon"] = {
         npcId = 1214,
         level = {18, 18},
         zone = "Loch Modan",
@@ -328,8 +328,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Aldric Moore <Mail Armor Merchant>
-    ["Aldric Moore <Mail Armor Merchant>"] = {
+    -- Aldric Moore
+    ["Aldric Moore"] = {
         npcId = 1294,
         level = {30, 30},
         zone = "Stormwind City",
@@ -355,8 +355,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Alessandro Luca <Blue Moon Odds and Ends>
-    ["Alessandro Luca <Blue Moon Odds and Ends>"] = {
+    -- Alessandro Luca
+    ["Alessandro Luca"] = {
         npcId = 7683,
         level = {35, 35},
         zone = "Undercity",
@@ -365,8 +365,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Alexander Calder <Warlock Trainer>
-    ["Alexander Calder <Warlock Trainer>"] = {
+    -- Alexander Calder
+    ["Alexander Calder"] = {
         npcId = 5173,
         level = {60, 60},
         zone = "Ironforge",
@@ -520,8 +520,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Alexandra Bolero <Tailoring Supplies>
-    ["Alexandra Bolero <Tailoring Supplies>"] = {
+    -- Alexandra Bolero
+    ["Alexandra Bolero"] = {
         npcId = 1347,
         level = {30, 30},
         zone = "Stormwind City",
@@ -546,8 +546,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Alexandre Lefevre <Leather Armor Merchant>
-    ["Alexandre Lefevre <Leather Armor Merchant>"] = {
+    -- Alexandre Lefevre
+    ["Alexandre Lefevre"] = {
         npcId = 3552,
         level = {18, 18},
         zone = "Silverpine Forest",
@@ -563,8 +563,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Algernon <Alchemy Supplies>
-    ["Algernon <Alchemy Supplies>"] = {
+    -- Algernon
+    ["Algernon"] = {
         npcId = 4610,
         level = {30, 30},
         zone = "Undercity",
@@ -578,8 +578,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Allan Hafgan <Staves Merchant>
-    ["Allan Hafgan <Staves Merchant>"] = {
+    -- Allan Hafgan
+    ["Allan Hafgan"] = {
         npcId = 1315,
         level = {30, 30},
         zone = "Stormwind City",
@@ -589,8 +589,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Allyndia <Food & Drink Vendor>
-    ["Allyndia <Food & Drink Vendor>"] = {
+    -- Allyndia
+    ["Allyndia"] = {
         npcId = 4191,
         level = {15, 15},
         zone = "Darkshore",
@@ -618,8 +618,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Alowicious Czervik <Sweet Treats>
-    ["Alowicious Czervik <Sweet Treats>"] = {
+    -- Alowicious Czervik
+    ["Alowicious Czervik"] = {
         npcId = 14480,
         level = {10, 10},
         zone = "Orgrimmar",
@@ -631,8 +631,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Altsoba Ragetotem <Weapon Merchant>
-    ["Altsoba Ragetotem <Weapon Merchant>"] = {
+    -- Altsoba Ragetotem
+    ["Altsoba Ragetotem"] = {
         npcId = 10379,
         level = {55, 55},
         zone = "Felwood",
@@ -650,8 +650,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Alyssa Eva <Reagent Vendor>
-    ["Alyssa Eva <Reagent Vendor>"] = {
+    -- Alyssa Eva
+    ["Alyssa Eva"] = {
         npcId = 1673,
         level = {7, 7},
         zone = "Duskwood",
@@ -678,8 +678,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Alyssa Griffith <Bag Vendor>
-    ["Alyssa Griffith <Bag Vendor>"] = {
+    -- Alyssa Griffith
+    ["Alyssa Griffith"] = {
         npcId = 1321,
         level = {30, 30},
         zone = "Stormwind City",
@@ -691,8 +691,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Amy Davenport <Tradeswoman>
-    ["Amy Davenport <Tradeswoman>"] = {
+    -- Amy Davenport
+    ["Amy Davenport"] = {
         npcId = 777,
         level = {20, 20},
         zone = "Redridge Mountains",
@@ -729,8 +729,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Anadyia <Robe Vendor>
-    ["Anadyia <Robe Vendor>"] = {
+    -- Anadyia
+    ["Anadyia"] = {
         npcId = 4172,
         level = {30, 30},
         zone = "Darnassus",
@@ -745,8 +745,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Andiss <Armorer & Shieldcrafter>
-    ["Andiss <Armorer & Shieldcrafter>"] = {
+    -- Andiss
+    ["Andiss"] = {
         npcId = 3592,
         level = {10, 10},
         zone = "Teldrassil",
@@ -762,8 +762,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Andorgos <Brood of Malygos>
-    ["Andorgos <Brood of Malygos>"] = {
+    -- Andorgos
+    ["Andorgos"] = {
         npcId = 15502,
         level = {60, 60},
         zone = "Ahn'Qiraj",
@@ -817,8 +817,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Andrea Boynton <Clothier>
-    ["Andrea Boynton <Clothier>"] = {
+    -- Andrea Boynton
+    ["Andrea Boynton"] = {
         npcId = 3554,
         level = {18, 20},
         zone = "Silverpine Forest",
@@ -838,8 +838,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Andrew Hilbert <Trade Goods>
-    ["Andrew Hilbert <Trade Goods>"] = {
+    -- Andrew Hilbert
+    ["Andrew Hilbert"] = {
         npcId = 3556,
         level = {18, 20},
         zone = "Silverpine Forest",
@@ -869,8 +869,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Andrew Krighton <Armorer & Shieldcrafter>
-    ["Andrew Krighton <Armorer & Shieldcrafter>"] = {
+    -- Andrew Krighton
+    ["Andrew Krighton"] = {
         npcId = 2046,
         level = {8, 8},
         zone = "Elwynn Forest",
@@ -886,8 +886,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Androd Fadran <Leatherworking Supplies>
-    ["Androd Fadran <Leatherworking Supplies>"] = {
+    -- Androd Fadran
+    ["Androd Fadran"] = {
         npcId = 2816,
         level = {37, 37},
         zone = "Arathi Highlands",
@@ -912,8 +912,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Andrus <Staff Merchant>
-    ["Andrus <Staff Merchant>"] = {
+    -- Andrus
+    ["Andrus"] = {
         npcId = 4234,
         level = {30, 30},
         zone = "Darnassus",
@@ -923,8 +923,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Antonio Perelli <Traveling Salesman>
-    ["Antonio Perelli <Traveling Salesman>"] = {
+    -- Antonio Perelli
+    ["Antonio Perelli"] = {
         npcId = 844,
         level = {35, 35},
         zone = "Duskwood",
@@ -974,8 +974,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Archibald Kava <Cloth & Leather Armor Merchant>
-    ["Archibald Kava <Cloth & Leather Armor Merchant>"] = {
+    -- Archibald Kava
+    ["Archibald Kava"] = {
         npcId = 2113,
         level = {5, 5},
         zone = "Tirisfal Glades",
@@ -995,8 +995,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Archmage Angela Dosantos <Brotherhood of the Light>
-    ["Archmage Angela Dosantos <Brotherhood of the Light>"] = {
+    -- Archmage Angela Dosantos
+    ["Archmage Angela Dosantos"] = {
         npcId = 16116,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -1013,8 +1013,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ardwyn Cailen <Wand Merchant>
-    ["Ardwyn Cailen <Wand Merchant>"] = {
+    -- Ardwyn Cailen
+    ["Ardwyn Cailen"] = {
         npcId = 1312,
         level = {30, 30},
         zone = "Stormwind City",
@@ -1030,8 +1030,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Argent Quartermaster Hasana <The Argent Dawn>
-    ["Argent Quartermaster Hasana <The Argent Dawn>"] = {
+    -- Argent Quartermaster Hasana
+    ["Argent Quartermaster Hasana"] = {
         npcId = 10856,
         level = {58, 58},
         zone = "Tirisfal Glades",
@@ -1070,8 +1070,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Argent Quartermaster Lightspark <The Argent Dawn>
-    ["Argent Quartermaster Lightspark <The Argent Dawn>"] = {
+    -- Argent Quartermaster Lightspark
+    ["Argent Quartermaster Lightspark"] = {
         npcId = 10857,
         level = {58, 58},
         zone = "Western Plaguelands",
@@ -1110,8 +1110,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ariyell Skyshadow <Weapon Merchant>
-    ["Ariyell Skyshadow <Weapon Merchant>"] = {
+    -- Ariyell Skyshadow
+    ["Ariyell Skyshadow"] = {
         npcId = 4203,
         level = {30, 30},
         zone = "Darnassus",
@@ -1165,8 +1165,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Asoran <General Goods Vendor>
-    ["Asoran <General Goods Vendor>"] = {
+    -- Asoran
+    ["Asoran"] = {
         npcId = 3350,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -1221,8 +1221,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Avette Fellwood <Bowyer>
-    ["Avette Fellwood <Bowyer>"] = {
+    -- Avette Fellwood
+    ["Avette Fellwood"] = {
         npcId = 228,
         level = {24, 24},
         zone = "Duskwood",
@@ -1260,8 +1260,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Balai Lok'Wein <Potions, Scrolls and Reagents>
-    ["Balai Lok'Wein <Potions, Scrolls and Reagents>"] = {
+    -- Balai Lok'Wein
+    ["Balai Lok'Wein"] = {
         npcId = 13476,
         level = {43, 43},
         zone = "Dustwallow Marsh",
@@ -1299,8 +1299,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bale <General Goods>
-    ["Bale <General Goods>"] = {
+    -- Bale
+    ["Bale"] = {
         npcId = 2806,
         level = {55, 55},
         zone = "Felwood",
@@ -1330,8 +1330,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Banalash <Trade Goods>
-    ["Banalash <Trade Goods>"] = {
+    -- Banalash
+    ["Banalash"] = {
         npcId = 989,
         level = {50, 50},
         zone = "Swamp of Sorrows",
@@ -1372,8 +1372,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Barg <General Supplies>
-    ["Barg <General Supplies>"] = {
+    -- Barg
+    ["Barg"] = {
         npcId = 3481,
         level = {14, 14},
         zone = "The Barrens",
@@ -1396,8 +1396,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Barim Jurgenstaad <Reagent Vendor>
-    ["Barim Jurgenstaad <Reagent Vendor>"] = {
+    -- Barim Jurgenstaad
+    ["Barim Jurgenstaad"] = {
         npcId = 5110,
         level = {30, 30},
         zone = "Ironforge",
@@ -1424,8 +1424,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Barkeep Dobbins <Bartender>
-    ["Barkeep Dobbins <Bartender>"] = {
+    -- Barkeep Dobbins
+    ["Barkeep Dobbins"] = {
         npcId = 465,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -1451,8 +1451,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Barkeep Hann <Bartender>
-    ["Barkeep Hann <Bartender>"] = {
+    -- Barkeep Hann
+    ["Barkeep Hann"] = {
         npcId = 274,
         level = {26, 26},
         zone = "Duskwood",
@@ -1467,8 +1467,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Barkeep Kelly <Bartender>
-    ["Barkeep Kelly <Bartender>"] = {
+    -- Barkeep Kelly
+    ["Barkeep Kelly"] = {
         npcId = 2366,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
@@ -1508,8 +1508,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bartender Lillian <Bartender>
-    ["Bartender Lillian <Bartender>"] = {
+    -- Bartender Lillian
+    ["Bartender Lillian"] = {
         npcId = 4893,
         level = {45, 45},
         zone = "Dustwallow Marsh",
@@ -1523,8 +1523,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bartender Wental <Food and Drinks>
-    ["Bartender Wental <Food and Drinks>"] = {
+    -- Bartender Wental
+    ["Bartender Wental"] = {
         npcId = 5620,
         level = {21, 21},
         zone = "Redridge Mountains",
@@ -1567,8 +1567,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ben Trias <Apprentice of Cheese>
-    ["Ben Trias <Apprentice of Cheese>"] = {
+    -- Ben Trias
+    ["Ben Trias"] = {
         npcId = 4981,
         level = {25, 25},
         zone = "Stormwind City",
@@ -1588,8 +1588,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Benijah Fenner <Weapon Merchant>
-    ["Benijah Fenner <Weapon Merchant>"] = {
+    -- Benijah Fenner
+    ["Benijah Fenner"] = {
         npcId = 4602,
         level = {30, 30},
         zone = "Undercity",
@@ -1615,8 +1615,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bernard Brubaker <Leather Armor Merchant>
-    ["Bernard Brubaker <Leather Armor Merchant>"] = {
+    -- Bernard Brubaker
+    ["Bernard Brubaker"] = {
         npcId = 3097,
         level = {20, 20},
         zone = "Redridge Mountains",
@@ -1633,8 +1633,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bernard Gump <Florist>
-    ["Bernard Gump <Florist>"] = {
+    -- Bernard Gump
+    ["Bernard Gump"] = {
         npcId = 1302,
         level = {30, 30},
         zone = "Stormwind City",
@@ -1654,8 +1654,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bernie Heisten <Food & Drink>
-    ["Bernie Heisten <Food & Drink>"] = {
+    -- Bernie Heisten
+    ["Bernie Heisten"] = {
         npcId = 3546,
         level = {45, 45},
         zone = "Blasted Lands",
@@ -1681,8 +1681,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bhaldaran Ravenshade <Bowyer>
-    ["Bhaldaran Ravenshade <Bowyer>"] = {
+    -- Bhaldaran Ravenshade
+    ["Bhaldaran Ravenshade"] = {
         npcId = 3951,
         level = {34, 34},
         zone = "Ashenvale",
@@ -1697,8 +1697,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Billibub Cogspinner <Engineering Supplier>
-    ["Billibub Cogspinner <Engineering Supplier>"] = {
+    -- Billibub Cogspinner
+    ["Billibub Cogspinner"] = {
         npcId = 5519,
         level = {30, 30},
         zone = "Stormwind City",
@@ -1722,8 +1722,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bimble Longberry <Fruit Vendor>
-    ["Bimble Longberry <Fruit Vendor>"] = {
+    -- Bimble Longberry
+    ["Bimble Longberry"] = {
         npcId = 7978,
         level = {30, 30},
         zone = "Ironforge",
@@ -1737,8 +1737,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bingus <Weapon Merchant>
-    ["Bingus <Weapon Merchant>"] = {
+    -- Bingus
+    ["Bingus"] = {
         npcId = 5152,
         level = {30, 30},
         zone = "Ironforge",
@@ -1752,8 +1752,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Blacksmith Rand <Apprentice Armorer>
-    ["Blacksmith Rand <Apprentice Armorer>"] = {
+    -- Blacksmith Rand
+    ["Blacksmith Rand"] = {
         npcId = 2116,
         level = {5, 5},
         zone = "Tirisfal Glades",
@@ -1769,8 +1769,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Blimo Gadgetspring <Trade Supplier>
-    ["Blimo Gadgetspring <Trade Supplier>"] = {
+    -- Blimo Gadgetspring
+    ["Blimo Gadgetspring"] = {
         npcId = 12957,
         level = {55, 55},
         zone = "Azshara",
@@ -1809,8 +1809,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Blixrez Goodstitch <Leatherworking Supplies>
-    ["Blixrez Goodstitch <Leatherworking Supplies>"] = {
+    -- Blixrez Goodstitch
+    ["Blixrez Goodstitch"] = {
         npcId = 2846,
         level = {43, 43},
         zone = "Stranglethorn Vale",
@@ -1836,8 +1836,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Blixxrak <Light Armor Merchant>
-    ["Blixxrak <Light Armor Merchant>"] = {
+    -- Blixxrak
+    ["Blixxrak"] = {
         npcId = 11183,
         level = {55, 55},
         zone = "Winterspring",
@@ -1859,8 +1859,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Blizrik Buckshot <Gunsmith>
-    ["Blizrik Buckshot <Gunsmith>"] = {
+    -- Blizrik Buckshot
+    ["Blizrik Buckshot"] = {
         npcId = 8131,
         level = {45, 45},
         zone = "Tanaris",
@@ -1876,8 +1876,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bliztik <Alchemy Supplies>
-    ["Bliztik <Alchemy Supplies>"] = {
+    -- Bliztik
+    ["Bliztik"] = {
         npcId = 2481,
         level = {36, 36},
         zone = "Duskwood",
@@ -1892,8 +1892,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bombus Finespindle <Leatherworking Supplies>
-    ["Bombus Finespindle <Leatherworking Supplies>"] = {
+    -- Bombus Finespindle
+    ["Bombus Finespindle"] = {
         npcId = 5128,
         level = {30, 30},
         zone = "Ironforge",
@@ -1918,8 +1918,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Boran Ironclink <Armorer>
-    ["Boran Ironclink <Armorer>"] = {
+    -- Boran Ironclink
+    ["Boran Ironclink"] = {
         npcId = 1240,
         level = {8, 11},
         zone = "Dun Morogh",
@@ -1933,8 +1933,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Borand <Bowyer>
-    ["Borand <Bowyer>"] = {
+    -- Borand
+    ["Borand"] = {
         npcId = 9549,
         level = {30, 30},
         zone = "Stonetalon Mountains",
@@ -1949,8 +1949,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Borstan <Meat Vendor>
-    ["Borstan <Meat Vendor>"] = {
+    -- Borstan
+    ["Borstan"] = {
         npcId = 3368,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -1964,8 +1964,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Borya <Tailoring Supplies>
-    ["Borya <Tailoring Supplies>"] = {
+    -- Borya
+    ["Borya"] = {
         npcId = 3364,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -1995,8 +1995,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brahnmar <Armorer>
-    ["Brahnmar <Armorer>"] = {
+    -- Brahnmar
+    ["Brahnmar"] = {
         npcId = 1450,
         level = {25, 25},
         zone = "Wetlands",
@@ -2012,8 +2012,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brak Durnad <Weaponsmith>
-    ["Brak Durnad <Weaponsmith>"] = {
+    -- Brak Durnad
+    ["Brak Durnad"] = {
         npcId = 1441,
         level = {25, 25},
         zone = "Wetlands",
@@ -2031,8 +2031,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brannol Eaglemoon <Clothier>
-    ["Brannol Eaglemoon <Clothier>"] = {
+    -- Brannol Eaglemoon
+    ["Brannol Eaglemoon"] = {
         npcId = 3611,
         level = {16, 16},
         zone = "Teldrassil",
@@ -2046,8 +2046,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brave Stonehide <Officer Accessories Quartermaster>
-    ["Brave Stonehide <Officer Accessories Quartermaster>"] = {
+    -- Brave Stonehide
+    ["Brave Stonehide"] = {
         npcId = 12793,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -2059,8 +2059,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brenwyn Wintersteel <Blade Merchant>
-    ["Brenwyn Wintersteel <Blade Merchant>"] = {
+    -- Brenwyn Wintersteel
+    ["Brenwyn Wintersteel"] = {
         npcId = 5120,
         level = {30, 30},
         zone = "Ironforge",
@@ -2093,8 +2093,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bretta Goldfury <Gun Merchant>
-    ["Bretta Goldfury <Gun Merchant>"] = {
+    -- Bretta Goldfury
+    ["Bretta Goldfury"] = {
         npcId = 5123,
         level = {30, 30},
         zone = "Ironforge",
@@ -2111,8 +2111,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brienna Starglow <Tailoring Supplies>
-    ["Brienna Starglow <Tailoring Supplies>"] = {
+    -- Brienna Starglow
+    ["Brienna Starglow"] = {
         npcId = 6576,
         level = {40, 40},
         zone = "Feralas",
@@ -2136,8 +2136,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brinna Valanaar <Bowyer>
-    ["Brinna Valanaar <Bowyer>"] = {
+    -- Brinna Valanaar
+    ["Brinna Valanaar"] = {
         npcId = 14301,
         level = {45, 45},
         zone = "Azshara",
@@ -2154,8 +2154,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brivelthwerp <Ice Cream Vendor>
-    ["Brivelthwerp <Ice Cream Vendor>"] = {
+    -- Brivelthwerp
+    ["Brivelthwerp"] = {
         npcId = 6496,
         level = {35, 35},
         zone = "Thousand Needles",
@@ -2164,8 +2164,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bro'kin <Alchemy Supplies>
-    ["Bro'kin <Alchemy Supplies>"] = {
+    -- Bro'kin
+    ["Bro'kin"] = {
         npcId = 2480,
         level = {49, 49},
         zone = "Alterac Mountains",
@@ -2180,8 +2180,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brog Hamfist <General Supplies>
-    ["Brog Hamfist <General Supplies>"] = {
+    -- Brog Hamfist
+    ["Brog Hamfist"] = {
         npcId = 151,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -2201,8 +2201,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brogus Thunderbrew <Food and Drink>
-    ["Brogus Thunderbrew <Food and Drink>"] = {
+    -- Brogus Thunderbrew
+    ["Brogus Thunderbrew"] = {
         npcId = 4255,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -2246,8 +2246,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bromiir Ormsen <Heavy Armor Merchant>
-    ["Bromiir Ormsen <Heavy Armor Merchant>"] = {
+    -- Bromiir Ormsen
+    ["Bromiir Ormsen"] = {
         npcId = 5106,
         level = {30, 30},
         zone = "Ironforge",
@@ -2263,8 +2263,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bronk <Alchemy Supplies>
-    ["Bronk <Alchemy Supplies>"] = {
+    -- Bronk
+    ["Bronk"] = {
         npcId = 8158,
         level = {49, 49},
         zone = "Feralas",
@@ -2280,8 +2280,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bronk Steelrage <Armorer and Shieldcrafter>
-    ["Bronk Steelrage <Armorer and Shieldcrafter>"] = {
+    -- Bronk Steelrage
+    ["Bronk Steelrage"] = {
         npcId = 3075,
         level = {10, 10},
         zone = "Mulgore",
@@ -2297,8 +2297,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bront Coldcleave <Butcher>
-    ["Bront Coldcleave <Butcher>"] = {
+    -- Bront Coldcleave
+    ["Bront Coldcleave"] = {
         npcId = 2365,
         level = {39, 39},
         zone = "Hillsbrad Foothills",
@@ -2312,8 +2312,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brooke Stonebraid <Mining Supplier>
-    ["Brooke Stonebraid <Mining Supplier>"] = {
+    -- Brooke Stonebraid
+    ["Brooke Stonebraid"] = {
         npcId = 5514,
         level = {30, 30},
         zone = "Stormwind City",
@@ -2325,8 +2325,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brother Cassius <Reagent Vendor>
-    ["Brother Cassius <Reagent Vendor>"] = {
+    -- Brother Cassius
+    ["Brother Cassius"] = {
         npcId = 1351,
         level = {30, 30},
         zone = "Stormwind City",
@@ -2353,8 +2353,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Brother Danil <General Supplies>
-    ["Brother Danil <General Supplies>"] = {
+    -- Brother Danil
+    ["Brother Danil"] = {
         npcId = 152,
         level = {5, 5},
         zone = "Elwynn Forest",
@@ -2368,8 +2368,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bruuk Barleybeard <Bartender>
-    ["Bruuk Barleybeard <Bartender>"] = {
+    -- Bruuk Barleybeard
+    ["Bruuk Barleybeard"] = {
         npcId = 5570,
         level = {50, 50},
         zone = "Ironforge",
@@ -2383,8 +2383,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bryan Cross <Shield Merchant>
-    ["Bryan Cross <Shield Merchant>"] = {
+    -- Bryan Cross
+    ["Bryan Cross"] = {
         npcId = 1319,
         level = {30, 30},
         zone = "Stormwind City",
@@ -2400,8 +2400,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Bryllia Ironbrand <General Goods Vendor>
-    ["Bryllia Ironbrand <General Goods Vendor>"] = {
+    -- Bryllia Ironbrand
+    ["Bryllia Ironbrand"] = {
         npcId = 5101,
         level = {30, 30},
         zone = "Ironforge",
@@ -2429,8 +2429,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Burbik Gearspanner <Trade Supplier>
-    ["Burbik Gearspanner <Trade Supplier>"] = {
+    -- Burbik Gearspanner
+    ["Burbik Gearspanner"] = {
         npcId = 5163,
         level = {30, 30},
         zone = "Ironforge",
@@ -2459,8 +2459,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Burdrak Harglhelm <Leather Armor Merchant>
-    ["Burdrak Harglhelm <Leather Armor Merchant>"] = {
+    -- Burdrak Harglhelm
+    ["Burdrak Harglhelm"] = {
         npcId = 3162,
         level = {12, 12},
         zone = "Dun Morogh",
@@ -2474,8 +2474,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Burkrum <Heavy Armor Merchant>
-    ["Burkrum <Heavy Armor Merchant>"] = {
+    -- Burkrum
+    ["Burkrum"] = {
         npcId = 6028,
         level = {30, 30},
         zone = "Ashenvale",
@@ -2500,8 +2500,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Calandrath <Innkeeper>
-    ["Calandrath <Innkeeper>"] = {
+    -- Calandrath
+    ["Calandrath"] = {
         npcId = 15174,
         level = {54, 54},
         zone = "Silithus",
@@ -2540,8 +2540,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Captain Dirgehammer <Armor Quartermaster>
-    ["Captain Dirgehammer <Armor Quartermaster>"] = {
+    -- Captain Dirgehammer
+    ["Captain Dirgehammer"] = {
         npcId = 12777,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -2863,8 +2863,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Captain O'Neal <Weapons Quartermaster>
-    ["Captain O'Neal <Weapons Quartermaster>"] = {
+    -- Captain O'Neal
+    ["Captain O'Neal"] = {
         npcId = 12782,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -2919,8 +2919,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Captured Servant of Azora <Specialist Tailoring Supplies>
-    ["Captured Servant of Azora <Specialist Tailoring Supplies>"] = {
+    -- Captured Servant of Azora
+    ["Captured Servant of Azora"] = {
         npcId = 3096,
         level = {22, 22},
         zone = "Redridge Mountains",
@@ -2946,8 +2946,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Caretaker Alen <The Argent Dawn>
-    ["Caretaker Alen <The Argent Dawn>"] = {
+    -- Caretaker Alen
+    ["Caretaker Alen"] = {
         npcId = 11038,
         level = {52, 52},
         zone = "Eastern Plaguelands",
@@ -2985,8 +2985,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Carla Granger <Cloth Armor Merchant>
-    ["Carla Granger <Cloth Armor Merchant>"] = {
+    -- Carla Granger
+    ["Carla Granger"] = {
         npcId = 1291,
         level = {30, 30},
         zone = "Stormwind City",
@@ -3015,8 +3015,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Catherine Leland <Fishing Supplier>
-    ["Catherine Leland <Fishing Supplier>"] = {
+    -- Catherine Leland
+    ["Catherine Leland"] = {
         npcId = 5494,
         level = {30, 30},
         zone = "Stormwind City",
@@ -3033,8 +3033,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Cawind Trueaim <Gunsmith & Bowyer>
-    ["Cawind Trueaim <Gunsmith & Bowyer>"] = {
+    -- Cawind Trueaim
+    ["Cawind Trueaim"] = {
         npcId = 9548,
         level = {52, 52},
         zone = "Feralas",
@@ -3058,8 +3058,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Caynrus <Shield Merchant>
-    ["Caynrus <Shield Merchant>"] = {
+    -- Caynrus
+    ["Caynrus"] = {
         npcId = 4240,
         level = {30, 30},
         zone = "Darnassus",
@@ -3079,8 +3079,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Chardryn <Herbalism Supplier>
-    ["Chardryn <Herbalism Supplier>"] = {
+    -- Chardryn
+    ["Chardryn"] = {
         npcId = 4216,
         level = {30, 30},
         zone = "Darnassus",
@@ -3092,8 +3092,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Charity Mipsy <General Goods>
-    ["Charity Mipsy <General Goods>"] = {
+    -- Charity Mipsy
+    ["Charity Mipsy"] = {
         npcId = 4896,
         level = {35, 35},
         zone = "Dustwallow Marsh",
@@ -3121,8 +3121,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Charles Seaton <Blade Merchant>
-    ["Charles Seaton <Blade Merchant>"] = {
+    -- Charles Seaton
+    ["Charles Seaton"] = {
         npcId = 4569,
         level = {30, 30},
         zone = "Undercity",
@@ -3139,8 +3139,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Charys Yserian <Arcane Trinkets Vendor>
-    ["Charys Yserian <Arcane Trinkets Vendor>"] = {
+    -- Charys Yserian
+    ["Charys Yserian"] = {
         npcId = 1307,
         level = {50, 50},
         zone = "Stormwind City",
@@ -3175,8 +3175,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Chepi <Reagent Vendor>
-    ["Chepi <Reagent Vendor>"] = {
+    -- Chepi
+    ["Chepi"] = {
         npcId = 8361,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -3217,8 +3217,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Christi Galvanis <General Goods>
-    ["Christi Galvanis <General Goods>"] = {
+    -- Christi Galvanis
+    ["Christi Galvanis"] = {
         npcId = 12960,
         level = {40, 40},
         zone = "Desolace",
@@ -3253,8 +3253,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Christoph Jeffcoat <Tradesman>
-    ["Christoph Jeffcoat <Tradesman>"] = {
+    -- Christoph Jeffcoat
+    ["Christoph Jeffcoat"] = {
         npcId = 2393,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
@@ -3285,8 +3285,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Christopher Hewen <General Trade Goods Vendor>
-    ["Christopher Hewen <General Trade Goods Vendor>"] = {
+    -- Christopher Hewen
+    ["Christopher Hewen"] = {
         npcId = 8934,
         level = {30, 30},
         zone = "Westfall",
@@ -3338,8 +3338,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Chylina <General Supplies>
-    ["Chylina <General Supplies>"] = {
+    -- Chylina
+    ["Chylina"] = {
         npcId = 4084,
         level = {24, 24},
         zone = "Stonetalon Mountains",
@@ -3369,8 +3369,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Cliff Hadin <Bowyer>
-    ["Cliff Hadin <Bowyer>"] = {
+    -- Cliff Hadin
+    ["Cliff Hadin"] = {
         npcId = 1687,
         level = {15, 15},
         zone = "Loch Modan",
@@ -3385,8 +3385,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Clyde Ranthal <Leatherworking Supplies>
-    ["Clyde Ranthal <Leatherworking Supplies>"] = {
+    -- Clyde Ranthal
+    ["Clyde Ranthal"] = {
         npcId = 2697,
         level = {31, 31},
         zone = "Redridge Mountains",
@@ -3411,8 +3411,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Commander Eligor Dawnbringer <Brotherhood of the Light>
-    ["Commander Eligor Dawnbringer <Brotherhood of the Light>"] = {
+    -- Commander Eligor Dawnbringer
+    ["Commander Eligor Dawnbringer"] = {
         npcId = 16115,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -3423,8 +3423,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Constance Brisboise <Apprentice Clothier>
-    ["Constance Brisboise <Apprentice Clothier>"] = {
+    -- Constance Brisboise
+    ["Constance Brisboise"] = {
         npcId = 3522,
         level = {11, 11},
         zone = "Tirisfal Glades",
@@ -3439,8 +3439,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Corina Steele <Weaponsmith>
-    ["Corina Steele <Weaponsmith>"] = {
+    -- Corina Steele
+    ["Corina Steele"] = {
         npcId = 54,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -3456,8 +3456,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Corporal Bluth <Camp Trader>
-    ["Corporal Bluth <Camp Trader>"] = {
+    -- Corporal Bluth
+    ["Corporal Bluth"] = {
         npcId = 734,
         level = {40, 40},
         zone = "Stranglethorn Vale",
@@ -3495,8 +3495,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Cowardly Crosby <Tailoring Supplies>
-    ["Cowardly Crosby <Tailoring Supplies>"] = {
+    -- Cowardly Crosby
+    ["Cowardly Crosby"] = {
         npcId = 2672,
         level = {40, 40},
         zone = "Stranglethorn Vale",
@@ -3520,8 +3520,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Craftsman Wilhelm <Brotherhood of the Light>
-    ["Craftsman Wilhelm <Brotherhood of the Light>"] = {
+    -- Craftsman Wilhelm
+    ["Craftsman Wilhelm"] = {
         npcId = 16376,
         level = {57, 57},
         zone = "Eastern Plaguelands",
@@ -3556,8 +3556,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Craig Nollward <Cook>
-    ["Craig Nollward <Cook>"] = {
+    -- Craig Nollward
+    ["Craig Nollward"] = {
         npcId = 4894,
         level = {32, 32},
         zone = "Dustwallow Marsh",
@@ -3583,8 +3583,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Crazk Sparks <Fireworks Merchant>
-    ["Crazk Sparks <Fireworks Merchant>"] = {
+    -- Crazk Sparks
+    ["Crazk Sparks"] = {
         npcId = 2838,
         level = {46, 46},
         zone = "Stranglethorn Vale",
@@ -3594,8 +3594,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Cutac <Cloth & Leather Armor Merchant>
-    ["Cutac <Cloth & Leather Armor Merchant>"] = {
+    -- Cutac
+    ["Cutac"] = {
         npcId = 3166,
         level = {14, 14},
         zone = "Durotar",
@@ -3615,8 +3615,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Cylania <Night Elf Armorer>
-    ["Cylania <Night Elf Armorer>"] = {
+    -- Cylania
+    ["Cylania"] = {
         npcId = 4164,
         level = {30, 30},
         zone = "Darnassus",
@@ -3660,8 +3660,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Cylina Darkheart <Demon Trainer>
-    ["Cylina Darkheart <Demon Trainer>"] = {
+    -- Cylina Darkheart
+    ["Cylina Darkheart"] = {
         npcId = 6374,
         level = {11, 11},
         zone = "Elwynn Forest",
@@ -3707,8 +3707,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Cyridan <Leather Armor Merchant>
-    ["Cyridan <Leather Armor Merchant>"] = {
+    -- Cyridan
+    ["Cyridan"] = {
         npcId = 4236,
         level = {30, 30},
         zone = "Darnassus",
@@ -3760,8 +3760,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Cyroen <Reagent Vendor>
-    ["Cyroen <Reagent Vendor>"] = {
+    -- Cyroen
+    ["Cyroen"] = {
         npcId = 4220,
         level = {30, 30},
         zone = "Darnassus",
@@ -3788,8 +3788,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Daeolyn Summerleaf <General Goods>
-    ["Daeolyn Summerleaf <General Goods>"] = {
+    -- Daeolyn Summerleaf
+    ["Daeolyn Summerleaf"] = {
         npcId = 12021,
         level = {51, 51},
         zone = "Moonglade",
@@ -3899,8 +3899,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dalmond <General Goods>
-    ["Dalmond <General Goods>"] = {
+    -- Dalmond
+    ["Dalmond"] = {
         npcId = 4182,
         level = {17, 17},
         zone = "Darkshore",
@@ -3923,8 +3923,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dalria <Trade Goods>
-    ["Dalria <Trade Goods>"] = {
+    -- Dalria
+    ["Dalria"] = {
         npcId = 3954,
         level = {24, 24},
         zone = "Ashenvale",
@@ -3962,8 +3962,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dane Winslow <Demon Trainer>
-    ["Dane Winslow <Demon Trainer>"] = {
+    -- Dane Winslow
+    ["Dane Winslow"] = {
         npcId = 6373,
         level = {8, 8},
         zone = "Elwynn Forest",
@@ -3988,8 +3988,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Daniel Bartlett <General Trade Supplier>
-    ["Daniel Bartlett <General Trade Supplier>"] = {
+    -- Daniel Bartlett
+    ["Daniel Bartlett"] = {
         npcId = 4561,
         level = {30, 30},
         zone = "Undercity",
@@ -4031,8 +4031,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Danielle Zipstitch <Tailoring Supplies>
-    ["Danielle Zipstitch <Tailoring Supplies>"] = {
+    -- Danielle Zipstitch
+    ["Danielle Zipstitch"] = {
         npcId = 2668,
         level = {27, 27},
         zone = "Duskwood",
@@ -4056,8 +4056,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Danlyia <Food & Drink Vendor>
-    ["Danlyia <Food & Drink Vendor>"] = {
+    -- Danlyia
+    ["Danlyia"] = {
         npcId = 4266,
         level = {17, 17},
         zone = "Teldrassil",
@@ -4085,8 +4085,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dannie Fizzwizzle <Demon Trainer>
-    ["Dannie Fizzwizzle <Demon Trainer>"] = {
+    -- Dannie Fizzwizzle
+    ["Dannie Fizzwizzle"] = {
         npcId = 6328,
         level = {14, 14},
         zone = "Dun Morogh",
@@ -4132,8 +4132,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dargon <Food & Drink Merchant>
-    ["Dargon <Food & Drink Merchant>"] = {
+    -- Dargon
+    ["Dargon"] = {
         npcId = 12019,
         level = {51, 51},
         zone = "Moonglade",
@@ -4155,8 +4155,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Darian Singh <Fireworks Vendor>
-    ["Darian Singh <Fireworks Vendor>"] = {
+    -- Darian Singh
+    ["Darian Singh"] = {
         npcId = 1304,
         level = {30, 30},
         zone = "Stormwind City",
@@ -4166,8 +4166,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dark Iron Entrepreneur <Speciality Goods>
-    ["Dark Iron Entrepreneur <Speciality Goods>"] = {
+    -- Dark Iron Entrepreneur
+    ["Dark Iron Entrepreneur"] = {
         npcId = 3180,
         level = {30, 31},
         zone = "Wetlands",
@@ -4196,8 +4196,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Darnall <Tailoring Supplies>
-    ["Darnall <Tailoring Supplies>"] = {
+    -- Darnall
+    ["Darnall"] = {
         npcId = 7940,
         level = {53, 53},
         zone = "Moonglade",
@@ -4223,8 +4223,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dawn Brightstar <Arcane Goods>
-    ["Dawn Brightstar <Arcane Goods>"] = {
+    -- Dawn Brightstar
+    ["Dawn Brightstar"] = {
         npcId = 958,
         level = {35, 35},
         zone = "Elwynn Forest",
@@ -4263,8 +4263,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Defias Profiteer <Free Wheeling Merchant>
-    ["Defias Profiteer <Free Wheeling Merchant>"] = {
+    -- Defias Profiteer
+    ["Defias Profiteer"] = {
         npcId = 1669,
         level = {20, 20},
         zone = "Westfall",
@@ -4281,8 +4281,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Delgo Ragetotem <Axe Merchant>
-    ["Delgo Ragetotem <Axe Merchant>"] = {
+    -- Delgo Ragetotem
+    ["Delgo Ragetotem"] = {
         npcId = 3019,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -4301,8 +4301,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dellylah <Food & Drink Vendor>
-    ["Dellylah <Food & Drink Vendor>"] = {
+    -- Dellylah
+    ["Dellylah"] = {
         npcId = 6091,
         level = {9, 9},
         zone = "Teldrassil",
@@ -4324,8 +4324,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dendrythis <Food & Drink Vendor>
-    ["Dendrythis <Food & Drink Vendor>"] = {
+    -- Dendrythis
+    ["Dendrythis"] = {
         npcId = 4167,
         level = {30, 30},
         zone = "Darnassus",
@@ -4347,8 +4347,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Deneb Walker <Scrolls & Potions>
-    ["Deneb Walker <Scrolls & Potions>"] = {
+    -- Deneb Walker
+    ["Deneb Walker"] = {
         npcId = 2805,
         level = {45, 45},
         zone = "Arathi Highlands",
@@ -4386,8 +4386,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Denni'ka <Butcher>
-    ["Denni'ka <Butcher>"] = {
+    -- Denni'ka
+    ["Denni'ka"] = {
         npcId = 3411,
         level = {25, 25},
         zone = "Stonetalon Mountains",
@@ -4407,8 +4407,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Derak Nightfall <Cook>
-    ["Derak Nightfall <Cook>"] = {
+    -- Derak Nightfall
+    ["Derak Nightfall"] = {
         npcId = 2397,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
@@ -4423,8 +4423,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dermot Johns <Cloth & Leather Armor Merchant>
-    ["Dermot Johns <Cloth & Leather Armor Merchant>"] = {
+    -- Dermot Johns
+    ["Dermot Johns"] = {
         npcId = 190,
         level = {5, 5},
         zone = "Elwynn Forest",
@@ -4444,8 +4444,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dewin Shimmerdawn <Alchemy Supplies>
-    ["Dewin Shimmerdawn <Alchemy Supplies>"] = {
+    -- Dewin Shimmerdawn
+    ["Dewin Shimmerdawn"] = {
         npcId = 1453,
         level = {25, 25},
         zone = "Wetlands",
@@ -4458,8 +4458,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Deze Snowbane <Arathi Basin Battlemaster>
-    ["Deze Snowbane <Arathi Basin Battlemaster>"] = {
+    -- Deze Snowbane
+    ["Deze Snowbane"] = {
         npcId = 15006,
         level = {61, 61},
         zone = "Orgrimmar",
@@ -4469,8 +4469,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dillord Copperpinch <Smokywood Pastures>
-    ["Dillord Copperpinch <Smokywood Pastures>"] = {
+    -- Dillord Copperpinch
+    ["Dillord Copperpinch"] = {
         npcId = 14962,
         level = {30, 30},
         zone = "Alterac Mountains",
@@ -4482,8 +4482,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dirge Quikcleave <Butcher>
-    ["Dirge Quikcleave <Butcher>"] = {
+    -- Dirge Quikcleave
+    ["Dirge Quikcleave"] = {
         npcId = 8125,
         level = {43, 43},
         zone = "Tanaris",
@@ -4504,8 +4504,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dolkin Craghelm <Mail Armor Merchant>
-    ["Dolkin Craghelm <Mail Armor Merchant>"] = {
+    -- Dolkin Craghelm
+    ["Dolkin Craghelm"] = {
         npcId = 5125,
         level = {30, 30},
         zone = "Ironforge",
@@ -4534,8 +4534,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dolman Steelfury <Weapon Merchant>
-    ["Dolman Steelfury <Weapon Merchant>"] = {
+    -- Dolman Steelfury
+    ["Dolman Steelfury"] = {
         npcId = 5102,
         level = {30, 30},
         zone = "Ironforge",
@@ -4559,8 +4559,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Donni Anthania <Crazy Cat Lady>
-    ["Donni Anthania <Crazy Cat Lady>"] = {
+    -- Donni Anthania
+    ["Donni Anthania"] = {
         npcId = 6367,
         level = {5, 5},
         zone = "Elwynn Forest",
@@ -4572,8 +4572,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dorin Songblade <Armorer>
-    ["Dorin Songblade <Armorer>"] = {
+    -- Dorin Songblade
+    ["Dorin Songblade"] = {
         npcId = 956,
         level = {22, 22},
         zone = "Redridge Mountains",
@@ -4587,8 +4587,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Drac Roughcut <Tradesman>
-    ["Drac Roughcut <Tradesman>"] = {
+    -- Drac Roughcut
+    ["Drac Roughcut"] = {
         npcId = 1465,
         level = {15, 15},
         zone = "Loch Modan",
@@ -4615,8 +4615,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Drake Lindgren <General & Trade Supplies>
-    ["Drake Lindgren <General & Trade Supplies>"] = {
+    -- Drake Lindgren
+    ["Drake Lindgren"] = {
         npcId = 1250,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -4651,8 +4651,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Drovnar Strongbrew <Alchemy Supplies>
-    ["Drovnar Strongbrew <Alchemy Supplies>"] = {
+    -- Drovnar Strongbrew
+    ["Drovnar Strongbrew"] = {
         npcId = 2812,
         level = {38, 40},
         zone = "Arathi Highlands",
@@ -4688,8 +4688,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dulciea Frostmoon <Cloth Armor Merchant>
-    ["Dulciea Frostmoon <Cloth Armor Merchant>"] = {
+    -- Dulciea Frostmoon
+    ["Dulciea Frostmoon"] = {
         npcId = 10293,
         level = {51, 51},
         zone = "Feralas",
@@ -4711,8 +4711,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Duncan Cullen <Light Armor Merchant>
-    ["Duncan Cullen <Light Armor Merchant>"] = {
+    -- Duncan Cullen
+    ["Duncan Cullen"] = {
         npcId = 1314,
         level = {30, 30},
         zone = "Stormwind City",
@@ -4760,8 +4760,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Duokna <General Goods>
-    ["Duokna <General Goods>"] = {
+    -- Duokna
+    ["Duokna"] = {
         npcId = 3158,
         level = {10, 10},
         zone = "Durotar",
@@ -4775,8 +4775,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Durnan Furcutter <Cloth & Leather Armor Merchant>
-    ["Durnan Furcutter <Cloth & Leather Armor Merchant>"] = {
+    -- Durnan Furcutter
+    ["Durnan Furcutter"] = {
         npcId = 836,
         level = {5, 5},
         zone = "Dun Morogh",
@@ -4796,8 +4796,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Dwane Wertle <Chef>
-    ["Dwane Wertle <Chef>"] = {
+    -- Dwane Wertle
+    ["Dwane Wertle"] = {
         npcId = 4891,
         level = {28, 28},
         zone = "Dustwallow Marsh",
@@ -4829,8 +4829,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ealyshia Dewwhisper <Two Handed Weapon Merchant>
-    ["Ealyshia Dewwhisper <Two Handed Weapon Merchant>"] = {
+    -- Ealyshia Dewwhisper
+    ["Ealyshia Dewwhisper"] = {
         npcId = 4180,
         level = {50, 50},
         zone = "Darnassus",
@@ -4844,8 +4844,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Edna Mullby <Trade Supplier>
-    ["Edna Mullby <Trade Supplier>"] = {
+    -- Edna Mullby
+    ["Edna Mullby"] = {
         npcId = 1286,
         level = {30, 30},
         zone = "Stormwind City",
@@ -4886,8 +4886,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Edris Barleybeard <Barmaid>
-    ["Edris Barleybeard <Barmaid>"] = {
+    -- Edris Barleybeard
+    ["Edris Barleybeard"] = {
         npcId = 5140,
         level = {30, 30},
         zone = "Ironforge",
@@ -4906,8 +4906,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Edwin Harly <General Supplies>
-    ["Edwin Harly <General Supplies>"] = {
+    -- Edwin Harly
+    ["Edwin Harly"] = {
         npcId = 2140,
         level = {18, 20},
         zone = "Silverpine Forest",
@@ -4931,8 +4931,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Edwina Monzor <Fletcher>
-    ["Edwina Monzor <Fletcher>"] = {
+    -- Edwina Monzor
+    ["Edwina Monzor"] = {
         npcId = 1462,
         level = {25, 25},
         zone = "Wetlands",
@@ -4956,8 +4956,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Elaine Trias <Mistress of Cheese>
-    ["Elaine Trias <Mistress of Cheese>"] = {
+    -- Elaine Trias
+    ["Elaine Trias"] = {
         npcId = 483,
         level = {30, 30},
         zone = "Stormwind City",
@@ -4971,8 +4971,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Eldraeith <Herbalism Supplier>
-    ["Eldraeith <Herbalism Supplier>"] = {
+    -- Eldraeith
+    ["Eldraeith"] = {
         npcId = 5503,
         level = {30, 30},
         zone = "Stormwind City",
@@ -4984,8 +4984,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Eleanor Rusk <General Goods Vendor>
-    ["Eleanor Rusk <General Goods Vendor>"] = {
+    -- Eleanor Rusk
+    ["Eleanor Rusk"] = {
         npcId = 4555,
         level = {30, 30},
         zone = "Undercity",
@@ -5021,8 +5021,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Elisa Steelhand <Blacksmithing Supplies>
-    ["Elisa Steelhand <Blacksmithing Supplies>"] = {
+    -- Elisa Steelhand
+    ["Elisa Steelhand"] = {
         npcId = 6300,
         level = {30, 30},
         zone = "Darkshore",
@@ -5036,8 +5036,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Elissa Dumas <Portal Trainer>
-    ["Elissa Dumas <Portal Trainer>"] = {
+    -- Elissa Dumas
+    ["Elissa Dumas"] = {
         npcId = 4165,
         level = {35, 35},
         zone = "Darnassus",
@@ -5047,8 +5047,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Eliza Callen <Leather Armor Merchant>
-    ["Eliza Callen <Leather Armor Merchant>"] = {
+    -- Eliza Callen
+    ["Eliza Callen"] = {
         npcId = 2137,
         level = {12, 12},
         zone = "Tirisfal Glades",
@@ -5062,8 +5062,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Elizabeth Van Talen <Engineering Supplier>
-    ["Elizabeth Van Talen <Engineering Supplier>"] = {
+    -- Elizabeth Van Talen
+    ["Elizabeth Van Talen"] = {
         npcId = 4587,
         level = {30, 30},
         zone = "Undercity",
@@ -5087,8 +5087,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Elki <Mail Armor Merchant>
-    ["Elki <Mail Armor Merchant>"] = {
+    -- Elki
+    ["Elki"] = {
         npcId = 8360,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -5112,8 +5112,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ellandrieth <General Goods Vendor>
-    ["Ellandrieth <General Goods Vendor>"] = {
+    -- Ellandrieth
+    ["Ellandrieth"] = {
         npcId = 4170,
         level = {30, 30},
         zone = "Darnassus",
@@ -5145,8 +5145,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Elly Langston <Barmaid>
-    ["Elly Langston <Barmaid>"] = {
+    -- Elly Langston
+    ["Elly Langston"] = {
         npcId = 1328,
         level = {60, 60},
         zone = "Stormwind City",
@@ -5165,8 +5165,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Elynna <Tailoring Supplies>
-    ["Elynna <Tailoring Supplies>"] = {
+    -- Elynna
+    ["Elynna"] = {
         npcId = 4168,
         level = {30, 30},
         zone = "Darnassus",
@@ -5194,8 +5194,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Emmithue Smails <Sweet Treats>
-    ["Emmithue Smails <Sweet Treats>"] = {
+    -- Emmithue Smails
+    ["Emmithue Smails"] = {
         npcId = 14481,
         level = {10, 10},
         zone = "Stormwind City",
@@ -5207,8 +5207,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Emrul Riknussun <Cooking Supplier>
-    ["Emrul Riknussun <Cooking Supplier>"] = {
+    -- Emrul Riknussun
+    ["Emrul Riknussun"] = {
         npcId = 5160,
         level = {30, 30},
         zone = "Ironforge",
@@ -5222,8 +5222,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Erika Tate <Cooking Supplier>
-    ["Erika Tate <Cooking Supplier>"] = {
+    -- Erika Tate
+    ["Erika Tate"] = {
         npcId = 5483,
         level = {30, 30},
         zone = "Stormwind City",
@@ -5237,8 +5237,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Etu Ragetotem <Mace & Staff Merchant>
-    ["Etu Ragetotem <Mace & Staff Merchant>"] = {
+    -- Etu Ragetotem
+    ["Etu Ragetotem"] = {
         npcId = 3020,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -5255,8 +5255,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Evan Larson <Hatter>
-    ["Evan Larson <Hatter>"] = {
+    -- Evan Larson
+    ["Evan Larson"] = {
         npcId = 1310,
         level = {30, 30},
         zone = "Stormwind City",
@@ -5270,8 +5270,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Evie Whirlbrew <Alchemy Supplies>
-    ["Evie Whirlbrew <Alchemy Supplies>"] = {
+    -- Evie Whirlbrew
+    ["Evie Whirlbrew"] = {
         npcId = 11188,
         level = {58, 58},
         zone = "Winterspring",
@@ -5286,8 +5286,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ezekiel Graves <Poison Vendor>
-    ["Ezekiel Graves <Poison Vendor>"] = {
+    -- Ezekiel Graves
+    ["Ezekiel Graves"] = {
         npcId = 4585,
         level = {30, 30},
         zone = "Undercity",
@@ -5305,8 +5305,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Fahran Silentblade <Tools & Supplies>
-    ["Fahran Silentblade <Tools & Supplies>"] = {
+    -- Fahran Silentblade
+    ["Fahran Silentblade"] = {
         npcId = 3969,
         level = {28, 28},
         zone = "Ashenvale",
@@ -5324,8 +5324,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Falkan Armonis <Reagent Vendor>
-    ["Falkan Armonis <Reagent Vendor>"] = {
+    -- Falkan Armonis
+    ["Falkan Armonis"] = {
         npcId = 1463,
         level = {25, 25},
         zone = "Wetlands",
@@ -5352,8 +5352,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Faralorn <General Supplies>
-    ["Faralorn <General Supplies>"] = {
+    -- Faralorn
+    ["Faralorn"] = {
         npcId = 7942,
         level = {53, 53},
         zone = "Feralas",
@@ -5388,8 +5388,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Fargon Mortalak <Superior Armorer>
-    ["Fargon Mortalak <Superior Armorer>"] = {
+    -- Fargon Mortalak
+    ["Fargon Mortalak"] = {
         npcId = 2845,
         level = {42, 42},
         zone = "Stranglethorn Vale",
@@ -5423,8 +5423,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Father Inigo Montoy <Brotherhood of the Light>
-    ["Father Inigo Montoy <Brotherhood of the Light>"] = {
+    -- Father Inigo Montoy
+    ["Father Inigo Montoy"] = {
         npcId = 16113,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -5433,8 +5433,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Fela <Heavy Armor Merchant>
-    ["Fela <Heavy Armor Merchant>"] = {
+    -- Fela
+    ["Fela"] = {
         npcId = 3095,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -5475,8 +5475,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Felder Stover <Weaponsmith>
-    ["Felder Stover <Weaponsmith>"] = {
+    -- Felder Stover
+    ["Felder Stover"] = {
         npcId = 1296,
         level = {54, 54},
         zone = "Burning Steppes",
@@ -5492,8 +5492,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Felicia Doan <General Trade Goods Vendor>
-    ["Felicia Doan <General Trade Goods Vendor>"] = {
+    -- Felicia Doan
+    ["Felicia Doan"] = {
         npcId = 4775,
         level = {30, 30},
         zone = "Undercity",
@@ -5529,8 +5529,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Felicia Gump <Herbalism Supplier>
-    ["Felicia Gump <Herbalism Supplier>"] = {
+    -- Felicia Gump
+    ["Felicia Gump"] = {
         npcId = 1303,
         level = {30, 30},
         zone = "Stormwind City",
@@ -5545,8 +5545,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Felika <General Trade Goods Merchant>
-    ["Felika <General Trade Goods Merchant>"] = {
+    -- Felika
+    ["Felika"] = {
         npcId = 3367,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -5606,8 +5606,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Fillius Fizzlespinner <Trade Supplier>
-    ["Fillius Fizzlespinner <Trade Supplier>"] = {
+    -- Fillius Fizzlespinner
+    ["Fillius Fizzlespinner"] = {
         npcId = 5100,
         level = {30, 30},
         zone = "Ironforge",
@@ -5636,8 +5636,8 @@ DB.VendorItems = {
         }
     },
 
-    -- First Sergeant Hola'mahi <Reagent Vendor>
-    ["First Sergeant Hola'mahi <Reagent Vendor>"] = {
+    -- First Sergeant Hola'mahi
+    ["First Sergeant Hola'mahi"] = {
         npcId = 12795,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -5664,8 +5664,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Fizzlebang Booms <Fireworks Vendor>
-    ["Fizzlebang Booms <Fireworks Vendor>"] = {
+    -- Fizzlebang Booms
+    ["Fizzlebang Booms"] = {
         npcId = 5569,
         level = {40, 40},
         zone = "Ironforge",
@@ -5674,8 +5674,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Flakk <Trade Supplies>
-    ["Flakk <Trade Supplies>"] = {
+    -- Flakk
+    ["Flakk"] = {
         npcId = 3168,
         level = {15, 15},
         zone = "Durotar",
@@ -5709,8 +5709,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Fradd Swiftgear <Engineering Supplies>
-    ["Fradd Swiftgear <Engineering Supplies>"] = {
+    -- Fradd Swiftgear
+    ["Fradd Swiftgear"] = {
         npcId = 2682,
         level = {24, 24},
         zone = "Wetlands",
@@ -5736,8 +5736,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Francis Eliot <Weapon Merchant>
-    ["Francis Eliot <Weapon Merchant>"] = {
+    -- Francis Eliot
+    ["Francis Eliot"] = {
         npcId = 4601,
         level = {30, 30},
         zone = "Undercity",
@@ -5753,8 +5753,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Franklin Hamar <Tailoring Supplies>
-    ["Franklin Hamar <Tailoring Supplies>"] = {
+    -- Franklin Hamar
+    ["Franklin Hamar"] = {
         npcId = 3091,
         level = {26, 26},
         zone = "Redridge Mountains",
@@ -5780,8 +5780,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Frast Dokner <Apprentice Weaponsmith>
-    ["Frast Dokner <Apprentice Weaponsmith>"] = {
+    -- Frast Dokner
+    ["Frast Dokner"] = {
         npcId = 1698,
         level = {10, 10},
         zone = "Dun Morogh",
@@ -5797,8 +5797,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Frederick Stover <Bow & Arrow Merchant>
-    ["Frederick Stover <Bow & Arrow Merchant>"] = {
+    -- Frederick Stover
+    ["Frederick Stover"] = {
         npcId = 1298,
         level = {30, 30},
         zone = "Stormwind City",
@@ -5817,8 +5817,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Freja Nightwing <Leather Armor Merchant>
-    ["Freja Nightwing <Leather Armor Merchant>"] = {
+    -- Freja Nightwing
+    ["Freja Nightwing"] = {
         npcId = 3591,
         level = {9, 9},
         zone = "Teldrassil",
@@ -5894,8 +5894,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Fyldan <Cooking Supplier>
-    ["Fyldan <Cooking Supplier>"] = {
+    -- Fyldan
+    ["Fyldan"] = {
         npcId = 4223,
         level = {30, 30},
         zone = "Darnassus",
@@ -5909,8 +5909,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Fyr Mistrunner <Bread Vendor>
-    ["Fyr Mistrunner <Bread Vendor>"] = {
+    -- Fyr Mistrunner
+    ["Fyr Mistrunner"] = {
         npcId = 3003,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -5924,8 +5924,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Fyrenna <Food & Drink Vendor>
-    ["Fyrenna <Food & Drink Vendor>"] = {
+    -- Fyrenna
+    ["Fyrenna"] = {
         npcId = 4181,
         level = {30, 30},
         zone = "Darnassus",
@@ -5947,8 +5947,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gabrielle Chase <Food & Drink>
-    ["Gabrielle Chase <Food & Drink>"] = {
+    -- Gabrielle Chase
+    ["Gabrielle Chase"] = {
         npcId = 3298,
         level = {53, 53},
         zone = "Burning Steppes",
@@ -5968,8 +5968,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gaelden Hammersmith <Stormpike Supply Officer>
-    ["Gaelden Hammersmith <Stormpike Supply Officer>"] = {
+    -- Gaelden Hammersmith
+    ["Gaelden Hammersmith"] = {
         npcId = 13216,
         level = {58, 58},
         zone = "Alterac Valley",
@@ -5988,8 +5988,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gagsprocket <Engineering Goods>
-    ["Gagsprocket <Engineering Goods>"] = {
+    -- Gagsprocket
+    ["Gagsprocket"] = {
         npcId = 3495,
         level = {20, 20},
         zone = "The Barrens",
@@ -6014,8 +6014,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gahroot <Butcher>
-    ["Gahroot <Butcher>"] = {
+    -- Gahroot
+    ["Gahroot"] = {
         npcId = 3705,
         level = {25, 25},
         zone = "The Barrens",
@@ -6029,8 +6029,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Galthuk <Two-Handed Weapons Merchant>
-    ["Galthuk <Two-Handed Weapons Merchant>"] = {
+    -- Galthuk
+    ["Galthuk"] = {
         npcId = 4043,
         level = {8, 8},
         zone = "Orgrimmar",
@@ -6044,8 +6044,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gamili Frosthide <Cloth & Leather Armor Merchant>
-    ["Gamili Frosthide <Cloth & Leather Armor Merchant>"] = {
+    -- Gamili Frosthide
+    ["Gamili Frosthide"] = {
         npcId = 1238,
         level = {9, 9},
         zone = "Dun Morogh",
@@ -6077,8 +6077,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gapp Jinglepocket <Smokywood Pastures>
-    ["Gapp Jinglepocket <Smokywood Pastures>"] = {
+    -- Gapp Jinglepocket
+    ["Gapp Jinglepocket"] = {
         npcId = 14963,
         level = {30, 30},
         zone = "Ashenvale",
@@ -6102,8 +6102,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Garyl <Tabard Vendor>
-    ["Garyl <Tabard Vendor>"] = {
+    -- Garyl
+    ["Garyl"] = {
         npcId = 5188,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -6112,8 +6112,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gavin Gnarltree <Weaponsmith>
-    ["Gavin Gnarltree <Weaponsmith>"] = {
+    -- Gavin Gnarltree
+    ["Gavin Gnarltree"] = {
         npcId = 225,
         level = {30, 30},
         zone = "Duskwood",
@@ -6139,8 +6139,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gearcutter Cogspinner <Engineering Supplies>
-    ["Gearcutter Cogspinner <Engineering Supplies>"] = {
+    -- Gearcutter Cogspinner
+    ["Gearcutter Cogspinner"] = {
         npcId = 5175,
         level = {30, 30},
         zone = "Ironforge",
@@ -6168,8 +6168,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Geenia Sunshadow <Speciality Dress Maker>
-    ["Geenia Sunshadow <Speciality Dress Maker>"] = {
+    -- Geenia Sunshadow
+    ["Geenia Sunshadow"] = {
         npcId = 4184,
         level = {51, 51},
         zone = "Moonglade",
@@ -6183,8 +6183,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Geoffrey Hartwell <Weapon Merchant>
-    ["Geoffrey Hartwell <Weapon Merchant>"] = {
+    -- Geoffrey Hartwell
+    ["Geoffrey Hartwell"] = {
         npcId = 4600,
         level = {30, 30},
         zone = "Undercity",
@@ -6202,8 +6202,8 @@ DB.VendorItems = {
         }
     },
 
-    -- George Candarte <Leatherworking Supplies>
-    ["George Candarte <Leatherworking Supplies>"] = {
+    -- George Candarte
+    ["George Candarte"] = {
         npcId = 2698,
         level = {31, 31},
         zone = "Hillsbrad Foothills",
@@ -6228,8 +6228,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gerald Crawley <Poison Supplier>
-    ["Gerald Crawley <Poison Supplier>"] = {
+    -- Gerald Crawley
+    ["Gerald Crawley"] = {
         npcId = 3090,
         level = {25, 25},
         zone = "Redridge Mountains",
@@ -6247,8 +6247,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gerik Koen <Two Handed Weapon Merchant>
-    ["Gerik Koen <Two Handed Weapon Merchant>"] = {
+    -- Gerik Koen
+    ["Gerik Koen"] = {
         npcId = 1333,
         level = {30, 30},
         zone = "Stormwind City",
@@ -6272,8 +6272,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gharash <Blacksmithing Supplies>
-    ["Gharash <Blacksmithing Supplies>"] = {
+    -- Gharash
+    ["Gharash"] = {
         npcId = 8176,
         level = {45, 45},
         zone = "Swamp of Sorrows",
@@ -6288,8 +6288,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ghok'kah <Tailoring Supplies>
-    ["Ghok'kah <Tailoring Supplies>"] = {
+    -- Ghok'kah
+    ["Ghok'kah"] = {
         npcId = 6567,
         level = {43, 43},
         zone = "Dustwallow Marsh",
@@ -6313,8 +6313,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ghrawt <Bowyer>
-    ["Ghrawt <Bowyer>"] = {
+    -- Ghrawt
+    ["Ghrawt"] = {
         npcId = 3165,
         level = {13, 13},
         zone = "Durotar",
@@ -6328,8 +6328,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gibbert <Weapon Merchant>
-    ["Gibbert <Weapon Merchant>"] = {
+    -- Gibbert
+    ["Gibbert"] = {
         npcId = 3000,
         level = {45, 45},
         zone = "Un'Goro Crater",
@@ -6353,8 +6353,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gigget Zipcoil <Trade Supplies>
-    ["Gigget Zipcoil <Trade Supplies>"] = {
+    -- Gigget Zipcoil
+    ["Gigget Zipcoil"] = {
         npcId = 12958,
         level = {52, 52},
         zone = "The Hinterlands",
@@ -6391,8 +6391,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gikkix <Fisherman>
-    ["Gikkix <Fisherman>"] = {
+    -- Gikkix
+    ["Gikkix"] = {
         npcId = 8137,
         level = {40, 40},
         zone = "Tanaris",
@@ -6416,8 +6416,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gillian Moore <Leather Armor Merchant>
-    ["Gillian Moore <Leather Armor Merchant>"] = {
+    -- Gillian Moore
+    ["Gillian Moore"] = {
         npcId = 5820,
         level = {30, 30},
         zone = "Undercity",
@@ -6463,8 +6463,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gina Lang <Demon Trainer>
-    ["Gina Lang <Demon Trainer>"] = {
+    -- Gina Lang
+    ["Gina Lang"] = {
         npcId = 5750,
         level = {10, 10},
         zone = "Tirisfal Glades",
@@ -6510,8 +6510,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gina MacGregor <Trade Supplies>
-    ["Gina MacGregor <Trade Supplies>"] = {
+    -- Gina MacGregor
+    ["Gina MacGregor"] = {
         npcId = 843,
         level = {15, 15},
         zone = "Westfall",
@@ -6541,8 +6541,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ginny Longberry <Reagent Vendor>
-    ["Ginny Longberry <Reagent Vendor>"] = {
+    -- Ginny Longberry
+    ["Ginny Longberry"] = {
         npcId = 5151,
         level = {30, 30},
         zone = "Ironforge",
@@ -6569,8 +6569,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Glorandiir <Axe Merchant>
-    ["Glorandiir <Axe Merchant>"] = {
+    -- Glorandiir
+    ["Glorandiir"] = {
         npcId = 4232,
         level = {30, 30},
         zone = "Darnassus",
@@ -6589,8 +6589,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gloria Femmel <Cooking Supplies>
-    ["Gloria Femmel <Cooking Supplies>"] = {
+    -- Gloria Femmel
+    ["Gloria Femmel"] = {
         npcId = 3085,
         level = {20, 20},
         zone = "Redridge Mountains",
@@ -6604,8 +6604,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Glyx Brewright <Alchemy Supplies>
-    ["Glyx Brewright <Alchemy Supplies>"] = {
+    -- Glyx Brewright
+    ["Glyx Brewright"] = {
         npcId = 2848,
         level = {45, 45},
         zone = "Stranglethorn Vale",
@@ -6621,8 +6621,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gnaz Blunderflame <Engineering Supplies>
-    ["Gnaz Blunderflame <Engineering Supplies>"] = {
+    -- Gnaz Blunderflame
+    ["Gnaz Blunderflame"] = {
         npcId = 2687,
         level = {42, 42},
         zone = "Stranglethorn Vale",
@@ -6647,8 +6647,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Godric Rothgar <Armorer & Shieldcrafter>
-    ["Godric Rothgar <Armorer & Shieldcrafter>"] = {
+    -- Godric Rothgar
+    ["Godric Rothgar"] = {
         npcId = 1213,
         level = {5, 5},
         zone = "Elwynn Forest",
@@ -6664,8 +6664,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Golnir Bouldertoe <Mining Supplier>
-    ["Golnir Bouldertoe <Mining Supplier>"] = {
+    -- Golnir Bouldertoe
+    ["Golnir Bouldertoe"] = {
         npcId = 4256,
         level = {30, 30},
         zone = "Ironforge",
@@ -6677,8 +6677,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Golorn Frostbeard <Tradesman>
-    ["Golorn Frostbeard <Tradesman>"] = {
+    -- Golorn Frostbeard
+    ["Golorn Frostbeard"] = {
         npcId = 1692,
         level = {10, 10},
         zone = "Dun Morogh",
@@ -6700,8 +6700,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gorbold Steelhand <General Trade Supplier>
-    ["Gorbold Steelhand <General Trade Supplier>"] = {
+    -- Gorbold Steelhand
+    ["Gorbold Steelhand"] = {
         npcId = 6301,
         level = {30, 30},
         zone = "Darkshore",
@@ -6742,8 +6742,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gordon Wendham <Weapons Merchant>
-    ["Gordon Wendham <Weapons Merchant>"] = {
+    -- Gordon Wendham
+    ["Gordon Wendham"] = {
         npcId = 4556,
         level = {30, 30},
         zone = "Undercity",
@@ -6767,8 +6767,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gorina <Mining Supplier>
-    ["Gorina <Mining Supplier>"] = {
+    -- Gorina
+    ["Gorina"] = {
         npcId = 3358,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -6824,8 +6824,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gothor Brumn <Armorer>
-    ["Gothor Brumn <Armorer>"] = {
+    -- Gothor Brumn
+    ["Gothor Brumn"] = {
         npcId = 1362,
         level = {20, 20},
         zone = "Loch Modan",
@@ -6839,8 +6839,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gotri <Bag Vendor>
-    ["Gotri <Bag Vendor>"] = {
+    -- Gotri
+    ["Gotri"] = {
         npcId = 3369,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -6852,8 +6852,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Graud <General Goods>
-    ["Graud <General Goods>"] = {
+    -- Graud
+    ["Graud"] = {
         npcId = 2820,
         level = {31, 31},
         zone = "Arathi Highlands",
@@ -6881,8 +6881,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Graw Cornerstone <Mail Armor Merchant>
-    ["Graw Cornerstone <Mail Armor Merchant>"] = {
+    -- Graw Cornerstone
+    ["Graw Cornerstone"] = {
         npcId = 11703,
         level = {58, 58},
         zone = "Searing Gorge",
@@ -6896,8 +6896,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grawl <General Goods>
-    ["Grawl <General Goods>"] = {
+    -- Grawl
+    ["Grawl"] = {
         npcId = 2908,
         level = {44, 44},
         zone = "Badlands",
@@ -6925,8 +6925,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grawn Thromwyn <Weaponsmith>
-    ["Grawn Thromwyn <Weaponsmith>"] = {
+    -- Grawn Thromwyn
+    ["Grawn Thromwyn"] = {
         npcId = 1273,
         level = {10, 10},
         zone = "Dun Morogh",
@@ -6942,8 +6942,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grawnal <General Goods>
-    ["Grawnal <General Goods>"] = {
+    -- Grawnal
+    ["Grawnal"] = {
         npcId = 4082,
         level = {32, 32},
         zone = "Stonetalon Mountains",
@@ -6967,8 +6967,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grazlix <Armorer & Shieldcrafter>
-    ["Grazlix <Armorer & Shieldcrafter>"] = {
+    -- Grazlix
+    ["Grazlix"] = {
         npcId = 3493,
         level = {25, 25},
         zone = "The Barrens",
@@ -7002,8 +7002,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gregor MacVince <Horse Breeder>
-    ["Gregor MacVince <Horse Breeder>"] = {
+    -- Gregor MacVince
+    ["Gregor MacVince"] = {
         npcId = 4885,
         level = {35, 35},
         zone = "Dustwallow Marsh",
@@ -7017,8 +7017,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gregory Ardus <Staff & Mace Merchant>
-    ["Gregory Ardus <Staff & Mace Merchant>"] = {
+    -- Gregory Ardus
+    ["Gregory Ardus"] = {
         npcId = 1348,
         level = {30, 30},
         zone = "Stormwind City",
@@ -7037,8 +7037,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Greishan Ironstove <Traveling Merchant>
-    ["Greishan Ironstove <Traveling Merchant>"] = {
+    -- Greishan Ironstove
+    ["Greishan Ironstove"] = {
         npcId = 3291,
         level = {24, 24},
         zone = "Loch Modan",
@@ -7053,8 +7053,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grelkor <Blacksmithing Supplies>
-    ["Grelkor <Blacksmithing Supplies>"] = {
+    -- Grelkor
+    ["Grelkor"] = {
         npcId = 3343,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -7068,8 +7068,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grenil Steelfury <Weapon Merchant>
-    ["Grenil Steelfury <Weapon Merchant>"] = {
+    -- Grenil Steelfury
+    ["Grenil Steelfury"] = {
         npcId = 5103,
         level = {30, 30},
         zone = "Ironforge",
@@ -7093,8 +7093,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Greshka <Demon Master>
-    ["Greshka <Demon Master>"] = {
+    -- Greshka
+    ["Greshka"] = {
         npcId = 12807,
         level = {50, 50},
         zone = "Swamp of Sorrows",
@@ -7161,8 +7161,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gretchen Vogel <Waitress>
-    ["Gretchen Vogel <Waitress>"] = {
+    -- Gretchen Vogel
+    ["Gretchen Vogel"] = {
         npcId = 3086,
         level = {20, 20},
         zone = "Redridge Mountains",
@@ -7188,8 +7188,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gretta Ganter <Fisherman Supplies>
-    ["Gretta Ganter <Fisherman Supplies>"] = {
+    -- Gretta Ganter
+    ["Gretta Ganter"] = {
         npcId = 8508,
         level = {10, 10},
         zone = "Dun Morogh",
@@ -7204,8 +7204,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grimnal <Mail & Plate Merchant>
-    ["Grimnal <Mail & Plate Merchant>"] = {
+    -- Grimnal
+    ["Grimnal"] = {
         npcId = 980,
         level = {45, 45},
         zone = "Swamp of Sorrows",
@@ -7229,8 +7229,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grimtak <Butcher>
-    ["Grimtak <Butcher>"] = {
+    -- Grimtak
+    ["Grimtak"] = {
         npcId = 3881,
         level = {14, 14},
         zone = "Durotar",
@@ -7251,8 +7251,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grod <Leather Armor Merchant>
-    ["Grod <Leather Armor Merchant>"] = {
+    -- Grod
+    ["Grod"] = {
         npcId = 3093,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -7278,8 +7278,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gruham Rumdnul <General Supplies>
-    ["Gruham Rumdnul <General Supplies>"] = {
+    -- Gruham Rumdnul
+    ["Gruham Rumdnul"] = {
         npcId = 1452,
         level = {25, 25},
         zone = "Wetlands",
@@ -7302,8 +7302,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gruna <Food & Drink>
-    ["Gruna <Food & Drink>"] = {
+    -- Gruna
+    ["Gruna"] = {
         npcId = 3708,
         level = {52, 52},
         zone = "Burning Steppes",
@@ -7323,8 +7323,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grundel Harkin <Armorer>
-    ["Grundel Harkin <Armorer>"] = {
+    -- Grundel Harkin
+    ["Grundel Harkin"] = {
         npcId = 1104,
         level = {5, 5},
         zone = "Dun Morogh",
@@ -7340,8 +7340,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Grunnda Wolfheart <Frostwolf Supply Officer>
-    ["Grunnda Wolfheart <Frostwolf Supply Officer>"] = {
+    -- Grunnda Wolfheart
+    ["Grunnda Wolfheart"] = {
         npcId = 13218,
         level = {58, 58},
         zone = "Alterac Valley",
@@ -7361,8 +7361,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gruul Darkblade <Weaponsmith>
-    ["Gruul Darkblade <Weaponsmith>"] = {
+    -- Gruul Darkblade
+    ["Gruul Darkblade"] = {
         npcId = 10361,
         level = {52, 52},
         zone = "Azshara",
@@ -7390,8 +7390,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Guchie Jinglepocket <Smokywood Pastures>
-    ["Guchie Jinglepocket <Smokywood Pastures>"] = {
+    -- Guchie Jinglepocket
+    ["Guchie Jinglepocket"] = {
         npcId = 13436,
         level = {30, 30},
         zone = "Stormwind City",
@@ -7406,8 +7406,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gunder Thornbush <Tradesman>
-    ["Gunder Thornbush <Tradesman>"] = {
+    -- Gunder Thornbush
+    ["Gunder Thornbush"] = {
         npcId = 960,
         level = {30, 30},
         zone = "Duskwood",
@@ -7436,8 +7436,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gunther Weller <Weapons Merchant>
-    ["Gunther Weller <Weapons Merchant>"] = {
+    -- Gunther Weller
+    ["Gunther Weller"] = {
         npcId = 1289,
         level = {30, 30},
         zone = "Stormwind City",
@@ -7471,8 +7471,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gwenna Firebrew <Barmaid>
-    ["Gwenna Firebrew <Barmaid>"] = {
+    -- Gwenna Firebrew
+    ["Gwenna Firebrew"] = {
         npcId = 5112,
         level = {30, 30},
         zone = "Ironforge",
@@ -7491,8 +7491,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gwina Stonebranch <Herbalism Supplier>
-    ["Gwina Stonebranch <Herbalism Supplier>"] = {
+    -- Gwina Stonebranch
+    ["Gwina Stonebranch"] = {
         npcId = 5138,
         level = {30, 30},
         zone = "Ironforge",
@@ -7504,8 +7504,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Gwyn Farrow <Mushroom Merchant>
-    ["Gwyn Farrow <Mushroom Merchant>"] = {
+    -- Gwyn Farrow
+    ["Gwyn Farrow"] = {
         npcId = 5886,
         level = {16, 16},
         zone = "Silverpine Forest",
@@ -7519,8 +7519,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hae'Wilani <Axecrafter>
-    ["Hae'Wilani <Axecrafter>"] = {
+    -- Hae'Wilani
+    ["Hae'Wilani"] = {
         npcId = 12045,
         level = {30, 30},
         zone = "Desolace",
@@ -7534,8 +7534,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hagrus <Reagents Vendor>
-    ["Hagrus <Reagents Vendor>"] = {
+    -- Hagrus
+    ["Hagrus"] = {
         npcId = 3335,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -7564,8 +7564,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hai'zan <Butcher>
-    ["Hai'zan <Butcher>"] = {
+    -- Hai'zan
+    ["Hai'zan"] = {
         npcId = 3933,
         level = {14, 14},
         zone = "Durotar",
@@ -7579,8 +7579,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hal McAllister <Fish Merchant>
-    ["Hal McAllister <Fish Merchant>"] = {
+    -- Hal McAllister
+    ["Hal McAllister"] = {
         npcId = 3540,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
@@ -7594,8 +7594,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Halija Whitestrider <Clothier>
-    ["Halija Whitestrider <Clothier>"] = {
+    -- Halija Whitestrider
+    ["Halija Whitestrider"] = {
         npcId = 3486,
         level = {19, 19},
         zone = "The Barrens",
@@ -7618,8 +7618,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Haljan Oakheart <General Goods>
-    ["Haljan Oakheart <General Goods>"] = {
+    -- Haljan Oakheart
+    ["Haljan Oakheart"] = {
         npcId = 3962,
         level = {26, 26},
         zone = "Ashenvale",
@@ -7642,8 +7642,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Halpa <Prairie Dog Vendor>
-    ["Halpa <Prairie Dog Vendor>"] = {
+    -- Halpa
+    ["Halpa"] = {
         npcId = 8401,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -7652,8 +7652,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hamlin Atkins <Mushroom Farmer>
-    ["Hamlin Atkins <Mushroom Farmer>"] = {
+    -- Hamlin Atkins
+    ["Hamlin Atkins"] = {
         npcId = 3547,
         level = {10, 10},
         zone = "Tirisfal Glades",
@@ -7667,8 +7667,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hammon Karwn <Superior Tradesman>
-    ["Hammon Karwn <Superior Tradesman>"] = {
+    -- Hammon Karwn
+    ["Hammon Karwn"] = {
         npcId = 2810,
         level = {35, 35},
         zone = "Arathi Highlands",
@@ -7706,8 +7706,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Handor <Cloth & Leather Armor Merchant>
-    ["Handor <Cloth & Leather Armor Merchant>"] = {
+    -- Handor
+    ["Handor"] = {
         npcId = 3316,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -7756,8 +7756,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hannah Akeley <Reagent Supplier>
-    ["Hannah Akeley <Reagent Supplier>"] = {
+    -- Hannah Akeley
+    ["Hannah Akeley"] = {
         npcId = 4575,
         level = {30, 30},
         zone = "Undercity",
@@ -7784,8 +7784,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hans Weston <Armorer & Shieldsmith>
-    ["Hans Weston <Armorer & Shieldsmith>"] = {
+    -- Hans Weston
+    ["Hans Weston"] = {
         npcId = 4886,
         level = {37, 37},
         zone = "Dustwallow Marsh",
@@ -7801,8 +7801,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harant Ironbrace <Armorer and Shieldcrafter>
-    ["Harant Ironbrace <Armorer and Shieldcrafter>"] = {
+    -- Harant Ironbrace
+    ["Harant Ironbrace"] = {
         npcId = 3080,
         level = {13, 13},
         zone = "Mulgore",
@@ -7818,8 +7818,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harb Clawhoof <Kodo Mounts>
-    ["Harb Clawhoof <Kodo Mounts>"] = {
+    -- Harb Clawhoof
+    ["Harb Clawhoof"] = {
         npcId = 3685,
         level = {45, 45},
         zone = "Mulgore",
@@ -7832,8 +7832,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Haren Kanmae <Superior Bowyer>
-    ["Haren Kanmae <Superior Bowyer>"] = {
+    -- Haren Kanmae
+    ["Haren Kanmae"] = {
         npcId = 2839,
         level = {41, 41},
         zone = "Stranglethorn Vale",
@@ -7850,8 +7850,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harggan <Blacksmithing Supplies>
-    ["Harggan <Blacksmithing Supplies>"] = {
+    -- Harggan
+    ["Harggan"] = {
         npcId = 8161,
         level = {49, 49},
         zone = "The Hinterlands",
@@ -7866,8 +7866,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harick Boulderdrum <Wands Merchant>
-    ["Harick Boulderdrum <Wands Merchant>"] = {
+    -- Harick Boulderdrum
+    ["Harick Boulderdrum"] = {
         npcId = 5133,
         level = {30, 30},
         zone = "Ironforge",
@@ -7883,8 +7883,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harklan Moongrove <Alchemy Supplies>
-    ["Harklan Moongrove <Alchemy Supplies>"] = {
+    -- Harklan Moongrove
+    ["Harklan Moongrove"] = {
         npcId = 3956,
         level = {24, 24},
         zone = "Ashenvale",
@@ -7899,8 +7899,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harklane <Fish Vendor>
-    ["Harklane <Fish Vendor>"] = {
+    -- Harklane
+    ["Harklane"] = {
         npcId = 7943,
         level = {49, 49},
         zone = "Feralas",
@@ -7920,8 +7920,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harlon Thornguard <Armorer & Shieldsmith>
-    ["Harlon Thornguard <Armorer & Shieldsmith>"] = {
+    -- Harlon Thornguard
+    ["Harlon Thornguard"] = {
         npcId = 4187,
         level = {25, 25},
         zone = "Darkshore",
@@ -7937,8 +7937,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harlown Darkweave <Leatherworking Supplies>
-    ["Harlown Darkweave <Leatherworking Supplies>"] = {
+    -- Harlown Darkweave
+    ["Harlown Darkweave"] = {
         npcId = 6731,
         level = {27, 27},
         zone = "Ashenvale",
@@ -7963,8 +7963,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harn Longcast <Fishing Supplies>
-    ["Harn Longcast <Fishing Supplies>"] = {
+    -- Harn Longcast
+    ["Harn Longcast"] = {
         npcId = 5940,
         level = {9, 9},
         zone = "Mulgore",
@@ -7980,8 +7980,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harnor <Food & Drink>
-    ["Harnor <Food & Drink>"] = {
+    -- Harnor
+    ["Harnor"] = {
         npcId = 8152,
         level = {40, 40},
         zone = "Desolace",
@@ -8001,8 +8001,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Harold Raims <Apprentice Weaponsmith>
-    ["Harold Raims <Apprentice Weaponsmith>"] = {
+    -- Harold Raims
+    ["Harold Raims"] = {
         npcId = 2117,
         level = {5, 5},
         zone = "Tirisfal Glades",
@@ -8018,8 +8018,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hartash <Weapon Merchant>
-    ["Hartash <Weapon Merchant>"] = {
+    -- Hartash
+    ["Hartash"] = {
         npcId = 981,
         level = {45, 45},
         zone = "Swamp of Sorrows",
@@ -8035,8 +8035,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hecht Copperpinch <Smokywood Pastures>
-    ["Hecht Copperpinch <Smokywood Pastures>"] = {
+    -- Hecht Copperpinch
+    ["Hecht Copperpinch"] = {
         npcId = 14964,
         level = {30, 30},
         zone = "The Barrens",
@@ -8060,8 +8060,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hegnar Rumbleshot <Gunsmith>
-    ["Hegnar Rumbleshot <Gunsmith>"] = {
+    -- Hegnar Rumbleshot
+    ["Hegnar Rumbleshot"] = {
         npcId = 1243,
         level = {8, 12},
         zone = "Dun Morogh",
@@ -8074,8 +8074,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hegnar Swiftaxe <Axe Merchant>
-    ["Hegnar Swiftaxe <Axe Merchant>"] = {
+    -- Hegnar Swiftaxe
+    ["Hegnar Swiftaxe"] = {
         npcId = 5119,
         level = {30, 30},
         zone = "Ironforge",
@@ -8093,8 +8093,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Heinrich Stone <Blade Merchant>
-    ["Heinrich Stone <Blade Merchant>"] = {
+    -- Heinrich Stone
+    ["Heinrich Stone"] = {
         npcId = 1324,
         level = {30, 30},
         zone = "Stormwind City",
@@ -8106,8 +8106,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Heldan Galesong <Fisherman>
-    ["Heldan Galesong <Fisherman>"] = {
+    -- Heldan Galesong
+    ["Heldan Galesong"] = {
         npcId = 4307,
         level = {25, 25},
         zone = "Darkshore",
@@ -8125,8 +8125,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Helenia Olden <Trade Supplies>
-    ["Helenia Olden <Trade Supplies>"] = {
+    -- Helenia Olden
+    ["Helenia Olden"] = {
         npcId = 4897,
         level = {34, 34},
         zone = "Dustwallow Marsh",
@@ -8166,8 +8166,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Henry Chapal <Gunsmith>
-    ["Henry Chapal <Gunsmith>"] = {
+    -- Henry Chapal
+    ["Henry Chapal"] = {
         npcId = 3088,
         level = {25, 25},
         zone = "Redridge Mountains",
@@ -8181,8 +8181,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Herble Baubbletump <Engineering and Mining Supplies>
-    ["Herble Baubbletump <Engineering and Mining Supplies>"] = {
+    -- Herble Baubbletump
+    ["Herble Baubbletump"] = {
         npcId = 3133,
         level = {30, 30},
         zone = "Duskwood",
@@ -8207,8 +8207,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hewa <Cloth Armor Merchant>
-    ["Hewa <Cloth Armor Merchant>"] = {
+    -- Hewa
+    ["Hewa"] = {
         npcId = 8358,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -8548,8 +8548,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Himmik <Food & Drink>
-    ["Himmik <Food & Drink>"] = {
+    -- Himmik
+    ["Himmik"] = {
         npcId = 11187,
         level = {60, 60},
         zone = "Winterspring",
@@ -8576,8 +8576,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hjoldir Stoneblade <Blade Merchant>
-    ["Hjoldir Stoneblade <Blade Merchant>"] = {
+    -- Hjoldir Stoneblade
+    ["Hjoldir Stoneblade"] = {
         npcId = 5170,
         level = {30, 30},
         zone = "Ironforge",
@@ -8591,8 +8591,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hogor Thunderhoof <Guns Merchant>
-    ["Hogor Thunderhoof <Guns Merchant>"] = {
+    -- Hogor Thunderhoof
+    ["Hogor Thunderhoof"] = {
         npcId = 3018,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -8610,8 +8610,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Homer Stonefield <Fruit Seller>
-    ["Homer Stonefield <Fruit Seller>"] = {
+    -- Homer Stonefield
+    ["Homer Stonefield"] = {
         npcId = 894,
         level = {5, 5},
         zone = "Elwynn Forest",
@@ -8625,8 +8625,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Honni Goldenoat <Baker>
-    ["Honni Goldenoat <Baker>"] = {
+    -- Honni Goldenoat
+    ["Honni Goldenoat"] = {
         npcId = 3948,
         level = {10, 10},
         zone = "Loch Modan",
@@ -8640,8 +8640,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Horthus <Reagents Vendor>
-    ["Horthus <Reagents Vendor>"] = {
+    -- Horthus
+    ["Horthus"] = {
         npcId = 3323,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -8668,8 +8668,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hragran <Cloth & Leather Armor Merchant>
-    ["Hragran <Cloth & Leather Armor Merchant>"] = {
+    -- Hragran
+    ["Hragran"] = {
         npcId = 1147,
         level = {40, 40},
         zone = "Stranglethorn Vale",
@@ -8691,8 +8691,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hraq <Blacksmithing Supplier>
-    ["Hraq <Blacksmithing Supplier>"] = {
+    -- Hraq
+    ["Hraq"] = {
         npcId = 3477,
         level = {18, 18},
         zone = "The Barrens",
@@ -8706,8 +8706,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hraug <Demon Trainer>
-    ["Hraug <Demon Trainer>"] = {
+    -- Hraug
+    ["Hraug"] = {
         npcId = 12776,
         level = {9, 9},
         zone = "Durotar",
@@ -8732,8 +8732,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Huklah <Cloth & Leather Armor Merchant>
-    ["Huklah <Cloth & Leather Armor Merchant>"] = {
+    -- Huklah
+    ["Huklah"] = {
         npcId = 3160,
         level = {11, 11},
         zone = "Durotar",
@@ -8753,8 +8753,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hula'mahi <Reagents and Herbs>
-    ["Hula'mahi <Reagents and Herbs>"] = {
+    -- Hula'mahi
+    ["Hula'mahi"] = {
         npcId = 3490,
         level = {30, 30},
         zone = "The Barrens",
@@ -8797,8 +8797,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Huntsman Leopold <The Scarlet Crusade>
-    ["Huntsman Leopold <The Scarlet Crusade>"] = {
+    -- Huntsman Leopold
+    ["Huntsman Leopold"] = {
         npcId = 16132,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -8812,8 +8812,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Hurklor <Blacksmithing Supplies>
-    ["Hurklor <Blacksmithing Supplies>"] = {
+    -- Hurklor
+    ["Hurklor"] = {
         npcId = 2844,
         level = {46, 46},
         zone = "Stranglethorn Vale",
@@ -8827,8 +8827,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Illiyana Moonblaze <Silverwing Supply Officer>
-    ["Illiyana Moonblaze <Silverwing Supply Officer>"] = {
+    -- Illiyana Moonblaze
+    ["Illiyana Moonblaze"] = {
         npcId = 14753,
         level = {55, 55},
         zone = "Ashenvale",
@@ -8848,8 +8848,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Illyanie <Cloth Armor Merchant>
-    ["Illyanie <Cloth Armor Merchant>"] = {
+    -- Illyanie
+    ["Illyanie"] = {
         npcId = 4188,
         level = {25, 25},
         zone = "Stonetalon Mountains",
@@ -8869,8 +8869,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ingrys Stonebrow <Cloth Armor Merchant>
-    ["Ingrys Stonebrow <Cloth Armor Merchant>"] = {
+    -- Ingrys Stonebrow
+    ["Ingrys Stonebrow"] = {
         npcId = 5155,
         level = {30, 30},
         zone = "Ironforge",
@@ -8898,8 +8898,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Abeqwa <Innkeeper>
-    ["Innkeeper Abeqwa <Innkeeper>"] = {
+    -- Innkeeper Abeqwa
+    ["Innkeeper Abeqwa"] = {
         npcId = 11116,
         level = {30, 30},
         zone = "Thousand Needles",
@@ -8922,8 +8922,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Adegwa <Innkeeper>
-    ["Innkeeper Adegwa <Innkeeper>"] = {
+    -- Innkeeper Adegwa
+    ["Innkeeper Adegwa"] = {
         npcId = 9501,
         level = {30, 30},
         zone = "Arathi Highlands",
@@ -8946,8 +8946,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Allison <Innkeeper>
-    ["Innkeeper Allison <Innkeeper>"] = {
+    -- Innkeeper Allison
+    ["Innkeeper Allison"] = {
         npcId = 6740,
         level = {30, 30},
         zone = "Stormwind City",
@@ -8970,8 +8970,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Anderson <Innkeeper>
-    ["Innkeeper Anderson <Innkeeper>"] = {
+    -- Innkeeper Anderson
+    ["Innkeeper Anderson"] = {
         npcId = 2352,
         level = {30, 30},
         zone = "Hillsbrad Foothills",
@@ -9000,8 +9000,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Bates <Innkeeper>
-    ["Innkeeper Bates <Innkeeper>"] = {
+    -- Innkeeper Bates
+    ["Innkeeper Bates"] = {
         npcId = 6739,
         level = {30, 30},
         zone = "Silverpine Forest",
@@ -9024,8 +9024,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Belm <Innkeeper>
-    ["Innkeeper Belm <Innkeeper>"] = {
+    -- Innkeeper Belm
+    ["Innkeeper Belm"] = {
         npcId = 1247,
         level = {30, 30},
         zone = "Dun Morogh",
@@ -9050,8 +9050,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Boorand Plainswind <Innkeeper>
-    ["Innkeeper Boorand Plainswind <Innkeeper>"] = {
+    -- Innkeeper Boorand Plainswind
+    ["Innkeeper Boorand Plainswind"] = {
         npcId = 3934,
         level = {30, 30},
         zone = "The Barrens",
@@ -9074,8 +9074,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Brianna <Innkeeper>
-    ["Innkeeper Brianna <Innkeeper>"] = {
+    -- Innkeeper Brianna
+    ["Innkeeper Brianna"] = {
         npcId = 6727,
         level = {30, 30},
         zone = "Redridge Mountains",
@@ -9098,8 +9098,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Byula <Innkeeper>
-    ["Innkeeper Byula <Innkeeper>"] = {
+    -- Innkeeper Byula
+    ["Innkeeper Byula"] = {
         npcId = 7714,
         level = {30, 30},
         zone = "The Barrens",
@@ -9122,8 +9122,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Faralia <Innkeeper>
-    ["Innkeeper Faralia <Innkeeper>"] = {
+    -- Innkeeper Faralia
+    ["Innkeeper Faralia"] = {
         npcId = 16458,
         level = {30, 30},
         zone = "Stonetalon Mountains",
@@ -9146,8 +9146,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Farley <Innkeeper>
-    ["Innkeeper Farley <Innkeeper>"] = {
+    -- Innkeeper Farley
+    ["Innkeeper Farley"] = {
         npcId = 295,
         level = {30, 30},
         zone = "Elwynn Forest",
@@ -9170,8 +9170,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Firebrew <Innkeeper>
-    ["Innkeeper Firebrew <Innkeeper>"] = {
+    -- Innkeeper Firebrew
+    ["Innkeeper Firebrew"] = {
         npcId = 5111,
         level = {30, 30},
         zone = "Ironforge",
@@ -9199,8 +9199,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Fizzgrimble <Innkeeper>
-    ["Innkeeper Fizzgrimble <Innkeeper>"] = {
+    -- Innkeeper Fizzgrimble
+    ["Innkeeper Fizzgrimble"] = {
         npcId = 7733,
         level = {30, 30},
         zone = "Tanaris",
@@ -9224,8 +9224,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Greul <Innkeeper>
-    ["Innkeeper Greul <Innkeeper>"] = {
+    -- Innkeeper Greul
+    ["Innkeeper Greul"] = {
         npcId = 7737,
         level = {30, 30},
         zone = "Feralas",
@@ -9248,8 +9248,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Grosk <Innkeeper>
-    ["Innkeeper Grosk <Innkeeper>"] = {
+    -- Innkeeper Grosk
+    ["Innkeeper Grosk"] = {
         npcId = 6928,
         level = {30, 30},
         zone = "Durotar",
@@ -9272,8 +9272,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Gryshka <Innkeeper>
-    ["Innkeeper Gryshka <Innkeeper>"] = {
+    -- Innkeeper Gryshka
+    ["Innkeeper Gryshka"] = {
         npcId = 6929,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -9296,8 +9296,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Hearthstove <Innkeeper>
-    ["Innkeeper Hearthstove <Innkeeper>"] = {
+    -- Innkeeper Hearthstove
+    ["Innkeeper Hearthstove"] = {
         npcId = 6734,
         level = {30, 30},
         zone = "Loch Modan",
@@ -9320,8 +9320,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Heather <Innkeeper>
-    ["Innkeeper Heather <Innkeeper>"] = {
+    -- Innkeeper Heather
+    ["Innkeeper Heather"] = {
         npcId = 8931,
         level = {30, 30},
         zone = "Westfall",
@@ -9344,8 +9344,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Helbrek <Innkeeper>
-    ["Innkeeper Helbrek <Innkeeper>"] = {
+    -- Innkeeper Helbrek
+    ["Innkeeper Helbrek"] = {
         npcId = 1464,
         level = {30, 30},
         zone = "Wetlands",
@@ -9369,8 +9369,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Janene <Innkeeper>
-    ["Innkeeper Janene <Innkeeper>"] = {
+    -- Innkeeper Janene
+    ["Innkeeper Janene"] = {
         npcId = 6272,
         level = {30, 30},
         zone = "Dustwallow Marsh",
@@ -9393,8 +9393,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Jayka <Innkeeper>
-    ["Innkeeper Jayka <Innkeeper>"] = {
+    -- Innkeeper Jayka
+    ["Innkeeper Jayka"] = {
         npcId = 7731,
         level = {30, 30},
         zone = "Stonetalon Mountains",
@@ -9417,8 +9417,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Karakul <Innkeeper>
-    ["Innkeeper Karakul <Innkeeper>"] = {
+    -- Innkeeper Karakul
+    ["Innkeeper Karakul"] = {
         npcId = 6930,
         level = {30, 30},
         zone = "Swamp of Sorrows",
@@ -9441,8 +9441,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Kauth <Innkeeper>
-    ["Innkeeper Kauth <Innkeeper>"] = {
+    -- Innkeeper Kauth
+    ["Innkeeper Kauth"] = {
         npcId = 6747,
         level = {30, 30},
         zone = "Mulgore",
@@ -9465,8 +9465,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Kaylisk <Innkeeper>
-    ["Innkeeper Kaylisk <Innkeeper>"] = {
+    -- Innkeeper Kaylisk
+    ["Innkeeper Kaylisk"] = {
         npcId = 12196,
         level = {30, 30},
         zone = "Ashenvale",
@@ -9489,8 +9489,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Keldamyr <Innkeeper>
-    ["Innkeeper Keldamyr <Innkeeper>"] = {
+    -- Innkeeper Keldamyr
+    ["Innkeeper Keldamyr"] = {
         npcId = 6736,
         level = {30, 30},
         zone = "Teldrassil",
@@ -9513,8 +9513,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Kimlya <Innkeeper>
-    ["Innkeeper Kimlya <Innkeeper>"] = {
+    -- Innkeeper Kimlya
+    ["Innkeeper Kimlya"] = {
         npcId = 6738,
         level = {30, 30},
         zone = "Ashenvale",
@@ -9537,8 +9537,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Lyshaerya <Innkeeper>
-    ["Innkeeper Lyshaerya <Innkeeper>"] = {
+    -- Innkeeper Lyshaerya
+    ["Innkeeper Lyshaerya"] = {
         npcId = 11103,
         level = {30, 30},
         zone = "Desolace",
@@ -9561,8 +9561,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Norman <Innkeeper>
-    ["Innkeeper Norman <Innkeeper>"] = {
+    -- Innkeeper Norman
+    ["Innkeeper Norman"] = {
         npcId = 6741,
         level = {30, 30},
         zone = "Undercity",
@@ -9585,8 +9585,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Pala <Innkeeper>
-    ["Innkeeper Pala <Innkeeper>"] = {
+    -- Innkeeper Pala
+    ["Innkeeper Pala"] = {
         npcId = 6746,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -9609,8 +9609,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Renee <Innkeeper>
-    ["Innkeeper Renee <Innkeeper>"] = {
+    -- Innkeeper Renee
+    ["Innkeeper Renee"] = {
         npcId = 5688,
         level = {30, 30},
         zone = "Tirisfal Glades",
@@ -9633,8 +9633,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Saelienne <Innkeeper>
-    ["Innkeeper Saelienne <Innkeeper>"] = {
+    -- Innkeeper Saelienne
+    ["Innkeeper Saelienne"] = {
         npcId = 6735,
         level = {30, 30},
         zone = "Darnassus",
@@ -9657,8 +9657,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Shaussiy <Innkeeper>
-    ["Innkeeper Shaussiy <Innkeeper>"] = {
+    -- Innkeeper Shaussiy
+    ["Innkeeper Shaussiy"] = {
         npcId = 6737,
         level = {30, 30},
         zone = "Darkshore",
@@ -9681,8 +9681,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Shay <Innkeeper>
-    ["Innkeeper Shay <Innkeeper>"] = {
+    -- Innkeeper Shay
+    ["Innkeeper Shay"] = {
         npcId = 2388,
         level = {30, 30},
         zone = "Hillsbrad Foothills",
@@ -9706,8 +9706,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Shul'kar <Innkeeper>
-    ["Innkeeper Shul'kar <Innkeeper>"] = {
+    -- Innkeeper Shul'kar
+    ["Innkeeper Shul'kar"] = {
         npcId = 9356,
         level = {30, 30},
         zone = "Badlands",
@@ -9730,8 +9730,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Shyria <Innkeeper>
-    ["Innkeeper Shyria <Innkeeper>"] = {
+    -- Innkeeper Shyria
+    ["Innkeeper Shyria"] = {
         npcId = 7736,
         level = {30, 30},
         zone = "Feralas",
@@ -9754,8 +9754,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Sikewa <Innkeeper>
-    ["Innkeeper Sikewa <Innkeeper>"] = {
+    -- Innkeeper Sikewa
+    ["Innkeeper Sikewa"] = {
         npcId = 11106,
         level = {30, 30},
         zone = "Desolace",
@@ -9778,8 +9778,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Skindle <Innkeeper>
-    ["Innkeeper Skindle <Innkeeper>"] = {
+    -- Innkeeper Skindle
+    ["Innkeeper Skindle"] = {
         npcId = 6807,
         level = {46, 46},
         zone = "Stranglethorn Vale",
@@ -9802,8 +9802,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Thulbek <Innkeeper>
-    ["Innkeeper Thulbek <Innkeeper>"] = {
+    -- Innkeeper Thulbek
+    ["Innkeeper Thulbek"] = {
         npcId = 5814,
         level = {30, 30},
         zone = "Stranglethorn Vale",
@@ -9832,8 +9832,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Thulfram <Innkeeper>
-    ["Innkeeper Thulfram <Innkeeper>"] = {
+    -- Innkeeper Thulfram
+    ["Innkeeper Thulfram"] = {
         npcId = 7744,
         level = {30, 30},
         zone = "The Hinterlands",
@@ -9858,8 +9858,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Trelayne <Innkeeper>
-    ["Innkeeper Trelayne <Innkeeper>"] = {
+    -- Innkeeper Trelayne
+    ["Innkeeper Trelayne"] = {
         npcId = 6790,
         level = {30, 30},
         zone = "Duskwood",
@@ -9882,8 +9882,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Vizzie <Innkeeper>
-    ["Innkeeper Vizzie <Innkeeper>"] = {
+    -- Innkeeper Vizzie
+    ["Innkeeper Vizzie"] = {
         npcId = 11118,
         level = {30, 30},
         zone = "Winterspring",
@@ -9907,8 +9907,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Innkeeper Wiley <Innkeeper>
-    ["Innkeeper Wiley <Innkeeper>"] = {
+    -- Innkeeper Wiley
+    ["Innkeeper Wiley"] = {
         npcId = 6791,
         level = {35, 35},
         zone = "The Barrens",
@@ -9931,8 +9931,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Irene Sureshot <Gunsmith>
-    ["Irene Sureshot <Gunsmith>"] = {
+    -- Irene Sureshot
+    ["Irene Sureshot"] = {
         npcId = 1686,
         level = {15, 15},
         zone = "Loch Modan",
@@ -9969,8 +9969,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ironzar <Weaponsmith>
-    ["Ironzar <Weaponsmith>"] = {
+    -- Ironzar
+    ["Ironzar"] = {
         npcId = 3491,
         level = {23, 23},
         zone = "The Barrens",
@@ -9986,8 +9986,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jabbey <General Goods>
-    ["Jabbey <General Goods>"] = {
+    -- Jabbey
+    ["Jabbey"] = {
         npcId = 8139,
         level = {40, 40},
         zone = "Tanaris",
@@ -10017,8 +10017,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jadenvis Seawatcher <Reagent Vendor>
-    ["Jadenvis Seawatcher <Reagent Vendor>"] = {
+    -- Jadenvis Seawatcher
+    ["Jadenvis Seawatcher"] = {
         npcId = 3700,
         level = {51, 51},
         zone = "Feralas",
@@ -10045,8 +10045,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jaeana <Meat Vendor>
-    ["Jaeana <Meat Vendor>"] = {
+    -- Jaeana
+    ["Jaeana"] = {
         npcId = 4169,
         level = {30, 30},
         zone = "Darnassus",
@@ -10066,8 +10066,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jahan Hawkwing <Leather & Mail Armor Merchant>
-    ["Jahan Hawkwing <Leather & Mail Armor Merchant>"] = {
+    -- Jahan Hawkwing
+    ["Jahan Hawkwing"] = {
         npcId = 3483,
         level = {21, 21},
         zone = "The Barrens",
@@ -10087,8 +10087,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jandia <Trade Supplies>
-    ["Jandia <Trade Supplies>"] = {
+    -- Jandia
+    ["Jandia"] = {
         npcId = 4877,
         level = {37, 37},
         zone = "Thousand Needles",
@@ -10118,8 +10118,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Janet Hommers <Food & Drink>
-    ["Janet Hommers <Food & Drink>"] = {
+    -- Janet Hommers
+    ["Janet Hommers"] = {
         npcId = 8150,
         level = {40, 40},
         zone = "Desolace",
@@ -10141,8 +10141,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jangdor Swiftstrider <Leatherworking Supplies>
-    ["Jangdor Swiftstrider <Leatherworking Supplies>"] = {
+    -- Jangdor Swiftstrider
+    ["Jangdor Swiftstrider"] = {
         npcId = 7854,
         level = {49, 49},
         zone = "Feralas",
@@ -10171,8 +10171,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Janna Brightmoon <Clothier>
-    ["Janna Brightmoon <Clothier>"] = {
+    -- Janna Brightmoon
+    ["Janna Brightmoon"] = {
         npcId = 3590,
         level = {9, 9},
         zone = "Teldrassil",
@@ -10186,8 +10186,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jannos Ironwill <Superior Macecrafter>
-    ["Jannos Ironwill <Superior Macecrafter>"] = {
+    -- Jannos Ironwill
+    ["Jannos Ironwill"] = {
         npcId = 1471,
         level = {46, 46},
         zone = "Arathi Highlands",
@@ -10202,8 +10202,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Janos Hammerknuckle <Weaponsmith>
-    ["Janos Hammerknuckle <Weaponsmith>"] = {
+    -- Janos Hammerknuckle
+    ["Janos Hammerknuckle"] = {
         npcId = 78,
         level = {5, 5},
         zone = "Elwynn Forest",
@@ -10219,8 +10219,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jansen Underwood <Blacksmithing Supplies>
-    ["Jansen Underwood <Blacksmithing Supplies>"] = {
+    -- Jansen Underwood
+    ["Jansen Underwood"] = {
         npcId = 2847,
         level = {49, 49},
         zone = "Stranglethorn Vale",
@@ -10234,8 +10234,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jaquilina Dramet <Superior Axecrafter>
-    ["Jaquilina Dramet <Superior Axecrafter>"] = {
+    -- Jaquilina Dramet
+    ["Jaquilina Dramet"] = {
         npcId = 2483,
         level = {39, 39},
         zone = "Stranglethorn Vale",
@@ -10249,8 +10249,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jarel Moor <Bartender>
-    ["Jarel Moor <Bartender>"] = {
+    -- Jarel Moor
+    ["Jarel Moor"] = {
         npcId = 1305,
         level = {30, 30},
         zone = "Stormwind City",
@@ -10263,8 +10263,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jark <General Goods>
-    ["Jark <General Goods>"] = {
+    -- Jark
+    ["Jark"] = {
         npcId = 3164,
         level = {14, 14},
         zone = "Durotar",
@@ -10284,8 +10284,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jase Farlane <Trade Supplies>
-    ["Jase Farlane <Trade Supplies>"] = {
+    -- Jase Farlane
+    ["Jase Farlane"] = {
         npcId = 12941,
         level = {56, 56},
         zone = "Eastern Plaguelands",
@@ -10322,8 +10322,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jason Lemieux <Mushroom Seller>
-    ["Jason Lemieux <Mushroom Seller>"] = {
+    -- Jason Lemieux
+    ["Jason Lemieux"] = {
         npcId = 3544,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
@@ -10337,8 +10337,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jasper Fel <Shady Dealer>
-    ["Jasper Fel <Shady Dealer>"] = {
+    -- Jasper Fel
+    ["Jasper Fel"] = {
         npcId = 1325,
         level = {30, 30},
         zone = "Stormwind City",
@@ -10370,8 +10370,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jawn Highmesa <General Goods>
-    ["Jawn Highmesa <General Goods>"] = {
+    -- Jawn Highmesa
+    ["Jawn Highmesa"] = {
         npcId = 4876,
         level = {35, 35},
         zone = "Thousand Needles",
@@ -10394,8 +10394,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jaxxil Sparks <Holiday Fireworks Vendor>
-    ["Jaxxil Sparks <Holiday Fireworks Vendor>"] = {
+    -- Jaxxil Sparks
+    ["Jaxxil Sparks"] = {
         npcId = 8121,
         level = {24, 24},
         zone = "The Barrens",
@@ -10413,8 +10413,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jaycrue Copperpinch <Smokywood Pastures>
-    ["Jaycrue Copperpinch <Smokywood Pastures>"] = {
+    -- Jaycrue Copperpinch
+    ["Jaycrue Copperpinch"] = {
         npcId = 13430,
         level = {30, 30},
         zone = "Undercity",
@@ -10429,8 +10429,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jaysin Lanyda <Poisons & Reagents>
-    ["Jaysin Lanyda <Poisons & Reagents>"] = {
+    -- Jaysin Lanyda
+    ["Jaysin Lanyda"] = {
         npcId = 3542,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
@@ -10467,8 +10467,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jazzik <General Supplies>
-    ["Jazzik <General Supplies>"] = {
+    -- Jazzik
+    ["Jazzik"] = {
         npcId = 3498,
         level = {22, 22},
         zone = "The Barrens",
@@ -10492,8 +10492,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jazzrik <Blacksmithing Supplies>
-    ["Jazzrik <Blacksmithing Supplies>"] = {
+    -- Jazzrik
+    ["Jazzrik"] = {
         npcId = 9179,
         level = {38, 38},
         zone = "Badlands",
@@ -10508,8 +10508,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jeeda <Apprentice Witch Doctor>
-    ["Jeeda <Apprentice Witch Doctor>"] = {
+    -- Jeeda
+    ["Jeeda"] = {
         npcId = 4083,
         level = {24, 24},
         zone = "Stonetalon Mountains",
@@ -10545,8 +10545,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jeena Featherbow <Bowyer>
-    ["Jeena Featherbow <Bowyer>"] = {
+    -- Jeena Featherbow
+    ["Jeena Featherbow"] = {
         npcId = 3610,
         level = {19, 19},
         zone = "Teldrassil",
@@ -10560,8 +10560,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jekyll Flandring <Frostwolf Supply Officer>
-    ["Jekyll Flandring <Frostwolf Supply Officer>"] = {
+    -- Jekyll Flandring
+    ["Jekyll Flandring"] = {
         npcId = 13219,
         level = {58, 58},
         zone = "Alterac Mountains",
@@ -10579,8 +10579,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jennabink Powerseam <Tailoring Supplies & Specialty Goods>
-    ["Jennabink Powerseam <Tailoring Supplies & Specialty Goods>"] = {
+    -- Jennabink Powerseam
+    ["Jennabink Powerseam"] = {
         npcId = 1454,
         level = {25, 25},
         zone = "Wetlands",
@@ -10611,8 +10611,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jensen Farran <Bowyer>
-    ["Jensen Farran <Bowyer>"] = {
+    -- Jensen Farran
+    ["Jensen Farran"] = {
         npcId = 4892,
         level = {37, 37},
         zone = "Dustwallow Marsh",
@@ -10629,8 +10629,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jeremiah Payson <Cockroach Vendor>
-    ["Jeremiah Payson <Cockroach Vendor>"] = {
+    -- Jeremiah Payson
+    ["Jeremiah Payson"] = {
         npcId = 8403,
         level = {30, 30},
         zone = "Undercity",
@@ -10639,8 +10639,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jessara Cordell <Enchanting Supplies>
-    ["Jessara Cordell <Enchanting Supplies>"] = {
+    -- Jessara Cordell
+    ["Jessara Cordell"] = {
         npcId = 1318,
         level = {30, 30},
         zone = "Stormwind City",
@@ -10658,8 +10658,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jessica Chambers <Innkeeper>
-    ["Jessica Chambers <Innkeeper>"] = {
+    -- Jessica Chambers
+    ["Jessica Chambers"] = {
         npcId = 16256,
         level = {52, 52},
         zone = "Eastern Plaguelands",
@@ -10682,8 +10682,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jhawna Oatwind <Baker>
-    ["Jhawna Oatwind <Baker>"] = {
+    -- Jhawna Oatwind
+    ["Jhawna Oatwind"] = {
         npcId = 3884,
         level = {13, 13},
         zone = "Mulgore",
@@ -10703,8 +10703,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jillian Tanner <Leatherworking Supplies>
-    ["Jillian Tanner <Leatherworking Supplies>"] = {
+    -- Jillian Tanner
+    ["Jillian Tanner"] = {
         npcId = 5565,
         level = {30, 30},
         zone = "Stormwind City",
@@ -10728,8 +10728,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jin'sora <Bow Merchant>
-    ["Jin'sora <Bow Merchant>"] = {
+    -- Jin'sora
+    ["Jin'sora"] = {
         npcId = 3410,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -10748,8 +10748,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jinky Twizzlefixxit <Engineering Supplies>
-    ["Jinky Twizzlefixxit <Engineering Supplies>"] = {
+    -- Jinky Twizzlefixxit
+    ["Jinky Twizzlefixxit"] = {
         npcId = 6730,
         level = {30, 30},
         zone = "Thousand Needles",
@@ -10775,8 +10775,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Joachim Brenlow <Bartender>
-    ["Joachim Brenlow <Bartender>"] = {
+    -- Joachim Brenlow
+    ["Joachim Brenlow"] = {
         npcId = 1311,
         level = {30, 30},
         zone = "Stormwind City",
@@ -10800,8 +10800,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jonathan Chambers <Bag Vendor>
-    ["Jonathan Chambers <Bag Vendor>"] = {
+    -- Jonathan Chambers
+    ["Jonathan Chambers"] = {
         npcId = 4590,
         level = {30, 30},
         zone = "Undercity",
@@ -10813,8 +10813,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jonivera Farmountain <General Goods>
-    ["Jonivera Farmountain <General Goods>"] = {
+    -- Jonivera Farmountain
+    ["Jonivera Farmountain"] = {
         npcId = 5134,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -10842,8 +10842,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Joseph Moore <Leatherworking Supplies>
-    ["Joseph Moore <Leatherworking Supplies>"] = {
+    -- Joseph Moore
+    ["Joseph Moore"] = {
         npcId = 4589,
         level = {30, 30},
         zone = "Undercity",
@@ -10869,8 +10869,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Joshua Kien <General Supplies>
-    ["Joshua Kien <General Supplies>"] = {
+    -- Joshua Kien
+    ["Joshua Kien"] = {
         npcId = 2115,
         level = {5, 5},
         zone = "Tirisfal Glades",
@@ -10884,8 +10884,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Joshua Maclure <Vintner>
-    ["Joshua Maclure <Vintner>"] = {
+    -- Joshua Maclure
+    ["Joshua Maclure"] = {
         npcId = 258,
         level = {5, 5},
         zone = "Elwynn Forest",
@@ -10904,8 +10904,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jubahl Corpseseeker <Demon Trainer>
-    ["Jubahl Corpseseeker <Demon Trainer>"] = {
+    -- Jubahl Corpseseeker
+    ["Jubahl Corpseseeker"] = {
         npcId = 6382,
         level = {60, 60},
         zone = "Ironforge",
@@ -10972,8 +10972,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jubie Gadgetspring <Engineering Supplier>
-    ["Jubie Gadgetspring <Engineering Supplier>"] = {
+    -- Jubie Gadgetspring
+    ["Jubie Gadgetspring"] = {
         npcId = 8678,
         level = {55, 55},
         zone = "Azshara",
@@ -10998,8 +10998,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Julia Gallina <Wine Vendor>
-    ["Julia Gallina <Wine Vendor>"] = {
+    -- Julia Gallina
+    ["Julia Gallina"] = {
         npcId = 1301,
         level = {30, 30},
         zone = "Stormwind City",
@@ -11012,8 +11012,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jun'ha <Tailoring Supplies>
-    ["Jun'ha <Tailoring Supplies>"] = {
+    -- Jun'ha
+    ["Jun'ha"] = {
         npcId = 6574,
         level = {31, 31},
         zone = "Arathi Highlands",
@@ -11037,8 +11037,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jutak <Blade Trader>
-    ["Jutak <Blade Trader>"] = {
+    -- Jutak
+    ["Jutak"] = {
         npcId = 2843,
         level = {43, 43},
         zone = "Stranglethorn Vale",
@@ -11054,8 +11054,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Jyn Stonehoof <Weapons Merchant>
-    ["Jyn Stonehoof <Weapons Merchant>"] = {
+    -- Jyn Stonehoof
+    ["Jyn Stonehoof"] = {
         npcId = 2997,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -11100,8 +11100,8 @@ DB.VendorItems = {
         }
     },
 
-    -- K'waii <General Goods>
-    ["K'waii <General Goods>"] = {
+    -- K'waii
+    ["K'waii"] = {
         npcId = 3186,
         level = {11, 11},
         zone = "Durotar",
@@ -11121,8 +11121,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kaga Mistrunner <Meat Vendor>
-    ["Kaga Mistrunner <Meat Vendor>"] = {
+    -- Kaga Mistrunner
+    ["Kaga Mistrunner"] = {
         npcId = 3025,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -11136,8 +11136,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kaita Deepforge <Blacksmithing Supplies>
-    ["Kaita Deepforge <Blacksmithing Supplies>"] = {
+    -- Kaita Deepforge
+    ["Kaita Deepforge"] = {
         npcId = 5512,
         level = {30, 30},
         zone = "Stormwind City",
@@ -11152,8 +11152,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kaja <Guns and Ammo Merchant>
-    ["Kaja <Guns and Ammo Merchant>"] = {
+    -- Kaja
+    ["Kaja"] = {
         npcId = 3322,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -11180,8 +11180,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kalldan Felmoon <Specialist Leatherworking Supplies>
-    ["Kalldan Felmoon <Specialist Leatherworking Supplies>"] = {
+    -- Kalldan Felmoon
+    ["Kalldan Felmoon"] = {
         npcId = 5783,
         level = {27, 27},
         zone = "Unknown",
@@ -11213,8 +11213,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kalyimah Stormcloud <Bags & Sacks>
-    ["Kalyimah Stormcloud <Bags & Sacks>"] = {
+    -- Kalyimah Stormcloud
+    ["Kalyimah Stormcloud"] = {
         npcId = 3487,
         level = {23, 23},
         zone = "The Barrens",
@@ -11225,8 +11225,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kandrostrasz <Brood of Alexstrasza>
-    ["Kandrostrasz <Brood of Alexstrasza>"] = {
+    -- Kandrostrasz
+    ["Kandrostrasz"] = {
         npcId = 15503,
         level = {60, 60},
         zone = "Ahn'Qiraj",
@@ -11243,8 +11243,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kania <Enchanting Supplier>
-    ["Kania <Enchanting Supplier>"] = {
+    -- Kania
+    ["Kania"] = {
         npcId = 15419,
         level = {54, 54},
         zone = "Silithus",
@@ -11269,8 +11269,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kara Adams <Shield Crafter>
-    ["Kara Adams <Shield Crafter>"] = {
+    -- Kara Adams
+    ["Kara Adams"] = {
         npcId = 793,
         level = {25, 25},
         zone = "Redridge Mountains",
@@ -11283,8 +11283,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kard Ragetotem <Sword and Dagger Merchant>
-    ["Kard Ragetotem <Sword and Dagger Merchant>"] = {
+    -- Kard Ragetotem
+    ["Kard Ragetotem"] = {
         npcId = 3021,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -11305,8 +11305,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Karen Taylor <Mining and Smithing Supplies>
-    ["Karen Taylor <Mining and Smithing Supplies>"] = {
+    -- Karen Taylor
+    ["Karen Taylor"] = {
         npcId = 790,
         level = {22, 22},
         zone = "Redridge Mountains",
@@ -11320,8 +11320,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kareth <Blade Merchant>
-    ["Kareth <Blade Merchant>"] = {
+    -- Kareth
+    ["Kareth"] = {
         npcId = 3331,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -11342,8 +11342,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Karm Ironquill <Mining Supplies>
-    ["Karm Ironquill <Mining Supplies>"] = {
+    -- Karm Ironquill
+    ["Karm Ironquill"] = {
         npcId = 372,
         level = {16, 16},
         zone = "Loch Modan",
@@ -11355,8 +11355,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kat Sampson <Leather Armor Merchant>
-    ["Kat Sampson <Leather Armor Merchant>"] = {
+    -- Kat Sampson
+    ["Kat Sampson"] = {
         npcId = 954,
         level = {17, 17},
         zone = "Loch Modan",
@@ -11372,8 +11372,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kathrum Axehand <Axe Merchant>
-    ["Kathrum Axehand <Axe Merchant>"] = {
+    -- Kathrum Axehand
+    ["Kathrum Axehand"] = {
         npcId = 5509,
         level = {30, 30},
         zone = "Stormwind City",
@@ -11385,8 +11385,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Katie Hunter <Horse Breeder>
-    ["Katie Hunter <Horse Breeder>"] = {
+    -- Katie Hunter
+    ["Katie Hunter"] = {
         npcId = 384,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -11400,8 +11400,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Katis <Wand Merchant>
-    ["Katis <Wand Merchant>"] = {
+    -- Katis
+    ["Katis"] = {
         npcId = 5816,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -11417,8 +11417,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Katoom the Angler <Fishing Trainer & Supplies>
-    ["Katoom the Angler <Fishing Trainer & Supplies>"] = {
+    -- Katoom the Angler
+    ["Katoom the Angler"] = {
         npcId = 14740,
         level = {42, 42},
         zone = "The Hinterlands",
@@ -11428,8 +11428,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Katrina Alliestar <Herbalism Supplier>
-    ["Katrina Alliestar <Herbalism Supplier>"] = {
+    -- Katrina Alliestar
+    ["Katrina Alliestar"] = {
         npcId = 4615,
         level = {30, 30},
         zone = "Undercity",
@@ -11441,8 +11441,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Katrina Shimmerstar <Hallow's End Treats>
-    ["Katrina Shimmerstar <Hallow's End Treats>"] = {
+    -- Katrina Shimmerstar
+    ["Katrina Shimmerstar"] = {
         npcId = 15353,
         level = {30, 30},
         zone = "Ironforge",
@@ -11455,8 +11455,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kawnie Softbreeze <General Goods>
-    ["Kawnie Softbreeze <General Goods>"] = {
+    -- Kawnie Softbreeze
+    ["Kawnie Softbreeze"] = {
         npcId = 3072,
         level = {8, 8},
         zone = "Mulgore",
@@ -11470,8 +11470,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kayla Smithe <Demon Trainer>
-    ["Kayla Smithe <Demon Trainer>"] = {
+    -- Kayla Smithe
+    ["Kayla Smithe"] = {
         npcId = 5749,
         level = {10, 10},
         zone = "Tirisfal Glades",
@@ -11496,8 +11496,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kaymard Copperpinch <Smokywood Pastures>
-    ["Kaymard Copperpinch <Smokywood Pastures>"] = {
+    -- Kaymard Copperpinch
+    ["Kaymard Copperpinch"] = {
         npcId = 13418,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -11512,8 +11512,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kayren Soothallow <General Goods>
-    ["Kayren Soothallow <General Goods>"] = {
+    -- Kayren Soothallow
+    ["Kayren Soothallow"] = {
         npcId = 2401,
         level = {30, 30},
         zone = "Hillsbrad Foothills",
@@ -11542,8 +11542,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kazan Mogosh <Food & Drink Merchant>
-    ["Kazan Mogosh <Food & Drink Merchant>"] = {
+    -- Kazan Mogosh
+    ["Kazan Mogosh"] = {
         npcId = 1237,
         level = {8, 8},
         zone = "Dun Morogh",
@@ -11569,8 +11569,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Keeg Gibn <Ale and Wine>
-    ["Keeg Gibn <Ale and Wine>"] = {
+    -- Keeg Gibn
+    ["Keeg Gibn"] = {
         npcId = 1697,
         level = {10, 10},
         zone = "Dun Morogh",
@@ -11589,8 +11589,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Keena <Trade Goods>
-    ["Keena <Trade Goods>"] = {
+    -- Keena
+    ["Keena"] = {
         npcId = 2821,
         level = {33, 33},
         zone = "Arathi Highlands",
@@ -11652,8 +11652,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Keina <Bowyer>
-    ["Keina <Bowyer>"] = {
+    -- Keina
+    ["Keina"] = {
         npcId = 3589,
         level = {10, 10},
         zone = "Teldrassil",
@@ -11667,8 +11667,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Keldric Boucher <Arcane Goods Vendor>
-    ["Keldric Boucher <Arcane Goods Vendor>"] = {
+    -- Keldric Boucher
+    ["Keldric Boucher"] = {
         npcId = 1257,
         level = {30, 30},
         zone = "Stormwind City",
@@ -11700,8 +11700,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kelm Hargunth <Warsong Supply Officer>
-    ["Kelm Hargunth <Warsong Supply Officer>"] = {
+    -- Kelm Hargunth
+    ["Kelm Hargunth"] = {
         npcId = 14754,
         level = {55, 55},
         zone = "The Barrens",
@@ -11715,8 +11715,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kelomir Ironhand <Maces & Staves>
-    ["Kelomir Ironhand <Maces & Staves>"] = {
+    -- Kelomir Ironhand
+    ["Kelomir Ironhand"] = {
         npcId = 5121,
         level = {30, 30},
         zone = "Ironforge",
@@ -11739,8 +11739,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kelsey Yance <Cook>
-    ["Kelsey Yance <Cook>"] = {
+    -- Kelsey Yance
+    ["Kelsey Yance"] = {
         npcId = 2664,
         level = {43, 43},
         zone = "Stranglethorn Vale",
@@ -11760,8 +11760,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kendor Kabonka <Master of Cooking Recipes>
-    ["Kendor Kabonka <Master of Cooking Recipes>"] = {
+    -- Kendor Kabonka
+    ["Kendor Kabonka"] = {
         npcId = 340,
         level = {50, 50},
         zone = "Stormwind City",
@@ -11782,8 +11782,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kennah Hawkseye <Gunsmith>
-    ["Kennah Hawkseye <Gunsmith>"] = {
+    -- Kennah Hawkseye
+    ["Kennah Hawkseye"] = {
         npcId = 3078,
         level = {10, 10},
         zone = "Mulgore",
@@ -11796,8 +11796,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kersok Prond <Tradesman>
-    ["Kersok Prond <Tradesman>"] = {
+    -- Kersok Prond
+    ["Kersok Prond"] = {
         npcId = 1456,
         level = {25, 25},
         zone = "Wetlands",
@@ -11861,8 +11861,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Khara Deepwater <Fishing Supplies>
-    ["Khara Deepwater <Fishing Supplies>"] = {
+    -- Khara Deepwater
+    ["Khara Deepwater"] = {
         npcId = 1684,
         level = {15, 15},
         zone = "Loch Modan",
@@ -11886,8 +11886,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Khardan Proudblade <Weaponsmith>
-    ["Khardan Proudblade <Weaponsmith>"] = {
+    -- Khardan Proudblade
+    ["Khardan Proudblade"] = {
         npcId = 3588,
         level = {8, 8},
         zone = "Teldrassil",
@@ -11903,8 +11903,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kharedon <Light Armor Merchant>
-    ["Kharedon <Light Armor Merchant>"] = {
+    -- Kharedon
+    ["Kharedon"] = {
         npcId = 12023,
         level = {51, 51},
         zone = "Moonglade",
@@ -11927,8 +11927,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Khole Jinglepocket <Smokywood Pastures>
-    ["Khole Jinglepocket <Smokywood Pastures>"] = {
+    -- Khole Jinglepocket
+    ["Khole Jinglepocket"] = {
         npcId = 13435,
         level = {30, 30},
         zone = "Stormwind City",
@@ -11945,8 +11945,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Khur Hornstriker <Reagent Vendor>
-    ["Khur Hornstriker <Reagent Vendor>"] = {
+    -- Khur Hornstriker
+    ["Khur Hornstriker"] = {
         npcId = 15175,
         level = {57, 57},
         zone = "Silithus",
@@ -11987,8 +11987,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kieran <Weapon Merchant>
-    ["Kieran <Weapon Merchant>"] = {
+    -- Kieran
+    ["Kieran"] = {
         npcId = 4231,
         level = {30, 30},
         zone = "Darnassus",
@@ -12028,8 +12028,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kiknikle <Stylish Clothier>
-    ["Kiknikle <Stylish Clothier>"] = {
+    -- Kiknikle
+    ["Kiknikle"] = {
         npcId = 3683,
         level = {32, 32},
         zone = "The Barrens",
@@ -12050,8 +12050,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Killian Sanatha <Fisherman>
-    ["Killian Sanatha <Fisherman>"] = {
+    -- Killian Sanatha
+    ["Killian Sanatha"] = {
         npcId = 5748,
         level = {18, 20},
         zone = "Silverpine Forest",
@@ -12061,8 +12061,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kilxx <Fisherman>
-    ["Kilxx <Fisherman>"] = {
+    -- Kilxx
+    ["Kilxx"] = {
         npcId = 3497,
         level = {24, 24},
         zone = "The Barrens",
@@ -12085,8 +12085,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kimberly Hiett <Fletcher>
-    ["Kimberly Hiett <Fletcher>"] = {
+    -- Kimberly Hiett
+    ["Kimberly Hiett"] = {
         npcId = 789,
         level = {20, 20},
         zone = "Redridge Mountains",
@@ -12099,8 +12099,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kira Songshine <Traveling Baker>
-    ["Kira Songshine <Traveling Baker>"] = {
+    -- Kira Songshine
+    ["Kira Songshine"] = {
         npcId = 3937,
         level = {12, 12},
         zone = "Elwynn Forest",
@@ -12120,8 +12120,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kireena <Trade Goods>
-    ["Kireena <Trade Goods>"] = {
+    -- Kireena
+    ["Kireena"] = {
         npcId = 9636,
         level = {41, 41},
         zone = "Desolace",
@@ -12163,8 +12163,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kiro <War Harness Maker>
-    ["Kiro <War Harness Maker>"] = {
+    -- Kiro
+    ["Kiro"] = {
         npcId = 3359,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -12176,8 +12176,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kitha <Demon Trainer>
-    ["Kitha <Demon Trainer>"] = {
+    -- Kitha
+    ["Kitha"] = {
         npcId = 6027,
         level = {17, 17},
         zone = "Durotar",
@@ -12223,8 +12223,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kithas <Enchanting Supplies>
-    ["Kithas <Enchanting Supplies>"] = {
+    -- Kithas
+    ["Kithas"] = {
         npcId = 3346,
         level = {35, 35},
         zone = "Orgrimmar",
@@ -12244,8 +12244,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kixxle <Potions & Herbs>
-    ["Kixxle <Potions & Herbs>"] = {
+    -- Kixxle
+    ["Kixxle"] = {
         npcId = 8305,
         level = {25, 25},
         zone = "Wetlands",
@@ -12264,8 +12264,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kizz Bluntstrike <Macecrafter>
-    ["Kizz Bluntstrike <Macecrafter>"] = {
+    -- Kizz Bluntstrike
+    ["Kizz Bluntstrike"] = {
         npcId = 2840,
         level = {42, 42},
         zone = "Stranglethorn Vale",
@@ -12277,8 +12277,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kizzak Sparks <Holiday Fireworks Vendor>
-    ["Kizzak Sparks <Holiday Fireworks Vendor>"] = {
+    -- Kizzak Sparks
+    ["Kizzak Sparks"] = {
         npcId = 8122,
         level = {24, 24},
         zone = "Orgrimmar",
@@ -12296,8 +12296,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Knaz Blunderflame <Engineering Supplies>
-    ["Knaz Blunderflame <Engineering Supplies>"] = {
+    -- Knaz Blunderflame
+    ["Knaz Blunderflame"] = {
         npcId = 8679,
         level = {42, 42},
         zone = "Stranglethorn Vale",
@@ -12322,8 +12322,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kor'geld <Alchemy Supplies>
-    ["Kor'geld <Alchemy Supplies>"] = {
+    -- Kor'geld
+    ["Kor'geld"] = {
         npcId = 3348,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -12337,8 +12337,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kor'jus <Mushroom Vendor>
-    ["Kor'jus <Mushroom Vendor>"] = {
+    -- Kor'jus
+    ["Kor'jus"] = {
         npcId = 3329,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -12352,8 +12352,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Korfax, Champion of the Light <Brotherhood of the Light>
-    ["Korfax, Champion of the Light <Brotherhood of the Light>"] = {
+    -- Korfax, Champion of the Light
+    ["Korfax, Champion of the Light"] = {
         npcId = 16112,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -12373,8 +12373,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Koru <Mace & Staves Vendor>
-    ["Koru <Mace & Staves Vendor>"] = {
+    -- Koru
+    ["Koru"] = {
         npcId = 3360,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -12391,8 +12391,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kosco Copperpinch <Smokywood Pastures>
-    ["Kosco Copperpinch <Smokywood Pastures>"] = {
+    -- Kosco Copperpinch
+    ["Kosco Copperpinch"] = {
         npcId = 15125,
         level = {30, 30},
         zone = "Arathi Highlands",
@@ -12416,8 +12416,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Krak <Armorer>
-    ["Krak <Armorer>"] = {
+    -- Krak
+    ["Krak"] = {
         npcId = 4883,
         level = {43, 43},
         zone = "Dustwallow Marsh",
@@ -12431,8 +12431,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Krakk <Superior Armorer>
-    ["Krakk <Superior Armorer>"] = {
+    -- Krakk
+    ["Krakk"] = {
         npcId = 1381,
         level = {40, 40},
         zone = "Stranglethorn Vale",
@@ -12449,8 +12449,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kreg Bilmn <General Supplies>
-    ["Kreg Bilmn <General Supplies>"] = {
+    -- Kreg Bilmn
+    ["Kreg Bilmn"] = {
         npcId = 1691,
         level = {10, 10},
         zone = "Dun Morogh",
@@ -12470,8 +12470,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kriggon Talsone <Fisherman>
-    ["Kriggon Talsone <Fisherman>"] = {
+    -- Kriggon Talsone
+    ["Kriggon Talsone"] = {
         npcId = 4305,
         level = {25, 25},
         zone = "Westfall",
@@ -12489,8 +12489,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Krinkle Goodsteel <Blacksmithing Supplies>
-    ["Krinkle Goodsteel <Blacksmithing Supplies>"] = {
+    -- Krinkle Goodsteel
+    ["Krinkle Goodsteel"] = {
         npcId = 5411,
         level = {40, 40},
         zone = "Tanaris",
@@ -12506,8 +12506,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kris Legace <Freewheeling Tradeswoman>
-    ["Kris Legace <Freewheeling Tradeswoman>"] = {
+    -- Kris Legace
+    ["Kris Legace"] = {
         npcId = 3536,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
@@ -12528,8 +12528,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Krond <Butcher>
-    ["Krond <Butcher>"] = {
+    -- Krond
+    ["Krond"] = {
         npcId = 5870,
         level = {27, 27},
         zone = "Stonetalon Mountains",
@@ -12543,8 +12543,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kulwia <Trade Supplies>
-    ["Kulwia <Trade Supplies>"] = {
+    -- Kulwia
+    ["Kulwia"] = {
         npcId = 12043,
         level = {32, 32},
         zone = "Stonetalon Mountains",
@@ -12571,8 +12571,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kuna Thunderhorn <Bowyer & Fletching Goods>
-    ["Kuna Thunderhorn <Bowyer & Fletching Goods>"] = {
+    -- Kuna Thunderhorn
+    ["Kuna Thunderhorn"] = {
         npcId = 3015,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -12591,8 +12591,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kurdrum Barleybeard <Reagents & Poisons>
-    ["Kurdrum Barleybeard <Reagents & Poisons>"] = {
+    -- Kurdrum Barleybeard
+    ["Kurdrum Barleybeard"] = {
         npcId = 5139,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -12629,8 +12629,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kurgul <Demon Trainer>
-    ["Kurgul <Demon Trainer>"] = {
+    -- Kurgul
+    ["Kurgul"] = {
         npcId = 5815,
         level = {45, 45},
         zone = "Orgrimmar",
@@ -12697,8 +12697,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kurll <Food & Drink>
-    ["Kurll <Food & Drink>"] = {
+    -- Kurll
+    ["Kurll"] = {
         npcId = 3621,
         level = {50, 50},
         zone = "Azshara",
@@ -12719,8 +12719,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kurm Stonehoof <Mining Supplier>
-    ["Kurm Stonehoof <Mining Supplier>"] = {
+    -- Kurm Stonehoof
+    ["Kurm Stonehoof"] = {
         npcId = 3002,
         level = {40, 40},
         zone = "Thunder Bluff",
@@ -12732,8 +12732,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kurran Steele <Cloth & Leather Armor Merchant>
-    ["Kurran Steele <Cloth & Leather Armor Merchant>"] = {
+    -- Kurran Steele
+    ["Kurran Steele"] = {
         npcId = 74,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -12753,8 +12753,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kuruk <General Goods Vendor>
-    ["Kuruk <General Goods Vendor>"] = {
+    -- Kuruk
+    ["Kuruk"] = {
         npcId = 8362,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -12793,8 +12793,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kyndri <Baker>
-    ["Kyndri <Baker>"] = {
+    -- Kyndri
+    ["Kyndri"] = {
         npcId = 4190,
         level = {13, 13},
         zone = "Darkshore",
@@ -12814,8 +12814,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kyra Boucher <Reagent Vendor>
-    ["Kyra Boucher <Reagent Vendor>"] = {
+    -- Kyra Boucher
+    ["Kyra Boucher"] = {
         npcId = 1275,
         level = {30, 30},
         zone = "Stormwind City",
@@ -12842,8 +12842,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kyrai <Poison Vendor>
-    ["Kyrai <Poison Vendor>"] = {
+    -- Kyrai
+    ["Kyrai"] = {
         npcId = 3561,
         level = {30, 30},
         zone = "Darnassus",
@@ -12861,8 +12861,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kzan Thornslash <Weaponsmith>
-    ["Kzan Thornslash <Weaponsmith>"] = {
+    -- Kzan Thornslash
+    ["Kzan Thornslash"] = {
         npcId = 3159,
         level = {34, 34},
         zone = "Durotar",
@@ -12878,8 +12878,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Kzixx <Rare Goods>
-    ["Kzixx <Rare Goods>"] = {
+    -- Kzixx
+    ["Kzixx"] = {
         npcId = 3134,
         level = {25, 25},
         zone = "Duskwood",
@@ -12898,8 +12898,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lady Palanseer <Armor Quartermaster>
-    ["Lady Palanseer <Armor Quartermaster>"] = {
+    -- Lady Palanseer
+    ["Lady Palanseer"] = {
         npcId = 12792,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -13233,8 +13233,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Laer Stepperunner <Food & Drink>
-    ["Laer Stepperunner <Food & Drink>"] = {
+    -- Laer Stepperunner
+    ["Laer Stepperunner"] = {
         npcId = 3689,
         level = {42, 42},
         zone = "Thousand Needles",
@@ -13254,8 +13254,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lah'Mawhani <Trade Supplies>
-    ["Lah'Mawhani <Trade Supplies>"] = {
+    -- Lah'Mawhani
+    ["Lah'Mawhani"] = {
         npcId = 12028,
         level = {30, 30},
         zone = "Desolace",
@@ -13294,8 +13294,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Laird <Fish Vendor>
-    ["Laird <Fish Vendor>"] = {
+    -- Laird
+    ["Laird"] = {
         npcId = 4200,
         level = {14, 14},
         zone = "Darkshore",
@@ -13310,8 +13310,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lamar Veisilli <Fruit Seller>
-    ["Lamar Veisilli <Fruit Seller>"] = {
+    -- Lamar Veisilli
+    ["Lamar Veisilli"] = {
         npcId = 1671,
         level = {25, 25},
         zone = "Redridge Mountains",
@@ -13325,8 +13325,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lana Thunderbrew <Blacksmithing Supplies>
-    ["Lana Thunderbrew <Blacksmithing Supplies>"] = {
+    -- Lana Thunderbrew
+    ["Lana Thunderbrew"] = {
         npcId = 4257,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -13340,8 +13340,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Landria <Bow Merchant>
-    ["Landria <Bow Merchant>"] = {
+    -- Landria
+    ["Landria"] = {
         npcId = 4173,
         level = {30, 30},
         zone = "Darnassus",
@@ -13360,8 +13360,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lara Moore <Leather Armor Merchant>
-    ["Lara Moore <Leather Armor Merchant>"] = {
+    -- Lara Moore
+    ["Lara Moore"] = {
         npcId = 1295,
         level = {30, 30},
         zone = "Stormwind City",
@@ -13387,8 +13387,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lard <Innkeeper>
-    ["Lard <Innkeeper>"] = {
+    -- Lard
+    ["Lard"] = {
         npcId = 14731,
         level = {48, 48},
         zone = "The Hinterlands",
@@ -13411,8 +13411,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lardan <Leatherworking Supplies>
-    ["Lardan <Leatherworking Supplies>"] = {
+    -- Lardan
+    ["Lardan"] = {
         npcId = 3958,
         level = {25, 25},
         zone = "Ashenvale",
@@ -13437,8 +13437,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Larhka <Beverage Merchant>
-    ["Larhka <Beverage Merchant>"] = {
+    -- Larhka
+    ["Larhka"] = {
         npcId = 5871,
         level = {18, 18},
         zone = "The Barrens",
@@ -13452,8 +13452,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lauren Newcomb <Light Armor Merchant>
-    ["Lauren Newcomb <Light Armor Merchant>"] = {
+    -- Lauren Newcomb
+    ["Lauren Newcomb"] = {
         npcId = 4558,
         level = {30, 30},
         zone = "Undercity",
@@ -13500,8 +13500,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lelanai <Saber Handler>
-    ["Lelanai <Saber Handler>"] = {
+    -- Lelanai
+    ["Lelanai"] = {
         npcId = 4730,
         level = {35, 35},
         zone = "Darnassus",
@@ -13515,8 +13515,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Leo Sarn <Enchanting Supplies>
-    ["Leo Sarn <Enchanting Supplies>"] = {
+    -- Leo Sarn
+    ["Leo Sarn"] = {
         npcId = 5758,
         level = {18, 18},
         zone = "Silverpine Forest",
@@ -13535,8 +13535,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Leonard Porter <Leatherworking Supplies>
-    ["Leonard Porter <Leatherworking Supplies>"] = {
+    -- Leonard Porter
+    ["Leonard Porter"] = {
         npcId = 12942,
         level = {55, 55},
         zone = "Western Plaguelands",
@@ -13562,8 +13562,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Leonid Barthalomew the Revered <The Argent Dawn>
-    ["Leonid Barthalomew the Revered <The Argent Dawn>"] = {
+    -- Leonid Barthalomew the Revered
+    ["Leonid Barthalomew the Revered"] = {
         npcId = 11036,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -13763,8 +13763,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lhara <Darkmoon Faire Exotic Goods>
-    ["Lhara <Darkmoon Faire Exotic Goods>"] = {
+    -- Lhara
+    ["Lhara"] = {
         npcId = 14846,
         level = {35, 35},
         zone = "Elwynn Forest",
@@ -13812,8 +13812,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lieutenant Jackspring <Reagent Vendor>
-    ["Lieutenant Jackspring <Reagent Vendor>"] = {
+    -- Lieutenant Jackspring
+    ["Lieutenant Jackspring"] = {
         npcId = 12784,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -13840,8 +13840,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lieutenant Karter <Mount Vendor>
-    ["Lieutenant Karter <Mount Vendor>"] = {
+    -- Lieutenant Karter
+    ["Lieutenant Karter"] = {
         npcId = 12783,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -13853,8 +13853,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lil Timmy <Boy with kittens>
-    ["Lil Timmy <Boy with kittens>"] = {
+    -- Lil Timmy
+    ["Lil Timmy"] = {
         npcId = 8666,
         level = {5, 5},
         zone = "Stormwind City",
@@ -13863,8 +13863,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lillian Singh <Holiday Fireworks Vendor>
-    ["Lillian Singh <Holiday Fireworks Vendor>"] = {
+    -- Lillian Singh
+    ["Lillian Singh"] = {
         npcId = 8118,
         level = {30, 30},
         zone = "Stormwind City",
@@ -13882,8 +13882,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lilly <Enchanting Supplies>
-    ["Lilly <Enchanting Supplies>"] = {
+    -- Lilly
+    ["Lilly"] = {
         npcId = 5757,
         level = {19, 19},
         zone = "Silverpine Forest",
@@ -13902,8 +13902,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lina Stover <Bow & Gun Merchant>
-    ["Lina Stover <Bow & Gun Merchant>"] = {
+    -- Lina Stover
+    ["Lina Stover"] = {
         npcId = 1297,
         level = {30, 30},
         zone = "Stormwind City",
@@ -13931,8 +13931,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lindea Rabonne <Tackle and Bait>
-    ["Lindea Rabonne <Tackle and Bait>"] = {
+    -- Lindea Rabonne
+    ["Lindea Rabonne"] = {
         npcId = 2383,
         level = {29, 29},
         zone = "Hillsbrad Foothills",
@@ -13949,8 +13949,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lindsay Ashlock <General Supplies>
-    ["Lindsay Ashlock <General Supplies>"] = {
+    -- Lindsay Ashlock
+    ["Lindsay Ashlock"] = {
         npcId = 791,
         level = {20, 20},
         zone = "Redridge Mountains",
@@ -13986,8 +13986,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lisbeth Schneider <Clothier>
-    ["Lisbeth Schneider <Clothier>"] = {
+    -- Lisbeth Schneider
+    ["Lisbeth Schneider"] = {
         npcId = 1299,
         level = {30, 30},
         zone = "Stormwind City",
@@ -14001,8 +14001,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lissyphus Finespindle <Light Armor Merchant>
-    ["Lissyphus Finespindle <Light Armor Merchant>"] = {
+    -- Lissyphus Finespindle
+    ["Lissyphus Finespindle"] = {
         npcId = 5129,
         level = {30, 30},
         zone = "Ironforge",
@@ -14031,8 +14031,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lizbeth Cromwell <Fishing Supplier>
-    ["Lizbeth Cromwell <Fishing Supplier>"] = {
+    -- Lizbeth Cromwell
+    ["Lizbeth Cromwell"] = {
         npcId = 4574,
         level = {30, 30},
         zone = "Undercity",
@@ -14050,8 +14050,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lizzarik <Weapon Dealer>
-    ["Lizzarik <Weapon Dealer>"] = {
+    -- Lizzarik
+    ["Lizzarik"] = {
         npcId = 3658,
         level = {19, 19},
         zone = "The Barrens",
@@ -14073,8 +14073,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Llana <Reagent Supplies>
-    ["Llana <Reagent Supplies>"] = {
+    -- Llana
+    ["Llana"] = {
         npcId = 3970,
         level = {25, 25},
         zone = "Ashenvale",
@@ -14101,8 +14101,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Logannas <Alchemy Supplies>
-    ["Logannas <Alchemy Supplies>"] = {
+    -- Logannas
+    ["Logannas"] = {
         npcId = 8157,
         level = {52, 52},
         zone = "Feralas",
@@ -14118,8 +14118,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lohgan Eva <Tailoring Supplies>
-    ["Lohgan Eva <Tailoring Supplies>"] = {
+    -- Lohgan Eva
+    ["Lohgan Eva"] = {
         npcId = 1672,
         level = {5, 5},
         zone = "Duskwood",
@@ -14142,8 +14142,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lokhtos Darkbargainer <The Thorium Brotherhood>
-    ["Lokhtos Darkbargainer <The Thorium Brotherhood>"] = {
+    -- Lokhtos Darkbargainer
+    ["Lokhtos Darkbargainer"] = {
         npcId = 12944,
         level = {60, 60},
         zone = "Blackrock Depths",
@@ -14222,8 +14222,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Loorana <Food & Drink>
-    ["Loorana <Food & Drink>"] = {
+    -- Loorana
+    ["Loorana"] = {
         npcId = 8143,
         level = {49, 49},
         zone = "Feralas",
@@ -14243,8 +14243,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lorelae Wintersong <Trade Supplies>
-    ["Lorelae Wintersong <Trade Supplies>"] = {
+    -- Lorelae Wintersong
+    ["Lorelae Wintersong"] = {
         npcId = 12022,
         level = {51, 51},
         zone = "Moonglade",
@@ -14285,8 +14285,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Loslor Rudge <Engineering Supplies>
-    ["Loslor Rudge <Engineering Supplies>"] = {
+    -- Loslor Rudge
+    ["Loslor Rudge"] = {
         npcId = 1694,
         level = {10, 10},
         zone = "Dun Morogh",
@@ -14320,8 +14320,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Louis Warren <Weapons Merchant>
-    ["Louis Warren <Weapons Merchant>"] = {
+    -- Louis Warren
+    ["Louis Warren"] = {
         npcId = 4557,
         level = {30, 30},
         zone = "Undercity",
@@ -14345,8 +14345,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lucille Castleton <Robe Vendor>
-    ["Lucille Castleton <Robe Vendor>"] = {
+    -- Lucille Castleton
+    ["Lucille Castleton"] = {
         npcId = 4580,
         level = {30, 30},
         zone = "Undercity",
@@ -14378,8 +14378,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lunnix Sprocketslip <Mining Supplies>
-    ["Lunnix Sprocketslip <Mining Supplies>"] = {
+    -- Lunnix Sprocketslip
+    ["Lunnix Sprocketslip"] = {
         npcId = 11186,
         level = {54, 54},
         zone = "Winterspring",
@@ -14391,8 +14391,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lyesa Steelbrow <Guild Tabard Vendor>
-    ["Lyesa Steelbrow <Guild Tabard Vendor>"] = {
+    -- Lyesa Steelbrow
+    ["Lyesa Steelbrow"] = {
         npcId = 5049,
         level = {25, 25},
         zone = "Ironforge",
@@ -14401,8 +14401,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lyrai <General Supplies>
-    ["Lyrai <General Supplies>"] = {
+    -- Lyrai
+    ["Lyrai"] = {
         npcId = 3587,
         level = {9, 9},
         zone = "Teldrassil",
@@ -14416,8 +14416,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Lyranne Feathersong <Food & Drink>
-    ["Lyranne Feathersong <Food & Drink>"] = {
+    -- Lyranne Feathersong
+    ["Lyranne Feathersong"] = {
         npcId = 2303,
         level = {56, 56},
         zone = "Winterspring",
@@ -14440,8 +14440,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mabel Solaj <General Goods Vendor>
-    ["Mabel Solaj <General Goods Vendor>"] = {
+    -- Mabel Solaj
+    ["Mabel Solaj"] = {
         npcId = 227,
         level = {26, 26},
         zone = "Duskwood",
@@ -14464,8 +14464,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Macey Jinglepocket <Smokywood Pastures>
-    ["Macey Jinglepocket <Smokywood Pastures>"] = {
+    -- Macey Jinglepocket
+    ["Macey Jinglepocket"] = {
         npcId = 13434,
         level = {30, 30},
         zone = "Ironforge",
@@ -14480,8 +14480,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Maeva Snowbraid <Robe Merchant>
-    ["Maeva Snowbraid <Robe Merchant>"] = {
+    -- Maeva Snowbraid
+    ["Maeva Snowbraid"] = {
         npcId = 5156,
         level = {30, 30},
         zone = "Ironforge",
@@ -14496,8 +14496,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Magenius <Reagents Vendor>
-    ["Magenius <Reagents Vendor>"] = {
+    -- Magenius
+    ["Magenius"] = {
         npcId = 3351,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -14550,8 +14550,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mahnott Roughwound <Weaponsmith>
-    ["Mahnott Roughwound <Weaponsmith>"] = {
+    -- Mahnott Roughwound
+    ["Mahnott Roughwound"] = {
         npcId = 3077,
         level = {11, 11},
         zone = "Mulgore",
@@ -14567,8 +14567,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mahu <Leatherworking & Tailoring Supplies>
-    ["Mahu <Leatherworking & Tailoring Supplies>"] = {
+    -- Mahu
+    ["Mahu"] = {
         npcId = 3005,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -14597,8 +14597,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mai'Lahii <Fishing Supplies>
-    ["Mai'Lahii <Fishing Supplies>"] = {
+    -- Mai'Lahii
+    ["Mai'Lahii"] = {
         npcId = 12031,
         level = {30, 30},
         zone = "Desolace",
@@ -14612,8 +14612,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Malgin Barleybrew <Bael'dun Morale Officer>
-    ["Malgin Barleybrew <Bael'dun Morale Officer>"] = {
+    -- Malgin Barleybrew
+    ["Malgin Barleybrew"] = {
         npcId = 5848,
         level = {25, 25},
         zone = "The Barrens",
@@ -14679,8 +14679,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Malissa <Poison Supplier>
-    ["Malissa <Poison Supplier>"] = {
+    -- Malissa
+    ["Malissa"] = {
         npcId = 3135,
         level = {24, 24},
         zone = "Duskwood",
@@ -14698,8 +14698,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Maliynn <Food & Drink Vendor>
-    ["Maliynn <Food & Drink Vendor>"] = {
+    -- Maliynn
+    ["Maliynn"] = {
         npcId = 3961,
         level = {19, 19},
         zone = "Ashenvale",
@@ -14727,8 +14727,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mallen Swain <Tailoring Supplies>
-    ["Mallen Swain <Tailoring Supplies>"] = {
+    -- Mallen Swain
+    ["Mallen Swain"] = {
         npcId = 2394,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
@@ -14753,8 +14753,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Malygen <General Goods>
-    ["Malygen <General Goods>"] = {
+    -- Malygen
+    ["Malygen"] = {
         npcId = 2803,
         level = {55, 55},
         zone = "Felwood",
@@ -14784,8 +14784,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mangorn Flinthammer <Heavy Armor Merchant>
-    ["Mangorn Flinthammer <Heavy Armor Merchant>"] = {
+    -- Mangorn Flinthammer
+    ["Mangorn Flinthammer"] = {
         npcId = 5107,
         level = {30, 30},
         zone = "Ironforge",
@@ -14801,8 +14801,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mani Winterhoof <Alchemy Supplies>
-    ["Mani Winterhoof <Alchemy Supplies>"] = {
+    -- Mani Winterhoof
+    ["Mani Winterhoof"] = {
         npcId = 3010,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -14814,8 +14814,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Marda Weller <Weapons Merchant>
-    ["Marda Weller <Weapons Merchant>"] = {
+    -- Marda Weller
+    ["Marda Weller"] = {
         npcId = 1287,
         level = {30, 30},
         zone = "Stormwind City",
@@ -14856,8 +14856,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mardrack Greenwell <Food & Drink>
-    ["Mardrack Greenwell <Food & Drink>"] = {
+    -- Mardrack Greenwell
+    ["Mardrack Greenwell"] = {
         npcId = 7941,
         level = {54, 54},
         zone = "Feralas",
@@ -14885,8 +14885,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Maria Lumere <Alchemy Supplies>
-    ["Maria Lumere <Alchemy Supplies>"] = {
+    -- Maria Lumere
+    ["Maria Lumere"] = {
         npcId = 1313,
         level = {30, 30},
         zone = "Stormwind City",
@@ -14907,8 +14907,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Marie Holdston <Weaponsmith>
-    ["Marie Holdston <Weaponsmith>"] = {
+    -- Marie Holdston
+    ["Marie Holdston"] = {
         npcId = 4888,
         level = {37, 37},
         zone = "Dustwallow Marsh",
@@ -14936,8 +14936,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Marjak Keenblade <Weaponsmith>
-    ["Marjak Keenblade <Weaponsmith>"] = {
+    -- Marjak Keenblade
+    ["Marjak Keenblade"] = {
         npcId = 3073,
         level = {9, 9},
         zone = "Mulgore",
@@ -14953,8 +14953,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Martha Strain <Demon Trainer>
-    ["Martha Strain <Demon Trainer>"] = {
+    -- Martha Strain
+    ["Martha Strain"] = {
         npcId = 5753,
         level = {20, 20},
         zone = "Undercity",
@@ -15021,8 +15021,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Martine Tramblay <Fishing Supplies>
-    ["Martine Tramblay <Fishing Supplies>"] = {
+    -- Martine Tramblay
+    ["Martine Tramblay"] = {
         npcId = 3550,
         level = {15, 15},
         zone = "Tirisfal Glades",
@@ -15038,8 +15038,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Masat T'andr <Superior Leatherworker>
-    ["Masat T'andr <Superior Leatherworker>"] = {
+    -- Masat T'andr
+    ["Masat T'andr"] = {
         npcId = 11874,
         level = {44, 44},
         zone = "Swamp of Sorrows",
@@ -15067,8 +15067,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Master Sergeant Biggins <Officer Accessories Quartermaster>
-    ["Master Sergeant Biggins <Officer Accessories Quartermaster>"] = {
+    -- Master Sergeant Biggins
+    ["Master Sergeant Biggins"] = {
         npcId = 12781,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -15080,8 +15080,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Master Smith Burninate <The Thorium Brotherhood>
-    ["Master Smith Burninate <The Thorium Brotherhood>"] = {
+    -- Master Smith Burninate
+    ["Master Smith Burninate"] = {
         npcId = 14624,
         level = {52, 52},
         zone = "Searing Gorge",
@@ -15123,8 +15123,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mataus the Wrathcaster <The Scarlet Crusade>
-    ["Mataus the Wrathcaster <The Scarlet Crusade>"] = {
+    -- Mataus the Wrathcaster
+    ["Mataus the Wrathcaster"] = {
         npcId = 16133,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -15139,8 +15139,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mathrengyl Bearwalker <Druid Trainer>
-    ["Mathrengyl Bearwalker <Druid Trainer>"] = {
+    -- Mathrengyl Bearwalker
+    ["Mathrengyl Bearwalker"] = {
         npcId = 4217,
         level = {60, 60},
         zone = "Darnassus",
@@ -15328,8 +15328,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mavralyn <Leather Armor & Leatherworking Supplies>
-    ["Mavralyn <Leather Armor & Leatherworking Supplies>"] = {
+    -- Mavralyn
+    ["Mavralyn"] = {
         npcId = 4186,
         level = {18, 18},
         zone = "Darkshore",
@@ -15345,8 +15345,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Maxton Strang <Mail Armor Merchant>
-    ["Maxton Strang <Mail Armor Merchant>"] = {
+    -- Maxton Strang
+    ["Maxton Strang"] = {
         npcId = 1322,
         level = {40, 40},
         zone = "Desolace",
@@ -15363,8 +15363,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mayda Thane <Cobbler>
-    ["Mayda Thane <Cobbler>"] = {
+    -- Mayda Thane
+    ["Mayda Thane"] = {
         npcId = 1339,
         level = {30, 30},
         zone = "Stormwind City",
@@ -15378,8 +15378,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mazk Snipeshot <Engineering Supplies>
-    ["Mazk Snipeshot <Engineering Supplies>"] = {
+    -- Mazk Snipeshot
+    ["Mazk Snipeshot"] = {
         npcId = 2685,
         level = {36, 36},
         zone = "Stranglethorn Vale",
@@ -15495,8 +15495,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Melea <Mail Armor Merchant>
-    ["Melea <Mail Armor Merchant>"] = {
+    -- Melea
+    ["Melea"] = {
         npcId = 4177,
         level = {30, 30},
         zone = "Darnassus",
@@ -15559,8 +15559,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Meliri <Weaponsmith>
-    ["Meliri <Weaponsmith>"] = {
+    -- Meliri
+    ["Meliri"] = {
         npcId = 12024,
         level = {51, 51},
         zone = "Moonglade",
@@ -15576,8 +15576,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Merelyssa <Blade Merchant>
-    ["Merelyssa <Blade Merchant>"] = {
+    -- Merelyssa
+    ["Merelyssa"] = {
         npcId = 4171,
         level = {30, 30},
         zone = "Darnassus",
@@ -15598,8 +15598,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Meri Ironweave <Armorer & Shieldcrafter>
-    ["Meri Ironweave <Armorer & Shieldcrafter>"] = {
+    -- Meri Ironweave
+    ["Meri Ironweave"] = {
         npcId = 3613,
         level = {19, 19},
         zone = "Teldrassil",
@@ -15615,8 +15615,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Merideth Carlson <Horse Breeder>
-    ["Merideth Carlson <Horse Breeder>"] = {
+    -- Merideth Carlson
+    ["Merideth Carlson"] = {
         npcId = 2357,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
@@ -15630,8 +15630,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Merill Pleasance <Tabard Vendor>
-    ["Merill Pleasance <Tabard Vendor>"] = {
+    -- Merill Pleasance
+    ["Merill Pleasance"] = {
         npcId = 5190,
         level = {25, 25},
         zone = "Undercity",
@@ -15640,8 +15640,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Micha Yance <Trade Goods>
-    ["Micha Yance <Trade Goods>"] = {
+    -- Micha Yance
+    ["Micha Yance"] = {
         npcId = 2381,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
@@ -15676,8 +15676,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mike Miller <Bread Merchant>
-    ["Mike Miller <Bread Merchant>"] = {
+    -- Mike Miller
+    ["Mike Miller"] = {
         npcId = 1670,
         level = {20, 20},
         zone = "Westfall",
@@ -15691,8 +15691,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Miles Welsh <Priest Trainer>
-    ["Miles Welsh <Priest Trainer>"] = {
+    -- Miles Welsh
+    ["Miles Welsh"] = {
         npcId = 3044,
         level = {40, 40},
         zone = "Thunder Bluff",
@@ -15859,8 +15859,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Milli Featherwhistle <Mechanostrider Merchant>
-    ["Milli Featherwhistle <Mechanostrider Merchant>"] = {
+    -- Milli Featherwhistle
+    ["Milli Featherwhistle"] = {
         npcId = 7955,
         level = {50, 50},
         zone = "Dun Morogh",
@@ -15875,8 +15875,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Millie Gregorian <Tailoring Supplies>
-    ["Millie Gregorian <Tailoring Supplies>"] = {
+    -- Millie Gregorian
+    ["Millie Gregorian"] = {
         npcId = 4577,
         level = {30, 30},
         zone = "Undercity",
@@ -15904,8 +15904,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Milton Sheaf <Librarian>
-    ["Milton Sheaf <Librarian>"] = {
+    -- Milton Sheaf
+    ["Milton Sheaf"] = {
         npcId = 1440,
         level = {15, 15},
         zone = "Stormwind City",
@@ -15934,8 +15934,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mirelle Tremayne <Heavy Armor Merchant>
-    ["Mirelle Tremayne <Heavy Armor Merchant>"] = {
+    -- Mirelle Tremayne
+    ["Mirelle Tremayne"] = {
         npcId = 5819,
         level = {30, 30},
         zone = "Undercity",
@@ -15994,8 +15994,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mirvyna Jinglepocket <Smokywood Pastures>
-    ["Mirvyna Jinglepocket <Smokywood Pastures>"] = {
+    -- Mirvyna Jinglepocket
+    ["Mirvyna Jinglepocket"] = {
         npcId = 14961,
         level = {30, 30},
         zone = "Alterac Mountains",
@@ -16007,8 +16007,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mishta <General Trade Goods Vendor>
-    ["Mishta <General Trade Goods Vendor>"] = {
+    -- Mishta
+    ["Mishta"] = {
         npcId = 15179,
         level = {58, 58},
         zone = "Silithus",
@@ -16057,8 +16057,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Montarr <Lorekeeper>
-    ["Montarr <Lorekeeper>"] = {
+    -- Montarr
+    ["Montarr"] = {
         npcId = 4878,
         level = {36, 36},
         zone = "Thousand Needles",
@@ -16099,8 +16099,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Moodan Sungrain <Baker>
-    ["Moodan Sungrain <Baker>"] = {
+    -- Moodan Sungrain
+    ["Moodan Sungrain"] = {
         npcId = 3883,
         level = {11, 11},
         zone = "Mulgore",
@@ -16181,8 +16181,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Moorane Hearthgrain <Baker>
-    ["Moorane Hearthgrain <Baker>"] = {
+    -- Moorane Hearthgrain
+    ["Moorane Hearthgrain"] = {
         npcId = 3480,
         level = {18, 18},
         zone = "The Barrens",
@@ -16196,8 +16196,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Moorat Longstride <General Goods>
-    ["Moorat Longstride <General Goods>"] = {
+    -- Moorat Longstride
+    ["Moorat Longstride"] = {
         npcId = 3076,
         level = {12, 12},
         zone = "Mulgore",
@@ -16217,8 +16217,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Morg Gnarltree <Armorer>
-    ["Morg Gnarltree <Armorer>"] = {
+    -- Morg Gnarltree
+    ["Morg Gnarltree"] = {
         npcId = 226,
         level = {30, 30},
         zone = "Duskwood",
@@ -16239,8 +16239,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Morgum <Leather Armor Merchant>
-    ["Morgum <Leather Armor Merchant>"] = {
+    -- Morgum
+    ["Morgum"] = {
         npcId = 3321,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -16266,8 +16266,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Morhan Coppertongue <Metalsmith>
-    ["Morhan Coppertongue <Metalsmith>"] = {
+    -- Morhan Coppertongue
+    ["Morhan Coppertongue"] = {
         npcId = 167,
         level = {13, 13},
         zone = "Loch Modan",
@@ -16283,8 +16283,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Morley Bates <Fungus Vendor>
-    ["Morley Bates <Fungus Vendor>"] = {
+    -- Morley Bates
+    ["Morley Bates"] = {
         npcId = 4571,
         level = {30, 30},
         zone = "Undercity",
@@ -16304,8 +16304,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Morley Eberlein <Clothier>
-    ["Morley Eberlein <Clothier>"] = {
+    -- Morley Eberlein
+    ["Morley Eberlein"] = {
         npcId = 959,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -16319,8 +16319,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mrs. Winters <General Supplies>
-    ["Mrs. Winters <General Supplies>"] = {
+    -- Mrs. Winters
+    ["Mrs. Winters"] = {
         npcId = 2134,
         level = {10, 10},
         zone = "Tirisfal Glades",
@@ -16340,8 +16340,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mu'uta <Bowyer>
-    ["Mu'uta <Bowyer>"] = {
+    -- Mu'uta
+    ["Mu'uta"] = {
         npcId = 9555,
         level = {35, 35},
         zone = "Arathi Highlands",
@@ -16358,8 +16358,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Muragus <Staff Merchant>
-    ["Muragus <Staff Merchant>"] = {
+    -- Muragus
+    ["Muragus"] = {
         npcId = 3330,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -16369,8 +16369,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Murndan Derth <Gunsmith>
-    ["Murndan Derth <Gunsmith>"] = {
+    -- Murndan Derth
+    ["Murndan Derth"] = {
         npcId = 1461,
         level = {25, 25},
         zone = "Wetlands",
@@ -16384,8 +16384,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Muuran <Superior Macecrafter>
-    ["Muuran <Superior Macecrafter>"] = {
+    -- Muuran
+    ["Muuran"] = {
         npcId = 8878,
         level = {40, 40},
         zone = "Desolace",
@@ -16400,8 +16400,8 @@ DB.VendorItems = {
         }
     },
 
-    -- My'lanna <Food & Drink Merchant>
-    ["My'lanna <Food & Drink Merchant>"] = {
+    -- My'lanna
+    ["My'lanna"] = {
         npcId = 12026,
         level = {51, 51},
         zone = "Moonglade",
@@ -16423,8 +16423,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mydrannul <General Goods Vendor>
-    ["Mydrannul <General Goods Vendor>"] = {
+    -- Mydrannul
+    ["Mydrannul"] = {
         npcId = 4241,
         level = {30, 30},
         zone = "Darnassus",
@@ -16447,8 +16447,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mylini Frostmoon <Weapon Merchant>
-    ["Mylini Frostmoon <Weapon Merchant>"] = {
+    -- Mylini Frostmoon
+    ["Mylini Frostmoon"] = {
         npcId = 15315,
         level = {55, 55},
         zone = "Felwood",
@@ -16466,8 +16466,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Myra Tyrngaarde <Bread Vendor>
-    ["Myra Tyrngaarde <Bread Vendor>"] = {
+    -- Myra Tyrngaarde
+    ["Myra Tyrngaarde"] = {
         npcId = 5109,
         level = {30, 30},
         zone = "Ironforge",
@@ -16481,8 +16481,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mystic Yayo'jin <Reagent Vendor>
-    ["Mystic Yayo'jin <Reagent Vendor>"] = {
+    -- Mystic Yayo'jin
+    ["Mystic Yayo'jin"] = {
         npcId = 14739,
         level = {48, 48},
         zone = "The Hinterlands",
@@ -16509,8 +16509,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mythidan <Mace & Staff Merchant>
-    ["Mythidan <Mace & Staff Merchant>"] = {
+    -- Mythidan
+    ["Mythidan"] = {
         npcId = 4233,
         level = {30, 30},
         zone = "Darnassus",
@@ -16527,8 +16527,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Mythrin'dir <General Trade Supplier>
-    ["Mythrin'dir <General Trade Supplier>"] = {
+    -- Mythrin'dir
+    ["Mythrin'dir"] = {
         npcId = 4229,
         level = {30, 30},
         zone = "Darnassus",
@@ -16571,8 +16571,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Naal Mistrunner <Cooking Supplier>
-    ["Naal Mistrunner <Cooking Supplier>"] = {
+    -- Naal Mistrunner
+    ["Naal Mistrunner"] = {
         npcId = 3027,
         level = {40, 40},
         zone = "Thunder Bluff",
@@ -16588,8 +16588,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nadia Vernon <Bowyer>
-    ["Nadia Vernon <Bowyer>"] = {
+    -- Nadia Vernon
+    ["Nadia Vernon"] = {
         npcId = 9553,
         level = {20, 20},
         zone = "Silverpine Forest",
@@ -16604,8 +16604,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Naela Trance <Bowyer>
-    ["Naela Trance <Bowyer>"] = {
+    -- Naela Trance
+    ["Naela Trance"] = {
         npcId = 1459,
         level = {25, 25},
         zone = "Wetlands",
@@ -16620,8 +16620,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Namdo Bizzfizzle <Engineering Supplies>
-    ["Namdo Bizzfizzle <Engineering Supplies>"] = {
+    -- Namdo Bizzfizzle
+    ["Namdo Bizzfizzle"] = {
         npcId = 2683,
         level = {24, 24},
         zone = "Wetlands",
@@ -16646,8 +16646,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nan Mistrunner <Fruit Vendor>
-    ["Nan Mistrunner <Fruit Vendor>"] = {
+    -- Nan Mistrunner
+    ["Nan Mistrunner"] = {
         npcId = 3017,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -16661,8 +16661,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nandar Branson <Alchemy Supplies>
-    ["Nandar Branson <Alchemy Supplies>"] = {
+    -- Nandar Branson
+    ["Nandar Branson"] = {
         npcId = 2380,
         level = {34, 34},
         zone = "Hillsbrad Foothills",
@@ -16677,8 +16677,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nantar <Baker>
-    ["Nantar <Baker>"] = {
+    -- Nantar
+    ["Nantar"] = {
         npcId = 3959,
         level = {21, 21},
         zone = "Ashenvale",
@@ -16698,8 +16698,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Naram Longclaw <Weaponsmith>
-    ["Naram Longclaw <Weaponsmith>"] = {
+    -- Naram Longclaw
+    ["Naram Longclaw"] = {
         npcId = 4183,
         level = {20, 20},
         zone = "Darkshore",
@@ -16715,8 +16715,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nardstrum Copperpinch <Smokywood Pastures>
-    ["Nardstrum Copperpinch <Smokywood Pastures>"] = {
+    -- Nardstrum Copperpinch
+    ["Nardstrum Copperpinch"] = {
         npcId = 13429,
         level = {30, 30},
         zone = "Undercity",
@@ -16733,8 +16733,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nargal Deatheye <Weaponsmith>
-    ["Nargal Deatheye <Weaponsmith>"] = {
+    -- Nargal Deatheye
+    ["Nargal Deatheye"] = {
         npcId = 3479,
         level = {35, 35},
         zone = "The Barrens",
@@ -16752,8 +16752,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nargatt <Food & Drink>
-    ["Nargatt <Food & Drink>"] = {
+    -- Nargatt
+    ["Nargatt"] = {
         npcId = 7485,
         level = {40, 40},
         zone = "Stranglethorn Vale",
@@ -16779,8 +16779,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Narianna <Bowyer>
-    ["Narianna <Bowyer>"] = {
+    -- Narianna
+    ["Narianna"] = {
         npcId = 12029,
         level = {51, 51},
         zone = "Moonglade",
@@ -16800,8 +16800,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Narj Deepslice <Butcher>
-    ["Narj Deepslice <Butcher>"] = {
+    -- Narj Deepslice
+    ["Narj Deepslice"] = {
         npcId = 2814,
         level = {39, 39},
         zone = "Arathi Highlands",
@@ -16816,8 +16816,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Narkk <Pirate Supplies>
-    ["Narkk <Pirate Supplies>"] = {
+    -- Narkk
+    ["Narkk"] = {
         npcId = 2663,
         level = {42, 42},
         zone = "Stranglethorn Vale",
@@ -16828,8 +16828,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Narret Shadowgrove <Trade Supplies>
-    ["Narret Shadowgrove <Trade Supplies>"] = {
+    -- Narret Shadowgrove
+    ["Narret Shadowgrove"] = {
         npcId = 3614,
         level = {16, 16},
         zone = "Teldrassil",
@@ -16861,8 +16861,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nata Dawnstrider <Enchanting Supplies>
-    ["Nata Dawnstrider <Enchanting Supplies>"] = {
+    -- Nata Dawnstrider
+    ["Nata Dawnstrider"] = {
         npcId = 3012,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -16882,8 +16882,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nathaniel Steenwick <Thrown Weapons Merchant>
-    ["Nathaniel Steenwick <Thrown Weapons Merchant>"] = {
+    -- Nathaniel Steenwick
+    ["Nathaniel Steenwick"] = {
         npcId = 4592,
         level = {30, 30},
         zone = "Undercity",
@@ -16901,8 +16901,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Natheril Raincaller <General Goods>
-    ["Natheril Raincaller <General Goods>"] = {
+    -- Natheril Raincaller
+    ["Natheril Raincaller"] = {
         npcId = 2084,
         level = {57, 57},
         zone = "Winterspring",
@@ -16931,8 +16931,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Neal Allen <Engineering & General Goods Supplier>
-    ["Neal Allen <Engineering & General Goods Supplier>"] = {
+    -- Neal Allen
+    ["Neal Allen"] = {
         npcId = 1448,
         level = {20, 20},
         zone = "Wetlands",
@@ -16971,8 +16971,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Neema <Waitress>
-    ["Neema <Waitress>"] = {
+    -- Neema
+    ["Neema"] = {
         npcId = 2364,
         level = {33, 33},
         zone = "Hillsbrad Foothills",
@@ -16998,8 +16998,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nergal <General Goods Vendor>
-    ["Nergal <General Goods Vendor>"] = {
+    -- Nergal
+    ["Nergal"] = {
         npcId = 12959,
         level = {52, 52},
         zone = "Un'Goro Crater",
@@ -17036,8 +17036,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nerrist <Trade Goods>
-    ["Nerrist <Trade Goods>"] = {
+    -- Nerrist
+    ["Nerrist"] = {
         npcId = 1148,
         level = {40, 40},
         zone = "Stranglethorn Vale",
@@ -17076,8 +17076,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nessa Shadowsong <Fishing Supplies>
-    ["Nessa Shadowsong <Fishing Supplies>"] = {
+    -- Nessa Shadowsong
+    ["Nessa Shadowsong"] = {
         npcId = 10118,
         level = {25, 25},
         zone = "Teldrassil",
@@ -17093,8 +17093,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nicholas Atwood <Gun Merchant>
-    ["Nicholas Atwood <Gun Merchant>"] = {
+    -- Nicholas Atwood
+    ["Nicholas Atwood"] = {
         npcId = 4603,
         level = {30, 30},
         zone = "Undercity",
@@ -17114,8 +17114,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nida Winterhoof <Herbalism Supplier>
-    ["Nida Winterhoof <Herbalism Supplier>"] = {
+    -- Nida Winterhoof
+    ["Nida Winterhoof"] = {
         npcId = 3014,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -17133,8 +17133,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nillen Andemar <Macecrafter>
-    ["Nillen Andemar <Macecrafter>"] = {
+    -- Nillen Andemar
+    ["Nillen Andemar"] = {
         npcId = 222,
         level = {19, 19},
         zone = "Loch Modan",
@@ -17148,8 +17148,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nina Lightbrew <Alchemy Supplies>
-    ["Nina Lightbrew <Alchemy Supplies>"] = {
+    -- Nina Lightbrew
+    ["Nina Lightbrew"] = {
         npcId = 8178,
         level = {49, 49},
         zone = "Blasted Lands",
@@ -17164,8 +17164,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nioma <Leatherworking Supplies>
-    ["Nioma <Leatherworking Supplies>"] = {
+    -- Nioma
+    ["Nioma"] = {
         npcId = 8160,
         level = {50, 50},
         zone = "The Hinterlands",
@@ -17200,8 +17200,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nixx Sprocketspring <Master Goblin Engineer>
-    ["Nixx Sprocketspring <Master Goblin Engineer>"] = {
+    -- Nixx Sprocketspring
+    ["Nixx Sprocketspring"] = {
         npcId = 8126,
         level = {55, 55},
         zone = "Tanaris",
@@ -17219,8 +17219,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nixxrak <Heavy Armor Merchant>
-    ["Nixxrak <Heavy Armor Merchant>"] = {
+    -- Nixxrak
+    ["Nixxrak"] = {
         npcId = 11182,
         level = {54, 54},
         zone = "Winterspring",
@@ -17244,8 +17244,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nixxrax Fillamug <Food and Drink>
-    ["Nixxrax Fillamug <Food and Drink>"] = {
+    -- Nixxrax Fillamug
+    ["Nixxrax Fillamug"] = {
         npcId = 2832,
         level = {38, 38},
         zone = "Stranglethorn Vale",
@@ -17272,8 +17272,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nizzik <Venture Armor Salesman>
-    ["Nizzik <Venture Armor Salesman>"] = {
+    -- Nizzik
+    ["Nizzik"] = {
         npcId = 4085,
         level = {24, 24},
         zone = "Stonetalon Mountains",
@@ -17295,8 +17295,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Nyoma <Cooking Supplies>
-    ["Nyoma <Cooking Supplies>"] = {
+    -- Nyoma
+    ["Nyoma"] = {
         npcId = 4265,
         level = {20, 20},
         zone = "Teldrassil",
@@ -17312,8 +17312,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Officer Areyn <Accessories Quartermaster>
-    ["Officer Areyn <Accessories Quartermaster>"] = {
+    -- Officer Areyn
+    ["Officer Areyn"] = {
         npcId = 12805,
         level = {55, 55},
         zone = "Stormwind City",
@@ -17382,8 +17382,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ogg'marr <Butcher>
-    ["Ogg'marr <Butcher>"] = {
+    -- Ogg'marr
+    ["Ogg'marr"] = {
         npcId = 4879,
         level = {40, 40},
         zone = "Dustwallow Marsh",
@@ -17407,8 +17407,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ogunaro Wolfrunner <Kennel Master>
-    ["Ogunaro Wolfrunner <Kennel Master>"] = {
+    -- Ogunaro Wolfrunner
+    ["Ogunaro Wolfrunner"] = {
         npcId = 3362,
         level = {45, 45},
         zone = "Orgrimmar",
@@ -17422,8 +17422,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ohanko <Two Handed Weapon Merchant>
-    ["Ohanko <Two Handed Weapon Merchant>"] = {
+    -- Ohanko
+    ["Ohanko"] = {
         npcId = 8398,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -17437,8 +17437,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Old Man Heming <Fisherman>
-    ["Old Man Heming <Fisherman>"] = {
+    -- Old Man Heming
+    ["Old Man Heming"] = {
         npcId = 2626,
         level = {43, 43},
         zone = "Stranglethorn Vale",
@@ -17453,8 +17453,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Oliver Dwor <Apprentice Weaponsmith>
-    ["Oliver Dwor <Apprentice Weaponsmith>"] = {
+    -- Oliver Dwor
+    ["Oliver Dwor"] = {
         npcId = 2136,
         level = {13, 13},
         zone = "Tirisfal Glades",
@@ -17470,8 +17470,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ollanus <Light Armor Merchant>
-    ["Ollanus <Light Armor Merchant>"] = {
+    -- Ollanus
+    ["Ollanus"] = {
         npcId = 3317,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -17500,8 +17500,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Olthran Craghelm <Heavy Armor Merchant>
-    ["Olthran Craghelm <Heavy Armor Merchant>"] = {
+    -- Olthran Craghelm
+    ["Olthran Craghelm"] = {
         npcId = 5126,
         level = {30, 30},
         zone = "Ironforge",
@@ -17531,8 +17531,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Olvia <Meat Vendor>
-    ["Olvia <Meat Vendor>"] = {
+    -- Olvia
+    ["Olvia"] = {
         npcId = 3312,
         level = {50, 50},
         zone = "Orgrimmar",
@@ -17580,8 +17580,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Osric Strang <Heavy Armor Merchant>
-    ["Osric Strang <Heavy Armor Merchant>"] = {
+    -- Osric Strang
+    ["Osric Strang"] = {
         npcId = 1323,
         level = {30, 30},
         zone = "Stormwind City",
@@ -17622,8 +17622,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Otho Moji'ko <Cooking Supplier>
-    ["Otho Moji'ko <Cooking Supplier>"] = {
+    -- Otho Moji'ko
+    ["Otho Moji'ko"] = {
         npcId = 14738,
         level = {48, 48},
         zone = "The Hinterlands",
@@ -17637,8 +17637,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ott <Weaponsmith>
-    ["Ott <Weaponsmith>"] = {
+    -- Ott
+    ["Ott"] = {
         npcId = 3539,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
@@ -17661,8 +17661,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Outfitter Eric <Speciality Tailoring Supplies>
-    ["Outfitter Eric <Speciality Tailoring Supplies>"] = {
+    -- Outfitter Eric
+    ["Outfitter Eric"] = {
         npcId = 8681,
         level = {35, 35},
         zone = "Ironforge",
@@ -17690,8 +17690,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Owen Vaughn <Reagent Vendor>
-    ["Owen Vaughn <Reagent Vendor>"] = {
+    -- Owen Vaughn
+    ["Owen Vaughn"] = {
         npcId = 1308,
         level = {30, 30},
         zone = "Stormwind City",
@@ -17718,8 +17718,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Pakwa <Bag Vendor>
-    ["Pakwa <Bag Vendor>"] = {
+    -- Pakwa
+    ["Pakwa"] = {
         npcId = 8364,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -17731,8 +17731,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Patrice Dwyer <Poison Supplies>
-    ["Patrice Dwyer <Poison Supplies>"] = {
+    -- Patrice Dwyer
+    ["Patrice Dwyer"] = {
         npcId = 3551,
         level = {20, 20},
         zone = "Silverpine Forest",
@@ -17750,8 +17750,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Penney Copperpinch <Smokywood Pastures>
-    ["Penney Copperpinch <Smokywood Pastures>"] = {
+    -- Penney Copperpinch
+    ["Penney Copperpinch"] = {
         npcId = 13420,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -17768,8 +17768,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Peter Galen <Master Dragonscale Leatherworker>
-    ["Peter Galen <Master Dragonscale Leatherworker>"] = {
+    -- Peter Galen
+    ["Peter Galen"] = {
         npcId = 7866,
         level = {50, 50},
         zone = "Azshara",
@@ -17781,8 +17781,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Piter Verance <Weaponsmith & Armorer>
-    ["Piter Verance <Weaponsmith & Armorer>"] = {
+    -- Piter Verance
+    ["Piter Verance"] = {
         npcId = 4890,
         level = {41, 41},
         zone = "Dustwallow Marsh",
@@ -17800,8 +17800,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Pithwick <Bag Vendor>
-    ["Pithwick <Bag Vendor>"] = {
+    -- Pithwick
+    ["Pithwick"] = {
         npcId = 5132,
         level = {30, 30},
         zone = "Ironforge",
@@ -17813,8 +17813,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Pizznukle <Leather Armor Merchant>
-    ["Pizznukle <Leather Armor Merchant>"] = {
+    -- Pizznukle
+    ["Pizznukle"] = {
         npcId = 3684,
         level = {33, 33},
         zone = "The Barrens",
@@ -17970,8 +17970,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Poranna Snowbraid <Tailoring Supplies>
-    ["Poranna Snowbraid <Tailoring Supplies>"] = {
+    -- Poranna Snowbraid
+    ["Poranna Snowbraid"] = {
         npcId = 5154,
         level = {30, 30},
         zone = "Ironforge",
@@ -17994,8 +17994,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Pratt McGrubben <Leatherworking Supplies>
-    ["Pratt McGrubben <Leatherworking Supplies>"] = {
+    -- Pratt McGrubben
+    ["Pratt McGrubben"] = {
         npcId = 7852,
         level = {55, 55},
         zone = "Feralas",
@@ -18033,8 +18033,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Professor Thaddeus Paleo <Darkmoon Faire Cards & Exotic Goods>
-    ["Professor Thaddeus Paleo <Darkmoon Faire Cards & Exotic Goods>"] = {
+    -- Professor Thaddeus Paleo
+    ["Professor Thaddeus Paleo"] = {
         npcId = 14847,
         level = {35, 35},
         zone = "Elwynn Forest",
@@ -18155,8 +18155,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Qia <Trade Goods Supplies>
-    ["Qia <Trade Goods Supplies>"] = {
+    -- Qia
+    ["Qia"] = {
         npcId = 11189,
         level = {51, 51},
         zone = "Winterspring",
@@ -18197,8 +18197,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Qixdi Goodstitch <Cloth Armor and Accessories>
-    ["Qixdi Goodstitch <Cloth Armor and Accessories>"] = {
+    -- Qixdi Goodstitch
+    ["Qixdi Goodstitch"] = {
         npcId = 2849,
         level = {44, 44},
         zone = "Stranglethorn Vale",
@@ -18238,8 +18238,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Quartermaster Hicks <Master Weaponsmith>
-    ["Quartermaster Hicks <Master Weaponsmith>"] = {
+    -- Quartermaster Hicks
+    ["Quartermaster Hicks"] = {
         npcId = 1645,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -18255,8 +18255,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Quartermaster Hudson <Armorer & Shieldcrafter>
-    ["Quartermaster Hudson <Armorer & Shieldcrafter>"] = {
+    -- Quartermaster Hudson
+    ["Quartermaster Hudson"] = {
         npcId = 1249,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -18272,8 +18272,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Quartermaster Lewis <Quartermaster>
-    ["Quartermaster Lewis <Quartermaster>"] = {
+    -- Quartermaster Lewis
+    ["Quartermaster Lewis"] = {
         npcId = 491,
         level = {20, 20},
         zone = "Westfall",
@@ -18296,8 +18296,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Quartermaster Miranda Breechlock <The Argent Dawn>
-    ["Quartermaster Miranda Breechlock <The Argent Dawn>"] = {
+    -- Quartermaster Miranda Breechlock
+    ["Quartermaster Miranda Breechlock"] = {
         npcId = 11536,
         level = {58, 58},
         zone = "Eastern Plaguelands",
@@ -18349,8 +18349,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rachelle Gothena <Hallow's End Treats>
-    ["Rachelle Gothena <Hallow's End Treats>"] = {
+    -- Rachelle Gothena
+    ["Rachelle Gothena"] = {
         npcId = 15354,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -18363,8 +18363,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Raena Flinthammer <Light Armor Merchant>
-    ["Raena Flinthammer <Light Armor Merchant>"] = {
+    -- Raena Flinthammer
+    ["Raena Flinthammer"] = {
         npcId = 5108,
         level = {30, 30},
         zone = "Ironforge",
@@ -18387,8 +18387,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Raider Bork <Mount Quartermaster>
-    ["Raider Bork <Mount Quartermaster>"] = {
+    -- Raider Bork
+    ["Raider Bork"] = {
         npcId = 12796,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -18400,8 +18400,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rallic Finn <Bowyer>
-    ["Rallic Finn <Bowyer>"] = {
+    -- Rallic Finn
+    ["Rallic Finn"] = {
         npcId = 1198,
         level = {18, 18},
         zone = "Elwynn Forest",
@@ -18416,8 +18416,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ranik <Trade Supplies>
-    ["Ranik <Trade Supplies>"] = {
+    -- Ranik
+    ["Ranik"] = {
         npcId = 3499,
         level = {22, 22},
         zone = "The Barrens",
@@ -18445,8 +18445,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rann Flamespinner <Tailoring Supplies>
-    ["Rann Flamespinner <Tailoring Supplies>"] = {
+    -- Rann Flamespinner
+    ["Rann Flamespinner"] = {
         npcId = 1474,
         level = {15, 15},
         zone = "Loch Modan",
@@ -18471,8 +18471,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rarc <Armorer & Shieldcrafter>
-    ["Rarc <Armorer & Shieldcrafter>"] = {
+    -- Rarc
+    ["Rarc"] = {
         npcId = 3161,
         level = {10, 10},
         zone = "Durotar",
@@ -18488,8 +18488,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rarck <General Goods>
-    ["Rarck <General Goods>"] = {
+    -- Rarck
+    ["Rarck"] = {
         npcId = 3625,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -18517,8 +18517,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rartar <Alchemy Supplies>
-    ["Rartar <Alchemy Supplies>"] = {
+    -- Rartar
+    ["Rartar"] = {
         npcId = 8177,
         level = {45, 45},
         zone = "Swamp of Sorrows",
@@ -18533,8 +18533,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rayne <Cenarion Circle>
-    ["Rayne <Cenarion Circle>"] = {
+    -- Rayne
+    ["Rayne"] = {
         npcId = 16135,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -18557,8 +18557,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rebecca Laughlin <Tabard Vendor>
-    ["Rebecca Laughlin <Tabard Vendor>"] = {
+    -- Rebecca Laughlin
+    ["Rebecca Laughlin"] = {
         npcId = 5193,
         level = {25, 25},
         zone = "Stormwind City",
@@ -18567,8 +18567,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rekkul <Poison Vendor>
-    ["Rekkul <Poison Vendor>"] = {
+    -- Rekkul
+    ["Rekkul"] = {
         npcId = 3334,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -18586,8 +18586,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rendow <Leather Armor Merchant>
-    ["Rendow <Leather Armor Merchant>"] = {
+    -- Rendow
+    ["Rendow"] = {
         npcId = 1695,
         level = {45, 45},
         zone = "Feralas",
@@ -18607,8 +18607,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Renn'az <Ammunition Vendor>
-    ["Renn'az <Ammunition Vendor>"] = {
+    -- Renn'az
+    ["Renn'az"] = {
         npcId = 17598,
         level = {46, 46},
         zone = "The Hinterlands",
@@ -18621,8 +18621,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rikqiz <Leatherworking Supplies>
-    ["Rikqiz <Leatherworking Supplies>"] = {
+    -- Rikqiz
+    ["Rikqiz"] = {
         npcId = 2699,
         level = {43, 43},
         zone = "Stranglethorn Vale",
@@ -18648,8 +18648,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rimblat Earthshatter <The Earthen Ring>
-    ["Rimblat Earthshatter <The Earthen Ring>"] = {
+    -- Rimblat Earthshatter
+    ["Rimblat Earthshatter"] = {
         npcId = 16134,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -18660,8 +18660,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rin'wosho the Trader <Zandalar Supplies and Repair>
-    ["Rin'wosho the Trader <Zandalar Supplies and Repair>"] = {
+    -- Rin'wosho the Trader
+    ["Rin'wosho the Trader"] = {
         npcId = 14921,
         level = {56, 56},
         zone = "Stranglethorn Vale",
@@ -18678,8 +18678,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rivern Frostwind <Wintersaber Trainers>
-    ["Rivern Frostwind <Wintersaber Trainers>"] = {
+    -- Rivern Frostwind
+    ["Rivern Frostwind"] = {
         npcId = 10618,
         level = {62, 62},
         zone = "Winterspring",
@@ -18688,8 +18688,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Riznek <Drink Vendor>
-    ["Riznek <Drink Vendor>"] = {
+    -- Riznek
+    ["Riznek"] = {
         npcId = 6495,
         level = {35, 35},
         zone = "Thousand Needles",
@@ -18703,8 +18703,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rizz Loosebolt <Engineering Supplies>
-    ["Rizz Loosebolt <Engineering Supplies>"] = {
+    -- Rizz Loosebolt
+    ["Rizz Loosebolt"] = {
         npcId = 2684,
         level = {31, 31},
         zone = "Alterac Mountains",
@@ -18729,8 +18729,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Robert Aebischer <Superior Armorsmith>
-    ["Robert Aebischer <Superior Armorsmith>"] = {
+    -- Robert Aebischer
+    ["Robert Aebischer"] = {
         npcId = 3543,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
@@ -18751,8 +18751,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Roberto Pupellyverbos <Merlot Connoisseur>
-    ["Roberto Pupellyverbos <Merlot Connoisseur>"] = {
+    -- Roberto Pupellyverbos
+    ["Roberto Pupellyverbos"] = {
         npcId = 277,
         level = {30, 30},
         zone = "Stormwind City",
@@ -18766,8 +18766,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rohan the Assassin <The Scarlet Crusade>
-    ["Rohan the Assassin <The Scarlet Crusade>"] = {
+    -- Rohan the Assassin
+    ["Rohan the Assassin"] = {
         npcId = 16131,
         level = {60, 60},
         zone = "Eastern Plaguelands",
@@ -18798,8 +18798,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ronald Burch <Cooking Supplier>
-    ["Ronald Burch <Cooking Supplier>"] = {
+    -- Ronald Burch
+    ["Ronald Burch"] = {
         npcId = 4553,
         level = {30, 30},
         zone = "Undercity",
@@ -18815,8 +18815,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ruppo Zipcoil <Engineering Supplies>
-    ["Ruppo Zipcoil <Engineering Supplies>"] = {
+    -- Ruppo Zipcoil
+    ["Ruppo Zipcoil"] = {
         npcId = 2688,
         level = {52, 52},
         zone = "The Hinterlands",
@@ -18841,8 +18841,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rutherford Twing <Defilers Supply Officer>
-    ["Rutherford Twing <Defilers Supply Officer>"] = {
+    -- Rutherford Twing
+    ["Rutherford Twing"] = {
         npcId = 15126,
         level = {55, 55},
         zone = "Arathi Highlands",
@@ -18865,8 +18865,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Rybrad Coldbank <Weaponsmith>
-    ["Rybrad Coldbank <Weaponsmith>"] = {
+    -- Rybrad Coldbank
+    ["Rybrad Coldbank"] = {
         npcId = 945,
         level = {5, 5},
         zone = "Dun Morogh",
@@ -18882,8 +18882,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Saenorion <Leatherworking Supplies>
-    ["Saenorion <Leatherworking Supplies>"] = {
+    -- Saenorion
+    ["Saenorion"] = {
         npcId = 4225,
         level = {30, 30},
         zone = "Darnassus",
@@ -18909,8 +18909,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Salazar Bloch <Book Dealer>
-    ["Salazar Bloch <Book Dealer>"] = {
+    -- Salazar Bloch
+    ["Salazar Bloch"] = {
         npcId = 4581,
         level = {30, 30},
         zone = "Undercity",
@@ -18930,8 +18930,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Samor Festivus <Shady Dealer>
-    ["Samor Festivus <Shady Dealer>"] = {
+    -- Samor Festivus
+    ["Samor Festivus"] = {
         npcId = 1457,
         level = {25, 25},
         zone = "Wetlands",
@@ -18950,8 +18950,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Samuel Hawke <League of Arathor Supply Officer>
-    ["Samuel Hawke <League of Arathor Supply Officer>"] = {
+    -- Samuel Hawke
+    ["Samuel Hawke"] = {
         npcId = 15127,
         level = {55, 55},
         zone = "Arathi Highlands",
@@ -18969,8 +18969,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Samuel Van Brunt <Blacksmithing Supplier>
-    ["Samuel Van Brunt <Blacksmithing Supplier>"] = {
+    -- Samuel Van Brunt
+    ["Samuel Van Brunt"] = {
         npcId = 4597,
         level = {30, 30},
         zone = "Undercity",
@@ -18984,8 +18984,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sana <Mail Armor Merchant>
-    ["Sana <Mail Armor Merchant>"] = {
+    -- Sana
+    ["Sana"] = {
         npcId = 3319,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -19017,8 +19017,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sanuye Runetotem <Leather Armor Merchant>
-    ["Sanuye Runetotem <Leather Armor Merchant>"] = {
+    -- Sanuye Runetotem
+    ["Sanuye Runetotem"] = {
         npcId = 10380,
         level = {15, 15},
         zone = "The Barrens",
@@ -19032,8 +19032,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sarah Killian <Mining Supplier>
-    ["Sarah Killian <Mining Supplier>"] = {
+    -- Sarah Killian
+    ["Sarah Killian"] = {
         npcId = 4599,
         level = {30, 30},
         zone = "Undercity",
@@ -19045,8 +19045,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sarah Raycroft <General Goods>
-    ["Sarah Raycroft <General Goods>"] = {
+    -- Sarah Raycroft
+    ["Sarah Raycroft"] = {
         npcId = 3541,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
@@ -19075,8 +19075,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Savanne <Fishing Supplies>
-    ["Savanne <Fishing Supplies>"] = {
+    -- Savanne
+    ["Savanne"] = {
         npcId = 7945,
         level = {49, 49},
         zone = "Feralas",
@@ -19090,8 +19090,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Scott Carevin <Mushroom Seller>
-    ["Scott Carevin <Mushroom Seller>"] = {
+    -- Scott Carevin
+    ["Scott Carevin"] = {
         npcId = 3138,
         level = {25, 25},
         zone = "Duskwood",
@@ -19105,8 +19105,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sebastian Meloche <Armorer>
-    ["Sebastian Meloche <Armorer>"] = {
+    -- Sebastian Meloche
+    ["Sebastian Meloche"] = {
         npcId = 3553,
         level = {18, 18},
         zone = "Silverpine Forest",
@@ -19120,8 +19120,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Seersa Copperpinch <Smokywood Pastures>
-    ["Seersa Copperpinch <Smokywood Pastures>"] = {
+    -- Seersa Copperpinch
+    ["Seersa Copperpinch"] = {
         npcId = 13432,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -19150,8 +19150,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Selina Weston <Alchemy & Herbalism Supplies>
-    ["Selina Weston <Alchemy & Herbalism Supplies>"] = {
+    -- Selina Weston
+    ["Selina Weston"] = {
         npcId = 3548,
         level = {12, 12},
         zone = "Tirisfal Glades",
@@ -19170,8 +19170,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Seoman Griffith <Leather Armor Merchant>
-    ["Seoman Griffith <Leather Armor Merchant>"] = {
+    -- Seoman Griffith
+    ["Seoman Griffith"] = {
         npcId = 1320,
         level = {30, 30},
         zone = "Stormwind City",
@@ -19193,8 +19193,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sergeant Ba'sha <Accessories Quartermaster>
-    ["Sergeant Ba'sha <Accessories Quartermaster>"] = {
+    -- Sergeant Ba'sha
+    ["Sergeant Ba'sha"] = {
         npcId = 12799,
         level = {55, 55},
         zone = "Orgrimmar",
@@ -19263,8 +19263,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sergeant De Vries <Morale Officer>
-    ["Sergeant De Vries <Morale Officer>"] = {
+    -- Sergeant De Vries
+    ["Sergeant De Vries"] = {
         npcId = 955,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -19293,8 +19293,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sergeant Major Clate <Food and Drink>
-    ["Sergeant Major Clate <Food and Drink>"] = {
+    -- Sergeant Major Clate
+    ["Sergeant Major Clate"] = {
         npcId = 12785,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -19337,8 +19337,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sergeant Thunderhorn <Weapons Quartermaster>
-    ["Sergeant Thunderhorn <Weapons Quartermaster>"] = {
+    -- Sergeant Thunderhorn
+    ["Sergeant Thunderhorn"] = {
         npcId = 14581,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -19393,8 +19393,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sewa Mistrunner <Fishing Supplier>
-    ["Sewa Mistrunner <Fishing Supplier>"] = {
+    -- Sewa Mistrunner
+    ["Sewa Mistrunner"] = {
         npcId = 3029,
         level = {40, 40},
         zone = "Thunder Bluff",
@@ -19410,8 +19410,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shadi Mistrunner <Trade Goods Supplier>
-    ["Shadi Mistrunner <Trade Goods Supplier>"] = {
+    -- Shadi Mistrunner
+    ["Shadi Mistrunner"] = {
         npcId = 8363,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -19452,8 +19452,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shaldyn <Clothier>
-    ["Shaldyn <Clothier>"] = {
+    -- Shaldyn
+    ["Shaldyn"] = {
         npcId = 4185,
         level = {15, 15},
         zone = "Darkshore",
@@ -19470,8 +19470,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shalomon <Weaponsmith>
-    ["Shalomon <Weaponsmith>"] = {
+    -- Shalomon
+    ["Shalomon"] = {
         npcId = 3609,
         level = {18, 18},
         zone = "Teldrassil",
@@ -19487,8 +19487,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shalumon <Tabard Vendor>
-    ["Shalumon <Tabard Vendor>"] = {
+    -- Shalumon
+    ["Shalumon"] = {
         npcId = 5191,
         level = {25, 25},
         zone = "Darnassus",
@@ -19497,8 +19497,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shan'ti <Fruit Vendor>
-    ["Shan'ti <Fruit Vendor>"] = {
+    -- Shan'ti
+    ["Shan'ti"] = {
         npcId = 3342,
         level = {35, 35},
         zone = "Orgrimmar",
@@ -19512,8 +19512,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shandrina <Trade Goods>
-    ["Shandrina <Trade Goods>"] = {
+    -- Shandrina
+    ["Shandrina"] = {
         npcId = 3955,
         level = {24, 24},
         zone = "Ashenvale",
@@ -19550,8 +19550,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shankys <Fishing Supplies>
-    ["Shankys <Fishing Supplies>"] = {
+    -- Shankys
+    ["Shankys"] = {
         npcId = 3333,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -19568,8 +19568,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sheendra Tallgrass <Trade Supplies>
-    ["Sheendra Tallgrass <Trade Supplies>"] = {
+    -- Sheendra Tallgrass
+    ["Sheendra Tallgrass"] = {
         npcId = 8145,
         level = {50, 50},
         zone = "Feralas",
@@ -19611,8 +19611,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sheldon Von Croy <Cloth Armor Merchant>
-    ["Sheldon Von Croy <Cloth Armor Merchant>"] = {
+    -- Sheldon Von Croy
+    ["Sheldon Von Croy"] = {
         npcId = 5821,
         level = {30, 30},
         zone = "Undercity",
@@ -19678,8 +19678,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sheri Zipstitch <Tailoring Supplies>
-    ["Sheri Zipstitch <Tailoring Supplies>"] = {
+    -- Sheri Zipstitch
+    ["Sheri Zipstitch"] = {
         npcId = 2669,
         level = {31, 31},
         zone = "Duskwood",
@@ -19704,8 +19704,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sherman Femmel <Butcher>
-    ["Sherman Femmel <Butcher>"] = {
+    -- Sherman Femmel
+    ["Sherman Femmel"] = {
         npcId = 3089,
         level = {21, 21},
         zone = "Redridge Mountains",
@@ -19719,8 +19719,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shimra <General Trade Goods Merchant>
-    ["Shimra <General Trade Goods Merchant>"] = {
+    -- Shimra
+    ["Shimra"] = {
         npcId = 5817,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -19761,8 +19761,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shoma <Weapon Vendor>
-    ["Shoma <Weapon Vendor>"] = {
+    -- Shoma
+    ["Shoma"] = {
         npcId = 3361,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -19789,8 +19789,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shrye Ragefist <Food and Drink>
-    ["Shrye Ragefist <Food and Drink>"] = {
+    -- Shrye Ragefist
+    ["Shrye Ragefist"] = {
         npcId = 10367,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -19834,8 +19834,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Shylenai <Owl Trainer>
-    ["Shylenai <Owl Trainer>"] = {
+    -- Shylenai
+    ["Shylenai"] = {
         npcId = 8665,
         level = {30, 30},
         zone = "Darnassus",
@@ -19845,8 +19845,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sinda <Leather Armor Merchant>
-    ["Sinda <Leather Armor Merchant>"] = {
+    -- Sinda
+    ["Sinda"] = {
         npcId = 3612,
         level = {20, 20},
         zone = "Teldrassil",
@@ -19860,8 +19860,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Skolmin Goldfury <Bow Merchant>
-    ["Skolmin Goldfury <Bow Merchant>"] = {
+    -- Skolmin Goldfury
+    ["Skolmin Goldfury"] = {
         npcId = 5122,
         level = {30, 30},
         zone = "Ironforge",
@@ -19880,8 +19880,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sloan McCoy <Poison Supplier>
-    ["Sloan McCoy <Poison Supplier>"] = {
+    -- Sloan McCoy
+    ["Sloan McCoy"] = {
         npcId = 1326,
         level = {25, 25},
         zone = "Stormwind City",
@@ -19899,8 +19899,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sly Garrett <Shady Goods>
-    ["Sly Garrett <Shady Goods>"] = {
+    -- Sly Garrett
+    ["Sly Garrett"] = {
         npcId = 2622,
         level = {46, 46},
         zone = "Stranglethorn Vale",
@@ -19918,8 +19918,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Smith Slagtree <Blacksmithing Supplies>
-    ["Smith Slagtree <Blacksmithing Supplies>"] = {
+    -- Smith Slagtree
+    ["Smith Slagtree"] = {
         npcId = 14737,
         level = {47, 47},
         zone = "The Hinterlands",
@@ -19933,8 +19933,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Smudge Thunderwood <Poison Vendor>
-    ["Smudge Thunderwood <Poison Vendor>"] = {
+    -- Smudge Thunderwood
+    ["Smudge Thunderwood"] = {
         npcId = 6779,
         level = {45, 45},
         zone = "Alterac Mountains",
@@ -19953,8 +19953,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sognar Cliffbeard <Meat Vendor>
-    ["Sognar Cliffbeard <Meat Vendor>"] = {
+    -- Sognar Cliffbeard
+    ["Sognar Cliffbeard"] = {
         npcId = 5124,
         level = {30, 30},
         zone = "Ironforge",
@@ -19968,8 +19968,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Soolie Berryfizz <Alchemy Supplies>
-    ["Soolie Berryfizz <Alchemy Supplies>"] = {
+    -- Soolie Berryfizz
+    ["Soolie Berryfizz"] = {
         npcId = 5178,
         level = {30, 30},
         zone = "Ironforge",
@@ -19983,8 +19983,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sovik <Engineering Supplies>
-    ["Sovik <Engineering Supplies>"] = {
+    -- Sovik
+    ["Sovik"] = {
         npcId = 3413,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -20011,8 +20011,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Spackle Thornberry <Demon Trainer>
-    ["Spackle Thornberry <Demon Trainer>"] = {
+    -- Spackle Thornberry
+    ["Spackle Thornberry"] = {
         npcId = 5520,
         level = {40, 40},
         zone = "Stormwind City",
@@ -20090,8 +20090,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sraaz <Pie Vendor>
-    ["Sraaz <Pie Vendor>"] = {
+    -- Sraaz
+    ["Sraaz"] = {
         npcId = 9099,
         level = {30, 30},
         zone = "Ironforge",
@@ -20100,8 +20100,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sranda <Light Armor & Weapons Merchant>
-    ["Sranda <Light Armor & Weapons Merchant>"] = {
+    -- Sranda
+    ["Sranda"] = {
         npcId = 1407,
         level = {40, 40},
         zone = "Badlands",
@@ -20131,8 +20131,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Stamp Thunderhorn <Darkmoon Faire Food Vendor>
-    ["Stamp Thunderhorn <Darkmoon Faire Food Vendor>"] = {
+    -- Stamp Thunderhorn
+    ["Stamp Thunderhorn"] = {
         npcId = 14845,
         level = {35, 35},
         zone = "Elwynn Forest",
@@ -20146,8 +20146,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Starn <Gunsmith & Bowyer>
-    ["Starn <Gunsmith & Bowyer>"] = {
+    -- Starn
+    ["Starn"] = {
         npcId = 9551,
         level = {37, 37},
         zone = "Thousand Needles",
@@ -20174,8 +20174,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Stomper Kreeg <The Drunk>
-    ["Stomper Kreeg <The Drunk>"] = {
+    -- Stomper Kreeg
+    ["Stomper Kreeg"] = {
         npcId = 14322,
         level = {59, 59},
         zone = "Dire Maul North",
@@ -20236,8 +20236,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Stone Guard Zarg <Food and Drink>
-    ["Stone Guard Zarg <Food and Drink>"] = {
+    -- Stone Guard Zarg
+    ["Stone Guard Zarg"] = {
         npcId = 12794,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -20342,8 +20342,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Strumner Flintheel <Armor Crafter>
-    ["Strumner Flintheel <Armor Crafter>"] = {
+    -- Strumner Flintheel
+    ["Strumner Flintheel"] = {
         npcId = 5508,
         level = {40, 40},
         zone = "Blasted Lands",
@@ -20367,8 +20367,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Stuart Fleming <Fisherman>
-    ["Stuart Fleming <Fisherman>"] = {
+    -- Stuart Fleming
+    ["Stuart Fleming"] = {
         npcId = 3178,
         level = {25, 25},
         zone = "Wetlands",
@@ -20391,8 +20391,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sumi <Blacksmithing Supplier>
-    ["Sumi <Blacksmithing Supplier>"] = {
+    -- Sumi
+    ["Sumi"] = {
         npcId = 3356,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -20407,8 +20407,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sunn Ragetotem <Staff Merchant>
-    ["Sunn Ragetotem <Staff Merchant>"] = {
+    -- Sunn Ragetotem
+    ["Sunn Ragetotem"] = {
         npcId = 3022,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -20465,8 +20465,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sura Wildmane <War Harness Vendor>
-    ["Sura Wildmane <War Harness Vendor>"] = {
+    -- Sura Wildmane
+    ["Sura Wildmane"] = {
         npcId = 3023,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -20478,8 +20478,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Svalbrad Farmountain <Trade Goods>
-    ["Svalbrad Farmountain <Trade Goods>"] = {
+    -- Svalbrad Farmountain
+    ["Svalbrad Farmountain"] = {
         npcId = 5135,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -20520,8 +20520,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sydney Upton <Staff Merchant>
-    ["Sydney Upton <Staff Merchant>"] = {
+    -- Sydney Upton
+    ["Sydney Upton"] = {
         npcId = 4570,
         level = {30, 30},
         zone = "Undercity",
@@ -20531,8 +20531,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Sylannia <Darkmoon Faire Drink Vendor>
-    ["Sylannia <Darkmoon Faire Drink Vendor>"] = {
+    -- Sylannia
+    ["Sylannia"] = {
         npcId = 14844,
         level = {35, 35},
         zone = "Elwynn Forest",
@@ -20544,8 +20544,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Synge <Gun Merchant>
-    ["Synge <Gun Merchant>"] = {
+    -- Synge
+    ["Synge"] = {
         npcId = 3053,
         level = {30, 30},
         zone = "Thousand Needles",
@@ -20559,8 +20559,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Syurana <Trade Goods Supplies>
-    ["Syurana <Trade Goods Supplies>"] = {
+    -- Syurana
+    ["Syurana"] = {
         npcId = 3779,
         level = {55, 55},
         zone = "Winterspring",
@@ -20596,8 +20596,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tagain <Cloth Armor Merchant>
-    ["Tagain <Cloth Armor Merchant>"] = {
+    -- Tagain
+    ["Tagain"] = {
         npcId = 3092,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -20650,8 +20650,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tai'tasi <Trade Supplies>
-    ["Tai'tasi <Trade Supplies>"] = {
+    -- Tai'tasi
+    ["Tai'tasi"] = {
         npcId = 3187,
         level = {12, 12},
         zone = "Durotar",
@@ -20673,8 +20673,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Talaelar <Fish Vendor>
-    ["Talaelar <Fish Vendor>"] = {
+    -- Talaelar
+    ["Talaelar"] = {
         npcId = 4221,
         level = {30, 30},
         zone = "Darnassus",
@@ -20688,8 +20688,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Taldan <Drink Vendor>
-    ["Taldan <Drink Vendor>"] = {
+    -- Taldan
+    ["Taldan"] = {
         npcId = 4192,
         level = {16, 16},
         zone = "Darkshore",
@@ -20703,8 +20703,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tamar <Leatherworking Supplies>
-    ["Tamar <Leatherworking Supplies>"] = {
+    -- Tamar
+    ["Tamar"] = {
         npcId = 3366,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -20729,8 +20729,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tand <Basket Weaver>
-    ["Tand <Basket Weaver>"] = {
+    -- Tand
+    ["Tand"] = {
         npcId = 3016,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -20741,8 +20741,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tandaan Lightmane <Leather Armor Merchant>
-    ["Tandaan Lightmane <Leather Armor Merchant>"] = {
+    -- Tandaan Lightmane
+    ["Tandaan Lightmane"] = {
         npcId = 3953,
         level = {23, 23},
         zone = "Ashenvale",
@@ -20774,8 +20774,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tansy Puddlefizz <Fishing Supplier>
-    ["Tansy Puddlefizz <Fishing Supplier>"] = {
+    -- Tansy Puddlefizz
+    ["Tansy Puddlefizz"] = {
         npcId = 5162,
         level = {30, 30},
         zone = "Ironforge",
@@ -20793,8 +20793,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tarban Hearthgrain <Baker>
-    ["Tarban Hearthgrain <Baker>"] = {
+    -- Tarban Hearthgrain
+    ["Tarban Hearthgrain"] = {
         npcId = 8307,
         level = {22, 22},
         zone = "The Barrens",
@@ -20814,8 +20814,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Targot Jinglepocket <Smokywood Pastures>
-    ["Targot Jinglepocket <Smokywood Pastures>"] = {
+    -- Targot Jinglepocket
+    ["Targot Jinglepocket"] = {
         npcId = 15124,
         level = {30, 30},
         zone = "Arathi Highlands",
@@ -20839,8 +20839,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tarhus <Reagent Vendor>
-    ["Tarhus <Reagent Vendor>"] = {
+    -- Tarhus
+    ["Tarhus"] = {
         npcId = 3500,
         level = {52, 52},
         zone = "Feralas",
@@ -20867,8 +20867,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tari'qa <Trade Supplies>
-    ["Tari'qa <Trade Supplies>"] = {
+    -- Tari'qa
+    ["Tari'qa"] = {
         npcId = 3482,
         level = {14, 14},
         zone = "The Barrens",
@@ -20896,8 +20896,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Taur Stonehoof <Blacksmithing Supplies>
-    ["Taur Stonehoof <Blacksmithing Supplies>"] = {
+    -- Taur Stonehoof
+    ["Taur Stonehoof"] = {
         npcId = 2999,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -20911,8 +20911,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tawny Grisette <Mushroom Vendor>
-    ["Tawny Grisette <Mushroom Vendor>"] = {
+    -- Tawny Grisette
+    ["Tawny Grisette"] = {
         npcId = 4554,
         level = {30, 30},
         zone = "Undercity",
@@ -20932,8 +20932,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Terry Palin <Lumberjack>
-    ["Terry Palin <Lumberjack>"] = {
+    -- Terry Palin
+    ["Terry Palin"] = {
         npcId = 1650,
         level = {11, 11},
         zone = "Elwynn Forest",
@@ -20942,8 +20942,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thaddeus Webb <Enchanting Supplies>
-    ["Thaddeus Webb <Enchanting Supplies>"] = {
+    -- Thaddeus Webb
+    ["Thaddeus Webb"] = {
         npcId = 4617,
         level = {30, 30},
         zone = "Undercity",
@@ -20961,8 +20961,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thalgus Thunderfist <Weapon Merchant>
-    ["Thalgus Thunderfist <Weapon Merchant>"] = {
+    -- Thalgus Thunderfist
+    ["Thalgus Thunderfist"] = {
         npcId = 7976,
         level = {30, 30},
         zone = "Ironforge",
@@ -20990,8 +20990,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thanthaldis Snowgleam <Stormpike Supply Officer>
-    ["Thanthaldis Snowgleam <Stormpike Supply Officer>"] = {
+    -- Thanthaldis Snowgleam
+    ["Thanthaldis Snowgleam"] = {
         npcId = 13217,
         level = {58, 58},
         zone = "Alterac Mountains",
@@ -21011,8 +21011,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tharynn Bouden <Trade Supplies>
-    ["Tharynn Bouden <Trade Supplies>"] = {
+    -- Tharynn Bouden
+    ["Tharynn Bouden"] = {
         npcId = 66,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -21037,8 +21037,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thelgrum Stonehammer <Mining Supplier>
-    ["Thelgrum Stonehammer <Mining Supplier>"] = {
+    -- Thelgrum Stonehammer
+    ["Thelgrum Stonehammer"] = {
         npcId = 6298,
         level = {30, 30},
         zone = "Darkshore",
@@ -21050,8 +21050,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Theresa Moulaine <Robe Vendor>
-    ["Theresa Moulaine <Robe Vendor>"] = {
+    -- Theresa Moulaine
+    ["Theresa Moulaine"] = {
         npcId = 1350,
         level = {30, 30},
         zone = "Stormwind City",
@@ -21066,8 +21066,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thomas Miller <Baker>
-    ["Thomas Miller <Baker>"] = {
+    -- Thomas Miller
+    ["Thomas Miller"] = {
         npcId = 3518,
         level = {15, 15},
         zone = "Stormwind City",
@@ -21081,8 +21081,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thomas Mordan <Reagent Vendor>
-    ["Thomas Mordan <Reagent Vendor>"] = {
+    -- Thomas Mordan
+    ["Thomas Mordan"] = {
         npcId = 4562,
         level = {30, 30},
         zone = "Undercity",
@@ -21109,8 +21109,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thorkaf Dragoneye <Master Dragonscale Leatherworker>
-    ["Thorkaf Dragoneye <Master Dragonscale Leatherworker>"] = {
+    -- Thorkaf Dragoneye
+    ["Thorkaf Dragoneye"] = {
         npcId = 7867,
         level = {50, 50},
         zone = "Badlands",
@@ -21122,8 +21122,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thralosh <Cloth & Leather Armor Merchant>
-    ["Thralosh <Cloth & Leather Armor Merchant>"] = {
+    -- Thralosh
+    ["Thralosh"] = {
         npcId = 984,
         level = {45, 45},
         zone = "Swamp of Sorrows",
@@ -21147,8 +21147,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thrawn Boltar <Blacksmithing Supplies>
-    ["Thrawn Boltar <Blacksmithing Supplies>"] = {
+    -- Thrawn Boltar
+    ["Thrawn Boltar"] = {
         npcId = 1690,
         level = {29, 29},
         zone = "Dun Morogh",
@@ -21162,8 +21162,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thrumn <Tabard Vendor>
-    ["Thrumn <Tabard Vendor>"] = {
+    -- Thrumn
+    ["Thrumn"] = {
         npcId = 5189,
         level = {25, 25},
         zone = "Thunder Bluff",
@@ -21172,8 +21172,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thulman Flintcrag <Guns Vendor>
-    ["Thulman Flintcrag <Guns Vendor>"] = {
+    -- Thulman Flintcrag
+    ["Thulman Flintcrag"] = {
         npcId = 5510,
         level = {30, 30},
         zone = "Stormwind City",
@@ -21187,8 +21187,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thultash <Food & Drink Vendor>
-    ["Thultash <Food & Drink Vendor>"] = {
+    -- Thultash
+    ["Thultash"] = {
         npcId = 982,
         level = {45, 45},
         zone = "Swamp of Sorrows",
@@ -21208,8 +21208,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thultazor <Arcane Goods Vendor>
-    ["Thultazor <Arcane Goods Vendor>"] = {
+    -- Thultazor
+    ["Thultazor"] = {
         npcId = 983,
         level = {45, 45},
         zone = "Swamp of Sorrows",
@@ -21242,8 +21242,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thurgrum Deepforge <Blacksmithing Supplies>
-    ["Thurgrum Deepforge <Blacksmithing Supplies>"] = {
+    -- Thurgrum Deepforge
+    ["Thurgrum Deepforge"] = {
         npcId = 4259,
         level = {30, 30},
         zone = "Ironforge",
@@ -21257,8 +21257,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Thurman Mullby <General Goods Vendor>
-    ["Thurman Mullby <General Goods Vendor>"] = {
+    -- Thurman Mullby
+    ["Thurman Mullby"] = {
         npcId = 1285,
         level = {30, 30},
         zone = "Stormwind City",
@@ -21297,8 +21297,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tilli Thistlefuzz <Enchanting Supplies>
-    ["Tilli Thistlefuzz <Enchanting Supplies>"] = {
+    -- Tilli Thistlefuzz
+    ["Tilli Thistlefuzz"] = {
         npcId = 5158,
         level = {30, 30},
         zone = "Ironforge",
@@ -21317,8 +21317,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Timothy Weldon <Heavy Armor Merchant>
-    ["Timothy Weldon <Heavy Armor Merchant>"] = {
+    -- Timothy Weldon
+    ["Timothy Weldon"] = {
         npcId = 4559,
         level = {30, 30},
         zone = "Undercity",
@@ -21344,8 +21344,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tink Sprocketwhistle <Engineering Supplies>
-    ["Tink Sprocketwhistle <Engineering Supplies>"] = {
+    -- Tink Sprocketwhistle
+    ["Tink Sprocketwhistle"] = {
         npcId = 9676,
         level = {24, 40},
         zone = "Gnomeregan",
@@ -21369,8 +21369,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tiyani <Food & Drink Vendor>
-    ["Tiyani <Food & Drink Vendor>"] = {
+    -- Tiyani
+    ["Tiyani"] = {
         npcId = 4195,
         level = {15, 15},
         zone = "Darkshore",
@@ -21392,8 +21392,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Toddrick <Butcher>
-    ["Toddrick <Butcher>"] = {
+    -- Toddrick
+    ["Toddrick"] = {
         npcId = 3935,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -21407,8 +21407,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tor'phan <Cloth & Leather Armor Merchant>
-    ["Tor'phan <Cloth & Leather Armor Merchant>"] = {
+    -- Tor'phan
+    ["Tor'phan"] = {
         npcId = 3315,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -21464,8 +21464,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Torq Ironblast <Gunsmith>
-    ["Torq Ironblast <Gunsmith>"] = {
+    -- Torq Ironblast
+    ["Torq Ironblast"] = {
         npcId = 4889,
         level = {40, 40},
         zone = "Dustwallow Marsh",
@@ -21479,8 +21479,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Trak'gen <General Goods Merchant>
-    ["Trak'gen <General Goods Merchant>"] = {
+    -- Trak'gen
+    ["Trak'gen"] = {
         npcId = 3313,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -21519,8 +21519,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Trayexir <Weapon Merchant>
-    ["Trayexir <Weapon Merchant>"] = {
+    -- Trayexir
+    ["Trayexir"] = {
         npcId = 10369,
         level = {12, 12},
         zone = "Durotar",
@@ -21542,8 +21542,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Truk Wildbeard <Bartender>
-    ["Truk Wildbeard <Bartender>"] = {
+    -- Truk Wildbeard
+    ["Truk Wildbeard"] = {
         npcId = 4782,
         level = {50, 50},
         zone = "The Hinterlands",
@@ -21571,8 +21571,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tukk <General Goods Vendor>
-    ["Tukk <General Goods Vendor>"] = {
+    -- Tukk
+    ["Tukk"] = {
         npcId = 12027,
         level = {30, 30},
         zone = "Desolace",
@@ -21607,8 +21607,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tumi <Heavy Armor Merchant>
-    ["Tumi <Heavy Armor Merchant>"] = {
+    -- Tumi
+    ["Tumi"] = {
         npcId = 5812,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -21667,8 +21667,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tunkk <Leatherworking Supplies>
-    ["Tunkk <Leatherworking Supplies>"] = {
+    -- Tunkk
+    ["Tunkk"] = {
         npcId = 2819,
         level = {34, 34},
         zone = "Arathi Highlands",
@@ -21693,8 +21693,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Turhaw <Butcher>
-    ["Turhaw <Butcher>"] = {
+    -- Turhaw
+    ["Turhaw"] = {
         npcId = 4875,
         level = {40, 40},
         zone = "Thousand Needles",
@@ -21714,8 +21714,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Turian <Thrown Weapons Merchant>
-    ["Turian <Thrown Weapons Merchant>"] = {
+    -- Turian
+    ["Turian"] = {
         npcId = 4235,
         level = {30, 30},
         zone = "Darnassus",
@@ -21734,8 +21734,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Turuk Amberstill <Dwarven Weaponsmith>
-    ["Turuk Amberstill <Dwarven Weaponsmith>"] = {
+    -- Turuk Amberstill
+    ["Turuk Amberstill"] = {
         npcId = 3177,
         level = {10, 10},
         zone = "Dun Morogh",
@@ -21747,8 +21747,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Tynnus Venomsprout <Shady Dealer>
-    ["Tynnus Venomsprout <Shady Dealer>"] = {
+    -- Tynnus Venomsprout
+    ["Tynnus Venomsprout"] = {
         npcId = 5169,
         level = {30, 30},
         zone = "Ironforge",
@@ -21766,8 +21766,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Uhgar <Weaponsmith>
-    ["Uhgar <Weaponsmith>"] = {
+    -- Uhgar
+    ["Uhgar"] = {
         npcId = 3163,
         level = {15, 15},
         zone = "Durotar",
@@ -21783,8 +21783,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ukra'nor <Staff Merchant>
-    ["Ukra'nor <Staff Merchant>"] = {
+    -- Ukra'nor
+    ["Ukra'nor"] = {
         npcId = 3349,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -21794,8 +21794,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ullanna <Trade Supplies>
-    ["Ullanna <Trade Supplies>"] = {
+    -- Ullanna
+    ["Ullanna"] = {
         npcId = 4194,
         level = {15, 15},
         zone = "Darkshore",
@@ -21821,8 +21821,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ulthaan <Butcher>
-    ["Ulthaan <Butcher>"] = {
+    -- Ulthaan
+    ["Ulthaan"] = {
         npcId = 3960,
         level = {26, 26},
         zone = "Ashenvale",
@@ -21838,8 +21838,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ulthir <Alchemy Supplies>
-    ["Ulthir <Alchemy Supplies>"] = {
+    -- Ulthir
+    ["Ulthir"] = {
         npcId = 4226,
         level = {30, 30},
         zone = "Darnassus",
@@ -21854,8 +21854,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Uma Bartulm <Herbalism & Alchemy Supplies>
-    ["Uma Bartulm <Herbalism & Alchemy Supplies>"] = {
+    -- Uma Bartulm
+    ["Uma Bartulm"] = {
         npcId = 4899,
         level = {37, 37},
         zone = "Dustwallow Marsh",
@@ -21870,8 +21870,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Unger Statforth <Horse Breeder>
-    ["Unger Statforth <Horse Breeder>"] = {
+    -- Unger Statforth
+    ["Unger Statforth"] = {
         npcId = 1460,
         level = {25, 25},
         zone = "Wetlands",
@@ -21900,8 +21900,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Urtharo <Weapon Merchant>
-    ["Urtharo <Weapon Merchant>"] = {
+    -- Urtharo
+    ["Urtharo"] = {
         npcId = 3314,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -21933,8 +21933,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Uthok <General Supplies>
-    ["Uthok <General Supplies>"] = {
+    -- Uthok
+    ["Uthok"] = {
         npcId = 1149,
         level = {40, 40},
         zone = "Stranglethorn Vale",
@@ -21963,8 +21963,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Uthrok <Bowyer & Gunsmith>
-    ["Uthrok <Bowyer & Gunsmith>"] = {
+    -- Uthrok
+    ["Uthrok"] = {
         npcId = 3488,
         level = {16, 16},
         zone = "The Barrens",
@@ -21984,8 +21984,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Uttnar <Butcher>
-    ["Uttnar <Butcher>"] = {
+    -- Uttnar
+    ["Uttnar"] = {
         npcId = 4954,
         level = {36, 36},
         zone = "Arathi Highlands",
@@ -21999,8 +21999,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vaean <Enchanting Supplies>
-    ["Vaean <Enchanting Supplies>"] = {
+    -- Vaean
+    ["Vaean"] = {
         npcId = 4228,
         level = {30, 30},
         zone = "Darnassus",
@@ -22018,8 +22018,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Valadar Starsong <Coin of Ancestry Collector>
-    ["Valadar Starsong <Coin of Ancestry Collector>"] = {
+    -- Valadar Starsong
+    ["Valadar Starsong"] = {
         npcId = 15864,
         level = {55, 55},
         zone = "Moonglade",
@@ -22028,8 +22028,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Valdaron <Tailoring Supplies>
-    ["Valdaron <Tailoring Supplies>"] = {
+    -- Valdaron
+    ["Valdaron"] = {
         npcId = 4189,
         level = {14, 14},
         zone = "Darkshore",
@@ -22055,8 +22055,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Varg Windwhisper <Leather Armor Merchant>
-    ["Varg Windwhisper <Leather Armor Merchant>"] = {
+    -- Varg Windwhisper
+    ["Varg Windwhisper"] = {
         npcId = 3079,
         level = {14, 14},
         zone = "Mulgore",
@@ -22070,8 +22070,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vargus <Blacksmith>
-    ["Vargus <Blacksmith>"] = {
+    -- Vargus
+    ["Vargus"] = {
         npcId = 15176,
         level = {57, 57},
         zone = "Silithus",
@@ -22098,8 +22098,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Varia Hardhide <Leather Armor Merchant>
-    ["Varia Hardhide <Leather Armor Merchant>"] = {
+    -- Varia Hardhide
+    ["Varia Hardhide"] = {
         npcId = 3074,
         level = {7, 7},
         zone = "Mulgore",
@@ -22113,8 +22113,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Veenix <Venture Co. Merchant>
-    ["Veenix <Venture Co. Merchant>"] = {
+    -- Veenix
+    ["Veenix"] = {
         npcId = 4086,
         level = {24, 24},
         zone = "Stonetalon Mountains",
@@ -22136,8 +22136,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Veldan Lightfoot <Leather Armor Merchant>
-    ["Veldan Lightfoot <Leather Armor Merchant>"] = {
+    -- Veldan Lightfoot
+    ["Veldan Lightfoot"] = {
         npcId = 896,
         level = {10, 10},
         zone = "Elwynn Forest",
@@ -22209,8 +22209,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vernon Hale <Bait and Tackle Supplier>
-    ["Vernon Hale <Bait and Tackle Supplier>"] = {
+    -- Vernon Hale
+    ["Vernon Hale"] = {
         npcId = 1678,
         level = {10, 10},
         zone = "Redridge Mountains",
@@ -22230,8 +22230,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Veron Amberstill <Ram Breeder>
-    ["Veron Amberstill <Ram Breeder>"] = {
+    -- Veron Amberstill
+    ["Veron Amberstill"] = {
         npcId = 1261,
         level = {10, 10},
         zone = "Dun Morogh",
@@ -22245,8 +22245,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vethsera <Brood of Ysera>
-    ["Vethsera <Brood of Ysera>"] = {
+    -- Vethsera
+    ["Vethsera"] = {
         npcId = 15504,
         level = {60, 60},
         zone = "Ahn'Qiraj",
@@ -22277,8 +22277,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vexspindle <Cloth & Leather Armor Merchant>
-    ["Vexspindle <Cloth & Leather Armor Merchant>"] = {
+    -- Vexspindle
+    ["Vexspindle"] = {
         npcId = 3492,
         level = {24, 24},
         zone = "The Barrens",
@@ -22301,8 +22301,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vharr <Superior Weaponsmith>
-    ["Vharr <Superior Weaponsmith>"] = {
+    -- Vharr
+    ["Vharr"] = {
         npcId = 1146,
         level = {40, 40},
         zone = "Stranglethorn Vale",
@@ -22321,8 +22321,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vi'el <Exotic Reagent Merchant>
-    ["Vi'el <Exotic Reagent Merchant>"] = {
+    -- Vi'el
+    ["Vi'el"] = {
         npcId = 16015,
         level = {60, 60},
         zone = "Winterspring",
@@ -22352,8 +22352,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vikki Lonsav <General Goods>
-    ["Vikki Lonsav <General Goods>"] = {
+    -- Vikki Lonsav
+    ["Vikki Lonsav"] = {
         npcId = 2808,
         level = {36, 36},
         zone = "Arathi Highlands",
@@ -22381,8 +22381,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vinasia <Cloth Armor Merchant>
-    ["Vinasia <Cloth Armor Merchant>"] = {
+    -- Vinasia
+    ["Vinasia"] = {
         npcId = 4175,
         level = {30, 30},
         zone = "Darnassus",
@@ -22435,8 +22435,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vivianna <Trade Supplies>
-    ["Vivianna <Trade Supplies>"] = {
+    -- Vivianna
+    ["Vivianna"] = {
         npcId = 7947,
         level = {52, 52},
         zone = "Feralas",
@@ -22478,8 +22478,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vizzklick <Tailoring Supplies>
-    ["Vizzklick <Tailoring Supplies>"] = {
+    -- Vizzklick
+    ["Vizzklick"] = {
         npcId = 6568,
         level = {50, 50},
         zone = "Tanaris",
@@ -22505,8 +22505,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Voloren <Fishing Supplier>
-    ["Voloren <Fishing Supplier>"] = {
+    -- Voloren
+    ["Voloren"] = {
         npcId = 4222,
         level = {30, 30},
         zone = "Darnassus",
@@ -22520,8 +22520,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vrang Wildgore <Weaponsmith & Armorcrafter>
-    ["Vrang Wildgore <Weaponsmith & Armorcrafter>"] = {
+    -- Vrang Wildgore
+    ["Vrang Wildgore"] = {
         npcId = 3682,
         level = {48, 48},
         zone = "The Barrens",
@@ -22544,8 +22544,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Vrok Blunderblast <Gunsmith>
-    ["Vrok Blunderblast <Gunsmith>"] = {
+    -- Vrok Blunderblast
+    ["Vrok Blunderblast"] = {
         npcId = 1469,
         level = {15, 15},
         zone = "Loch Modan",
@@ -22572,8 +22572,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wallace the Blind <Weaponsmith>
-    ["Wallace the Blind <Weaponsmith>"] = {
+    -- Wallace the Blind
+    ["Wallace the Blind"] = {
         npcId = 3534,
         level = {19, 19},
         zone = "Silverpine Forest",
@@ -22595,8 +22595,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Walter Ellingson <Heavy Armor Merchant>
-    ["Walter Ellingson <Heavy Armor Merchant>"] = {
+    -- Walter Ellingson
+    ["Walter Ellingson"] = {
         npcId = 4560,
         level = {30, 30},
         zone = "Undercity",
@@ -22612,8 +22612,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wenna Silkbeard <Special Goods Dealer>
-    ["Wenna Silkbeard <Special Goods Dealer>"] = {
+    -- Wenna Silkbeard
+    ["Wenna Silkbeard"] = {
         npcId = 2679,
         level = {28, 30},
         zone = "Wetlands",
@@ -22632,8 +22632,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Werg Thickblade <Leatherworking Supplies>
-    ["Werg Thickblade <Leatherworking Supplies>"] = {
+    -- Werg Thickblade
+    ["Werg Thickblade"] = {
         npcId = 12943,
         level = {55, 55},
         zone = "Tirisfal Glades",
@@ -22659,8 +22659,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Whulwert Copperpinch <Smokywood Pastures>
-    ["Whulwert Copperpinch <Smokywood Pastures>"] = {
+    -- Whulwert Copperpinch
+    ["Whulwert Copperpinch"] = {
         npcId = 13431,
         level = {30, 30},
         zone = "Thunder Bluff",
@@ -22675,8 +22675,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wigcik <Superior Fisherman>
-    ["Wigcik <Superior Fisherman>"] = {
+    -- Wigcik
+    ["Wigcik"] = {
         npcId = 2842,
         level = {43, 43},
         zone = "Stranglethorn Vale",
@@ -22690,8 +22690,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wik'Tar <Fish Merchant & Supplies>
-    ["Wik'Tar <Fish Merchant & Supplies>"] = {
+    -- Wik'Tar
+    ["Wik'Tar"] = {
         npcId = 12962,
         level = {30, 30},
         zone = "Ashenvale",
@@ -22713,8 +22713,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wilhelm Strang <Mail Armor Merchant>
-    ["Wilhelm Strang <Mail Armor Merchant>"] = {
+    -- Wilhelm Strang
+    ["Wilhelm Strang"] = {
         npcId = 1341,
         level = {30, 30},
         zone = "Stormwind City",
@@ -22734,8 +22734,8 @@ DB.VendorItems = {
         }
     },
 
-    -- William MacGregor <Bowyer>
-    ["William MacGregor <Bowyer>"] = {
+    -- William MacGregor
+    ["William MacGregor"] = {
         npcId = 1668,
         level = {15, 15},
         zone = "Westfall",
@@ -22750,8 +22750,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wixxrak <Weaponsmith & Gunsmith>
-    ["Wixxrak <Weaponsmith & Gunsmith>"] = {
+    -- Wixxrak
+    ["Wixxrak"] = {
         npcId = 11184,
         level = {53, 53},
         zone = "Winterspring",
@@ -22774,8 +22774,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wizbang Booms <Holiday Fireworks Vendor>
-    ["Wizbang Booms <Holiday Fireworks Vendor>"] = {
+    -- Wizbang Booms
+    ["Wizbang Booms"] = {
         npcId = 8117,
         level = {40, 40},
         zone = "Ironforge",
@@ -22803,8 +22803,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Worb Strongstitch <Light Armor Merchant>
-    ["Worb Strongstitch <Light Armor Merchant>"] = {
+    -- Worb Strongstitch
+    ["Worb Strongstitch"] = {
         npcId = 8159,
         level = {50, 50},
         zone = "Feralas",
@@ -22828,8 +22828,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wrahk <Tailoring Supplies>
-    ["Wrahk <Tailoring Supplies>"] = {
+    -- Wrahk
+    ["Wrahk"] = {
         npcId = 3485,
         level = {18, 18},
         zone = "The Barrens",
@@ -22855,8 +22855,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wren Darkspring <Demon Trainer>
-    ["Wren Darkspring <Demon Trainer>"] = {
+    -- Wren Darkspring
+    ["Wren Darkspring"] = {
         npcId = 6376,
         level = {5, 5},
         zone = "Dun Morogh",
@@ -22881,8 +22881,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wrinkle Goodsteel <Superior Armor Crafter>
-    ["Wrinkle Goodsteel <Superior Armor Crafter>"] = {
+    -- Wrinkle Goodsteel
+    ["Wrinkle Goodsteel"] = {
         npcId = 8129,
         level = {40, 40},
         zone = "Tanaris",
@@ -22915,8 +22915,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wuark <Armorer & Shieldcrafter>
-    ["Wuark <Armorer & Shieldcrafter>"] = {
+    -- Wuark
+    ["Wuark"] = {
         npcId = 3167,
         level = {16, 16},
         zone = "Durotar",
@@ -22936,8 +22936,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wulan <Cooking Supplies>
-    ["Wulan <Cooking Supplies>"] = {
+    -- Wulan
+    ["Wulan"] = {
         npcId = 12033,
         level = {30, 30},
         zone = "Desolace",
@@ -22954,8 +22954,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wulmort Jinglepocket <Smokywood Pastures>
-    ["Wulmort Jinglepocket <Smokywood Pastures>"] = {
+    -- Wulmort Jinglepocket
+    ["Wulmort Jinglepocket"] = {
         npcId = 13433,
         level = {30, 30},
         zone = "Ironforge",
@@ -22972,8 +22972,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wunna Darkmane <Trade Goods>
-    ["Wunna Darkmane <Trade Goods>"] = {
+    -- Wunna Darkmane
+    ["Wunna Darkmane"] = {
         npcId = 3081,
         level = {10, 10},
         zone = "Mulgore",
@@ -22996,8 +22996,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Wynne Larson <Robe Merchant>
-    ["Wynne Larson <Robe Merchant>"] = {
+    -- Wynne Larson
+    ["Wynne Larson"] = {
         npcId = 1309,
         level = {30, 30},
         zone = "Stormwind City",
@@ -23012,8 +23012,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Xai'ander <Weaponsmith>
-    ["Xai'ander <Weaponsmith>"] = {
+    -- Xai'ander
+    ["Xai'ander"] = {
         npcId = 11137,
         level = {35, 35},
         zone = "Ashenvale",
@@ -23037,8 +23037,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Xan'tish <Snake Vendor>
-    ["Xan'tish <Snake Vendor>"] = {
+    -- Xan'tish
+    ["Xan'tish"] = {
         npcId = 8404,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -23049,8 +23049,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Xandar Goodbeard <General Supplies>
-    ["Xandar Goodbeard <General Supplies>"] = {
+    -- Xandar Goodbeard
+    ["Xandar Goodbeard"] = {
         npcId = 1685,
         level = {15, 15},
         zone = "Loch Modan",
@@ -23075,8 +23075,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Xen'to <Cooking Supplier>
-    ["Xen'to <Cooking Supplier>"] = {
+    -- Xen'to
+    ["Xen'to"] = {
         npcId = 3400,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -23090,8 +23090,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Xizk Goodstitch <Tailoring Supplies>
-    ["Xizk Goodstitch <Tailoring Supplies>"] = {
+    -- Xizk Goodstitch
+    ["Xizk Goodstitch"] = {
         npcId = 2670,
         level = {43, 43},
         zone = "Stranglethorn Vale",
@@ -23117,8 +23117,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Xizzer Fizzbolt <Engineering Supplies>
-    ["Xizzer Fizzbolt <Engineering Supplies>"] = {
+    -- Xizzer Fizzbolt
+    ["Xizzer Fizzbolt"] = {
         npcId = 11185,
         level = {57, 57},
         zone = "Winterspring",
@@ -23147,8 +23147,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Yaelika Farclaw <Reagents & Poisons>
-    ["Yaelika Farclaw <Reagents & Poisons>"] = {
+    -- Yaelika Farclaw
+    ["Yaelika Farclaw"] = {
         npcId = 10364,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -23185,8 +23185,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Yanni Stoutheart <General Supplies>
-    ["Yanni Stoutheart <General Supplies>"] = {
+    -- Yanni Stoutheart
+    ["Yanni Stoutheart"] = {
         npcId = 1682,
         level = {15, 15},
         zone = "Loch Modan",
@@ -23221,8 +23221,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Yldan <Bag Merchant>
-    ["Yldan <Bag Merchant>"] = {
+    -- Yldan
+    ["Yldan"] = {
         npcId = 4230,
         level = {30, 30},
         zone = "Darnassus",
@@ -23234,8 +23234,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Yonada <Tailoring & Leatherworking Supplies>
-    ["Yonada <Tailoring & Leatherworking Supplies>"] = {
+    -- Yonada
+    ["Yonada"] = {
         npcId = 5944,
         level = {25, 25},
         zone = "The Barrens",
@@ -23288,8 +23288,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zachariah Post <Undead Horse Merchant>
-    ["Zachariah Post <Undead Horse Merchant>"] = {
+    -- Zachariah Post
+    ["Zachariah Post"] = {
         npcId = 4731,
         level = {30, 30},
         zone = "Tirisfal Glades",
@@ -23302,8 +23302,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zan Shivsproket <Speciality Engineer>
-    ["Zan Shivsproket <Speciality Engineer>"] = {
+    -- Zan Shivsproket
+    ["Zan Shivsproket"] = {
         npcId = 6777,
         level = {60, 60},
         zone = "Alterac Mountains",
@@ -23328,8 +23328,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zanara <Bowyer>
-    ["Zanara <Bowyer>"] = {
+    -- Zanara
+    ["Zanara"] = {
         npcId = 9552,
         level = {43, 43},
         zone = "Dustwallow Marsh",
@@ -23346,8 +23346,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zane Bradford <Wand Vendor>
-    ["Zane Bradford <Wand Vendor>"] = {
+    -- Zane Bradford
+    ["Zane Bradford"] = {
         npcId = 5754,
         level = {10, 10},
         zone = "Undercity",
@@ -23363,8 +23363,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zannok Hidepiercer <Leatherworking Supplies>
-    ["Zannok Hidepiercer <Leatherworking Supplies>"] = {
+    -- Zannok Hidepiercer
+    ["Zannok Hidepiercer"] = {
         npcId = 12956,
         level = {59, 59},
         zone = "Silithus",
@@ -23390,8 +23390,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zansoa <Fishing Supplies>
-    ["Zansoa <Fishing Supplies>"] = {
+    -- Zansoa
+    ["Zansoa"] = {
         npcId = 5942,
         level = {14, 14},
         zone = "Durotar",
@@ -23407,8 +23407,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zarena Cromwind <Superior Weaponsmith>
-    ["Zarena Cromwind <Superior Weaponsmith>"] = {
+    -- Zarena Cromwind
+    ["Zarena Cromwind"] = {
         npcId = 2482,
         level = {43, 43},
         zone = "Stranglethorn Vale",
@@ -23430,8 +23430,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zargh <Butcher>
-    ["Zargh <Butcher>"] = {
+    -- Zargh
+    ["Zargh"] = {
         npcId = 3489,
         level = {16, 16},
         zone = "The Barrens",
@@ -23446,8 +23446,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zeal'aya <Herbalism Supplier>
-    ["Zeal'aya <Herbalism Supplier>"] = {
+    -- Zeal'aya
+    ["Zeal'aya"] = {
         npcId = 3405,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -23459,8 +23459,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zendo'jian <Weapon Vendor>
-    ["Zendo'jian <Weapon Vendor>"] = {
+    -- Zendo'jian
+    ["Zendo'jian"] = {
         npcId = 3409,
         level = {30, 30},
         zone = "Orgrimmar",
@@ -23494,8 +23494,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Ziggle Sparks <Holiday Fireworks Vendor>
-    ["Ziggle Sparks <Holiday Fireworks Vendor>"] = {
+    -- Ziggle Sparks
+    ["Ziggle Sparks"] = {
         npcId = 8116,
         level = {46, 46},
         zone = "Stranglethorn Vale",
@@ -23513,8 +23513,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zixil <Merchant Supreme>
-    ["Zixil <Merchant Supreme>"] = {
+    -- Zixil
+    ["Zixil"] = {
         npcId = 3537,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
@@ -23535,8 +23535,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zizzek <Fisherman>
-    ["Zizzek <Fisherman>"] = {
+    -- Zizzek
+    ["Zizzek"] = {
         npcId = 3572,
         level = {22, 22},
         zone = "The Barrens",
@@ -23550,8 +23550,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zjolnir <Raptor Handler>
-    ["Zjolnir <Raptor Handler>"] = {
+    -- Zjolnir
+    ["Zjolnir"] = {
         npcId = 7952,
         level = {45, 45},
         zone = "Durotar",
@@ -23565,8 +23565,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zlagk <Butcher>
-    ["Zlagk <Butcher>"] = {
+    -- Zlagk
+    ["Zlagk"] = {
         npcId = 3882,
         level = {9, 9},
         zone = "Durotar",
@@ -23586,8 +23586,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zor Lonetree <Elder Far Seer>
-    ["Zor Lonetree <Elder Far Seer>"] = {
+    -- Zor Lonetree
+    ["Zor Lonetree"] = {
         npcId = 4047,
         level = {62, 62},
         zone = "Orgrimmar",
@@ -23615,8 +23615,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zora Guthrek <Trade Goods>
-    ["Zora Guthrek <Trade Goods>"] = {
+    -- Zora Guthrek
+    ["Zora Guthrek"] = {
         npcId = 2225,
         level = {55, 55},
         zone = "Alterac Valley",
@@ -23683,8 +23683,8 @@ DB.VendorItems = {
         }
     },
 
-    -- Zulrg <Weaponsmith>
-    ["Zulrg <Weaponsmith>"] = {
+    -- Zulrg
+    ["Zulrg"] = {
         npcId = 4884,
         level = {43, 43},
         zone = "Dustwallow Marsh",
