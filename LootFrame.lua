@@ -14,6 +14,7 @@ local MAX_DISPLAYED_ROWS = 15
 local currentEnemy = nil
 local filteredLoot = {}
 local updateTimer = nil
+local emptyMessage = nil
 
 -- Initialize the loot frame
 function LootTableExtreme:InitializeLootFrame()
@@ -77,6 +78,18 @@ function LootTableExtreme:InitializeLootFrame()
         
         row:Hide()
         lootRows[i] = row
+    end
+
+    -- Empty message (shown when there is no loot)
+    -- Create this as a child of the scrollFrame (viewport) so it's visible
+    -- even when the scrollChild is larger than the viewport.
+    if scrollFrame and not emptyMessage then
+        emptyMessage = scrollFrame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
+        emptyMessage:SetPoint("CENTER", scrollFrame, "CENTER", 0, -10)
+        emptyMessage:SetText("No loot available")
+        emptyMessage:SetJustifyH("CENTER")
+        emptyMessage:SetWidth(300)
+        emptyMessage:Hide()
     end
     
     -- Setup scroll frame
@@ -156,7 +169,57 @@ function LootTableExtreme:ShowEnemyLoot(enemyNameOrId)
     end
     
     if not enemyData then
+        -- No data found: show an empty window instead of returning so old loot doesn't remain visible
         self:Print("No loot data found for: " .. tostring(enemyNameOrId))
+
+        -- Use a display name for headers (prefer the in-game unit name if targetable)
+        local displayName = nil
+        if UnitExists("target") then
+            local unitName = UnitName("target")
+            if unitName and unitName ~= "" then
+                displayName = unitName
+            end
+        end
+        if not displayName then
+            displayName = enemyName or tostring(enemyNameOrId)
+        end
+        currentEnemy = displayName
+
+        -- Reset scroll position safely
+        if scrollFrame then
+            FauxScrollFrame_SetOffset(scrollFrame, 0)
+            if scrollFrame.SetVerticalScroll then
+                scrollFrame:SetVerticalScroll(0)
+            end
+        end
+
+        -- Update header title/subtitle if present. Try to show level and zone
+        local headerTitle = _G["LootTableExtremeFrameHeaderTitle"]
+        local headerSubtitle = _G["LootTableExtremeFrameHeaderSubtitle"]
+        if headerTitle then headerTitle:SetText(displayName) end
+
+        -- Compose subtitle: prefer unit level and current zone when DB data is missing
+        local levelText = "?"
+        if UnitExists("target") then
+            local lvl = UnitLevel("target")
+            if lvl and lvl > 0 then
+                levelText = tostring(lvl)
+            end
+        end
+        local zoneText = GetZoneText() or "Unknown"
+        local subtitle = string.format("Level %s | %s", levelText, zoneText)
+        if headerSubtitle then headerSubtitle:SetText(subtitle) end
+
+        -- Clear any previous filtered data and refresh display
+        filteredLoot = {}
+        -- Update the header/mode and the loot display
+        self:UpdateModeDisplay()
+        -- Update the empty message text to be more specific
+        if emptyMessage then
+            emptyMessage:SetText("No loot recorded for: " .. displayName)
+        end
+        self:UpdateLootDisplay()
+        if frame then frame:Show() end
         return
     end
     
@@ -186,19 +249,40 @@ end
 
 -- Apply current filters to loot table
 function LootTableExtreme:ApplyFilters()
-    if not currentEnemy then 
-        return 
+    -- If there's no selected enemy, clear the filtered list and update the UI
+    if not currentEnemy then
+        filteredLoot = {}
+        self:UpdateLootDisplay()
+        return
     end
-    
+
     local enemyData = self.Database:GetEnemyLoot(currentEnemy)
-    
-    if not enemyData or not enemyData.loot then 
-        return 
+
+    -- If we couldn't find the enemy in the database, clear the list and update
+    if not enemyData then
+        filteredLoot = {}
+        self:UpdateLootDisplay()
+        return
     end
-    
-    local advancedMode = LootTableExtremeDB.ui.advancedMode
+
+    -- If the enemy has no loot table, clear and update so old rows are not shown
+    if not enemyData.loot or #enemyData.loot == 0 then
+        filteredLoot = {}
+        self:UpdateLootDisplay()
+        return
+    end
+
+    local advancedMode = LootTableExtremeDB and LootTableExtremeDB.ui and LootTableExtremeDB.ui.advancedMode
     filteredLoot = self:FilterLootData(enemyData.loot, advancedMode)
-    
+
+    -- Reset scroll to top when applying a new filter set
+    if scrollFrame then
+        FauxScrollFrame_SetOffset(scrollFrame, 0)
+        if scrollFrame.SetVerticalScroll then
+            scrollFrame:SetVerticalScroll(0)
+        end
+    end
+
     self:UpdateLootDisplay()
 end
 
@@ -216,6 +300,15 @@ function LootTableExtreme:UpdateLootDisplay()
     -- Calculate content height - Classic 1.12 requires minimum 480px to render
     local contentHeight = math.max(numLoot * LOOT_ROW_HEIGHT, 480)
     scrollChild:SetHeight(contentHeight)
+
+    -- Show or hide the empty message depending on whether we have loot
+    if emptyMessage then
+        if numLoot == 0 then
+            emptyMessage:Show()
+        else
+            emptyMessage:Hide()
+        end
+    end
     
     if scrollFrame then
         FauxScrollFrame_Update(scrollFrame, numLoot, MAX_DISPLAYED_ROWS, LOOT_ROW_HEIGHT)
@@ -223,21 +316,28 @@ function LootTableExtreme:UpdateLootDisplay()
         local offset = FauxScrollFrame_GetOffset(scrollFrame)
         
         local needsRetry = false
-        
-        for i = 1, MAX_DISPLAYED_ROWS do
-            local row = lootRows[i]
-            local index = i + offset
 
-            if index <= numLoot then
-                local item = filteredLoot[index]
+        -- If there are no items, ensure all rows are hidden immediately
+        if numLoot == 0 then
+            for i = 1, MAX_DISPLAYED_ROWS do
+                if lootRows[i] then lootRows[i]:Hide() end
+            end
+        else
+            for i = 1, MAX_DISPLAYED_ROWS do
+                local row = lootRows[i]
+                local index = i + offset
 
-                if not item then
-                    row:Hide()
+                if index <= numLoot then
+                    local item = filteredLoot[index]
+
+                    if not item then
+                        row:Hide()
+                    else
+                        -- existing logic follows (kept below)
+                    end
                 else
-                    -- existing logic follows (kept below)
+                    row:Hide()
                 end
-            else
-                row:Hide()
             end
         end
         
