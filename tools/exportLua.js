@@ -7,6 +7,21 @@ const { ScraperDatabase } = require('./database');
 const fs = require('fs');
 const path = require('path');
 
+// Sanitize NPC/vendor/pickpocket names for Lua output.
+// Removes angle-bracket markers like "<SOME TEXT>", replaces double-quotes
+// with single-quotes, escapes backslashes, and trims extra whitespace.
+function sanitizeNpcName(name) {
+    if (!name) return '';
+    let s = name.toString();
+    // Remove any tokens like <...>
+    s = s.replace(/<[^>]*>/g, '');
+    // Replace double quotes with single quotes and escape backslashes
+    s = s.replace(/"/g, "'").replace(/\\/g, "\\\\");
+    // Collapse multiple spaces and trim
+    s = s.replace(/\s+/g, ' ').trim();
+    return s;
+}
+
 async function main() {
     const args = process.argv.slice(2);
     console.log('DEBUG: raw args ->', args);
@@ -208,9 +223,8 @@ async function exportLootData(db, options) {
             }
         }
         
-    // Sanitize NPC name for safe Lua output: replace any double-quotes with single-quotes
-    // and escape backslashes so the resulting string won't break Lua syntax.
-    const sanitizedName = (npc.name || '').toString().replace(/"/g, "'").replace(/\\/g, "\\\\");
+    // Sanitize NPC name for safe Lua output
+    const sanitizedName = sanitizeNpcName(npc.name || '');
 
     // Generate Lua entry
     let entry = `    -- ${sanitizedName}\n`;
@@ -350,8 +364,7 @@ DB.VendorItems = {
         
         if (items.length === 0) continue;
         
-    const sanitizedVendorName = (vendor.name || '').toString().replace(/"/g, "'").replace(/\\/g, "\\\\");
-
+    const sanitizedVendorName = sanitizeNpcName(vendor.name || '');
     let entry = `    -- ${sanitizedVendorName}\n`;
     entry += `    ["${sanitizedVendorName}"] = {\n`;
         entry += `        npcId = ${vendor.npc_id},\n`;
@@ -443,8 +456,7 @@ DB.PickpocketLoot = {
             }
         }
         
-    const sanitizedName = (npc.name || '').toString().replace(/"/g, "'").replace(/\\/g, "\\\\");
-
+    const sanitizedName = sanitizeNpcName(npc.name || '');
     let entry = `    -- ${sanitizedName}\n`;
     entry += `    ["${sanitizedName}"] = {\n`;
         entry += `        npcId = ${npc.npc_id},\n`;

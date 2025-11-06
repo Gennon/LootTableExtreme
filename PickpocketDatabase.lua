@@ -1,5 +1,5 @@
 -- Auto-generated pickpocket database from Wowhead Classic
--- Generated: 2025-11-04T06:09:32.869Z
+-- Generated: 2025-11-06T06:27:36.199Z
 -- Total NPCs: 961
 -- 
 -- This file is automatically loaded by Database.lua
@@ -38,8 +38,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Aggem Thorncurse <Death's Head Prophet>
-    ["Aggem Thorncurse <Death's Head Prophet>"] = {
+    -- Aggem Thorncurse
+    ["Aggem Thorncurse"] = {
         npcId = 4424,
         level = {30, 30},
         zone = "Razorfen Kraul",
@@ -98,8 +98,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Antu'sul <Overseer of Sul>
-    ["Antu'sul <Overseer of Sul>"] = {
+    -- Antu'sul
+    ["Antu'sul"] = {
         npcId = 8127,
         level = {48, 48},
         zone = "Zul'Farrak",
@@ -530,8 +530,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Atal'alarion <Guardian of the Idol>
-    ["Atal'alarion <Guardian of the Idol>"] = {
+    -- Atal'alarion
+    ["Atal'alarion"] = {
         npcId = 8580,
         level = {50, 50},
         zone = "The Temple of Atal'Hakkar",
@@ -574,8 +574,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Bannok Grimaxe <Firebrand Legion Champion>
-    ["Bannok Grimaxe <Firebrand Legion Champion>"] = {
+    -- Bannok Grimaxe
+    ["Bannok Grimaxe"] = {
         npcId = 9596,
         level = {59, 59},
         zone = "Blackrock Spire",
@@ -704,8 +704,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Blackhand Assassin <Blackhand Legion>
-    ["Blackhand Assassin <Blackhand Legion>"] = {
+    -- Blackhand Assassin
+    ["Blackhand Assassin"] = {
         npcId = 10318,
         level = {60, 61},
         zone = "Blackrock Spire",
@@ -719,8 +719,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Blackhand Dragon Handler <Blackhand Legion>
-    ["Blackhand Dragon Handler <Blackhand Legion>"] = {
+    -- Blackhand Dragon Handler
+    ["Blackhand Dragon Handler"] = {
         npcId = 10742,
         level = {59, 60},
         zone = "Blackrock Spire",
@@ -734,8 +734,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Blackhand Dreadweaver <Blackhand Legion>
-    ["Blackhand Dreadweaver <Blackhand Legion>"] = {
+    -- Blackhand Dreadweaver
+    ["Blackhand Dreadweaver"] = {
         npcId = 9817,
         level = {59, 60},
         zone = "Blackrock Spire",
@@ -749,8 +749,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Blackhand Elite <Blackhand Legion>
-    ["Blackhand Elite <Blackhand Legion>"] = {
+    -- Blackhand Elite
+    ["Blackhand Elite"] = {
         npcId = 10317,
         level = {60, 61},
         zone = "Blackrock Spire",
@@ -764,8 +764,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Blackhand Incarcerator <Blackhand Legion>
-    ["Blackhand Incarcerator <Blackhand Legion>"] = {
+    -- Blackhand Incarcerator
+    ["Blackhand Incarcerator"] = {
         npcId = 10316,
         level = {59, 60},
         zone = "Blackrock Spire",
@@ -779,8 +779,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Blackhand Iron Guard <Blackhand Legion>
-    ["Blackhand Iron Guard <Blackhand Legion>"] = {
+    -- Blackhand Iron Guard
+    ["Blackhand Iron Guard"] = {
         npcId = 10319,
         level = {60, 61},
         zone = "Blackrock Spire",
@@ -794,8 +794,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Blackhand Summoner <Blackhand Legion>
-    ["Blackhand Summoner <Blackhand Legion>"] = {
+    -- Blackhand Summoner
+    ["Blackhand Summoner"] = {
         npcId = 9818,
         level = {59, 60},
         zone = "Blackrock Spire",
@@ -823,8 +823,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Blackhand Veteran <Blackhand Legion>
-    ["Blackhand Veteran <Blackhand Legion>"] = {
+    -- Blackhand Veteran
+    ["Blackhand Veteran"] = {
         npcId = 9819,
         level = {59, 60},
         zone = "Blackrock Spire",
@@ -1121,8 +1121,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Bloodaxe Evoker <Bloodaxe Legion>
-    ["Bloodaxe Evoker <Bloodaxe Legion>"] = {
+    -- Bloodaxe Evoker
+    ["Bloodaxe Evoker"] = {
         npcId = 9693,
         level = {58, 59},
         zone = "Blackrock Spire",
@@ -1137,8 +1137,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Bloodaxe Raider <Bloodaxe Legion>
-    ["Bloodaxe Raider <Bloodaxe Legion>"] = {
+    -- Bloodaxe Raider
+    ["Bloodaxe Raider"] = {
         npcId = 9692,
         level = {57, 58},
         zone = "Blackrock Spire",
@@ -1152,8 +1152,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Bloodaxe Summoner <Bloodaxe Legion>
-    ["Bloodaxe Summoner <Bloodaxe Legion>"] = {
+    -- Bloodaxe Summoner
+    ["Bloodaxe Summoner"] = {
         npcId = 9717,
         level = {57, 58},
         zone = "Blackrock Spire",
@@ -1167,8 +1167,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Bloodaxe Veteran <Bloodaxe Legion>
-    ["Bloodaxe Veteran <Bloodaxe Legion>"] = {
+    -- Bloodaxe Veteran
+    ["Bloodaxe Veteran"] = {
         npcId = 9583,
         level = {58, 59},
         zone = "Blackrock Spire",
@@ -1182,8 +1182,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Bloodaxe Warmonger <Bloodaxe Legion>
-    ["Bloodaxe Warmonger <Bloodaxe Legion>"] = {
+    -- Bloodaxe Warmonger
+    ["Bloodaxe Warmonger"] = {
         npcId = 9716,
         level = {57, 58},
         zone = "Blackrock Spire",
@@ -1467,8 +1467,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Captain Balinda Stonehearth <Stormpike Captain>
-    ["Captain Balinda Stonehearth <Stormpike Captain>"] = {
+    -- Captain Balinda Stonehearth
+    ["Captain Balinda Stonehearth"] = {
         npcId = 11949,
         level = {61, 61},
         zone = "Alterac Valley",
@@ -1483,8 +1483,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Captain Galvangar <Frostwolf Captain>
-    ["Captain Galvangar <Frostwolf Captain>"] = {
+    -- Captain Galvangar
+    ["Captain Galvangar"] = {
         npcId = 11947,
         level = {61, 61},
         zone = "Alterac Valley",
@@ -1648,8 +1648,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Charlga Razorflank <The Crone>
-    ["Charlga Razorflank <The Crone>"] = {
+    -- Charlga Razorflank
+    ["Charlga Razorflank"] = {
         npcId = 4421,
         level = {33, 33},
         zone = "Razorfen Kraul",
@@ -2088,8 +2088,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Dark Adept <Cult of the Damned>
-    ["Dark Adept <Cult of the Damned>"] = {
+    -- Dark Adept
+    ["Dark Adept"] = {
         npcId = 8546,
         level = {58, 59},
         zone = "Eastern Plaguelands",
@@ -2332,8 +2332,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Dark Summoner <Cult of the Damned>
-    ["Dark Summoner <Cult of the Damned>"] = {
+    -- Dark Summoner
+    ["Dark Summoner"] = {
         npcId = 8551,
         level = {55, 56},
         zone = "Eastern Plaguelands",
@@ -2495,8 +2495,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Death Speaker Jargba <Death's Head Captain>
-    ["Death Speaker Jargba <Death's Head Captain>"] = {
+    -- Death Speaker Jargba
+    ["Death Speaker Jargba"] = {
         npcId = 4428,
         level = {30, 30},
         zone = "Razorfen Kraul",
@@ -2805,8 +2805,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Doctor Theolen Krastinov <The Butcher>
-    ["Doctor Theolen Krastinov <The Butcher>"] = {
+    -- Doctor Theolen Krastinov
+    ["Doctor Theolen Krastinov"] = {
         npcId = 11261,
         level = {60, 60},
         zone = "Scholomance",
@@ -2986,8 +2986,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Drek'Thar <Frostwolf General>
-    ["Drek'Thar <Frostwolf General>"] = {
+    -- Drek'Thar
+    ["Drek'Thar"] = {
         npcId = 11946,
         level = {1, 1},
         zone = "Alterac Valley",
@@ -3398,8 +3398,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Fineous Darkvire <Chief Architect>
-    ["Fineous Darkvire <Chief Architect>"] = {
+    -- Fineous Darkvire
+    ["Fineous Darkvire"] = {
         npcId = 9056,
         level = {54, 54},
         zone = "Blackrock Depths",
@@ -3413,8 +3413,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Firebrand Darkweaver <Firebrand Legion>
-    ["Firebrand Darkweaver <Firebrand Legion>"] = {
+    -- Firebrand Darkweaver
+    ["Firebrand Darkweaver"] = {
         npcId = 9261,
         level = {56, 57},
         zone = "Blackrock Spire",
@@ -3428,8 +3428,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Firebrand Dreadweaver <Firebrand Legion>
-    ["Firebrand Dreadweaver <Firebrand Legion>"] = {
+    -- Firebrand Dreadweaver
+    ["Firebrand Dreadweaver"] = {
         npcId = 9263,
         level = {57, 58},
         zone = "Blackrock Spire",
@@ -3443,8 +3443,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Firebrand Grunt <Firebrand Legion>
-    ["Firebrand Grunt <Firebrand Legion>"] = {
+    -- Firebrand Grunt
+    ["Firebrand Grunt"] = {
         npcId = 9259,
         level = {56, 57},
         zone = "Blackrock Spire",
@@ -3458,8 +3458,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Firebrand Invoker <Firebrand Legion>
-    ["Firebrand Invoker <Firebrand Legion>"] = {
+    -- Firebrand Invoker
+    ["Firebrand Invoker"] = {
         npcId = 9262,
         level = {56, 57},
         zone = "Blackrock Spire",
@@ -3473,8 +3473,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Firebrand Legionnaire <Firebrand Legion>
-    ["Firebrand Legionnaire <Firebrand Legion>"] = {
+    -- Firebrand Legionnaire
+    ["Firebrand Legionnaire"] = {
         npcId = 9260,
         level = {57, 58},
         zone = "Blackrock Spire",
@@ -3488,8 +3488,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Firebrand Pyromancer <Firebrand Legion>
-    ["Firebrand Pyromancer <Firebrand Legion>"] = {
+    -- Firebrand Pyromancer
+    ["Firebrand Pyromancer"] = {
         npcId = 9264,
         level = {57, 58},
         zone = "Blackrock Spire",
@@ -4187,8 +4187,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Goraluk Anvilcrack <Blackhand Legion Armorsmith>
-    ["Goraluk Anvilcrack <Blackhand Legion Armorsmith>"] = {
+    -- Goraluk Anvilcrack
+    ["Goraluk Anvilcrack"] = {
         npcId = 10899,
         level = {61, 61},
         zone = "Blackrock Spire",
@@ -4590,8 +4590,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Grimlok <Stonevault Chieftain>
-    ["Grimlok <Stonevault Chieftain>"] = {
+    -- Grimlok
+    ["Grimlok"] = {
         npcId = 4854,
         level = {45, 45},
         zone = "Uldaman",
@@ -5314,8 +5314,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- High Interrogator Gerstahn <Twilight's Hammer Interrogator>
-    ["High Interrogator Gerstahn <Twilight's Hammer Interrogator>"] = {
+    -- High Interrogator Gerstahn
+    ["High Interrogator Gerstahn"] = {
         npcId = 9018,
         level = {52, 52},
         zone = "Blackrock Depths",
@@ -5941,8 +5941,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Jed Runewatcher <Blackhand Legion>
-    ["Jed Runewatcher <Blackhand Legion>"] = {
+    -- Jed Runewatcher
+    ["Jed Runewatcher"] = {
         npcId = 10509,
         level = {59, 59},
         zone = "Blackrock Spire",
@@ -7275,8 +7275,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Necromancer <Cult of the Damned>
-    ["Necromancer <Cult of the Damned>"] = {
+    -- Necromancer
+    ["Necromancer"] = {
         npcId = 8553,
         level = {54, 55},
         zone = "Eastern Plaguelands",
@@ -7816,8 +7816,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Quartermaster Zigris <Bloodaxe Legion>
-    ["Quartermaster Zigris <Bloodaxe Legion>"] = {
+    -- Quartermaster Zigris
+    ["Quartermaster Zigris"] = {
         npcId = 9736,
         level = {59, 59},
         zone = "Blackrock Mountain",
@@ -9262,8 +9262,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Scarshield Acolyte <Scarshield Legion>
-    ["Scarshield Acolyte <Scarshield Legion>"] = {
+    -- Scarshield Acolyte
+    ["Scarshield Acolyte"] = {
         npcId = 9045,
         level = {54, 55},
         zone = "Blackrock Spire",
@@ -9277,8 +9277,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Scarshield Grunt <Scarshield Legion>
-    ["Scarshield Grunt <Scarshield Legion>"] = {
+    -- Scarshield Grunt
+    ["Scarshield Grunt"] = {
         npcId = 9043,
         level = {53, 54},
         zone = "Burning Steppes",
@@ -9292,8 +9292,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Scarshield Legionnaire <Scarshield Legion>
-    ["Scarshield Legionnaire <Scarshield Legion>"] = {
+    -- Scarshield Legionnaire
+    ["Scarshield Legionnaire"] = {
         npcId = 9097,
         level = {54, 55},
         zone = "Blackrock Spire",
@@ -9307,8 +9307,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Scarshield Quartermaster <Scarshield Legion>
-    ["Scarshield Quartermaster <Scarshield Legion>"] = {
+    -- Scarshield Quartermaster
+    ["Scarshield Quartermaster"] = {
         npcId = 9046,
         level = {55, 55},
         zone = "Stranglethorn Vale",
@@ -9322,8 +9322,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Scarshield Raider <Scarshield Legion>
-    ["Scarshield Raider <Scarshield Legion>"] = {
+    -- Scarshield Raider
+    ["Scarshield Raider"] = {
         npcId = 9258,
         level = {55, 56},
         zone = "Blackrock Spire",
@@ -9337,8 +9337,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Scarshield Sentry <Scarshield Legion>
-    ["Scarshield Sentry <Scarshield Legion>"] = {
+    -- Scarshield Sentry
+    ["Scarshield Sentry"] = {
         npcId = 9044,
         level = {53, 54},
         zone = "Unknown",
@@ -9352,8 +9352,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Scarshield Spellbinder <Scarshield Legion>
-    ["Scarshield Spellbinder <Scarshield Legion>"] = {
+    -- Scarshield Spellbinder
+    ["Scarshield Spellbinder"] = {
         npcId = 9098,
         level = {54, 55},
         zone = "Blackrock Spire",
@@ -9367,8 +9367,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Scarshield Warlock <Scarshield Legion>
-    ["Scarshield Warlock <Scarshield Legion>"] = {
+    -- Scarshield Warlock
+    ["Scarshield Warlock"] = {
         npcId = 9257,
         level = {54, 55},
         zone = "Blackrock Spire",
@@ -10037,8 +10037,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Shadowmage <Cult of the Damned>
-    ["Shadowmage <Cult of the Damned>"] = {
+    -- Shadowmage
+    ["Shadowmage"] = {
         npcId = 8550,
         level = {59, 60},
         zone = "Eastern Plaguelands",
@@ -10067,8 +10067,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Shadowsilk Poacher <The Undermarket>
-    ["Shadowsilk Poacher <The Undermarket>"] = {
+    -- Shadowsilk Poacher
+    ["Shadowsilk Poacher"] = {
         npcId = 8442,
         level = {47, 50},
         zone = "Searing Gorge",
@@ -11681,8 +11681,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Twilight Avenger <Twilight's Hammer>
-    ["Twilight Avenger <Twilight's Hammer>"] = {
+    -- Twilight Avenger
+    ["Twilight Avenger"] = {
         npcId = 11880,
         level = {58, 59},
         zone = "Silithus",
@@ -11792,8 +11792,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Twilight Geolord <Twilight's Hammer>
-    ["Twilight Geolord <Twilight's Hammer>"] = {
+    -- Twilight Geolord
+    ["Twilight Geolord"] = {
         npcId = 11881,
         level = {59, 60},
         zone = "Silithus",
@@ -11841,8 +11841,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Twilight Keeper Exeter <Twilight's Hammer>
-    ["Twilight Keeper Exeter <Twilight's Hammer>"] = {
+    -- Twilight Keeper Exeter
+    ["Twilight Keeper Exeter"] = {
         npcId = 11803,
         level = {60, 60},
         zone = "Silithus",
@@ -11885,8 +11885,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Twilight Master <Twilight's Hammer>
-    ["Twilight Master <Twilight's Hammer>"] = {
+    -- Twilight Master
+    ["Twilight Master"] = {
         npcId = 11883,
         level = {60, 60},
         zone = "Silithus",
@@ -11901,8 +11901,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Twilight Overlord <Twilight's Hammer>
-    ["Twilight Overlord <Twilight's Hammer>"] = {
+    -- Twilight Overlord
+    ["Twilight Overlord"] = {
         npcId = 15213,
         level = {60, 61},
         zone = "Silithus",
@@ -11946,8 +11946,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Twilight Stonecaller <Twilight's Hammer>
-    ["Twilight Stonecaller <Twilight's Hammer>"] = {
+    -- Twilight Stonecaller
+    ["Twilight Stonecaller"] = {
         npcId = 11882,
         level = {59, 60},
         zone = "Silithus",
@@ -12265,8 +12265,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Vile Tutor <Cult of the Damned>
-    ["Vile Tutor <Cult of the Damned>"] = {
+    -- Vile Tutor
+    ["Vile Tutor"] = {
         npcId = 8548,
         level = {56, 57},
         zone = "Eastern Plaguelands",
@@ -12326,8 +12326,8 @@ DB.PickpocketLoot = {
         }
     },
 
-    -- Vilebranch Speaker <Vilebranch Troll Ambassador>
-    ["Vilebranch Speaker <Vilebranch Troll Ambassador>"] = {
+    -- Vilebranch Speaker
+    ["Vilebranch Speaker"] = {
         npcId = 11391,
         level = {61, 61},
         zone = "Zul'Gurub",
