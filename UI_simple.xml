@@ -2,7 +2,7 @@
 ..\FrameXML\UI.xsd">
     <!-- Loot Table Viewer - Simple main window -->
     <Frame name="LootTableExtremeFrame" parent="UIParent" frameStrata="DIALOG" toplevel="true" movable="true" enableMouse="true" hidden="true">
-        <Size x="400" y="350"/>
+        <Size x="360" y="350"/>
         <Anchors>
             <Anchor point="CENTER"/>
         </Anchors>
@@ -60,11 +60,13 @@
             </Frame>
 
             <!-- Scroll Frame for Loot List -->
-            <ScrollFrame name="$parentScrollFrame" inherits="FauxScrollFrameTemplate">
-                <Size x="360" y="300"/>
+            <ScrollFrame name="$parentScrollFrame" inherits="FauxScrollFrameTemplate">                
                 <Anchors>
-                    <Anchor point="TOP" relativeTo="$parentHeader" relativePoint="BOTTOM">
+                    <Anchor point="TOPLEFT" relativeTo="$parentHeader" relativePoint="BOTTOMLEFT">
                         <Offset x="0" y="-10"/>
+                    </Anchor>
+                    <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+                        <Offset x="0" y="10"/>
                     </Anchor>
                 </Anchors>
             </ScrollFrame>
@@ -79,9 +81,6 @@
                         <Offset x="-44" y="-10"/>
                     </Anchor>
                 </Anchors>
-                <NormalTexture name="$parentNormalTexture" file="Interface\\Icons\\INV_Misc_Gear_01" setAllPoints="true"/>
-                <PushedTexture name="$parentPushedTexture" file="Interface\\Buttons\\UI-Quickslot-Depress" setAllPoints="true"/>
-                <HighlightTexture name="$parentHighlight" file="Interface\\Buttons\\ButtonHilight-Square" setAllPoints="true"/>
             </Button>
         </Frames>
 

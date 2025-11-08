@@ -22,24 +22,26 @@ function LootTableExtreme:UpdateModeDisplay()
     local scrollFrame = _G["LootTableExtremeFrameScrollFrame"]
 
     if frame then
-        frame:SetWidth(400)
-        frame:SetHeight(350)
+        frame:SetWidth(360)
+        frame:SetHeight(300)
     end
 
     if scrollFrame then
         local header = _G["LootTableExtremeFrameHeader"]
         scrollFrame:ClearAllPoints()
         if header then
-            scrollFrame:SetPoint("TOP", header, "BOTTOM", 0, -10)
+            scrollFrame:SetPoint("TOP", header, "BOTTOM", 0, -LootTableExtreme.UI_MARGIN)
         else
             if frame then
-                scrollFrame:SetPoint("TOP", frame, "TOP", 0, -60)
+                -- Position the top of the scroll frame relative to the top of the frame
+                scrollFrame:SetPoint("TOP", frame, "TOP", 0, -(LootTableExtreme.UI_HEADER_HEIGHT + LootTableExtreme.UI_MARGIN))
             end
         end
         if frame then
-            scrollFrame:SetPoint("LEFT", frame, "LEFT", 15, 0)
-            scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -25, 0)
-            scrollFrame:SetPoint("BOTTOM", frame, "BOTTOM", 0, 50)
+            -- Use the configured margin for left/right insets so the scroll frame can stretch to the frame edges
+            scrollFrame:SetPoint("LEFT", frame, "LEFT", LootTableExtreme.UI_MARGIN, 0)
+            scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -LootTableExtreme.UI_MARGIN, 0)
+            scrollFrame:SetPoint("BOTTOM", frame, "BOTTOM", 0, LootTableExtreme.UI_MARGIN)
         end
     end
 
