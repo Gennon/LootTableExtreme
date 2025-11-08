@@ -78,6 +78,38 @@ function LootTableExtreme:GetItemIdFromLink(itemLink)
     return nil
 end
 
+-- Shared helper: attach tooltip handlers to a row frame for item display
+function LootTableExtreme:SetupRowTooltip(row)
+    if not row then return end
+    row:EnableMouse(true)
+
+    row:SetScript("OnEnter", function(self)
+        local item = self.item
+        if not item then return end
+
+        GameTooltip:Hide()
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+
+        if item.itemId then
+            local info = { GetItemInfo(item.itemId) }
+            local itemLink = info[2]
+            if itemLink and GameTooltip.SetHyperlink then
+                GameTooltip:SetHyperlink(itemLink)
+            else
+                -- Fallback: show basic name when hyperlink API isn't available
+                GameTooltip:SetText(item.name or "Unknown Item")
+            end
+        else
+            GameTooltip:SetText(item.name or "Unknown Item")
+        end
+        GameTooltip:Show()
+    end)
+
+    row:SetScript("OnLeave", function(self)
+        GameTooltip:Hide()
+    end)
+end
+
 -- Minimap button functionality
 local minimapButton = nil
 local minimapIcon = "Interface\\Icons\\INV_Misc_Book_09"
@@ -161,9 +193,9 @@ function LootTableExtreme:InitializeMinimapButton()
     self:UpdateMinimapButtonPosition()
     
     if not LootTableExtremeDB.minimap.hide then
-        minimapButton:Show()
+        if minimapButton and minimapButton.Show then minimapButton:Show() end
     else
-        minimapButton:Hide()
+        if minimapButton and minimapButton.Hide then minimapButton:Hide() end
     end
 end
 
@@ -183,10 +215,10 @@ function LootTableExtreme:ToggleMinimapButton()
     LootTableExtremeDB.minimap.hide = not LootTableExtremeDB.minimap.hide
     
     if LootTableExtremeDB.minimap.hide then
-        minimapButton:Hide()
+        if minimapButton and minimapButton.Hide then minimapButton:Hide() end
         self:Print("Minimap button hidden")
     else
-        minimapButton:Show()
+        if minimapButton and minimapButton.Show then minimapButton:Show() end
         self:Print("Minimap button shown")
     end
 end
