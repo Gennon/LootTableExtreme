@@ -10,11 +10,96 @@ local lootRows = {}
 local LOOT_ROW_HEIGHT = 20
 local MAX_DISPLAYED_ROWS = 15
 
+-- Debug flag for layout/scroll diagnostics (set to true to enable)
+local LTX_DEBUG = false
+
+local function LTX_Debug(msg)
+    if not LTX_DEBUG then return end
+    if LootTableExtreme and LootTableExtreme.Print then
+        LootTableExtreme:Print(msg)
+    elseif DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
+        DEFAULT_CHAT_FRAME:AddMessage("[LTE-debug] " .. tostring(msg))
+    end
+end
+
 -- Current state
 local currentEnemy = nil
 local filteredLoot = {}
 local updateTimer = nil
 local emptyMessage = nil
+
+-- Attach tooltip handlers to a loot row (separated for reuse)
+function LootTableExtreme:SetupRowTooltip(row)
+    if not row then return end
+    row:EnableMouse(true)
+
+    row:SetScript("OnEnter", function(self)
+        local item = self.item
+        if not item then return end
+
+        GameTooltip:Hide()
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+
+        if item.itemId then
+            local _, itemLink = GetItemInfo(item.itemId)
+            if itemLink and GameTooltip.SetHyperlink then
+                GameTooltip:SetHyperlink(itemLink)
+            elseif itemLink and GameTooltip.SetItem then
+                GameTooltip:SetItem(itemLink)
+            else
+                GameTooltip:SetText(item.name or "Unknown Item")
+            end
+        else
+            GameTooltip:SetText(item.name or "Unknown Item")
+        end
+        GameTooltip:Show()
+    end)
+
+    row:SetScript("OnLeave", function(self)
+        GameTooltip:Hide()
+    end)
+end
+
+-- Helper: create or return an existing loot row. Rows are parented to the
+-- faux scroll frame so FauxScrollFrame APIs work correctly.
+local function CreateOrGetRow(index)
+    if lootRows[index] then return lootRows[index] end
+    local parent = scrollFrame or UIParent
+    local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. index, parent)
+    row:SetHeight(LOOT_ROW_HEIGHT)
+    local w = 300
+    if parent and parent.GetWidth then
+        local ok, pw = pcall(function() return parent:GetWidth() end)
+        if ok and pw then w = pw - (LootTableExtreme.UI_SCROLLBAR_WIDTH or 0) end
+    end
+    row:SetWidth(w)
+
+    row.icon = row:CreateTexture(nil, "ARTWORK")
+    row.icon:SetWidth(16)
+    row.icon:SetHeight(16)
+    row.icon:SetPoint("LEFT", 0, 0)
+
+    row.name = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    row.name:SetPoint("LEFT", row.icon, "RIGHT", (LootTableExtreme.UI_MARGIN or 8) / 2, 0)
+    row.name:SetWidth(250)
+    row.name:SetJustifyH("LEFT")
+
+    row.chance = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    row.chance:SetPoint("RIGHT", -(LootTableExtreme.UI_SCROLLBAR_WIDTH or 16), 0)
+    row.chance:SetWidth(80)
+    row.chance:SetJustifyH("RIGHT")
+
+    row.questMarker = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", -((LootTableExtreme.UI_MARGIN or 8) / 2), 0)
+    row.questMarker:SetText("Q")
+    row.questMarker:SetTextColor(1, 0.82, 0)
+    row.questMarker:Hide()
+
+    LootTableExtreme:SetupRowTooltip(row)
+    row:Hide()
+    lootRows[index] = row
+    return row
+end
 
 -- Initialize the loot frame
 function LootTableExtreme:InitializeLootFrame()
@@ -30,56 +115,21 @@ function LootTableExtreme:InitializeLootFrame()
     bg:SetHorizTile(true)
     bg:SetVertTile(true)
     
-    -- Ensure scroll frame is visible and clips its children
+    -- Ensure scroll frame is visible
     scrollFrame:Show()
-    scrollFrame:SetClipsChildren(true)
-    
-    -- Create scrollChild frame for proper scrolling
-    if scrollFrame then
-        scrollChild = CreateFrame("Frame", "LootTableExtremeScrollChild", scrollFrame)
-        scrollChild:SetWidth(scrollFrame:GetWidth() or 1)
-        scrollChild:SetHeight(MAX_DISPLAYED_ROWS * LOOT_ROW_HEIGHT)
-        scrollChild:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 0, 0)  -- Explicit positioning
-        scrollChild:Show()  -- Explicitly show the scrollChild
-        scrollFrame:SetScrollChild(scrollChild)
-    end
-    
-    -- Create loot rows (parent them to scrollChild, not scrollFrame)
+
+    -- Create rows parented to the faux scroll frame (visible-slot frames).
     for i = 1, MAX_DISPLAYED_ROWS do
-        local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. i, scrollChild)
-        row:SetHeight(LOOT_ROW_HEIGHT)
-        row:SetWidth(scrollFrame:GetWidth())  -- Set default width
-        -- Don't set fixed position - will be positioned dynamically in UpdateLootDisplay
-        
-        -- Item icon
-        row.icon = row:CreateTexture(nil, "ARTWORK")
-        row.icon:SetWidth(16)
-        row.icon:SetHeight(16)
-        row.icon:SetPoint("LEFT", 0, 0)
-        
-        -- Item name
-        row.name = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-        -- Small gap between icon and name: use half the UI margin
-        row.name:SetPoint("LEFT", row.icon, "RIGHT", LootTableExtreme.UI_MARGIN/2, 0)
-        row.name:SetWidth(250)  -- Set default width
-        row.name:SetJustifyH("LEFT")
-        
-        -- Drop chance
-        row.chance = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-        row.chance:SetPoint("RIGHT", 0, 0)
-        row.chance:SetWidth(80)
-        row.chance:SetJustifyH("RIGHT")
-        
-        -- Quest item indicator
-        row.questMarker = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-        -- Use half-margin for the gap between chance and quest marker
-        row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", -LootTableExtreme.UI_MARGIN/2, 0)
-        row.questMarker:SetText("Q")
-        row.questMarker:SetTextColor(1, 0.82, 0)
-        row.questMarker:Hide()
-        
-        row:Hide()
-        lootRows[i] = row
+        CreateOrGetRow(i)
+    end
+
+    -- Add resize handler so dynamic UI scaling/resizing recomputes visible slots
+    if scrollFrame and not scrollFrame._LTX_SizeHook then
+        scrollFrame:SetScript("OnSizeChanged", function(self, width, height)
+            LTX_Debug("OnSizeChanged: w=" .. tostring(width) .. " h=" .. tostring(height))
+            LootTableExtreme:UpdateLootDisplay()
+        end)
+        scrollFrame._LTX_SizeHook = true
     end
 
     -- Empty message (shown when there is no loot)
@@ -300,10 +350,6 @@ end
 function LootTableExtreme:UpdateLootDisplay()
     local numLoot = #filteredLoot
     
-    -- Calculate content height - Classic 1.12 requires minimum 480px to render
-    local contentHeight = math.max(numLoot * LOOT_ROW_HEIGHT, 480)
-    scrollChild:SetHeight(contentHeight)
-
     -- Show or hide the empty message depending on whether we have loot
     if emptyMessage then
         if numLoot == 0 then
@@ -313,56 +359,30 @@ function LootTableExtreme:UpdateLootDisplay()
         end
     end
     
-    if scrollFrame then
-        FauxScrollFrame_Update(scrollFrame, numLoot, MAX_DISPLAYED_ROWS, LOOT_ROW_HEIGHT)
+    if not scrollFrame then return end
 
-        local offset = FauxScrollFrame_GetOffset(scrollFrame)
-        
-        local needsRetry = false
+    -- Compute visible slots from scrollFrame height (fallback to MAX_DISPLAYED_ROWS)
+    local visibleSlots = MAX_DISPLAYED_ROWS
+    if scrollFrame.GetHeight then
+        local h = scrollFrame:GetHeight() or 0
+        visibleSlots = math.max(1, math.floor(h / LOOT_ROW_HEIGHT))
+    end
 
-        -- If there are no items, ensure all rows are hidden immediately
-        if numLoot == 0 then
-            for i = 1, MAX_DISPLAYED_ROWS do
-                if lootRows[i] then lootRows[i]:Hide() end
-            end
-        else
-            for i = 1, MAX_DISPLAYED_ROWS do
-                local row = lootRows[i]
-                local index = i + offset
+    -- Ensure visible slot rows exist
+    for i = 1, visibleSlots do CreateOrGetRow(i) end
 
-                if index <= numLoot then
-                    local item = filteredLoot[index]
+    FauxScrollFrame_Update(scrollFrame, numLoot, visibleSlots, LOOT_ROW_HEIGHT)
+    local offset = FauxScrollFrame_GetOffset(scrollFrame)
 
-                    if not item then
-                        row:Hide()
-                    else
-                        -- existing logic follows (kept below)
-                    end
-                else
-                    row:Hide()
-                end
-            end
-        end
-        
-        -- Force a complete refresh of frames
-        if scrollChild then
-            scrollChild:Hide()
-            scrollChild:Show()
-        end
-        scrollFrame:Hide()
-        scrollFrame:Show()
-        
-        -- Schedule a retry if some items weren't loaded yet
-        -- (kept existing behavior below)
-    else
-        -- If no scroll frame is present, nothing to render
+    local needsRetry = false
+
+    if numLoot == 0 then
+        for i = 1, visibleSlots do if lootRows[i] then lootRows[i]:Hide() end end
+        scrollFrame:Hide(); scrollFrame:Show()
         return
     end
-    -- The rendering loop (detailed per-row logic)
-    -- We'll implement it here after we've ensured scrollFrame and offset are available
-    local offset = FauxScrollFrame_GetOffset(scrollFrame)
-    local needsRetry = false
-    for i = 1, MAX_DISPLAYED_ROWS do
+
+    for i = 1, visibleSlots do
         local row = lootRows[i]
         local index = i + offset
 
@@ -372,17 +392,15 @@ function LootTableExtreme:UpdateLootDisplay()
             if not item then
                 row:Hide()
             else
-                -- Get item info from server if available
+                -- Populate item data
                 local itemName, _, itemQuality, _, _, _, _, _, _, itemTexture
                 if item.itemId then
                     itemName, _, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
                 end
 
-                -- Use server quality if available, otherwise use cached quality
                 local quality = itemQuality or item.quality
                 local color = self.Database:GetQualityColor(quality)
 
-                -- Set item icon
                 if item.itemId then
                     if itemTexture then
                         row.icon:SetTexture(itemTexture)
@@ -392,7 +410,6 @@ function LootTableExtreme:UpdateLootDisplay()
                         needsRetry = true
                     end
 
-                    -- Use server item name if available, otherwise use cached name
                     if itemName then
                         row.name:SetText(itemName)
                     else
@@ -404,60 +421,40 @@ function LootTableExtreme:UpdateLootDisplay()
                     row.name:SetText(item.name)
                 end
 
-                -- Set item name color
                 row.name:SetTextColor(color.r, color.g, color.b)
-
-                -- Set drop chance
                 row.chance:SetText(string.format("%.1f%%", item.dropChance))
 
-                -- Show quest marker if applicable
                 if item.isQuestItem then
                     row.questMarker:Show()
                 else
                     row.questMarker:Hide()
                 end
 
-                -- Position row dynamically based on index
+                row.item = item
+
+                -- Position by visible slot (i) relative to scrollFrame
                 row:ClearAllPoints()
-                if scrollChild then
-                    row:SetPoint("TOPLEFT", scrollChild, "TOPLEFT", 0, -(index-1) * LOOT_ROW_HEIGHT)
-                end
+                local y = -(i-1) * LOOT_ROW_HEIGHT
+                row:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 0, y)
 
                 row:Show()
             end
         else
-            row:Hide()
+            if row then row.item = nil; row:Hide() end
         end
     end
 
-    -- Force a complete refresh of frames
-    if scrollChild then
-        scrollChild:Hide()
-        scrollChild:Show()
-    end
-    scrollFrame:Hide()
-    scrollFrame:Show()
+    -- Refresh visuals
+    scrollFrame:Hide(); scrollFrame:Show()
 
     -- Schedule a retry if some items weren't loaded yet
     if needsRetry then
-        if updateTimer then
-            updateTimer:Cancel()
-        end
+        if updateTimer then updateTimer:Cancel() end
         updateTimer = C_Timer.NewTimer(0.5, function()
             if frame and frame:IsShown() then
                 LootTableExtreme:UpdateLootDisplay()
             end
         end)
-    end
-end
-
--- Resize loot rows based on mode
-function LootTableExtreme:ResizeLootRows(advancedMode)
-    local rowWidth = advancedMode and 520 or 340
-    local nameWidth = advancedMode and 320 or 240
-    for i = 1, MAX_DISPLAYED_ROWS do
-        lootRows[i]:SetWidth(rowWidth)
-        lootRows[i].name:SetWidth(nameWidth)
     end
 end
 
