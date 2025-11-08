@@ -40,11 +40,9 @@ function LootTableExtreme:UpdateModeDisplay()
         if frame then
             -- Use the configured margin for left/right insets so the scroll frame can stretch to the frame edges
             scrollFrame:SetPoint("LEFT", frame, "LEFT", LootTableExtreme.UI_MARGIN, 0)
-            scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -LootTableExtreme.UI_MARGIN, 0)
+            scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -(LootTableExtreme.UI_MARGIN + LootTableExtreme.UI_SCROLLBAR_WIDTH), 0)
             scrollFrame:SetPoint("BOTTOM", frame, "BOTTOM", 0, LootTableExtreme.UI_MARGIN)
         end
     end
 
-    -- Always use the simple row sizing by default
-    self:ResizeLootRows(false)
 end

@@ -7,6 +7,8 @@ LootTableExtreme.version = "1.0.0"
 -- UI constants (used across modules)
 LootTableExtreme.UI_MARGIN = 10        -- standard side/top/bottom margin
 LootTableExtreme.UI_HEADER_HEIGHT = 50 -- header height used in XML
+LootTableExtreme.UI_SCROLLBAR_WIDTH = 20 -- width of the scrollbar
+
 
 -- Default settings
 local defaults = {
