@@ -182,29 +182,22 @@ local function EnsureRows(n)
     for i = 1, n do CreateOrGetRow(i) end
 end
 
--- Initialize the loot frame
-function LootTableExtreme:InitializeLootFrame()
-    -- Lookup frames after XML has been loaded
-    frame = _G["LootTableExtremeFrame"]
-    scrollFrame = _G["LootTableExtremeFrameScrollFrame"]
+-- Top-level helpers for InitializeLootFrame (moved out for clarity & testability)
+local function SetupBackground()
     if not frame then return end
-
-    -- Add background textures manually for Classic 1.12 compatibility
     local bg = frame:CreateTexture(nil, "BACKGROUND")
     bg:SetAllPoints(frame)
     bg:SetTexture("Interface\\DialogFrame\\UI-DialogBox-Background")
     bg:SetHorizTile(true)
     bg:SetVertTile(true)
-    
-    -- Ensure scroll frame is visible
-    if scrollFrame and scrollFrame.Show then scrollFrame:Show() end
+end
 
-    -- Create rows parented to the faux scroll frame (visible-slot frames).
-    for i = 1, MAX_DISPLAYED_ROWS do
-        CreateOrGetRow(i)
-    end
+local function CreateInitialRows()
+    if not MAX_DISPLAYED_ROWS then return end
+    for i = 1, MAX_DISPLAYED_ROWS do CreateOrGetRow(i) end
+end
 
-    -- Add resize handler so dynamic UI scaling/resizing recomputes visible slots
+local function SetupResizeHook()
     if scrollFrame and not scrollFrame._LTX_SizeHook then
         scrollFrame:SetScript("OnSizeChanged", function(self, width, height)
             LTX_Debug("OnSizeChanged: w=" .. tostring(width) .. " h=" .. tostring(height))
@@ -212,21 +205,20 @@ function LootTableExtreme:InitializeLootFrame()
         end)
         scrollFrame._LTX_SizeHook = true
     end
+end
 
-    -- Empty message (shown when there is no loot)
-    -- Create this as a child of the scrollFrame (viewport) so it's visible
-    -- even when the scrollChild is larger than the viewport.
+local function SetupEmptyMessage()
     if scrollFrame and not emptyMessage then
         emptyMessage = scrollFrame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
-        -- Vertical offset uses the standard UI margin
         emptyMessage:SetPoint("CENTER", scrollFrame, "CENTER", 0, 0)
         emptyMessage:SetText("No loot available")
         emptyMessage:SetJustifyH("CENTER")
         emptyMessage:SetWidth(300)
         emptyMessage:Hide()
     end
-    
-    -- Setup scroll frame
+end
+
+local function SetupScrollScript()
     if scrollFrame then
         scrollFrame:SetScript("OnVerticalScroll", function(self, offset)
             FauxScrollFrame_OnVerticalScroll(self, offset, LOOT_ROW_HEIGHT, function()
@@ -234,60 +226,75 @@ function LootTableExtreme:InitializeLootFrame()
             end)
         end)
     end
-    
-    -- Setup filter checkboxes (only if filters frame exists)
-    if _G["LootTableExtremeFrameFilters"] then
-        self:CreateFilterCheckboxes()
-    end
-    
-    -- Search and Show Target UI removed (previously in settings); nothing to wire here.
+end
 
-    -- Setup mode toggle button if present
+local function SetupFiltersIfPresent()
+    if _G["LootTableExtremeFrameFilters"] then
+        LootTableExtreme:CreateFilterCheckboxes()
+    end
+end
+
+local function SetupModeToggle()
     local modeToggle = _G["LootTableExtremeFrameModeToggle"]
-    if modeToggle then
-        modeToggle:SetScript("OnClick", function()
-            -- Prefer the Settings API, but fall back to toggling the settings frame directly
-            if LootTableExtreme.ToggleSettings then
-                LootTableExtreme:ToggleSettings()
-                return
+    if not modeToggle then return end
+
+    modeToggle:SetScript("OnClick", function()
+        if LootTableExtreme.ToggleSettings then
+            LootTableExtreme:ToggleSettings()
+            return
+        end
+        local settings = _G["LootTableExtremeSettings"]
+        if settings then
+            if settings:IsShown() then
+                settings:Hide()
+            else
+                settings:Show()
             end
-            local settings = _G["LootTableExtremeSettings"]
-            if settings then
-                if settings:IsShown() then
-                    settings:Hide()
-                else
-                    settings:Show()
-                end
-                return
-            end
-            -- Final fallback: toggle legacy mode
-            LootTableExtreme:ToggleMode()
-        end)
-        -- Tooltip on hover
-        modeToggle:SetScript("OnEnter", function(self)
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-            GameTooltip:AddLine("Settings", 1, 1, 1)
-            GameTooltip:Show()
-        end)
-        modeToggle:SetScript("OnLeave", function()
-            GameTooltip:Hide()
-        end)
-    end
-    
-    -- Set initial mode
-    -- Initialize settings wiring (if settings window exists)
-    if LootTableExtreme.InitializeSettings then
-        LootTableExtreme:InitializeSettings()
-    end
-    self:UpdateModeDisplay()
-    
-    -- Close button (guarded) - support either the fontstring-named legacy or the new close button
+            return
+        end
+        LootTableExtreme:ToggleMode()
+    end)
+
+    modeToggle:SetScript("OnEnter", function(self)
+        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+        GameTooltip:AddLine("Settings", 1, 1, 1)
+        GameTooltip:Show()
+    end)
+    modeToggle:SetScript("OnLeave", function()
+        GameTooltip:Hide()
+    end)
+end
+
+local function SetupCloseButton()
     local closeBtn = _G["LootTableExtremeFrameClose"] or _G["LootTableExtremeFrameTitle"]
     if closeBtn then
         closeBtn:SetScript("OnClick", function()
             if frame then frame:Hide() end
         end)
     end
+end
+
+-- Initialize the loot frame
+function LootTableExtreme:InitializeLootFrame()
+    -- Lookup frames after XML has been loaded
+    frame = _G["LootTableExtremeFrame"]
+    scrollFrame = _G["LootTableExtremeFrameScrollFrame"]
+    if not frame then return end
+
+    -- Run all initialization steps (helpers are defined at file scope)
+    SetupBackground()
+    if scrollFrame and scrollFrame.Show then scrollFrame:Show() end
+    CreateInitialRows()
+    SetupResizeHook()
+    SetupEmptyMessage()
+    SetupScrollScript()
+    SetupFiltersIfPresent()
+    SetupModeToggle()
+    if LootTableExtreme.InitializeSettings then
+        LootTableExtreme:InitializeSettings()
+    end
+    self:UpdateModeDisplay()
+    SetupCloseButton()
 end
 
 -- Show loot for a specific NPC (by name or NPC ID)
