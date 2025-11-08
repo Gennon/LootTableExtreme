@@ -48,7 +48,7 @@ function LootTableExtreme:InitializeLootFrame()
     for i = 1, MAX_DISPLAYED_ROWS do
         local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. i, scrollChild)
         row:SetHeight(LOOT_ROW_HEIGHT)
-        row:SetWidth(350)  -- Set default width
+        row:SetWidth(scrollFrame:GetWidth())  -- Set default width
         -- Don't set fixed position - will be positioned dynamically in UpdateLootDisplay
         
         -- Item icon
@@ -59,19 +59,21 @@ function LootTableExtreme:InitializeLootFrame()
         
         -- Item name
         row.name = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-        row.name:SetPoint("LEFT", row.icon, "RIGHT", 5, 0)
+        -- Small gap between icon and name: use half the UI margin
+        row.name:SetPoint("LEFT", row.icon, "RIGHT", LootTableExtreme.UI_MARGIN/2, 0)
         row.name:SetWidth(250)  -- Set default width
         row.name:SetJustifyH("LEFT")
         
         -- Drop chance
         row.chance = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-        row.chance:SetPoint("RIGHT", -10, 0)
+        row.chance:SetPoint("RIGHT", 0, 0)
         row.chance:SetWidth(80)
         row.chance:SetJustifyH("RIGHT")
         
         -- Quest item indicator
         row.questMarker = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-        row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", -5, 0)
+        -- Use half-margin for the gap between chance and quest marker
+        row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", -LootTableExtreme.UI_MARGIN/2, 0)
         row.questMarker:SetText("Q")
         row.questMarker:SetTextColor(1, 0.82, 0)
         row.questMarker:Hide()
@@ -85,7 +87,8 @@ function LootTableExtreme:InitializeLootFrame()
     -- even when the scrollChild is larger than the viewport.
     if scrollFrame and not emptyMessage then
         emptyMessage = scrollFrame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
-        emptyMessage:SetPoint("CENTER", scrollFrame, "CENTER", 0, -10)
+        -- Vertical offset uses the standard UI margin
+        emptyMessage:SetPoint("CENTER", scrollFrame, "CENTER", 0, 0)
         emptyMessage:SetText("No loot available")
         emptyMessage:SetJustifyH("CENTER")
         emptyMessage:SetWidth(300)
