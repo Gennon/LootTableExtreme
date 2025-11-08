@@ -38,7 +38,7 @@ async function main() {
         excludeSeasonItems: true,
     pruneLegacy: false,
         outputDir: path.join(__dirname, '..'),
-        lootFile: 'ScrapedDatabase.lua',
+        lootFile: 'LootDatabase.lua',
         vendorFile: 'VendorDatabase.lua',
         pickpocketFile: 'PickpocketDatabase.lua'
     };
@@ -275,14 +275,14 @@ async function exportLootData(db, options) {
 local DB = LootTableExtreme.Database
 
 -- Scraped enemy loot data
-DB.ScrapedLoot = {
+DB.LootDatabase = {
 `;
     
     const footer = `}
 
--- Merge scraped data into main EnemyLoot table
-for enemyName, data in pairs(DB.ScrapedLoot) do
-    DB.EnemyLoot[enemyName] = data
+-- Merge scraped data into main NpcLoot table
+for npcName, data in pairs(DB.LootDatabase) do
+    DB.NpcLoot[npcName] = data
 end
 `;
     

@@ -4,17 +4,17 @@ A World of Warcraft Classic (Vanilla) addon that provides comprehensive loot tab
 
 ## Features
 
-### 1. Enemy Loot Table Viewer
-- View complete loot tables for any enemy in the game
+### 1. NPC Loot Table Viewer
+- View complete loot tables for any npc in the game
 - Filter by item quality (Poor, Common, Uncommon, Rare, Epic)
 - Filter by minimum drop chance percentage
 - Show/hide quest items separately
-- Search enemies by name
+- Search npcs by name
 - View loot for your current target with one click
 
 ### 2. Item Tooltip Enhancement
-- Hover over any item in your bags to see the top 3 enemies that drop it
-- Shows enemy level, zone, elite status, and drop percentage
+- Hover over any item in your bags to see the top 3 NPCs that drop it
+- Shows npc level, zone, elite status, and drop percentage
 - Helps you quickly find where to farm specific items
 
 ## Installation
@@ -46,8 +46,8 @@ A World of Warcraft Classic (Vanilla) addon that provides comprehensive loot tab
 
 The main window allows you to:
 
-1. **Search for enemies**: Type an enemy name in the search box and click "Search Enemy"
-2. **Show target loot**: Click "Show Target" button or target an enemy and right-click the minimap button
+1. **Search for NPCs**: Type an NPC name in the search box and click "Search NPCs"
+2. **Show target loot**: Click "Show Target" button or target an NPC and right-click the minimap button
 3. **Filter items**: Use the checkboxes to show/hide specific item qualities
 4. **Adjust minimum drop chance**: Use the slider to only show items above a certain drop percentage
 
@@ -75,14 +75,14 @@ LootTableExtreme/
 
 ### Expanding the Database
 
-The loot database is stored in `Database.lua` in the `DB.EnemyLoot` table. Each enemy entry follows this structure:
+The loot database is stored in `Database.lua` in the `DB.NpcLoot` table. Each NPC entry follows this structure:
 
 ```lua
-["Enemy Name"] = {
+["NPC Name"] = {
     npcId = 123,                    -- NPC ID (optional)
     level = {1, 5},                 -- Min and max level
-    zone = "Zone Name",             -- Zone where enemy is found
-    elite = true,                   -- (optional) If enemy is elite
+    zone = "Zone Name",             -- Zone where npc is found
+    elite = true,                   -- (optional) If npc is elite
     loot = {
         {
             itemId = 2589,          -- Item ID
@@ -96,9 +96,9 @@ The loot database is stored in `Database.lua` in the `DB.EnemyLoot` table. Each 
 },
 ```
 
-To add more enemies:
-1. Find the enemy's loot data (from databases like ClassicDB, Wowhead Classic, etc.)
-2. Add a new entry to the `DB.EnemyLoot` table
+To add more NPCs and their loot:
+1. Find the NPC loot data (from databases like ClassicDB, Wowhead Classic, etc.)
+2. Add a new entry to the `DB.NpcLoot` table
 3. Reload the UI to rebuild the item sources cache
 
 ### VSCode Extensions
@@ -110,21 +110,6 @@ The following extensions are recommended for development:
 - **Lua** - Lua language support
 - **XML** - XML language support
 
-## Known Limitations
-
-- The current database only includes a small sample of enemies (Defias Bandit, Kobold Tunneler, Hogger)
-- You'll need to populate the database with more enemy data for full functionality
-- Item icons are not yet implemented (would require actual item data from the game)
-
-## Future Enhancements
-
-- Add more comprehensive enemy database
-- Import data from external sources
-- Show item icons in the loot table
-- Add zone filtering
-- Add level range filtering
-- Export/import custom loot data
-- Track personal loot history
 
 ## License
 
