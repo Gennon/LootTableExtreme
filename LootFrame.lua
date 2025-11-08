@@ -3,7 +3,6 @@
 
 local frame = nil
 local scrollFrame = nil
-local scrollChild = nil
 local lootRows = {}
 
 -- Constants
@@ -27,38 +26,6 @@ local currentNpc = nil
 local filteredLoot = {}
 local updateTimer = nil
 local emptyMessage = nil
-
--- Attach tooltip handlers to a loot row (separated for reuse)
-function LootTableExtreme:SetupRowTooltip(row)
-    if not row then return end
-    row:EnableMouse(true)
-
-    row:SetScript("OnEnter", function(self)
-        local item = self.item
-        if not item then return end
-
-        GameTooltip:Hide()
-        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-
-        if item.itemId then
-            local _, itemLink = GetItemInfo(item.itemId)
-            if itemLink and GameTooltip.SetHyperlink then
-                GameTooltip:SetHyperlink(itemLink)
-            elseif itemLink and GameTooltip.SetItem then
-                GameTooltip:SetItem(itemLink)
-            else
-                GameTooltip:SetText(item.name or "Unknown Item")
-            end
-        else
-            GameTooltip:SetText(item.name or "Unknown Item")
-        end
-        GameTooltip:Show()
-    end)
-
-    row:SetScript("OnLeave", function(self)
-        GameTooltip:Hide()
-    end)
-end
 
 -- Helper: create or return an existing loot row. Rows are parented to the
 -- faux scroll frame so FauxScrollFrame APIs work correctly.
@@ -95,7 +62,10 @@ local function CreateOrGetRow(index)
     row.questMarker:SetTextColor(1, 0.82, 0)
     row.questMarker:Hide()
 
-    LootTableExtreme:SetupRowTooltip(row)
+    -- Attach tooltip handlers if the shared helper is available (Tooltip.lua may load later)
+    if LootTableExtreme.SetupRowTooltip then
+        LootTableExtreme:SetupRowTooltip(row)
+    end
     row:Hide()
     lootRows[index] = row
     return row
@@ -116,7 +86,7 @@ function LootTableExtreme:InitializeLootFrame()
     bg:SetVertTile(true)
     
     -- Ensure scroll frame is visible
-    scrollFrame:Show()
+    if scrollFrame and scrollFrame.Show then scrollFrame:Show() end
 
     -- Create rows parented to the faux scroll frame (visible-slot frames).
     for i = 1, MAX_DISPLAYED_ROWS do
@@ -155,7 +125,7 @@ function LootTableExtreme:InitializeLootFrame()
     end
     
     -- Setup filter checkboxes (only if filters frame exists)
-    if LootTableExtremeFrameFilters then
+    if _G["LootTableExtremeFrameFilters"] then
         self:CreateFilterCheckboxes()
     end
     
@@ -280,7 +250,7 @@ function LootTableExtreme:ShowNpcLoot(npcNameOrId)
     
     -- Reset scroll position to top
     FauxScrollFrame_SetOffset(scrollFrame, 0)
-    scrollFrame:SetVerticalScroll(0)
+    if scrollFrame and scrollFrame.SetVerticalScroll then scrollFrame:SetVerticalScroll(0) end
     
     -- Update header
     local headerTitle = _G["LootTableExtremeFrameHeaderTitle"]
@@ -297,7 +267,7 @@ function LootTableExtreme:ShowNpcLoot(npcNameOrId)
     
     -- Apply filters and show
     self:ApplyFilters()
-    frame:Show()
+    if frame and frame.Show then frame:Show() end
 end
 
 -- Apply current filters to loot table
@@ -393,9 +363,12 @@ function LootTableExtreme:UpdateLootDisplay()
                 row:Hide()
             else
                 -- Populate item data
-                local itemName, _, itemQuality, _, _, _, _, _, _, itemTexture
+                local itemName, itemQuality, itemTexture
                 if item.itemId then
-                    itemName, _, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
+                    local info = { GetItemInfo(item.itemId) }
+                    itemName = info[1]
+                    itemQuality = info[3]
+                    itemTexture = info[10]
                 end
 
                 local quality = itemQuality or item.quality
@@ -460,11 +433,11 @@ end
 
 -- Toggle loot frame visibility
 function LootTableExtreme:ToggleLootFrame()
-    if frame:IsShown() then
+    if frame and frame.IsShown and frame:IsShown() then
         frame:Hide()
     else
         if currentNpc then
-            frame:Show()
+            if frame and frame.Show then frame:Show() end
         else
             self:Print("No NPC selected. Target an NPC and use /lte target")
         end
