@@ -27,6 +27,112 @@ local filteredLoot = {}
 local updateTimer = nil
 local emptyMessage = nil
 
+-- Small wrapper to fetch item info safely and keep linter happy.
+local function FetchItemInfo(itemId)
+    if not itemId then return nil, nil, nil end
+    -- Use a single table pack to avoid multi-assignment deprecation warnings
+    local info = { GetItemInfo(itemId) }
+    return info[1], info[3], info[10]
+end
+
+-- Compute how many visible slots fit in the scroll viewport
+local function ComputeVisibleSlots()
+    local visible = MAX_DISPLAYED_ROWS
+    if scrollFrame and scrollFrame.GetHeight then
+        local h = scrollFrame:GetHeight() or 0
+        visible = math.max(1, math.floor(h / LOOT_ROW_HEIGHT))
+    end
+    return visible
+end
+
+
+-- Hide a set of rows from 1..n
+local function HideRows(n)
+    for i = 1, n do if lootRows[i] then lootRows[i]:Hide() end end
+end
+
+-- Render a single row for visible slot i
+local function renderRowAt(self, i, offset, db)
+    local row = lootRows[i]
+    if not row then return end
+    local index = i + offset
+    local numLoot = #filteredLoot
+
+    if index > numLoot then
+        row.item = nil
+        if row.Hide then row:Hide() end
+        return
+    end
+
+    local item = filteredLoot[index]
+    if not item then
+        row.item = nil
+        if row.Hide then row:Hide() end
+        return
+    end
+
+    local itemName, itemQuality, itemTexture = FetchItemInfo(item.itemId)
+    local quality = itemQuality or item.quality
+    local color = db and db.GetQualityColor and db:GetQualityColor(quality) or { r = 1, g = 1, b = 1 }
+
+    if item.itemId then
+        if itemTexture and row.icon and row.icon.SetTexture then
+            row.icon:SetTexture(itemTexture)
+            row.icon:Show()
+        else
+            if row.icon and row.icon.Hide then row.icon:Hide() end
+        end
+
+        if itemName and row.name and row.name.SetText then
+            row.name:SetText(itemName)
+        else
+            if row.name and row.name.SetText then row.name:SetText(item.name) end
+        end
+    else
+        if row.icon and row.icon.Hide then row.icon:Hide() end
+        if row.name and row.name.SetText then row.name:SetText(item.name) end
+    end
+
+    if row.name and row.name.SetTextColor then
+        row.name:SetTextColor(color.r, color.g, color.b)
+    end
+
+    if row.chance and row.chance.SetText then
+        row.chance:SetText(string.format("%.1f%%", item.dropChance))
+    end
+
+    if item.isQuestItem then
+        if row.questMarker and row.questMarker.Show then row.questMarker:Show() end
+    else
+        if row.questMarker and row.questMarker.Hide then row.questMarker:Hide() end
+    end
+
+    row.item = item
+
+    if row.ClearAllPoints and row.SetPoint and scrollFrame then
+        row:ClearAllPoints()
+        local y = -(i-1) * LOOT_ROW_HEIGHT
+        row:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 0, y)
+    end
+
+    if row and row.Show then row:Show() end
+end
+
+local function RefreshVisuals()
+    if scrollFrame and scrollFrame.Hide and scrollFrame.Show then
+        scrollFrame:Hide(); scrollFrame:Show()
+    end
+end
+
+local function ScheduleRetry()
+    if updateTimer and updateTimer.Cancel then updateTimer:Cancel() end
+    updateTimer = C_Timer.NewTimer(0.5, function()
+        if frame and frame.IsShown and frame:IsShown() then
+            LootTableExtreme:UpdateLootDisplay()
+        end
+    end)
+end
+
 -- Helper: create or return an existing loot row. Rows are parented to the
 -- faux scroll frame so FauxScrollFrame APIs work correctly.
 local function CreateOrGetRow(index)
@@ -69,6 +175,11 @@ local function CreateOrGetRow(index)
     row:Hide()
     lootRows[index] = row
     return row
+end
+
+-- Ensure rows up to n exist (defined after CreateOrGetRow)
+local function EnsureRows(n)
+    for i = 1, n do CreateOrGetRow(i) end
 end
 
 -- Initialize the loot frame
@@ -319,7 +430,7 @@ end
 -- Update the loot display
 function LootTableExtreme:UpdateLootDisplay()
     local numLoot = #filteredLoot
-    
+
     -- Show or hide the empty message depending on whether we have loot
     if emptyMessage then
         if numLoot == 0 then
@@ -328,107 +439,37 @@ function LootTableExtreme:UpdateLootDisplay()
             emptyMessage:Hide()
         end
     end
-    
+
     if not scrollFrame then return end
 
-    -- Compute visible slots from scrollFrame height (fallback to MAX_DISPLAYED_ROWS)
-    local visibleSlots = MAX_DISPLAYED_ROWS
-    if scrollFrame.GetHeight then
-        local h = scrollFrame:GetHeight() or 0
-        visibleSlots = math.max(1, math.floor(h / LOOT_ROW_HEIGHT))
-    end
-
-    -- Ensure visible slot rows exist
-    for i = 1, visibleSlots do CreateOrGetRow(i) end
+    local visibleSlots = ComputeVisibleSlots()
+    EnsureRows(visibleSlots)
 
     FauxScrollFrame_Update(scrollFrame, numLoot, visibleSlots, LOOT_ROW_HEIGHT)
     local offset = FauxScrollFrame_GetOffset(scrollFrame)
 
-    local needsRetry = false
-
     if numLoot == 0 then
-        for i = 1, visibleSlots do if lootRows[i] then lootRows[i]:Hide() end end
-        scrollFrame:Hide(); scrollFrame:Show()
+        HideRows(visibleSlots)
+        RefreshVisuals()
         return
     end
 
+    local db = self.Database
+    local needsRetry = false
     for i = 1, visibleSlots do
+        local beforeCount = #filteredLoot
+        renderRowAt(self, i, offset, db)
+        -- if FetchItemInfo didn't return data for a visible item, mark retry
         local row = lootRows[i]
-        local index = i + offset
-
-        if index <= numLoot then
-            local item = filteredLoot[index]
-
-            if not item then
-                row:Hide()
-            else
-                -- Populate item data
-                local itemName, itemQuality, itemTexture
-                if item.itemId then
-                    local info = { GetItemInfo(item.itemId) }
-                    itemName = info[1]
-                    itemQuality = info[3]
-                    itemTexture = info[10]
-                end
-
-                local quality = itemQuality or item.quality
-                local color = self.Database:GetQualityColor(quality)
-
-                if item.itemId then
-                    if itemTexture then
-                        row.icon:SetTexture(itemTexture)
-                        row.icon:Show()
-                    else
-                        row.icon:Hide()
-                        needsRetry = true
-                    end
-
-                    if itemName then
-                        row.name:SetText(itemName)
-                    else
-                        row.name:SetText(item.name)
-                        needsRetry = true
-                    end
-                else
-                    row.icon:Hide()
-                    row.name:SetText(item.name)
-                end
-
-                row.name:SetTextColor(color.r, color.g, color.b)
-                row.chance:SetText(string.format("%.1f%%", item.dropChance))
-
-                if item.isQuestItem then
-                    row.questMarker:Show()
-                else
-                    row.questMarker:Hide()
-                end
-
-                row.item = item
-
-                -- Position by visible slot (i) relative to scrollFrame
-                row:ClearAllPoints()
-                local y = -(i-1) * LOOT_ROW_HEIGHT
-                row:SetPoint("TOPLEFT", scrollFrame, "TOPLEFT", 0, y)
-
-                row:Show()
-            end
-        else
-            if row then row.item = nil; row:Hide() end
+        if row and row.item and row.item.itemId then
+            local n, q, tex = FetchItemInfo(row.item.itemId)
+            if not n or not tex then needsRetry = true end
         end
     end
 
-    -- Refresh visuals
-    scrollFrame:Hide(); scrollFrame:Show()
+    RefreshVisuals()
 
-    -- Schedule a retry if some items weren't loaded yet
-    if needsRetry then
-        if updateTimer then updateTimer:Cancel() end
-        updateTimer = C_Timer.NewTimer(0.5, function()
-            if frame and frame:IsShown() then
-                LootTableExtreme:UpdateLootDisplay()
-            end
-        end)
-    end
+    if needsRetry then ScheduleRetry() end
 end
 
 -- Toggle loot frame visibility
