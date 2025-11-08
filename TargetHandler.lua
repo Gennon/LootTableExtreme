@@ -14,7 +14,7 @@ function LootTableExtreme:ShowTargetLoot()
         return
     end
     
-    self:ShowEnemyLoot(npcId)
+    self:ShowNpcLoot(npcId)
 end
 
 -- Get NPC ID from current target's GUID
@@ -50,21 +50,21 @@ function LootTableExtreme:OnTargetChanged()
         return
     end
     
-    -- Lookup and display by NPC ID. Call ShowEnemyLoot regardless of whether
+    -- Lookup and display by NPC ID. Call ShowNpcLoot regardless of whether
     -- the database has a record so the UI updates when switching to unknown NPCs.
-    self:ShowEnemyLoot(npcId)
+    self:ShowNpcLoot(npcId)
 end
 
--- Search for enemy and show loot
-function LootTableExtreme:SearchAndShowEnemy(searchTerm)
-    local results = self.Database:SearchEnemies(searchTerm)
+-- Search for NPC and show loot
+function LootTableExtreme:SearchAndShowNpc(searchTerm)
+    local results = self.Database:SearchNpcs(searchTerm)
     
     if #results == 0 then
-        self:Print("No enemies found matching: " .. searchTerm)
+        self:Print("No NPCs found matching: " .. searchTerm)
     elseif #results == 1 then
-        self:ShowEnemyLoot(results[1].name)
+        self:ShowNpcLoot(results[1].name)
     else
-        self:Print("Multiple enemies found:")
+        self:Print("Multiple NPCs found:")
         for i = 1, math.min(5, #results) do
             self:Print("  " .. results[i].name .. " (" .. results[i].zone .. ")")
         end

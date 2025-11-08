@@ -60,14 +60,6 @@ The scraper generates a file called `scraped_database.lua` containing formatted 
 },
 ```
 
-### Adding Scraped Data to Database
-
-1. Run the scraper
-2. Open `scraped_database.lua`
-3. Copy the generated enemy entries
-4. Paste them into `Database.lua` in the `DB.EnemyLoot` table
-5. Run the install script to deploy to WoW
-
 ### Notes
 
 - The scraper waits 2 seconds between requests to be respectful to Wowhead's servers

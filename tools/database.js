@@ -604,7 +604,7 @@ class ScraperDatabase {
 local DB = LootTableExtreme.Database
 
 -- Scraped enemy loot data
-DB.ScrapedLoot = {
+DB.LootDatabase = {
 `;
 
         for (const npc of npcs) {

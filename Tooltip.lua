@@ -1,11 +1,11 @@
 -- LootTableExtreme Tooltip Enhancement
--- Shows enemy drop sources when hovering over items
+-- Shows NPC drop sources when hovering over items
 
 local tooltipEnhanced = false
 
 -- Initialize tooltip hooks
 function LootTableExtreme:InitializeTooltips()
-    -- Hook into GameTooltip to add enemy drop information
+    -- Hook into GameTooltip to add NPC drop information
     GameTooltip:HookScript("OnTooltipSetItem", function(tooltip)
         LootTableExtreme:EnhanceItemTooltip(tooltip)
     end)
@@ -49,7 +49,7 @@ function LootTableExtreme:EnhanceItemTooltip(tooltip)
             
             local line = string.format("%d. %s%s%s - |cffffffff%.1f%%|r%s",
                 i,
-                source.enemyName,
+                source.npcName,
                 levelText,
                 eliteText,
                 source.dropChance,

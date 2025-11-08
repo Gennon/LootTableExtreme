@@ -1,5 +1,5 @@
 -- LootTableExtreme Loot Frame
--- Main UI for displaying enemy loot tables and scroll rendering
+-- Main UI for displaying NPC loot tables and scroll rendering
 
 local frame = nil
 local scrollFrame = nil
@@ -23,7 +23,7 @@ local function LTX_Debug(msg)
 end
 
 -- Current state
-local currentEnemy = nil
+local currentNpc = nil
 local filteredLoot = {}
 local updateTimer = nil
 local emptyMessage = nil
@@ -209,21 +209,21 @@ function LootTableExtreme:InitializeLootFrame()
     end
 end
 
--- Show loot for a specific enemy (by name or NPC ID)
-function LootTableExtreme:ShowEnemyLoot(enemyNameOrId)
-    local enemyData, enemyName
+-- Show loot for a specific NPC (by name or NPC ID)
+function LootTableExtreme:ShowNpcLoot(npcNameOrId)
+    local npcData, npcName
     
     -- Check if it's an NPC ID (number) or name (string)
-    if type(enemyNameOrId) == "number" then
-        enemyData, enemyName = self.Database:GetEnemyLootByNpcId(enemyNameOrId)
+    if type(npcNameOrId) == "number" then
+        npcData, npcName = self.Database:GetLootByNpcId(npcNameOrId)
     else
-        enemyName = enemyNameOrId
-        enemyData = self.Database:GetEnemyLoot(enemyName)
+        npcName = npcNameOrId
+        npcData = self.Database:GetLootByNpcName(npcName)
     end
     
-    if not enemyData then
+    if not npcData then
         -- No data found: show an empty window instead of returning so old loot doesn't remain visible
-        self:Print("No loot data found for: " .. tostring(enemyNameOrId))
+        self:Print("No loot data found for: " .. tostring(npcNameOrId))
 
         -- Use a display name for headers (prefer the in-game unit name if targetable)
         local displayName = nil
@@ -234,9 +234,9 @@ function LootTableExtreme:ShowEnemyLoot(enemyNameOrId)
             end
         end
         if not displayName then
-            displayName = enemyName or tostring(enemyNameOrId)
+            displayName = npcName or tostring(npcNameOrId)
         end
-        currentEnemy = displayName
+        currentNpc = displayName
 
         -- Reset scroll position safely
         if scrollFrame then
@@ -276,7 +276,7 @@ function LootTableExtreme:ShowEnemyLoot(enemyNameOrId)
         return
     end
     
-    currentEnemy = enemyName
+    currentNpc = npcName
     
     -- Reset scroll position to top
     FauxScrollFrame_SetOffset(scrollFrame, 0)
@@ -285,9 +285,9 @@ function LootTableExtreme:ShowEnemyLoot(enemyNameOrId)
     -- Update header
     local headerTitle = _G["LootTableExtremeFrameHeaderTitle"]
     local headerSubtitle = _G["LootTableExtremeFrameHeaderSubtitle"]
-    if headerTitle then headerTitle:SetText(enemyName) end
-    local subtitle = string.format("Level %d-%d | %s", enemyData.level[1], enemyData.level[2], enemyData.zone or "Unknown")
-    if enemyData.elite then
+    if headerTitle then headerTitle:SetText(npcName) end
+    local subtitle = string.format("Level %d-%d | %s", npcData.level[1], npcData.level[2], npcData.zone or "Unknown")
+    if npcData.elite then
         subtitle = subtitle .. " (Elite)"
     end
     if headerSubtitle then headerSubtitle:SetText(subtitle) end
@@ -302,31 +302,31 @@ end
 
 -- Apply current filters to loot table
 function LootTableExtreme:ApplyFilters()
-    -- If there's no selected enemy, clear the filtered list and update the UI
-    if not currentEnemy then
+    -- If there's no selected NPC, clear the filtered list and update the UI
+    if not currentNpc then
         filteredLoot = {}
         self:UpdateLootDisplay()
         return
     end
 
-    local enemyData = self.Database:GetEnemyLoot(currentEnemy)
+    local npcData = self.Database:GetLootByNpcName(currentNpc)
 
-    -- If we couldn't find the enemy in the database, clear the list and update
-    if not enemyData then
+    -- If we couldn't find the NPC in the database, clear the list and update
+    if not npcData then
         filteredLoot = {}
         self:UpdateLootDisplay()
         return
     end
 
-    -- If the enemy has no loot table, clear and update so old rows are not shown
-    if not enemyData.loot or #enemyData.loot == 0 then
+    -- If the NPC has no loot table, clear and update so old rows are not shown
+    if not npcData.loot or #npcData.loot == 0 then
         filteredLoot = {}
         self:UpdateLootDisplay()
         return
     end
 
     local advancedMode = LootTableExtremeDB and LootTableExtremeDB.ui and LootTableExtremeDB.ui.advancedMode
-    filteredLoot = self:FilterLootData(enemyData.loot, advancedMode)
+    filteredLoot = self:FilterLootData(npcData.loot, advancedMode)
 
     -- Reset scroll to top when applying a new filter set
     if scrollFrame then
@@ -341,7 +341,7 @@ end
 
 -- Refresh current display (for mode changes)
 function LootTableExtreme:RefreshCurrentDisplay()
-    if currentEnemy then
+    if currentNpc then
         self:ApplyFilters()
     end
 end
@@ -463,10 +463,10 @@ function LootTableExtreme:ToggleLootFrame()
     if frame:IsShown() then
         frame:Hide()
     else
-        if currentEnemy then
+        if currentNpc then
             frame:Show()
         else
-            self:Print("No enemy selected. Target an enemy and use /lte target")
+            self:Print("No NPC selected. Target an NPC and use /lte target")
         end
     end
 end
