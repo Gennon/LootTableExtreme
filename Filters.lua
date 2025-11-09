@@ -10,12 +10,12 @@ function LootTableExtreme:CreateFilterCheckboxes()
     local DB = self.Database
     
     local filters = {
-        {key = "showQuestItems", label = "Quest Items", x = 20, y = -25},
-        {key = "showPoor", label = "Poor", x = 20, y = -75, quality = DB.Quality.POOR},
-        {key = "showCommon", label = "Common", x = 90, y = -75, quality = DB.Quality.COMMON},
-        {key = "showUncommon", label = "Uncommon", x = 180, y = -75, quality = DB.Quality.UNCOMMON},
-        {key = "showRare", label = "Rare", x = 280, y = -75, quality = DB.Quality.RARE},
-        {key = "showEpic", label = "Epic", x = 340, y = -75, quality = DB.Quality.EPIC},
+        {key = "showQuestItems", label = "Quest Items", x = 0, y = -25},
+        {key = "showPoor", label = "Poor", x = 0, y = -65, quality = DB.Quality.POOR},
+        {key = "showCommon", label = "Common", x = 70, y = -65, quality = DB.Quality.COMMON},
+        {key = "showUncommon", label = "Uncommon", x = 0, y = -105, quality = DB.Quality.UNCOMMON},
+        {key = "showRare", label = "Rare", x = 105, y = -105, quality = DB.Quality.RARE},
+        {key = "showEpic", label = "Epic", x = 170, y = -105, quality = DB.Quality.EPIC},
     }
     
     for _, filter in ipairs(filters) do
@@ -40,7 +40,7 @@ function LootTableExtreme:CreateFilterCheckboxes()
     
     -- Min drop chance slider
     local slider = CreateFrame("Slider", "LTE_MinDropChanceSlider", filtersFrame, "OptionsSliderTemplate")
-    slider:SetPoint("TOPLEFT", 20, -140)
+    slider:SetPoint("TOPLEFT", 20, -170)
     slider:SetMinMaxValues(0, 50)
     slider:SetValue(LootTableExtremeDB.filters.minDropChance)
     slider:SetValueStep(1)

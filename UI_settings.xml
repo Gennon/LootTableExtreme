@@ -2,7 +2,7 @@
 ..\FrameXML\UI.xsd">
     <!-- Loot Table Viewer - Settings window -->
     <Frame name="LootTableExtremeSettings" parent="UIParent" frameStrata="DIALOG" toplevel="true" movable="true" enableMouse="true" hidden="true">
-        <Size x="480" y="420"/>
+        <Size x="260" y="240"/>
         <Anchors>
             <Anchor point="CENTER"/>
         </Anchors>
@@ -33,7 +33,7 @@
                 <Size x="440" y="160"/>
                 <Anchors>
                     <Anchor point="TOPLEFT">
-                        <Offset x="16" y="-30"/>
+                        <Offset x="10" y="-10"/>
                     </Anchor>
                 </Anchors>
                 <Layers>
@@ -41,7 +41,7 @@
                         <FontString name="LootTableExtremeFiltersLabel" inherits="GameFontNormal" text="Filters">
                             <Anchors>
                                 <Anchor point="TOPLEFT">
-                                    <Offset x="4" y="-6"/>
+                                    <Offset x="0" y="0"/>
                                 </Anchor>
                             </Anchors>
                         </FontString>
