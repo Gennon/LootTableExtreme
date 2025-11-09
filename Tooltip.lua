@@ -35,25 +35,13 @@ function LootTableExtreme:EnhanceItemTooltip(tooltip)
         
         -- Add each source
         for i, source in ipairs(sources) do
-            local levelText = ""
-            if source.level then
-                if source.level[1] == source.level[2] then
-                    levelText = string.format(" (Lv %d)", source.level[1])
-                else
-                    levelText = string.format(" (Lv %d-%d)", source.level[1], source.level[2])
-                end
-            end
             
-            local eliteText = source.elite and " |cffff0000[Elite]|r" or ""
-            local zoneText = source.zone and (" - " .. source.zone) or ""
+            local zoneText = source.zone and (source.zone) or ""
             
-            local line = string.format("%d. %s%s%s - |cffffffff%.1f%%|r%s",
-                i,
+            local line = string.format("%s - %s(|cffffffff%.1f%%|r)",
+                zoneText,
                 source.npcName,
-                levelText,
-                eliteText,
-                source.dropChance,
-                zoneText
+                source.dropChance
             )
             
             tooltip:AddLine(line, 0.8, 0.8, 0.8, true)
