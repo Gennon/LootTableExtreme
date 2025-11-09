@@ -1,0 +1,131 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      increment:
+        description: 'Version increment type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Extract version from TOC
+        id: version
+        run: |
+          # Extract version from LootTableExtreme.toc
+          TOC_VERSION=$(grep "^## Version:" LootTableExtreme.toc | sed 's/^## Version: //')
+          echo "toc_version=$TOC_VERSION" >> $GITHUB_OUTPUT
+          echo "Found TOC version: $TOC_VERSION"
+          
+          # Parse Major.Minor.Patch
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$TOC_VERSION"
+          echo "major=$MAJOR" >> $GITHUB_OUTPUT
+          echo "minor=$MINOR" >> $GITHUB_OUTPUT
+          echo "patch=$PATCH" >> $GITHUB_OUTPUT
+          
+          # Increment version if requested
+          if [ "${{ github.event.inputs.increment }}" = "major" ]; then
+            MAJOR=$((MAJOR + 1))
+            MINOR=0
+            PATCH=0
+          elif [ "${{ github.event.inputs.increment }}" = "minor" ]; then
+            MINOR=$((MINOR + 1))
+            PATCH=0
+          elif [ "${{ github.event.inputs.increment }}" = "patch" ]; then
+            PATCH=$((PATCH + 1))
+          fi
+          
+          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "New version: $NEW_VERSION"
+      
+      - name: Calculate build number
+        id: build
+        run: |
+          # Count total number of commits as build number
+          BUILD_NUMBER=$(git rev-list --count HEAD)
+          echo "number=$BUILD_NUMBER" >> $GITHUB_OUTPUT
+          echo "Build number: $BUILD_NUMBER"
+      
+      - name: Update TOC version
+        run: |
+          sed -i "s/^## Version: .*/## Version: ${{ steps.version.outputs.new_version }}/" LootTableExtreme.toc
+          echo "Updated TOC to version ${{ steps.version.outputs.new_version }}"
+      
+      - name: Create release package
+        id: package
+        run: |
+          VERSION="${{ steps.version.outputs.new_version }}.${{ steps.build.outputs.number }}"
+          FILENAME="LootTableExtreme_${VERSION}_Vanilla.zip"
+          
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "filename=$FILENAME" >> $GITHUB_OUTPUT
+          
+          # Create temporary directory with addon structure
+          mkdir -p package/LootTableExtreme
+          
+          # Copy addon files (exclude tooling, git files, and metadata)
+          cp *.lua package/LootTableExtreme/
+          cp *.xml package/LootTableExtreme/
+          cp *.toc package/LootTableExtreme/
+          
+          # Create zip file
+          cd package
+          zip -r "../$FILENAME" LootTableExtreme/
+          cd ..
+          
+          echo "Created package: $FILENAME"
+          ls -lh "$FILENAME"
+      
+      - name: Commit version bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add LootTableExtreme.toc
+          git commit -m "chore: bump version to ${{ steps.version.outputs.new_version }}"
+          git push
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.package.outputs.version }}
+          name: LootTableExtreme v${{ steps.package.outputs.version }} (Vanilla)
+          body: |
+            ## LootTableExtreme v${{ steps.package.outputs.version }}
+            
+            **WoW Classic (Vanilla) Release**
+            
+            ### Installation
+            1. Download `${{ steps.package.outputs.filename }}`
+            2. Extract the zip file
+            3. Move the `LootTableExtreme` folder to your `World of Warcraft\_classic_\Interface\AddOns\` directory
+            4. Restart WoW if it's running
+            
+            ### Version Info
+            - Base Version: ${{ steps.version.outputs.new_version }}
+            - Build Number: ${{ steps.build.outputs.number }}
+            - Full Version: ${{ steps.package.outputs.version }}
+            
+            ### Changes
+            See commit history for detailed changes.
+          files: ${{ steps.package.outputs.filename }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

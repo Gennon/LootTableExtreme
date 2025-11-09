@@ -92,7 +92,40 @@ Quick verification checklist (smoke tests)
 
 Packaging and release notes
 ---------------------------
-- There is no automated packaging in the repo. For a release, create a zip with the addon files (Lua, XML, TOC, and any assets) preserving the folder name `LootTableExtreme` at the root of the zip.
+### Automated Release Workflow (GitHub Actions)
+
+The repository uses GitHub Actions to automate the release process. The workflow is defined in `.github/workflows/release.yml`.
+
+**Versioning Scheme:**
+- Format: `Major.Minor.Patch.Build_Vanilla`
+- `Major.Minor.Patch` is maintained in `LootTableExtreme.toc` (## Version: field)
+- `Build` is auto-incremented based on the total commit count
+- Example: `LootTableExtreme_0.1.2.145_Vanilla.zip`
+
+**Creating a Release:**
+
+1. Navigate to your repository on GitHub
+2. Go to "Actions" tab
+3. Select "Create Release" workflow
+4. Click "Run workflow"
+5. Choose version increment type:
+   - `major` - Breaking changes (e.g., 0.1.0 → 1.0.0)
+   - `minor` - New features (e.g., 0.1.0 → 0.2.0)
+   - `patch` - Bug fixes (e.g., 0.1.0 → 0.1.1)
+6. Click "Run workflow"
+
+The workflow will:
+- Extract the current version from `LootTableExtreme.toc`
+- Increment the version according to your selection
+- Calculate the build number (total commits)
+- Update the TOC file with the new version
+- Create a zip file with naming: `LootTableExtreme_Major.Minor.Patch.Build_Vanilla.zip`
+- Commit the version bump to the repository
+- Create a GitHub release with the zip file attached
+- Generate release notes with installation instructions
+
+**Manual Release (if needed):**
+- Create a zip with the addon files (Lua, XML, TOC) preserving the folder name `LootTableExtreme` at the root of the zip.
 - Update `README.md` with notable changes when releasing a user-facing version.
 
 PR and commit guidance
