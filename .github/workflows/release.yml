@@ -1,3 +1,5 @@
+# Auto-generated release workflow for LootTableExtreme
+# Ensures GitHub Actions detects and lists this workflow
 name: Create Release
 
 on:
