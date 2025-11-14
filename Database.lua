@@ -70,6 +70,11 @@ function DB:GetLootByNpcName(npcName)
     -- Enrich loot data with WoW item information
     if npcData.loot then
         for _, item in ipairs(npcData.loot) do
+            -- Always check for quest item status if not already determined
+            if item.isQuestItem == nil and item.itemId then
+                item.isQuestItem = self:IsQuestItem(item.itemId)
+            end
+            
             if not item.name then
                 -- Fetch item data from WoW API
                 local itemName, itemLink, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
@@ -77,9 +82,6 @@ function DB:GetLootByNpcName(npcName)
                     item.name = itemName
                     item.quality = itemQuality or DB.Quality.COMMON
                     item.texture = itemTexture
-                    
-                    -- Check if it's a quest item by scanning tooltip
-                    item.isQuestItem = self:IsQuestItem(item.itemId)
                 end
             end
         end
