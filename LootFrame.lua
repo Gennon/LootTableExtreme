@@ -138,7 +138,7 @@ end
 local function CreateOrGetRow(index)
     if lootRows[index] then return lootRows[index] end
     local parent = scrollFrame or UIParent
-    local row = CreateFrame("Frame", "LootTableExtremeLootRow" .. index, parent)
+    local row = CreateFrame("Button", "LootTableExtremeLootRow" .. index, parent)
     row:SetHeight(LOOT_ROW_HEIGHT)
     local w = 300
     if parent and parent.GetWidth then

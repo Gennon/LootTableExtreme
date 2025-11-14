@@ -96,6 +96,39 @@ function LootTableExtreme:SetupRowTooltip(row)
     row:SetScript("OnLeave", function(self)
         GameTooltip:Hide()
     end)
+
+    -- Make rows clickable so players can shift-click items into chat
+    -- Register both left and right clicks to avoid swallowing other interactions
+    row:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+    -- Use the outer `row` closure rather than `self` because some runtimes may call the
+    -- OnClick handler without providing a valid `self`. This makes the handler defensive.
+    row:SetScript("OnClick", function(_, button)
+        if not row then return end
+        local item = row.item
+        if not item then return end
+
+        -- If the user pressed the chat-link modifier (by default Shift), handle left/right
+        if IsModifiedClick and IsModifiedClick("CHATLINK") then
+            -- Normalize button value: handlers may receive 'LeftButton', 'LeftButtonUp', etc.
+            local btn = tostring(button or "")
+            -- Left: insert item link into chat (existing behavior)
+            if string.find(btn, "Left") then
+                if item.itemId then
+                    local info = { GetItemInfo(item.itemId) }
+                    local itemLink = info[2]
+                    if itemLink then
+                        if ChatEdit_InsertLink then
+                            ChatEdit_InsertLink(itemLink)
+                        else
+                            if ChatFrame_OpenChat then ChatFrame_OpenChat(itemLink) end
+                        end
+                        return
+                    end
+                end
+            end            
+        end
+        -- Preserve other click behavior: (no-op here) future actions can be added by the addon
+    end)
 end
 
 -- Minimap button functionality
