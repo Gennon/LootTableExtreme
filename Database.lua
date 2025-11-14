@@ -70,6 +70,11 @@ function DB:GetLootByNpcName(npcName)
     -- Enrich loot data with WoW item information
     if npcData.loot then
         for _, item in ipairs(npcData.loot) do
+            -- Always check for quest item status if not already determined
+            if item.isQuestItem == nil and item.itemId then
+                item.isQuestItem = self:IsQuestItem(item.itemId)
+            end
+            
             if not item.name then
                 -- Fetch item data from WoW API
                 local itemName, itemLink, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
@@ -77,9 +82,6 @@ function DB:GetLootByNpcName(npcName)
                     item.name = itemName
                     item.quality = itemQuality or DB.Quality.COMMON
                     item.texture = itemTexture
-                    
-                    -- Check if it's a quest item by scanning tooltip
-                    item.isQuestItem = self:IsQuestItem(item.itemId)
                 end
             end
         end
@@ -110,7 +112,19 @@ end
 
 -- Check if an item is a quest item
 function DB:IsQuestItem(itemId)
-    -- Create a hidden tooltip to scan the item
+    if not itemId then return false end
+    
+    -- First try using GetItemInfo to check item class (class 12 = Quest items in Classic)
+    local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, 
+          itemEquipLoc, itemTexture, sellPrice, classID = GetItemInfo(itemId)
+    
+    -- In Classic WoW, quest items have classID 12 (if GetItemInfo returns it)
+    -- Note: GetItemInfo may return nil if item not cached yet
+    if classID and classID == 12 then
+        return true
+    end
+    
+    -- Fallback: scan tooltip for quest-related text (for when item cache isn't loaded)
     if not self.scanTooltip then
         self.scanTooltip = CreateFrame("GameTooltip", "LootTableExtremeScanTooltip", nil, "GameTooltipTemplate")
         self.scanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
@@ -119,12 +133,12 @@ function DB:IsQuestItem(itemId)
     self.scanTooltip:ClearLines()
     self.scanTooltip:SetHyperlink("item:" .. itemId)
     
-    -- Check tooltip lines for quest-related text
+    -- Check tooltip lines for "Quest Item" text (more specific than just "Quest")
     for i = 1, self.scanTooltip:NumLines() do
         local line = getglobal("LootTableExtremeScanTooltipTextLeft" .. i)
         if line then
             local text = line:GetText()
-            if text and (string.find(text, "Quest") or string.find(text, "Unique")) then
+            if text and string.find(text, "Quest Item") then
                 return true
             end
         end

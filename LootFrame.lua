@@ -48,7 +48,14 @@ end
 
 -- Hide a set of rows from 1..n
 local function HideRows(n)
-    for i = 1, n do if lootRows[i] then lootRows[i]:Hide() end end
+    for i = 1, n do 
+        if lootRows[i] then 
+            lootRows[i]:Hide()
+            if lootRows[i].questMarker and lootRows[i].questMarker.Hide then
+                lootRows[i].questMarker:Hide()
+            end
+        end 
+    end
 end
 
 -- Render a single row for visible slot i
@@ -60,6 +67,7 @@ local function renderRowAt(self, i, offset, db)
 
     if index > numLoot then
         row.item = nil
+        if row.questMarker and row.questMarker.Hide then row.questMarker:Hide() end
         if row.Hide then row:Hide() end
         return
     end
@@ -67,6 +75,7 @@ local function renderRowAt(self, i, offset, db)
     local item = filteredLoot[index]
     if not item then
         row.item = nil
+        if row.questMarker and row.questMarker.Hide then row.questMarker:Hide() end
         if row.Hide then row:Hide() end
         return
     end
@@ -101,12 +110,6 @@ local function renderRowAt(self, i, offset, db)
         row.chance:SetText(string.format("%.1f%%", item.dropChance))
     end
 
-    if item.isQuestItem then
-        if row.questMarker and row.questMarker.Show then row.questMarker:Show() end
-    else
-        if row.questMarker and row.questMarker.Hide then row.questMarker:Hide() end
-    end
-
     row.item = item
 
     if row.ClearAllPoints and row.SetPoint and scrollFrame then
@@ -116,6 +119,13 @@ local function renderRowAt(self, i, offset, db)
     end
 
     if row and row.Show then row:Show() end
+
+    -- Set quest marker visibility AFTER showing the row to avoid UI timing issues
+    if item.isQuestItem then
+        if row.questMarker and row.questMarker.Show then row.questMarker:Show() end
+    else
+        if row.questMarker and row.questMarker.Hide then row.questMarker:Hide() end
+    end
 end
 
 local function RefreshVisuals()
@@ -162,10 +172,13 @@ local function CreateOrGetRow(index)
     row.chance:SetWidth(80)
     row.chance:SetJustifyH("RIGHT")
 
-    row.questMarker = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    row.questMarker = row:CreateFontString(nil, "OVERLAY", "GameFontNormal")
     row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", -((LootTableExtreme.UI_MARGIN or 8) / 2), 0)
     row.questMarker:SetText("Q")
     row.questMarker:SetTextColor(1, 0.82, 0)
+    row.questMarker:SetJustifyH("RIGHT")
+    row.questMarker:SetWidth(18)
+    if row.questMarker.SetDrawLayer then row.questMarker:SetDrawLayer("OVERLAY", 1) end
     row.questMarker:Hide()
 
     -- Attach tooltip handlers if the shared helper is available (Tooltip.lua may load later)
