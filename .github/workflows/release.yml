@@ -116,7 +116,7 @@ jobs:
             ### Installation
             1. Download `${{ steps.package.outputs.filename }}`
             2. Extract the zip file
-            3. Move the `LootTableExtreme` folder to your `World of Warcraft\_classic_\Interface\AddOns\` directory
+            3. Move the `LootTableExtreme` folder to your `World of Warcraft\_classic_era_\Interface\AddOns\` directory
             4. Restart WoW if it's running
             
             ### Version Info
