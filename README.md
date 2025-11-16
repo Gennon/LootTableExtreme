@@ -9,19 +9,31 @@ A World of Warcraft Classic (Vanilla) addon that provides comprehensive loot tab
 - Filter by item quality (Poor, Common, Uncommon, Rare, Epic)
 - Filter by minimum drop chance percentage
 - Show/hide quest items separately
-- Search npcs by name
 - View loot for your current target with one click
+
+
+![Loot Table Viewer Screenshot](docs/features_01.png)
 
 ### 2. Item Tooltip Enhancement
 - Hover over any item in your bags to see the top 3 NPCs that drop it
-- Shows npc level, zone, elite status, and drop percentage
+- Shows npc level, zone and drop percentage
 - Helps you quickly find where to farm specific items
+
+![Item Tooltip Enhancement Screenshot](docs/features_02.png)
+
+### Planned Features
+- Resizable loot table window
+- Show vendor sources for items
+- Show pickpocketing drop chances1
+- Search NPCs by name
+- Search items by name
+
 
 ## Installation
 
 1. Copy the `LootTableExtreme` folder to your WoW Classic addons directory:
-   - Windows: `C:\Program Files (x86)\World of Warcraft\_classic_\Interface\AddOns\`
-   - Mac: `/Applications/World of Warcraft/_classic_/Interface/AddOns/`
+   - Windows: `C:\Program Files (x86)\World of Warcraft\_classic_era_\Interface\AddOns\`
+   - Mac: `/Applications/World of Warcraft/_classic_era_/Interface/AddOns/`
 
 2. Restart WoW or reload your UI (`/reload`)
 
@@ -46,18 +58,16 @@ A World of Warcraft Classic (Vanilla) addon that provides comprehensive loot tab
 
 The main window allows you to:
 
-1. **Search for NPCs**: Type an NPC name in the search box and click "Search NPCs"
-2. **Show target loot**: Click "Show Target" button or target an NPC and right-click the minimap button
-3. **Filter items**: Use the checkboxes to show/hide specific item qualities
-4. **Adjust minimum drop chance**: Use the slider to only show items above a certain drop percentage
+1. **Show target loot**: Click "Show Target" button or target an NPC and right-click the minimap button
+2. **Filter items**: Use the checkboxes to show/hide specific item qualities
+3. **Adjust minimum drop chance**: Use the slider to only show items above a certain drop percentage
 
 ### Default Filters
 
 By default, the addon shows:
 - Quest items (always visible when filter is on)
-- Items with >5% drop chance
-- Uncommon, Rare, and Epic quality items
-- Hides Poor and Common quality items (unless they're above the drop chance threshold)
+- Items with >0% drop chance
+- Shows all item qualities
 
 ## Development
 
@@ -65,12 +75,27 @@ By default, the addon shows:
 
 ```
 LootTableExtreme/
-├── LootTableExtreme.toc    # Addon manifest
-├── Core.lua                # Main addon initialization
-├── Database.lua            # Loot table database
-├── UI.xml                  # UI frame definitions
-├── LootFrame.lua           # Loot table viewer logic
-└── Tooltip.lua             # Tooltip enhancement and minimap button
+├── LootTableExtreme.toc      # Addon manifest
+├── Core.lua                  # Main addon initialization and commands
+├── Database.lua              # Database core and query functions
+├── LootDatabase.lua          # Auto-generated NPC loot data
+├── VendorDatabase.lua        # Auto-generated vendor item data
+├── PickpocketDatabase.lua    # Auto-generated pickpocket loot data
+├── LootFrame.lua             # Loot table viewer UI and rendering
+├── Filters.lua               # Item filtering logic
+├── Settings.lua              # Settings UI and persistence
+├── ModeManager.lua           # UI mode management (simple/advanced)
+├── TargetHandler.lua         # Target detection and event handling
+├── Tooltip.lua               # Item tooltip enhancement and minimap button
+├── UI_simple.xml             # Main loot frame UI definition
+├── UI_settings.xml           # Settings panel UI definition
+├── install.ps1 / install.bat # Helper scripts to copy addon to WoW directory
+├── docs/                     # Screenshots and documentation
+└── tools/                    # Node.js scripts for scraping and data export
+    ├── scraper.js            # Wowhead data scraper
+    ├── exportLua.js          # Export database to Lua format
+    ├── database.js           # SQLite database management
+    └── README.md             # Tooling documentation
 ```
 
 ### Expanding the Database
