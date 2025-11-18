@@ -168,12 +168,12 @@ local function CreateOrGetRow(index)
     row.name:SetJustifyH("LEFT")
 
     row.chance = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    row.chance:SetPoint("RIGHT", -(LootTableExtreme.UI_SCROLLBAR_WIDTH or 16), 0)
-    row.chance:SetWidth(80)
+    row.chance:SetPoint("RIGHT", LootTableExtreme.UI_MARGIN, 0)
+    row.chance:SetWidth(60)
     row.chance:SetJustifyH("RIGHT")
 
     row.questMarker = row:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", -((LootTableExtreme.UI_MARGIN or 8) / 2), 0)
+    row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", LootTableExtreme.UI_MARGIN, 0)
     row.questMarker:SetText("Q")
     row.questMarker:SetTextColor(1, 0.82, 0)
     row.questMarker:SetJustifyH("RIGHT")
@@ -195,6 +195,28 @@ local function EnsureRows(n)
     for i = 1, n do CreateOrGetRow(i) end
 end
 
+-- Update all existing row widths to match the current frame width
+local function UpdateRowWidths()
+    if not scrollFrame or not scrollFrame.GetWidth then return end
+    
+    local ok, frameWidth = pcall(function() return scrollFrame:GetWidth() end)
+    if not ok or not frameWidth then return end
+    
+    local rowWidth = frameWidth - (LootTableExtreme.UI_SCROLLBAR_WIDTH or 16)
+    
+    for _, row in pairs(lootRows) do
+        if row and row.SetWidth then
+            row:SetWidth(rowWidth)
+        end
+        -- Also update the name width to fill available space
+        if row and row.name and row.name.SetWidth then
+            -- Leave room for icon (16), margin (4), quest marker (~20), chance (80), and some padding
+            local nameWidth = math.max(100, rowWidth - 120)
+            row.name:SetWidth(nameWidth)
+        end
+    end
+end
+
 -- Top-level helpers for InitializeLootFrame (moved out for clarity & testability)
 local function SetupBackground()
     if not frame then return end
@@ -214,9 +236,20 @@ local function SetupResizeHook()
     if scrollFrame and not scrollFrame._LTX_SizeHook then
         scrollFrame:SetScript("OnSizeChanged", function(self, width, height)
             LTX_Debug("OnSizeChanged: w=" .. tostring(width) .. " h=" .. tostring(height))
+            UpdateRowWidths()
             LootTableExtreme:UpdateLootDisplay()
         end)
         scrollFrame._LTX_SizeHook = true
+    end
+    
+    -- Also hook the main frame resize to update row widths
+    if frame and not frame._LTX_ResizeHook then
+        frame:SetScript("OnSizeChanged", function(self, width, height)
+            LTX_Debug("Frame OnSizeChanged: w=" .. tostring(width) .. " h=" .. tostring(height))
+            UpdateRowWidths()
+            LootTableExtreme:UpdateLootDisplay()
+        end)
+        frame._LTX_ResizeHook = true
     end
 end
 
@@ -306,7 +339,6 @@ function LootTableExtreme:InitializeLootFrame()
     if LootTableExtreme.InitializeSettings then
         LootTableExtreme:InitializeSettings()
     end
-    self:UpdateModeDisplay()
     SetupCloseButton()
 end
 
@@ -366,8 +398,6 @@ function LootTableExtreme:ShowNpcLoot(npcNameOrId)
 
         -- Clear any previous filtered data and refresh display
         filteredLoot = {}
-        -- Update the header/mode and the loot display
-        self:UpdateModeDisplay()
         -- Update the empty message text to be more specific
         if emptyMessage then
             emptyMessage:SetText("No loot recorded for: " .. displayName)
@@ -392,9 +422,6 @@ function LootTableExtreme:ShowNpcLoot(npcNameOrId)
         subtitle = subtitle .. " (Elite)"
     end
     if headerSubtitle then headerSubtitle:SetText(subtitle) end
-    
-    -- Ensure mode display is updated (fixes initial display issue)
-    self:UpdateModeDisplay()
     
     -- Apply filters and show
     self:ApplyFilters()
@@ -484,6 +511,16 @@ function LootTableExtreme:UpdateLootDisplay()
         if row and row.item and row.item.itemId then
             local n, q, tex = FetchItemInfo(row.item.itemId)
             if not n or not tex then needsRetry = true end
+        end
+    end
+    
+    -- Hide any rows beyond the visible slots (important when window is resized smaller)
+    for i = visibleSlots + 1, #lootRows do
+        if lootRows[i] then
+            lootRows[i]:Hide()
+            if lootRows[i].questMarker then
+                lootRows[i].questMarker:Hide()
+            end
         end
     end
 

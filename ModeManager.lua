@@ -11,38 +11,6 @@ function LootTableExtreme:ToggleMode()
 
     -- Back-compat: toggle the DB flag and refresh if no dedicated settings UI exists
     LootTableExtremeDB.ui.advancedMode = not LootTableExtremeDB.ui.advancedMode
-    self:UpdateModeDisplay()
     self:RefreshCurrentDisplay()
 end
 
--- Update UI layout based on current mode
-function LootTableExtreme:UpdateModeDisplay()
-    -- Simplified layout routine: always keep main frame compact and anchored to its own header.
-    local frame = _G["LootTableExtremeFrame"]
-    local scrollFrame = _G["LootTableExtremeFrameScrollFrame"]
-
-    if frame then
-        frame:SetWidth(360)
-        frame:SetHeight(300)
-    end
-
-    if scrollFrame then
-        local header = _G["LootTableExtremeFrameHeader"]
-        scrollFrame:ClearAllPoints()
-        if header then
-            scrollFrame:SetPoint("TOP", header, "BOTTOM", 0, -LootTableExtreme.UI_MARGIN)
-        else
-            if frame then
-                -- Position the top of the scroll frame relative to the top of the frame
-                scrollFrame:SetPoint("TOP", frame, "TOP", 0, -(LootTableExtreme.UI_HEADER_HEIGHT + LootTableExtreme.UI_MARGIN))
-            end
-        end
-        if frame then
-            -- Use the configured margin for left/right insets so the scroll frame can stretch to the frame edges
-            scrollFrame:SetPoint("LEFT", frame, "LEFT", LootTableExtreme.UI_MARGIN, 0)
-            scrollFrame:SetPoint("RIGHT", frame, "RIGHT", -(LootTableExtreme.UI_MARGIN + LootTableExtreme.UI_SCROLLBAR_WIDTH), 0)
-            scrollFrame:SetPoint("BOTTOM", frame, "BOTTOM", 0, LootTableExtreme.UI_MARGIN)
-        end
-    end
-
-end

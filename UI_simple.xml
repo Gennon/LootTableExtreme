@@ -1,11 +1,15 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
     <!-- Loot Table Viewer - Simple main window -->
-    <Frame name="LootTableExtremeFrame" parent="UIParent" frameStrata="DIALOG" toplevel="true" movable="true" enableMouse="true" hidden="true">
+    <Frame name="LootTableExtremeFrame" parent="UIParent" frameStrata="DIALOG" toplevel="true" movable="true" resizable="true" enableMouse="true" hidden="true">
         <Size x="360" y="350"/>
         <Anchors>
             <Anchor point="CENTER"/>
         </Anchors>
+        <ResizeBounds>
+            <minResize x="300" y="250"/>
+            <maxResize x="600" y="600"/>
+        </ResizeBounds>
 
         <Backdrop bgFile="Interface\TutorialFrame\TutorialFrameBackground" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
             <BackgroundInsets>
@@ -32,9 +36,12 @@
 
             <!-- Header -->
             <Frame name="$parentHeader">
-                <Size x="360" y="50"/>
+                <Size y="50"/>
                 <Anchors>
                     <Anchor point="TOPLEFT">
+                        <Offset x="0" y="0"/>
+                    </Anchor>
+                    <Anchor point="TOPRIGHT">
                         <Offset x="0" y="0"/>
                     </Anchor>
                 </Anchors>
@@ -63,10 +70,10 @@
             <ScrollFrame name="$parentScrollFrame" inherits="FauxScrollFrameTemplate">                
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentHeader" relativePoint="BOTTOMLEFT">
-                        <Offset x="0" y="-10"/>
+                        <Offset x="8" y="-10"/>
                     </Anchor>
                     <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
-                        <Offset x="0" y="10"/>
+                        <Offset x="-28" y="20"/>
                     </Anchor>
                 </Anchors>
             </ScrollFrame>
@@ -91,6 +98,27 @@
                         </Texture>
                     </Layer>
                 </Layers>
+            </Button>
+
+            <!-- Resize Button -->
+            <Button name="$parentResizeButton">
+                <Size x="16" y="16"/>
+                <Anchors>
+                    <Anchor point="BOTTOMRIGHT">
+                        <Offset x="-5" y="5"/>
+                    </Anchor>
+                </Anchors>
+                <NormalTexture file="Interface\ChatFrame\UI-ChatIM-SizeGrabber-Down"/>
+                <PushedTexture file="Interface\ChatFrame\UI-ChatIM-SizeGrabber-Up"/>
+                <HighlightTexture file="Interface\ChatFrame\UI-ChatIM-SizeGrabber-Highlight"/>
+                <Scripts>
+                    <OnMouseDown>
+                        self:GetParent():StartSizing("BOTTOMRIGHT")
+                    </OnMouseDown>
+                    <OnMouseUp>
+                        self:GetParent():StopMovingOrSizing()
+                    </OnMouseUp>
+                </Scripts>
             </Button>
         </Frames>
 
