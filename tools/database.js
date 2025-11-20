@@ -38,7 +38,8 @@ class ScraperDatabase {
         const schema = `
             -- NPCs/Enemies table
             CREATE TABLE IF NOT EXISTS npcs (
-                npc_id INTEGER PRIMARY KEY,
+                npc_id INTEGER NOT NULL,
+                game_version TEXT NOT NULL DEFAULT 'classic',
                 name TEXT NOT NULL,
                 level_min INTEGER,
                 level_max INTEGER,
@@ -54,13 +55,15 @@ class ScraperDatabase {
                 reaction_alliance TEXT,
                 reaction_horde TEXT,
                 scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                url TEXT
+                url TEXT,
+                PRIMARY KEY (npc_id, game_version)
             );
 
             -- Loot drops table
             CREATE TABLE IF NOT EXISTS loot_drops (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 npc_id INTEGER NOT NULL,
+                game_version TEXT NOT NULL DEFAULT 'classic',
                 item_id INTEGER NOT NULL,
                 item_name TEXT,
                 quality INTEGER,
@@ -73,14 +76,15 @@ class ScraperDatabase {
                 stack_size TEXT,
                 season_id INTEGER,
                 scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (npc_id) REFERENCES npcs(npc_id),
-                UNIQUE(npc_id, item_id)
+                FOREIGN KEY (npc_id, game_version) REFERENCES npcs(npc_id, game_version),
+                UNIQUE(npc_id, game_version, item_id)
             );
 
             -- Vendor (sold) items table
             CREATE TABLE IF NOT EXISTS vendor_items (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 npc_id INTEGER NOT NULL,
+                game_version TEXT NOT NULL DEFAULT 'classic',
                 item_id INTEGER NOT NULL,
                 item_name TEXT,
                 quality INTEGER,
@@ -95,14 +99,15 @@ class ScraperDatabase {
                 subclass_id INTEGER,
                 stack_size TEXT,
                 scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (npc_id) REFERENCES npcs(npc_id),
-                UNIQUE(npc_id, item_id)
+                FOREIGN KEY (npc_id, game_version) REFERENCES npcs(npc_id, game_version),
+                UNIQUE(npc_id, game_version, item_id)
             );
 
             -- Pickpocket loot table
             CREATE TABLE IF NOT EXISTS pickpocket_loot (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 npc_id INTEGER NOT NULL,
+                game_version TEXT NOT NULL DEFAULT 'classic',
                 item_id INTEGER NOT NULL,
                 item_name TEXT,
                 quality INTEGER,
@@ -113,11 +118,11 @@ class ScraperDatabase {
                 subclass_id INTEGER,
                 stack_size TEXT,
                 scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (npc_id) REFERENCES npcs(npc_id),
-                UNIQUE(npc_id, item_id)
+                FOREIGN KEY (npc_id, game_version) REFERENCES npcs(npc_id, game_version),
+                UNIQUE(npc_id, game_version, item_id)
             );
 
-            -- Items table (for reference)
+            -- Items table (for reference - shared across game versions, client handles version-specific stats)
             CREATE TABLE IF NOT EXISTS items (
                 item_id INTEGER PRIMARY KEY,
                 name TEXT,
@@ -137,6 +142,7 @@ class ScraperDatabase {
             -- Scraping session metadata
             CREATE TABLE IF NOT EXISTS scrape_sessions (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+                game_version TEXT NOT NULL DEFAULT 'classic',
                 started_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 completed_at TIMESTAMP,
                 npcs_scraped INTEGER DEFAULT 0,
@@ -146,16 +152,18 @@ class ScraperDatabase {
             );
 
             -- Create indexes for better query performance
-            CREATE INDEX IF NOT EXISTS idx_loot_npc ON loot_drops(npc_id);
+            CREATE INDEX IF NOT EXISTS idx_loot_npc_version ON loot_drops(npc_id, game_version);
             CREATE INDEX IF NOT EXISTS idx_loot_item ON loot_drops(item_id);
             CREATE INDEX IF NOT EXISTS idx_loot_quality ON loot_drops(quality);
             CREATE INDEX IF NOT EXISTS idx_loot_percent ON loot_drops(drop_percent);
-            CREATE INDEX IF NOT EXISTS idx_vendor_npc ON vendor_items(npc_id);
+            CREATE INDEX IF NOT EXISTS idx_vendor_npc_version ON vendor_items(npc_id, game_version);
             CREATE INDEX IF NOT EXISTS idx_vendor_item ON vendor_items(item_id);
-            CREATE INDEX IF NOT EXISTS idx_pickpocket_npc ON pickpocket_loot(npc_id);
+            CREATE INDEX IF NOT EXISTS idx_pickpocket_npc_version ON pickpocket_loot(npc_id, game_version);
             CREATE INDEX IF NOT EXISTS idx_pickpocket_item ON pickpocket_loot(item_id);
             CREATE INDEX IF NOT EXISTS idx_npc_name ON npcs(name);
             CREATE INDEX IF NOT EXISTS idx_npc_zone ON npcs(zone);
+            CREATE INDEX IF NOT EXISTS idx_npc_version ON npcs(game_version);
+            CREATE INDEX IF NOT EXISTS idx_scrape_version ON scrape_sessions(game_version);
             
             -- NPC types mapping table (maps numeric type codes to human labels)
             CREATE TABLE IF NOT EXISTS npc_types (
@@ -171,6 +179,13 @@ class ScraperDatabase {
 
         // Ensure newer optional columns exist on older DBs (migration)
         await this.ensureColumn('npcs', 'type_id', 'INTEGER');
+        
+        // Migration for game_version support (defaults to 'classic' for existing data)
+        await this.ensureColumn('npcs', 'game_version', "TEXT NOT NULL DEFAULT 'classic'");
+        await this.ensureColumn('loot_drops', 'game_version', "TEXT NOT NULL DEFAULT 'classic'");
+        await this.ensureColumn('vendor_items', 'game_version', "TEXT NOT NULL DEFAULT 'classic'");
+        await this.ensureColumn('pickpocket_loot', 'game_version', "TEXT NOT NULL DEFAULT 'classic'");
+        await this.ensureColumn('scrape_sessions', 'game_version', "TEXT NOT NULL DEFAULT 'classic'");
 
         return;
     }
@@ -298,13 +313,15 @@ class ScraperDatabase {
      * Insert or update NPC data
      */
     async upsertNpc(npcData) {
+        const gameVersion = npcData.gameVersion || 'classic';
+        
         const sql = `
             INSERT INTO npcs (
-                npc_id, name, level_min, level_max, zone, elite,
+                npc_id, game_version, name, level_min, level_max, zone, elite,
                 classification, health, mana, armor, type, family,
                 faction, reaction_alliance, reaction_horde, url
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT(npc_id) DO UPDATE SET
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(npc_id, game_version) DO UPDATE SET
                 name = excluded.name,
                 level_min = excluded.level_min,
                 level_max = excluded.level_max,
@@ -326,6 +343,7 @@ class ScraperDatabase {
         // If caller provided typeId, store it into the type_id column as well
         const params = [
             npcData.npcId,
+            gameVersion,
             npcData.name,
             npcData.levelMin,
             npcData.levelMax,
@@ -347,12 +365,11 @@ class ScraperDatabase {
 
         if (npcData.typeId) {
             // Save canonical type_id separately to avoid changing existing type column semantics
-            await this.run(`UPDATE npcs SET type_id = ?, scraped_at = CURRENT_TIMESTAMP WHERE npc_id = ?`, [npcData.typeId, npcData.npcId]);
+            await this.run(`UPDATE npcs SET type_id = ?, scraped_at = CURRENT_TIMESTAMP WHERE npc_id = ? AND game_version = ?`, [npcData.typeId, npcData.npcId, gameVersion]);
         }
 
         return result;
     }
-
     /**
      * Insert or update an npc type mapping
      */
@@ -380,13 +397,15 @@ class ScraperDatabase {
      * Insert or update loot drop data
      */
     async upsertLootDrop(lootData) {
+        const gameVersion = lootData.gameVersion || 'classic';
+        
         const sql = `
             INSERT INTO loot_drops (
-                npc_id, item_id, item_name, quality, drop_count,
+                npc_id, game_version, item_id, item_name, quality, drop_count,
                 sample_size, drop_percent, is_quest_item, class_id,
                 subclass_id, stack_size, season_id
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT(npc_id, item_id) DO UPDATE SET
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(npc_id, game_version, item_id) DO UPDATE SET
                 item_name = excluded.item_name,
                 quality = excluded.quality,
                 drop_count = excluded.drop_count,
@@ -402,6 +421,7 @@ class ScraperDatabase {
 
         return this.run(sql, [
             lootData.npcId,
+            gameVersion,
             lootData.itemId,
             lootData.itemName,
             lootData.quality,
@@ -461,14 +481,16 @@ class ScraperDatabase {
      * Insert or update vendor item data
      */
     async upsertVendorItem(vendorData) {
+        const gameVersion = vendorData.gameVersion || 'classic';
+        
         const sql = `
             INSERT INTO vendor_items (
-                npc_id, item_id, item_name, quality, cost_amount,
+                npc_id, game_version, item_id, item_name, quality, cost_amount,
                 cost_currency, stock, is_limited, required_level,
                 required_faction, required_reputation, class_id,
                 subclass_id, stack_size
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT(npc_id, item_id) DO UPDATE SET
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(npc_id, game_version, item_id) DO UPDATE SET
                 item_name = excluded.item_name,
                 quality = excluded.quality,
                 cost_amount = excluded.cost_amount,
@@ -486,6 +508,7 @@ class ScraperDatabase {
 
         return this.run(sql, [
             vendorData.npcId,
+            gameVersion,
             vendorData.itemId,
             vendorData.itemName,
             vendorData.quality,
@@ -506,12 +529,14 @@ class ScraperDatabase {
      * Insert or update pickpocket loot data
      */
     async upsertPickpocketLoot(pickpocketData) {
+        const gameVersion = pickpocketData.gameVersion || 'classic';
+        
         const sql = `
             INSERT INTO pickpocket_loot (
-                npc_id, item_id, item_name, quality, drop_count,
+                npc_id, game_version, item_id, item_name, quality, drop_count,
                 sample_size, drop_percent, class_id, subclass_id, stack_size
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT(npc_id, item_id) DO UPDATE SET
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(npc_id, game_version, item_id) DO UPDATE SET
                 item_name = excluded.item_name,
                 quality = excluded.quality,
                 drop_count = excluded.drop_count,
@@ -525,6 +550,7 @@ class ScraperDatabase {
 
         return this.run(sql, [
             pickpocketData.npcId,
+            gameVersion,
             pickpocketData.itemId,
             pickpocketData.itemName,
             pickpocketData.quality,

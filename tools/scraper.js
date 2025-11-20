@@ -42,12 +42,19 @@ class WowheadScraper {
         this.context = await this.browser.newContext({
             // Block notifications
             permissions: [],
+            // Set user agent to avoid headless detection
+            userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            // Set viewport
+            viewport: { width: 1920, height: 1080 },
+            // Additional settings to avoid bot detection
+            locale: 'en-US',
+            timezoneId: 'America/New_York',
+            extraHTTPHeaders: {
+                'Accept-Language': 'en-US,en;q=0.9'
+            }
         });
         
         this.page = await this.context.newPage();
-        
-        // Set a reasonable viewport
-        await this.page.setViewportSize({ width: 1920, height: 1080 });
         
         // Increase default timeout
         this.page.setDefaultTimeout(90000);
@@ -72,6 +79,18 @@ class WowheadScraper {
             console.log(`⚠️  Dialog detected: ${dialog.message()}`);
             await dialog.dismiss();
         });
+    }
+    
+    /**
+     * Detect game version from URL
+     * @param {string} url - Wowhead URL
+     * @returns {string} 'classic' or 'tbc'
+     */
+    detectGameVersion(url) {
+        if (url.includes('/tbc/')) {
+            return 'tbc';
+        }
+        return 'classic';
     }
     
     async dismissModals() {
@@ -188,6 +207,10 @@ class WowheadScraper {
         console.log(`Scraping: ${url}`);
         console.log(`${'='.repeat(60)}`);
         
+        // Detect game version from URL
+        const gameVersion = this.detectGameVersion(url);
+        console.log(`🎮 Game Version: ${gameVersion.toUpperCase()}`);
+        
         try {
             // Navigate to the page
             console.log('📡 Navigating to page...');
@@ -206,6 +229,15 @@ class WowheadScraper {
             
             // Wait for the page to load completely
             console.log('⏳ Waiting for page to stabilize...');
+            
+            // Wait for the h1 heading to appear (main NPC title)
+            try {
+                await this.page.waitForSelector('h1.heading-size-1', { timeout: 10000 });
+            } catch (e) {
+                console.log('⚠️  H1 heading not found, continuing anyway...');
+            }
+            
+            // Additional wait for JavaScript to execute
             await this.page.waitForTimeout(500);
             
             // Take initial screenshot
@@ -1038,6 +1070,9 @@ class WowheadScraper {
         }
 
         try {
+            // Detect game version from URL
+            const gameVersion = this.detectGameVersion(url);
+            
             // Normalize type: g_npcs sometimes returns numeric codes. Try to map them to labels.
             let typeId = null;
             let typeLabel = null;
@@ -1081,6 +1116,7 @@ class WowheadScraper {
             // Save NPC data
             await this.database.upsertNpc({
                 npcId: enemyData.npcId,
+                gameVersion: gameVersion,
                 name: enemyData.enemyName,
                 levelMin: enemyData.level[0],
                 levelMax: enemyData.level[1],
@@ -1117,6 +1153,7 @@ class WowheadScraper {
 
                 await this.database.upsertLootDrop({
                     npcId: enemyData.npcId,
+                    gameVersion: gameVersion,
                     itemId: item.itemId,
                     itemName: item.name,
                     quality: qualityNum,
@@ -1156,6 +1193,7 @@ class WowheadScraper {
 
                 await this.database.upsertVendorItem({
                     npcId: enemyData.npcId,
+                    gameVersion: gameVersion,
                     itemId: item.itemId,
                     itemName: item.name,
                     quality: qualityNum,
@@ -1197,6 +1235,7 @@ class WowheadScraper {
 
                 await this.database.upsertPickpocketLoot({
                     npcId: enemyData.npcId,
+                    gameVersion: gameVersion,
                     itemId: item.itemId,
                     itemName: item.name,
                     quality: qualityNum,
@@ -1289,11 +1328,12 @@ async function main() {
 
     // Check database for already-scraped NPCs
     console.log(`\n📂 Checking database for existing NPCs...`);
-    const existingNpcs = await database.all('SELECT npc_id FROM npcs');
-    const alreadyScraped = new Set(existingNpcs.map(row => row.npc_id));
+    const existingNpcs = await database.all('SELECT npc_id, game_version FROM npcs');
+    // Create a Set with "npcId:gameVersion" format for checking
+    const alreadyScraped = new Set(existingNpcs.map(row => `${row.npc_id}:${row.game_version}`));
 
     if (alreadyScraped.size > 0) {
-        console.log(`✓ Found ${alreadyScraped.size} NPCs already in database`);
+        console.log(`✓ Found ${alreadyScraped.size} NPC entries already in database (including version variants)`);
         if (forceMode) {
             console.log('⚠️  Force mode enabled: will reprocess all provided URLs regardless of existing data');
         } else if (refreshPickpocket) {
@@ -1307,9 +1347,9 @@ async function main() {
     let pickpocketNpcs = new Set();
     if (refreshPickpocket && !forceMode) {
         try {
-            const rows = await database.all('SELECT DISTINCT npc_id FROM pickpocket_loot');
-            rows.forEach(r => pickpocketNpcs.add(r.npc_id));
-            console.log(`✓ Found ${pickpocketNpcs.size} NPCs with pickpocket entries in DB`);
+            const rows = await database.all('SELECT DISTINCT npc_id, game_version FROM pickpocket_loot');
+            rows.forEach(r => pickpocketNpcs.add(`${r.npc_id}:${r.game_version}`));
+            console.log(`✓ Found ${pickpocketNpcs.size} NPC entries with pickpocket data in DB`);
         } catch (e) {
             console.warn('Could not query pickpocket_loot table:', e.message);
         }
@@ -1324,17 +1364,19 @@ async function main() {
                 const npcIdMatch = url.match(/npc[=/](\d+)/);
                 if (npcIdMatch) {
                     const npcId = parseInt(npcIdMatch[1]);
-                    return pickpocketNpcs.has(npcId);
+                    const gameVersion = url.includes('/tbc/') ? 'tbc' : 'classic';
+                    return pickpocketNpcs.has(`${npcId}:${gameVersion}`);
                 }
                 return false; // if we can't parse the NPC id, skip it in refresh mode
             });
         } else {
-            // Default resume behavior: skip NPCs already in npcs table
+            // Default resume behavior: skip NPCs already in npcs table for this game version
             urls = urls.filter(url => {
                 const npcIdMatch = url.match(/npc[=/](\d+)/);
                 if (npcIdMatch) {
                     const npcId = parseInt(npcIdMatch[1]);
-                    return !alreadyScraped.has(npcId);
+                    const gameVersion = url.includes('/tbc/') ? 'tbc' : 'classic';
+                    return !alreadyScraped.has(`${npcId}:${gameVersion}`);
                 }
                 return true; // Keep URLs we can't parse
             });
