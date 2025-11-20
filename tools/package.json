@@ -1,23 +1,28 @@
 {
   "name": "loottable-scraper",
   "version": "1.0.0",
-  "description": "Wowhead Classic loot table scraper for LootTableExtreme",
+  "description": "Wowhead Classic/TBC loot table scraper for LootTableExtreme",
   "main": "scraper.js",
   "scripts": {
     "scrape": "node scraper.js",
     "scrape-list": "node scraper.js --list npcs.txt",
     "collect-npcs": "node collectNpcs.js",
     "collect-npcs-debug": "node collectNpcs.js --debug",
+    "collect-npcs-tbc": "node collectNpcs.js --tbc",
+    "collect-npcs-tbc-debug": "node collectNpcs.js --tbc --debug",
     "export": "node exportLua.js",
     "export-filtered": "node exportLua.js --min-sample 10",
     "query": "node queryDb.js",
     "db-stats": "node queryDb.js stats",
     "test": "node scraper.js --url https://www.wowhead.com/classic/npc=3260/bristleback-water-seeker",
-    "test-debug": "node scraper.js --url https://www.wowhead.com/classic/npc=3260/bristleback-water-seeker --debug"
+    "test-debug": "node scraper.js --url https://www.wowhead.com/classic/npc=3260/bristleback-water-seeker --debug",
+    "test-tbc": "node scraper.js --url https://www.wowhead.com/tbc/npc=16807/grand-commander-ruusk",
+    "test-tbc-debug": "node scraper.js --url https://www.wowhead.com/tbc/npc=16807/grand-commander-ruusk --debug"
   },
   "keywords": [
     "wow",
     "classic",
+    "tbc",
     "loot",
     "scraper",
     "wowhead"

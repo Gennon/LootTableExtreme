@@ -1,8 +1,9 @@
 /**
- * Wowhead Classic NPC List Collector - Version 2 with Pagination
- * Traverses the NPC table on Wowhead Classic and collects all vanilla NPC URLs
+ * Wowhead Classic NPC List Collector - Version 3 with TBC Support
+ * Traverses the NPC table on Wowhead Classic/TBC and collects all NPC URLs
  * Filters out Season of Discovery NPCs
  * Supports pagination to collect all pages
+ * Supports both Vanilla Classic and TBC Classic
  */
 
 const { chromium } = require('playwright');
@@ -14,7 +15,13 @@ class NpcCollector {
         this.browser = null;
         this.page = null;
         this.debug = options.debug || false;
+        this.gameVersion = options.gameVersion || 'classic'; // 'classic' or 'tbc'
         this.screenshotDir = path.join(__dirname, 'screenshots');
+        this.modalsDismissed = false; // Track if we've already dismissed modals
+        
+        // Version-specific constants
+        this.maxLevel = this.gameVersion === 'tbc' ? 73 : 60;
+        this.baseUrl = `https://www.wowhead.com/${this.gameVersion}`;
         
         if (this.debug && !fs.existsSync(this.screenshotDir)) {
             fs.mkdirSync(this.screenshotDir, { recursive: true });
@@ -64,6 +71,11 @@ class NpcCollector {
     }
 
     async dismissModals() {
+        // Only dismiss modals once per session
+        if (this.modalsDismissed) {
+            return;
+        }
+        
         console.log('🚫 Checking for modals/popups...');
         
         // Try multiple cookie consent selectors
@@ -75,10 +87,10 @@ class NpcCollector {
         for (const selector of cookieSelectors) {
             try {
                 const cookieButton = await this.page.locator(selector).first();
-                if (await cookieButton.isVisible({ timeout: 1000 })) {
+                if (await cookieButton.isVisible({ timeout: 2000 })) {
                     await cookieButton.click();
                     console.log(`  ✓ Clicked cookie consent: ${selector}`);
-                    await this.page.waitForTimeout(1000);
+                    await this.page.waitForTimeout(500);
                     cookieAccepted = true;
                     break;
                 }
@@ -104,27 +116,45 @@ class NpcCollector {
         }
         
         console.log('  ✓ Modal dismissal complete');
+        this.modalsDismissed = true; // Mark as dismissed
     }
 
     async extractNpcsFromCurrentPage() {
         const npcData = await this.page.evaluate(() => {
             const result = { npcs: [], error: null, debug: [] };
             
+            // Try the modern g_listviews global first
+            if (window.g_listviews && window.g_listviews.npcs && window.g_listviews.npcs.data) {
+                result.npcs = window.g_listviews.npcs.data;
+                result.debug.push(`Found g_listviews.npcs.data with ${result.npcs.length} NPCs`);
+                return result;
+            }
+            
+            result.debug.push('g_listviews.npcs.data not found');
+            
+            // Fallback to older window.listviews format
             if (window.listviews && window.listviews.length > 0) {
                 for (const lv of window.listviews) {
                     if (lv.template === 'npc') {
                         result.npcs = lv.data;
+                        result.debug.push(`Found window.listviews with ${result.npcs.length} NPCs`);
                         return result;
                     }
                 }
+                result.debug.push('window.listviews exists but no npc template found');
+            } else {
+                result.debug.push('window.listviews not found');
             }
             
+            // Final fallback: parse from script tags
             const scripts = Array.from(document.querySelectorAll('script'));
+            result.debug.push(`Found ${scripts.length} script tags`);
             
             for (const script of scripts) {
                 const content = script.textContent;
                 
                 if (content.includes('new Listview')) {
+                    result.debug.push('Found script with "new Listview"');
                     let dataMatch = content.match(/"data":\s*(\[[\s\S]*?\])\s*,\s*"extraCols"/);
                     if (!dataMatch) {
                         dataMatch = content.match(/"data":\s*(\[[\s\S]*?\])\s*,\s*extraCols/);
@@ -133,6 +163,7 @@ class NpcCollector {
                     if (dataMatch) {
                         try {
                             result.npcs = eval('(' + dataMatch[1] + ')');
+                            result.debug.push(`Parsed ${result.npcs.length} NPCs from script tag`);
                             return result;
                         } catch (e) {
                             result.debug.push(`Parse error: ${e.message}`);
@@ -146,138 +177,93 @@ class NpcCollector {
             return result;
         });
         
-        return npcData;
-    }
-
-    async getPaginationInfo() {
-        const paginationInfo = await this.page.evaluate(() => {
-            const navElement = document.querySelector('.listview-nav');
-            if (!navElement) {
-                return { hasMore: false, currentPage: 1, totalPages: 1 };
-            }
-            
-            const navText = navElement.textContent;
-            const match = navText.match(/(\d+)\s*-\s*(\d+)\s*of\s*(\d+)/);
-            if (match) {
-                const start = parseInt(match[1]);
-                const end = parseInt(match[2]);
-                const total = parseInt(match[3]);
-                const pageSize = end - start + 1;
-                const currentPage = Math.ceil(end / pageSize);
-                const totalPages = Math.ceil(total / pageSize);
-                
-                return {
-                    hasMore: end < total,
-                    currentPage,
-                    totalPages,
-                    start,
-                    end,
-                    total,
-                    navText
-                };
-            }
-            
-            return { hasMore: false, currentPage: 1, totalPages: 1 };
-        });
-        
-        return paginationInfo;
-    }
-
-    async clickNext() {
-        try {
-            const nextLink = await this.page.locator('.listview-nav a:has-text("Next")');
-            if (await nextLink.isVisible({ timeout: 2000 })) {
-                await nextLink.click();
-                console.log('  ✓ Clicked "Next" button');
-                await this.page.waitForTimeout(3000);
-                return true;
-            }
-        } catch (error) {
-            console.log('  ⚠️  No "Next" button found');
+        // Log debug info if there's an error
+        if (npcData.error && npcData.debug.length > 0) {
+            console.log('  Debug info:', npcData.debug.join(' | '));
         }
-        return false;
-    }
-
-
+        
+        return npcData;
+    }    
+    
     async collectNpcsForFilter(minLevel, maxLevel, classification, classificationName) {
         const filterLabel = `${classificationName} Level ${minLevel}${maxLevel ? `-${maxLevel}` : '+'}`;
         console.log(`\n${'='.repeat(60)}`);
-        console.log(`Collecting: ${filterLabel}`);
+        console.log(`Collecting: ${filterLabel} (${this.gameVersion.toUpperCase()})`);
         console.log(`${'='.repeat(60)}`);
 
-        // Build the direct Wowhead URL for this filter
-        let url = `https://www.wowhead.com/classic/npcs/min-level:${minLevel}`;
+        // Build the version-specific Wowhead URL for this filter
+        let url = `${this.baseUrl}/npcs/min-level:${minLevel}`;
         if (maxLevel) url += `/max-level:${maxLevel}`;
         url += `/classification:${classification}`;
 
-        await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
+        await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 }).catch(async (error) => {
+            console.error(`  ❌ Navigation failed: ${error.message}`);
+            return null;
+        });
+        
+        if (!this.page) {
+            console.error('  ❌ Page is closed, skipping...');
+            return [];
+        }
+        
         await this.dismissModals();
-        await this.page.waitForTimeout(2000);
+        
+        // Wait for the listview data to be available
+        console.log('  ⏳ Waiting for listview data...');
+        await this.page.waitForFunction(() => {
+            return window.g_listviews && 
+                   window.g_listviews.npcs && 
+                   window.g_listviews.npcs.data && 
+                   window.g_listviews.npcs.data.length > 0;
+        }, { timeout: 45000 }).catch(() => {
+            console.log('  ⚠️  Timeout waiting for g_listviews, trying alternative methods...');
+        });
+        
+        // Short delay to ensure JavaScript has fully executed
+        await this.page.waitForTimeout(1000);
+     
+        const npcData = await this.extractNpcsFromCurrentPage();
 
-        const allNpcs = [];
-        const allNpcIds = new Set();
-        let hasMore = true;
-        let pageNum = 1;
-
-        while (hasMore) {
-            console.log(`\n📄 Processing page ${pageNum}...`);
-
-            await this.page.waitForSelector('.listview-mode-default', { timeout: 10000 }).catch(() => {
-                console.log('  ⚠️  Default list view not found');
-            });
-
-            await this.page.waitForTimeout(3000);
-
-            const npcData = await this.extractNpcsFromCurrentPage();
-
-            if (npcData.error) {
-                console.error('❌ Error:', npcData.error);
-                break;
+        if (npcData.error) {
+            console.error('❌ Error:', npcData.error);
+            if (this.debug) {
+                await this.takeScreenshot(`error_${classificationName}_${minLevel}`);
             }
-
-            const pageNpcs = npcData.npcs.filter(npc => {
-                if (npc.seasonId === 2) return false;
-                if (allNpcIds.has(npc.id)) return false;
-                allNpcIds.add(npc.id);
-                return true;
-            }).map(npc => ({
-                id: npc.id,
-                name: npc.name,
-                minLevel: npc.minlevel,
-                maxLevel: npc.maxlevel,
-                classification: npc.classification,
-                type: npc.type,
-                family: npc.family,
-                location: npc.location ? npc.location[0] : null,
-                seasonId: npc.seasonId || 0,
-                phaseId: npc.phaseId || 0
-            }));
-
-            console.log(`  ✓ Extracted ${pageNpcs.length} new vanilla NPCs from this page`);
-            allNpcs.push(...pageNpcs);
-            console.log(`  📊 Total for ${filterLabel}: ${allNpcs.length} NPCs`);
-
-            const pagination = await this.getPaginationInfo();
-            console.log(`  📄 Pagination: ${pagination.navText || 'N/A'}`);
-
-            if (pagination.hasMore) {
-                console.log(`  ➡️  Moving to page ${pageNum + 1}/${pagination.totalPages}...`);
-                hasMore = await this.clickNext();
-                pageNum++;
-            } else {
-                console.log(`  ✓ Reached last page for ${filterLabel}`);
-                hasMore = false;
-            }
+            // Return empty array instead of breaking - might be no NPCs at this level/classification
+            console.log('  ℹ️  This might be expected if there are no NPCs matching this filter');
+            return [];
         }
 
+        if (!npcData.npcs || npcData.npcs.length === 0) {
+            console.log('  ℹ️  No NPCs found for this filter (might be expected)');
+            return [];
+        }
+
+        const allNpcs = npcData.npcs.filter(npc => {
+            // Filter out Season of Discovery NPCs
+            return npc.seasonId !== 2;
+        }).map(npc => ({
+            id: npc.id,
+            name: npc.name,
+            minLevel: npc.minlevel,
+            maxLevel: npc.maxlevel,
+            classification: npc.classification,
+            type: npc.type,
+            family: npc.family,
+            location: npc.location ? npc.location[0] : null,
+            seasonId: npc.seasonId || 0,
+            phaseId: npc.phaseId || 0
+        }));
+
+        console.log(`  ✓ Extracted ${allNpcs.length} NPCs from ${filterLabel}`);
         console.log(`\n✓ ${filterLabel} complete! Collected: ${allNpcs.length} NPCs`);
         return allNpcs;
     }
 
     async collectNpcUrls(startUrl) {
         console.log(`\n${'='.repeat(70)}`);
-        console.log(`COMPLETE NPC COLLECTION STRATEGY`);
-        console.log(`Target: All 12,214 Classic Era NPCs`);
+        console.log(`COMPLETE NPC COLLECTION STRATEGY - ${this.gameVersion.toUpperCase()}`);
+        console.log(`Target: All ${this.gameVersion === 'tbc' ? 'TBC' : 'Classic Era'} NPCs (Levels 1-${this.maxLevel})`);
         console.log(`${'='.repeat(70)}`);
         
         const allNpcs = [];
@@ -291,12 +277,12 @@ class NpcCollector {
             // 3 = Boss
             // 4 = Rare
             
-            // PHASE 1: Normal NPCs - Level by level (1-1, 2-2, ..., 60-60, 60+)
+            // PHASE 1: Normal NPCs - Level by level
             console.log(`\n${'#'.repeat(70)}`);
             console.log(`PHASE 1: NORMAL NPCs (Classification 0)`);
             console.log(`${'#'.repeat(70)}`);
             
-            for (let level = 1; level <= 60; level++) {
+            for (let level = 1; level <= this.maxLevel; level++) {
                 const npcs = await this.collectNpcsForFilter(level, level, 0, 'Normal');
                 for (const npc of npcs) {
                     if (!allNpcIds.has(npc.id)) {
@@ -307,22 +293,22 @@ class NpcCollector {
                 console.log(`📊 Running total: ${allNpcs.length} unique NPCs\n`);
             }
             
-            // Normal NPCs level 60+ (no max level)
-            const npcs60Plus = await this.collectNpcsForFilter(60, null, 0, 'Normal');
-            for (const npc of npcs60Plus) {
+            // Normal NPCs level max+ (skull level)
+            const npcsMaxPlus = await this.collectNpcsForFilter(this.maxLevel, null, 0, 'Normal');
+            for (const npc of npcsMaxPlus) {
                 if (!allNpcIds.has(npc.id)) {
                     allNpcIds.add(npc.id);
                     allNpcs.push(npc);
                 }
             }
-            console.log(`📊 Running total after Normal 60+: ${allNpcs.length} unique NPCs\n`);
+            console.log(`📊 Running total after Normal ${this.maxLevel}+: ${allNpcs.length} unique NPCs\n`);
             
-            // PHASE 2: Elite NPCs - Level by level (1-1, 2-2, ..., 60-60, 60+)
+            // PHASE 2: Elite NPCs
             console.log(`\n${'#'.repeat(70)}`);
             console.log(`PHASE 2: ELITE NPCs (Classification 1)`);
             console.log(`${'#'.repeat(70)}`);
             
-            for (let level = 1; level <= 60; level++) {
+            for (let level = 1; level <= this.maxLevel; level++) {
                 const npcs = await this.collectNpcsForFilter(level, level, 1, 'Elite');
                 for (const npc of npcs) {
                     if (!allNpcIds.has(npc.id)) {
@@ -333,15 +319,15 @@ class NpcCollector {
                 console.log(`📊 Running total: ${allNpcs.length} unique NPCs\n`);
             }
             
-            // Elite NPCs level 60+ (no max level)
-            const eliteNpcs60Plus = await this.collectNpcsForFilter(60, null, 1, 'Elite');
-            for (const npc of eliteNpcs60Plus) {
+            // Elite NPCs level max+ (skull level)
+            const eliteNpcsMaxPlus = await this.collectNpcsForFilter(this.maxLevel, null, 1, 'Elite');
+            for (const npc of eliteNpcsMaxPlus) {
                 if (!allNpcIds.has(npc.id)) {
                     allNpcIds.add(npc.id);
                     allNpcs.push(npc);
                 }
             }
-            console.log(`📊 Running total after Elite 60+: ${allNpcs.length} unique NPCs\n`);
+            console.log(`📊 Running total after Elite ${this.maxLevel}+: ${allNpcs.length} unique NPCs\n`);
             
             // PHASE 3: Rare NPCs (no level filter needed)
             console.log(`\n${'#'.repeat(70)}`);
@@ -386,16 +372,15 @@ class NpcCollector {
             console.log(`📊 Final total after Boss: ${allNpcs.length} unique NPCs\n`);
             
             console.log(`\n${'='.repeat(70)}`);
-            console.log(`✓ COLLECTION COMPLETE!`);
+            console.log(`✓ COLLECTION COMPLETE! (${this.gameVersion.toUpperCase()})`);
             console.log(`Total unique NPCs collected: ${allNpcs.length}`);
-            console.log(`Target was: 12,214 NPCs`);
             console.log(`${'='.repeat(70)}`);
             
             return allNpcs;
             
         } catch (error) {
             console.error(`Error collecting NPCs:`, error.message);
-            await this.takeScreenshot('error_npc_collection');
+            await this.takeScreenshot(`error_npc_collection_${this.gameVersion}`);
             return allNpcs;
         }
     }
@@ -416,27 +401,29 @@ class NpcCollector {
 async function main() {
     const args = process.argv.slice(2);
     const debugMode = args.includes('--debug') || args.includes('-d');
+    const gameVersion = args.includes('--tbc') ? 'tbc' : 'classic';
     
+    console.log(`Game version: ${gameVersion.toUpperCase()}`);
     console.log(`Debug mode: ${debugMode ? 'ON' : 'OFF'}`);
     
-    const collector = new NpcCollector({ debug: debugMode });
+    const collector = new NpcCollector({ debug: debugMode, gameVersion });
     await collector.initialize();
     
-    const npcListUrl = 'https://www.wowhead.com/classic/npcs';
+    const npcListUrl = `https://www.wowhead.com/${gameVersion}/npcs`;
     
     const npcs = await collector.collectNpcUrls(npcListUrl);
     
     await collector.close();
     
     if (npcs.length > 0) {
-    const outputFile = path.join(__dirname, 'npcs.txt');
+        const outputFile = path.join(__dirname, `npcs_${gameVersion}.txt`);
         const urls = npcs.map(npc => 
-            `https://www.wowhead.com/classic/npc=${npc.id}/${npc.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`
+            `https://www.wowhead.com/${gameVersion}/npc=${npc.id}/${npc.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`
         );
         
         fs.writeFileSync(outputFile, urls.join('\n'), 'utf-8');
         
-        const jsonFile = path.join(__dirname, 'npc_data.json');
+        const jsonFile = path.join(__dirname, `npc_data_${gameVersion}.json`);
         fs.writeFileSync(jsonFile, JSON.stringify(npcs, null, 2), 'utf-8');
         
         console.log(`\n========================================`);
@@ -445,7 +432,7 @@ async function main() {
         console.log(`Collected ${npcs.length} NPC URLs`);
         console.log(`URLs saved to: ${outputFile}`);
         console.log(`Detailed data saved to: ${jsonFile}`);
-        console.log(`\nYou can now run: npm run scrape-list`);
+        console.log(`\nYou can now run: npm run scrape-list -- --version ${gameVersion}`);
     } else {
         console.log('\n✗ No NPCs were collected.');
     }
