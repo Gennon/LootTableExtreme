@@ -36,7 +36,8 @@ async function main() {
         sampleTolerance: 0.1,
         excludeQuestItems: false,
         excludeSeasonItems: true,
-    pruneLegacy: false,
+        pruneLegacy: false,
+        gameVersion: 'classic', // 'classic', 'tbc', or 'all'
         outputDir: path.join(__dirname, '..'),
         lootFile: 'LootDatabase.lua',
         vendorFile: 'VendorDatabase.lua',
@@ -64,6 +65,16 @@ async function main() {
             case '--prune-legacy':
                 options.pruneLegacy = true;
                 break;
+            case '--version':
+            case '-v':
+                const version = args[++i];
+                if (['classic', 'tbc', 'all'].includes(version)) {
+                    options.gameVersion = version;
+                } else {
+                    console.error(`Invalid version: ${version}. Use 'classic', 'tbc', or 'all'`);
+                    process.exit(1);
+                }
+                break;
             case '--output-dir':
             case '-d':
                 options.outputDir = args[++i];
@@ -76,6 +87,7 @@ async function main() {
     }
     
     console.log('📤 Exporting database to Lua files...');
+    console.log(`Game Version: ${options.gameVersion}`);
     console.log(`Output directory: ${options.outputDir}`);
     // Coerce/validate numeric options to avoid NaN or string values
     if (!Number.isFinite(options.minDropPercent)) options.minDropPercent = 0.1;
@@ -86,6 +98,15 @@ async function main() {
     console.log(`Filters: minDrop=${options.minDropPercent}%, minSample=${options.minSampleSize}`);
     console.log(`         sampleTolerance=${options.sampleTolerance * 100}%`);
     console.log(`         pruneLegacy=${options.pruneLegacy}`);
+    console.log(`         gameVersion=${options.gameVersion}`);
+    
+    // Update filenames to include version suffix if not 'all'
+    if (options.gameVersion !== 'all') {
+        const suffix = options.gameVersion === 'tbc' ? '_TBC' : '_Vanilla';
+        options.lootFile = options.lootFile.replace('.lua', `${suffix}.lua`);
+        options.vendorFile = options.vendorFile.replace('.lua', `${suffix}.lua`);
+        options.pickpocketFile = options.pickpocketFile.replace('.lua', `${suffix}.lua`);
+    }
     
     const db = new ScraperDatabase();
     await db.initialize();
@@ -102,13 +123,24 @@ async function exportLootData(db, options) {
     console.log('\n💀 Exporting loot data...');
     const outputFile = path.join(options.outputDir, options.lootFile);
     
-    // Get all NPCs from database
-    const dbNpcs = await db.all(`
-        SELECT DISTINCT npc_id, name, level_min, level_max, zone, elite
-        FROM npcs
-        WHERE npc_id IN (SELECT DISTINCT npc_id FROM loot_drops)
-        ORDER BY name
-    `);
+    // Get all NPCs from database with optional game version filtering
+    let dbNpcs;
+    if (options.gameVersion === 'all') {
+        dbNpcs = await db.all(`
+            SELECT DISTINCT npc_id, name, level_min, level_max, zone, elite, game_version
+            FROM npcs
+            WHERE npc_id IN (SELECT DISTINCT npc_id FROM loot_drops)
+            ORDER BY name
+        `);
+    } else {
+        dbNpcs = await db.all(`
+            SELECT DISTINCT npc_id, name, level_min, level_max, zone, elite, game_version
+            FROM npcs
+            WHERE game_version = ?
+              AND npc_id IN (SELECT DISTINCT npc_id FROM loot_drops WHERE game_version = ?)
+            ORDER BY name
+        `, [options.gameVersion, options.gameVersion]);
+    }
     
     console.log(`\n� Found ${dbNpcs.length} NPCs in database`);
     
@@ -177,26 +209,51 @@ async function exportLootData(db, options) {
     for (const npcId of npcIdsToExport) {
         const npc = dbNpcMap.get(npcId);
         
-        // Get drops for this NPC
-        const drops = await db.all(`
-            SELECT 
-                item_id, item_name, quality, drop_count,
-                sample_size, drop_percent, is_quest_item
-            FROM loot_drops
-            WHERE npc_id = ?
-              AND drop_percent >= ?
-              AND (? = 0 OR sample_size >= ?)
-              AND (? = 0 OR is_quest_item = 0)
-              AND (? = 0 OR season_id IS NULL OR season_id != 2)
-            ORDER BY drop_percent DESC
-        `, [
-            npcId,
-            options.minDropPercent,
-            options.minSampleSize,
-            options.minSampleSize,
-            options.excludeQuestItems ? 1 : 0,
-            options.excludeSeasonItems ? 1 : 0
-        ]);
+        // Get drops for this NPC (filtered by game version if not 'all')
+        let drops;
+        if (options.gameVersion === 'all') {
+            drops = await db.all(`
+                SELECT 
+                    item_id, item_name, quality, drop_count,
+                    sample_size, drop_percent, is_quest_item
+                FROM loot_drops
+                WHERE npc_id = ?
+                  AND drop_percent >= ?
+                  AND (? = 0 OR sample_size >= ?)
+                  AND (? = 0 OR is_quest_item = 0)
+                  AND (? = 0 OR season_id IS NULL OR season_id != 2)
+                ORDER BY drop_percent DESC
+            `, [
+                npcId,
+                options.minDropPercent,
+                options.minSampleSize,
+                options.minSampleSize,
+                options.excludeQuestItems ? 1 : 0,
+                options.excludeSeasonItems ? 1 : 0
+            ]);
+        } else {
+            drops = await db.all(`
+                SELECT 
+                    item_id, item_name, quality, drop_count,
+                    sample_size, drop_percent, is_quest_item
+                FROM loot_drops
+                WHERE npc_id = ?
+                  AND game_version = ?
+                  AND drop_percent >= ?
+                  AND (? = 0 OR sample_size >= ?)
+                  AND (? = 0 OR is_quest_item = 0)
+                  AND (? = 0 OR season_id IS NULL OR season_id != 2)
+                ORDER BY drop_percent DESC
+            `, [
+                npcId,
+                options.gameVersion,
+                options.minDropPercent,
+                options.minSampleSize,
+                options.minSampleSize,
+                options.excludeQuestItems ? 1 : 0,
+                options.excludeSeasonItems ? 1 : 0
+            ]);
+        }
         
         if (drops.length === 0) continue;
 
@@ -281,8 +338,12 @@ DB.LootDatabase = {
     const footer = `}
 
 -- Merge scraped data into main NpcLoot table
-for npcName, data in pairs(DB.LootDatabase) do
-    DB.NpcLoot[npcName] = data
+if DB and DB.NpcLoot and DB.LootDatabase then
+    for npcName, data in pairs(DB.LootDatabase) do
+        DB.NpcLoot[npcName] = data
+    end
+else
+    print("ERROR: LootTableExtreme.Database not initialized before loading LootDatabase")
 end
 `;
     
@@ -324,13 +385,24 @@ async function exportVendorData(db, options) {
     console.log('\n🛒 Exporting vendor data...');
     const outputFile = path.join(options.outputDir, options.vendorFile);
     
-    // Get all NPCs that sell items
-    const vendors = await db.all(`
-        SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone
-        FROM npcs n
-        INNER JOIN vendor_items v ON n.npc_id = v.npc_id
-        ORDER BY n.name
-    `);
+    // Get all NPCs that sell items (with optional game version filtering)
+    let vendors;
+    if (options.gameVersion === 'all') {
+        vendors = await db.all(`
+            SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone, n.game_version
+            FROM npcs n
+            INNER JOIN vendor_items v ON n.npc_id = v.npc_id AND n.game_version = v.game_version
+            ORDER BY n.name
+        `);
+    } else {
+        vendors = await db.all(`
+            SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone, n.game_version
+            FROM npcs n
+            INNER JOIN vendor_items v ON n.npc_id = v.npc_id AND n.game_version = v.game_version
+            WHERE n.game_version = ?
+            ORDER BY n.name
+        `, [options.gameVersion]);
+    }
     
     console.log(`� Found ${vendors.length} vendors in database`);
     
@@ -354,13 +426,24 @@ DB.VendorItems = {
     
     const entries = [];
     for (const vendor of vendors) {
-        const items = await db.all(`
-            SELECT item_id, item_name, quality, cost_amount, cost_currency, 
-                   stock, required_level, required_faction
-            FROM vendor_items
-            WHERE npc_id = ?
-            ORDER BY cost_amount ASC
-        `, [vendor.npc_id]);
+        let items;
+        if (options.gameVersion === 'all') {
+            items = await db.all(`
+                SELECT item_id, item_name, quality, cost_amount, cost_currency, 
+                       stock, required_level, required_faction
+                FROM vendor_items
+                WHERE npc_id = ?
+                ORDER BY cost_amount ASC
+            `, [vendor.npc_id]);
+        } else {
+            items = await db.all(`
+                SELECT item_id, item_name, quality, cost_amount, cost_currency, 
+                       stock, required_level, required_faction
+                FROM vendor_items
+                WHERE npc_id = ? AND game_version = ?
+                ORDER BY cost_amount ASC
+            `, [vendor.npc_id, options.gameVersion]);
+        }
         
         if (items.length === 0) continue;
         
@@ -396,13 +479,24 @@ async function exportPickpocketData(db, options) {
     console.log('\n🥷 Exporting pickpocket data...');
     const outputFile = path.join(options.outputDir, options.pickpocketFile);
     
-    // Get all NPCs with pickpocket loot
-    const npcs = await db.all(`
-        SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone
-        FROM npcs n
-        INNER JOIN pickpocket_loot p ON n.npc_id = p.npc_id
-        ORDER BY n.name
-    `);
+    // Get all NPCs with pickpocket loot (with optional game version filtering)
+    let npcs;
+    if (options.gameVersion === 'all') {
+        npcs = await db.all(`
+            SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone, n.game_version
+            FROM npcs n
+            INNER JOIN pickpocket_loot p ON n.npc_id = p.npc_id AND n.game_version = p.game_version
+            ORDER BY n.name
+        `);
+    } else {
+        npcs = await db.all(`
+            SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone, n.game_version
+            FROM npcs n
+            INNER JOIN pickpocket_loot p ON n.npc_id = p.npc_id AND n.game_version = p.game_version
+            WHERE n.game_version = ?
+            ORDER BY n.name
+        `, [options.gameVersion]);
+    }
     
     console.log(`� Found ${npcs.length} NPCs with pickpocket loot`);
     
@@ -426,14 +520,26 @@ DB.PickpocketLoot = {
     
     const entries = [];
     for (const npc of npcs) {
-                const items = await db.all(`
-                        SELECT item_id, item_name, quality, drop_percent, drop_count, sample_size
-                        FROM pickpocket_loot
-                        WHERE npc_id = ?
-                            AND drop_percent >= ?
-                            AND (? = 0 OR sample_size >= ?)
-                        ORDER BY drop_percent DESC
-                `, [npc.npc_id, options.minDropPercent, options.minSampleSize, options.minSampleSize]);
+        let items;
+        if (options.gameVersion === 'all') {
+            items = await db.all(`
+                SELECT item_id, item_name, quality, drop_percent, drop_count, sample_size
+                FROM pickpocket_loot
+                WHERE npc_id = ?
+                    AND drop_percent >= ?
+                    AND (? = 0 OR sample_size >= ?)
+                ORDER BY drop_percent DESC
+            `, [npc.npc_id, options.minDropPercent, options.minSampleSize, options.minSampleSize]);
+        } else {
+            items = await db.all(`
+                SELECT item_id, item_name, quality, drop_percent, drop_count, sample_size
+                FROM pickpocket_loot
+                WHERE npc_id = ? AND game_version = ?
+                    AND drop_percent >= ?
+                    AND (? = 0 OR sample_size >= ?)
+                ORDER BY drop_percent DESC
+            `, [npc.npc_id, options.gameVersion, options.minDropPercent, options.minSampleSize, options.minSampleSize]);
+        }
         
         if (items.length === 0) continue;
 
@@ -494,6 +600,7 @@ Exports data to three separate Lua files:
   - PickpocketDatabase.lua (rogue pickpocket loot)
 
 Options:
+  --version, -v <version>  Game version to export: 'classic', 'tbc', or 'all' (default: classic)
   --min-drop <percent>     Minimum drop rate to include (default: 0.1)
   --min-sample <count>     Minimum sample size to include (default: 0)
   --exclude-quest          Exclude quest items from loot export
@@ -502,14 +609,20 @@ Options:
   --help, -h               Show this help message
 
 Examples:
-  # Export all data with default settings
+  # Export Classic data (default)
   node exportLua.js
+
+  # Export TBC data
+  node exportLua.js --version tbc
+
+  # Export both Classic and TBC data (combined)
+  node exportLua.js --version all
 
   # Only include items with at least 10 drops
   node exportLua.js --min-sample 10
 
-  # Only include items with > 1% drop rate and 5+ samples
-  node exportLua.js --min-drop 1.0 --min-sample 5
+  # Export TBC with > 1% drop rate and 5+ samples
+  node exportLua.js --version tbc --min-drop 1.0 --min-sample 5
 
   # Export to custom directory
   node exportLua.js --output-dir ./output
