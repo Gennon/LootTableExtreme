@@ -220,6 +220,20 @@ end
 -- Top-level helpers for InitializeLootFrame (moved out for clarity & testability)
 local function SetupBackground()
     if not frame then return end
+    
+    -- Set up backdrop (required for modern WoW versions)
+    if frame.SetBackdrop then
+        frame:SetBackdrop({
+            bgFile = "Interface\\TutorialFrame\\TutorialFrameBackground",
+            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+            tile = true,
+            tileSize = 16,
+            edgeSize = 16,
+            insets = { left = 5, right = 5, top = 5, bottom = 5 }
+        })
+        frame:SetBackdropColor(0, 0, 0, 1)
+    end
+    
     local bg = frame:CreateTexture(nil, "BACKGROUND")
     bg:SetAllPoints(frame)
     bg:SetTexture("Interface\\DialogFrame\\UI-DialogBox-Background")

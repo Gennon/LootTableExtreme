@@ -5,6 +5,19 @@ function LootTableExtreme:InitializeSettings()
     local settings = _G["LootTableExtremeSettings"]
     if not settings then return end
 
+    -- Set up backdrop (required for modern WoW versions)
+    if settings.SetBackdrop then
+        settings:SetBackdrop({
+            bgFile = "Interface\\TutorialFrame\\TutorialFrameBackground",
+            edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+            tile = true,
+            tileSize = 16,
+            edgeSize = 16,
+            insets = { left = 5, right = 5, top = 5, bottom = 5 }
+        })
+        settings:SetBackdropColor(0, 0, 0, 1)
+    end
+
     -- Add background textures manually for Classic 1.12 compatibility
     local bg = settings:CreateTexture(nil, "BACKGROUND")
     bg:SetAllPoints(settings)
