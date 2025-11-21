@@ -1,6 +1,8 @@
 # LootTableExtreme
 
-A World of Warcraft Classic (Vanilla) addon that provides comprehensive loot table information for enemies and items.
+A World of Warcraft Classic addon that provides comprehensive loot table information for enemies and items.
+
+**Supports both Classic Era (Vanilla) and TBC Classic!**
 
 ## Features
 
@@ -10,6 +12,7 @@ A World of Warcraft Classic (Vanilla) addon that provides comprehensive loot tab
 - Filter by minimum drop chance percentage
 - Show/hide quest items separately
 - View loot for your current target with one click
+- **Resizable window** - Drag the resize handle in the bottom-right corner
 
 
 ![Loot Table Viewer Screenshot](docs/features_01.png)
@@ -22,22 +25,35 @@ A World of Warcraft Classic (Vanilla) addon that provides comprehensive loot tab
 ![Item Tooltip Enhancement Screenshot](docs/features_02.png)
 
 ### Planned Features
-- Resizable loot table window
 - Show vendor sources for items
-- Show pickpocketing drop chances1
+- Show pickpocketing drop chances
 - Search NPCs by name
 - Search items by name
 
 
 ## Installation
 
-1. Copy the `LootTableExtreme` folder to your WoW Classic addons directory:
+### Classic Era (Vanilla)
+
+1. Copy the `LootTableExtreme` folder to your WoW Classic Era addons directory:
    - Windows: `C:\Program Files (x86)\World of Warcraft\_classic_era_\Interface\AddOns\`
    - Mac: `/Applications/World of Warcraft/_classic_era_/Interface/AddOns/`
 
 2. Restart WoW or reload your UI (`/reload`)
 
-3. The addon should appear in your character selection screen addon list
+3. The addon will automatically load `LootTableExtreme.toc` for Vanilla Classic
+
+### TBC Classic
+
+1. Copy the `LootTableExtreme` folder to your WoW TBC Classic addons directory:
+   - Windows: `C:\Program Files (x86)\World of Warcraft\_classic_\Interface\AddOns\`
+   - Mac: `/Applications/World of Warcraft/_classic_/Interface/AddOns/`
+
+2. Restart WoW or reload your UI (`/reload`)
+
+3. The addon will automatically load `LootTableExtreme_TBC.toc` for TBC Classic
+
+**Note:** The addon automatically detects which WoW client you're using and loads the appropriate loot database.
 
 ## Usage
 
