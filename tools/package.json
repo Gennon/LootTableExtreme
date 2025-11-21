@@ -6,6 +6,7 @@
   "scripts": {
     "scrape": "node scraper.js",
     "scrape-list": "node scraper.js --list npcs.txt",
+    "scrape-tbc": "node scraper.js --list npcs_tbc.txt",
     "collect-npcs": "node collectNpcs.js",
     "collect-npcs-debug": "node collectNpcs.js --debug",
     "collect-npcs-tbc": "node collectNpcs.js --tbc",
