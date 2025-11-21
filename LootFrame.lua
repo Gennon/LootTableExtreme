@@ -27,6 +27,9 @@ local filteredLoot = {}
 local updateTimer = nil
 local emptyMessage = nil
 
+-- Track items waiting for their info to load
+local pendingItemInfoUpdates = {}
+
 -- Small wrapper to fetch item info safely and keep linter happy.
 local function FetchItemInfo(itemId)
     if not itemId then return nil, nil, nil end
@@ -123,8 +126,15 @@ local function renderRowAt(self, i, offset, db)
     -- Set quest marker visibility AFTER showing the row to avoid UI timing issues
     if item.isQuestItem then
         if row.questMarker and row.questMarker.Show then row.questMarker:Show() end
-    else
+    elseif item.isQuestItem == false then
         if row.questMarker and row.questMarker.Hide then row.questMarker:Hide() end
+    else
+        -- isQuestItem is nil, meaning we don't know yet - item info not loaded
+        -- Hide for now and mark for update when item info arrives
+        if row.questMarker and row.questMarker.Hide then row.questMarker:Hide() end
+        if item.itemId then
+            pendingItemInfoUpdates[item.itemId] = true
+        end
     end
 end
 
@@ -141,6 +151,39 @@ local function ScheduleRetry()
             LootTableExtreme:UpdateLootDisplay()
         end
     end)
+end
+
+-- Update quest markers for a specific item when its info becomes available
+local function UpdateQuestMarkerForItem(itemId)
+    if not itemId or not frame or not frame:IsShown() then return end
+    
+    -- Re-check if this item is a quest item now that info is loaded
+    local isQuest = LootTableExtreme.Database:IsQuestItem(itemId)
+    
+    -- Update the cached value in filteredLoot
+    for _, item in ipairs(filteredLoot) do
+        if item.itemId == itemId then
+            item.isQuestItem = isQuest
+        end
+    end
+    
+    -- Update visible rows that display this item
+    for i, row in ipairs(lootRows) do
+        if row.item and row.item.itemId == itemId and row:IsShown() then
+            if isQuest then
+                if row.questMarker and row.questMarker.Show then 
+                    row.questMarker:Show() 
+                end
+            else
+                if row.questMarker and row.questMarker.Hide then 
+                    row.questMarker:Hide() 
+                end
+            end
+        end
+    end
+    
+    -- Remove from pending updates
+    pendingItemInfoUpdates[itemId] = nil
 end
 
 -- Helper: create or return an existing loot row. Rows are parented to the
@@ -553,5 +596,12 @@ function LootTableExtreme:ToggleLootFrame()
         else
             self:Print("No NPC selected. Target an NPC and use /lte target")
         end
+    end
+end
+
+-- Handle when item information becomes available
+function LootTableExtreme:OnItemInfoReceived(itemId)
+    if pendingItemInfoUpdates[itemId] then
+        UpdateQuestMarkerForItem(itemId)
     end
 end

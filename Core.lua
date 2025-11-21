@@ -97,10 +97,14 @@ end
 local eventFrame = CreateFrame("Frame")
 eventFrame:RegisterEvent("ADDON_LOADED")
 eventFrame:RegisterEvent("PLAYER_TARGET_CHANGED")
+eventFrame:RegisterEvent("GET_ITEM_INFO_RECEIVED")
 eventFrame:SetScript("OnEvent", function(self, event, arg1)
     if event == "ADDON_LOADED" and arg1 == "LootTableExtreme" then
         LootTableExtreme:Initialize()
     elseif event == "PLAYER_TARGET_CHANGED" then
         LootTableExtreme:OnTargetChanged()
+    elseif event == "GET_ITEM_INFO_RECEIVED" then
+        -- arg1 is the itemId that just loaded
+        LootTableExtreme:OnItemInfoReceived(arg1)
     end
 end)
