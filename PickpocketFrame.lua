@@ -215,15 +215,6 @@ function LootTableExtreme:InitializePickpocketFrame()
     end
 
     scrollFrame = LootTableExtremePickpocketFrameScrollFrame
-    -- Debug: report scrollFrame presence
-    if self and self.Print then
-        if scrollFrame then
-            local ok, h = pcall(function() return scrollFrame:GetHeight() end)
-            self:Print("Pickpocket scrollFrame present, height=" .. tostring(h))
-        else
-            self:Print("Pickpocket scrollFrame NOT found")
-        end
-    end
     
     -- Set up backdrop (with compatibility check)
     if frame.SetBackdrop then
@@ -310,8 +301,7 @@ function LootTableExtreme:ShowNpcPickpocket(npcIdOrName)
     currentNpc = npcName or npcIdOrName
     pickpocketLoot = npcData.loot or {}
 
-    -- Debug: print loot count
-    self:Print("Pickpocket loot items: " .. #pickpocketLoot)
+    -- (debug prints removed)
 
     -- Sort by drop chance
     table.sort(pickpocketLoot, function(a, b)
@@ -365,9 +355,7 @@ function LootTableExtreme:UpdatePickpocketDisplay()
 
     local visibleSlots = ComputeVisibleSlots()
     EnsureRows(visibleSlots)
-    if self and self.Print then
-        self:Print("Pickpocket visibleSlots=" .. tostring(visibleSlots) .. ", existingRows=" .. tostring(#lootRows))
-    end
+    -- (debug prints removed)
 
     FauxScrollFrame_Update(scrollFrame, numLoot, visibleSlots, LOOT_ROW_HEIGHT)
     local offset = FauxScrollFrame_GetOffset(scrollFrame)
@@ -389,14 +377,7 @@ function LootTableExtreme:UpdatePickpocketDisplay()
         end
     end
 
-    if self and self.Print then
-        for i = 1, visibleSlots do
-            local r = lootRows[i]
-            if r then
-                self:Print(string.format("Row %d shown=%s, item=%s", i, tostring(r:IsShown()), tostring(r.item and r.item.itemId or "nil")))
-            end
-        end
-    end
+    -- (debug prints removed)
 
     -- Hide extra rows
     for i = visibleSlots + 1, #lootRows do
