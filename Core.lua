@@ -25,9 +25,6 @@ local defaults = {
         showQuestItems = true,
         minDropChance = 5, -- Show items with >5% drop chance by default
     },
-    ui = {
-        advancedMode = false, -- Start in simple mode by default
-    },
 }
 
 -- Initialize addon
