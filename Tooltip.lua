@@ -26,10 +26,15 @@ function LootTableExtreme:EnhanceItemTooltip(tooltip)
     -- Get top sources for this item
     local sources = self.Database:GetTopItemSources(itemId, 3)
     
-    if sources and #sources > 0 then
+    -- Get top vendors for this item
+    local vendors = self.Database:GetTopItemVendors(itemId, 3)
+    
+    if (sources and #sources > 0) or (vendors and #vendors > 0) then
         -- Add a blank line separator
         tooltip:AddLine(" ")
-        
+    end
+    
+    if sources and #sources > 0 then
         -- Add header
         tooltip:AddLine("|cff00ff00Drop Sources:|r", 1, 1, 1)
         
@@ -46,10 +51,58 @@ function LootTableExtreme:EnhanceItemTooltip(tooltip)
             
             tooltip:AddLine(line, 0.8, 0.8, 0.8, true)
         end
+    end
+    
+    if vendors and #vendors > 0 then
+        -- Add header
+        tooltip:AddLine("|cff00ff00Sold by:|r", 1, 1, 1)
+        
+        -- Add each vendor
+        for i, vendor in ipairs(vendors) do
+            local zoneText = vendor.zone and (vendor.zone) or ""
+            local costText = self:FormatMoney(vendor.cost)
+            
+            local line = string.format("%s - %s %s",
+                zoneText,
+                vendor.vendorName,
+                costText
+            )
+            
+            tooltip:AddLine(line, 0.8, 0.8, 0.8, true)
+        end
         
         -- Show the tooltip
         tooltip:Show()
     end
+end
+
+-- Format money in copper to gold/silver/copper display
+function LootTableExtreme:FormatMoney(copper)
+    if not copper or copper == 0 then
+        return "0|cffeda55fc|r"
+    end
+    
+    local gold = math.floor(copper / 10000)
+    local silver = math.floor((copper % 10000) / 100)
+    local copperRemaining = copper % 100
+    
+    local result = ""
+    
+    if gold > 0 then
+        result = result .. gold .. "|cffffd700g|r"
+    end
+    
+    if silver > 0 then
+        if result ~= "" then result = result .. " " end
+        result = result .. silver .. "|cffc7c7cfs|r"
+    end
+    
+    if copperRemaining > 0 or result == "" then
+        if result ~= "" then result = result .. " " end
+        result = result .. copperRemaining .. "|cffeda55fc|r"
+    end
+    
+    return result
 end
 
 -- Extract item ID from item link

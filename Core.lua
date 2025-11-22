@@ -39,6 +39,7 @@ function LootTableExtreme:Initialize()
     
     -- Build database caches (must be done after ScrapedDatabase.lua is loaded)
     self.Database:BuildItemSourcesCache()
+    self.Database:BuildItemVendorsCache()
     
     self:Print("Loaded v" .. self.version)
     self:Print("Type /lte to open the loot table viewer")

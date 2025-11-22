@@ -29,6 +29,10 @@ DB.NpcIdToName = {}
 -- This is built dynamically from the npc loot table
 DB.ItemSources = {}
 
+-- Reverse lookup: Find which vendors sell a specific item
+-- This is built dynamically from the vendor items table
+DB.ItemVendors = {}
+
 function DB:BuildItemSourcesCache()
     self.ItemSources = {}
     self.NpcIdToName = {}
@@ -60,6 +64,37 @@ function DB:BuildItemSourcesCache()
     for itemId, sources in pairs(self.ItemSources) do
         table.sort(sources, function(a, b)
             return a.dropChance > b.dropChance
+        end)
+    end
+end
+
+function DB:BuildItemVendorsCache()
+    self.ItemVendors = {}
+    
+    for vendorName, vendorData in pairs(self.VendorItems or {}) do
+        if vendorData.items then
+            for _, item in ipairs(vendorData.items) do
+                -- Skip items with 0 or nil cost (likely data errors)
+                if item.cost and item.cost > 0 then
+                    if not self.ItemVendors[item.itemId] then
+                        self.ItemVendors[item.itemId] = {}
+                    end
+                    
+                    table.insert(self.ItemVendors[item.itemId], {
+                        vendorName = vendorName,
+                        cost = item.cost,
+                        zone = vendorData.zone,
+                        level = vendorData.level,
+                    })
+                end
+            end
+        end
+    end
+    
+    -- Sort each item's vendors by cost (lowest first)
+    for itemId, vendors in pairs(self.ItemVendors) do
+        table.sort(vendors, function(a, b)
+            return a.cost < b.cost
         end)
     end
 end
@@ -176,6 +211,22 @@ function DB:GetTopItemSources(itemId, maxResults)
     local result = {}
     for i = 1, math.min(maxResults, #sources) do
         table.insert(result, sources[i])
+    end
+    
+    return result
+end
+
+function DB:GetTopItemVendors(itemId, maxResults)
+    maxResults = maxResults or 3
+    local vendors = self.ItemVendors[itemId]
+    
+    if not vendors then
+        return {}
+    end
+    
+    local result = {}
+    for i = 1, math.min(maxResults, #vendors) do
+        table.insert(result, vendors[i])
     end
     
     return result
