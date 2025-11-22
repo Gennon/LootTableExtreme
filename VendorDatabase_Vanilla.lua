@@ -1,5 +1,5 @@
 -- Auto-generated vendor database from Wowhead Classic
--- Generated: 2025-11-21T18:31:02.549Z
+-- Generated: 2025-11-22T12:46:36.661Z
 -- Total vendors: 955
 -- 
 -- This file is automatically loaded by Database.lua
@@ -13,6 +13,9 @@ DB.VendorItems = {
         npcId = 2135,
         level = {14, 14},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2399, cost = 217},
             {itemId = 2402, cost = 219},
@@ -30,6 +33,9 @@ DB.VendorItems = {
         npcId = 4604,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 8},
             {itemId = 2515, cost = 44},
@@ -50,6 +56,9 @@ DB.VendorItems = {
         npcId = 2118,
         level = {9, 9},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -74,6 +83,9 @@ DB.VendorItems = {
         npcId = 1316,
         level = {60, 60},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 1181, cost = 105},
             {itemId = 3013, cost = 105},
@@ -95,6 +107,9 @@ DB.VendorItems = {
         npcId = 829,
         level = {5, 5},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -110,6 +125,10 @@ DB.VendorItems = {
         npcId = 15293,
         level = {60, 60},
         zone = "Silithus",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 234295, cost = 40000},
             {itemId = 234297, cost = 40000},
@@ -139,6 +158,9 @@ DB.VendorItems = {
         npcId = 3952,
         level = {22, 22},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 793, cost = 138},
             {itemId = 3602, cost = 144},
@@ -172,6 +194,9 @@ DB.VendorItems = {
         npcId = 1349,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2148, cost = 2584},
             {itemId = 2150, cost = 2604},
@@ -214,6 +239,9 @@ DB.VendorItems = {
         npcId = 8359,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 844, cost = 757},
             {itemId = 1843, cost = 763},
@@ -235,6 +263,9 @@ DB.VendorItems = {
         npcId = 3562,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 188},
             {itemId = 17035, cost = 376},
@@ -263,6 +294,10 @@ DB.VendorItems = {
         npcId = 11056,
         level = {58, 58},
         zone = "Western Plaguelands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 13320, cost = 4444}
         }
@@ -273,6 +308,10 @@ DB.VendorItems = {
         npcId = 5594,
         level = {45, 45},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 21},
             {itemId = 3372, cost = 210},
@@ -291,6 +330,9 @@ DB.VendorItems = {
         npcId = 3608,
         level = {17, 17},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -312,6 +354,9 @@ DB.VendorItems = {
         npcId = 1214,
         level = {18, 18},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 3428, cost = 421},
             {itemId = 16059, cost = 421},
@@ -333,6 +378,9 @@ DB.VendorItems = {
         npcId = 1294,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2393, cost = 205},
             {itemId = 2396, cost = 215},
@@ -360,6 +408,9 @@ DB.VendorItems = {
         npcId = 7683,
         level = {35, 35},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 8523, cost = 1052}
         }
@@ -370,6 +421,9 @@ DB.VendorItems = {
         npcId = 5173,
         level = {60, 60},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 126, cost = 0},
             {itemId = 132, cost = 0},
@@ -525,6 +579,9 @@ DB.VendorItems = {
         npcId = 1347,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 26},
@@ -551,6 +608,9 @@ DB.VendorItems = {
         npcId = 3552,
         level = {18, 18},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 844, cost = 757},
             {itemId = 1843, cost = 763},
@@ -568,6 +628,9 @@ DB.VendorItems = {
         npcId = 4610,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 3372, cost = 200},
@@ -583,6 +646,9 @@ DB.VendorItems = {
         npcId = 1315,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2527, cost = 30901},
             {itemId = 2535, cost = 64795}
@@ -594,6 +660,10 @@ DB.VendorItems = {
         npcId = 4191,
         level = {15, 15},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 4536, cost = 24},
@@ -623,6 +693,9 @@ DB.VendorItems = {
         npcId = 14480,
         level = {10, 10},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 18633, cost = 125},
             {itemId = 7228, cost = 500},
@@ -636,6 +709,10 @@ DB.VendorItems = {
         npcId = 10379,
         level = {55, 55},
         zone = "Felwood",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2524, cost = 18063},
             {itemId = 2522, cost = 21221},
@@ -655,6 +732,9 @@ DB.VendorItems = {
         npcId = 1673,
         level = {7, 7},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -683,6 +763,9 @@ DB.VendorItems = {
         npcId = 1321,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 4496, cost = 500},
             {itemId = 4498, cost = 2500},
@@ -696,6 +779,10 @@ DB.VendorItems = {
         npcId = 777,
         level = {20, 20},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -724,6 +811,10 @@ DB.VendorItems = {
         npcId = 15192,
         level = {1, 1},
         zone = "Tanaris",
+        faction = "Brood of Nozdormu",
+        factionId = 910,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 7473, cost = 0}
         }
@@ -734,6 +825,9 @@ DB.VendorItems = {
         npcId = 4172,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2612, cost = 163},
             {itemId = 2613, cost = 571},
@@ -750,6 +844,9 @@ DB.VendorItems = {
         npcId = 3592,
         level = {10, 10},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 17184, cost = 35},
             {itemId = 2380, cost = 38},
@@ -767,6 +864,9 @@ DB.VendorItems = {
         npcId = 15502,
         level = {60, 60},
         zone = "Ahn'Qiraj",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 233375, cost = 0},
             {itemId = 233376, cost = 0},
@@ -822,6 +922,9 @@ DB.VendorItems = {
         npcId = 3554,
         level = {18, 20},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 3428, cost = 400},
             {itemId = 16059, cost = 400},
@@ -843,6 +946,9 @@ DB.VendorItems = {
         npcId = 3556,
         level = {18, 20},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -874,6 +980,9 @@ DB.VendorItems = {
         npcId = 2046,
         level = {8, 8},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2393, cost = 205},
             {itemId = 2396, cost = 226},
@@ -891,6 +1000,10 @@ DB.VendorItems = {
         npcId = 2816,
         level = {37, 37},
         zone = "Arathi Highlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 50},
@@ -917,6 +1030,9 @@ DB.VendorItems = {
         npcId = 4234,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2527, cost = 27629},
             {itemId = 2535, cost = 57935}
@@ -928,6 +1044,10 @@ DB.VendorItems = {
         npcId = 844,
         level = {35, 35},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 785, cost = 80},
@@ -955,6 +1075,10 @@ DB.VendorItems = {
         npcId = 11057,
         level = {58, 58},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 13320, cost = 4705}
         }
@@ -965,6 +1089,9 @@ DB.VendorItems = {
         npcId = 17070,
         level = {55, 55},
         zone = "Silithus",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 235497, cost = 5000},
             {itemId = 235825, cost = 5000},
@@ -979,6 +1106,9 @@ DB.VendorItems = {
         npcId = 2113,
         level = {5, 5},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 3595, cost = 23},
             {itemId = 3596, cost = 23},
@@ -1000,6 +1130,10 @@ DB.VendorItems = {
         npcId = 16116,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2450, cost = 0},
             {itemId = 4625, cost = 0},
@@ -1018,6 +1152,9 @@ DB.VendorItems = {
         npcId = 1312,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 5208, cost = 3515},
             {itemId = 5209, cost = 4057},
@@ -1035,6 +1172,10 @@ DB.VendorItems = {
         npcId = 10856,
         level = {58, 58},
         zone = "Tirisfal Glades",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 12844, cost = 0},
             {itemId = 227813, cost = 0},
@@ -1075,6 +1216,10 @@ DB.VendorItems = {
         npcId = 10857,
         level = {58, 58},
         zone = "Western Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 12844, cost = 0},
             {itemId = 227813, cost = 0},
@@ -1115,6 +1260,9 @@ DB.VendorItems = {
         npcId = 4203,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2947, cost = 15},
@@ -1170,6 +1318,9 @@ DB.VendorItems = {
         npcId = 3350,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 23},
             {itemId = 4470, cost = 35},
@@ -1199,6 +1350,9 @@ DB.VendorItems = {
         npcId = 12384,
         level = {55, 55},
         zone = "Eastern Plaguelands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4604, cost = 22},
             {itemId = 4605, cost = 112},
@@ -1215,6 +1369,10 @@ DB.VendorItems = {
         npcId = 15282,
         level = {60, 60},
         zone = "Silithus",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 233200, cost = 0},
             {itemId = 233250, cost = 0}
@@ -1226,6 +1384,9 @@ DB.VendorItems = {
         npcId = 228,
         level = {24, 24},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 50},
@@ -1244,6 +1405,9 @@ DB.VendorItems = {
         npcId = 11287,
         level = {37, 37},
         zone = "Western Plaguelands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4540, cost = 25},
@@ -1265,6 +1429,9 @@ DB.VendorItems = {
         npcId = 13476,
         level = {43, 43},
         zone = "Dustwallow Marsh",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 3385, cost = 106},
             {itemId = 954, cost = 177},
@@ -1304,6 +1471,10 @@ DB.VendorItems = {
         npcId = 2806,
         level = {55, 55},
         zone = "Felwood",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 23},
             {itemId = 4470, cost = 35},
@@ -1335,6 +1506,9 @@ DB.VendorItems = {
         npcId = 989,
         level = {50, 50},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2678, cost = 10},
@@ -1377,6 +1551,10 @@ DB.VendorItems = {
         npcId = 3481,
         level = {14, 14},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -1401,6 +1579,9 @@ DB.VendorItems = {
         npcId = 5110,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -1429,6 +1610,9 @@ DB.VendorItems = {
         npcId = 465,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 2070, cost = 24},
@@ -1456,6 +1640,9 @@ DB.VendorItems = {
         npcId = 274,
         level = {26, 26},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 1179, cost = 131},
@@ -1472,6 +1659,10 @@ DB.VendorItems = {
         npcId = 2366,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 22},
             {itemId = 1179, cost = 111},
@@ -1487,6 +1678,9 @@ DB.VendorItems = {
         npcId = 5611,
         level = {13, 13},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 159, cost = 25},
@@ -1513,6 +1707,8 @@ DB.VendorItems = {
         npcId = 4893,
         level = {45, 45},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 1179, cost = 125},
@@ -1528,6 +1724,9 @@ DB.VendorItems = {
         npcId = 5620,
         level = {21, 21},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 117, cost = 24},
             {itemId = 159, cost = 24},
@@ -1561,6 +1760,9 @@ DB.VendorItems = {
         npcId = 9087,
         level = {35, 35},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 11022, cost = 941},
             {itemId = 11020, cost = 9411}
@@ -1572,6 +1774,9 @@ DB.VendorItems = {
         npcId = 4981,
         level = {25, 25},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 22},
             {itemId = 2070, cost = 22},
@@ -1593,6 +1798,9 @@ DB.VendorItems = {
         npcId = 4602,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2101, cost = 3},
             {itemId = 2512, cost = 8},
@@ -1620,6 +1828,10 @@ DB.VendorItems = {
         npcId = 3097,
         level = {20, 20},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 239, cost = 1413},
             {itemId = 1849, cost = 1461},
@@ -1638,6 +1850,9 @@ DB.VendorItems = {
         npcId = 1302,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 785, cost = 75},
             {itemId = 2449, cost = 80},
@@ -1659,6 +1874,9 @@ DB.VendorItems = {
         npcId = 3546,
         level = {45, 45},
         zone = "Blasted Lands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 22},
             {itemId = 4540, cost = 23},
@@ -1686,6 +1904,10 @@ DB.VendorItems = {
         npcId = 3951,
         level = {34, 34},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 50},
@@ -1702,6 +1924,9 @@ DB.VendorItems = {
         npcId = 5519,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 4357, cost = 14},
             {itemId = 5956, cost = 18},
@@ -1727,6 +1952,10 @@ DB.VendorItems = {
         npcId = 7978,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4536, cost = 24},
             {itemId = 4537, cost = 124},
@@ -1742,6 +1971,9 @@ DB.VendorItems = {
         npcId = 5152,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 2524, cost = 17060},
             {itemId = 2525, cost = 23545},
@@ -1757,6 +1989,9 @@ DB.VendorItems = {
         npcId = 2116,
         level = {5, 5},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 17183, cost = 35},
             {itemId = 2387, cost = 40},
@@ -1774,6 +2009,9 @@ DB.VendorItems = {
         npcId = 12957,
         level = {55, 55},
         zone = "Azshara",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -1814,6 +2052,10 @@ DB.VendorItems = {
         npcId = 2846,
         level = {43, 43},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 52},
@@ -1841,6 +2083,10 @@ DB.VendorItems = {
         npcId = 11183,
         level = {55, 55},
         zone = "Winterspring",
+        faction = "Everlook",
+        factionId = 577,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2440, cost = 14841},
             {itemId = 3587, cost = 15067},
@@ -1864,6 +2110,10 @@ DB.VendorItems = {
         npcId = 8131,
         level = {45, 45},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2519, cost = 52},
@@ -1881,6 +2131,10 @@ DB.VendorItems = {
         npcId = 2481,
         level = {36, 36},
         zone = "Duskwood",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 3385, cost = 120},
@@ -1897,6 +2151,9 @@ DB.VendorItems = {
         npcId = 5128,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2604, cost = 47},
@@ -1923,6 +2180,9 @@ DB.VendorItems = {
         npcId = 1240,
         level = {8, 11},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2393, cost = 216},
             {itemId = 2396, cost = 226},
@@ -1938,6 +2198,9 @@ DB.VendorItems = {
         npcId = 9549,
         level = {30, 30},
         zone = "Stonetalon Mountains",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 52},
@@ -1954,6 +2217,9 @@ DB.VendorItems = {
         npcId = 3368,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 2287, cost = 125},
@@ -1969,6 +2235,9 @@ DB.VendorItems = {
         npcId = 3364,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 24},
@@ -2000,6 +2269,9 @@ DB.VendorItems = {
         npcId = 1450,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2148, cost = 2906},
             {itemId = 2150, cost = 2930},
@@ -2017,6 +2289,10 @@ DB.VendorItems = {
         npcId = 1441,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 927, cost = 6953},
             {itemId = 2209, cost = 7489},
@@ -2036,6 +2312,9 @@ DB.VendorItems = {
         npcId = 3611,
         level = {16, 16},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 793, cost = 146},
             {itemId = 3602, cost = 152},
@@ -2051,6 +2330,8 @@ DB.VendorItems = {
         npcId = 12793,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 18839, cost = 900},
             {itemId = 18841, cost = 990},
@@ -2064,6 +2345,9 @@ DB.VendorItems = {
         npcId = 5120,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2947, cost = 13},
             {itemId = 3111, cost = 13},
@@ -2098,6 +2382,9 @@ DB.VendorItems = {
         npcId = 5123,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2516, cost = 9},
             {itemId = 2510, cost = 36},
@@ -2116,6 +2403,10 @@ DB.VendorItems = {
         npcId = 6576,
         level = {40, 40},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2324, cost = 22},
@@ -2141,6 +2432,10 @@ DB.VendorItems = {
         npcId = 14301,
         level = {45, 45},
         zone = "Azshara",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 50},
@@ -2159,6 +2454,9 @@ DB.VendorItems = {
         npcId = 6496,
         level = {35, 35},
         zone = "Thousand Needles",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 7228, cost = 500}
         }
@@ -2169,6 +2467,10 @@ DB.VendorItems = {
         npcId = 2480,
         level = {49, 49},
         zone = "Alterac Mountains",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 21},
             {itemId = 3372, cost = 210},
@@ -2185,6 +2487,9 @@ DB.VendorItems = {
         npcId = 151,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -2206,6 +2511,10 @@ DB.VendorItems = {
         npcId = 4255,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Stormpike Guard",
+        factionId = 730,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4592, cost = 20},
             {itemId = 117, cost = 22},
@@ -2251,6 +2560,9 @@ DB.VendorItems = {
         npcId = 5106,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2393, cost = 205},
             {itemId = 2396, cost = 226},
@@ -2268,6 +2580,10 @@ DB.VendorItems = {
         npcId = 8158,
         level = {49, 49},
         zone = "Feralas",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 18},
             {itemId = 3372, cost = 188},
@@ -2285,6 +2601,9 @@ DB.VendorItems = {
         npcId = 3075,
         level = {10, 10},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 17183, cost = 35},
             {itemId = 2387, cost = 40},
@@ -2302,6 +2621,10 @@ DB.VendorItems = {
         npcId = 2365,
         level = {39, 39},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 117, cost = 23},
             {itemId = 2287, cost = 117},
@@ -2317,6 +2640,9 @@ DB.VendorItems = {
         npcId = 5514,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2901, cost = 81},
             {itemId = 2880, cost = 100},
@@ -2330,6 +2656,9 @@ DB.VendorItems = {
         npcId = 1351,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -2358,6 +2687,9 @@ DB.VendorItems = {
         npcId = 152,
         level = {5, 5},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -2373,6 +2705,9 @@ DB.VendorItems = {
         npcId = 5570,
         level = {50, 50},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2723, cost = 44},
             {itemId = 2596, cost = 106},
@@ -2388,6 +2723,9 @@ DB.VendorItems = {
         npcId = 1319,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 17188, cost = 2264},
             {itemId = 2445, cost = 3613},
@@ -2405,6 +2743,9 @@ DB.VendorItems = {
         npcId = 5101,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 23},
             {itemId = 4470, cost = 35},
@@ -2434,6 +2775,9 @@ DB.VendorItems = {
         npcId = 5163,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -2464,6 +2808,9 @@ DB.VendorItems = {
         npcId = 3162,
         level = {12, 12},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 797, cost = 185},
             {itemId = 1839, cost = 193},
@@ -2479,6 +2826,9 @@ DB.VendorItems = {
         npcId = 6028,
         level = {30, 30},
         zone = "Ashenvale",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2150, cost = 2637},
             {itemId = 2151, cost = 2647},
@@ -2505,6 +2855,10 @@ DB.VendorItems = {
         npcId = 15174,
         level = {54, 54},
         zone = "Silithus",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 117, cost = 27},
@@ -2545,6 +2899,8 @@ DB.VendorItems = {
         npcId = 12777,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 220890, cost = 28336},
             {itemId = 220897, cost = 28336},
@@ -2868,6 +3224,8 @@ DB.VendorItems = {
         npcId = 12782,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 18825, cost = 143132},
             {itemId = 18833, cost = 156291},
@@ -2924,6 +3282,9 @@ DB.VendorItems = {
         npcId = 3096,
         level = {22, 22},
         zone = "Redridge Mountains",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 25},
@@ -2951,6 +3312,10 @@ DB.VendorItems = {
         npcId = 11038,
         level = {52, 52},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4604, cost = 25},
@@ -2990,6 +3355,9 @@ DB.VendorItems = {
         npcId = 1291,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 793, cost = 146},
             {itemId = 3602, cost = 152},
@@ -3020,6 +3388,10 @@ DB.VendorItems = {
         npcId = 5494,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 6256, cost = 21},
             {itemId = 6325, cost = 40},
@@ -3038,6 +3410,9 @@ DB.VendorItems = {
         npcId = 9548,
         level = {52, 52},
         zone = "Feralas",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2516, cost = 9},
@@ -3063,6 +3438,9 @@ DB.VendorItems = {
         npcId = 4240,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 17184, cost = 35},
             {itemId = 2129, cost = 81},
@@ -3084,6 +3462,9 @@ DB.VendorItems = {
         npcId = 4216,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 17},
             {itemId = 3372, cost = 177},
@@ -3097,6 +3478,9 @@ DB.VendorItems = {
         npcId = 4896,
         level = {35, 35},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4470, cost = 38},
@@ -3126,6 +3510,9 @@ DB.VendorItems = {
         npcId = 4569,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 851, cost = 2023},
             {itemId = 2207, cost = 2390},
@@ -3144,6 +3531,9 @@ DB.VendorItems = {
         npcId = 1307,
         level = {50, 50},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 3385, cost = 120},
             {itemId = 17034, cost = 200},
@@ -3180,6 +3570,9 @@ DB.VendorItems = {
         npcId = 8361,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 17034, cost = 180},
             {itemId = 17035, cost = 360},
@@ -3208,6 +3601,9 @@ DB.VendorItems = {
         npcId = 17068,
         level = {55, 55},
         zone = "Silithus",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 235497, cost = 5263},
             {itemId = 235825, cost = 5263},
@@ -3222,6 +3618,9 @@ DB.VendorItems = {
         npcId = 12960,
         level = {40, 40},
         zone = "Desolace",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -3258,6 +3657,9 @@ DB.VendorItems = {
         npcId = 2393,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -3290,6 +3692,9 @@ DB.VendorItems = {
         npcId = 8934,
         level = {30, 30},
         zone = "Westfall",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2678, cost = 9},
             {itemId = 2320, cost = 10},
@@ -3332,6 +3737,9 @@ DB.VendorItems = {
         npcId = 10667,
         level = {63, 63},
         zone = "Western Plaguelands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 184937, cost = 0},
             {itemId = 5374, cost = 350}
@@ -3343,6 +3751,10 @@ DB.VendorItems = {
         npcId = 4084,
         level = {24, 24},
         zone = "Stonetalon Mountains",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -3374,6 +3786,9 @@ DB.VendorItems = {
         npcId = 1687,
         level = {15, 15},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 50},
@@ -3390,6 +3805,10 @@ DB.VendorItems = {
         npcId = 2697,
         level = {31, 31},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 47},
@@ -3416,6 +3835,10 @@ DB.VendorItems = {
         npcId = 16115,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 13447, cost = 0},
             {itemId = 13452, cost = 0},
@@ -3428,6 +3851,9 @@ DB.VendorItems = {
         npcId = 3522,
         level = {11, 11},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 3606, cost = 154},
             {itemId = 3607, cost = 155},
@@ -3444,6 +3870,9 @@ DB.VendorItems = {
         npcId = 54,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2492, cost = 298},
             {itemId = 2489, cost = 360},
@@ -3461,6 +3890,10 @@ DB.VendorItems = {
         npcId = 734,
         level = {40, 40},
         zone = "Stranglethorn Vale",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 4536, cost = 24},
@@ -3500,6 +3933,9 @@ DB.VendorItems = {
         npcId = 2672,
         level = {40, 40},
         zone = "Stranglethorn Vale",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 25},
@@ -3525,6 +3961,10 @@ DB.VendorItems = {
         npcId = 16376,
         level = {57, 57},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 236690, cost = 0},
             {itemId = 236692, cost = 0},
@@ -3561,6 +4001,8 @@ DB.VendorItems = {
         npcId = 4894,
         level = {32, 32},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 2070, cost = 25},
@@ -3588,6 +4030,10 @@ DB.VendorItems = {
         npcId = 2838,
         level = {46, 46},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 5740, cost = 105},
             {itemId = 18648, cost = 1800}
@@ -3599,6 +4045,9 @@ DB.VendorItems = {
         npcId = 3166,
         level = {14, 14},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 3606, cost = 154},
             {itemId = 3607, cost = 155},
@@ -3620,6 +4069,9 @@ DB.VendorItems = {
         npcId = 4164,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 793, cost = 138},
             {itemId = 3602, cost = 144},
@@ -3665,6 +4117,9 @@ DB.VendorItems = {
         npcId = 6374,
         level = {11, 11},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 16302, cost = 105},
             {itemId = 16321, cost = 105},
@@ -3712,6 +4167,9 @@ DB.VendorItems = {
         npcId = 4236,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2122, cost = 32},
             {itemId = 2124, cost = 33},
@@ -3765,6 +4223,9 @@ DB.VendorItems = {
         npcId = 4220,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -3793,6 +4254,10 @@ DB.VendorItems = {
         npcId = 12021,
         level = {51, 51},
         zone = "Moonglade",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 4470, cost = 37},
@@ -3823,6 +4288,9 @@ DB.VendorItems = {
         npcId = 3577,
         level = {15, 16},
         zone = "Silverpine Forest",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 0,
         items = {
             {itemId = 414, cost = 0},
             {itemId = 858, cost = 0},
@@ -3875,6 +4343,9 @@ DB.VendorItems = {
         npcId = 3578,
         level = {15, 16},
         zone = "Silverpine Forest",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 0,
         items = {
             {itemId = 414, cost = 0},
             {itemId = 858, cost = 0},
@@ -3904,6 +4375,9 @@ DB.VendorItems = {
         npcId = 4182,
         level = {17, 17},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -3928,6 +4402,10 @@ DB.VendorItems = {
         npcId = 3954,
         level = {24, 24},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -3967,6 +4445,9 @@ DB.VendorItems = {
         npcId = 6373,
         level = {8, 8},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 16302, cost = 105},
             {itemId = 16321, cost = 105},
@@ -3993,6 +4474,9 @@ DB.VendorItems = {
         npcId = 4561,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -4036,6 +4520,9 @@ DB.VendorItems = {
         npcId = 2668,
         level = {27, 27},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 25},
@@ -4061,6 +4548,9 @@ DB.VendorItems = {
         npcId = 4266,
         level = {17, 17},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 4540, cost = 26},
@@ -4090,6 +4580,9 @@ DB.VendorItems = {
         npcId = 6328,
         level = {14, 14},
         zone = "Dun Morogh",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 16302, cost = 105},
             {itemId = 16321, cost = 105},
@@ -4137,6 +4630,10 @@ DB.VendorItems = {
         npcId = 12019,
         level = {51, 51},
         zone = "Moonglade",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 16166, cost = 24},
@@ -4160,6 +4657,9 @@ DB.VendorItems = {
         npcId = 1304,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 5740, cost = 100},
             {itemId = 18649, cost = 1905}
@@ -4171,6 +4671,9 @@ DB.VendorItems = {
         npcId = 3180,
         level = {30, 31},
         zone = "Wetlands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 5740, cost = 100},
             {itemId = 4378, cost = 1400},
@@ -4191,6 +4694,10 @@ DB.VendorItems = {
         npcId = 15197,
         level = {60, 60},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 20387, cost = 888}
         }
@@ -4201,6 +4708,10 @@ DB.VendorItems = {
         npcId = 7940,
         level = {53, 53},
         zone = "Moonglade",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2324, cost = 24},
@@ -4228,6 +4739,9 @@ DB.VendorItems = {
         npcId = 958,
         level = {35, 35},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 18},
             {itemId = 2455, cost = 40},
@@ -4268,6 +4782,9 @@ DB.VendorItems = {
         npcId = 1669,
         level = {20, 20},
         zone = "Westfall",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 5640, cost = 100},
             {itemId = 844, cost = 720},
@@ -4286,6 +4803,9 @@ DB.VendorItems = {
         npcId = 3019,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 1196, cost = 2214},
             {itemId = 853, cost = 2408},
@@ -4306,6 +4826,9 @@ DB.VendorItems = {
         npcId = 6091,
         level = {9, 9},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 16166, cost = 26},
@@ -4329,6 +4852,9 @@ DB.VendorItems = {
         npcId = 4167,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 16166, cost = 25},
@@ -4352,6 +4878,10 @@ DB.VendorItems = {
         npcId = 2805,
         level = {45, 45},
         zone = "Arathi Highlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 3385, cost = 112},
             {itemId = 954, cost = 200},
@@ -4391,6 +4921,9 @@ DB.VendorItems = {
         npcId = 3411,
         level = {25, 25},
         zone = "Stonetalon Mountains",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 159, cost = 25},
@@ -4412,6 +4945,10 @@ DB.VendorItems = {
         npcId = 2397,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2678, cost = 10},
             {itemId = 159, cost = 26},
@@ -4428,6 +4965,9 @@ DB.VendorItems = {
         npcId = 190,
         level = {5, 5},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2119, cost = 25},
             {itemId = 3599, cost = 25},
@@ -4449,6 +4989,9 @@ DB.VendorItems = {
         npcId = 1453,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 3372, cost = 200},
@@ -4463,6 +5006,9 @@ DB.VendorItems = {
         npcId = 15006,
         level = {61, 61},
         zone = "Orgrimmar",
+        faction = "The Defilers",
+        factionId = 510,
+        reactionHorde = 1,
         items = {
             {itemId = 23160, cost = 3789},
             {itemId = 23161, cost = 3789}
@@ -4474,6 +5020,9 @@ DB.VendorItems = {
         npcId = 14962,
         level = {30, 30},
         zone = "Alterac Mountains",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 8766, cost = 3600},
             {itemId = 8948, cost = 3600},
@@ -4487,6 +5036,10 @@ DB.VendorItems = {
         npcId = 8125,
         level = {43, 43},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 26},
             {itemId = 159, cost = 26},
@@ -4509,6 +5062,9 @@ DB.VendorItems = {
         npcId = 5125,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 718, cost = 1614},
             {itemId = 1852, cost = 1684},
@@ -4539,6 +5095,9 @@ DB.VendorItems = {
         npcId = 5102,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2130, cost = 56},
             {itemId = 2131, cost = 56},
@@ -4564,6 +5123,9 @@ DB.VendorItems = {
         npcId = 6367,
         level = {5, 5},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 8485, cost = 3555},
             {itemId = 8486, cost = 3555},
@@ -4577,6 +5139,9 @@ DB.VendorItems = {
         npcId = 956,
         level = {22, 22},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 718, cost = 1698},
             {itemId = 1852, cost = 1772},
@@ -4592,6 +5157,9 @@ DB.VendorItems = {
         npcId = 1465,
         level = {15, 15},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -4620,6 +5188,9 @@ DB.VendorItems = {
         npcId = 1250,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2512, cost = 10},
@@ -4656,6 +5227,10 @@ DB.VendorItems = {
         npcId = 2812,
         level = {38, 40},
         zone = "Arathi Highlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 3372, cost = 200},
@@ -4672,6 +5247,9 @@ DB.VendorItems = {
         npcId = 13278,
         level = {60, 60},
         zone = "Azshara",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2450, cost = 0},
             {itemId = 3357, cost = 0},
@@ -4693,6 +5271,10 @@ DB.VendorItems = {
         npcId = 10293,
         level = {51, 51},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2434, cost = 4861},
             {itemId = 3593, cost = 5155},
@@ -4716,6 +5298,9 @@ DB.VendorItems = {
         npcId = 1314,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2158, cost = 2065},
             {itemId = 3591, cost = 2096},
@@ -4765,6 +5350,9 @@ DB.VendorItems = {
         npcId = 3158,
         level = {10, 10},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -4780,6 +5368,9 @@ DB.VendorItems = {
         npcId = 836,
         level = {5, 5},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2119, cost = 25},
             {itemId = 3599, cost = 25},
@@ -4801,6 +5392,8 @@ DB.VendorItems = {
         npcId = 4891,
         level = {28, 28},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 2070, cost = 25},
@@ -4834,6 +5427,9 @@ DB.VendorItems = {
         npcId = 4180,
         level = {50, 50},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2525, cost = 27883},
             {itemId = 2523, cost = 29773},
@@ -4849,6 +5445,9 @@ DB.VendorItems = {
         npcId = 1286,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -4891,6 +5490,9 @@ DB.VendorItems = {
         npcId = 5140,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 2723, cost = 50},
@@ -4911,6 +5513,9 @@ DB.VendorItems = {
         npcId = 2140,
         level = {18, 20},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -4936,6 +5541,10 @@ DB.VendorItems = {
         npcId = 1462,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2515, cost = 52},
@@ -4950,6 +5559,9 @@ DB.VendorItems = {
         npcId = 3144,
         level = {20, 20},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 228222, cost = 44444},
             {itemId = 226500, cost = 88888}
@@ -4961,6 +5573,9 @@ DB.VendorItems = {
         npcId = 483,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2070, cost = 23},
             {itemId = 414, cost = 117},
@@ -4976,6 +5591,9 @@ DB.VendorItems = {
         npcId = 5503,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 18},
             {itemId = 3372, cost = 200},
@@ -4989,6 +5607,9 @@ DB.VendorItems = {
         npcId = 4555,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -5026,6 +5647,9 @@ DB.VendorItems = {
         npcId = 6300,
         level = {30, 30},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 5956, cost = 18},
             {itemId = 2901, cost = 85},
@@ -5041,6 +5665,9 @@ DB.VendorItems = {
         npcId = 4165,
         level = {35, 35},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 3565, cost = 0},
             {itemId = 11419, cost = 0}
@@ -5052,6 +5679,9 @@ DB.VendorItems = {
         npcId = 2137,
         level = {12, 12},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2374, cost = 173},
             {itemId = 2375, cost = 182},
@@ -5067,6 +5697,9 @@ DB.VendorItems = {
         npcId = 4587,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 15},
             {itemId = 4357, cost = 16},
@@ -5092,6 +5725,9 @@ DB.VendorItems = {
         npcId = 8360,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 1845, cost = 876},
             {itemId = 1846, cost = 926},
@@ -5117,6 +5753,9 @@ DB.VendorItems = {
         npcId = 4170,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 8},
             {itemId = 2516, cost = 8},
@@ -5150,6 +5789,9 @@ DB.VendorItems = {
         npcId = 1328,
         level = {60, 60},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 2723, cost = 50},
@@ -5170,6 +5812,9 @@ DB.VendorItems = {
         npcId = 4168,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 23},
@@ -5199,6 +5844,9 @@ DB.VendorItems = {
         npcId = 14481,
         level = {10, 10},
         zone = "Stormwind City",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 18633, cost = 131},
             {itemId = 7228, cost = 526},
@@ -5212,6 +5860,9 @@ DB.VendorItems = {
         npcId = 5160,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2678, cost = 9},
             {itemId = 159, cost = 22},
@@ -5227,6 +5878,9 @@ DB.VendorItems = {
         npcId = 5483,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2678, cost = 10},
             {itemId = 159, cost = 25},
@@ -5242,6 +5896,9 @@ DB.VendorItems = {
         npcId = 3020,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 852, cost = 1830},
             {itemId = 1197, cost = 2806},
@@ -5260,6 +5917,9 @@ DB.VendorItems = {
         npcId = 1310,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 3889, cost = 7042},
             {itemId = 3890, cost = 9067},
@@ -5275,6 +5935,10 @@ DB.VendorItems = {
         npcId = 11188,
         level = {58, 58},
         zone = "Winterspring",
+        faction = "Everlook",
+        factionId = 577,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 21},
             {itemId = 3372, cost = 210},
@@ -5291,6 +5955,9 @@ DB.VendorItems = {
         npcId = 4585,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2928, cost = 20},
             {itemId = 3371, cost = 20},
@@ -5310,6 +5977,9 @@ DB.VendorItems = {
         npcId = 3969,
         level = {28, 28},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2928, cost = 20},
             {itemId = 3371, cost = 20},
@@ -5329,6 +5999,9 @@ DB.VendorItems = {
         npcId = 1463,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -5357,6 +6030,10 @@ DB.VendorItems = {
         npcId = 7942,
         level = {53, 53},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2512, cost = 8},
             {itemId = 2516, cost = 8},
@@ -5393,6 +6070,10 @@ DB.VendorItems = {
         npcId = 2845,
         level = {42, 42},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2419, cost = 8309},
             {itemId = 2421, cost = 8370},
@@ -5412,6 +6093,10 @@ DB.VendorItems = {
         npcId = 233,
         level = {20, 20},
         zone = "Westfall",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4540, cost = 26},
             {itemId = 11109, cost = 26},
@@ -5428,6 +6113,10 @@ DB.VendorItems = {
         npcId = 16113,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 20411, cost = 0}
         }
@@ -5438,6 +6127,9 @@ DB.VendorItems = {
         npcId = 3095,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2148, cost = 2753},
             {itemId = 2150, cost = 2775},
@@ -5480,6 +6172,10 @@ DB.VendorItems = {
         npcId = 1296,
         level = {54, 54},
         zone = "Burning Steppes",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2534, cost = 48103},
             {itemId = 2528, cost = 54884},
@@ -5497,6 +6193,9 @@ DB.VendorItems = {
         npcId = 4775,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -5534,6 +6233,9 @@ DB.VendorItems = {
         npcId = 1303,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2665, cost = 18},
             {itemId = 3421, cost = 210},
@@ -5550,6 +6252,10 @@ DB.VendorItems = {
         npcId = 3367,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2678, cost = 9},
@@ -5592,6 +6298,9 @@ DB.VendorItems = {
         npcId = 14337,
         level = {50, 50},
         zone = "Scarlet Enclave",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -5611,6 +6320,9 @@ DB.VendorItems = {
         npcId = 5100,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2678, cost = 9},
@@ -5641,6 +6353,9 @@ DB.VendorItems = {
         npcId = 12795,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 17034, cost = 177},
             {itemId = 17035, cost = 355},
@@ -5669,6 +6384,9 @@ DB.VendorItems = {
         npcId = 5569,
         level = {40, 40},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 5740, cost = 88}
         }
@@ -5679,6 +6397,9 @@ DB.VendorItems = {
         npcId = 3168,
         level = {15, 15},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -5702,6 +6423,10 @@ DB.VendorItems = {
         npcId = 14860,
         level = {4, 4},
         zone = "Elwynn Forest",
+        faction = "Darkmoon Faire",
+        factionId = 909,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 18662, cost = 21},
             {itemId = 11026, cost = 10526},
@@ -5714,6 +6439,10 @@ DB.VendorItems = {
         npcId = 2682,
         level = {24, 24},
         zone = "Wetlands",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -5741,6 +6470,9 @@ DB.VendorItems = {
         npcId = 4601,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 1196, cost = 1967},
             {itemId = 853, cost = 2141},
@@ -5758,6 +6490,9 @@ DB.VendorItems = {
         npcId = 3091,
         level = {26, 26},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 24},
@@ -5785,6 +6520,9 @@ DB.VendorItems = {
         npcId = 1698,
         level = {10, 10},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2492, cost = 301},
             {itemId = 2489, cost = 360},
@@ -5802,6 +6540,9 @@ DB.VendorItems = {
         npcId = 1298,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 8},
             {itemId = 2515, cost = 47},
@@ -5822,6 +6563,9 @@ DB.VendorItems = {
         npcId = 3591,
         level = {9, 9},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2122, cost = 33},
             {itemId = 2124, cost = 33},
@@ -5837,6 +6581,10 @@ DB.VendorItems = {
         npcId = 12097,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Frostwolf Clan",
+        factionId = 729,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2928, cost = 18},
             {itemId = 3371, cost = 18},
@@ -5899,6 +6647,9 @@ DB.VendorItems = {
         npcId = 4223,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2678, cost = 8},
             {itemId = 159, cost = 25},
@@ -5914,6 +6665,9 @@ DB.VendorItems = {
         npcId = 3003,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 4540, cost = 26},
             {itemId = 4541, cost = 131},
@@ -5929,6 +6683,9 @@ DB.VendorItems = {
         npcId = 4181,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 16166, cost = 24},
@@ -5952,6 +6709,10 @@ DB.VendorItems = {
         npcId = 3298,
         level = {53, 53},
         zone = "Burning Steppes",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 23},
             {itemId = 2070, cost = 23},
@@ -5973,6 +6734,10 @@ DB.VendorItems = {
         npcId = 13216,
         level = {58, 58},
         zone = "Alterac Valley",
+        faction = "Stormpike Guard",
+        factionId = 730,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 5173, cost = 0},
             {itemId = 8766, cost = 0},
@@ -5993,6 +6758,10 @@ DB.VendorItems = {
         npcId = 3495,
         level = {20, 20},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -6019,6 +6788,9 @@ DB.VendorItems = {
         npcId = 3705,
         level = {25, 25},
         zone = "The Barrens",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 2287, cost = 131},
@@ -6034,6 +6806,9 @@ DB.VendorItems = {
         npcId = 4043,
         level = {8, 8},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2525, cost = 27883},
             {itemId = 2523, cost = 29773},
@@ -6049,6 +6824,9 @@ DB.VendorItems = {
         npcId = 1238,
         level = {9, 9},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2119, cost = 24},
             {itemId = 3599, cost = 24},
@@ -6082,6 +6860,8 @@ DB.VendorItems = {
         npcId = 14963,
         level = {30, 30},
         zone = "Ashenvale",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 1205, cost = 500},
             {itemId = 3770, cost = 500},
@@ -6107,6 +6887,9 @@ DB.VendorItems = {
         npcId = 5188,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 5976, cost = 8888}
         }
@@ -6117,6 +6900,10 @@ DB.VendorItems = {
         npcId = 225,
         level = {30, 30},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2208, cost = 3842},
             {itemId = 2027, cost = 4015},
@@ -6144,6 +6931,9 @@ DB.VendorItems = {
         npcId = 5175,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 4357, cost = 15},
             {itemId = 5956, cost = 15},
@@ -6173,6 +6963,10 @@ DB.VendorItems = {
         npcId = 4184,
         level = {51, 51},
         zone = "Moonglade",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 13897, cost = 2976},
             {itemId = 13899, cost = 17641},
@@ -6188,6 +6982,9 @@ DB.VendorItems = {
         npcId = 4600,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2526, cost = 17187},
             {itemId = 2520, cost = 21891},
@@ -6207,6 +7004,10 @@ DB.VendorItems = {
         npcId = 2698,
         level = {31, 31},
         zone = "Hillsbrad Foothills",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 6260, cost = 50},
@@ -6233,6 +7034,9 @@ DB.VendorItems = {
         npcId = 3090,
         level = {25, 25},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2928, cost = 20},
             {itemId = 3371, cost = 20},
@@ -6252,6 +7056,9 @@ DB.VendorItems = {
         npcId = 1333,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2525, cost = 26488},
             {itemId = 2523, cost = 28285},
@@ -6267,6 +7074,9 @@ DB.VendorItems = {
         npcId = 2786,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 4984, cost = 23844}
         }
@@ -6277,6 +7087,9 @@ DB.VendorItems = {
         npcId = 8176,
         level = {45, 45},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 17},
             {itemId = 2901, cost = 76},
@@ -6293,6 +7106,9 @@ DB.VendorItems = {
         npcId = 6567,
         level = {43, 43},
         zone = "Dustwallow Marsh",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 24},
@@ -6318,6 +7134,9 @@ DB.VendorItems = {
         npcId = 3165,
         level = {13, 13},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 52},
@@ -6333,6 +7152,9 @@ DB.VendorItems = {
         npcId = 3000,
         level = {45, 45},
         zone = "Un'Goro Crater",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2524, cost = 17273},
             {itemId = 2526, cost = 17402},
@@ -6358,6 +7180,9 @@ DB.VendorItems = {
         npcId = 12958,
         level = {52, 52},
         zone = "The Hinterlands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -6396,6 +7221,10 @@ DB.VendorItems = {
         npcId = 8137,
         level = {40, 40},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4592, cost = 21},
             {itemId = 159, cost = 26},
@@ -6421,6 +7250,9 @@ DB.VendorItems = {
         npcId = 5820,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 797, cost = 175},
             {itemId = 1840, cost = 184},
@@ -6468,6 +7300,9 @@ DB.VendorItems = {
         npcId = 5750,
         level = {10, 10},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 16302, cost = 105},
             {itemId = 16321, cost = 105},
@@ -6515,6 +7350,10 @@ DB.VendorItems = {
         npcId = 843,
         level = {15, 15},
         zone = "Westfall",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2678, cost = 10},
@@ -6546,6 +7385,10 @@ DB.VendorItems = {
         npcId = 5151,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 423},
@@ -6574,6 +7417,9 @@ DB.VendorItems = {
         npcId = 4232,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 1196, cost = 1967},
             {itemId = 853, cost = 2141},
@@ -6594,6 +7440,9 @@ DB.VendorItems = {
         npcId = 3085,
         level = {20, 20},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2678, cost = 10},
             {itemId = 159, cost = 24},
@@ -6609,6 +7458,10 @@ DB.VendorItems = {
         npcId = 2848,
         level = {45, 45},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 21},
             {itemId = 3372, cost = 210},
@@ -6626,6 +7479,9 @@ DB.VendorItems = {
         npcId = 2687,
         level = {42, 42},
         zone = "Stranglethorn Vale",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -6652,6 +7508,9 @@ DB.VendorItems = {
         npcId = 1213,
         level = {5, 5},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 17184, cost = 34},
             {itemId = 2380, cost = 36},
@@ -6669,6 +7528,9 @@ DB.VendorItems = {
         npcId = 4256,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2901, cost = 85},
             {itemId = 2880, cost = 105},
@@ -6682,6 +7544,9 @@ DB.VendorItems = {
         npcId = 1692,
         level = {10, 10},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -6705,6 +7570,9 @@ DB.VendorItems = {
         npcId = 6301,
         level = {30, 30},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -6747,6 +7615,9 @@ DB.VendorItems = {
         npcId = 4556,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2130, cost = 56},
             {itemId = 2131, cost = 56},
@@ -6772,6 +7643,9 @@ DB.VendorItems = {
         npcId = 3358,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2901, cost = 76},
             {itemId = 2880, cost = 94},
@@ -6785,6 +7659,10 @@ DB.VendorItems = {
         npcId = 11555,
         level = {55, 55},
         zone = "Felwood",
+        faction = "Timbermaw Hold",
+        factionId = 576,
+        reactionAlliance = -1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4470, cost = 42},
@@ -6816,6 +7694,9 @@ DB.VendorItems = {
         npcId = 14437,
         level = {55, 55},
         zone = "Burning Steppes",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 18802, cost = 60000},
             {itemId = 18629, cost = 500000},
@@ -6829,6 +7710,9 @@ DB.VendorItems = {
         npcId = 1362,
         level = {20, 20},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 1845, cost = 923},
             {itemId = 1846, cost = 926},
@@ -6844,6 +7728,9 @@ DB.VendorItems = {
         npcId = 3369,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 4496, cost = 444},
             {itemId = 4498, cost = 2222},
@@ -6857,6 +7744,9 @@ DB.VendorItems = {
         npcId = 2820,
         level = {31, 31},
         zone = "Arathi Highlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4470, cost = 40},
@@ -6886,6 +7776,10 @@ DB.VendorItems = {
         npcId = 11703,
         level = {58, 58},
         zone = "Searing Gorge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 1845, cost = 780},
             {itemId = 1846, cost = 828},
@@ -6901,6 +7795,10 @@ DB.VendorItems = {
         npcId = 2908,
         level = {44, 44},
         zone = "Badlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 23},
             {itemId = 4470, cost = 35},
@@ -6930,6 +7828,9 @@ DB.VendorItems = {
         npcId = 1273,
         level = {10, 10},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2492, cost = 269},
             {itemId = 2489, cost = 324},
@@ -6947,6 +7848,9 @@ DB.VendorItems = {
         npcId = 4082,
         level = {32, 32},
         zone = "Stonetalon Mountains",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2516, cost = 9},
@@ -6972,6 +7876,10 @@ DB.VendorItems = {
         npcId = 3493,
         level = {25, 25},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 718, cost = 1614},
             {itemId = 1852, cost = 1684},
@@ -6997,6 +7905,9 @@ DB.VendorItems = {
         npcId = 7775,
         level = {45, 45},
         zone = "Feralas",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 11141, cost = 2000}
         }
@@ -7007,6 +7918,8 @@ DB.VendorItems = {
         npcId = 4885,
         level = {35, 35},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 2414, cost = 400000},
             {itemId = 5655, cost = 400000},
@@ -7022,6 +7935,9 @@ DB.VendorItems = {
         npcId = 1348,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2492, cost = 252},
             {itemId = 2493, cost = 623},
@@ -7042,6 +7958,10 @@ DB.VendorItems = {
         npcId = 3291,
         level = {24, 24},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4540, cost = 25},
             {itemId = 4541, cost = 124},
@@ -7058,6 +7978,10 @@ DB.VendorItems = {
         npcId = 3343,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Frostwolf Clan",
+        factionId = 729,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 16},
             {itemId = 2901, cost = 81},
@@ -7073,6 +7997,9 @@ DB.VendorItems = {
         npcId = 5103,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 852, cost = 1830},
             {itemId = 851, cost = 2129},
@@ -7098,6 +8025,9 @@ DB.VendorItems = {
         npcId = 12807,
         level = {50, 50},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 16302, cost = 100},
             {itemId = 16321, cost = 100},
@@ -7166,6 +8096,9 @@ DB.VendorItems = {
         npcId = 3086,
         level = {20, 20},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 4592, cost = 21},
             {itemId = 787, cost = 24},
@@ -7193,6 +8126,9 @@ DB.VendorItems = {
         npcId = 8508,
         level = {10, 10},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 6256, cost = 23},
             {itemId = 6325, cost = 40},
@@ -7209,6 +8145,9 @@ DB.VendorItems = {
         npcId = 980,
         level = {45, 45},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 8088, cost = 11853},
             {itemId = 8090, cost = 11945},
@@ -7234,6 +8173,9 @@ DB.VendorItems = {
         npcId = 3881,
         level = {14, 14},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 117, cost = 26},
@@ -7256,6 +8198,9 @@ DB.VendorItems = {
         npcId = 3093,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2374, cost = 164},
             {itemId = 2375, cost = 164},
@@ -7283,6 +8228,9 @@ DB.VendorItems = {
         npcId = 1452,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 4470, cost = 37},
@@ -7307,6 +8255,10 @@ DB.VendorItems = {
         npcId = 3708,
         level = {52, 52},
         zone = "Burning Steppes",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 4540, cost = 24},
@@ -7328,6 +8280,9 @@ DB.VendorItems = {
         npcId = 1104,
         level = {5, 5},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 17184, cost = 35},
             {itemId = 2380, cost = 38},
@@ -7345,6 +8300,10 @@ DB.VendorItems = {
         npcId = 13218,
         level = {58, 58},
         zone = "Alterac Valley",
+        faction = "Frostwolf Clan",
+        factionId = 729,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 8766, cost = 0},
             {itemId = 8952, cost = 0},
@@ -7366,6 +8325,10 @@ DB.VendorItems = {
         npcId = 10361,
         level = {52, 52},
         zone = "Azshara",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2534, cost = 43040},
             {itemId = 2528, cost = 49107},
@@ -7384,6 +8347,10 @@ DB.VendorItems = {
         npcId = 10216,
         level = {15, 15},
         zone = "Darkshore",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 6256, cost = 23},
             {itemId = 6529, cost = 50}
@@ -7395,6 +8362,8 @@ DB.VendorItems = {
         npcId = 13436,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 17404, cost = 125},
             {itemId = 17406, cost = 125},
@@ -7411,6 +8380,9 @@ DB.VendorItems = {
         npcId = 960,
         level = {30, 30},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -7441,6 +8413,9 @@ DB.VendorItems = {
         npcId = 1289,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 852, cost = 1738},
             {itemId = 851, cost = 2022},
@@ -7476,6 +8451,10 @@ DB.VendorItems = {
         npcId = 5112,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 22},
             {itemId = 2723, cost = 52},
@@ -7496,6 +8475,9 @@ DB.VendorItems = {
         npcId = 5138,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 21},
             {itemId = 3372, cost = 210},
@@ -7509,6 +8491,9 @@ DB.VendorItems = {
         npcId = 5886,
         level = {16, 16},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 4604, cost = 24},
             {itemId = 4605, cost = 124},
@@ -7524,6 +8509,9 @@ DB.VendorItems = {
         npcId = 12045,
         level = {30, 30},
         zone = "Desolace",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 2522, cost = 23734},
             {itemId = 12249, cost = 26840},
@@ -7539,6 +8527,9 @@ DB.VendorItems = {
         npcId = 3335,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 5640, cost = 100},
             {itemId = 17034, cost = 210},
@@ -7569,6 +8560,9 @@ DB.VendorItems = {
         npcId = 3933,
         level = {14, 14},
         zone = "Durotar",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 2287, cost = 125},
@@ -7584,6 +8578,10 @@ DB.VendorItems = {
         npcId = 3540,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4592, cost = 21},
             {itemId = 787, cost = 23},
@@ -7599,6 +8597,10 @@ DB.VendorItems = {
         npcId = 3486,
         level = {19, 19},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 3428, cost = 421},
             {itemId = 16059, cost = 421},
@@ -7623,6 +8625,9 @@ DB.VendorItems = {
         npcId = 3962,
         level = {26, 26},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 4470, cost = 37},
@@ -7647,6 +8652,9 @@ DB.VendorItems = {
         npcId = 8401,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 10394, cost = 5263}
         }
@@ -7657,6 +8665,10 @@ DB.VendorItems = {
         npcId = 3547,
         level = {10, 10},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 4604, cost = 25},
             {itemId = 4605, cost = 125},
@@ -7672,6 +8684,10 @@ DB.VendorItems = {
         npcId = 2810,
         level = {35, 35},
         zone = "Arathi Highlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -7711,6 +8727,9 @@ DB.VendorItems = {
         npcId = 3316,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2158, cost = 1836},
             {itemId = 3591, cost = 1864},
@@ -7761,6 +8780,9 @@ DB.VendorItems = {
         npcId = 4575,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -7789,6 +8811,8 @@ DB.VendorItems = {
         npcId = 4886,
         level = {37, 37},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 2148, cost = 2907},
             {itemId = 2150, cost = 2930},
@@ -7806,6 +8830,9 @@ DB.VendorItems = {
         npcId = 3080,
         level = {13, 13},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2399, cost = 217},
             {itemId = 2402, cost = 219},
@@ -7823,6 +8850,9 @@ DB.VendorItems = {
         npcId = 3685,
         level = {45, 45},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 15277, cost = 355555},
             {itemId = 15290, cost = 355555},
@@ -7837,6 +8867,10 @@ DB.VendorItems = {
         npcId = 2839,
         level = {41, 41},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 50},
@@ -7855,6 +8889,9 @@ DB.VendorItems = {
         npcId = 8161,
         level = {49, 49},
         zone = "The Hinterlands",
+        faction = "Wildhammer Clan",
+        factionId = 471,
+        reactionAlliance = 1,
         items = {
             {itemId = 5956, cost = 16},
             {itemId = 2901, cost = 73},
@@ -7871,6 +8908,9 @@ DB.VendorItems = {
         npcId = 5133,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 5208, cost = 2968},
             {itemId = 5209, cost = 3426},
@@ -7888,6 +8928,9 @@ DB.VendorItems = {
         npcId = 3956,
         level = {24, 24},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 3385, cost = 120},
@@ -7904,6 +8947,9 @@ DB.VendorItems = {
         npcId = 7943,
         level = {49, 49},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 4592, cost = 18},
             {itemId = 159, cost = 23},
@@ -7925,6 +8971,9 @@ DB.VendorItems = {
         npcId = 4187,
         level = {25, 25},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 1845, cost = 876},
             {itemId = 1846, cost = 880},
@@ -7942,6 +8991,9 @@ DB.VendorItems = {
         npcId = 6731,
         level = {27, 27},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2604, cost = 50},
@@ -7968,6 +9020,9 @@ DB.VendorItems = {
         npcId = 5940,
         level = {9, 9},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 6256, cost = 24},
             {itemId = 6325, cost = 42},
@@ -7985,6 +9040,9 @@ DB.VendorItems = {
         npcId = 8152,
         level = {40, 40},
         zone = "Desolace",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 4604, cost = 26},
@@ -8006,6 +9064,9 @@ DB.VendorItems = {
         npcId = 2117,
         level = {5, 5},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2130, cost = 56},
             {itemId = 2131, cost = 56},
@@ -8023,6 +9084,9 @@ DB.VendorItems = {
         npcId = 981,
         level = {45, 45},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2534, cost = 42758},
             {itemId = 2528, cost = 48787},
@@ -8040,6 +9104,8 @@ DB.VendorItems = {
         npcId = 14964,
         level = {30, 30},
         zone = "The Barrens",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 1205, cost = 450},
             {itemId = 3770, cost = 450},
@@ -8065,6 +9131,9 @@ DB.VendorItems = {
         npcId = 1243,
         level = {8, 12},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2510, cost = 41},
@@ -8079,6 +9148,9 @@ DB.VendorItems = {
         npcId = 5119,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 1196, cost = 2214},
             {itemId = 853, cost = 2408},
@@ -8098,6 +9170,9 @@ DB.VendorItems = {
         npcId = 1324,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2526, cost = 20353},
             {itemId = 2520, cost = 25924},
@@ -8111,6 +9186,10 @@ DB.VendorItems = {
         npcId = 4307,
         level = {25, 25},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4592, cost = 18},
             {itemId = 787, cost = 25},
@@ -8130,6 +9209,8 @@ DB.VendorItems = {
         npcId = 4897,
         level = {34, 34},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -8171,6 +9252,9 @@ DB.VendorItems = {
         npcId = 3088,
         level = {25, 25},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2519, cost = 52},
@@ -8186,6 +9270,10 @@ DB.VendorItems = {
         npcId = 3133,
         level = {30, 30},
         zone = "Duskwood",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -8212,6 +9300,9 @@ DB.VendorItems = {
         npcId = 8358,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 3428, cost = 376},
             {itemId = 16059, cost = 376},
@@ -8236,6 +9327,10 @@ DB.VendorItems = {
         npcId = 2265,
         level = {24, 25},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 422, cost = 0},
             {itemId = 790, cost = 0},
@@ -8436,6 +9531,10 @@ DB.VendorItems = {
         npcId = 2264,
         level = {24, 25},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 422, cost = 0},
             {itemId = 929, cost = 0},
@@ -8553,6 +9652,10 @@ DB.VendorItems = {
         npcId = 11187,
         level = {60, 60},
         zone = "Winterspring",
+        faction = "Everlook",
+        factionId = 577,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4592, cost = 21},
             {itemId = 117, cost = 26},
@@ -8581,6 +9684,9 @@ DB.VendorItems = {
         npcId = 5170,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2526, cost = 20353},
             {itemId = 2520, cost = 24627},
@@ -8596,6 +9702,9 @@ DB.VendorItems = {
         npcId = 3018,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2510, cost = 43},
@@ -8615,6 +9724,9 @@ DB.VendorItems = {
         npcId = 894,
         level = {5, 5},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 4536, cost = 24},
             {itemId = 4537, cost = 124},
@@ -8630,6 +9742,9 @@ DB.VendorItems = {
         npcId = 3948,
         level = {10, 10},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 4540, cost = 25},
             {itemId = 4541, cost = 131},
@@ -8645,6 +9760,9 @@ DB.VendorItems = {
         npcId = 3323,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 17034, cost = 189},
             {itemId = 17035, cost = 378},
@@ -8673,6 +9791,9 @@ DB.VendorItems = {
         npcId = 1147,
         level = {40, 40},
         zone = "Stranglethorn Vale",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2434, cost = 5165},
             {itemId = 3593, cost = 5477},
@@ -8696,6 +9817,10 @@ DB.VendorItems = {
         npcId = 3477,
         level = {18, 18},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 18},
             {itemId = 2901, cost = 85},
@@ -8711,6 +9836,9 @@ DB.VendorItems = {
         npcId = 12776,
         level = {9, 9},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 16302, cost = 105},
             {itemId = 16321, cost = 105},
@@ -8737,6 +9865,9 @@ DB.VendorItems = {
         npcId = 3160,
         level = {11, 11},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 3595, cost = 20},
             {itemId = 3596, cost = 20},
@@ -8758,6 +9889,10 @@ DB.VendorItems = {
         npcId = 3490,
         level = {30, 30},
         zone = "The Barrens",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2928, cost = 21},
             {itemId = 3371, cost = 21},
@@ -8802,6 +9937,9 @@ DB.VendorItems = {
         npcId = 16132,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2450, cost = 0},
             {itemId = 10371, cost = 0},
@@ -8817,6 +9955,10 @@ DB.VendorItems = {
         npcId = 2844,
         level = {46, 46},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 17},
             {itemId = 2901, cost = 85},
@@ -8832,6 +9974,9 @@ DB.VendorItems = {
         npcId = 14753,
         level = {55, 55},
         zone = "Ashenvale",
+        faction = "Silverwing Sentinels",
+        factionId = 890,
+        reactionAlliance = 1,
         items = {
             {itemId = 1645, cost = 0},
             {itemId = 3927, cost = 0},
@@ -8853,6 +9998,10 @@ DB.VendorItems = {
         npcId = 4188,
         level = {25, 25},
         zone = "Stonetalon Mountains",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 3597, cost = 1137},
             {itemId = 3598, cost = 1142},
@@ -8874,6 +10023,9 @@ DB.VendorItems = {
         npcId = 5155,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 3597, cost = 961},
             {itemId = 3598, cost = 964},
@@ -8903,6 +10055,9 @@ DB.VendorItems = {
         npcId = 11116,
         level = {30, 30},
         zone = "Thousand Needles",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 22},
@@ -8927,6 +10082,9 @@ DB.VendorItems = {
         npcId = 9501,
         level = {30, 30},
         zone = "Arathi Highlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 9},
             {itemId = 159, cost = 23},
@@ -8951,6 +10109,10 @@ DB.VendorItems = {
         npcId = 6740,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -8975,6 +10137,10 @@ DB.VendorItems = {
         npcId = 2352,
         level = {30, 30},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -9005,6 +10171,9 @@ DB.VendorItems = {
         npcId = 6739,
         level = {30, 30},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -9029,6 +10198,9 @@ DB.VendorItems = {
         npcId = 1247,
         level = {30, 30},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 25},
@@ -9055,6 +10227,10 @@ DB.VendorItems = {
         npcId = 3934,
         level = {30, 30},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 25},
@@ -9079,6 +10255,9 @@ DB.VendorItems = {
         npcId = 6727,
         level = {30, 30},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 4592, cost = 20},
@@ -9103,6 +10282,9 @@ DB.VendorItems = {
         npcId = 7714,
         level = {30, 30},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 4536, cost = 24},
@@ -9127,6 +10309,10 @@ DB.VendorItems = {
         npcId = 16458,
         level = {30, 30},
         zone = "Stonetalon Mountains",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -9151,6 +10337,9 @@ DB.VendorItems = {
         npcId = 295,
         level = {30, 30},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 23},
@@ -9175,6 +10364,9 @@ DB.VendorItems = {
         npcId = 5111,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 117, cost = 24},
@@ -9204,6 +10396,10 @@ DB.VendorItems = {
         npcId = 7733,
         level = {30, 30},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 117, cost = 26},
@@ -9229,6 +10425,9 @@ DB.VendorItems = {
         npcId = 7737,
         level = {30, 30},
         zone = "Feralas",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 4540, cost = 22},
@@ -9253,6 +10452,9 @@ DB.VendorItems = {
         npcId = 6928,
         level = {30, 30},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 25},
@@ -9277,6 +10479,10 @@ DB.VendorItems = {
         npcId = 6929,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 117, cost = 24},
@@ -9301,6 +10507,9 @@ DB.VendorItems = {
         npcId = 6734,
         level = {30, 30},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -9325,6 +10534,9 @@ DB.VendorItems = {
         npcId = 8931,
         level = {30, 30},
         zone = "Westfall",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 4592, cost = 18},
@@ -9349,6 +10561,9 @@ DB.VendorItems = {
         npcId = 1464,
         level = {30, 30},
         zone = "Wetlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 117, cost = 25},
@@ -9374,6 +10589,8 @@ DB.VendorItems = {
         npcId = 6272,
         level = {30, 30},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 9},
             {itemId = 159, cost = 25},
@@ -9398,6 +10615,9 @@ DB.VendorItems = {
         npcId = 7731,
         level = {30, 30},
         zone = "Stonetalon Mountains",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 117, cost = 25},
@@ -9422,6 +10642,9 @@ DB.VendorItems = {
         npcId = 6930,
         level = {30, 30},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 24},
@@ -9446,6 +10669,9 @@ DB.VendorItems = {
         npcId = 6747,
         level = {30, 30},
         zone = "Mulgore",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 25},
@@ -9470,6 +10696,9 @@ DB.VendorItems = {
         npcId = 12196,
         level = {30, 30},
         zone = "Ashenvale",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 117, cost = 24},
@@ -9494,6 +10723,9 @@ DB.VendorItems = {
         npcId = 6736,
         level = {30, 30},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -9518,6 +10750,9 @@ DB.VendorItems = {
         npcId = 6738,
         level = {30, 30},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 4592, cost = 21},
@@ -9542,6 +10777,9 @@ DB.VendorItems = {
         npcId = 11103,
         level = {30, 30},
         zone = "Desolace",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 25},
@@ -9566,6 +10804,9 @@ DB.VendorItems = {
         npcId = 6741,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -9590,6 +10831,9 @@ DB.VendorItems = {
         npcId = 6746,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 22},
@@ -9614,6 +10858,9 @@ DB.VendorItems = {
         npcId = 5688,
         level = {30, 30},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -9638,6 +10885,9 @@ DB.VendorItems = {
         npcId = 6735,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 25},
@@ -9662,6 +10912,9 @@ DB.VendorItems = {
         npcId = 6737,
         level = {30, 30},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -9686,6 +10939,9 @@ DB.VendorItems = {
         npcId = 2388,
         level = {30, 30},
         zone = "Hillsbrad Foothills",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 117, cost = 26},
@@ -9711,6 +10967,10 @@ DB.VendorItems = {
         npcId = 9356,
         level = {30, 30},
         zone = "Badlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 117, cost = 24},
@@ -9735,6 +10995,9 @@ DB.VendorItems = {
         npcId = 7736,
         level = {30, 30},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 24},
@@ -9759,6 +11022,9 @@ DB.VendorItems = {
         npcId = 11106,
         level = {30, 30},
         zone = "Desolace",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 26},
@@ -9783,6 +11049,10 @@ DB.VendorItems = {
         npcId = 6807,
         level = {46, 46},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 4592, cost = 20},
@@ -9807,6 +11077,10 @@ DB.VendorItems = {
         npcId = 5814,
         level = {30, 30},
         zone = "Stranglethorn Vale",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 4592, cost = 17},
@@ -9837,6 +11111,9 @@ DB.VendorItems = {
         npcId = 7744,
         level = {30, 30},
         zone = "The Hinterlands",
+        faction = "Wildhammer Clan",
+        factionId = 471,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 25},
@@ -9863,6 +11140,9 @@ DB.VendorItems = {
         npcId = 6790,
         level = {30, 30},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 159, cost = 24},
@@ -9887,6 +11167,10 @@ DB.VendorItems = {
         npcId = 11118,
         level = {30, 30},
         zone = "Winterspring",
+        faction = "Everlook",
+        factionId = 577,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 9},
             {itemId = 117, cost = 26},
@@ -9912,6 +11196,10 @@ DB.VendorItems = {
         npcId = 6791,
         level = {35, 35},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 4592, cost = 20},
@@ -9936,6 +11224,9 @@ DB.VendorItems = {
         npcId = 1686,
         level = {15, 15},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2519, cost = 50},
@@ -9951,6 +11242,9 @@ DB.VendorItems = {
         npcId = 15734,
         level = {55, 55},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 233197, cost = 0},
             {itemId = 233198, cost = 0},
@@ -9974,6 +11268,10 @@ DB.VendorItems = {
         npcId = 3491,
         level = {23, 23},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2208, cost = 3650},
             {itemId = 2027, cost = 3815},
@@ -9991,6 +11289,10 @@ DB.VendorItems = {
         npcId = 8139,
         level = {40, 40},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 4470, cost = 40},
@@ -10022,6 +11324,10 @@ DB.VendorItems = {
         npcId = 3700,
         level = {51, 51},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 17034, cost = 188},
             {itemId = 17035, cost = 376},
@@ -10050,6 +11356,9 @@ DB.VendorItems = {
         npcId = 4169,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 159, cost = 25},
@@ -10071,6 +11380,10 @@ DB.VendorItems = {
         npcId = 3483,
         level = {21, 21},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 844, cost = 757},
             {itemId = 1843, cost = 763},
@@ -10092,6 +11405,9 @@ DB.VendorItems = {
         npcId = 4877,
         level = {37, 37},
         zone = "Thousand Needles",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -10123,6 +11439,9 @@ DB.VendorItems = {
         npcId = 8150,
         level = {40, 40},
         zone = "Desolace",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 4604, cost = 23},
             {itemId = 159, cost = 25},
@@ -10146,6 +11465,9 @@ DB.VendorItems = {
         npcId = 7854,
         level = {49, 49},
         zone = "Feralas",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2604, cost = 47},
@@ -10176,6 +11498,9 @@ DB.VendorItems = {
         npcId = 3590,
         level = {9, 9},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2119, cost = 25},
             {itemId = 3599, cost = 25},
@@ -10191,6 +11516,10 @@ DB.VendorItems = {
         npcId = 1471,
         level = {46, 46},
         zone = "Arathi Highlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 10858, cost = 3000},
             {itemId = 2524, cost = 19192},
@@ -10207,6 +11536,9 @@ DB.VendorItems = {
         npcId = 78,
         level = {5, 5},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2130, cost = 56},
             {itemId = 2131, cost = 56},
@@ -10224,6 +11556,10 @@ DB.VendorItems = {
         npcId = 2847,
         level = {49, 49},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 18},
             {itemId = 2901, cost = 85},
@@ -10239,6 +11575,9 @@ DB.VendorItems = {
         npcId = 2483,
         level = {39, 39},
         zone = "Stranglethorn Vale",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 12164, cost = 4400},
             {itemId = 2522, cost = 22548},
@@ -10254,6 +11593,9 @@ DB.VendorItems = {
         npcId = 1305,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2723, cost = 50},
             {itemId = 2596, cost = 120},
@@ -10268,6 +11610,9 @@ DB.VendorItems = {
         npcId = 3164,
         level = {14, 14},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -10289,6 +11634,10 @@ DB.VendorItems = {
         npcId = 12941,
         level = {56, 56},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 11},
             {itemId = 2678, cost = 11},
@@ -10327,6 +11676,10 @@ DB.VendorItems = {
         npcId = 3544,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 4604, cost = 23},
             {itemId = 4605, cost = 117},
@@ -10342,6 +11695,9 @@ DB.VendorItems = {
         npcId = 1325,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2928, cost = 18},
             {itemId = 3371, cost = 18},
@@ -10361,6 +11717,9 @@ DB.VendorItems = {
         npcId = 15012,
         level = {55, 55},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 9312, cost = 17},
             {itemId = 9313, cost = 17},
@@ -10375,6 +11734,9 @@ DB.VendorItems = {
         npcId = 4876,
         level = {35, 35},
         zone = "Thousand Needles",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 22},
             {itemId = 4470, cost = 33},
@@ -10418,6 +11780,8 @@ DB.VendorItems = {
         npcId = 13430,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 17404, cost = 125},
             {itemId = 17406, cost = 125},
@@ -10434,6 +11798,10 @@ DB.VendorItems = {
         npcId = 3542,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2928, cost = 21},
             {itemId = 3371, cost = 21},
@@ -10472,6 +11840,10 @@ DB.VendorItems = {
         npcId = 3498,
         level = {22, 22},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -10497,6 +11869,10 @@ DB.VendorItems = {
         npcId = 9179,
         level = {38, 38},
         zone = "Badlands",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 17},
             {itemId = 2901, cost = 85},
@@ -10513,6 +11889,9 @@ DB.VendorItems = {
         npcId = 4083,
         level = {24, 24},
         zone = "Stonetalon Mountains",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 785, cost = 84},
             {itemId = 2449, cost = 84},
@@ -10550,6 +11929,9 @@ DB.VendorItems = {
         npcId = 3610,
         level = {19, 19},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 52},
@@ -10565,6 +11947,10 @@ DB.VendorItems = {
         npcId = 13219,
         level = {58, 58},
         zone = "Alterac Mountains",
+        faction = "Frostwolf Clan",
+        factionId = 729,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2772, cost = 0},
             {itemId = 2776, cost = 0},
@@ -10584,6 +11970,9 @@ DB.VendorItems = {
         npcId = 1454,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 26},
@@ -10616,6 +12005,8 @@ DB.VendorItems = {
         npcId = 4892,
         level = {37, 37},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 45},
@@ -10634,6 +12025,9 @@ DB.VendorItems = {
         npcId = 8403,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 10393, cost = 5000}
         }
@@ -10644,6 +12038,9 @@ DB.VendorItems = {
         npcId = 1318,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 4470, cost = 35},
             {itemId = 6217, cost = 124},
@@ -10663,6 +12060,10 @@ DB.VendorItems = {
         npcId = 16256,
         level = {52, 52},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 11},
             {itemId = 159, cost = 24},
@@ -10687,6 +12088,9 @@ DB.VendorItems = {
         npcId = 3884,
         level = {13, 13},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4540, cost = 25},
@@ -10708,6 +12112,9 @@ DB.VendorItems = {
         npcId = 5565,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2604, cost = 50},
@@ -10733,6 +12140,9 @@ DB.VendorItems = {
         npcId = 3410,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 8},
             {itemId = 2515, cost = 40},
@@ -10753,6 +12163,9 @@ DB.VendorItems = {
         npcId = 6730,
         level = {30, 30},
         zone = "Thousand Needles",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -10780,6 +12193,9 @@ DB.VendorItems = {
         npcId = 1311,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2723, cost = 52},
             {itemId = 2596, cost = 127},
@@ -10794,6 +12210,9 @@ DB.VendorItems = {
         npcId = 5698,
         level = {40, 40},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 23160, cost = 3600},
             {itemId = 23161, cost = 3764}
@@ -10805,6 +12224,9 @@ DB.VendorItems = {
         npcId = 4590,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 4496, cost = 526},
             {itemId = 4498, cost = 2631},
@@ -10818,6 +12240,10 @@ DB.VendorItems = {
         npcId = 5134,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Stormpike Guard",
+        factionId = 730,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 22},
             {itemId = 4470, cost = 37},
@@ -10847,6 +12273,9 @@ DB.VendorItems = {
         npcId = 4589,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 52},
@@ -10874,6 +12303,9 @@ DB.VendorItems = {
         npcId = 2115,
         level = {5, 5},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -10889,6 +12321,10 @@ DB.VendorItems = {
         npcId = 258,
         level = {5, 5},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 2723, cost = 52},
@@ -10909,6 +12345,9 @@ DB.VendorItems = {
         npcId = 6382,
         level = {60, 60},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 16302, cost = 105},
             {itemId = 16321, cost = 105},
@@ -10977,6 +12416,9 @@ DB.VendorItems = {
         npcId = 8678,
         level = {55, 55},
         zone = "Azshara",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -11003,6 +12445,9 @@ DB.VendorItems = {
         npcId = 1301,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2723, cost = 47},
             {itemId = 2596, cost = 127},
@@ -11017,6 +12462,9 @@ DB.VendorItems = {
         npcId = 6574,
         level = {31, 31},
         zone = "Arathi Highlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2324, cost = 22},
@@ -11042,6 +12490,10 @@ DB.VendorItems = {
         npcId = 2843,
         level = {43, 43},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 12162, cost = 3000},
             {itemId = 2526, cost = 19336},
@@ -11059,6 +12511,9 @@ DB.VendorItems = {
         npcId = 2997,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2519, cost = 50},
@@ -11105,6 +12560,9 @@ DB.VendorItems = {
         npcId = 3186,
         level = {11, 11},
         zone = "Durotar",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -11126,6 +12584,9 @@ DB.VendorItems = {
         npcId = 3025,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 2287, cost = 125},
@@ -11141,6 +12602,9 @@ DB.VendorItems = {
         npcId = 5512,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 5956, cost = 16},
             {itemId = 2901, cost = 81},
@@ -11157,6 +12621,10 @@ DB.VendorItems = {
         npcId = 3322,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2516, cost = 9},
             {itemId = 2519, cost = 45},
@@ -11175,6 +12643,9 @@ DB.VendorItems = {
         npcId = 7772,
         level = {60, 60},
         zone = "Feralas",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 10684, cost = 2000}
         }
@@ -11185,6 +12656,9 @@ DB.VendorItems = {
         npcId = 5783,
         level = {27, 27},
         zone = "Unknown",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 50},
@@ -11218,6 +12692,10 @@ DB.VendorItems = {
         npcId = 3487,
         level = {23, 23},
         zone = "The Barrens",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 4496, cost = 500},
             {itemId = 4498, cost = 2500},
@@ -11230,6 +12708,9 @@ DB.VendorItems = {
         npcId = 15503,
         level = {60, 60},
         zone = "Ahn'Qiraj",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3357, cost = 0},
             {itemId = 20858, cost = 0},
@@ -11248,6 +12729,10 @@ DB.VendorItems = {
         npcId = 15419,
         level = {54, 54},
         zone = "Silithus",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4470, cost = 42},
             {itemId = 6217, cost = 140},
@@ -11274,6 +12759,9 @@ DB.VendorItems = {
         npcId = 793,
         level = {25, 25},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 17188, cost = 2384},
             {itemId = 2445, cost = 3613},
@@ -11288,6 +12776,9 @@ DB.VendorItems = {
         npcId = 3021,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 851, cost = 2023},
             {itemId = 2207, cost = 2390},
@@ -11310,6 +12801,10 @@ DB.VendorItems = {
         npcId = 790,
         level = {22, 22},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 5956, cost = 16},
             {itemId = 2901, cost = 85},
@@ -11325,6 +12820,9 @@ DB.VendorItems = {
         npcId = 3331,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 851, cost = 2129},
             {itemId = 2207, cost = 2515},
@@ -11347,6 +12845,9 @@ DB.VendorItems = {
         npcId = 372,
         level = {16, 16},
         zone = "Loch Modan",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2901, cost = 85},
             {itemId = 2880, cost = 105},
@@ -11360,6 +12861,9 @@ DB.VendorItems = {
         npcId = 954,
         level = {17, 17},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 1843, cost = 724},
             {itemId = 1844, cost = 727},
@@ -11377,6 +12881,9 @@ DB.VendorItems = {
         npcId = 5509,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2522, cost = 22547},
             {itemId = 2523, cost = 28284},
@@ -11390,6 +12897,9 @@ DB.VendorItems = {
         npcId = 384,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2414, cost = 355555},
             {itemId = 5655, cost = 355555},
@@ -11405,6 +12915,9 @@ DB.VendorItems = {
         npcId = 5816,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 5208, cost = 2968},
             {itemId = 5209, cost = 3426},
@@ -11422,6 +12935,8 @@ DB.VendorItems = {
         npcId = 14740,
         level = {42, 42},
         zone = "The Hinterlands",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 7620, cost = 0},
             {itemId = 7731, cost = 0}
@@ -11433,6 +12948,9 @@ DB.VendorItems = {
         npcId = 4615,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 17},
             {itemId = 3372, cost = 200},
@@ -11446,6 +12964,9 @@ DB.VendorItems = {
         npcId = 15353,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 18633, cost = 131},
             {itemId = 7228, cost = 529},
@@ -11460,6 +12981,9 @@ DB.VendorItems = {
         npcId = 3072,
         level = {8, 8},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -11475,6 +12999,9 @@ DB.VendorItems = {
         npcId = 5749,
         level = {10, 10},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 16302, cost = 105},
             {itemId = 16321, cost = 105},
@@ -11501,6 +13028,8 @@ DB.VendorItems = {
         npcId = 13418,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 17404, cost = 125},
             {itemId = 17406, cost = 125},
@@ -11517,6 +13046,10 @@ DB.VendorItems = {
         npcId = 2401,
         level = {30, 30},
         zone = "Hillsbrad Foothills",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 4470, cost = 40},
@@ -11547,6 +13080,9 @@ DB.VendorItems = {
         npcId = 1237,
         level = {8, 8},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 4540, cost = 24},
             {itemId = 159, cost = 26},
@@ -11574,6 +13110,9 @@ DB.VendorItems = {
         npcId = 1697,
         level = {10, 10},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 2723, cost = 52},
@@ -11594,6 +13133,9 @@ DB.VendorItems = {
         npcId = 2821,
         level = {33, 33},
         zone = "Arathi Highlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2678, cost = 8},
@@ -11635,6 +13177,9 @@ DB.VendorItems = {
         npcId = 2934,
         level = {42, 42},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 4984, cost = 22520}
         }
@@ -11645,6 +13190,9 @@ DB.VendorItems = {
         npcId = 13698,
         level = {43, 43},
         zone = "Desolace",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
         items = {
             {itemId = 17753, cost = 137088},
             {itemId = 17705, cost = 147845},
@@ -11657,6 +13205,9 @@ DB.VendorItems = {
         npcId = 3589,
         level = {10, 10},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 52},
@@ -11672,6 +13223,9 @@ DB.VendorItems = {
         npcId = 1257,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 18},
             {itemId = 858, cost = 88},
@@ -11705,6 +13259,9 @@ DB.VendorItems = {
         npcId = 14754,
         level = {55, 55},
         zone = "The Barrens",
+        faction = "Warsong Outriders",
+        factionId = 889,
+        reactionHorde = 1,
         items = {
             {itemId = 16746, cost = 0},
             {itemId = 18588, cost = 0},
@@ -11720,6 +13277,9 @@ DB.VendorItems = {
         npcId = 5121,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 852, cost = 1739},
             {itemId = 1197, cost = 2666},
@@ -11744,6 +13304,10 @@ DB.VendorItems = {
         npcId = 2664,
         level = {43, 43},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2678, cost = 10},
             {itemId = 159, cost = 26},
@@ -11765,6 +13329,9 @@ DB.VendorItems = {
         npcId = 340,
         level = {50, 50},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 728, cost = 200},
             {itemId = 2889, cost = 240},
@@ -11787,6 +13354,9 @@ DB.VendorItems = {
         npcId = 3078,
         level = {10, 10},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2510, cost = 43},
@@ -11801,6 +13371,9 @@ DB.VendorItems = {
         npcId = 1456,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -11831,6 +13404,10 @@ DB.VendorItems = {
         npcId = 15500,
         level = {60, 60},
         zone = "Silithus",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 7806, cost = 0},
             {itemId = 7807, cost = 0},
@@ -11866,6 +13443,9 @@ DB.VendorItems = {
         npcId = 1684,
         level = {15, 15},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 4592, cost = 20},
             {itemId = 787, cost = 24},
@@ -11891,6 +13471,9 @@ DB.VendorItems = {
         npcId = 3588,
         level = {8, 8},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2130, cost = 56},
             {itemId = 2131, cost = 56},
@@ -11908,6 +13491,10 @@ DB.VendorItems = {
         npcId = 12023,
         level = {51, 51},
         zone = "Moonglade",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2440, cost = 14098},
             {itemId = 3587, cost = 14313},
@@ -11932,6 +13519,8 @@ DB.VendorItems = {
         npcId = 13435,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 17194, cost = 10},
             {itemId = 17202, cost = 10},
@@ -11950,6 +13539,10 @@ DB.VendorItems = {
         npcId = 15175,
         level = {57, 57},
         zone = "Silithus",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2928, cost = 22},
             {itemId = 3371, cost = 22},
@@ -11992,6 +13585,9 @@ DB.VendorItems = {
         npcId = 4231,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2130, cost = 56},
             {itemId = 2131, cost = 56},
@@ -12033,6 +13629,10 @@ DB.VendorItems = {
         npcId = 3683,
         level = {32, 32},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3428, cost = 421},
             {itemId = 16059, cost = 421},
@@ -12055,6 +13655,9 @@ DB.VendorItems = {
         npcId = 5748,
         level = {18, 20},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 6328, cost = 421},
             {itemId = 6368, cost = 421}
@@ -12066,6 +13669,10 @@ DB.VendorItems = {
         npcId = 3497,
         level = {24, 24},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4592, cost = 21},
             {itemId = 6256, cost = 24},
@@ -12090,6 +13697,9 @@ DB.VendorItems = {
         npcId = 789,
         level = {20, 20},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2515, cost = 50},
@@ -12104,6 +13714,10 @@ DB.VendorItems = {
         npcId = 3937,
         level = {12, 12},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 4540, cost = 24},
@@ -12125,6 +13739,9 @@ DB.VendorItems = {
         npcId = 9636,
         level = {41, 41},
         zone = "Desolace",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -12168,6 +13785,9 @@ DB.VendorItems = {
         npcId = 3359,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 6523, cost = 1138},
             {itemId = 6524, cost = 2296},
@@ -12181,6 +13801,9 @@ DB.VendorItems = {
         npcId = 6027,
         level = {17, 17},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 16302, cost = 105},
             {itemId = 16321, cost = 105},
@@ -12228,6 +13851,9 @@ DB.VendorItems = {
         npcId = 3346,
         level = {35, 35},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 4470, cost = 35},
             {itemId = 6217, cost = 116},
@@ -12249,6 +13875,10 @@ DB.VendorItems = {
         npcId = 8305,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 785, cost = 80},
@@ -12269,6 +13899,10 @@ DB.VendorItems = {
         npcId = 2840,
         level = {42, 42},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 852, cost = 1830},
             {itemId = 1197, cost = 2806},
@@ -12282,6 +13916,9 @@ DB.VendorItems = {
         npcId = 8122,
         level = {24, 24},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 9312, cost = 20},
             {itemId = 9313, cost = 20},
@@ -12301,6 +13938,9 @@ DB.VendorItems = {
         npcId = 8679,
         level = {42, 42},
         zone = "Stranglethorn Vale",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -12327,6 +13967,9 @@ DB.VendorItems = {
         npcId = 3348,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 3372, cost = 200},
@@ -12342,6 +13985,9 @@ DB.VendorItems = {
         npcId = 3329,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 4604, cost = 25},
             {itemId = 4605, cost = 125},
@@ -12357,6 +14003,10 @@ DB.VendorItems = {
         npcId = 16112,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2450, cost = 0},
             {itemId = 4625, cost = 0},
@@ -12378,6 +14028,9 @@ DB.VendorItems = {
         npcId = 3360,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 852, cost = 1830},
             {itemId = 1197, cost = 2806},
@@ -12396,6 +14049,9 @@ DB.VendorItems = {
         npcId = 15125,
         level = {30, 30},
         zone = "Arathi Highlands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 1205, cost = 500},
             {itemId = 3770, cost = 500},
@@ -12421,6 +14077,9 @@ DB.VendorItems = {
         npcId = 4883,
         level = {43, 43},
         zone = "Dustwallow Marsh",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2148, cost = 3060},
             {itemId = 2150, cost = 3084},
@@ -12436,6 +14095,9 @@ DB.VendorItems = {
         npcId = 1381,
         level = {40, 40},
         zone = "Stranglethorn Vale",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2419, cost = 8309},
             {itemId = 2421, cost = 8370},
@@ -12454,6 +14116,9 @@ DB.VendorItems = {
         npcId = 1691,
         level = {10, 10},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -12475,6 +14140,10 @@ DB.VendorItems = {
         npcId = 4305,
         level = {25, 25},
         zone = "Westfall",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4592, cost = 21},
             {itemId = 787, cost = 23},
@@ -12494,6 +14163,10 @@ DB.VendorItems = {
         npcId = 5411,
         level = {40, 40},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 17},
             {itemId = 2901, cost = 85},
@@ -12511,6 +14184,9 @@ DB.VendorItems = {
         npcId = 3536,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 1849, cost = 1388},
             {itemId = 1850, cost = 1393},
@@ -12533,6 +14209,9 @@ DB.VendorItems = {
         npcId = 5870,
         level = {27, 27},
         zone = "Stonetalon Mountains",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 26},
             {itemId = 2287, cost = 131},
@@ -12548,6 +14227,9 @@ DB.VendorItems = {
         npcId = 12043,
         level = {32, 32},
         zone = "Stonetalon Mountains",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -12576,6 +14258,9 @@ DB.VendorItems = {
         npcId = 3015,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 8},
             {itemId = 2515, cost = 44},
@@ -12596,6 +14281,10 @@ DB.VendorItems = {
         npcId = 5139,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Stormpike Guard",
+        factionId = 730,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2928, cost = 20},
             {itemId = 3371, cost = 20},
@@ -12634,6 +14323,9 @@ DB.VendorItems = {
         npcId = 5815,
         level = {45, 45},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 16302, cost = 100},
             {itemId = 16321, cost = 100},
@@ -12702,6 +14394,10 @@ DB.VendorItems = {
         npcId = 3621,
         level = {50, 50},
         zone = "Azshara",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 23},
             {itemId = 159, cost = 23},
@@ -12724,6 +14420,9 @@ DB.VendorItems = {
         npcId = 3002,
         level = {40, 40},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2901, cost = 81},
             {itemId = 2880, cost = 100},
@@ -12737,6 +14436,9 @@ DB.VendorItems = {
         npcId = 74,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 793, cost = 146},
             {itemId = 3602, cost = 152},
@@ -12758,6 +14460,9 @@ DB.VendorItems = {
         npcId = 8362,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 8},
             {itemId = 2516, cost = 8},
@@ -12798,6 +14503,10 @@ DB.VendorItems = {
         npcId = 4190,
         level = {13, 13},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4540, cost = 25},
@@ -12819,6 +14528,9 @@ DB.VendorItems = {
         npcId = 1275,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -12847,6 +14559,9 @@ DB.VendorItems = {
         npcId = 3561,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2928, cost = 21},
             {itemId = 3371, cost = 21},
@@ -12866,6 +14581,9 @@ DB.VendorItems = {
         npcId = 3159,
         level = {34, 34},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2130, cost = 56},
             {itemId = 2131, cost = 56},
@@ -12883,6 +14601,10 @@ DB.VendorItems = {
         npcId = 3134,
         level = {25, 25},
         zone = "Duskwood",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 210709, cost = 100},
             {itemId = 3385, cost = 120},
@@ -12903,6 +14625,8 @@ DB.VendorItems = {
         npcId = 12792,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 220898, cost = 28336},
             {itemId = 220908, cost = 28336},
@@ -13238,6 +14962,10 @@ DB.VendorItems = {
         npcId = 3689,
         level = {42, 42},
         zone = "Thousand Needles",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 4540, cost = 26},
@@ -13259,6 +14987,9 @@ DB.VendorItems = {
         npcId = 12028,
         level = {30, 30},
         zone = "Desolace",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2678, cost = 8},
@@ -13299,6 +15030,10 @@ DB.VendorItems = {
         npcId = 4200,
         level = {14, 14},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4592, cost = 20},
             {itemId = 787, cost = 25},
@@ -13315,6 +15050,10 @@ DB.VendorItems = {
         npcId = 1671,
         level = {25, 25},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4536, cost = 26},
             {itemId = 4537, cost = 131},
@@ -13330,6 +15069,10 @@ DB.VendorItems = {
         npcId = 4257,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Stormpike Guard",
+        factionId = 730,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 5956, cost = 16},
             {itemId = 2901, cost = 81},
@@ -13345,6 +15088,9 @@ DB.VendorItems = {
         npcId = 4173,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 52},
@@ -13365,6 +15111,9 @@ DB.VendorItems = {
         npcId = 1295,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 1839, cost = 163},
             {itemId = 797, cost = 175},
@@ -13392,6 +15141,8 @@ DB.VendorItems = {
         npcId = 14731,
         level = {48, 48},
         zone = "The Hinterlands",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 21815, cost = 10},
             {itemId = 4592, cost = 20},
@@ -13416,6 +15167,9 @@ DB.VendorItems = {
         npcId = 3958,
         level = {25, 25},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 50},
@@ -13442,6 +15196,9 @@ DB.VendorItems = {
         npcId = 5871,
         level = {18, 18},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 1179, cost = 125},
@@ -13457,6 +15214,9 @@ DB.VendorItems = {
         npcId = 4558,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 3595, cost = 23},
             {itemId = 3596, cost = 23},
@@ -13505,6 +15265,9 @@ DB.VendorItems = {
         npcId = 4730,
         level = {35, 35},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 8629, cost = 421052},
             {itemId = 8631, cost = 421052},
@@ -13520,6 +15283,10 @@ DB.VendorItems = {
         npcId = 5758,
         level = {18, 18},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 4470, cost = 38},
             {itemId = 6217, cost = 124},
@@ -13540,6 +15307,10 @@ DB.VendorItems = {
         npcId = 12942,
         level = {55, 55},
         zone = "Western Plaguelands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 50},
@@ -13567,6 +15338,10 @@ DB.VendorItems = {
         npcId = 11036,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 239512, cost = 0},
             {itemId = 239513, cost = 0},
@@ -13768,6 +15543,10 @@ DB.VendorItems = {
         npcId = 14846,
         level = {35, 35},
         zone = "Elwynn Forest",
+        faction = "Darkmoon Faire",
+        factionId = 909,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4289, cost = 52},
             {itemId = 785, cost = 84},
@@ -13801,6 +15580,10 @@ DB.VendorItems = {
         npcId = 15471,
         level = {61, 61},
         zone = "Ruins of Ahn'Qiraj",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 13446, cost = 4235},
             {itemId = 14530, cost = 4235},
@@ -13817,6 +15600,9 @@ DB.VendorItems = {
         npcId = 12784,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 189},
             {itemId = 17035, cost = 378},
@@ -13845,6 +15631,8 @@ DB.VendorItems = {
         npcId = 12783,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 18241, cost = 900000},
             {itemId = 18242, cost = 900000},
@@ -13858,6 +15646,9 @@ DB.VendorItems = {
         npcId = 8666,
         level = {5, 5},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 8489, cost = 6315}
         }
@@ -13868,6 +15659,9 @@ DB.VendorItems = {
         npcId = 8118,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 9312, cost = 18},
             {itemId = 9313, cost = 18},
@@ -13887,6 +15681,9 @@ DB.VendorItems = {
         npcId = 5757,
         level = {19, 19},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 4470, cost = 40},
             {itemId = 6217, cost = 130},
@@ -13907,6 +15704,9 @@ DB.VendorItems = {
         npcId = 1297,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 8},
             {itemId = 2516, cost = 8},
@@ -13936,6 +15736,10 @@ DB.VendorItems = {
         npcId = 2383,
         level = {29, 29},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 6256, cost = 22},
             {itemId = 6529, cost = 47},
@@ -13954,6 +15758,10 @@ DB.VendorItems = {
         npcId = 791,
         level = {20, 20},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2516, cost = 9},
@@ -13979,6 +15787,9 @@ DB.VendorItems = {
         npcId = 8737,
         level = {40, 40},
         zone = "Un'Goro Crater",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 11905, cost = 24813},
             {itemId = 11904, cost = 55260},
@@ -13991,6 +15802,9 @@ DB.VendorItems = {
         npcId = 1299,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 3428, cost = 400},
             {itemId = 13897, cost = 2801},
@@ -14006,6 +15820,9 @@ DB.VendorItems = {
         npcId = 5129,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2468, cost = 5608},
             {itemId = 2469, cost = 5630},
@@ -14036,6 +15853,9 @@ DB.VendorItems = {
         npcId = 4574,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 6256, cost = 20},
             {itemId = 6325, cost = 35},
@@ -14055,6 +15875,10 @@ DB.VendorItems = {
         npcId = 3658,
         level = {19, 19},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2455, cost = 42},
             {itemId = 858, cost = 105},
@@ -14078,6 +15902,9 @@ DB.VendorItems = {
         npcId = 3970,
         level = {25, 25},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 421},
@@ -14106,6 +15933,9 @@ DB.VendorItems = {
         npcId = 8157,
         level = {52, 52},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 17},
             {itemId = 3372, cost = 188},
@@ -14123,6 +15953,9 @@ DB.VendorItems = {
         npcId = 1672,
         level = {5, 5},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 25},
@@ -14147,6 +15980,10 @@ DB.VendorItems = {
         npcId = 12944,
         level = {60, 60},
         zone = "Blackrock Depths",
+        faction = "Thorium Brotherhood",
+        factionId = 59,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 7076, cost = 0},
             {itemId = 7078, cost = 0},
@@ -14227,6 +16064,10 @@ DB.VendorItems = {
         npcId = 8143,
         level = {49, 49},
         zone = "Feralas",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 22},
             {itemId = 4540, cost = 22},
@@ -14248,6 +16089,10 @@ DB.VendorItems = {
         npcId = 12022,
         level = {51, 51},
         zone = "Moonglade",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2678, cost = 8},
@@ -14290,6 +16135,9 @@ DB.VendorItems = {
         npcId = 1694,
         level = {10, 10},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -14315,6 +16163,9 @@ DB.VendorItems = {
         npcId = 2921,
         level = {36, 36},
         zone = "Badlands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2820, cost = 18650}
         }
@@ -14325,6 +16176,9 @@ DB.VendorItems = {
         npcId = 4557,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 852, cost = 1830},
             {itemId = 851, cost = 2129},
@@ -14350,6 +16204,9 @@ DB.VendorItems = {
         npcId = 4580,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2612, cost = 163},
             {itemId = 2613, cost = 607},
@@ -14366,6 +16223,9 @@ DB.VendorItems = {
         npcId = 15898,
         level = {55, 55},
         zone = "Ironforge",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 21721, cost = 15},
             {itemId = 21557, cost = 25},
@@ -14383,6 +16243,10 @@ DB.VendorItems = {
         npcId = 11186,
         level = {54, 54},
         zone = "Winterspring",
+        faction = "Everlook",
+        factionId = 577,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2901, cost = 85},
             {itemId = 2880, cost = 105},
@@ -14396,6 +16260,9 @@ DB.VendorItems = {
         npcId = 5049,
         level = {25, 25},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 5976, cost = 10526}
         }
@@ -14406,6 +16273,9 @@ DB.VendorItems = {
         npcId = 3587,
         level = {9, 9},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -14421,6 +16291,10 @@ DB.VendorItems = {
         npcId = 2303,
         level = {56, 56},
         zone = "Winterspring",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 22},
             {itemId = 16166, cost = 22},
@@ -14445,6 +16319,9 @@ DB.VendorItems = {
         npcId = 227,
         level = {26, 26},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 4470, cost = 40},
@@ -14469,6 +16346,8 @@ DB.VendorItems = {
         npcId = 13434,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 17404, cost = 125},
             {itemId = 17406, cost = 125},
@@ -14485,6 +16364,9 @@ DB.VendorItems = {
         npcId = 5156,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2612, cost = 144},
             {itemId = 2613, cost = 540},
@@ -14501,6 +16383,9 @@ DB.VendorItems = {
         npcId = 3351,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 17034, cost = 210},
             {itemId = 17035, cost = 421},
@@ -14529,6 +16414,9 @@ DB.VendorItems = {
         npcId = 11278,
         level = {50, 50},
         zone = "Western Plaguelands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 8030, cost = 10000},
             {itemId = 13485, cost = 15000},
@@ -14545,6 +16433,9 @@ DB.VendorItems = {
         npcId = 6548,
         level = {51, 51},
         zone = "Thousand Needles",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 11023, cost = 10000}
         }
@@ -14555,6 +16446,9 @@ DB.VendorItems = {
         npcId = 3077,
         level = {11, 11},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2492, cost = 284},
             {itemId = 2489, cost = 342},
@@ -14572,6 +16466,9 @@ DB.VendorItems = {
         npcId = 3005,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2324, cost = 22},
@@ -14602,6 +16499,9 @@ DB.VendorItems = {
         npcId = 12031,
         level = {30, 30},
         zone = "Desolace",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 6256, cost = 23},
             {itemId = 6529, cost = 50},
@@ -14617,6 +16517,9 @@ DB.VendorItems = {
         npcId = 5848,
         level = {25, 25},
         zone = "The Barrens",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionHorde = -1,
         items = {
             {itemId = 929, cost = 0},
             {itemId = 954, cost = 0},
@@ -14684,6 +16587,10 @@ DB.VendorItems = {
         npcId = 3135,
         level = {24, 24},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2928, cost = 21},
             {itemId = 3371, cost = 21},
@@ -14703,6 +16610,9 @@ DB.VendorItems = {
         npcId = 3961,
         level = {19, 19},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4536, cost = 25},
@@ -14732,6 +16642,10 @@ DB.VendorItems = {
         npcId = 2394,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2324, cost = 23},
@@ -14758,6 +16672,10 @@ DB.VendorItems = {
         npcId = 2803,
         level = {55, 55},
         zone = "Felwood",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 23},
             {itemId = 4470, cost = 35},
@@ -14789,6 +16707,9 @@ DB.VendorItems = {
         npcId = 5107,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 1845, cost = 876},
             {itemId = 1846, cost = 926},
@@ -14806,6 +16727,9 @@ DB.VendorItems = {
         npcId = 3010,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 17},
             {itemId = 3372, cost = 177},
@@ -14819,6 +16743,9 @@ DB.VendorItems = {
         npcId = 1287,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2101, cost = 4},
             {itemId = 2512, cost = 10},
@@ -14861,6 +16788,10 @@ DB.VendorItems = {
         npcId = 7941,
         level = {54, 54},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 16166, cost = 24},
             {itemId = 159, cost = 26},
@@ -14890,6 +16821,9 @@ DB.VendorItems = {
         npcId = 1313,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 18},
             {itemId = 765, cost = 40},
@@ -14912,6 +16846,8 @@ DB.VendorItems = {
         npcId = 4888,
         level = {37, 37},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 2524, cost = 19192},
             {itemId = 2526, cost = 19336},
@@ -14931,6 +16867,10 @@ DB.VendorItems = {
         npcId = 7564,
         level = {40, 40},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 8529, cost = 3684}
         }
@@ -14941,6 +16881,9 @@ DB.VendorItems = {
         npcId = 3073,
         level = {9, 9},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2130, cost = 56},
             {itemId = 2131, cost = 56},
@@ -14958,6 +16901,9 @@ DB.VendorItems = {
         npcId = 5753,
         level = {20, 20},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 16302, cost = 100},
             {itemId = 16321, cost = 100},
@@ -15026,6 +16972,10 @@ DB.VendorItems = {
         npcId = 3550,
         level = {15, 15},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 6256, cost = 24},
             {itemId = 6325, cost = 42},
@@ -15043,6 +16993,9 @@ DB.VendorItems = {
         npcId = 11874,
         level = {44, 44},
         zone = "Swamp of Sorrows",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 50},
@@ -15072,6 +17025,8 @@ DB.VendorItems = {
         npcId = 12781,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 18839, cost = 900},
             {itemId = 18841, cost = 990},
@@ -15085,6 +17040,10 @@ DB.VendorItems = {
         npcId = 14624,
         level = {52, 52},
         zone = "Searing Gorge",
+        faction = "Thorium Brotherhood",
+        factionId = 59,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 20},
             {itemId = 159, cost = 26},
@@ -15128,6 +17087,9 @@ DB.VendorItems = {
         npcId = 16133,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 7806, cost = 0},
             {itemId = 8838, cost = 0},
@@ -15144,6 +17106,9 @@ DB.VendorItems = {
         npcId = 4217,
         level = {60, 60},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 99, cost = 0},
             {itemId = 339, cost = 0},
@@ -15333,6 +17298,9 @@ DB.VendorItems = {
         npcId = 4186,
         level = {18, 18},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 5786, cost = 550},
             {itemId = 5787, cost = 600},
@@ -15350,6 +17318,9 @@ DB.VendorItems = {
         npcId = 1322,
         level = {40, 40},
         zone = "Desolace",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2419, cost = 7894},
             {itemId = 2421, cost = 7952},
@@ -15368,6 +17339,9 @@ DB.VendorItems = {
         npcId = 1339,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2432, cost = 8094},
             {itemId = 2467, cost = 9926},
@@ -15383,6 +17357,10 @@ DB.VendorItems = {
         npcId = 2685,
         level = {36, 36},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 17},
@@ -15410,6 +17388,10 @@ DB.VendorItems = {
         npcId = 11557,
         level = {55, 55},
         zone = "Felwood",
+        faction = "Timbermaw Hold",
+        factionId = 576,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2385, cost = 0},
             {itemId = 2386, cost = 0},
@@ -15500,6 +17482,9 @@ DB.VendorItems = {
         npcId = 4177,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2380, cost = 36},
             {itemId = 2384, cost = 36},
@@ -15564,6 +17549,10 @@ DB.VendorItems = {
         npcId = 12024,
         level = {51, 51},
         zone = "Moonglade",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2534, cost = 42758},
             {itemId = 2528, cost = 51835},
@@ -15581,6 +17570,9 @@ DB.VendorItems = {
         npcId = 4171,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 851, cost = 2129},
             {itemId = 2207, cost = 2515},
@@ -15603,6 +17595,9 @@ DB.VendorItems = {
         npcId = 3613,
         level = {19, 19},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2396, cost = 215},
             {itemId = 2393, cost = 216},
@@ -15620,6 +17615,10 @@ DB.VendorItems = {
         npcId = 2357,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2414, cost = 400000},
             {itemId = 5655, cost = 400000},
@@ -15635,6 +17634,9 @@ DB.VendorItems = {
         npcId = 5190,
         level = {25, 25},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 5976, cost = 9473}
         }
@@ -15645,6 +17647,10 @@ DB.VendorItems = {
         npcId = 2381,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2678, cost = 9},
@@ -15681,6 +17687,9 @@ DB.VendorItems = {
         npcId = 1670,
         level = {20, 20},
         zone = "Westfall",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 4540, cost = 24},
             {itemId = 4541, cost = 124},
@@ -15696,6 +17705,9 @@ DB.VendorItems = {
         npcId = 3044,
         level = {40, 40},
         zone = "Thunder Bluff",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 17, cost = 0},
             {itemId = 139, cost = 0},
@@ -15864,6 +17876,10 @@ DB.VendorItems = {
         npcId = 7955,
         level = {50, 50},
         zone = "Dun Morogh",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 8563, cost = 400000},
             {itemId = 8595, cost = 400000},
@@ -15880,6 +17896,9 @@ DB.VendorItems = {
         npcId = 4577,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 25},
@@ -15909,6 +17928,9 @@ DB.VendorItems = {
         npcId = 1440,
         level = {15, 15},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 226398, cost = 5263},
             {itemId = 226400, cost = 5263},
@@ -15939,6 +17961,9 @@ DB.VendorItems = {
         npcId = 5819,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2396, cost = 202},
             {itemId = 2397, cost = 202},
@@ -15999,6 +18024,9 @@ DB.VendorItems = {
         npcId = 14961,
         level = {30, 30},
         zone = "Alterac Mountains",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 8766, cost = 4000},
             {itemId = 8948, cost = 4000},
@@ -16012,6 +18040,10 @@ DB.VendorItems = {
         npcId = 15179,
         level = {58, 58},
         zone = "Silithus",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 11},
             {itemId = 2678, cost = 11},
@@ -16062,6 +18094,9 @@ DB.VendorItems = {
         npcId = 4878,
         level = {36, 36},
         zone = "Thousand Needles",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 785, cost = 84},
             {itemId = 2449, cost = 84},
@@ -16104,6 +18139,9 @@ DB.VendorItems = {
         npcId = 3883,
         level = {11, 11},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 4540, cost = 25},
             {itemId = 159, cost = 26},
@@ -16125,6 +18163,10 @@ DB.VendorItems = {
         npcId = 3529,
         level = {14, 15},
         zone = "Silverpine Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 414, cost = 0},
             {itemId = 774, cost = 0},
@@ -16144,6 +18186,9 @@ DB.VendorItems = {
         npcId = 3533,
         level = {14, 15},
         zone = "Silverpine Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionHorde = -1,
         items = {
             {itemId = 858, cost = 0},
             {itemId = 1179, cost = 0},
@@ -16171,6 +18216,10 @@ DB.VendorItems = {
         npcId = 3531,
         level = {14, 15},
         zone = "Silverpine Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = -1,
+        reactionHorde = -1,
         items = {
             {itemId = 414, cost = 0},
             {itemId = 1179, cost = 0},
@@ -16186,6 +18235,10 @@ DB.VendorItems = {
         npcId = 3480,
         level = {18, 18},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 4540, cost = 25},
             {itemId = 4541, cost = 125},
@@ -16201,6 +18254,9 @@ DB.VendorItems = {
         npcId = 3076,
         level = {12, 12},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -16222,6 +18278,9 @@ DB.VendorItems = {
         npcId = 226,
         level = {30, 30},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2148, cost = 3060},
             {itemId = 2150, cost = 3084},
@@ -16244,6 +18303,9 @@ DB.VendorItems = {
         npcId = 3321,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2374, cost = 173},
             {itemId = 2375, cost = 173},
@@ -16271,6 +18333,9 @@ DB.VendorItems = {
         npcId = 167,
         level = {13, 13},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 1845, cost = 923},
             {itemId = 1846, cost = 926},
@@ -16288,6 +18353,10 @@ DB.VendorItems = {
         npcId = 4571,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4604, cost = 25},
@@ -16309,6 +18378,9 @@ DB.VendorItems = {
         npcId = 959,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 793, cost = 146},
             {itemId = 3602, cost = 152},
@@ -16324,6 +18396,10 @@ DB.VendorItems = {
         npcId = 2134,
         level = {10, 10},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -16345,6 +18421,9 @@ DB.VendorItems = {
         npcId = 9555,
         level = {35, 35},
         zone = "Arathi Highlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2515, cost = 47},
@@ -16363,6 +18442,9 @@ DB.VendorItems = {
         npcId = 3330,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2527, cost = 29355},
             {itemId = 2535, cost = 64795}
@@ -16374,6 +18456,10 @@ DB.VendorItems = {
         npcId = 1461,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2519, cost = 52},
@@ -16389,6 +18475,10 @@ DB.VendorItems = {
         npcId = 8878,
         level = {40, 40},
         zone = "Desolace",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 10858, cost = 2823},
             {itemId = 2524, cost = 18063},
@@ -16405,6 +18495,10 @@ DB.VendorItems = {
         npcId = 12026,
         level = {51, 51},
         zone = "Moonglade",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 16166, cost = 24},
@@ -16428,6 +18522,9 @@ DB.VendorItems = {
         npcId = 4241,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -16452,6 +18549,10 @@ DB.VendorItems = {
         npcId = 15315,
         level = {55, 55},
         zone = "Felwood",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2526, cost = 18198},
             {itemId = 2522, cost = 21221},
@@ -16471,6 +18572,10 @@ DB.VendorItems = {
         npcId = 5109,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4540, cost = 22},
             {itemId = 4541, cost = 124},
@@ -16486,6 +18591,9 @@ DB.VendorItems = {
         npcId = 14739,
         level = {48, 48},
         zone = "The Hinterlands",
+        faction = "Horde",
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -16514,6 +18622,9 @@ DB.VendorItems = {
         npcId = 4233,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 852, cost = 1830},
             {itemId = 1197, cost = 2806},
@@ -16532,6 +18643,9 @@ DB.VendorItems = {
         npcId = 4229,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -16576,6 +18690,9 @@ DB.VendorItems = {
         npcId = 3027,
         level = {40, 40},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2678, cost = 9},
             {itemId = 159, cost = 24},
@@ -16593,6 +18710,9 @@ DB.VendorItems = {
         npcId = 9553,
         level = {20, 20},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 50},
@@ -16609,6 +18729,10 @@ DB.VendorItems = {
         npcId = 1459,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2515, cost = 52},
@@ -16625,6 +18749,10 @@ DB.VendorItems = {
         npcId = 2683,
         level = {24, 24},
         zone = "Wetlands",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 17},
@@ -16651,6 +18779,9 @@ DB.VendorItems = {
         npcId = 3017,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 4536, cost = 24},
             {itemId = 4537, cost = 124},
@@ -16666,6 +18797,10 @@ DB.VendorItems = {
         npcId = 2380,
         level = {34, 34},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 3371, cost = 18},
             {itemId = 3372, cost = 211},
@@ -16682,6 +18817,9 @@ DB.VendorItems = {
         npcId = 3959,
         level = {21, 21},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4540, cost = 25},
@@ -16703,6 +18841,9 @@ DB.VendorItems = {
         npcId = 4183,
         level = {20, 20},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 852, cost = 1738},
             {itemId = 851, cost = 2023},
@@ -16720,6 +18861,8 @@ DB.VendorItems = {
         npcId = 13429,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 17194, cost = 10},
             {itemId = 17202, cost = 10},
@@ -16738,6 +18881,10 @@ DB.VendorItems = {
         npcId = 3479,
         level = {35, 35},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 852, cost = 1830},
             {itemId = 851, cost = 2129},
@@ -16757,6 +18904,9 @@ DB.VendorItems = {
         npcId = 7485,
         level = {40, 40},
         zone = "Stranglethorn Vale",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 159, cost = 25},
@@ -16784,6 +18934,10 @@ DB.VendorItems = {
         npcId = 12029,
         level = {51, 51},
         zone = "Moonglade",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 11},
             {itemId = 2504, cost = 28},
@@ -16805,6 +18959,10 @@ DB.VendorItems = {
         npcId = 2814,
         level = {39, 39},
         zone = "Arathi Highlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 117, cost = 24},
             {itemId = 2287, cost = 124},
@@ -16821,6 +18979,10 @@ DB.VendorItems = {
         npcId = 2663,
         level = {42, 42},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 10728, cost = 1578},
             {itemId = 8495, cost = 4210},
@@ -16833,6 +18995,9 @@ DB.VendorItems = {
         npcId = 3614,
         level = {16, 16},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -16856,6 +19021,9 @@ DB.VendorItems = {
         npcId = 12919,
         level = {45, 45},
         zone = "Dustwallow Marsh",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 19974, cost = 10000}
         }
@@ -16866,6 +19034,9 @@ DB.VendorItems = {
         npcId = 3012,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 4470, cost = 30},
             {itemId = 6217, cost = 99},
@@ -16887,6 +19058,9 @@ DB.VendorItems = {
         npcId = 4592,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2947, cost = 13},
             {itemId = 3111, cost = 13},
@@ -16906,6 +19080,10 @@ DB.VendorItems = {
         npcId = 2084,
         level = {57, 57},
         zone = "Winterspring",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 23},
             {itemId = 4470, cost = 35},
@@ -16936,6 +19114,9 @@ DB.VendorItems = {
         npcId = 1448,
         level = {20, 20},
         zone = "Wetlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 4357, cost = 15},
             {itemId = 5956, cost = 16},
@@ -16976,6 +19157,10 @@ DB.VendorItems = {
         npcId = 2364,
         level = {33, 33},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 23},
             {itemId = 2070, cost = 23},
@@ -17003,6 +19188,9 @@ DB.VendorItems = {
         npcId = 12959,
         level = {52, 52},
         zone = "Un'Goro Crater",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 22},
             {itemId = 159, cost = 22},
@@ -17041,6 +19229,10 @@ DB.VendorItems = {
         npcId = 1148,
         level = {40, 40},
         zone = "Stranglethorn Vale",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -17081,6 +19273,10 @@ DB.VendorItems = {
         npcId = 10118,
         level = {25, 25},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 6256, cost = 23},
             {itemId = 6326, cost = 40},
@@ -17098,6 +19294,9 @@ DB.VendorItems = {
         npcId = 4603,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2516, cost = 8},
             {itemId = 21815, cost = 10},
@@ -17119,6 +19318,9 @@ DB.VendorItems = {
         npcId = 3014,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 3372, cost = 200},
@@ -17138,6 +19340,10 @@ DB.VendorItems = {
         npcId = 222,
         level = {19, 19},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2492, cost = 298},
             {itemId = 2493, cost = 737},
@@ -17153,6 +19359,9 @@ DB.VendorItems = {
         npcId = 8178,
         level = {49, 49},
         zone = "Blasted Lands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 21},
             {itemId = 3372, cost = 211},
@@ -17169,6 +19378,9 @@ DB.VendorItems = {
         npcId = 8160,
         level = {50, 50},
         zone = "The Hinterlands",
+        faction = "Wildhammer Clan",
+        factionId = 471,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 50},
@@ -17195,6 +19407,10 @@ DB.VendorItems = {
         npcId = 13018,
         level = {12, 12},
         zone = "Alterac Valley",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 17119, cost = 124}
         }
@@ -17205,6 +19421,10 @@ DB.VendorItems = {
         npcId = 8126,
         level = {55, 55},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 8895, cost = 0},
             {itemId = 12715, cost = 0},
@@ -17224,6 +19444,10 @@ DB.VendorItems = {
         npcId = 11182,
         level = {54, 54},
         zone = "Winterspring",
+        faction = "Everlook",
+        factionId = 577,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 8088, cost = 14036},
             {itemId = 8090, cost = 14146},
@@ -17249,6 +19473,10 @@ DB.VendorItems = {
         npcId = 2832,
         level = {38, 38},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4540, cost = 24},
             {itemId = 159, cost = 26},
@@ -17277,6 +19505,9 @@ DB.VendorItems = {
         npcId = 4085,
         level = {24, 24},
         zone = "Stonetalon Mountains",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2148, cost = 2907},
             {itemId = 2150, cost = 2930},
@@ -17300,6 +19531,9 @@ DB.VendorItems = {
         npcId = 4265,
         level = {20, 20},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2678, cost = 10},
             {itemId = 159, cost = 26},
@@ -17317,6 +19551,9 @@ DB.VendorItems = {
         npcId = 12805,
         level = {55, 55},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 18664, cost = 105},
             {itemId = 213087, cost = 4241},
@@ -17387,6 +19624,9 @@ DB.VendorItems = {
         npcId = 4879,
         level = {40, 40},
         zone = "Dustwallow Marsh",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 159, cost = 25},
@@ -17412,6 +19652,9 @@ DB.VendorItems = {
         npcId = 3362,
         level = {45, 45},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 1132, cost = 400000},
             {itemId = 5665, cost = 400000},
@@ -17427,6 +19670,9 @@ DB.VendorItems = {
         npcId = 8398,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2525, cost = 26488},
             {itemId = 2523, cost = 28284},
@@ -17442,6 +19688,10 @@ DB.VendorItems = {
         npcId = 2626,
         level = {43, 43},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 6256, cost = 23},
             {itemId = 6529, cost = 50},
@@ -17458,6 +19708,9 @@ DB.VendorItems = {
         npcId = 2136,
         level = {13, 13},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2492, cost = 284},
             {itemId = 2489, cost = 342},
@@ -17475,6 +19728,9 @@ DB.VendorItems = {
         npcId = 3317,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 3606, cost = 131},
             {itemId = 3607, cost = 131},
@@ -17505,6 +19761,9 @@ DB.VendorItems = {
         npcId = 5126,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 17188, cost = 2384},
             {itemId = 2445, cost = 3613},
@@ -17536,6 +19795,9 @@ DB.VendorItems = {
         npcId = 3312,
         level = {50, 50},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 23},
             {itemId = 2287, cost = 111},
@@ -17551,6 +19813,9 @@ DB.VendorItems = {
         npcId = 15736,
         level = {55, 55},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 233197, cost = 0},
             {itemId = 233198, cost = 0},
@@ -17574,6 +19839,9 @@ DB.VendorItems = {
         npcId = 14450,
         level = {10, 10},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 23160, cost = 4500},
             {itemId = 23161, cost = 4500}
@@ -17585,6 +19853,9 @@ DB.VendorItems = {
         npcId = 1323,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2150, cost = 2757},
             {itemId = 2151, cost = 2768},
@@ -17627,6 +19898,8 @@ DB.VendorItems = {
         npcId = 14738,
         level = {48, 48},
         zone = "The Hinterlands",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 2678, cost = 9},
             {itemId = 159, cost = 22},
@@ -17642,6 +19915,10 @@ DB.VendorItems = {
         npcId = 3539,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 927, cost = 6543},
             {itemId = 2209, cost = 6741},
@@ -17666,6 +19943,9 @@ DB.VendorItems = {
         npcId = 8681,
         level = {35, 35},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2324, cost = 26},
@@ -17695,6 +19975,9 @@ DB.VendorItems = {
         npcId = 1308,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 17034, cost = 210},
             {itemId = 17035, cost = 421},
@@ -17723,6 +20006,9 @@ DB.VendorItems = {
         npcId = 8364,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 4496, cost = 400},
             {itemId = 4498, cost = 2000},
@@ -17736,6 +20022,9 @@ DB.VendorItems = {
         npcId = 3551,
         level = {20, 20},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2928, cost = 21},
             {itemId = 3371, cost = 21},
@@ -17755,6 +20044,8 @@ DB.VendorItems = {
         npcId = 13420,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 17194, cost = 10},
             {itemId = 17202, cost = 10},
@@ -17773,6 +20064,10 @@ DB.VendorItems = {
         npcId = 7866,
         level = {50, 50},
         zone = "Azshara",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 10619, cost = 0},
             {itemId = 10650, cost = 0},
@@ -17786,6 +20081,8 @@ DB.VendorItems = {
         npcId = 4890,
         level = {41, 41},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 4831, cost = 7072},
             {itemId = 4833, cost = 7792},
@@ -17805,6 +20102,9 @@ DB.VendorItems = {
         npcId = 5132,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 4496, cost = 444},
             {itemId = 4498, cost = 2222},
@@ -17818,6 +20118,10 @@ DB.VendorItems = {
         npcId = 3684,
         level = {33, 33},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 844, cost = 757},
             {itemId = 1843, cost = 763},
@@ -17835,6 +20139,9 @@ DB.VendorItems = {
         npcId = 9499,
         level = {55, 55},
         zone = "Blackrock Depths",
+        faction = "Neutral",
+        reactionAlliance = 0,
+        reactionHorde = 0,
         items = {
             {itemId = 3944, cost = 0},
             {itemId = 3945, cost = 0},
@@ -17975,6 +20282,9 @@ DB.VendorItems = {
         npcId = 5154,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 26},
@@ -17999,6 +20309,10 @@ DB.VendorItems = {
         npcId = 7852,
         level = {55, 55},
         zone = "Feralas",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2604, cost = 47},
@@ -18028,6 +20342,8 @@ DB.VendorItems = {
         npcId = 14736,
         level = {60, 60},
         zone = "The Hinterlands",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 19120, cost = 58619}
         }
@@ -18038,6 +20354,10 @@ DB.VendorItems = {
         npcId = 14847,
         level = {35, 35},
         zone = "Elwynn Forest",
+        faction = "Darkmoon Faire",
+        factionId = 909,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 858, cost = 105},
@@ -18067,6 +20387,10 @@ DB.VendorItems = {
         npcId = 3528,
         level = {14, 15},
         zone = "Silverpine Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 414, cost = 0},
             {itemId = 818, cost = 0},
@@ -18110,6 +20434,10 @@ DB.VendorItems = {
         npcId = 3532,
         level = {14, 15},
         zone = "Silverpine Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 414, cost = 0},
             {itemId = 818, cost = 0},
@@ -18140,6 +20468,10 @@ DB.VendorItems = {
         npcId = 3530,
         level = {14, 15},
         zone = "Silverpine Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 414, cost = 0},
             {itemId = 818, cost = 0},
@@ -18160,6 +20492,10 @@ DB.VendorItems = {
         npcId = 11189,
         level = {51, 51},
         zone = "Winterspring",
+        faction = "Everlook",
+        factionId = 577,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -18202,6 +20538,10 @@ DB.VendorItems = {
         npcId = 2849,
         level = {44, 44},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3597, cost = 1137},
             {itemId = 3598, cost = 1142},
@@ -18243,6 +20583,9 @@ DB.VendorItems = {
         npcId = 1645,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2524, cost = 19192},
             {itemId = 2526, cost = 20353},
@@ -18260,6 +20603,9 @@ DB.VendorItems = {
         npcId = 1249,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2393, cost = 216},
             {itemId = 2396, cost = 226},
@@ -18277,6 +20623,10 @@ DB.VendorItems = {
         npcId = 491,
         level = {20, 20},
         zone = "Westfall",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -18301,6 +20651,10 @@ DB.VendorItems = {
         npcId = 11536,
         level = {58, 58},
         zone = "Eastern Plaguelands",
+        faction = "Argent Dawn",
+        factionId = 529,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 12844, cost = 0},
             {itemId = 227813, cost = 0},
@@ -18343,6 +20697,9 @@ DB.VendorItems = {
         npcId = 7879,
         level = {55, 55},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 11022, cost = 888},
             {itemId = 11020, cost = 8888}
@@ -18354,6 +20711,9 @@ DB.VendorItems = {
         npcId = 15354,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 18633, cost = 140},
             {itemId = 7228, cost = 562},
@@ -18368,6 +20728,9 @@ DB.VendorItems = {
         npcId = 5108,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 3428, cost = 400},
             {itemId = 16059, cost = 400},
@@ -18392,6 +20755,8 @@ DB.VendorItems = {
         npcId = 12796,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 18245, cost = 900000},
             {itemId = 18246, cost = 900000},
@@ -18405,6 +20770,9 @@ DB.VendorItems = {
         npcId = 1198,
         level = {18, 18},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 50},
@@ -18421,6 +20789,10 @@ DB.VendorItems = {
         npcId = 3499,
         level = {22, 22},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -18450,6 +20822,9 @@ DB.VendorItems = {
         npcId = 1474,
         level = {15, 15},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 26},
@@ -18476,6 +20851,9 @@ DB.VendorItems = {
         npcId = 3161,
         level = {10, 10},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 17183, cost = 35},
             {itemId = 2387, cost = 37},
@@ -18493,6 +20871,10 @@ DB.VendorItems = {
         npcId = 3625,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Frostwolf Clan",
+        factionId = 729,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 22},
             {itemId = 4470, cost = 37},
@@ -18522,6 +20904,9 @@ DB.VendorItems = {
         npcId = 8177,
         level = {45, 45},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 17},
             {itemId = 3372, cost = 177},
@@ -18538,6 +20923,10 @@ DB.VendorItems = {
         npcId = 16135,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2450, cost = 0},
             {itemId = 2928, cost = 0},
@@ -18562,6 +20951,9 @@ DB.VendorItems = {
         npcId = 5193,
         level = {25, 25},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 5976, cost = 9473}
         }
@@ -18572,6 +20964,9 @@ DB.VendorItems = {
         npcId = 3334,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2928, cost = 20},
             {itemId = 3371, cost = 20},
@@ -18591,6 +20986,10 @@ DB.VendorItems = {
         npcId = 1695,
         level = {45, 45},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 1849, cost = 1305},
             {itemId = 1850, cost = 1310},
@@ -18612,6 +21011,8 @@ DB.VendorItems = {
         npcId = 17598,
         level = {46, 46},
         zone = "The Hinterlands",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2515, cost = 45},
@@ -18626,6 +21027,10 @@ DB.VendorItems = {
         npcId = 2699,
         level = {43, 43},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 52},
@@ -18653,6 +21058,9 @@ DB.VendorItems = {
         npcId = 16134,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2450, cost = 0},
             {itemId = 7806, cost = 0},
@@ -18665,6 +21073,10 @@ DB.VendorItems = {
         npcId = 14921,
         level = {56, 56},
         zone = "Stranglethorn Vale",
+        faction = "Zandalar Tribe",
+        factionId = 270,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 1710, cost = 0},
             {itemId = 4304, cost = 0},
@@ -18683,6 +21095,10 @@ DB.VendorItems = {
         npcId = 10618,
         level = {62, 62},
         zone = "Winterspring",
+        faction = "Wintersaber Trainers",
+        factionId = 589,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 13086, cost = 11250000}
         }
@@ -18693,6 +21109,9 @@ DB.VendorItems = {
         npcId = 6495,
         level = {35, 35},
         zone = "Thousand Needles",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 1179, cost = 125},
@@ -18708,6 +21127,9 @@ DB.VendorItems = {
         npcId = 2684,
         level = {31, 31},
         zone = "Alterac Mountains",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -18734,6 +21156,10 @@ DB.VendorItems = {
         npcId = 3543,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 718, cost = 1614},
             {itemId = 1852, cost = 1684},
@@ -18756,6 +21182,9 @@ DB.VendorItems = {
         npcId = 277,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2723, cost = 50},
             {itemId = 2596, cost = 120},
@@ -18771,6 +21200,9 @@ DB.VendorItems = {
         npcId = 16131,
         level = {60, 60},
         zone = "Eastern Plaguelands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2450, cost = 0},
             {itemId = 2930, cost = 0},
@@ -18803,6 +21235,9 @@ DB.VendorItems = {
         npcId = 4553,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2678, cost = 10},
             {itemId = 159, cost = 26},
@@ -18820,6 +21255,9 @@ DB.VendorItems = {
         npcId = 2688,
         level = {52, 52},
         zone = "The Hinterlands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -18846,6 +21284,10 @@ DB.VendorItems = {
         npcId = 15126,
         level = {55, 55},
         zone = "Arathi Highlands",
+        faction = "The Defilers",
+        factionId = 510,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 1710, cost = 0},
             {itemId = 2928, cost = 0},
@@ -18870,6 +21312,9 @@ DB.VendorItems = {
         npcId = 945,
         level = {5, 5},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2130, cost = 51},
             {itemId = 2131, cost = 51},
@@ -18887,6 +21332,9 @@ DB.VendorItems = {
         npcId = 4225,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2604, cost = 50},
@@ -18914,6 +21362,10 @@ DB.VendorItems = {
         npcId = 4581,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 1181, cost = 94},
             {itemId = 3013, cost = 105},
@@ -18935,6 +21387,9 @@ DB.VendorItems = {
         npcId = 1457,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2928, cost = 20},
             {itemId = 3371, cost = 20},
@@ -18955,6 +21410,9 @@ DB.VendorItems = {
         npcId = 15127,
         level = {55, 55},
         zone = "Arathi Highlands",
+        faction = "The League of Arathor",
+        factionId = 509,
+        reactionAlliance = 1,
         items = {
             {itemId = 1707, cost = 0},
             {itemId = 1708, cost = 0},
@@ -18974,6 +21432,9 @@ DB.VendorItems = {
         npcId = 4597,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 18},
             {itemId = 2901, cost = 81},
@@ -18989,6 +21450,9 @@ DB.VendorItems = {
         npcId = 3319,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2399, cost = 204},
             {itemId = 2402, cost = 205},
@@ -19022,6 +21486,9 @@ DB.VendorItems = {
         npcId = 10380,
         level = {15, 15},
         zone = "The Barrens",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 1844, cost = 655},
             {itemId = 844, cost = 757},
@@ -19037,6 +21504,9 @@ DB.VendorItems = {
         npcId = 4599,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2901, cost = 81},
             {itemId = 2880, cost = 100},
@@ -19050,6 +21520,9 @@ DB.VendorItems = {
         npcId = 3541,
         level = {40, 40},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4470, cost = 40},
@@ -19080,6 +21553,9 @@ DB.VendorItems = {
         npcId = 7945,
         level = {49, 49},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 6256, cost = 24},
             {itemId = 6529, cost = 47},
@@ -19095,6 +21571,9 @@ DB.VendorItems = {
         npcId = 3138,
         level = {25, 25},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 4604, cost = 26},
             {itemId = 4605, cost = 131},
@@ -19110,6 +21589,9 @@ DB.VendorItems = {
         npcId = 3553,
         level = {18, 18},
         zone = "Silverpine Forest",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 1845, cost = 877},
             {itemId = 1846, cost = 880},
@@ -19125,6 +21607,8 @@ DB.VendorItems = {
         npcId = 13432,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 17194, cost = 10},
             {itemId = 17202, cost = 10},
@@ -19143,6 +21627,10 @@ DB.VendorItems = {
         npcId = 13699,
         level = {40, 40},
         zone = "Desolace",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 17753, cost = 130234},
             {itemId = 17705, cost = 164272},
@@ -19155,6 +21643,10 @@ DB.VendorItems = {
         npcId = 3548,
         level = {12, 12},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 21},
             {itemId = 765, cost = 42},
@@ -19175,6 +21667,9 @@ DB.VendorItems = {
         npcId = 1320,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2469, cost = 6334},
             {itemId = 2468, cost = 6642},
@@ -19198,6 +21693,10 @@ DB.VendorItems = {
         npcId = 12799,
         level = {55, 55},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 18675, cost = 105},
             {itemId = 213088, cost = 3816},
@@ -19268,6 +21767,9 @@ DB.VendorItems = {
         npcId = 955,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 2723, cost = 52},
@@ -19288,6 +21790,10 @@ DB.VendorItems = {
         npcId = 15199,
         level = {60, 60},
         zone = "Hillsbrad Foothills",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 20604, cost = 500}
         }
@@ -19298,6 +21804,9 @@ DB.VendorItems = {
         npcId = 12785,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 117, cost = 22},
             {itemId = 159, cost = 22},
@@ -19342,6 +21851,8 @@ DB.VendorItems = {
         npcId = 14581,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 18826, cost = 143628},
             {itemId = 18835, cost = 157487},
@@ -19398,6 +21909,9 @@ DB.VendorItems = {
         npcId = 3029,
         level = {40, 40},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 6256, cost = 23},
             {itemId = 6325, cost = 40},
@@ -19415,6 +21929,9 @@ DB.VendorItems = {
         npcId = 8363,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -19457,6 +21974,9 @@ DB.VendorItems = {
         npcId = 4185,
         level = {15, 15},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 3428, cost = 421},
             {itemId = 16059, cost = 421},
@@ -19475,6 +21995,9 @@ DB.VendorItems = {
         npcId = 3609,
         level = {18, 18},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2492, cost = 298},
             {itemId = 2489, cost = 360},
@@ -19492,6 +22015,9 @@ DB.VendorItems = {
         npcId = 5191,
         level = {25, 25},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 5976, cost = 10526}
         }
@@ -19502,6 +22028,9 @@ DB.VendorItems = {
         npcId = 3342,
         level = {35, 35},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 4536, cost = 24},
             {itemId = 4537, cost = 124},
@@ -19517,6 +22046,9 @@ DB.VendorItems = {
         npcId = 3955,
         level = {24, 24},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -19555,6 +22087,9 @@ DB.VendorItems = {
         npcId = 3333,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 6256, cost = 23},
             {itemId = 6529, cost = 50},
@@ -19573,6 +22108,9 @@ DB.VendorItems = {
         npcId = 8145,
         level = {50, 50},
         zone = "Feralas",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2678, cost = 9},
@@ -19616,6 +22154,9 @@ DB.VendorItems = {
         npcId = 5821,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 793, cost = 139},
             {itemId = 3602, cost = 145},
@@ -19666,6 +22207,10 @@ DB.VendorItems = {
         npcId = 14371,
         level = {52, 52},
         zone = "Dire Maul",
+        faction = "Shen'dralar",
+        factionId = 809,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 1179, cost = 125},
@@ -19683,6 +22228,9 @@ DB.VendorItems = {
         npcId = 2669,
         level = {31, 31},
         zone = "Duskwood",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 25},
@@ -19709,6 +22257,9 @@ DB.VendorItems = {
         npcId = 3089,
         level = {21, 21},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 117, cost = 22},
             {itemId = 2287, cost = 124},
@@ -19724,6 +22275,9 @@ DB.VendorItems = {
         npcId = 5817,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -19766,6 +22320,9 @@ DB.VendorItems = {
         npcId = 3361,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 851, cost = 2129},
             {itemId = 15905, cost = 2242},
@@ -19794,6 +22351,10 @@ DB.VendorItems = {
         npcId = 10367,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Frostwolf Clan",
+        factionId = 729,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 4592, cost = 18},
             {itemId = 117, cost = 24},
@@ -19839,6 +22400,9 @@ DB.VendorItems = {
         npcId = 8665,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 8500, cost = 5000},
             {itemId = 8501, cost = 5000}
@@ -19850,6 +22414,9 @@ DB.VendorItems = {
         npcId = 3612,
         level = {20, 20},
         zone = "Teldrassil",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 797, cost = 185},
             {itemId = 1839, cost = 193},
@@ -19865,6 +22432,9 @@ DB.VendorItems = {
         npcId = 5122,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2515, cost = 47},
@@ -19885,6 +22455,9 @@ DB.VendorItems = {
         npcId = 1326,
         level = {25, 25},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2928, cost = 20},
             {itemId = 3371, cost = 20},
@@ -19904,6 +22477,10 @@ DB.VendorItems = {
         npcId = 2622,
         level = {46, 46},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2928, cost = 21},
             {itemId = 3371, cost = 21},
@@ -19923,6 +22500,8 @@ DB.VendorItems = {
         npcId = 14737,
         level = {47, 47},
         zone = "The Hinterlands",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 18},
             {itemId = 2901, cost = 81},
@@ -19938,6 +22517,10 @@ DB.VendorItems = {
         npcId = 6779,
         level = {45, 45},
         zone = "Alterac Mountains",
+        faction = "Ravenholdt",
+        factionId = 349,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2928, cost = 21},
             {itemId = 3371, cost = 21},
@@ -19958,6 +22541,10 @@ DB.VendorItems = {
         npcId = 5124,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 117, cost = 22},
             {itemId = 2287, cost = 131},
@@ -19973,6 +22560,9 @@ DB.VendorItems = {
         npcId = 5178,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 21},
             {itemId = 3372, cost = 210},
@@ -19988,6 +22578,9 @@ DB.VendorItems = {
         npcId = 3413,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 15},
             {itemId = 5956, cost = 18},
@@ -20016,6 +22609,9 @@ DB.VendorItems = {
         npcId = 5520,
         level = {40, 40},
         zone = "Stormwind City",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 16302, cost = 100},
             {itemId = 16321, cost = 100},
@@ -20084,6 +22680,10 @@ DB.VendorItems = {
         npcId = 17804,
         level = {52, 52},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 228222, cost = 44444},
             {itemId = 226500, cost = 88888}
@@ -20095,6 +22695,10 @@ DB.VendorItems = {
         npcId = 9099,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 8950, cost = 4000}
         }
@@ -20105,6 +22709,10 @@ DB.VendorItems = {
         npcId = 1407,
         level = {40, 40},
         zone = "Badlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2434, cost = 5436},
             {itemId = 3593, cost = 5765},
@@ -20136,6 +22744,10 @@ DB.VendorItems = {
         npcId = 14845,
         level = {35, 35},
         zone = "Elwynn Forest",
+        faction = "Darkmoon Faire",
+        factionId = 909,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 19223, cost = 26},
             {itemId = 19304, cost = 131},
@@ -20151,6 +22763,9 @@ DB.VendorItems = {
         npcId = 9551,
         level = {37, 37},
         zone = "Thousand Needles",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -20179,6 +22794,9 @@ DB.VendorItems = {
         npcId = 14322,
         level = {59, 59},
         zone = "Dire Maul North",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2593, cost = 0},
             {itemId = 2594, cost = 0},
@@ -20241,6 +22859,9 @@ DB.VendorItems = {
         npcId = 12794,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 22},
             {itemId = 159, cost = 22},
@@ -20285,6 +22906,10 @@ DB.VendorItems = {
         npcId = 12096,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Stormpike Guard",
+        factionId = 730,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2928, cost = 20},
             {itemId = 3371, cost = 20},
@@ -20347,6 +22972,9 @@ DB.VendorItems = {
         npcId = 5508,
         level = {40, 40},
         zone = "Blasted Lands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 8088, cost = 13335},
             {itemId = 8090, cost = 13438},
@@ -20372,6 +23000,10 @@ DB.VendorItems = {
         npcId = 3178,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4592, cost = 20},
             {itemId = 6256, cost = 23},
@@ -20396,6 +23028,9 @@ DB.VendorItems = {
         npcId = 3356,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 15},
             {itemId = 2901, cost = 76},
@@ -20412,6 +23047,9 @@ DB.VendorItems = {
         npcId = 3022,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2527, cost = 30901},
             {itemId = 2535, cost = 64795}
@@ -20423,6 +23061,9 @@ DB.VendorItems = {
         npcId = 12246,
         level = {36, 36},
         zone = "Desolace",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4470, cost = 38},
@@ -20470,6 +23111,9 @@ DB.VendorItems = {
         npcId = 3023,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 6523, cost = 1496},
             {itemId = 6524, cost = 3021},
@@ -20483,6 +23127,10 @@ DB.VendorItems = {
         npcId = 5135,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Stormpike Guard",
+        factionId = 730,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -20525,6 +23173,9 @@ DB.VendorItems = {
         npcId = 4570,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 2527, cost = 29356},
             {itemId = 2535, cost = 61556}
@@ -20536,6 +23187,10 @@ DB.VendorItems = {
         npcId = 14844,
         level = {35, 35},
         zone = "Elwynn Forest",
+        faction = "Darkmoon Faire",
+        factionId = 909,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 19222, cost = 10},
             {itemId = 19221, cost = 52},
@@ -20549,6 +23204,9 @@ DB.VendorItems = {
         npcId = 3053,
         level = {30, 30},
         zone = "Thousand Needles",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2519, cost = 50},
@@ -20564,6 +23222,10 @@ DB.VendorItems = {
         npcId = 3779,
         level = {55, 55},
         zone = "Winterspring",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2678, cost = 8},
@@ -20601,6 +23263,9 @@ DB.VendorItems = {
         npcId = 3092,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 793, cost = 123},
             {itemId = 3603, cost = 128},
@@ -20655,6 +23320,9 @@ DB.VendorItems = {
         npcId = 3187,
         level = {12, 12},
         zone = "Durotar",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -20678,6 +23346,9 @@ DB.VendorItems = {
         npcId = 4221,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 4592, cost = 20},
             {itemId = 787, cost = 25},
@@ -20693,6 +23364,10 @@ DB.VendorItems = {
         npcId = 4192,
         level = {16, 16},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 26},
             {itemId = 1179, cost = 125},
@@ -20708,6 +23383,9 @@ DB.VendorItems = {
         npcId = 3366,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 50},
@@ -20734,6 +23412,9 @@ DB.VendorItems = {
         npcId = 3016,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 4496, cost = 526},
             {itemId = 4498, cost = 2631},
@@ -20746,6 +23427,9 @@ DB.VendorItems = {
         npcId = 3953,
         level = {23, 23},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 797, cost = 175},
             {itemId = 1839, cost = 184},
@@ -20779,6 +23463,9 @@ DB.VendorItems = {
         npcId = 5162,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 6256, cost = 20},
             {itemId = 6326, cost = 35},
@@ -20798,6 +23485,10 @@ DB.VendorItems = {
         npcId = 8307,
         level = {22, 22},
         zone = "The Barrens",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2678, cost = 8},
             {itemId = 4540, cost = 22},
@@ -20819,6 +23510,9 @@ DB.VendorItems = {
         npcId = 15124,
         level = {30, 30},
         zone = "Arathi Highlands",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 1205, cost = 500},
             {itemId = 3770, cost = 500},
@@ -20844,6 +23538,9 @@ DB.VendorItems = {
         npcId = 3500,
         level = {52, 52},
         zone = "Feralas",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 17034, cost = 177},
             {itemId = 17035, cost = 355},
@@ -20872,6 +23569,10 @@ DB.VendorItems = {
         npcId = 3482,
         level = {14, 14},
         zone = "The Barrens",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -20901,6 +23602,9 @@ DB.VendorItems = {
         npcId = 2999,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 17},
             {itemId = 2901, cost = 73},
@@ -20916,6 +23620,9 @@ DB.VendorItems = {
         npcId = 4554,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 23},
             {itemId = 4604, cost = 23},
@@ -20937,6 +23644,9 @@ DB.VendorItems = {
         npcId = 1650,
         level = {11, 11},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 4470, cost = 40}
         }
@@ -20947,6 +23657,9 @@ DB.VendorItems = {
         npcId = 4617,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 4470, cost = 38},
             {itemId = 6217, cost = 124},
@@ -20966,6 +23679,9 @@ DB.VendorItems = {
         npcId = 7976,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2101, cost = 4},
             {itemId = 2512, cost = 10},
@@ -20995,6 +23711,10 @@ DB.VendorItems = {
         npcId = 13217,
         level = {58, 58},
         zone = "Alterac Mountains",
+        faction = "Stormpike Guard",
+        factionId = 730,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 1205, cost = 0},
             {itemId = 2450, cost = 0},
@@ -21016,6 +23736,10 @@ DB.VendorItems = {
         npcId = 66,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -21042,6 +23766,9 @@ DB.VendorItems = {
         npcId = 6298,
         level = {30, 30},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2901, cost = 85},
             {itemId = 2880, cost = 105},
@@ -21055,6 +23782,9 @@ DB.VendorItems = {
         npcId = 1350,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2612, cost = 172},
             {itemId = 2613, cost = 606},
@@ -21071,6 +23801,10 @@ DB.VendorItems = {
         npcId = 3518,
         level = {15, 15},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4540, cost = 23},
             {itemId = 4541, cost = 117},
@@ -21086,6 +23820,9 @@ DB.VendorItems = {
         npcId = 4562,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -21114,6 +23851,10 @@ DB.VendorItems = {
         npcId = 7867,
         level = {50, 50},
         zone = "Badlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 10619, cost = 0},
             {itemId = 10650, cost = 0},
@@ -21127,6 +23868,9 @@ DB.VendorItems = {
         npcId = 984,
         level = {45, 45},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2440, cost = 12532},
             {itemId = 3587, cost = 12723},
@@ -21152,6 +23896,9 @@ DB.VendorItems = {
         npcId = 1690,
         level = {29, 29},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 5956, cost = 18},
             {itemId = 2901, cost = 81},
@@ -21167,6 +23914,9 @@ DB.VendorItems = {
         npcId = 5189,
         level = {25, 25},
         zone = "Thunder Bluff",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 5976, cost = 8888}
         }
@@ -21177,6 +23927,9 @@ DB.VendorItems = {
         npcId = 5510,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2508, cost = 27},
@@ -21192,6 +23945,9 @@ DB.VendorItems = {
         npcId = 982,
         level = {45, 45},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 23},
             {itemId = 159, cost = 23},
@@ -21213,6 +23969,9 @@ DB.VendorItems = {
         npcId = 983,
         level = {45, 45},
         zone = "Swamp of Sorrows",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 3372, cost = 189},
@@ -21247,6 +24006,10 @@ DB.VendorItems = {
         npcId = 4259,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 5956, cost = 16},
             {itemId = 2901, cost = 81},
@@ -21262,6 +24025,9 @@ DB.VendorItems = {
         npcId = 1285,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -21302,6 +24068,9 @@ DB.VendorItems = {
         npcId = 5158,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 4470, cost = 37},
             {itemId = 6217, cost = 124},
@@ -21322,6 +24091,9 @@ DB.VendorItems = {
         npcId = 4559,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 17183, cost = 30},
             {itemId = 2387, cost = 38},
@@ -21349,6 +24121,10 @@ DB.VendorItems = {
         npcId = 9676,
         level = {24, 40},
         zone = "Gnomeregan",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 17},
@@ -21374,6 +24150,10 @@ DB.VendorItems = {
         npcId = 4195,
         level = {15, 15},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 16166, cost = 24},
@@ -21397,6 +24177,9 @@ DB.VendorItems = {
         npcId = 3935,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 117, cost = 24},
             {itemId = 2287, cost = 124},
@@ -21412,6 +24195,9 @@ DB.VendorItems = {
         npcId = 3315,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2612, cost = 163},
             {itemId = 2613, cost = 606},
@@ -21469,6 +24255,9 @@ DB.VendorItems = {
         npcId = 4889,
         level = {40, 40},
         zone = "Dustwallow Marsh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2519, cost = 52},
@@ -21484,6 +24273,9 @@ DB.VendorItems = {
         npcId = 3313,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2516, cost = 9},
@@ -21524,6 +24316,9 @@ DB.VendorItems = {
         npcId = 10369,
         level = {12, 12},
         zone = "Durotar",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 50},
@@ -21547,6 +24342,9 @@ DB.VendorItems = {
         npcId = 4782,
         level = {50, 50},
         zone = "The Hinterlands",
+        faction = "Wildhammer Clan",
+        factionId = 471,
+        reactionAlliance = 1,
         items = {
             {itemId = 117, cost = 25},
             {itemId = 159, cost = 25},
@@ -21576,6 +24374,9 @@ DB.VendorItems = {
         npcId = 12027,
         level = {30, 30},
         zone = "Desolace",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 8},
             {itemId = 2516, cost = 8},
@@ -21612,6 +24413,9 @@ DB.VendorItems = {
         npcId = 5812,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2393, cost = 194},
             {itemId = 2396, cost = 204},
@@ -21672,6 +24476,9 @@ DB.VendorItems = {
         npcId = 2819,
         level = {34, 34},
         zone = "Arathi Highlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2604, cost = 52},
@@ -21698,6 +24505,9 @@ DB.VendorItems = {
         npcId = 4875,
         level = {40, 40},
         zone = "Thousand Needles",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 23},
             {itemId = 159, cost = 23},
@@ -21719,6 +24529,9 @@ DB.VendorItems = {
         npcId = 4235,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2947, cost = 15},
             {itemId = 3111, cost = 15},
@@ -21739,6 +24552,9 @@ DB.VendorItems = {
         npcId = 3177,
         level = {10, 10},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2492, cost = 284},
             {itemId = 2491, cost = 458},
@@ -21752,6 +24568,10 @@ DB.VendorItems = {
         npcId = 5169,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2928, cost = 18},
             {itemId = 3371, cost = 18},
@@ -21771,6 +24591,9 @@ DB.VendorItems = {
         npcId = 3163,
         level = {15, 15},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2492, cost = 298},
             {itemId = 2489, cost = 360},
@@ -21788,6 +24611,9 @@ DB.VendorItems = {
         npcId = 3349,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2527, cost = 30901},
             {itemId = 2535, cost = 64795}
@@ -21799,6 +24625,10 @@ DB.VendorItems = {
         npcId = 4194,
         level = {15, 15},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -21826,6 +24656,10 @@ DB.VendorItems = {
         npcId = 3960,
         level = {26, 26},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 117, cost = 24},
             {itemId = 2287, cost = 124},
@@ -21843,6 +24677,9 @@ DB.VendorItems = {
         npcId = 4226,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 21},
             {itemId = 3372, cost = 210},
@@ -21859,6 +24696,8 @@ DB.VendorItems = {
         npcId = 4899,
         level = {37, 37},
         zone = "Dustwallow Marsh",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 3371, cost = 20},
             {itemId = 3372, cost = 200},
@@ -21875,6 +24714,9 @@ DB.VendorItems = {
         npcId = 1460,
         level = {25, 25},
         zone = "Wetlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2411, cost = 421052},
             {itemId = 2414, cost = 421052},
@@ -21888,6 +24730,9 @@ DB.VendorItems = {
         npcId = 14522,
         level = {54, 54},
         zone = "Felwood",
+        faction = "Alliance",
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 1645, cost = 0},
             {itemId = 3972, cost = 0},
@@ -21905,6 +24750,9 @@ DB.VendorItems = {
         npcId = 3314,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2130, cost = 54},
             {itemId = 2131, cost = 54},
@@ -21938,6 +24786,9 @@ DB.VendorItems = {
         npcId = 1149,
         level = {40, 40},
         zone = "Stranglethorn Vale",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 159, cost = 25},
             {itemId = 4470, cost = 33},
@@ -21968,6 +24819,10 @@ DB.VendorItems = {
         npcId = 3488,
         level = {16, 16},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -21989,6 +24844,9 @@ DB.VendorItems = {
         npcId = 4954,
         level = {36, 36},
         zone = "Arathi Highlands",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 26},
             {itemId = 2287, cost = 131},
@@ -22004,6 +24862,9 @@ DB.VendorItems = {
         npcId = 4228,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 4470, cost = 37},
             {itemId = 6217, cost = 124},
@@ -22023,6 +24884,9 @@ DB.VendorItems = {
         npcId = 15864,
         level = {55, 55},
         zone = "Moonglade",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 21713, cost = 1000}
         }
@@ -22033,6 +24897,9 @@ DB.VendorItems = {
         npcId = 4189,
         level = {14, 14},
         zone = "Darkshore",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 26},
@@ -22060,6 +24927,9 @@ DB.VendorItems = {
         npcId = 3079,
         level = {14, 14},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2374, cost = 173},
             {itemId = 2375, cost = 173},
@@ -22075,6 +24945,10 @@ DB.VendorItems = {
         npcId = 15176,
         level = {57, 57},
         zone = "Silithus",
+        faction = "Cenarion Circle",
+        factionId = 609,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 5956, cost = 20},
             {itemId = 2901, cost = 91},
@@ -22103,6 +24977,9 @@ DB.VendorItems = {
         npcId = 3074,
         level = {7, 7},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 1835, cost = 31},
             {itemId = 1836, cost = 31},
@@ -22118,6 +24995,9 @@ DB.VendorItems = {
         npcId = 4086,
         level = {24, 24},
         zone = "Stonetalon Mountains",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 7561, cost = 2000},
             {itemId = 927, cost = 6953},
@@ -22141,6 +25021,9 @@ DB.VendorItems = {
         npcId = 896,
         level = {10, 10},
         zone = "Elwynn Forest",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 1839, cost = 184},
             {itemId = 797, cost = 185},
@@ -22162,6 +25045,9 @@ DB.VendorItems = {
         npcId = 12245,
         level = {38, 38},
         zone = "Desolace",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -22214,6 +25100,10 @@ DB.VendorItems = {
         npcId = 1678,
         level = {10, 10},
         zone = "Redridge Mountains",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 4592, cost = 21},
             {itemId = 6256, cost = 24},
@@ -22235,6 +25125,9 @@ DB.VendorItems = {
         npcId = 1261,
         level = {10, 10},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 5872, cost = 400000},
             {itemId = 5864, cost = 421052},
@@ -22250,6 +25143,9 @@ DB.VendorItems = {
         npcId = 15504,
         level = {60, 60},
         zone = "Ahn'Qiraj",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 233373, cost = 0},
             {itemId = 233380, cost = 0},
@@ -22282,6 +25178,10 @@ DB.VendorItems = {
         npcId = 3492,
         level = {24, 24},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 3597, cost = 1137},
             {itemId = 3598, cost = 1142},
@@ -22306,6 +25206,9 @@ DB.VendorItems = {
         npcId = 1146,
         level = {40, 40},
         zone = "Stranglethorn Vale",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 12164, cost = 4141},
             {itemId = 2524, cost = 18063},
@@ -22326,6 +25229,9 @@ DB.VendorItems = {
         npcId = 16015,
         level = {60, 60},
         zone = "Winterspring",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 17034, cost = 200},
             {itemId = 17035, cost = 400},
@@ -22357,6 +25263,9 @@ DB.VendorItems = {
         npcId = 2808,
         level = {36, 36},
         zone = "Arathi Highlands",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 159, cost = 24},
             {itemId = 4470, cost = 37},
@@ -22386,6 +25295,9 @@ DB.VendorItems = {
         npcId = 4175,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 2119, cost = 24},
             {itemId = 3599, cost = 24},
@@ -22440,6 +25352,10 @@ DB.VendorItems = {
         npcId = 7947,
         level = {52, 52},
         zone = "Feralas",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2320, cost = 9},
             {itemId = 2678, cost = 9},
@@ -22483,6 +25399,10 @@ DB.VendorItems = {
         npcId = 6568,
         level = {50, 50},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 25},
@@ -22510,6 +25430,9 @@ DB.VendorItems = {
         npcId = 4222,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 6256, cost = 20},
             {itemId = 6529, cost = 47},
@@ -22525,6 +25448,9 @@ DB.VendorItems = {
         npcId = 3682,
         level = {48, 48},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 718, cost = 1698},
             {itemId = 1852, cost = 1772},
@@ -22549,6 +25475,9 @@ DB.VendorItems = {
         npcId = 1469,
         level = {15, 15},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2519, cost = 50},
@@ -22563,6 +25492,9 @@ DB.VendorItems = {
         npcId = 15011,
         level = {55, 55},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 9312, cost = 17},
             {itemId = 9313, cost = 17},
@@ -22577,6 +25509,9 @@ DB.VendorItems = {
         npcId = 3534,
         level = {19, 19},
         zone = "Silverpine Forest",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 929, cost = 300},
             {itemId = 852, cost = 1739},
@@ -22600,6 +25535,9 @@ DB.VendorItems = {
         npcId = 4560,
         level = {30, 30},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 1845, cost = 825},
             {itemId = 1846, cost = 828},
@@ -22617,6 +25555,9 @@ DB.VendorItems = {
         npcId = 2679,
         level = {28, 30},
         zone = "Wetlands",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 7114, cost = 1000},
             {itemId = 7290, cost = 1600},
@@ -22637,6 +25578,10 @@ DB.VendorItems = {
         npcId = 12943,
         level = {55, 55},
         zone = "Tirisfal Glades",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 11},
             {itemId = 2604, cost = 52},
@@ -22664,6 +25609,8 @@ DB.VendorItems = {
         npcId = 13431,
         level = {30, 30},
         zone = "Thunder Bluff",
+        faction = "Horde",
+        reactionHorde = 1,
         items = {
             {itemId = 17404, cost = 125},
             {itemId = 17406, cost = 125},
@@ -22680,6 +25627,10 @@ DB.VendorItems = {
         npcId = 2842,
         level = {43, 43},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4592, cost = 20},
             {itemId = 787, cost = 25},
@@ -22695,6 +25646,10 @@ DB.VendorItems = {
         npcId = 12962,
         level = {30, 30},
         zone = "Ashenvale",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 4592, cost = 20},
             {itemId = 6256, cost = 23},
@@ -22718,6 +25673,9 @@ DB.VendorItems = {
         npcId = 1341,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 718, cost = 1709},
             {itemId = 1852, cost = 1783},
@@ -22739,6 +25697,10 @@ DB.VendorItems = {
         npcId = 1668,
         level = {15, 15},
         zone = "Westfall",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
+        reactionHorde = -1,
         items = {
             {itemId = 2512, cost = 9},
             {itemId = 2515, cost = 50},
@@ -22755,6 +25717,10 @@ DB.VendorItems = {
         npcId = 11184,
         level = {53, 53},
         zone = "Winterspring",
+        faction = "Everlook",
+        factionId = 577,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2516, cost = 10},
             {itemId = 2519, cost = 52},
@@ -22779,6 +25745,9 @@ DB.VendorItems = {
         npcId = 8117,
         level = {40, 40},
         zone = "Ironforge",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 9312, cost = 17},
             {itemId = 9313, cost = 17},
@@ -22798,6 +25767,9 @@ DB.VendorItems = {
         npcId = 4453,
         level = {31, 31},
         zone = "Thousand Needles",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 11122, cost = 28650}
         }
@@ -22808,6 +25780,9 @@ DB.VendorItems = {
         npcId = 8159,
         level = {50, 50},
         zone = "Feralas",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2434, cost = 4861},
             {itemId = 3593, cost = 5155},
@@ -22833,6 +25808,9 @@ DB.VendorItems = {
         npcId = 3485,
         level = {18, 18},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 26},
@@ -22860,6 +25838,9 @@ DB.VendorItems = {
         npcId = 6376,
         level = {5, 5},
         zone = "Dun Morogh",
+        faction = "Gnomeregan Exiles",
+        factionId = 54,
+        reactionAlliance = 1,
         items = {
             {itemId = 16302, cost = 105},
             {itemId = 16321, cost = 105},
@@ -22886,6 +25867,10 @@ DB.VendorItems = {
         npcId = 8129,
         level = {40, 40},
         zone = "Tanaris",
+        faction = "Gadgetzan",
+        factionId = 369,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2419, cost = 8358},
             {itemId = 2421, cost = 8420},
@@ -22920,6 +25905,9 @@ DB.VendorItems = {
         npcId = 3167,
         level = {16, 16},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2901, cost = 81},
             {itemId = 2880, cost = 105},
@@ -22941,6 +25929,9 @@ DB.VendorItems = {
         npcId = 12033,
         level = {30, 30},
         zone = "Desolace",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 2678, cost = 10},
             {itemId = 159, cost = 25},
@@ -22959,6 +25950,8 @@ DB.VendorItems = {
         npcId = 13433,
         level = {30, 30},
         zone = "Ironforge",
+        faction = "Alliance",
+        reactionAlliance = 1,
         items = {
             {itemId = 17194, cost = 10},
             {itemId = 17202, cost = 10},
@@ -22977,6 +25970,9 @@ DB.VendorItems = {
         npcId = 3081,
         level = {10, 10},
         zone = "Mulgore",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2678, cost = 10},
@@ -23001,6 +25997,9 @@ DB.VendorItems = {
         npcId = 1309,
         level = {30, 30},
         zone = "Stormwind City",
+        faction = "Stormwind",
+        factionId = 72,
+        reactionAlliance = 1,
         items = {
             {itemId = 2612, cost = 163},
             {itemId = 2613, cost = 606},
@@ -23017,6 +26016,9 @@ DB.VendorItems = {
         npcId = 11137,
         level = {35, 35},
         zone = "Ashenvale",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 927, cost = 6953},
             {itemId = 2209, cost = 7115},
@@ -23042,6 +26044,10 @@ DB.VendorItems = {
         npcId = 8404,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 10360, cost = 5000},
             {itemId = 10361, cost = 5000},
@@ -23054,6 +26060,9 @@ DB.VendorItems = {
         npcId = 1685,
         level = {15, 15},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -23080,6 +26089,9 @@ DB.VendorItems = {
         npcId = 3400,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 2678, cost = 10},
             {itemId = 159, cost = 25},
@@ -23095,6 +26107,10 @@ DB.VendorItems = {
         npcId = 2670,
         level = {43, 43},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2324, cost = 26},
@@ -23122,6 +26138,10 @@ DB.VendorItems = {
         npcId = 11185,
         level = {57, 57},
         zone = "Winterspring",
+        faction = "Everlook",
+        factionId = 577,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 17},
@@ -23152,6 +26172,10 @@ DB.VendorItems = {
         npcId = 10364,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Frostwolf Clan",
+        factionId = 729,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2928, cost = 20},
             {itemId = 3371, cost = 20},
@@ -23190,6 +26214,9 @@ DB.VendorItems = {
         npcId = 1682,
         level = {15, 15},
         zone = "Loch Modan",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2516, cost = 10},
@@ -23216,6 +26243,9 @@ DB.VendorItems = {
         npcId = 1263,
         level = {1, 1},
         zone = "Dun Morogh",
+        faction = "Ironforge",
+        factionId = 47,
+        reactionAlliance = 1,
         items = {
             {itemId = 8497, cost = 2000}
         }
@@ -23226,6 +26256,9 @@ DB.VendorItems = {
         npcId = 4230,
         level = {30, 30},
         zone = "Darnassus",
+        faction = "Darnassus",
+        factionId = 69,
+        reactionAlliance = 1,
         items = {
             {itemId = 4496, cost = 526},
             {itemId = 4498, cost = 2631},
@@ -23239,6 +26272,9 @@ DB.VendorItems = {
         npcId = 5944,
         level = {25, 25},
         zone = "The Barrens",
+        faction = "Thunder Bluff",
+        factionId = 81,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 8},
             {itemId = 2324, cost = 22},
@@ -23267,6 +26303,10 @@ DB.VendorItems = {
         npcId = 9544,
         level = {53, 53},
         zone = "Burning Steppes",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 17},
             {itemId = 5956, cost = 20},
@@ -23293,6 +26333,9 @@ DB.VendorItems = {
         npcId = 4731,
         level = {30, 30},
         zone = "Tirisfal Glades",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 13333, cost = 400000},
             {itemId = 13331, cost = 421052},
@@ -23307,6 +26350,10 @@ DB.VendorItems = {
         npcId = 6777,
         level = {60, 60},
         zone = "Alterac Mountains",
+        faction = "Ravenholdt",
+        factionId = 349,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -23333,6 +26380,9 @@ DB.VendorItems = {
         npcId = 9552,
         level = {43, 43},
         zone = "Dustwallow Marsh",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2515, cost = 50},
@@ -23351,6 +26401,9 @@ DB.VendorItems = {
         npcId = 5754,
         level = {10, 10},
         zone = "Undercity",
+        faction = "Undercity",
+        factionId = 68,
+        reactionHorde = 1,
         items = {
             {itemId = 5208, cost = 3515},
             {itemId = 5209, cost = 4057},
@@ -23368,6 +26421,9 @@ DB.VendorItems = {
         npcId = 12956,
         level = {59, 59},
         zone = "Silithus",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 2320, cost = 10},
             {itemId = 2604, cost = 50},
@@ -23395,6 +26451,9 @@ DB.VendorItems = {
         npcId = 5942,
         level = {14, 14},
         zone = "Durotar",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 6256, cost = 23},
             {itemId = 6326, cost = 40},
@@ -23412,6 +26471,10 @@ DB.VendorItems = {
         npcId = 2482,
         level = {43, 43},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 23160, cost = 4210},
             {itemId = 23161, cost = 4210},
@@ -23435,6 +26498,9 @@ DB.VendorItems = {
         npcId = 3489,
         level = {16, 16},
         zone = "The Barrens",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 23},
             {itemId = 2287, cost = 111},
@@ -23451,6 +26517,9 @@ DB.VendorItems = {
         npcId = 3405,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 3371, cost = 18},
             {itemId = 3372, cost = 188},
@@ -23464,6 +26533,9 @@ DB.VendorItems = {
         npcId = 3409,
         level = {30, 30},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2512, cost = 10},
             {itemId = 2947, cost = 15},
@@ -23499,6 +26571,9 @@ DB.VendorItems = {
         npcId = 8116,
         level = {46, 46},
         zone = "Stranglethorn Vale",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
         items = {
             {itemId = 9312, cost = 20},
             {itemId = 9313, cost = 20},
@@ -23518,6 +26593,10 @@ DB.VendorItems = {
         npcId = 3537,
         level = {32, 32},
         zone = "Hillsbrad Foothills",
+        faction = "Booty Bay",
+        factionId = 21,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 210709, cost = 100},
             {itemId = 5772, cost = 500},
@@ -23540,6 +26619,10 @@ DB.VendorItems = {
         npcId = 3572,
         level = {22, 22},
         zone = "The Barrens",
+        faction = "Ratchet",
+        factionId = 470,
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 6256, cost = 23},
             {itemId = 6529, cost = 50},
@@ -23555,6 +26638,9 @@ DB.VendorItems = {
         npcId = 7952,
         level = {45, 45},
         zone = "Durotar",
+        faction = "Darkspear Trolls",
+        factionId = 530,
+        reactionHorde = 1,
         items = {
             {itemId = 8588, cost = 421052},
             {itemId = 8591, cost = 421052},
@@ -23570,6 +26656,9 @@ DB.VendorItems = {
         npcId = 3882,
         level = {9, 9},
         zone = "Durotar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 117, cost = 26},
             {itemId = 159, cost = 26},
@@ -23591,6 +26680,10 @@ DB.VendorItems = {
         npcId = 4047,
         level = {62, 62},
         zone = "Orgrimmar",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 226402, cost = 5000},
             {itemId = 226401, cost = 5263},
@@ -23620,6 +26713,10 @@ DB.VendorItems = {
         npcId = 2225,
         level = {55, 55},
         zone = "Alterac Valley",
+        faction = "Frostwolf Clan",
+        factionId = 729,
+        reactionAlliance = -1,
+        reactionHorde = 1,
         items = {
             {itemId = 2678, cost = 9},
             {itemId = 2320, cost = 10},
@@ -23662,6 +26759,9 @@ DB.VendorItems = {
         npcId = 14637,
         level = {40, 40},
         zone = "Feralas",
+        faction = "Neutral",
+        reactionAlliance = 1,
+        reactionHorde = 1,
         items = {
             {itemId = 4357, cost = 16},
             {itemId = 5956, cost = 18},
@@ -23688,6 +26788,9 @@ DB.VendorItems = {
         npcId = 4884,
         level = {43, 43},
         zone = "Dustwallow Marsh",
+        faction = "Orgrimmar",
+        factionId = 76,
+        reactionHorde = 1,
         items = {
             {itemId = 2524, cost = 19192},
             {itemId = 2526, cost = 19335},

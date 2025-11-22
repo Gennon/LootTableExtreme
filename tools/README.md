@@ -80,3 +80,44 @@ The scraper generates a file called `scraped_database.lua` containing formatted 
 **Timeout errors:**
 - Increase timeout values in scraper.js
 - Check your internet connection
+
+## Vendor Faction Updater
+
+A tool to fetch and update faction/reaction data for vendors from Wowhead.
+
+### Usage
+
+Update faction data for all vendors:
+```bash
+node updateVendorFactions.js
+```
+
+For TBC vendors:
+```bash
+node updateVendorFactions.js --version tbc
+```
+
+### What it does
+
+- Fetches `g_npcs[npc_id].react` data from Wowhead
+- `react` is an array `[alliance_reaction, horde_reaction]`
+  - `1` = friendly/accessible
+  - `-1` = hostile
+  - `null` = cannot access
+- Updates the database with faction information:
+  - `faction`: "Alliance", "Horde", or "Neutral"
+  - `reactionAlliance`: 1, -1, or null
+  - `reactionHorde`: 1, -1, or null
+
+### After updating
+
+Re-export the vendor database to include faction data:
+```bash
+node exportLua.js --version classic
+```
+
+This will add faction indicators to tooltips:
+- `(A)` in blue for Alliance-only vendors
+- `(H)` in red for Horde-only vendors
+- No indicator for Neutral vendors
+

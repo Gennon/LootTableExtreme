@@ -389,14 +389,16 @@ async function exportVendorData(db, options) {
     let vendors;
     if (options.gameVersion === 'all') {
         vendors = await db.all(`
-            SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone, n.game_version
+            SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone, n.faction, 
+                   n.faction_id, n.reaction_alliance, n.reaction_horde, n.game_version
             FROM npcs n
             INNER JOIN vendor_items v ON n.npc_id = v.npc_id AND n.game_version = v.game_version
             ORDER BY n.name
         `);
     } else {
         vendors = await db.all(`
-            SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone, n.game_version
+            SELECT DISTINCT n.npc_id, n.name, n.level_min, n.level_max, n.zone, n.faction,
+                   n.faction_id, n.reaction_alliance, n.reaction_horde, n.game_version
             FROM npcs n
             INNER JOIN vendor_items v ON n.npc_id = v.npc_id AND n.game_version = v.game_version
             WHERE n.game_version = ?
@@ -453,6 +455,21 @@ DB.VendorItems = {
         entry += `        npcId = ${vendor.npc_id},\n`;
         entry += `        level = {${vendor.level_min}, ${vendor.level_max}},\n`;
         entry += `        zone = "${vendor.zone || 'Unknown'}",\n`;
+        
+        // Add faction data if available
+        if (vendor.faction) {
+            entry += `        faction = "${vendor.faction}",\n`;
+        }
+        if (vendor.faction_id) {
+            entry += `        factionId = ${vendor.faction_id},\n`;
+        }
+        if (vendor.reaction_alliance) {
+            entry += `        reactionAlliance = ${vendor.reaction_alliance},\n`;
+        }
+        if (vendor.reaction_horde) {
+            entry += `        reactionHorde = ${vendor.reaction_horde},\n`;
+        }
+        
         entry += `        items = {\n`;
         
         items.forEach((item, index) => {

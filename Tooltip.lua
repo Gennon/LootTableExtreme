@@ -26,10 +26,40 @@ function LootTableExtreme:EnhanceItemTooltip(tooltip)
     -- Get top sources for this item
     local sources = self.Database:GetTopItemSources(itemId, 3)
     
-    -- Get top vendors for this item
-    local vendors = self.Database:GetTopItemVendors(itemId, 3)
+    -- Get more vendors initially so we have enough after faction filtering
+    local allVendors = self.Database:GetTopItemVendors(itemId, 10)
     
-    if (sources and #sources > 0) or (vendors and #vendors > 0) then
+    -- Determine player faction
+    local playerFaction = UnitFactionGroup("player") -- Returns "Alliance" or "Horde"
+    
+    -- Filter vendors by accessibility and limit to top 3
+    local accessibleVendors = {}
+    if allVendors and #allVendors > 0 then
+        for i, vendor in ipairs(allVendors) do
+            local canAccess = false
+            
+            if not vendor.reactionAlliance and not vendor.reactionHorde then
+                -- No faction data available, show all
+                canAccess = true
+            elseif playerFaction == "Alliance" then
+                -- Alliance player: check if vendor is friendly to Alliance
+                canAccess = vendor.reactionAlliance == 1
+            elseif playerFaction == "Horde" then
+                -- Horde player: check if vendor is friendly to Horde
+                canAccess = vendor.reactionHorde == 1
+            end
+            
+            if canAccess then
+                table.insert(accessibleVendors, vendor)
+                -- Stop once we have 3 accessible vendors
+                if #accessibleVendors >= 3 then
+                    break
+                end
+            end
+        end
+    end
+    
+    if (sources and #sources > 0) or (#accessibleVendors > 0) then
         -- Add a blank line separator
         tooltip:AddLine(" ")
     end
@@ -53,12 +83,12 @@ function LootTableExtreme:EnhanceItemTooltip(tooltip)
         end
     end
     
-    if vendors and #vendors > 0 then
+    if #accessibleVendors > 0 then
         -- Add header
         tooltip:AddLine("|cff00ff00Sold by:|r", 1, 1, 1)
         
-        -- Add each vendor
-        for i, vendor in ipairs(vendors) do
+        -- Add each accessible vendor
+        for i, vendor in ipairs(accessibleVendors) do
             local zoneText = vendor.zone and (vendor.zone) or ""
             local costText = self:FormatMoney(vendor.cost)
             

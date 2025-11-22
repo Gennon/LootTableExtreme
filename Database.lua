@@ -85,6 +85,10 @@ function DB:BuildItemVendorsCache()
                         cost = item.cost,
                         zone = vendorData.zone,
                         level = vendorData.level,
+                        faction = vendorData.faction,
+                        factionId = vendorData.factionId,
+                        reactionAlliance = vendorData.reactionAlliance,
+                        reactionHorde = vendorData.reactionHorde,
                     })
                 end
             end

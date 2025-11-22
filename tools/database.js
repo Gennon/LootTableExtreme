@@ -24,6 +24,7 @@ class ScraperDatabase {
                 }
                 console.log(`📦 Database initialized: ${this.dbPath}`);
                 this.createTables()
+                    .then(() => this.ensureColumn('npcs', 'faction_id', 'INTEGER'))
                     .then(() => this.seedDefaultNpcTypes())
                     .then(() => resolve())
                     .catch(reject);
@@ -52,6 +53,7 @@ class ScraperDatabase {
                 type TEXT,
                 family TEXT,
                 faction TEXT,
+                faction_id INTEGER,
                 reaction_alliance TEXT,
                 reaction_horde TEXT,
                 scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
