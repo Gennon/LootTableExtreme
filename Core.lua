@@ -47,6 +47,9 @@ function LootTableExtreme:Initialize()
     -- Initialize UI components
     self:InitializeMinimapButton()
     self:InitializeLootFrame()
+    if self.InitializePickpocketFrame then
+        self:InitializePickpocketFrame()
+    end
     self:InitializeTooltips()
 end
 
@@ -79,12 +82,19 @@ SlashCmdList["LOOTTABLEEXTREME"] = function(msg)
         LootTableExtreme:ToggleLootFrame()
     elseif msg == "target" then
         LootTableExtreme:ShowTargetLoot()
+    elseif msg == "pickpocket" or msg == "pp" then
+        if LootTableExtreme.TogglePickpocketFrame then
+            LootTableExtreme:TogglePickpocketFrame()
+        else
+            LootTableExtreme:Print("Pickpocket frame not available")
+        end
     elseif msg == "minimap" then
         LootTableExtreme:ToggleMinimapButton()
     elseif msg == "help" then
         LootTableExtreme:Print("Commands:")
         LootTableExtreme:Print("/lte - Toggle loot table window")
         LootTableExtreme:Print("/lte target - Show loot for current target")
+        LootTableExtreme:Print("/lte pickpocket (or pp) - Toggle pickpocket window")
         LootTableExtreme:Print("/lte minimap - Toggle minimap button")
     else
         LootTableExtreme:Print("Unknown command. Type /lte help for commands.")

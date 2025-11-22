@@ -279,3 +279,60 @@ function DB:GetQualityText(quality)
     
     return text[quality] or "Unknown"
 end
+
+-- Pickpocket loot methods
+-- Get pickpocket loot by NPC name
+function DB:GetPickpocketByNpcName(npcName)
+    local npcData = self.PickpocketLoot and self.PickpocketLoot[npcName]
+    if not npcData then
+        return nil
+    end
+    
+    -- Enrich loot data with WoW item information
+    if npcData.loot then
+        for _, item in ipairs(npcData.loot) do
+            if not item.name then
+                local itemName, itemLink, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(item.itemId)
+                if itemName then
+                    item.name = itemName
+                    item.quality = itemQuality or DB.Quality.COMMON
+                    item.texture = itemTexture
+                end
+            end
+        end
+    end
+    
+    return npcData
+end
+
+-- Get pickpocket loot by NPC ID
+function DB:GetPickpocketByNpcId(npcId)
+    if not self.PickpocketLoot then
+        return nil, nil
+    end
+    
+    -- Search through pickpocket loot for matching NPC ID
+    for npcName, npcData in pairs(self.PickpocketLoot) do
+        if npcData.npcId == npcId then
+            local data = self:GetPickpocketByNpcName(npcName)
+            return data, npcName
+        end
+    end
+    
+    return nil, nil
+end
+
+-- Check if an NPC has pickpocket loot
+function DB:HasPickpocketLoot(npcId)
+    if not self.PickpocketLoot then
+        return false
+    end
+    
+    for _, npcData in pairs(self.PickpocketLoot) do
+        if npcData.npcId == npcId then
+            return true
+        end
+    end
+    
+    return false
+end

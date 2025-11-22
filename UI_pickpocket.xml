@@ -1,0 +1,101 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+    <!-- Pickpocket Loot Viewer - Compact window for pickpocketing -->
+    <Frame name="LootTableExtremePickpocketFrame" parent="UIParent" frameStrata="DIALOG" toplevel="true" movable="true" resizable="true" enableMouse="true" hidden="true">
+        <Size x="300" y="220"/>
+        <Anchors>
+            <Anchor point="CENTER"/>
+        </Anchors>
+        <ResizeBounds>
+            <minResize x="200" y="150"/>
+            <maxResize x="400" y="600"/>
+        </ResizeBounds>
+
+        <Frames>
+            <!-- Close Button -->
+            <Button name="$parentClose" inherits="UIPanelCloseButton">
+                <Size x="32" y="32"/>
+                <Anchors>
+                    <Anchor point="TOPRIGHT">
+                        <Offset x="-5" y="-5"/>
+                    </Anchor>
+                </Anchors>
+            </Button>
+
+            <!-- Header -->
+            <Frame name="$parentHeader">
+                <Size y="36"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT">
+                        <Offset x="0" y="0"/>
+                    </Anchor>
+                    <Anchor point="TOPRIGHT">
+                        <Offset x="0" y="0"/>
+                    </Anchor>
+                </Anchors>
+
+                <Layers>
+                    <Layer level="ARTWORK">
+                        <FontString name="$parentTitle" inherits="GameFontNormal">
+                            <Anchors>
+                                <Anchor point="TOPLEFT">
+                                    <Offset x="10" y="-10"/>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                        <FontString name="$parentSubtitle" inherits="GameFontNormalSmall">
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeTo="$parentTitle" relativePoint="BOTTOMLEFT">
+                                    <Offset x="0" y="-5"/>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </Frame>
+
+            <!-- Scroll Frame for Loot List -->
+            <ScrollFrame name="$parentScrollFrame" inherits="FauxScrollFrameTemplate">                
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="$parentHeader" relativePoint="BOTTOMLEFT">
+                        <Offset x="8" y="-10"/>
+                    </Anchor>
+                    <Anchor point="BOTTOMRIGHT" relativeTo="$parent">
+                        <Offset x="-28" y="20"/>
+                    </Anchor>
+                </Anchors>
+            </ScrollFrame>
+            <!-- (no settings button for compact UI) -->
+
+            <!-- Resize Button -->
+            <Button name="$parentResizeButton">
+                <Size x="16" y="16"/>
+                <Anchors>
+                    <Anchor point="BOTTOMRIGHT">
+                        <Offset x="-5" y="5"/>
+                    </Anchor>
+                </Anchors>
+                <NormalTexture file="Interface\ChatFrame\UI-ChatIM-SizeGrabber-Down"/>
+                <PushedTexture file="Interface\ChatFrame\UI-ChatIM-SizeGrabber-Up"/>
+                <HighlightTexture file="Interface\ChatFrame\UI-ChatIM-SizeGrabber-Highlight"/>
+                <Scripts>
+                    <OnMouseDown>
+                        self:GetParent():StartSizing("BOTTOMRIGHT")
+                    </OnMouseDown>
+                    <OnMouseUp>
+                        self:GetParent():StopMovingOrSizing()
+                    </OnMouseUp>
+                </Scripts>
+            </Button>
+        </Frames>
+
+        <Scripts>
+            <OnMouseDown>
+                self:StartMoving()
+            </OnMouseDown>
+            <OnMouseUp>
+                self:StopMovingOrSizing()
+            </OnMouseUp>
+        </Scripts>
+    </Frame>
+</Ui>

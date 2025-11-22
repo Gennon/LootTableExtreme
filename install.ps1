@@ -89,12 +89,14 @@ foreach ($installation in $detectedInstallations) {
         "Core.lua",
         "Database.lua",
         "UI_simple.xml",
+        "UI_pickpocket.xml",
         "UI_settings.xml",
         "Filters.lua",
         "ModeManager.lua",
         "Settings.lua",
         "TargetHandler.lua",
         "LootFrame.lua",
+        "PickpocketFrame.lua",
         "Tooltip.lua"
     )
 

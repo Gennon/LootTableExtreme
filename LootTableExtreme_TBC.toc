@@ -12,12 +12,14 @@ LootDatabase_TBC.lua
 VendorDatabase_TBC.lua
 PickpocketDatabase_TBC.lua
 
-# UI files
+# UI files - XML first, then Lua
 UI_simple.xml
+UI_pickpocket.xml
 UI_settings.xml
+LootFrame.lua
+PickpocketFrame.lua
 Settings.lua
 Filters.lua
 ModeManager.lua
 TargetHandler.lua
-LootFrame.lua
 Tooltip.lua

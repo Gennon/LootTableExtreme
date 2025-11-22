@@ -29,11 +29,6 @@ end
 
 -- Handle target change event for auto-refresh
 function LootTableExtreme:OnTargetChanged()
-    -- Only auto-refresh if the frame is visible
-    if not LootTableExtremeFrame:IsShown() then
-        return
-    end
-    
     -- Check if we have a valid target
     if not UnitExists("target") then
         return
@@ -44,15 +39,42 @@ function LootTableExtreme:OnTargetChanged()
         return
     end
     
-    -- Get NPC ID and display loot
+    -- Get NPC ID
     local npcId = self:GetTargetNpcId()
     if not npcId then
         return
     end
     
-    -- Lookup and display by NPC ID. Call ShowNpcLoot regardless of whether
-    -- the database has a record so the UI updates when switching to unknown NPCs.
-    self:ShowNpcLoot(npcId)
+    -- Handle pickpocket window separately
+    if LootTableExtremePickpocketFrame and LootTableExtremePickpocketFrame:IsShown() then
+        -- Auto-refresh pickpocket window if it's visible and NPC has pickpocket loot
+        if self.Database:HasPickpocketLoot(npcId) then
+            -- Only call if the function exists (PickpocketFrame.lua is loaded)
+            if self.ShowNpcPickpocket then
+                self:ShowNpcPickpocket(npcId)
+            end
+        else
+            -- Hide pickpocket window if target doesn't have pickpocket loot
+            LootTableExtremePickpocketFrame:Hide()
+        end
+    end
+    
+    -- Handle main loot window
+    if LootTableExtremeFrame and LootTableExtremeFrame:IsShown() then
+        -- Lookup and display by NPC ID. Call ShowNpcLoot regardless of whether
+        -- the database has a record so the UI updates when switching to unknown NPCs.
+        self:ShowNpcLoot(npcId)
+    end
+    
+    -- Auto-show pickpocket window if target can be pickpocketed and main window is shown
+    if LootTableExtremeFrame and LootTableExtremeFrame:IsShown() then
+        if self.Database:HasPickpocketLoot(npcId) then
+            -- Only call if the function exists (PickpocketFrame.lua is loaded)
+            if self.ShowNpcPickpocket then
+                self:ShowNpcPickpocket(npcId)
+            end
+        end
+    end
 end
 
 -- Search for NPC and show loot
