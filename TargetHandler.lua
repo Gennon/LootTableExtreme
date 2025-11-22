@@ -75,6 +75,23 @@ function LootTableExtreme:OnTargetChanged()
             end
         end
     end
+
+    -- New behavior: if main loot window is NOT shown, optionally auto-show
+    -- the compact pickpocket window when targeting a pickpocketable NPC.
+    if (not LootTableExtremeFrame or not LootTableExtremeFrame:IsShown()) then
+        local cfg = LootTableExtremeDB and LootTableExtremeDB.pickpocket
+        local enabled = cfg and cfg.autoShowWhenMainHidden
+        if enabled then
+            if self.Database:HasPickpocketLoot(npcId) then
+                if self.ShowNpcPickpocket then
+                    self:ShowNpcPickpocket(npcId)
+                end
+            else
+                -- Hide if there's no pickpocket loot
+                if LootTableExtremePickpocketFrame then LootTableExtremePickpocketFrame:Hide() end
+            end
+        end
+    end
 end
 
 -- Search for NPC and show loot

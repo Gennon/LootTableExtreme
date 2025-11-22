@@ -169,12 +169,12 @@ local function CreateOrGetRow(index)
 
     row.name = row:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
     row.name:SetPoint("LEFT", row.icon, "RIGHT", (LootTableExtreme.UI_MARGIN or 8) / 2, 0)
-    row.name:SetWidth(200)
+    row.name:SetWidth(180)
     row.name:SetJustifyH("LEFT")
 
     row.chance = row:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
     row.chance:SetPoint("RIGHT", row, "RIGHT", (LootTableExtreme.UI_MARGIN or 8)*2, 0)
-    row.chance:SetWidth(60)
+    row.chance:SetWidth(40)
     row.chance:SetJustifyH("RIGHT")
 
     row.questMarker = row:CreateFontString(nil, "OVERLAY", "GameFontNormal")

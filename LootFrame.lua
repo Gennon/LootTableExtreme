@@ -332,7 +332,7 @@ local function SetupScrollScript()
 end
 
 local function SetupFiltersIfPresent()
-    if _G["LootTableExtremeFrameFilters"] then
+    if _G["LTE_FrameFilters"] then
         LootTableExtreme:CreateFilterCheckboxes()
     end
 end

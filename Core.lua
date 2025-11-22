@@ -25,6 +25,12 @@ local defaults = {
         showQuestItems = true,
         minDropChance = 5, -- Show items with >5% drop chance by default
     },
+    pickpocket = {
+        -- When true, automatically show the compact pickpocket window when
+        -- targeting an NPC that can be pickpocketed, but only when the main
+        -- loot window is NOT visible.
+        autoShowWhenMainHidden = false,
+    },
 }
 
 -- Initialize addon
@@ -88,6 +94,12 @@ SlashCmdList["LOOTTABLEEXTREME"] = function(msg)
         else
             LootTableExtreme:Print("Pickpocket frame not available")
         end
+    elseif msg == "pickpocket auto on" or msg == "pp auto on" then
+        LootTableExtremeDB.pickpocket.autoShowWhenMainHidden = true
+        LootTableExtreme:Print("Pickpocket auto-show when main hidden: ON")
+    elseif msg == "pickpocket auto off" or msg == "pp auto off" then
+        LootTableExtremeDB.pickpocket.autoShowWhenMainHidden = false
+        LootTableExtreme:Print("Pickpocket auto-show when main hidden: OFF")
     elseif msg == "minimap" then
         LootTableExtreme:ToggleMinimapButton()
     elseif msg == "help" then

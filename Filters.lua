@@ -3,7 +3,7 @@
 
 -- Create filter checkboxes and slider
 function LootTableExtreme:CreateFilterCheckboxes()
-    local filtersFrame = _G["LootTableExtremeFrameFilters"]
+    local filtersFrame = _G["LTE_FrameFilters"]
     if not filtersFrame then
         self:Print("Error: Filter frame not found")
         return

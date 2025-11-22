@@ -1,14 +1,14 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\FrameXML\UI.xsd">
     <!-- Loot Table Viewer - Settings window -->
-    <Frame name="LootTableExtremeSettings" parent="UIParent" frameStrata="DIALOG" toplevel="true" movable="true" enableMouse="true" hidden="true">
-        <Size x="260" y="240"/>
+    <Frame name="LTE_Settings" parent="UIParent" frameStrata="DIALOG" toplevel="true" movable="true" enableMouse="true" hidden="true">
+        <Size x="260" y="300"/>
         <Anchors>
             <Anchor point="CENTER"/>
         </Anchors>
 
         <Frames>
-            <Button name="LootTableExtremeSettingsClose" inherits="UIPanelCloseButton">
+            <Button name="LTE_SettingsClose" inherits="UIPanelCloseButton">
                 <Size x="32" y="32"/>
                 <Anchors>
                     <Anchor point="TOPRIGHT">
@@ -17,8 +17,8 @@
                 </Anchors>
             </Button>
 
-            <Frame name="LootTableExtremeFrameFilters">
-                <Size x="440" y="160"/>
+            <Frame name="LTE_FrameFilters">
+                <Size x="260" y="200"/>
                 <Anchors>
                     <Anchor point="TOPLEFT">
                         <Offset x="10" y="-10"/>
@@ -26,7 +26,7 @@
                 </Anchors>
                 <Layers>
                     <Layer level="ARTWORK">
-                        <FontString name="LootTableExtremeFiltersLabel" inherits="GameFontNormal" text="Filters">
+                        <FontString name="LTE_FiltersLabel" inherits="GameFontNormal" text="Filters">
                             <Anchors>
                                 <Anchor point="TOPLEFT">
                                     <Offset x="0" y="0"/>
@@ -36,6 +36,44 @@
                     </Layer>
                 </Layers>
             </Frame>
+            <!-- Separator between Filters and Pickpocket settings -->
+            <Frame name="LTE_SettingsSeparator">
+                <Size x="240" y="2"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="LTE_FrameFilters" relativePoint="BOTTOMLEFT">
+                        <Offset x="0" y="-16"/>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <!-- Use a 1x1 white texture tinted gold to draw a thin gold line -->
+                        <Texture name="$parentTexture" file="Interface\Buttons\WHITE8X8" setAllPoints="true">
+                            <Color r="1" g="0.82" b="0" a="0.5"/>
+                        </Texture>
+                    </Layer>
+                </Layers>
+            </Frame>
+
+            <!-- Pickpocket auto-show checkbox -->
+            <CheckButton name="LTE_AutoShowPickpocket" inherits="UICheckButtonTemplate">
+                <Size x="24" y="24"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="LTE_SettingsSeparator" relativePoint="BOTTOMLEFT">
+                        <Offset x="0" y="-16"/>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="ARTWORK">                        
+                        <FontString name="LTE_AutoShowPickpocketText" inherits="GameFontNormal" text="Auto-show pickpocket">
+                            <Anchors>
+                                <Anchor point="LEFT" relativeTo="LTE_AutoShowPickpocket" relativePoint="RIGHT">
+                                    <Offset x="5" y="0"/>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </CheckButton>
 
         </Frames>
 

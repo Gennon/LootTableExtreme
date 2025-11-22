@@ -2,7 +2,7 @@
 -- Minimal settings window helper
 
 function LootTableExtreme:InitializeSettings()
-    local settings = _G["LootTableExtremeSettings"]
+    local settings = _G["LTE_Settings"]
     if not settings then return end
 
     -- Set up backdrop (required for modern WoW versions)
@@ -26,18 +26,33 @@ function LootTableExtreme:InitializeSettings()
     bg:SetVertTile(true)
 
     -- Wire close button
-    local closeBtn = _G["LootTableExtremeSettingsClose"]
+    local closeBtn = _G["LTE_SettingsClose"]
     if closeBtn then
         closeBtn:SetScript("OnClick", function()
             settings:Hide()
         end)
     end
 
-    -- Search and show-target UI removed; no wiring needed here.
+    -- Wire pickpocket auto-show checkbox
+    local pickpocketCheckbox = _G["LTE_AutoShowPickpocket"]
+    if pickpocketCheckbox then
+        -- Initialize checked state from saved variables
+        local enabled = false
+        if LootTableExtremeDB and LootTableExtremeDB.pickpocket and LootTableExtremeDB.pickpocket.autoShowWhenMainHidden then
+            enabled = true
+        end
+        pickpocketCheckbox:SetChecked(enabled)
+
+        pickpocketCheckbox:SetScript("OnClick", function(self)
+            if not LootTableExtremeDB then LootTableExtremeDB = {} end
+            if not LootTableExtremeDB.pickpocket then LootTableExtremeDB.pickpocket = {} end
+            LootTableExtremeDB.pickpocket.autoShowWhenMainHidden = self:GetChecked()
+        end)
+    end
 end
 
 function LootTableExtreme:ToggleSettings()
-    local settings = _G["LootTableExtremeSettings"]
+    local settings = _G["LTE_Settings"]
     if not settings then return end
     if settings:IsShown() then
         settings:Hide()
