@@ -342,20 +342,7 @@ local function SetupModeToggle()
     if not modeToggle then return end
 
     modeToggle:SetScript("OnClick", function()
-        if LootTableExtreme.ToggleSettings then
-            LootTableExtreme:ToggleSettings()
-            return
-        end
-        local settings = _G["LootTableExtremeSettings"]
-        if settings then
-            if settings:IsShown() then
-                settings:Hide()
-            else
-                settings:Show()
-            end
-            return
-        end
-        LootTableExtreme:ToggleMode()
+        LootTableExtreme:ToggleSettings()
     end)
 
     modeToggle:SetScript("OnEnter", function(self)
@@ -363,6 +350,7 @@ local function SetupModeToggle()
         GameTooltip:AddLine("Settings", 1, 1, 1)
         GameTooltip:Show()
     end)
+    
     modeToggle:SetScript("OnLeave", function()
         GameTooltip:Hide()
     end)
@@ -510,8 +498,8 @@ function LootTableExtreme:ApplyFilters()
         return
     end
 
-    local advancedMode = LootTableExtremeDB and LootTableExtremeDB.ui and LootTableExtremeDB.ui.advancedMode
-    filteredLoot = self:FilterLootData(npcData.loot, advancedMode)
+    -- Always apply filters (users configure them via settings window)
+    filteredLoot = self:FilterLootData(npcData.loot, true)
 
     -- Reset scroll to top when applying a new filter set
     if scrollFrame then
