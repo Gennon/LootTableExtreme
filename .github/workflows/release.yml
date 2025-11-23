@@ -68,7 +68,10 @@ jobs:
       - name: Update TOC version
         run: |
           sed -i "s/^## Version: .*/## Version: ${{ steps.version.outputs.new_version }}/" LootTableExtreme.toc
-          echo "Updated TOC to version ${{ steps.version.outputs.new_version }}"
+          sed -i "s/^## Version: .*/## Version: ${{ steps.version.outputs.new_version }}/" LootTableExtreme_TBC.toc || true
+          # Update runtime version in Core.lua so addon shows the same version
+          sed -i "s/^LootTableExtreme.version = \".*\"/LootTableExtreme.version = \"${{ steps.version.outputs.new_version }}\"/" Core.lua || true
+          echo "Updated TOC files and Core.lua to version ${{ steps.version.outputs.new_version }}"
       
       - name: Create release package
         id: package
@@ -117,8 +120,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add LootTableExtreme.toc
-          git commit -m "chore: bump version to ${{ steps.version.outputs.new_version }}"
+          git add LootTableExtreme.toc LootTableExtreme_TBC.toc Core.lua || true
+          git commit -m "chore: bump version to ${{ steps.version.outputs.new_version }}" || echo "No changes to commit"
           git push
       
       - name: Create GitHub Release
