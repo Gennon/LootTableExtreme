@@ -2,7 +2,7 @@
 ## Title: LootTableExtreme
 ## Notes: View NPC loot tables and item drop sources for TBC Classic
 ## Author: Gennon
-## Version: 0.2.0
+## Version: 1.0.0
 ## SavedVariables: LootTableExtremeDB
 
 # Core files
