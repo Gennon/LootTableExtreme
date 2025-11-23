@@ -47,6 +47,10 @@ async function main() {
         case 'sessions':
             await showSessions(db);
             break;
+
+        case 'mismatches':
+            await showMismatches(db);
+            break;
         
         default:
             printHelp();
@@ -265,6 +269,57 @@ async function showSessions(db) {
         console.log(`  Items:    ${session.items_found}`);
         console.log(`  Errors:   ${session.errors}\n`);
     });
+}
+
+async function showMismatches(db) {
+    console.log('\n🔎 Pickpocket / NPC game_version mismatches');
+    console.log('═'.repeat(70));
+
+    // Count NPCs where the npc.game_version = 'classic' but pickpocket_loot exists only for 'tbc'
+    const classicOnlyTbcCount = await db.get(`
+        SELECT COUNT(DISTINCT n.npc_id) as count
+        FROM npcs n
+        WHERE n.game_version = 'classic'
+          AND EXISTS (SELECT 1 FROM pickpocket_loot p2 WHERE p2.npc_id = n.npc_id AND p2.game_version = 'tbc')
+          AND NOT EXISTS (SELECT 1 FROM pickpocket_loot p WHERE p.npc_id = n.npc_id AND p.game_version = 'classic')
+    `);
+
+    const tbcOnlyClassicCount = await db.get(`
+        SELECT COUNT(DISTINCT n.npc_id) as count
+        FROM npcs n
+        WHERE n.game_version = 'tbc'
+          AND EXISTS (SELECT 1 FROM pickpocket_loot p2 WHERE p2.npc_id = n.npc_id AND p2.game_version = 'classic')
+          AND NOT EXISTS (SELECT 1 FROM pickpocket_loot p WHERE p.npc_id = n.npc_id AND p.game_version = 'tbc')
+    `);
+
+    const missingForVersion = await db.get(`
+        SELECT COUNT(DISTINCT n.npc_id) as count
+        FROM npcs n
+        WHERE NOT EXISTS (SELECT 1 FROM pickpocket_loot p WHERE p.npc_id = n.npc_id AND p.game_version = n.game_version)
+    `);
+
+    console.log(`classic -> has only tbc rows: ${classicOnlyTbcCount.count}`);
+    console.log(`tbc -> has only classic rows: ${tbcOnlyClassicCount.count}`);
+    console.log(`total NPCs missing pickpocket for their version: ${missingForVersion.count}`);
+
+    // Show a sample list (first 30) of affected NPCs (classic with only tbc)
+    const sample = await db.all(`
+        SELECT n.npc_id, n.name, n.zone
+        FROM npcs n
+        WHERE n.game_version = 'classic'
+          AND EXISTS (SELECT 1 FROM pickpocket_loot p2 WHERE p2.npc_id = n.npc_id AND p2.game_version = 'tbc')
+          AND NOT EXISTS (SELECT 1 FROM pickpocket_loot p WHERE p.npc_id = n.npc_id AND p.game_version = 'classic')
+        LIMIT 30
+    `);
+
+    if (sample.length === 0) {
+        console.log('\nNo sample mismatches found (classic -> tbc).');
+    } else {
+        console.log('\nSample NPCs (classic rows missing pickpocket, but have tbc pickpocket rows):');
+        sample.forEach(s => {
+            console.log(`  ${s.npc_id} - ${s.name} (${s.zone || 'Unknown zone'})`);
+        });
+    }
 }
 
 function printHelp() {

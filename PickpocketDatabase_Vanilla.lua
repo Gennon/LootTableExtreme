@@ -1,6 +1,6 @@
 -- Auto-generated pickpocket database from Wowhead Classic
--- Generated: 2025-11-22T12:46:36.833Z
--- Total NPCs: 961
+-- Generated: 2025-11-23T16:56:23.941Z
+-- Total NPCs: 1813
 -- 
 -- This file is automatically loaded by Database.lua
 
@@ -8,6 +8,21 @@ local DB = LootTableExtreme.Database
 
 -- Pickpocket loot table
 DB.PickpocketLoot = {
+    -- 'Pretty Boy' Duncan
+    ["'Pretty Boy' Duncan"] = {
+        npcId = 2545,
+        level = {39, 39},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 36.2},
+            {itemId = 5431, dropChance = 31.9},
+            {itemId = 1707, dropChance = 12.8},
+            {itemId = 1710, dropChance = 12.8},
+            {itemId = 4539, dropChance = 6.4},
+            {itemId = 4544, dropChance = 4.3}
+        }
+    },
+
     -- Abomination
     ["Abomination"] = {
         npcId = 8545,
@@ -64,6 +79,19 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Alina
+    ["Alina"] = {
+        npcId = 2412,
+        level = {33, 33},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 40.0},
+            {itemId = 5433, dropChance = 34.3},
+            {itemId = 4607, dropChance = 25.7},
+            {itemId = 1710, dropChance = 11.4}
+        }
+    },
+
     -- Amnennar the Coldbringer
     ["Amnennar the Coldbringer"] = {
         npcId = 7358,
@@ -76,6 +104,20 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 8.8},
             {itemId = 7909, dropChance = 1.1},
             {itemId = 7910, dropChance = 1.1}
+        }
+    },
+
+    -- Ana'thek the Cruel
+    ["Ana'thek the Cruel"] = {
+        npcId = 1059,
+        level = {45, 45},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 36.4},
+            {itemId = 4599, dropChance = 27.3},
+            {itemId = 7909, dropChance = 18.2},
+            {itemId = 4601, dropChance = 9.1},
+            {itemId = 16884, dropChance = 9.1}
         }
     },
 
@@ -271,6 +313,46 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Apothecary Berard
+    ["Apothecary Berard"] = {
+        npcId = 2106,
+        level = {16, 16},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 2287, dropChance = 37.5},
+            {itemId = 5369, dropChance = 37.5},
+            {itemId = 818, dropChance = 25.0}
+        }
+    },
+
+    -- Apothecary Jorell
+    ["Apothecary Jorell"] = {
+        npcId = 2733,
+        level = {36, 36},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5433, dropChance = 57.7},
+            {itemId = 16883, dropChance = 26.9},
+            {itemId = 4607, dropChance = 15.4},
+            {itemId = 1529, dropChance = 3.8},
+            {itemId = 1710, dropChance = 3.8},
+            {itemId = 3864, dropChance = 3.8}
+        }
+    },
+
+    -- Araj the Summoner
+    ["Araj the Summoner"] = {
+        npcId = 1852,
+        level = {61, 61},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 44.4},
+            {itemId = 16885, dropChance = 33.3},
+            {itemId = 3928, dropChance = 11.1},
+            {itemId = 8948, dropChance = 11.1}
+        }
+    },
+
     -- Arcanist Doan
     ["Arcanist Doan"] = {
         npcId = 6487,
@@ -330,6 +412,18 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Ardo Dirtpaw
+    ["Ardo Dirtpaw"] = {
+        npcId = 711,
+        level = {24, 24},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5375, dropChance = 44.4},
+            {itemId = 16882, dropChance = 44.4},
+            {itemId = 3770, dropChance = 11.1}
+        }
+    },
+
     -- Arena Spectator
     ["Arena Spectator"] = {
         npcId = 8916,
@@ -343,6 +437,23 @@ DB.PickpocketLoot = {
             {itemId = 8932, dropChance = 10.7},
             {itemId = 3928, dropChance = 10.6},
             {itemId = 7910, dropChance = 1.3}
+        }
+    },
+
+    -- Argus Shadow Mage
+    ["Argus Shadow Mage"] = {
+        npcId = 2318,
+        level = {35, 36},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 38.6},
+            {itemId = 5431, dropChance = 29.8},
+            {itemId = 1707, dropChance = 13.0},
+            {itemId = 1710, dropChance = 11.2},
+            {itemId = 4539, dropChance = 10.2},
+            {itemId = 4544, dropChance = 9.1},
+            {itemId = 1529, dropChance = 2.1},
+            {itemId = 3864, dropChance = 0.4}
         }
     },
 
@@ -556,6 +667,18 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Athrikus Narassin
+    ["Athrikus Narassin"] = {
+        npcId = 3660,
+        level = {31, 31},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 16883, dropChance = 57.1},
+            {itemId = 5431, dropChance = 42.9},
+            {itemId = 4544, dropChance = 28.6}
+        }
+    },
+
     -- Azshir the Sleepless
     ["Azshir the Sleepless"] = {
         npcId = 6490,
@@ -569,6 +692,116 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Bael'dun Appraiser
+    ["Bael'dun Appraiser"] = {
+        npcId = 2990,
+        level = {8, 9},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 6150, dropChance = 33.3},
+            {itemId = 4536, dropChance = 22.2},
+            {itemId = 5363, dropChance = 22.2},
+            {itemId = 2070, dropChance = 11.1},
+            {itemId = 4540, dropChance = 11.1}
+        }
+    },
+
+    -- Bael'dun Digger
+    ["Bael'dun Digger"] = {
+        npcId = 2989,
+        level = {7, 8},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5363, dropChance = 50.0},
+            {itemId = 4540, dropChance = 37.5},
+            {itemId = 6150, dropChance = 12.5}
+        }
+    },
+
+    -- Bael'dun Excavator
+    ["Bael'dun Excavator"] = {
+        npcId = 3374,
+        level = {21, 22},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 53.7},
+            {itemId = 5374, dropChance = 28.8},
+            {itemId = 929, dropChance = 8.6},
+            {itemId = 4538, dropChance = 7.3},
+            {itemId = 422, dropChance = 5.9},
+            {itemId = 4542, dropChance = 5.2},
+            {itemId = 1206, dropChance = 1.6},
+            {itemId = 1705, dropChance = 1.4}
+        }
+    },
+
+    -- Bael'dun Foreman
+    ["Bael'dun Foreman"] = {
+        npcId = 3375,
+        level = {22, 23},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 63.4},
+            {itemId = 5374, dropChance = 22.8},
+            {itemId = 422, dropChance = 8.9},
+            {itemId = 4538, dropChance = 8.1},
+            {itemId = 4542, dropChance = 4.1},
+            {itemId = 929, dropChance = 3.3},
+            {itemId = 1206, dropChance = 0.8}
+        }
+    },
+
+    -- Bael'dun Officer
+    ["Bael'dun Officer"] = {
+        npcId = 3378,
+        level = {26, 26},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 41.3},
+            {itemId = 5374, dropChance = 34.1},
+            {itemId = 4538, dropChance = 17.3},
+            {itemId = 422, dropChance = 10.1},
+            {itemId = 4542, dropChance = 6.1},
+            {itemId = 929, dropChance = 3.9},
+            {itemId = 1206, dropChance = 0.6},
+            {itemId = 1705, dropChance = 0.6}
+        }
+    },
+
+    -- Bael'dun Rifleman
+    ["Bael'dun Rifleman"] = {
+        npcId = 3377,
+        level = {24, 25},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 54.6},
+            {itemId = 5374, dropChance = 31.5},
+            {itemId = 4542, dropChance = 9.5},
+            {itemId = 422, dropChance = 6.2},
+            {itemId = 4538, dropChance = 4.9},
+            {itemId = 929, dropChance = 2.6},
+            {itemId = 1206, dropChance = 1.1},
+            {itemId = 1705, dropChance = 0.7}
+        }
+    },
+
+    -- Bael'dun Soldier
+    ["Bael'dun Soldier"] = {
+        npcId = 3376,
+        level = {23, 24},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 53.5},
+            {itemId = 5374, dropChance = 24.3},
+            {itemId = 929, dropChance = 12.8},
+            {itemId = 4542, dropChance = 9.0},
+            {itemId = 4538, dropChance = 7.2},
+            {itemId = 422, dropChance = 5.6},
+            {itemId = 1206, dropChance = 1.5},
+            {itemId = 1705, dropChance = 0.3}
+        }
+    },
+
     -- Baelog
     ["Baelog"] = {
         npcId = 6906,
@@ -579,6 +812,19 @@ DB.PickpocketLoot = {
             {itemId = 4601, dropChance = 33.3},
             {itemId = 3928, dropChance = 16.7},
             {itemId = 4602, dropChance = 16.7}
+        }
+    },
+
+    -- Balgaras the Foul
+    ["Balgaras the Foul"] = {
+        npcId = 1364,
+        level = {34, 34},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 40.0},
+            {itemId = 1529, dropChance = 20.0},
+            {itemId = 5431, dropChance = 20.0},
+            {itemId = 16883, dropChance = 20.0}
         }
     },
 
@@ -614,6 +860,33 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Barak Kodobane
+    ["Barak Kodobane"] = {
+        npcId = 3394,
+        level = {16, 16},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 60.0},
+            {itemId = 858, dropChance = 20.0},
+            {itemId = 2287, dropChance = 20.0}
+        }
+    },
+
+    -- Baron Longshore
+    ["Baron Longshore"] = {
+        npcId = 3467,
+        level = {16, 16},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5368, dropChance = 61.9},
+            {itemId = 4537, dropChance = 19.0},
+            {itemId = 414, dropChance = 14.3},
+            {itemId = 858, dropChance = 14.3},
+            {itemId = 4541, dropChance = 9.5},
+            {itemId = 1210, dropChance = 4.8}
+        }
+    },
+
     -- Baron Rivendare
     ["Baron Rivendare"] = {
         npcId = 10440,
@@ -626,6 +899,37 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Baron Vardus
+    ["Baron Vardus"] = {
+        npcId = 2306,
+        level = {40, 40},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 36.0},
+            {itemId = 5431, dropChance = 24.0},
+            {itemId = 4539, dropChance = 16.0},
+            {itemId = 1707, dropChance = 12.0},
+            {itemId = 1710, dropChance = 12.0},
+            {itemId = 4544, dropChance = 12.0}
+        }
+    },
+
+    -- Bazil Thredd
+    ["Bazil Thredd"] = {
+        npcId = 1716,
+        level = {29, 29},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 53.2},
+            {itemId = 5374, dropChance = 31.9},
+            {itemId = 422, dropChance = 12.8},
+            {itemId = 4538, dropChance = 10.6},
+            {itemId = 929, dropChance = 4.3},
+            {itemId = 1705, dropChance = 4.3},
+            {itemId = 4542, dropChance = 4.3}
+        }
+    },
+
     -- Bazzalan
     ["Bazzalan"] = {
         npcId = 11519,
@@ -635,6 +939,20 @@ DB.PickpocketLoot = {
             {itemId = 2287, dropChance = 50.0},
             {itemId = 5369, dropChance = 37.5},
             {itemId = 858, dropChance = 12.5}
+        }
+    },
+
+    -- Berserk Trogg
+    ["Berserk Trogg"] = {
+        npcId = 1393,
+        level = {19, 20},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 51.2},
+            {itemId = 1210, dropChance = 27.9},
+            {itemId = 2287, dropChance = 9.3},
+            {itemId = 4541, dropChance = 9.3},
+            {itemId = 858, dropChance = 7.0}
         }
     },
 
@@ -664,6 +982,30 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 11.3},
             {itemId = 7910, dropChance = 0.9},
             {itemId = 8923, dropChance = 0.9}
+        }
+    },
+
+    -- Black Ooze
+    ["Black Ooze"] = {
+        npcId = 1032,
+        level = {23, 24},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 60.4},
+            {itemId = 5376, dropChance = 24.7},
+            {itemId = 4606, dropChance = 22.1},
+            {itemId = 929, dropChance = 4.3}
+        }
+    },
+
+    -- Black Slime
+    ["Black Slime"] = {
+        npcId = 1030,
+        level = {20, 21},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 5370, dropChance = 90.0},
+            {itemId = 4605, dropChance = 20.0}
         }
     },
 
@@ -890,6 +1232,22 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Blackrock Champion
+    ["Blackrock Champion"] = {
+        npcId = 435,
+        level = {24, 25},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 55.3},
+            {itemId = 5373, dropChance = 28.4},
+            {itemId = 4542, dropChance = 10.6},
+            {itemId = 3770, dropChance = 10.0},
+            {itemId = 929, dropChance = 5.8},
+            {itemId = 1206, dropChance = 1.9},
+            {itemId = 1705, dropChance = 1.9}
+        }
+    },
+
     -- Blackrock Gladiator
     ["Blackrock Gladiator"] = {
         npcId = 4464,
@@ -901,6 +1259,25 @@ DB.PickpocketLoot = {
             {itemId = 929, dropChance = 15.0},
             {itemId = 5373, dropChance = 15.0},
             {itemId = 3770, dropChance = 10.0}
+        }
+    },
+
+    -- Blackrock Grunt
+    ["Blackrock Grunt"] = {
+        npcId = 440,
+        level = {19, 20},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5379, dropChance = 47.7},
+            {itemId = 2287, dropChance = 23.2},
+            {itemId = 4541, dropChance = 16.1},
+            {itemId = 858, dropChance = 13.7},
+            {itemId = 818, dropChance = 4.6},
+            {itemId = 1210, dropChance = 4.2},
+            {itemId = 2407, dropChance = 0.4},
+            {itemId = 2555, dropChance = 0.4},
+            {itemId = 6348, dropChance = 0.4},
+            {itemId = 6716, dropChance = 0.4}
         }
     },
 
@@ -916,6 +1293,38 @@ DB.PickpocketLoot = {
             {itemId = 929, dropChance = 6.1},
             {itemId = 4542, dropChance = 4.9},
             {itemId = 1705, dropChance = 2.4}
+        }
+    },
+
+    -- Blackrock Outrunner
+    ["Blackrock Outrunner"] = {
+        npcId = 485,
+        level = {20, 21},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5379, dropChance = 52.5},
+            {itemId = 2287, dropChance = 20.0},
+            {itemId = 4541, dropChance = 17.6},
+            {itemId = 858, dropChance = 11.8},
+            {itemId = 1210, dropChance = 3.7},
+            {itemId = 818, dropChance = 1.5},
+            {itemId = 6347, dropChance = 0.2}
+        }
+    },
+
+    -- Blackrock Renegade
+    ["Blackrock Renegade"] = {
+        npcId = 437,
+        level = {21, 22},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 54.8},
+            {itemId = 5373, dropChance = 32.0},
+            {itemId = 4542, dropChance = 11.4},
+            {itemId = 3770, dropChance = 9.6},
+            {itemId = 929, dropChance = 5.9},
+            {itemId = 1705, dropChance = 1.1},
+            {itemId = 1206, dropChance = 0.4}
         }
     },
 
@@ -947,6 +1356,21 @@ DB.PickpocketLoot = {
             {itemId = 4542, dropChance = 7.1},
             {itemId = 1705, dropChance = 0.7},
             {itemId = 1206, dropChance = 0.2}
+        }
+    },
+
+    -- Blackrock Shadowcaster
+    ["Blackrock Shadowcaster"] = {
+        npcId = 436,
+        level = {22, 23},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 60.0},
+            {itemId = 5373, dropChance = 27.3},
+            {itemId = 4542, dropChance = 10.6},
+            {itemId = 929, dropChance = 7.8},
+            {itemId = 3770, dropChance = 7.3},
+            {itemId = 1206, dropChance = 0.8}
         }
     },
 
@@ -1011,6 +1435,21 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Blackrock Tracker
+    ["Blackrock Tracker"] = {
+        npcId = 615,
+        level = {23, 24},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 58.0},
+            {itemId = 5373, dropChance = 29.3},
+            {itemId = 4542, dropChance = 9.6},
+            {itemId = 3770, dropChance = 8.0},
+            {itemId = 929, dropChance = 7.4},
+            {itemId = 1705, dropChance = 0.5}
+        }
+    },
+
     -- Blackrock Warlock
     ["Blackrock Warlock"] = {
         npcId = 7028,
@@ -1023,6 +1462,20 @@ DB.PickpocketLoot = {
             {itemId = 8950, dropChance = 16.4},
             {itemId = 3928, dropChance = 10.6},
             {itemId = 7910, dropChance = 1.0}
+        }
+    },
+
+    -- Blacksmith Verringtan
+    ["Blacksmith Verringtan"] = {
+        npcId = 2404,
+        level = {26, 26},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 74.3},
+            {itemId = 422, dropChance = 14.3},
+            {itemId = 5374, dropChance = 14.3},
+            {itemId = 929, dropChance = 11.4},
+            {itemId = 4538, dropChance = 5.7}
         }
     },
 
@@ -1070,6 +1523,45 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Blackwood Pathfinder
+    ["Blackwood Pathfinder"] = {
+        npcId = 2167,
+        level = {12, 13},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5369, dropChance = 51.3},
+            {itemId = 2287, dropChance = 36.8},
+            {itemId = 858, dropChance = 13.2},
+            {itemId = 818, dropChance = 3.9},
+            {itemId = 1210, dropChance = 3.9}
+        }
+    },
+
+    -- Blackwood Shaman
+    ["Blackwood Shaman"] = {
+        npcId = 2171,
+        level = {19, 20},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5369, dropChance = 53.8},
+            {itemId = 858, dropChance = 23.1},
+            {itemId = 2287, dropChance = 23.1}
+        }
+    },
+
+    -- Blackwood Totemic
+    ["Blackwood Totemic"] = {
+        npcId = 2169,
+        level = {17, 18},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5369, dropChance = 52.3},
+            {itemId = 2287, dropChance = 36.9},
+            {itemId = 858, dropChance = 15.4},
+            {itemId = 1210, dropChance = 1.5}
+        }
+    },
+
     -- Blackwood Tracker
     ["Blackwood Tracker"] = {
         npcId = 11713,
@@ -1079,6 +1571,128 @@ DB.PickpocketLoot = {
             {itemId = 2287, dropChance = 60.0},
             {itemId = 5369, dropChance = 40.0},
             {itemId = 858, dropChance = 20.0}
+        }
+    },
+
+    -- Blackwood Ursa
+    ["Blackwood Ursa"] = {
+        npcId = 2170,
+        level = {18, 19},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 2287, dropChance = 47.2},
+            {itemId = 5369, dropChance = 38.9},
+            {itemId = 1210, dropChance = 11.1},
+            {itemId = 818, dropChance = 5.6},
+            {itemId = 858, dropChance = 5.6}
+        }
+    },
+
+    -- Blackwood Warrior
+    ["Blackwood Warrior"] = {
+        npcId = 2168,
+        level = {16, 17},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5369, dropChance = 52.9},
+            {itemId = 2287, dropChance = 33.9},
+            {itemId = 858, dropChance = 13.2},
+            {itemId = 818, dropChance = 3.3},
+            {itemId = 1210, dropChance = 2.5}
+        }
+    },
+
+    -- Blackwood Windtalker
+    ["Blackwood Windtalker"] = {
+        npcId = 2324,
+        level = {13, 14},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5369, dropChance = 47.9},
+            {itemId = 2287, dropChance = 39.7},
+            {itemId = 858, dropChance = 9.6},
+            {itemId = 1210, dropChance = 6.8},
+            {itemId = 818, dropChance = 1.4}
+        }
+    },
+
+    -- Bleakheart Hellcaller
+    ["Bleakheart Hellcaller"] = {
+        npcId = 3771,
+        level = {26, 27},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 47.6},
+            {itemId = 5375, dropChance = 36.2},
+            {itemId = 3770, dropChance = 19.5},
+            {itemId = 929, dropChance = 8.1},
+            {itemId = 1705, dropChance = 2.2},
+            {itemId = 1206, dropChance = 0.5}
+        }
+    },
+
+    -- Bleakheart Satyr
+    ["Bleakheart Satyr"] = {
+        npcId = 3765,
+        level = {26, 27},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 51.0},
+            {itemId = 5375, dropChance = 26.0},
+            {itemId = 3770, dropChance = 20.8},
+            {itemId = 929, dropChance = 14.1},
+            {itemId = 1705, dropChance = 1.0}
+        }
+    },
+
+    -- Bleakheart Shadowstalker
+    ["Bleakheart Shadowstalker"] = {
+        npcId = 3770,
+        level = {27, 28},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 61.1},
+            {itemId = 5375, dropChance = 25.3},
+            {itemId = 3770, dropChance = 21.8},
+            {itemId = 929, dropChance = 7.3},
+            {itemId = 1705, dropChance = 1.3},
+            {itemId = 1206, dropChance = 0.3}
+        }
+    },
+
+    -- Bleakheart Trickster
+    ["Bleakheart Trickster"] = {
+        npcId = 3767,
+        level = {27, 28},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 57.9},
+            {itemId = 5375, dropChance = 30.7},
+            {itemId = 3770, dropChance = 20.7},
+            {itemId = 929, dropChance = 6.1},
+            {itemId = 1206, dropChance = 0.4},
+            {itemId = 1705, dropChance = 0.4}
+        }
+    },
+
+    -- Bleeding Horror
+    ["Bleeding Horror"] = {
+        npcId = 1529,
+        level = {9, 10},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 46.7},
+            {itemId = 4604, dropChance = 28.3},
+            {itemId = 118, dropChance = 12.2},
+            {itemId = 774, dropChance = 9.4},
+            {itemId = 2589, dropChance = 1.1},
+            {itemId = 4865, dropChance = 1.1},
+            {itemId = 7074, dropChance = 1.1},
+            {itemId = 1366, dropChance = 0.6},
+            {itemId = 2598, dropChance = 0.6},
+            {itemId = 2650, dropChance = 0.6},
+            {itemId = 5363, dropChance = 0.6},
+            {itemId = 6296, dropChance = 0.6}
         }
     },
 
@@ -1259,6 +1873,133 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Bloodfeather Fury
+    ["Bloodfeather Fury"] = {
+        npcId = 2019,
+        level = {9, 10},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 39.4},
+            {itemId = 117, dropChance = 36.4},
+            {itemId = 118, dropChance = 12.1},
+            {itemId = 774, dropChance = 9.1},
+            {itemId = 1380, dropChance = 3.0},
+            {itemId = 2774, dropChance = 3.0},
+            {itemId = 4536, dropChance = 3.0}
+        }
+    },
+
+    -- Bloodfeather Harpy
+    ["Bloodfeather Harpy"] = {
+        npcId = 2015,
+        level = {8, 9},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 56.8},
+            {itemId = 117, dropChance = 25.0},
+            {itemId = 118, dropChance = 15.9},
+            {itemId = 774, dropChance = 9.1},
+            {itemId = 1413, dropChance = 2.3},
+            {itemId = 1476, dropChance = 2.3},
+            {itemId = 2589, dropChance = 2.3},
+            {itemId = 4814, dropChance = 2.3}
+        }
+    },
+
+    -- Bloodfeather Matriarch
+    ["Bloodfeather Matriarch"] = {
+        npcId = 2021,
+        level = {11, 11},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5369, dropChance = 45.2},
+            {itemId = 2287, dropChance = 31.0},
+            {itemId = 858, dropChance = 14.3},
+            {itemId = 1370, dropChance = 7.1},
+            {itemId = 1476, dropChance = 4.8},
+            {itemId = 2589, dropChance = 4.8},
+            {itemId = 785, dropChance = 2.4},
+            {itemId = 818, dropChance = 2.4},
+            {itemId = 2645, dropChance = 2.4},
+            {itemId = 7101, dropChance = 2.4}
+        }
+    },
+
+    -- Bloodfeather Rogue
+    ["Bloodfeather Rogue"] = {
+        npcId = 2017,
+        level = {8, 9},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 57.1},
+            {itemId = 117, dropChance = 32.7},
+            {itemId = 118, dropChance = 8.2},
+            {itemId = 2589, dropChance = 2.0},
+            {itemId = 4776, dropChance = 2.0},
+            {itemId = 7074, dropChance = 2.0}
+        }
+    },
+
+    -- Bloodfeather Sorceress
+    ["Bloodfeather Sorceress"] = {
+        npcId = 2018,
+        level = {9, 9},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 45.5},
+            {itemId = 117, dropChance = 29.1},
+            {itemId = 118, dropChance = 18.2},
+            {itemId = 774, dropChance = 3.6},
+            {itemId = 3609, dropChance = 3.6},
+            {itemId = 2210, dropChance = 1.8},
+            {itemId = 4865, dropChance = 1.8}
+        }
+    },
+
+    -- Bloodfeather Wind Witch
+    ["Bloodfeather Wind Witch"] = {
+        npcId = 2020,
+        level = {9, 10},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 47.8},
+            {itemId = 117, dropChance = 30.4},
+            {itemId = 118, dropChance = 8.7},
+            {itemId = 774, dropChance = 8.7},
+            {itemId = 2589, dropChance = 8.7},
+            {itemId = 6889, dropChance = 8.7}
+        }
+    },
+
+    -- Bloodfury Ambusher
+    ["Bloodfury Ambusher"] = {
+        npcId = 4025,
+        level = {23, 24},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 58.9},
+            {itemId = 5375, dropChance = 26.1},
+            {itemId = 3770, dropChance = 21.3},
+            {itemId = 929, dropChance = 8.2},
+            {itemId = 1206, dropChance = 1.0},
+            {itemId = 1705, dropChance = 1.0}
+        }
+    },
+
+    -- Bloodfury Harpy
+    ["Bloodfury Harpy"] = {
+        npcId = 4022,
+        level = {23, 24},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 56.2},
+            {itemId = 5375, dropChance = 28.8},
+            {itemId = 3770, dropChance = 24.6},
+            {itemId = 929, dropChance = 7.7},
+            {itemId = 1705, dropChance = 1.2}
+        }
+    },
+
     -- Bloodfury Ripper
     ["Bloodfury Ripper"] = {
         npcId = 12579,
@@ -1269,6 +2010,65 @@ DB.PickpocketLoot = {
             {itemId = 3770, dropChance = 36.8},
             {itemId = 16882, dropChance = 31.6},
             {itemId = 929, dropChance = 5.3}
+        }
+    },
+
+    -- Bloodfury Roguefeather
+    ["Bloodfury Roguefeather"] = {
+        npcId = 4023,
+        level = {25, 26},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 58.2},
+            {itemId = 5375, dropChance = 27.9},
+            {itemId = 3770, dropChance = 20.3},
+            {itemId = 929, dropChance = 4.4},
+            {itemId = 1705, dropChance = 1.6},
+            {itemId = 1206, dropChance = 0.8}
+        }
+    },
+
+    -- Bloodfury Slayer
+    ["Bloodfury Slayer"] = {
+        npcId = 4024,
+        level = {25, 26},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 57.9},
+            {itemId = 5375, dropChance = 25.8},
+            {itemId = 3770, dropChance = 20.6},
+            {itemId = 929, dropChance = 9.1},
+            {itemId = 1206, dropChance = 1.0},
+            {itemId = 1705, dropChance = 0.5}
+        }
+    },
+
+    -- Bloodfury Storm Witch
+    ["Bloodfury Storm Witch"] = {
+        npcId = 4027,
+        level = {26, 27},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 44.0},
+            {itemId = 5375, dropChance = 36.3},
+            {itemId = 3770, dropChance = 22.0},
+            {itemId = 929, dropChance = 5.5},
+            {itemId = 1206, dropChance = 0.5}
+        }
+    },
+
+    -- Bloodfury Windcaller
+    ["Bloodfury Windcaller"] = {
+        npcId = 4026,
+        level = {24, 25},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 61.0},
+            {itemId = 5375, dropChance = 25.8},
+            {itemId = 3770, dropChance = 20.3},
+            {itemId = 929, dropChance = 9.3},
+            {itemId = 1206, dropChance = 0.5},
+            {itemId = 1705, dropChance = 0.5}
         }
     },
 
@@ -1302,6 +2102,74 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Bloodsail Elder Magus
+    ["Bloodsail Elder Magus"] = {
+        npcId = 1653,
+        level = {44, 45},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5432, dropChance = 42.3},
+            {itemId = 4601, dropChance = 17.4},
+            {itemId = 16884, dropChance = 17.4},
+            {itemId = 3927, dropChance = 10.8},
+            {itemId = 3928, dropChance = 10.0},
+            {itemId = 4602, dropChance = 7.9},
+            {itemId = 7909, dropChance = 2.1},
+            {itemId = 7910, dropChance = 0.8}
+        }
+    },
+
+    -- Bloodsail Mage
+    ["Bloodsail Mage"] = {
+        npcId = 1562,
+        level = {40, 41},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5432, dropChance = 42.0},
+            {itemId = 16884, dropChance = 22.5},
+            {itemId = 3928, dropChance = 10.9},
+            {itemId = 3927, dropChance = 10.7},
+            {itemId = 4601, dropChance = 10.3},
+            {itemId = 4602, dropChance = 9.8},
+            {itemId = 7910, dropChance = 2.2},
+            {itemId = 7909, dropChance = 1.8}
+        }
+    },
+
+    -- Bloodsail Raider
+    ["Bloodsail Raider"] = {
+        npcId = 1561,
+        level = {40, 41},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5432, dropChance = 40.8},
+            {itemId = 16884, dropChance = 25.8},
+            {itemId = 4601, dropChance = 12.5},
+            {itemId = 3927, dropChance = 11.7},
+            {itemId = 3928, dropChance = 10.4},
+            {itemId = 4602, dropChance = 9.5},
+            {itemId = 7909, dropChance = 1.8},
+            {itemId = 7910, dropChance = 0.4}
+        }
+    },
+
+    -- Bloodsail Sea Dog
+    ["Bloodsail Sea Dog"] = {
+        npcId = 1565,
+        level = {44, 45},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5432, dropChance = 43.9},
+            {itemId = 16884, dropChance = 22.7},
+            {itemId = 3927, dropChance = 11.4},
+            {itemId = 3928, dropChance = 11.4},
+            {itemId = 4601, dropChance = 10.6},
+            {itemId = 4602, dropChance = 8.3},
+            {itemId = 7910, dropChance = 1.5},
+            {itemId = 7909, dropChance = 1.1}
+        }
+    },
+
     -- Bloodsail Swabby
     ["Bloodsail Swabby"] = {
         npcId = 4506,
@@ -1319,6 +2187,318 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Bloodsail Swashbuckler
+    ["Bloodsail Swashbuckler"] = {
+        npcId = 1563,
+        level = {42, 43},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5432, dropChance = 41.2},
+            {itemId = 16884, dropChance = 22.6},
+            {itemId = 3928, dropChance = 12.2},
+            {itemId = 4601, dropChance = 11.6},
+            {itemId = 3927, dropChance = 11.1},
+            {itemId = 4602, dropChance = 9.5},
+            {itemId = 7910, dropChance = 1.5},
+            {itemId = 7909, dropChance = 1.0}
+        }
+    },
+
+    -- Bloodsail Warlock
+    ["Bloodsail Warlock"] = {
+        npcId = 1564,
+        level = {42, 43},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5432, dropChance = 43.5},
+            {itemId = 16884, dropChance = 20.6},
+            {itemId = 4601, dropChance = 12.5},
+            {itemId = 3927, dropChance = 11.3},
+            {itemId = 3928, dropChance = 11.3},
+            {itemId = 4602, dropChance = 11.1},
+            {itemId = 7909, dropChance = 1.8},
+            {itemId = 7910, dropChance = 1.4}
+        }
+    },
+
+    -- Bloodscalp Axe Thrower
+    ["Bloodscalp Axe Thrower"] = {
+        npcId = 694,
+        level = {33, 34},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5427, dropChance = 37.8},
+            {itemId = 16883, dropChance = 35.3},
+            {itemId = 3771, dropChance = 14.4},
+            {itemId = 4544, dropChance = 14.0},
+            {itemId = 1710, dropChance = 7.9},
+            {itemId = 1529, dropChance = 1.4},
+            {itemId = 3864, dropChance = 0.9}
+        }
+    },
+
+    -- Bloodscalp Beastmaster
+    ["Bloodscalp Beastmaster"] = {
+        npcId = 699,
+        level = {34, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 1529, dropChance = 0.7}
+        }
+    },
+
+    -- Bloodscalp Berserker
+    ["Bloodscalp Berserker"] = {
+        npcId = 597,
+        level = {36, 37},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 4338, dropChance = 2.2},
+            {itemId = 4636, dropChance = 0.5},
+            {itemId = 217284, dropChance = 0.3}
+        }
+    },
+
+    -- Bloodscalp Headhunter
+    ["Bloodscalp Headhunter"] = {
+        npcId = 671,
+        level = {36, 37},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5427, dropChance = 38.4},
+            {itemId = 16883, dropChance = 35.5},
+            {itemId = 3771, dropChance = 14.0},
+            {itemId = 4544, dropChance = 12.5},
+            {itemId = 1710, dropChance = 9.2},
+            {itemId = 3864, dropChance = 1.5},
+            {itemId = 1529, dropChance = 0.9}
+        }
+    },
+
+    -- Bloodscalp Hunter
+    ["Bloodscalp Hunter"] = {
+        npcId = 595,
+        level = {34, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 4636, dropChance = 0.8},
+            {itemId = 217284, dropChance = 0.8},
+            {itemId = 4415, dropChance = 0.3}
+        }
+    },
+
+    -- Bloodscalp Mystic
+    ["Bloodscalp Mystic"] = {
+        npcId = 701,
+        level = {34, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 217284, dropChance = 0.3}
+        }
+    },
+
+    -- Bloodscalp Scavenger
+    ["Bloodscalp Scavenger"] = {
+        npcId = 702,
+        level = {33, 34},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 39.2},
+            {itemId = 5427, dropChance = 34.6},
+            {itemId = 4544, dropChance = 15.4},
+            {itemId = 3771, dropChance = 12.2},
+            {itemId = 1710, dropChance = 10.3},
+            {itemId = 1529, dropChance = 0.6},
+            {itemId = 3864, dropChance = 0.5}
+        }
+    },
+
+    -- Bloodscalp Scout
+    ["Bloodscalp Scout"] = {
+        npcId = 588,
+        level = {34, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 217284, dropChance = 0.2}
+        }
+    },
+
+    -- Bloodscalp Shaman
+    ["Bloodscalp Shaman"] = {
+        npcId = 697,
+        level = {33, 34},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 36.5},
+            {itemId = 5427, dropChance = 36.1},
+            {itemId = 4544, dropChance = 13.5},
+            {itemId = 3771, dropChance = 13.0},
+            {itemId = 1710, dropChance = 11.2},
+            {itemId = 1529, dropChance = 0.9},
+            {itemId = 3864, dropChance = 0.7}
+        }
+    },
+
+    -- Bloodscalp Warrior
+    ["Bloodscalp Warrior"] = {
+        npcId = 587,
+        level = {33, 34},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 38.3},
+            {itemId = 5427, dropChance = 32.6},
+            {itemId = 3771, dropChance = 15.3},
+            {itemId = 4544, dropChance = 11.7},
+            {itemId = 1710, dropChance = 9.4},
+            {itemId = 3864, dropChance = 2.0},
+            {itemId = 1529, dropChance = 1.0}
+        }
+    },
+
+    -- Bloodscalp Witch Doctor
+    ["Bloodscalp Witch Doctor"] = {
+        npcId = 660,
+        level = {37, 37},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 36.5},
+            {itemId = 5427, dropChance = 34.4},
+            {itemId = 3771, dropChance = 16.2},
+            {itemId = 4544, dropChance = 14.8},
+            {itemId = 1710, dropChance = 8.6},
+            {itemId = 1529, dropChance = 0.8},
+            {itemId = 3864, dropChance = 0.2}
+        }
+    },
+
+    -- Bloodtooth Guard
+    ["Bloodtooth Guard"] = {
+        npcId = 3932,
+        level = {27, 28},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 56.1},
+            {itemId = 5375, dropChance = 25.8},
+            {itemId = 3770, dropChance = 24.2},
+            {itemId = 929, dropChance = 7.6}
+        }
+    },
+
+    -- Bluegill Forager
+    ["Bluegill Forager"] = {
+        npcId = 1026,
+        level = {22, 23},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 57.4},
+            {itemId = 5377, dropChance = 21.3},
+            {itemId = 6308, dropChance = 19.1},
+            {itemId = 929, dropChance = 4.3},
+            {itemId = 5498, dropChance = 2.1}
+        }
+    },
+
+    -- Bluegill Muckdweller
+    ["Bluegill Muckdweller"] = {
+        npcId = 1028,
+        level = {23, 24},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 50.4},
+            {itemId = 5377, dropChance = 33.3},
+            {itemId = 6308, dropChance = 25.2},
+            {itemId = 929, dropChance = 6.5},
+            {itemId = 1705, dropChance = 0.8}
+        }
+    },
+
+    -- Bluegill Murloc
+    ["Bluegill Murloc"] = {
+        npcId = 1024,
+        level = {20, 21},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 5371, dropChance = 48.9},
+            {itemId = 6289, dropChance = 39.6},
+            {itemId = 858, dropChance = 11.7},
+            {itemId = 818, dropChance = 3.3},
+            {itemId = 1210, dropChance = 2.4},
+            {itemId = 6344, dropChance = 0.3},
+            {itemId = 6348, dropChance = 0.3},
+            {itemId = 7288, dropChance = 0.3}
+        }
+    },
+
+    -- Bluegill Oracle
+    ["Bluegill Oracle"] = {
+        npcId = 1029,
+        level = {25, 26},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 54.5},
+            {itemId = 5377, dropChance = 31.8},
+            {itemId = 6308, dropChance = 13.6},
+            {itemId = 929, dropChance = 9.1}
+        }
+    },
+
+    -- Bluegill Puddlejumper
+    ["Bluegill Puddlejumper"] = {
+        npcId = 1025,
+        level = {21, 22},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 54.0},
+            {itemId = 5377, dropChance = 30.7},
+            {itemId = 6308, dropChance = 23.3},
+            {itemId = 929, dropChance = 6.4},
+            {itemId = 1705, dropChance = 2.0}
+        }
+    },
+
+    -- Bluegill Raider
+    ["Bluegill Raider"] = {
+        npcId = 1418,
+        level = {28, 29},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 61.2},
+            {itemId = 5377, dropChance = 26.5},
+            {itemId = 6308, dropChance = 19.5},
+            {itemId = 929, dropChance = 6.9},
+            {itemId = 5498, dropChance = 0.6},
+            {itemId = 1206, dropChance = 0.4},
+            {itemId = 5500, dropChance = 0.4}
+        }
+    },
+
+    -- Bluegill Warrior
+    ["Bluegill Warrior"] = {
+        npcId = 1027,
+        level = {24, 25},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 54.6},
+            {itemId = 6308, dropChance = 26.9},
+            {itemId = 5377, dropChance = 25.5},
+            {itemId = 929, dropChance = 5.6}
+        }
+    },
+
+    -- Bone Chewer
+    ["Bone Chewer"] = {
+        npcId = 210,
+        level = {26, 27},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 62.1},
+            {itemId = 5376, dropChance = 23.2},
+            {itemId = 4606, dropChance = 17.7},
+            {itemId = 929, dropChance = 5.6},
+            {itemId = 1206, dropChance = 1.0}
+        }
+    },
+
     -- Boneflayer Ghoul
     ["Boneflayer Ghoul"] = {
         npcId = 7347,
@@ -1331,6 +2511,17 @@ DB.PickpocketLoot = {
             {itemId = 1710, dropChance = 8.8},
             {itemId = 3864, dropChance = 2.2},
             {itemId = 1529, dropChance = 1.8}
+        }
+    },
+
+    -- Bookie Herod
+    ["Bookie Herod"] = {
+        npcId = 815,
+        level = {35, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 62.5},
+            {itemId = 16883, dropChance = 37.5}
         }
     },
 
@@ -1362,6 +2553,248 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Boss Tho'grun
+    ["Boss Tho'grun"] = {
+        npcId = 2944,
+        level = {41, 42},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5428, dropChance = 52.4},
+            {itemId = 4599, dropChance = 19.0},
+            {itemId = 4601, dropChance = 9.5},
+            {itemId = 16884, dropChance = 9.5},
+            {itemId = 3928, dropChance = 4.8},
+            {itemId = 7909, dropChance = 4.8}
+        }
+    },
+
+    -- Boulderfist Brute
+    ["Boulderfist Brute"] = {
+        npcId = 2566,
+        level = {35, 36},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5427, dropChance = 37.7},
+            {itemId = 16883, dropChance = 34.2},
+            {itemId = 3771, dropChance = 14.8},
+            {itemId = 4544, dropChance = 13.7},
+            {itemId = 1710, dropChance = 9.7},
+            {itemId = 3864, dropChance = 1.8},
+            {itemId = 1529, dropChance = 1.1}
+        }
+    },
+
+    -- Boulderfist Enforcer
+    ["Boulderfist Enforcer"] = {
+        npcId = 2564,
+        level = {33, 34},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 41.8},
+            {itemId = 5427, dropChance = 34.1},
+            {itemId = 3771, dropChance = 15.4},
+            {itemId = 4544, dropChance = 10.3},
+            {itemId = 1710, dropChance = 6.9},
+            {itemId = 1529, dropChance = 1.2},
+            {itemId = 3864, dropChance = 1.0}
+        }
+    },
+
+    -- Boulderfist Lord
+    ["Boulderfist Lord"] = {
+        npcId = 2571,
+        level = {39, 40},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 40.9},
+            {itemId = 5427, dropChance = 33.6},
+            {itemId = 4544, dropChance = 15.0},
+            {itemId = 3771, dropChance = 13.0},
+            {itemId = 1710, dropChance = 7.3},
+            {itemId = 3864, dropChance = 1.2},
+            {itemId = 1529, dropChance = 0.8}
+        }
+    },
+
+    -- Boulderfist Magus
+    ["Boulderfist Magus"] = {
+        npcId = 2567,
+        level = {36, 37},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 38.6},
+            {itemId = 5427, dropChance = 35.8},
+            {itemId = 3771, dropChance = 15.2},
+            {itemId = 4544, dropChance = 11.9},
+            {itemId = 1710, dropChance = 11.2},
+            {itemId = 1529, dropChance = 1.2},
+            {itemId = 3864, dropChance = 0.7}
+        }
+    },
+
+    -- Boulderfist Mauler
+    ["Boulderfist Mauler"] = {
+        npcId = 2569,
+        level = {37, 38},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 35.0},
+            {itemId = 5427, dropChance = 34.1},
+            {itemId = 3771, dropChance = 18.0},
+            {itemId = 4544, dropChance = 12.0},
+            {itemId = 1710, dropChance = 8.5},
+            {itemId = 3864, dropChance = 0.9},
+            {itemId = 1529, dropChance = 0.6}
+        }
+    },
+
+    -- Boulderfist Ogre
+    ["Boulderfist Ogre"] = {
+        npcId = 2562,
+        level = {32, 33},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 38.3},
+            {itemId = 5427, dropChance = 33.6},
+            {itemId = 1710, dropChance = 12.6},
+            {itemId = 3771, dropChance = 12.6},
+            {itemId = 4544, dropChance = 11.9},
+            {itemId = 1529, dropChance = 0.2},
+            {itemId = 3864, dropChance = 0.2}
+        }
+    },
+
+    -- Boulderfist Shaman
+    ["Boulderfist Shaman"] = {
+        npcId = 2570,
+        level = {38, 39},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5427, dropChance = 37.6},
+            {itemId = 16883, dropChance = 35.1},
+            {itemId = 4544, dropChance = 15.4},
+            {itemId = 3771, dropChance = 13.8},
+            {itemId = 1710, dropChance = 9.7},
+            {itemId = 3864, dropChance = 1.4},
+            {itemId = 1529, dropChance = 1.1}
+        }
+    },
+
+    -- Brain Eater
+    ["Brain Eater"] = {
+        npcId = 570,
+        level = {28, 29},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 58.5},
+            {itemId = 5376, dropChance = 29.6},
+            {itemId = 4606, dropChance = 22.5},
+            {itemId = 929, dropChance = 8.4},
+            {itemId = 1705, dropChance = 1.6},
+            {itemId = 1206, dropChance = 0.6}
+        }
+    },
+
+    -- Bristleback Geomancer
+    ["Bristleback Geomancer"] = {
+        npcId = 3263,
+        level = {19, 20},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 50.5},
+            {itemId = 2287, dropChance = 40.3},
+            {itemId = 858, dropChance = 9.9},
+            {itemId = 1210, dropChance = 2.4},
+            {itemId = 818, dropChance = 2.0}
+        }
+    },
+
+    -- Bristleback Hunter
+    ["Bristleback Hunter"] = {
+        npcId = 3258,
+        level = {17, 18},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 46.2},
+            {itemId = 2287, dropChance = 41.3},
+            {itemId = 858, dropChance = 12.1},
+            {itemId = 818, dropChance = 4.5},
+            {itemId = 1210, dropChance = 3.4},
+            {itemId = 2406, dropChance = 0.4}
+        }
+    },
+
+    -- Bristleback Interloper
+    ["Bristleback Interloper"] = {
+        npcId = 3232,
+        level = {9, 10},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5364, dropChance = 52.9},
+            {itemId = 117, dropChance = 35.3},
+            {itemId = 774, dropChance = 11.8},
+            {itemId = 118, dropChance = 5.9}
+        }
+    },
+
+    -- Bristleback Quilboar
+    ["Bristleback Quilboar"] = {
+        npcId = 2952,
+        level = {3, 4},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5364, dropChance = 66.7},
+            {itemId = 117, dropChance = 26.7},
+            {itemId = 118, dropChance = 6.7}
+        }
+    },
+
+    -- Bristleback Thornweaver
+    ["Bristleback Thornweaver"] = {
+        npcId = 3261,
+        level = {18, 19},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 50.9},
+            {itemId = 2287, dropChance = 39.1},
+            {itemId = 858, dropChance = 12.8},
+            {itemId = 818, dropChance = 2.8},
+            {itemId = 1210, dropChance = 1.3},
+            {itemId = 3610, dropChance = 0.3},
+            {itemId = 4409, dropChance = 0.3},
+            {itemId = 6348, dropChance = 0.3}
+        }
+    },
+
+    -- Bristleback Water Seeker
+    ["Bristleback Water Seeker"] = {
+        npcId = 3260,
+        level = {16, 17},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 2287, dropChance = 42.9},
+            {itemId = 5369, dropChance = 41.5},
+            {itemId = 858, dropChance = 13.4},
+            {itemId = 818, dropChance = 3.6},
+            {itemId = 1210, dropChance = 3.6}
+        }
+    },
+
+    -- Bruegal Ironknuckle
+    ["Bruegal Ironknuckle"] = {
+        npcId = 1720,
+        level = {26, 26},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 5374, dropChance = 43.8},
+            {itemId = 16882, dropChance = 43.8},
+            {itemId = 4542, dropChance = 18.8},
+            {itemId = 929, dropChance = 12.5},
+            {itemId = 422, dropChance = 6.3},
+            {itemId = 4538, dropChance = 6.3}
+        }
+    },
+
     -- Burgle Eye
     ["Burgle Eye"] = {
         npcId = 14230,
@@ -1371,6 +2804,36 @@ DB.PickpocketLoot = {
             {itemId = 16883, dropChance = 60.0},
             {itemId = 1710, dropChance = 20.0},
             {itemId = 10457, dropChance = 20.0}
+        }
+    },
+
+    -- Burly Rockjaw Trogg
+    ["Burly Rockjaw Trogg"] = {
+        npcId = 724,
+        level = {2, 2},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 55.2},
+            {itemId = 117, dropChance = 20.7},
+            {itemId = 4540, dropChance = 12.5},
+            {itemId = 118, dropChance = 11.9},
+            {itemId = 774, dropChance = 5.0},
+            {itemId = 3609, dropChance = 0.6}
+        }
+    },
+
+    -- Burning Blade Acolyte
+    ["Burning Blade Acolyte"] = {
+        npcId = 3380,
+        level = {11, 12},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5379, dropChance = 52.7},
+            {itemId = 4541, dropChance = 21.8},
+            {itemId = 2287, dropChance = 14.5},
+            {itemId = 858, dropChance = 10.9},
+            {itemId = 1210, dropChance = 1.8},
+            {itemId = 7288, dropChance = 1.8}
         }
     },
 
@@ -1390,6 +2853,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Burning Blade Apprentice
+    ["Burning Blade Apprentice"] = {
+        npcId = 3198,
+        level = {10, 11},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5367, dropChance = 56.8},
+            {itemId = 4540, dropChance = 25.4},
+            {itemId = 117, dropChance = 18.9},
+            {itemId = 118, dropChance = 9.2},
+            {itemId = 774, dropChance = 6.5}
+        }
+    },
+
     -- Burning Blade Augur
     ["Burning Blade Augur"] = {
         npcId = 4663,
@@ -1403,6 +2880,39 @@ DB.PickpocketLoot = {
             {itemId = 929, dropChance = 7.3},
             {itemId = 1206, dropChance = 1.4},
             {itemId = 1705, dropChance = 1.3}
+        }
+    },
+
+    -- Burning Blade Bruiser
+    ["Burning Blade Bruiser"] = {
+        npcId = 3379,
+        level = {10, 11},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5367, dropChance = 53.3},
+            {itemId = 4540, dropChance = 22.2},
+            {itemId = 117, dropChance = 17.8},
+            {itemId = 118, dropChance = 8.9},
+            {itemId = 774, dropChance = 2.2}
+        }
+    },
+
+    -- Burning Blade Fanatic
+    ["Burning Blade Fanatic"] = {
+        npcId = 3197,
+        level = {9, 10},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5367, dropChance = 47.2},
+            {itemId = 117, dropChance = 20.3},
+            {itemId = 4540, dropChance = 19.6},
+            {itemId = 118, dropChance = 11.2},
+            {itemId = 774, dropChance = 6.8},
+            {itemId = 2589, dropChance = 0.5},
+            {itemId = 1414, dropChance = 0.2},
+            {itemId = 2635, dropChance = 0.2},
+            {itemId = 3609, dropChance = 0.2},
+            {itemId = 7098, dropChance = 0.2}
         }
     },
 
@@ -1494,6 +3004,18 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Burning Blade Thug
+    ["Burning Blade Thug"] = {
+        npcId = 3195,
+        level = {8, 9},
+        zone = "Durotar",
+        loot = {
+            {itemId = 207108, dropChance = 42.4},
+            {itemId = 207098, dropChance = 23.7},
+            {itemId = 118, dropChance = 1.7}
+        }
+    },
+
     -- Caliph Scorpidsting
     ["Caliph Scorpidsting"] = {
         npcId = 7847,
@@ -1541,6 +3063,34 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Cannoneer Smythe
+    ["Cannoneer Smythe"] = {
+        npcId = 3454,
+        level = {19, 19},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5368, dropChance = 60.0},
+            {itemId = 858, dropChance = 30.0},
+            {itemId = 414, dropChance = 10.0},
+            {itemId = 4541, dropChance = 10.0}
+        }
+    },
+
+    -- Cannoneer Whessan
+    ["Cannoneer Whessan"] = {
+        npcId = 3455,
+        level = {19, 19},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5368, dropChance = 63.6},
+            {itemId = 414, dropChance = 18.2},
+            {itemId = 4541, dropChance = 18.2},
+            {itemId = 858, dropChance = 4.5},
+            {itemId = 1210, dropChance = 4.5},
+            {itemId = 4537, dropChance = 4.5}
+        }
+    },
+
     -- Captain Balinda Stonehearth
     ["Captain Balinda Stonehearth"] = {
         npcId = 11949,
@@ -1554,6 +3104,19 @@ DB.PickpocketLoot = {
             {itemId = 8932, dropChance = 6.9},
             {itemId = 8953, dropChance = 6.9},
             {itemId = 7910, dropChance = 3.4}
+        }
+    },
+
+    -- Captain Fairmount
+    ["Captain Fairmount"] = {
+        npcId = 3393,
+        level = {20, 20},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 414, dropChance = 37.5},
+            {itemId = 5368, dropChance = 37.5},
+            {itemId = 858, dropChance = 12.5},
+            {itemId = 4541, dropChance = 12.5}
         }
     },
 
@@ -1581,6 +3144,120 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Captain Greenskin
+    ["Captain Greenskin"] = {
+        npcId = 647,
+        level = {20, 20},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 16882, dropChance = 60.0},
+            {itemId = 5373, dropChance = 23.3},
+            {itemId = 4542, dropChance = 16.7},
+            {itemId = 3770, dropChance = 6.7}
+        }
+    },
+
+    -- Captain Halyndor
+    ["Captain Halyndor"] = {
+        npcId = 1160,
+        level = {30, 30},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 61.7},
+            {itemId = 5376, dropChance = 23.3},
+            {itemId = 4606, dropChance = 18.3},
+            {itemId = 1206, dropChance = 5.0},
+            {itemId = 929, dropChance = 3.3}
+        }
+    },
+
+    -- Captain Ironhill
+    ["Captain Ironhill"] = {
+        npcId = 2304,
+        level = {32, 32},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 4544, dropChance = 38.5},
+            {itemId = 16883, dropChance = 38.5},
+            {itemId = 5431, dropChance = 23.1},
+            {itemId = 1707, dropChance = 7.7},
+            {itemId = 4539, dropChance = 7.7}
+        }
+    },
+
+    -- Captain Keelhaul
+    ["Captain Keelhaul"] = {
+        npcId = 2548,
+        level = {47, 47},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16884, dropChance = 33.3},
+            {itemId = 5428, dropChance = 23.8},
+            {itemId = 4599, dropChance = 19.0},
+            {itemId = 3928, dropChance = 14.3},
+            {itemId = 4601, dropChance = 9.5},
+            {itemId = 7910, dropChance = 4.8}
+        }
+    },
+
+    -- Captain Melrache
+    ["Captain Melrache"] = {
+        npcId = 1665,
+        level = {12, 12},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5370, dropChance = 54.5},
+            {itemId = 858, dropChance = 27.3},
+            {itemId = 4605, dropChance = 18.2}
+        }
+    },
+
+    -- Captain Perrine
+    ["Captain Perrine"] = {
+        npcId = 1662,
+        level = {9, 9},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 208085, dropChance = 89.7},
+            {itemId = 5368, dropChance = 10.3},
+            {itemId = 858, dropChance = 6.9},
+            {itemId = 414, dropChance = 3.4},
+            {itemId = 4541, dropChance = 3.4}
+        }
+    },
+
+    -- Captain Stillwater
+    ["Captain Stillwater"] = {
+        npcId = 2550,
+        level = {46, 46},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5432, dropChance = 47.8},
+            {itemId = 4602, dropChance = 17.4},
+            {itemId = 16884, dropChance = 13.0},
+            {itemId = 4601, dropChance = 8.7},
+            {itemId = 3927, dropChance = 4.3},
+            {itemId = 3928, dropChance = 4.3},
+            {itemId = 7909, dropChance = 4.3}
+        }
+    },
+
+    -- Captain Vachon
+    ["Captain Vachon"] = {
+        npcId = 1664,
+        level = {11, 11},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5368, dropChance = 51.9},
+            {itemId = 414, dropChance = 11.1},
+            {itemId = 858, dropChance = 11.1},
+            {itemId = 4537, dropChance = 11.1},
+            {itemId = 4541, dropChance = 11.1},
+            {itemId = 818, dropChance = 3.7},
+            {itemId = 1210, dropChance = 3.7}
+        }
+    },
+
     -- Caravan Master Tset
     ["Caravan Master Tset"] = {
         npcId = 8409,
@@ -1590,6 +3267,48 @@ DB.PickpocketLoot = {
             {itemId = 8959, dropChance = 42.9},
             {itemId = 5435, dropChance = 42.9},
             {itemId = 3928, dropChance = 14.3}
+        }
+    },
+
+    -- Caretaker Alaric
+    ["Caretaker Alaric"] = {
+        npcId = 2782,
+        level = {41, 41},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 4601, dropChance = 37.5},
+            {itemId = 5432, dropChance = 25.0},
+            {itemId = 16884, dropChance = 25.0},
+            {itemId = 3927, dropChance = 12.5},
+            {itemId = 3928, dropChance = 12.5},
+            {itemId = 4602, dropChance = 12.5}
+        }
+    },
+
+    -- Caretaker Nevlin
+    ["Caretaker Nevlin"] = {
+        npcId = 2780,
+        level = {41, 41},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5432, dropChance = 33.3},
+            {itemId = 16884, dropChance = 33.3},
+            {itemId = 3928, dropChance = 16.7},
+            {itemId = 4602, dropChance = 16.7}
+        }
+    },
+
+    -- Caretaker Weston
+    ["Caretaker Weston"] = {
+        npcId = 2781,
+        level = {41, 41},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5432, dropChance = 40.0},
+            {itemId = 3927, dropChance = 30.0},
+            {itemId = 7910, dropChance = 20.0},
+            {itemId = 3928, dropChance = 10.0},
+            {itemId = 4602, dropChance = 10.0}
         }
     },
 
@@ -1744,6 +3463,22 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Cenarion Protector
+    ["Cenarion Protector"] = {
+        npcId = 3797,
+        level = {25, 26},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5374, dropChance = 48.9},
+            {itemId = 16882, dropChance = 39.1},
+            {itemId = 4538, dropChance = 17.4},
+            {itemId = 422, dropChance = 7.6},
+            {itemId = 929, dropChance = 3.3},
+            {itemId = 4542, dropChance = 3.3},
+            {itemId = 1206, dropChance = 1.1}
+        }
+    },
+
     -- Charlga Razorflank
     ["Charlga Razorflank"] = {
         npcId = 4421,
@@ -1784,6 +3519,75 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 15.7},
             {itemId = 16885, dropChance = 12.9},
             {itemId = 7910, dropChance = 1.4}
+        }
+    },
+
+    -- Chieftain Nek'rosh
+    ["Chieftain Nek'rosh"] = {
+        npcId = 2091,
+        level = {32, 32},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16883, dropChance = 62.5},
+            {itemId = 5427, dropChance = 31.3},
+            {itemId = 3771, dropChance = 25.0},
+            {itemId = 4544, dropChance = 6.3}
+        }
+    },
+
+    -- Chok'sul
+    ["Chok'sul"] = {
+        npcId = 1210,
+        level = {22, 22},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 16882, dropChance = 62.5},
+            {itemId = 5373, dropChance = 25.0},
+            {itemId = 929, dropChance = 12.5},
+            {itemId = 1206, dropChance = 12.5},
+            {itemId = 3770, dropChance = 12.5}
+        }
+    },
+
+    -- Chucky 'Ten Thumbs'
+    ["Chucky 'Ten Thumbs'"] = {
+        npcId = 2537,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 3419, dropChance = 37.9},
+            {itemId = 16884, dropChance = 29.3},
+            {itemId = 4608, dropChance = 24.1},
+            {itemId = 3928, dropChance = 13.8},
+            {itemId = 7910, dropChance = 3.4}
+        }
+    },
+
+    -- Citizen Wilkes
+    ["Citizen Wilkes"] = {
+        npcId = 2449,
+        level = {25, 25},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 65.6},
+            {itemId = 5374, dropChance = 21.9},
+            {itemId = 929, dropChance = 9.4},
+            {itemId = 4538, dropChance = 6.3},
+            {itemId = 4542, dropChance = 6.3},
+            {itemId = 422, dropChance = 3.1}
+        }
+    },
+
+    -- Clerk Horrace Whitesteed
+    ["Clerk Horrace Whitesteed"] = {
+        npcId = 2448,
+        level = {26, 26},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 66.7},
+            {itemId = 5374, dropChance = 26.7},
+            {itemId = 929, dropChance = 13.3},
+            {itemId = 4542, dropChance = 6.7}
         }
     },
 
@@ -1855,6 +3659,47 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Colonel Kurzen
+    ["Colonel Kurzen"] = {
+        npcId = 813,
+        level = {40, 40},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 57.1},
+            {itemId = 16883, dropChance = 28.6},
+            {itemId = 1707, dropChance = 19.0},
+            {itemId = 1710, dropChance = 4.8},
+            {itemId = 4539, dropChance = 4.8},
+            {itemId = 4544, dropChance = 4.8}
+        }
+    },
+
+    -- Commander Dardosh
+    ["Commander Dardosh"] = {
+        npcId = 13140,
+        level = {61, 61},
+        zone = "Alterac Valley",
+        loot = {
+            {itemId = 5428, dropChance = 50.0},
+            {itemId = 3928, dropChance = 25.0},
+            {itemId = 16885, dropChance = 18.8},
+            {itemId = 8950, dropChance = 12.5},
+            {itemId = 8952, dropChance = 6.3}
+        }
+    },
+
+    -- Commander Felstrom
+    ["Commander Felstrom"] = {
+        npcId = 771,
+        level = {32, 32},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 5433, dropChance = 50.0},
+            {itemId = 1710, dropChance = 33.3},
+            {itemId = 16883, dropChance = 16.7}
+        }
+    },
+
     -- Commander Karl Philips
     ["Commander Karl Philips"] = {
         npcId = 13320,
@@ -1915,6 +3760,51 @@ DB.PickpocketLoot = {
             {itemId = 16882, dropChance = 57.7},
             {itemId = 4606, dropChance = 26.9},
             {itemId = 5376, dropChance = 23.1}
+        }
+    },
+
+    -- Corrosive Sap Beast
+    ["Corrosive Sap Beast"] = {
+        npcId = 4021,
+        level = {24, 25},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 64.6},
+            {itemId = 5376, dropChance = 27.7},
+            {itemId = 4606, dropChance = 23.1},
+            {itemId = 929, dropChance = 7.7}
+        }
+    },
+
+    -- Councilman Smithers
+    ["Councilman Smithers"] = {
+        npcId = 2060,
+        level = {12, 12},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 50.0},
+            {itemId = 818, dropChance = 25.0},
+            {itemId = 4541, dropChance = 25.0},
+            {itemId = 858, dropChance = 12.5}
+        }
+    },
+
+    -- Cracked Skull Soldier
+    ["Cracked Skull Soldier"] = {
+        npcId = 1523,
+        level = {8, 9},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 46.0},
+            {itemId = 4604, dropChance = 38.0},
+            {itemId = 118, dropChance = 12.8},
+            {itemId = 774, dropChance = 3.7},
+            {itemId = 2589, dropChance = 1.1},
+            {itemId = 2210, dropChance = 0.5},
+            {itemId = 2598, dropChance = 0.5},
+            {itemId = 2642, dropChance = 0.5},
+            {itemId = 2656, dropChance = 0.5},
+            {itemId = 4776, dropChance = 0.5}
         }
     },
 
@@ -2116,6 +4006,19 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Crimson Ooze
+    ["Crimson Ooze"] = {
+        npcId = 1031,
+        level = {24, 25},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 56.7},
+            {itemId = 5376, dropChance = 28.4},
+            {itemId = 4606, dropChance = 19.4},
+            {itemId = 929, dropChance = 4.5}
+        }
+    },
+
     -- Crimson Priest
     ["Crimson Priest"] = {
         npcId = 10423,
@@ -2160,6 +4063,117 @@ DB.PickpocketLoot = {
             {itemId = 8953, dropChance = 12.2},
             {itemId = 3928, dropChance = 10.1},
             {itemId = 8950, dropChance = 8.0}
+        }
+    },
+
+    -- Crushridge Brute
+    ["Crushridge Brute"] = {
+        npcId = 2253,
+        level = {35, 36},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 37.6},
+            {itemId = 5427, dropChance = 35.4},
+            {itemId = 3771, dropChance = 15.5},
+            {itemId = 4544, dropChance = 13.5},
+            {itemId = 1710, dropChance = 9.6},
+            {itemId = 3864, dropChance = 1.9},
+            {itemId = 1529, dropChance = 0.5}
+        }
+    },
+
+    -- Crushridge Enforcer
+    ["Crushridge Enforcer"] = {
+        npcId = 2256,
+        level = {38, 39},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 40.7},
+            {itemId = 5427, dropChance = 37.6},
+            {itemId = 3771, dropChance = 11.9},
+            {itemId = 4544, dropChance = 9.7},
+            {itemId = 1529, dropChance = 3.1},
+            {itemId = 1710, dropChance = 3.1},
+            {itemId = 3864, dropChance = 0.4}
+        }
+    },
+
+    -- Crushridge Mage
+    ["Crushridge Mage"] = {
+        npcId = 2255,
+        level = {37, 38},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 44.4},
+            {itemId = 5427, dropChance = 35.9},
+            {itemId = 4544, dropChance = 11.3},
+            {itemId = 1710, dropChance = 9.2},
+            {itemId = 3771, dropChance = 8.5},
+            {itemId = 3864, dropChance = 1.4},
+            {itemId = 1529, dropChance = 0.7}
+        }
+    },
+
+    -- Crushridge Mauler
+    ["Crushridge Mauler"] = {
+        npcId = 2254,
+        level = {36, 37},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 38.9},
+            {itemId = 5427, dropChance = 38.2},
+            {itemId = 3771, dropChance = 14.7},
+            {itemId = 1710, dropChance = 11.8},
+            {itemId = 4544, dropChance = 7.2},
+            {itemId = 1529, dropChance = 1.2},
+            {itemId = 3864, dropChance = 1.0}
+        }
+    },
+
+    -- Crushridge Ogre
+    ["Crushridge Ogre"] = {
+        npcId = 2252,
+        level = {34, 35},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 37.4},
+            {itemId = 5427, dropChance = 36.2},
+            {itemId = 4544, dropChance = 12.8},
+            {itemId = 3771, dropChance = 12.6},
+            {itemId = 1710, dropChance = 9.5},
+            {itemId = 1529, dropChance = 2.0},
+            {itemId = 3864, dropChance = 1.5}
+        }
+    },
+
+    -- Crushridge Plunderer
+    ["Crushridge Plunderer"] = {
+        npcId = 2416,
+        level = {36, 37},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5427, dropChance = 35.7},
+            {itemId = 4544, dropChance = 28.6},
+            {itemId = 16883, dropChance = 28.6},
+            {itemId = 1710, dropChance = 14.3},
+            {itemId = 3771, dropChance = 14.3},
+            {itemId = 3864, dropChance = 7.1}
+        }
+    },
+
+    -- Crushridge Warmonger
+    ["Crushridge Warmonger"] = {
+        npcId = 2287,
+        level = {39, 40},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 39.5},
+            {itemId = 5427, dropChance = 34.9},
+            {itemId = 3771, dropChance = 14.4},
+            {itemId = 4544, dropChance = 11.9},
+            {itemId = 1710, dropChance = 8.5},
+            {itemId = 1529, dropChance = 1.2},
+            {itemId = 3864, dropChance = 1.1}
         }
     },
 
@@ -2219,6 +4233,21 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Cursed Marine
+    ["Cursed Marine"] = {
+        npcId = 1158,
+        level = {27, 28},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 59.0},
+            {itemId = 5376, dropChance = 22.0},
+            {itemId = 4606, dropChance = 17.2},
+            {itemId = 929, dropChance = 8.8},
+            {itemId = 1705, dropChance = 0.9},
+            {itemId = 1206, dropChance = 0.4}
+        }
+    },
+
     -- Cursed Ooze
     ["Cursed Ooze"] = {
         npcId = 7086,
@@ -2231,6 +4260,378 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 8.1},
             {itemId = 7910, dropChance = 2.2},
             {itemId = 7909, dropChance = 1.4}
+        }
+    },
+
+    -- Cursed Sailor
+    ["Cursed Sailor"] = {
+        npcId = 1157,
+        level = {26, 27},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 56.3},
+            {itemId = 5376, dropChance = 29.8},
+            {itemId = 4606, dropChance = 21.4},
+            {itemId = 929, dropChance = 4.7},
+            {itemId = 1705, dropChance = 0.5},
+            {itemId = 1206, dropChance = 0.2}
+        }
+    },
+
+    -- Dabyrie Laborer
+    ["Dabyrie Laborer"] = {
+        npcId = 2582,
+        level = {30, 31},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16882, dropChance = 56.9},
+            {itemId = 5374, dropChance = 27.1},
+            {itemId = 4538, dropChance = 9.0},
+            {itemId = 4542, dropChance = 7.0},
+            {itemId = 422, dropChance = 6.0},
+            {itemId = 929, dropChance = 6.0},
+            {itemId = 1705, dropChance = 1.7},
+            {itemId = 1206, dropChance = 0.7}
+        }
+    },
+
+    -- Dabyrie Militia
+    ["Dabyrie Militia"] = {
+        npcId = 2581,
+        level = {31, 32},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5427, dropChance = 40.9},
+            {itemId = 16883, dropChance = 35.2},
+            {itemId = 3771, dropChance = 19.3},
+            {itemId = 1710, dropChance = 8.0},
+            {itemId = 4544, dropChance = 6.8},
+            {itemId = 1529, dropChance = 3.4}
+        }
+    },
+
+    -- Daggerspine Raider
+    ["Daggerspine Raider"] = {
+        npcId = 2595,
+        level = {38, 39},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 10457, dropChance = 40.1},
+            {itemId = 16883, dropChance = 34.8},
+            {itemId = 6362, dropChance = 28.6},
+            {itemId = 1710, dropChance = 8.8},
+            {itemId = 5498, dropChance = 1.3},
+            {itemId = 3864, dropChance = 0.4},
+            {itemId = 5500, dropChance = 0.4}
+        }
+    },
+
+    -- Daggerspine Screamer
+    ["Daggerspine Screamer"] = {
+        npcId = 2370,
+        level = {29, 30},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 56.9},
+            {itemId = 5377, dropChance = 29.2},
+            {itemId = 6308, dropChance = 26.4},
+            {itemId = 929, dropChance = 4.2},
+            {itemId = 1206, dropChance = 1.4},
+            {itemId = 5500, dropChance = 1.4}
+        }
+    },
+
+    -- Daggerspine Shorehunter
+    ["Daggerspine Shorehunter"] = {
+        npcId = 2369,
+        level = {30, 31},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 52.2},
+            {itemId = 5377, dropChance = 33.0},
+            {itemId = 6308, dropChance = 22.5},
+            {itemId = 929, dropChance = 7.5},
+            {itemId = 1705, dropChance = 0.7},
+            {itemId = 5498, dropChance = 0.7},
+            {itemId = 5500, dropChance = 0.7},
+            {itemId = 1206, dropChance = 0.5}
+        }
+    },
+
+    -- Daggerspine Shorestalker
+    ["Daggerspine Shorestalker"] = {
+        npcId = 2368,
+        level = {28, 29},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 53.9},
+            {itemId = 5377, dropChance = 29.2},
+            {itemId = 6308, dropChance = 22.7},
+            {itemId = 929, dropChance = 3.9},
+            {itemId = 5498, dropChance = 1.3}
+        }
+    },
+
+    -- Daggerspine Siren
+    ["Daggerspine Siren"] = {
+        npcId = 2371,
+        level = {31, 32},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 10457, dropChance = 39.6},
+            {itemId = 16883, dropChance = 33.6},
+            {itemId = 6362, dropChance = 26.0},
+            {itemId = 1710, dropChance = 10.6},
+            {itemId = 3864, dropChance = 1.0},
+            {itemId = 1529, dropChance = 0.4},
+            {itemId = 5498, dropChance = 0.3},
+            {itemId = 5500, dropChance = 0.1}
+        }
+    },
+
+    -- Daggerspine Sorceress
+    ["Daggerspine Sorceress"] = {
+        npcId = 2596,
+        level = {39, 40},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 10457, dropChance = 38.3},
+            {itemId = 6362, dropChance = 30.9},
+            {itemId = 16883, dropChance = 28.4},
+            {itemId = 1710, dropChance = 8.6},
+            {itemId = 3864, dropChance = 2.5},
+            {itemId = 5498, dropChance = 2.5}
+        }
+    },
+
+    -- Dagun the Ravenous
+    ["Dagun the Ravenous"] = {
+        npcId = 2937,
+        level = {43, 43},
+        zone = "Dustwallow Marsh",
+        loot = {
+            {itemId = 4603, dropChance = 60.0},
+            {itemId = 16884, dropChance = 20.0},
+            {itemId = 3928, dropChance = 10.0},
+            {itemId = 5435, dropChance = 10.0}
+        }
+    },
+
+    -- Dal Bloodclaw
+    ["Dal Bloodclaw"] = {
+        npcId = 3987,
+        level = {25, 25},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 48.8},
+            {itemId = 5375, dropChance = 34.1},
+            {itemId = 3770, dropChance = 17.1},
+            {itemId = 929, dropChance = 7.3},
+            {itemId = 1705, dropChance = 2.4}
+        }
+    },
+
+    -- Dalaran Apprentice
+    ["Dalaran Apprentice"] = {
+        npcId = 1867,
+        level = {13, 14},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 59.6},
+            {itemId = 4541, dropChance = 14.4},
+            {itemId = 414, dropChance = 12.3},
+            {itemId = 858, dropChance = 11.0},
+            {itemId = 4537, dropChance = 11.0},
+            {itemId = 1210, dropChance = 2.1},
+            {itemId = 818, dropChance = 0.7},
+            {itemId = 2070, dropChance = 0.7},
+            {itemId = 2589, dropChance = 0.7},
+            {itemId = 2642, dropChance = 0.7},
+            {itemId = 4292, dropChance = 0.7}
+        }
+    },
+
+    -- Dalaran Brewmaster
+    ["Dalaran Brewmaster"] = {
+        npcId = 3577,
+        level = {15, 16},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 858, dropChance = 37.5},
+            {itemId = 414, dropChance = 25.0},
+            {itemId = 4537, dropChance = 25.0},
+            {itemId = 5368, dropChance = 25.0},
+            {itemId = 4541, dropChance = 12.5}
+        }
+    },
+
+    -- Dalaran Conjuror
+    ["Dalaran Conjuror"] = {
+        npcId = 1915,
+        level = {17, 18},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 60.0},
+            {itemId = 858, dropChance = 20.0},
+            {itemId = 414, dropChance = 15.0},
+            {itemId = 4537, dropChance = 5.0}
+        }
+    },
+
+    -- Dalaran Mage
+    ["Dalaran Mage"] = {
+        npcId = 1914,
+        level = {15, 16},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 52.8},
+            {itemId = 858, dropChance = 18.1},
+            {itemId = 4537, dropChance = 14.2},
+            {itemId = 4541, dropChance = 8.7},
+            {itemId = 414, dropChance = 6.3},
+            {itemId = 1210, dropChance = 3.1},
+            {itemId = 818, dropChance = 1.6},
+            {itemId = 7288, dropChance = 0.8}
+        }
+    },
+
+    -- Dalaran Protector
+    ["Dalaran Protector"] = {
+        npcId = 1912,
+        level = {14, 15},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 51.0},
+            {itemId = 4537, dropChance = 15.4},
+            {itemId = 858, dropChance = 12.7},
+            {itemId = 4541, dropChance = 12.7},
+            {itemId = 414, dropChance = 9.7},
+            {itemId = 818, dropChance = 4.2},
+            {itemId = 1210, dropChance = 2.7},
+            {itemId = 6342, dropChance = 0.4}
+        }
+    },
+
+    -- Dalaran Shield Guard
+    ["Dalaran Shield Guard"] = {
+        npcId = 2271,
+        level = {31, 32},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5431, dropChance = 40.9},
+            {itemId = 16883, dropChance = 39.9},
+            {itemId = 4539, dropChance = 9.1},
+            {itemId = 4544, dropChance = 8.9},
+            {itemId = 1707, dropChance = 7.4},
+            {itemId = 1710, dropChance = 5.2},
+            {itemId = 3864, dropChance = 1.2},
+            {itemId = 1529, dropChance = 0.7}
+        }
+    },
+
+    -- Dalaran Summoner
+    ["Dalaran Summoner"] = {
+        npcId = 2358,
+        level = {34, 35},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 39.3},
+            {itemId = 5431, dropChance = 34.5},
+            {itemId = 1707, dropChance = 10.0},
+            {itemId = 1710, dropChance = 10.0},
+            {itemId = 4539, dropChance = 8.8},
+            {itemId = 4544, dropChance = 7.6},
+            {itemId = 3864, dropChance = 1.2},
+            {itemId = 1529, dropChance = 0.4}
+        }
+    },
+
+    -- Dalaran Theurgist
+    ["Dalaran Theurgist"] = {
+        npcId = 2272,
+        level = {32, 33},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 39.4},
+            {itemId = 5431, dropChance = 32.4},
+            {itemId = 1710, dropChance = 11.8},
+            {itemId = 4544, dropChance = 11.2},
+            {itemId = 4539, dropChance = 8.2},
+            {itemId = 1707, dropChance = 5.3},
+            {itemId = 1529, dropChance = 0.6},
+            {itemId = 3864, dropChance = 0.6}
+        }
+    },
+
+    -- Dalaran Warder
+    ["Dalaran Warder"] = {
+        npcId = 1913,
+        level = {16, 17},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 55.6},
+            {itemId = 414, dropChance = 25.9},
+            {itemId = 4537, dropChance = 18.5},
+            {itemId = 818, dropChance = 3.7},
+            {itemId = 4541, dropChance = 3.7}
+        }
+    },
+
+    -- Dalaran Watcher
+    ["Dalaran Watcher"] = {
+        npcId = 1888,
+        level = {18, 19},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 53.3},
+            {itemId = 4537, dropChance = 24.4},
+            {itemId = 414, dropChance = 13.3},
+            {itemId = 858, dropChance = 6.7},
+            {itemId = 4541, dropChance = 4.4},
+            {itemId = 1210, dropChance = 2.2}
+        }
+    },
+
+    -- Dalaran Wizard
+    ["Dalaran Wizard"] = {
+        npcId = 1889,
+        level = {19, 20},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 60.5},
+            {itemId = 414, dropChance = 21.1},
+            {itemId = 1210, dropChance = 10.5},
+            {itemId = 4537, dropChance = 7.9},
+            {itemId = 858, dropChance = 5.3},
+            {itemId = 4541, dropChance = 2.6}
+        }
+    },
+
+    -- Dalaran Worker
+    ["Dalaran Worker"] = {
+        npcId = 2628,
+        level = {33, 34},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 40.2},
+            {itemId = 5431, dropChance = 39.4},
+            {itemId = 1707, dropChance = 11.4},
+            {itemId = 1710, dropChance = 9.8},
+            {itemId = 4539, dropChance = 9.8},
+            {itemId = 4544, dropChance = 4.5}
+        }
+    },
+
+    -- Daniel Ulfman
+    ["Daniel Ulfman"] = {
+        npcId = 1917,
+        level = {2, 3},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 72.3},
+            {itemId = 4604, dropChance = 21.3},
+            {itemId = 118, dropChance = 4.3},
+            {itemId = 774, dropChance = 4.3}
         }
     },
 
@@ -2313,6 +4714,38 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Dark Iron Demolitionist
+    ["Dark Iron Demolitionist"] = {
+        npcId = 1054,
+        level = {30, 31},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 47.0},
+            {itemId = 5374, dropChance = 28.8},
+            {itemId = 4538, dropChance = 19.7},
+            {itemId = 929, dropChance = 10.6},
+            {itemId = 422, dropChance = 4.5},
+            {itemId = 4542, dropChance = 4.5},
+            {itemId = 1206, dropChance = 1.5}
+        }
+    },
+
+    -- Dark Iron Dwarf
+    ["Dark Iron Dwarf"] = {
+        npcId = 1051,
+        level = {27, 28},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 56.4},
+            {itemId = 5374, dropChance = 30.5},
+            {itemId = 4542, dropChance = 10.5},
+            {itemId = 422, dropChance = 8.6},
+            {itemId = 4538, dropChance = 8.6},
+            {itemId = 929, dropChance = 7.5},
+            {itemId = 1705, dropChance = 0.4}
+        }
+    },
+
     -- Dark Iron Geologist
     ["Dark Iron Geologist"] = {
         npcId = 5839,
@@ -2327,6 +4760,21 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 9.4},
             {itemId = 7909, dropChance = 2.2},
             {itemId = 7910, dropChance = 1.0}
+        }
+    },
+
+    -- Dark Iron Insurgent
+    ["Dark Iron Insurgent"] = {
+        npcId = 1169,
+        level = {18, 19},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5368, dropChance = 50.0},
+            {itemId = 414, dropChance = 18.8},
+            {itemId = 858, dropChance = 15.6},
+            {itemId = 4541, dropChance = 12.5},
+            {itemId = 1210, dropChance = 3.1},
+            {itemId = 4537, dropChance = 3.1}
         }
     },
 
@@ -2362,6 +4810,37 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Dark Iron Saboteur
+    ["Dark Iron Saboteur"] = {
+        npcId = 1052,
+        level = {28, 29},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 52.5},
+            {itemId = 5374, dropChance = 31.4},
+            {itemId = 4538, dropChance = 10.3},
+            {itemId = 4542, dropChance = 7.8},
+            {itemId = 929, dropChance = 4.9},
+            {itemId = 422, dropChance = 3.4},
+            {itemId = 1206, dropChance = 1.0},
+            {itemId = 1705, dropChance = 0.5}
+        }
+    },
+
+    -- Dark Iron Sapper
+    ["Dark Iron Sapper"] = {
+        npcId = 1222,
+        level = {17, 17},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5368, dropChance = 53.3},
+            {itemId = 414, dropChance = 23.3},
+            {itemId = 4541, dropChance = 20.0},
+            {itemId = 858, dropChance = 10.0},
+            {itemId = 818, dropChance = 3.3}
+        }
+    },
+
     -- Dark Iron Sentry
     ["Dark Iron Sentry"] = {
         npcId = 8504,
@@ -2376,6 +4855,19 @@ DB.PickpocketLoot = {
             {itemId = 3927, dropChance = 7.5},
             {itemId = 7910, dropChance = 3.0},
             {itemId = 7909, dropChance = 1.5}
+        }
+    },
+
+    -- Dark Iron Shadowcaster
+    ["Dark Iron Shadowcaster"] = {
+        npcId = 2577,
+        level = {31, 32},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5431, dropChance = 42.9},
+            {itemId = 16883, dropChance = 35.7},
+            {itemId = 1707, dropChance = 14.3},
+            {itemId = 4544, dropChance = 14.3}
         }
     },
 
@@ -2444,6 +4936,17 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Dark Iron Supplier
+    ["Dark Iron Supplier"] = {
+        npcId = 2575,
+        level = {31, 32},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5431, dropChance = 66.7},
+            {itemId = 16883, dropChance = 50.0}
+        }
+    },
+
     -- Dark Iron Taskmaster
     ["Dark Iron Taskmaster"] = {
         npcId = 5846,
@@ -2458,6 +4961,22 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 10.3},
             {itemId = 7909, dropChance = 1.6},
             {itemId = 7910, dropChance = 1.4}
+        }
+    },
+
+    -- Dark Iron Tunneler
+    ["Dark Iron Tunneler"] = {
+        npcId = 1053,
+        level = {29, 30},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 58.9},
+            {itemId = 5374, dropChance = 30.1},
+            {itemId = 4538, dropChance = 7.7},
+            {itemId = 4542, dropChance = 7.2},
+            {itemId = 929, dropChance = 6.2},
+            {itemId = 422, dropChance = 5.7},
+            {itemId = 1705, dropChance = 0.5}
         }
     },
 
@@ -2545,6 +5064,98 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Dark Strand Adept
+    ["Dark Strand Adept"] = {
+        npcId = 3728,
+        level = {18, 19},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5370, dropChance = 57.1},
+            {itemId = 4605, dropChance = 25.5},
+            {itemId = 858, dropChance = 17.3},
+            {itemId = 818, dropChance = 5.1},
+            {itemId = 4409, dropChance = 1.0}
+        }
+    },
+
+    -- Dark Strand Cultist
+    ["Dark Strand Cultist"] = {
+        npcId = 3725,
+        level = {18, 19},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5370, dropChance = 45.7},
+            {itemId = 4605, dropChance = 39.4},
+            {itemId = 858, dropChance = 21.3},
+            {itemId = 818, dropChance = 2.1},
+            {itemId = 1210, dropChance = 1.1}
+        }
+    },
+
+    -- Dark Strand Enforcer
+    ["Dark Strand Enforcer"] = {
+        npcId = 3727,
+        level = {20, 21},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5368, dropChance = 62.5},
+            {itemId = 414, dropChance = 17.5},
+            {itemId = 858, dropChance = 17.5},
+            {itemId = 4537, dropChance = 10.0},
+            {itemId = 4541, dropChance = 5.0},
+            {itemId = 1210, dropChance = 2.5},
+            {itemId = 2407, dropChance = 2.5}
+        }
+    },
+
+    -- Dark Strand Excavator
+    ["Dark Strand Excavator"] = {
+        npcId = 3730,
+        level = {19, 20},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5370, dropChance = 51.9},
+            {itemId = 4605, dropChance = 32.7},
+            {itemId = 858, dropChance = 15.4},
+            {itemId = 818, dropChance = 5.8},
+            {itemId = 1210, dropChance = 3.8}
+        }
+    },
+
+    -- Dark Strand Fanatic
+    ["Dark Strand Fanatic"] = {
+        npcId = 2336,
+        level = {16, 17},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5368, dropChance = 46.6},
+            {itemId = 414, dropChance = 15.5},
+            {itemId = 4537, dropChance = 12.8},
+            {itemId = 4541, dropChance = 11.9},
+            {itemId = 858, dropChance = 9.1},
+            {itemId = 818, dropChance = 4.6},
+            {itemId = 1210, dropChance = 3.2},
+            {itemId = 2881, dropChance = 0.5}
+        }
+    },
+
+    -- Dark Strand Voidcaller
+    ["Dark Strand Voidcaller"] = {
+        npcId = 2337,
+        level = {28, 29},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 16882, dropChance = 48.1},
+            {itemId = 5374, dropChance = 38.0},
+            {itemId = 4542, dropChance = 7.6},
+            {itemId = 4538, dropChance = 6.3},
+            {itemId = 929, dropChance = 5.1},
+            {itemId = 422, dropChance = 2.5},
+            {itemId = 1206, dropChance = 2.5},
+            {itemId = 1705, dropChance = 1.3}
+        }
+    },
+
     -- Dark Summoner
     ["Dark Summoner"] = {
         npcId = 8551,
@@ -2558,6 +5169,47 @@ DB.PickpocketLoot = {
             {itemId = 8932, dropChance = 10.6},
             {itemId = 8950, dropChance = 10.6},
             {itemId = 7910, dropChance = 1.6}
+        }
+    },
+
+    -- Darkeye Bonecaster
+    ["Darkeye Bonecaster"] = {
+        npcId = 1522,
+        level = {7, 8},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 54.2},
+            {itemId = 4604, dropChance = 39.7},
+            {itemId = 118, dropChance = 12.4},
+            {itemId = 774, dropChance = 3.5},
+            {itemId = 2589, dropChance = 0.8},
+            {itemId = 4865, dropChance = 0.8},
+            {itemId = 3264, dropChance = 0.5},
+            {itemId = 779, dropChance = 0.3},
+            {itemId = 1377, dropChance = 0.3},
+            {itemId = 1380, dropChance = 0.3},
+            {itemId = 2070, dropChance = 0.3},
+            {itemId = 2598, dropChance = 0.3},
+            {itemId = 3300, dropChance = 0.3},
+            {itemId = 6150, dropChance = 0.3},
+            {itemId = 7073, dropChance = 0.3},
+            {itemId = 7074, dropChance = 0.3}
+        }
+    },
+
+    -- Darkmaster Gandling
+    ["Darkmaster Gandling"] = {
+        npcId = 1853,
+        level = {61, 61},
+        zone = "Scholomance",
+        loot = {
+            {itemId = 5432, dropChance = 35.1},
+            {itemId = 16885, dropChance = 31.2},
+            {itemId = 8950, dropChance = 13.0},
+            {itemId = 8932, dropChance = 9.1},
+            {itemId = 3928, dropChance = 7.8},
+            {itemId = 8953, dropChance = 7.8},
+            {itemId = 7910, dropChance = 2.6}
         }
     },
 
@@ -2868,6 +5520,51 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Defias Bandit
+    ["Defias Bandit"] = {
+        npcId = 116,
+        level = {8, 9},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5363, dropChance = 25.9},
+            {itemId = 6150, dropChance = 25.9},
+            {itemId = 4540, dropChance = 14.5},
+            {itemId = 2070, dropChance = 12.8},
+            {itemId = 118, dropChance = 12.5},
+            {itemId = 4536, dropChance = 12.3},
+            {itemId = 774, dropChance = 3.3},
+            {itemId = 117, dropChance = 0.3},
+            {itemId = 1366, dropChance = 0.3},
+            {itemId = 755, dropChance = 0.2},
+            {itemId = 1370, dropChance = 0.2},
+            {itemId = 1380, dropChance = 0.2},
+            {itemId = 1429, dropChance = 0.2},
+            {itemId = 1476, dropChance = 0.2},
+            {itemId = 2650, dropChance = 0.2},
+            {itemId = 3363, dropChance = 0.2},
+            {itemId = 3373, dropChance = 0.2},
+            {itemId = 3609, dropChance = 0.2},
+            {itemId = 7073, dropChance = 0.2}
+        }
+    },
+
+    -- Defias Blackguard
+    ["Defias Blackguard"] = {
+        npcId = 636,
+        level = {19, 20},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5368, dropChance = 61.5},
+            {itemId = 414, dropChance = 19.2},
+            {itemId = 4541, dropChance = 9.6},
+            {itemId = 1210, dropChance = 3.8},
+            {itemId = 4537, dropChance = 3.8},
+            {itemId = 818, dropChance = 1.9},
+            {itemId = 858, dropChance = 1.9},
+            {itemId = 6716, dropChance = 1.9}
+        }
+    },
+
     -- Defias Bodyguard
     ["Defias Bodyguard"] = {
         npcId = 6866,
@@ -2880,6 +5577,103 @@ DB.PickpocketLoot = {
             {itemId = 5363, dropChance = 17.6},
             {itemId = 6150, dropChance = 17.6},
             {itemId = 118, dropChance = 5.9}
+        }
+    },
+
+    -- Defias Captive
+    ["Defias Captive"] = {
+        npcId = 1707,
+        level = {23, 24},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 57.5},
+            {itemId = 5374, dropChance = 28.5},
+            {itemId = 422, dropChance = 7.3},
+            {itemId = 4538, dropChance = 6.9},
+            {itemId = 4542, dropChance = 6.5},
+            {itemId = 929, dropChance = 6.2},
+            {itemId = 1206, dropChance = 0.8},
+            {itemId = 1705, dropChance = 0.7}
+        }
+    },
+
+    -- Defias Conjurer
+    ["Defias Conjurer"] = {
+        npcId = 619,
+        level = {15, 16},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 50.0},
+            {itemId = 4541, dropChance = 18.2},
+            {itemId = 858, dropChance = 13.6},
+            {itemId = 4537, dropChance = 13.6},
+            {itemId = 414, dropChance = 9.1},
+            {itemId = 818, dropChance = 4.5},
+            {itemId = 1210, dropChance = 4.5}
+        }
+    },
+
+    -- Defias Convict
+    ["Defias Convict"] = {
+        npcId = 1711,
+        level = {24, 25},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 55.7},
+            {itemId = 5374, dropChance = 30.0},
+            {itemId = 422, dropChance = 9.0},
+            {itemId = 929, dropChance = 7.5},
+            {itemId = 4542, dropChance = 6.4},
+            {itemId = 4538, dropChance = 5.5},
+            {itemId = 1705, dropChance = 1.5},
+            {itemId = 1206, dropChance = 0.9}
+        }
+    },
+
+    -- Defias Cutpurse
+    ["Defias Cutpurse"] = {
+        npcId = 94,
+        level = {5, 6},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 6150, dropChance = 23.9},
+            {itemId = 5363, dropChance = 23.2},
+            {itemId = 2070, dropChance = 18.3},
+            {itemId = 118, dropChance = 12.5},
+            {itemId = 4540, dropChance = 11.0},
+            {itemId = 4536, dropChance = 10.1},
+            {itemId = 774, dropChance = 6.4},
+            {itemId = 7074, dropChance = 0.9},
+            {itemId = 4865, dropChance = 0.6},
+            {itemId = 117, dropChance = 0.3},
+            {itemId = 779, dropChance = 0.3},
+            {itemId = 1195, dropChance = 0.3},
+            {itemId = 1427, dropChance = 0.3},
+            {itemId = 1476, dropChance = 0.3},
+            {itemId = 2210, dropChance = 0.3},
+            {itemId = 2598, dropChance = 0.3},
+            {itemId = 2652, dropChance = 0.3},
+            {itemId = 3365, dropChance = 0.3},
+            {itemId = 4496, dropChance = 0.3},
+            {itemId = 7073, dropChance = 0.3}
+        }
+    },
+
+    -- Defias Digger
+    ["Defias Digger"] = {
+        npcId = 824,
+        level = {15, 16},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 51.2},
+            {itemId = 4537, dropChance = 16.6},
+            {itemId = 414, dropChance = 12.8},
+            {itemId = 858, dropChance = 12.1},
+            {itemId = 4541, dropChance = 10.7},
+            {itemId = 818, dropChance = 3.1},
+            {itemId = 1210, dropChance = 2.4},
+            {itemId = 2553, dropChance = 0.3},
+            {itemId = 3610, dropChance = 0.3}
         }
     },
 
@@ -2924,6 +5718,377 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Defias Enchanter
+    ["Defias Enchanter"] = {
+        npcId = 910,
+        level = {26, 27},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 56.8},
+            {itemId = 5374, dropChance = 38.3},
+            {itemId = 4542, dropChance = 6.2},
+            {itemId = 4538, dropChance = 4.9},
+            {itemId = 422, dropChance = 3.7},
+            {itemId = 929, dropChance = 3.7}
+        }
+    },
+
+    -- Defias Evoker
+    ["Defias Evoker"] = {
+        npcId = 1729,
+        level = {17, 18},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5368, dropChance = 43.3},
+            {itemId = 4541, dropChance = 23.9},
+            {itemId = 858, dropChance = 17.9},
+            {itemId = 414, dropChance = 13.4},
+            {itemId = 4537, dropChance = 11.9},
+            {itemId = 818, dropChance = 1.5}
+        }
+    },
+
+    -- Defias Footpad
+    ["Defias Footpad"] = {
+        npcId = 481,
+        level = {10, 11},
+        zone = "Westfall",
+        loot = {
+            {itemId = 6150, dropChance = 21.6},
+            {itemId = 118, dropChance = 18.9},
+            {itemId = 5363, dropChance = 16.2},
+            {itemId = 2070, dropChance = 13.5},
+            {itemId = 4536, dropChance = 12.2},
+            {itemId = 4540, dropChance = 6.8},
+            {itemId = 774, dropChance = 4.1},
+            {itemId = 5368, dropChance = 4.1},
+            {itemId = 858, dropChance = 2.7},
+            {itemId = 4537, dropChance = 2.7},
+            {itemId = 2598, dropChance = 1.4}
+        }
+    },
+
+    -- Defias Henchman
+    ["Defias Henchman"] = {
+        npcId = 594,
+        level = {15, 16},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 53.7},
+            {itemId = 858, dropChance = 16.7},
+            {itemId = 4541, dropChance = 16.7},
+            {itemId = 414, dropChance = 11.1},
+            {itemId = 4537, dropChance = 11.1},
+            {itemId = 818, dropChance = 3.7}
+        }
+    },
+
+    -- Defias Highwayman
+    ["Defias Highwayman"] = {
+        npcId = 122,
+        level = {17, 18},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 47.1},
+            {itemId = 414, dropChance = 15.3},
+            {itemId = 4541, dropChance = 14.6},
+            {itemId = 4537, dropChance = 13.4},
+            {itemId = 858, dropChance = 11.8},
+            {itemId = 818, dropChance = 4.1},
+            {itemId = 1210, dropChance = 1.0},
+            {itemId = 4292, dropChance = 0.3}
+        }
+    },
+
+    -- Defias Inmate
+    ["Defias Inmate"] = {
+        npcId = 1708,
+        level = {24, 25},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 56.7},
+            {itemId = 5374, dropChance = 28.0},
+            {itemId = 422, dropChance = 7.7},
+            {itemId = 4542, dropChance = 7.5},
+            {itemId = 929, dropChance = 7.3},
+            {itemId = 4538, dropChance = 6.5},
+            {itemId = 1705, dropChance = 0.9},
+            {itemId = 1206, dropChance = 0.6}
+        }
+    },
+
+    -- Defias Insurgent
+    ["Defias Insurgent"] = {
+        npcId = 1715,
+        level = {25, 26},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 58.5},
+            {itemId = 5374, dropChance = 27.8},
+            {itemId = 4542, dropChance = 7.2},
+            {itemId = 422, dropChance = 6.8},
+            {itemId = 929, dropChance = 6.6},
+            {itemId = 4538, dropChance = 5.9},
+            {itemId = 1206, dropChance = 0.6},
+            {itemId = 1705, dropChance = 0.2}
+        }
+    },
+
+    -- Defias Knuckleduster
+    ["Defias Knuckleduster"] = {
+        npcId = 449,
+        level = {16, 17},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 40.6},
+            {itemId = 414, dropChance = 24.6},
+            {itemId = 4537, dropChance = 13.8},
+            {itemId = 4541, dropChance = 13.0},
+            {itemId = 858, dropChance = 8.7},
+            {itemId = 818, dropChance = 2.2},
+            {itemId = 1210, dropChance = 2.2},
+            {itemId = 4346, dropChance = 0.7},
+            {itemId = 4408, dropChance = 0.7}
+        }
+    },
+
+    -- Defias Looter
+    ["Defias Looter"] = {
+        npcId = 590,
+        level = {13, 14},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 51.8},
+            {itemId = 858, dropChance = 16.4},
+            {itemId = 4541, dropChance = 14.4},
+            {itemId = 414, dropChance = 10.3},
+            {itemId = 4537, dropChance = 10.0},
+            {itemId = 1210, dropChance = 2.8},
+            {itemId = 818, dropChance = 2.6},
+            {itemId = 2407, dropChance = 0.2},
+            {itemId = 2408, dropChance = 0.2}
+        }
+    },
+
+    -- Defias Magician
+    ["Defias Magician"] = {
+        npcId = 1726,
+        level = {16, 17},
+        zone = "Unknown",
+        loot = {
+            {itemId = 5368, dropChance = 70.0},
+            {itemId = 4541, dropChance = 15.0},
+            {itemId = 4537, dropChance = 10.0},
+            {itemId = 818, dropChance = 5.0},
+            {itemId = 858, dropChance = 5.0}
+        }
+    },
+
+    -- Defias Messenger
+    ["Defias Messenger"] = {
+        npcId = 550,
+        level = {14, 15},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 56.5},
+            {itemId = 858, dropChance = 17.4},
+            {itemId = 414, dropChance = 13.0},
+            {itemId = 818, dropChance = 4.3},
+            {itemId = 4537, dropChance = 4.3},
+            {itemId = 4541, dropChance = 4.3}
+        }
+    },
+
+    -- Defias Miner
+    ["Defias Miner"] = {
+        npcId = 598,
+        level = {17, 18},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5368, dropChance = 46.3},
+            {itemId = 4541, dropChance = 15.2},
+            {itemId = 4537, dropChance = 14.3},
+            {itemId = 414, dropChance = 12.7},
+            {itemId = 858, dropChance = 12.1},
+            {itemId = 818, dropChance = 3.2},
+            {itemId = 1210, dropChance = 2.9}
+        }
+    },
+
+    -- Defias Night Blade
+    ["Defias Night Blade"] = {
+        npcId = 909,
+        level = {25, 26},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 59.4},
+            {itemId = 5374, dropChance = 27.6},
+            {itemId = 4538, dropChance = 9.2},
+            {itemId = 4542, dropChance = 6.0},
+            {itemId = 422, dropChance = 4.6},
+            {itemId = 929, dropChance = 4.1},
+            {itemId = 1206, dropChance = 0.9}
+        }
+    },
+
+    -- Defias Night Runner
+    ["Defias Night Runner"] = {
+        npcId = 215,
+        level = {24, 25},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 210250, dropChance = 34.2}
+        }
+    },
+
+    -- Defias Overseer
+    ["Defias Overseer"] = {
+        npcId = 634,
+        level = {17, 18},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5368, dropChance = 47.1},
+            {itemId = 414, dropChance = 16.2},
+            {itemId = 4537, dropChance = 14.7},
+            {itemId = 4541, dropChance = 14.7},
+            {itemId = 858, dropChance = 10.3},
+            {itemId = 818, dropChance = 1.5},
+            {itemId = 1210, dropChance = 1.5}
+        }
+    },
+
+    -- Defias Pathstalker
+    ["Defias Pathstalker"] = {
+        npcId = 121,
+        level = {15, 16},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 42.6},
+            {itemId = 4541, dropChance = 20.6},
+            {itemId = 858, dropChance = 18.4},
+            {itemId = 4537, dropChance = 12.8},
+            {itemId = 414, dropChance = 12.1},
+            {itemId = 818, dropChance = 3.5},
+            {itemId = 1210, dropChance = 0.7}
+        }
+    },
+
+    -- Defias Pillager
+    ["Defias Pillager"] = {
+        npcId = 589,
+        level = {14, 15},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 48.7},
+            {itemId = 858, dropChance = 16.9},
+            {itemId = 414, dropChance = 13.3},
+            {itemId = 4541, dropChance = 12.2},
+            {itemId = 4537, dropChance = 10.8},
+            {itemId = 818, dropChance = 2.2},
+            {itemId = 1210, dropChance = 2.2},
+            {itemId = 2555, dropChance = 0.2},
+            {itemId = 2881, dropChance = 0.2},
+            {itemId = 3610, dropChance = 0.2},
+            {itemId = 7288, dropChance = 0.2}
+        }
+    },
+
+    -- Defias Pirate
+    ["Defias Pirate"] = {
+        npcId = 657,
+        level = {19, 20},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5368, dropChance = 51.9},
+            {itemId = 4537, dropChance = 16.5},
+            {itemId = 858, dropChance = 13.2},
+            {itemId = 4541, dropChance = 12.0},
+            {itemId = 414, dropChance = 11.7},
+            {itemId = 1210, dropChance = 2.3},
+            {itemId = 818, dropChance = 1.9},
+            {itemId = 2553, dropChance = 0.4}
+        }
+    },
+
+    -- Defias Prisoner
+    ["Defias Prisoner"] = {
+        npcId = 1706,
+        level = {23, 24},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 58.6},
+            {itemId = 5374, dropChance = 27.1},
+            {itemId = 4538, dropChance = 7.4},
+            {itemId = 4542, dropChance = 6.9},
+            {itemId = 929, dropChance = 6.8},
+            {itemId = 422, dropChance = 6.3},
+            {itemId = 1705, dropChance = 0.8},
+            {itemId = 1206, dropChance = 0.7}
+        }
+    },
+
+    -- Defias Renegade Mage
+    ["Defias Renegade Mage"] = {
+        npcId = 450,
+        level = {18, 19},
+        zone = "Westfall",
+        loot = {
+            {itemId = 4537, dropChance = 50.0},
+            {itemId = 858, dropChance = 33.3},
+            {itemId = 5368, dropChance = 16.7}
+        }
+    },
+
+    -- Defias Rogue Wizard
+    ["Defias Rogue Wizard"] = {
+        npcId = 474,
+        level = {9, 10},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5363, dropChance = 25.8},
+            {itemId = 6150, dropChance = 21.5},
+            {itemId = 2070, dropChance = 18.2},
+            {itemId = 4536, dropChance = 14.8},
+            {itemId = 4540, dropChance = 13.9},
+            {itemId = 118, dropChance = 12.9},
+            {itemId = 774, dropChance = 3.3}
+        }
+    },
+
+    -- Defias Smuggler
+    ["Defias Smuggler"] = {
+        npcId = 95,
+        level = {11, 12},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 51.0},
+            {itemId = 858, dropChance = 14.1},
+            {itemId = 4541, dropChance = 14.1},
+            {itemId = 4537, dropChance = 13.3},
+            {itemId = 414, dropChance = 12.9},
+            {itemId = 1210, dropChance = 2.0},
+            {itemId = 818, dropChance = 1.2},
+            {itemId = 3610, dropChance = 0.2}
+        }
+    },
+
+    -- Defias Squallshaper
+    ["Defias Squallshaper"] = {
+        npcId = 1732,
+        level = {19, 20},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5368, dropChance = 51.6},
+            {itemId = 414, dropChance = 16.4},
+            {itemId = 858, dropChance = 14.8},
+            {itemId = 4537, dropChance = 13.9},
+            {itemId = 4541, dropChance = 5.7},
+            {itemId = 818, dropChance = 3.3},
+            {itemId = 1210, dropChance = 2.5},
+            {itemId = 6716, dropChance = 0.8}
+        }
+    },
+
     -- Defias Strip Miner
     ["Defias Strip Miner"] = {
         npcId = 4416,
@@ -2953,6 +6118,26 @@ DB.PickpocketLoot = {
             {itemId = 858, dropChance = 16.1},
             {itemId = 4537, dropChance = 12.9},
             {itemId = 4541, dropChance = 9.7}
+        }
+    },
+
+    -- Defias Thug
+    ["Defias Thug"] = {
+        npcId = 38,
+        level = {3, 4},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 6150, dropChance = 25.5},
+            {itemId = 5363, dropChance = 23.5},
+            {itemId = 2070, dropChance = 14.5},
+            {itemId = 4536, dropChance = 12.6},
+            {itemId = 118, dropChance = 12.3},
+            {itemId = 4540, dropChance = 12.2},
+            {itemId = 774, dropChance = 5.4},
+            {itemId = 1370, dropChance = 0.8},
+            {itemId = 3609, dropChance = 0.3},
+            {itemId = 4865, dropChance = 0.3},
+            {itemId = 755, dropChance = 0.2}
         }
     },
 
@@ -2986,6 +6171,41 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Defias Trapper
+    ["Defias Trapper"] = {
+        npcId = 504,
+        level = {12, 13},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5368, dropChance = 52.9},
+            {itemId = 414, dropChance = 12.8},
+            {itemId = 4537, dropChance = 12.6},
+            {itemId = 858, dropChance = 12.0},
+            {itemId = 4541, dropChance = 12.0},
+            {itemId = 1210, dropChance = 3.1},
+            {itemId = 818, dropChance = 2.7},
+            {itemId = 4346, dropChance = 0.4},
+            {itemId = 6342, dropChance = 0.2}
+        }
+    },
+
+    -- Defias Watchman
+    ["Defias Watchman"] = {
+        npcId = 1725,
+        level = {16, 17},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5368, dropChance = 63.6},
+            {itemId = 4537, dropChance = 12.1},
+            {itemId = 414, dropChance = 7.6},
+            {itemId = 4541, dropChance = 7.6},
+            {itemId = 1210, dropChance = 6.1},
+            {itemId = 858, dropChance = 4.5},
+            {itemId = 818, dropChance = 1.5},
+            {itemId = 2406, dropChance = 1.5}
+        }
+    },
+
     -- Defias Wizard
     ["Defias Wizard"] = {
         npcId = 4418,
@@ -3001,6 +6221,33 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Defias Worker
+    ["Defias Worker"] = {
+        npcId = 1727,
+        level = {16, 17},
+        zone = "Unknown",
+        loot = {
+            {itemId = 5368, dropChance = 51.2},
+            {itemId = 414, dropChance = 17.4},
+            {itemId = 4537, dropChance = 14.0},
+            {itemId = 858, dropChance = 10.7},
+            {itemId = 4541, dropChance = 6.6},
+            {itemId = 1210, dropChance = 4.1},
+            {itemId = 818, dropChance = 0.8}
+        }
+    },
+
+    -- Delmanis the Hated
+    ["Delmanis the Hated"] = {
+        npcId = 3662,
+        level = {17, 17},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5369, dropChance = 66.7},
+            {itemId = 2287, dropChance = 50.0}
+        }
+    },
+
     -- Demon Portal Guardian
     ["Demon Portal Guardian"] = {
         npcId = 11937,
@@ -3011,6 +6258,78 @@ DB.PickpocketLoot = {
             {itemId = 5433, dropChance = 27.3},
             {itemId = 16883, dropChance = 18.2},
             {itemId = 1710, dropChance = 4.5}
+        }
+    },
+
+    -- Dermot
+    ["Dermot"] = {
+        npcId = 2413,
+        level = {34, 34},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 46.4},
+            {itemId = 5433, dropChance = 39.3},
+            {itemId = 4607, dropChance = 21.4},
+            {itemId = 1710, dropChance = 14.3}
+        }
+    },
+
+    -- Deth'ryll Satyr
+    ["Deth'ryll Satyr"] = {
+        npcId = 2212,
+        level = {12, 13},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5369, dropChance = 39.1},
+            {itemId = 858, dropChance = 30.4},
+            {itemId = 2287, dropChance = 30.4},
+            {itemId = 818, dropChance = 2.2},
+            {itemId = 1210, dropChance = 2.2}
+        }
+    },
+
+    -- Devlin Agamand
+    ["Devlin Agamand"] = {
+        npcId = 1657,
+        level = {9, 9},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 42.9},
+            {itemId = 4604, dropChance = 32.1},
+            {itemId = 774, dropChance = 17.9},
+            {itemId = 118, dropChance = 14.3},
+            {itemId = 7074, dropChance = 3.6}
+        }
+    },
+
+    -- Devouring Ooze
+    ["Devouring Ooze"] = {
+        npcId = 1808,
+        level = {55, 56},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 40.2},
+            {itemId = 8948, dropChance = 35.3},
+            {itemId = 16885, dropChance = 22.1},
+            {itemId = 3928, dropChance = 9.7},
+            {itemId = 7910, dropChance = 2.4}
+        }
+    },
+
+    -- Dextren Ward
+    ["Dextren Ward"] = {
+        npcId = 1663,
+        level = {26, 26},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 70.4},
+            {itemId = 5374, dropChance = 9.3},
+            {itemId = 422, dropChance = 7.4},
+            {itemId = 4538, dropChance = 7.4},
+            {itemId = 929, dropChance = 5.6},
+            {itemId = 1206, dropChance = 3.7},
+            {itemId = 4542, dropChance = 3.7},
+            {itemId = 1705, dropChance = 1.9}
         }
     },
 
@@ -3146,6 +6465,112 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Dragonmaw Bonewarder
+    ["Dragonmaw Bonewarder"] = {
+        npcId = 1057,
+        level = {27, 28},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 64.6},
+            {itemId = 5373, dropChance = 22.1},
+            {itemId = 3770, dropChance = 8.0},
+            {itemId = 4542, dropChance = 8.0},
+            {itemId = 929, dropChance = 2.7},
+            {itemId = 1705, dropChance = 0.9}
+        }
+    },
+
+    -- Dragonmaw Centurion
+    ["Dragonmaw Centurion"] = {
+        npcId = 1036,
+        level = {28, 29},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 52.9},
+            {itemId = 5373, dropChance = 30.9},
+            {itemId = 4542, dropChance = 13.2},
+            {itemId = 929, dropChance = 7.4},
+            {itemId = 3770, dropChance = 4.4}
+        }
+    },
+
+    -- Dragonmaw Grunt
+    ["Dragonmaw Grunt"] = {
+        npcId = 2102,
+        level = {20, 21},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 5379, dropChance = 59.7},
+            {itemId = 2287, dropChance = 22.4},
+            {itemId = 858, dropChance = 16.4},
+            {itemId = 4541, dropChance = 16.4},
+            {itemId = 818, dropChance = 1.5},
+            {itemId = 1210, dropChance = 1.5}
+        }
+    },
+
+    -- Dragonmaw Raider
+    ["Dragonmaw Raider"] = {
+        npcId = 1034,
+        level = {26, 27},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 55.2},
+            {itemId = 5373, dropChance = 30.8},
+            {itemId = 3770, dropChance = 11.0},
+            {itemId = 4542, dropChance = 9.0},
+            {itemId = 929, dropChance = 7.4},
+            {itemId = 1206, dropChance = 0.8},
+            {itemId = 1705, dropChance = 0.7}
+        }
+    },
+
+    -- Dragonmaw Scout
+    ["Dragonmaw Scout"] = {
+        npcId = 2103,
+        level = {19, 20},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 5379, dropChance = 56.5},
+            {itemId = 4541, dropChance = 19.0},
+            {itemId = 2287, dropChance = 14.9},
+            {itemId = 858, dropChance = 9.5},
+            {itemId = 818, dropChance = 3.0},
+            {itemId = 1210, dropChance = 1.8}
+        }
+    },
+
+    -- Dragonmaw Shadowwarder
+    ["Dragonmaw Shadowwarder"] = {
+        npcId = 1038,
+        level = {28, 29},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 67.9},
+            {itemId = 5373, dropChance = 21.4},
+            {itemId = 4542, dropChance = 10.7},
+            {itemId = 3770, dropChance = 7.1},
+            {itemId = 929, dropChance = 1.8},
+            {itemId = 1705, dropChance = 1.8}
+        }
+    },
+
+    -- Dragonmaw Swamprunner
+    ["Dragonmaw Swamprunner"] = {
+        npcId = 1035,
+        level = {27, 28},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 57.0},
+            {itemId = 5373, dropChance = 33.1},
+            {itemId = 3770, dropChance = 9.3},
+            {itemId = 929, dropChance = 6.6},
+            {itemId = 1705, dropChance = 2.6},
+            {itemId = 4542, dropChance = 2.6},
+            {itemId = 1206, dropChance = 2.0}
+        }
+    },
+
     -- Dread Weaver
     ["Dread Weaver"] = {
         npcId = 8528,
@@ -3263,6 +6688,39 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Druid of the Fang
+    ["Druid of the Fang"] = {
+        npcId = 3840,
+        level = {19, 20},
+        zone = "Wailing Caverns",
+        loot = {
+            {itemId = 5368, dropChance = 52.2},
+            {itemId = 858, dropChance = 13.5},
+            {itemId = 4541, dropChance = 12.4},
+            {itemId = 414, dropChance = 10.7},
+            {itemId = 4537, dropChance = 10.3},
+            {itemId = 818, dropChance = 2.8},
+            {itemId = 1210, dropChance = 2.8},
+            {itemId = 4409, dropChance = 0.2},
+            {itemId = 6347, dropChance = 0.2}
+        }
+    },
+
+    -- Drunken Footpad
+    ["Drunken Footpad"] = {
+        npcId = 2440,
+        level = {32, 33},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5431, dropChance = 43.2},
+            {itemId = 16883, dropChance = 27.0},
+            {itemId = 1707, dropChance = 18.9},
+            {itemId = 1710, dropChance = 10.8},
+            {itemId = 4544, dropChance = 10.8},
+            {itemId = 4539, dropChance = 5.4}
+        }
+    },
+
     -- Drysnap Crawler
     ["Drysnap Crawler"] = {
         npcId = 11562,
@@ -3289,6 +6747,100 @@ DB.PickpocketLoot = {
             {itemId = 6362, dropChance = 27.3},
             {itemId = 1710, dropChance = 13.6},
             {itemId = 5500, dropChance = 2.3}
+        }
+    },
+
+    -- Drywhisker Digger
+    ["Drywhisker Digger"] = {
+        npcId = 2574,
+        level = {36, 37},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 39.9},
+            {itemId = 5429, dropChance = 36.0},
+            {itemId = 3771, dropChance = 23.1},
+            {itemId = 1710, dropChance = 9.3},
+            {itemId = 1529, dropChance = 1.4},
+            {itemId = 3864, dropChance = 0.9}
+        }
+    },
+
+    -- Drywhisker Kobold
+    ["Drywhisker Kobold"] = {
+        npcId = 2572,
+        level = {35, 36},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5429, dropChance = 38.4},
+            {itemId = 16883, dropChance = 35.9},
+            {itemId = 3771, dropChance = 25.2},
+            {itemId = 1710, dropChance = 8.9},
+            {itemId = 3864, dropChance = 1.6},
+            {itemId = 1529, dropChance = 1.5}
+        }
+    },
+
+    -- Drywhisker Surveyor
+    ["Drywhisker Surveyor"] = {
+        npcId = 2573,
+        level = {37, 38},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5429, dropChance = 40.0},
+            {itemId = 16883, dropChance = 35.3},
+            {itemId = 3771, dropChance = 24.4},
+            {itemId = 1710, dropChance = 9.5},
+            {itemId = 3864, dropChance = 1.6},
+            {itemId = 1529, dropChance = 0.5}
+        }
+    },
+
+    -- Dun Garok Mountaineer
+    ["Dun Garok Mountaineer"] = {
+        npcId = 2344,
+        level = {28, 29},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 59.1},
+            {itemId = 5374, dropChance = 30.2},
+            {itemId = 929, dropChance = 7.4},
+            {itemId = 422, dropChance = 7.0},
+            {itemId = 4538, dropChance = 6.6},
+            {itemId = 4542, dropChance = 6.4},
+            {itemId = 1206, dropChance = 0.8},
+            {itemId = 1705, dropChance = 0.8}
+        }
+    },
+
+    -- Dun Garok Priest
+    ["Dun Garok Priest"] = {
+        npcId = 2346,
+        level = {29, 30},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 57.1},
+            {itemId = 5374, dropChance = 31.9},
+            {itemId = 929, dropChance = 11.8},
+            {itemId = 4542, dropChance = 5.9},
+            {itemId = 4538, dropChance = 5.0},
+            {itemId = 422, dropChance = 4.2}
+        }
+    },
+
+    -- Dun Garok Rifleman
+    ["Dun Garok Rifleman"] = {
+        npcId = 2345,
+        level = {29, 30},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 55.7},
+            {itemId = 5374, dropChance = 21.8},
+            {itemId = 4542, dropChance = 10.3},
+            {itemId = 929, dropChance = 8.9},
+            {itemId = 4538, dropChance = 8.1},
+            {itemId = 422, dropChance = 5.9},
+            {itemId = 1206, dropChance = 1.8},
+            {itemId = 1705, dropChance = 1.1}
         }
     },
 
@@ -3369,6 +6921,214 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 11.2},
             {itemId = 7909, dropChance = 2.2},
             {itemId = 7910, dropChance = 1.1}
+        }
+    },
+
+    -- Dustbelcher Brute
+    ["Dustbelcher Brute"] = {
+        npcId = 2715,
+        level = {39, 40},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5427, dropChance = 37.1},
+            {itemId = 16883, dropChance = 33.9},
+            {itemId = 4544, dropChance = 19.4},
+            {itemId = 1710, dropChance = 12.9},
+            {itemId = 3771, dropChance = 6.5}
+        }
+    },
+
+    -- Dustbelcher Lord
+    ["Dustbelcher Lord"] = {
+        npcId = 2719,
+        level = {44, 45},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5428, dropChance = 58.3},
+            {itemId = 4601, dropChance = 19.4},
+            {itemId = 16884, dropChance = 13.9},
+            {itemId = 4599, dropChance = 11.1},
+            {itemId = 3928, dropChance = 2.8}
+        }
+    },
+
+    -- Dustbelcher Mauler
+    ["Dustbelcher Mauler"] = {
+        npcId = 2717,
+        level = {41, 42},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5428, dropChance = 37.3},
+            {itemId = 16884, dropChance = 27.5},
+            {itemId = 4599, dropChance = 16.5},
+            {itemId = 4601, dropChance = 16.5},
+            {itemId = 3928, dropChance = 9.9},
+            {itemId = 7910, dropChance = 2.1},
+            {itemId = 7909, dropChance = 1.8}
+        }
+    },
+
+    -- Dustbelcher Mystic
+    ["Dustbelcher Mystic"] = {
+        npcId = 2907,
+        level = {36, 37},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5427, dropChance = 34.8},
+            {itemId = 16883, dropChance = 34.8},
+            {itemId = 4544, dropChance = 18.1},
+            {itemId = 1710, dropChance = 8.0},
+            {itemId = 3771, dropChance = 7.2},
+            {itemId = 1529, dropChance = 1.4},
+            {itemId = 3864, dropChance = 1.4}
+        }
+    },
+
+    -- Dustbelcher Ogre
+    ["Dustbelcher Ogre"] = {
+        npcId = 2701,
+        level = {38, 39},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5427, dropChance = 34.5},
+            {itemId = 16883, dropChance = 33.6},
+            {itemId = 3771, dropChance = 16.8},
+            {itemId = 4544, dropChance = 16.8},
+            {itemId = 1710, dropChance = 11.8},
+            {itemId = 1529, dropChance = 0.8},
+            {itemId = 3864, dropChance = 0.8}
+        }
+    },
+
+    -- Dustbelcher Ogre Mage
+    ["Dustbelcher Ogre Mage"] = {
+        npcId = 2720,
+        level = {43, 44},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5428, dropChance = 43.9},
+            {itemId = 16884, dropChance = 20.1},
+            {itemId = 4601, dropChance = 17.7},
+            {itemId = 4599, dropChance = 12.2},
+            {itemId = 3928, dropChance = 7.9},
+            {itemId = 7909, dropChance = 2.4},
+            {itemId = 7910, dropChance = 1.8}
+        }
+    },
+
+    -- Dustbelcher Shaman
+    ["Dustbelcher Shaman"] = {
+        npcId = 2718,
+        level = {42, 43},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5428, dropChance = 38.3},
+            {itemId = 16884, dropChance = 24.0},
+            {itemId = 4599, dropChance = 19.7},
+            {itemId = 3928, dropChance = 12.6},
+            {itemId = 4601, dropChance = 12.6},
+            {itemId = 7909, dropChance = 0.5},
+            {itemId = 7910, dropChance = 0.5}
+        }
+    },
+
+    -- Dustbelcher Warrior
+    ["Dustbelcher Warrior"] = {
+        npcId = 2906,
+        level = {35, 37},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5427, dropChance = 41.7},
+            {itemId = 16883, dropChance = 38.9},
+            {itemId = 3771, dropChance = 13.9},
+            {itemId = 1710, dropChance = 10.6},
+            {itemId = 4544, dropChance = 10.6},
+            {itemId = 1529, dropChance = 1.4},
+            {itemId = 3864, dropChance = 0.9}
+        }
+    },
+
+    -- Dustbelcher Wyrmhunter
+    ["Dustbelcher Wyrmhunter"] = {
+        npcId = 2716,
+        level = {40, 41},
+        zone = "Badlands",
+        loot = {
+            {itemId = 16883, dropChance = 41.7},
+            {itemId = 5427, dropChance = 36.2},
+            {itemId = 4544, dropChance = 13.3},
+            {itemId = 3771, dropChance = 10.7},
+            {itemId = 1710, dropChance = 6.1},
+            {itemId = 3864, dropChance = 1.9},
+            {itemId = 1529, dropChance = 1.0}
+        }
+    },
+
+    -- Dustwind Harpy
+    ["Dustwind Harpy"] = {
+        npcId = 3115,
+        level = {7, 8},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5364, dropChance = 49.0},
+            {itemId = 117, dropChance = 37.5},
+            {itemId = 118, dropChance = 9.4},
+            {itemId = 774, dropChance = 8.3},
+            {itemId = 3365, dropChance = 1.0},
+            {itemId = 3609, dropChance = 1.0}
+        }
+    },
+
+    -- Dustwind Pillager
+    ["Dustwind Pillager"] = {
+        npcId = 3116,
+        level = {7, 8},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5364, dropChance = 53.0},
+            {itemId = 117, dropChance = 26.0},
+            {itemId = 118, dropChance = 11.0},
+            {itemId = 774, dropChance = 11.0},
+            {itemId = 1413, dropChance = 1.0},
+            {itemId = 1431, dropChance = 1.0},
+            {itemId = 2589, dropChance = 1.0},
+            {itemId = 2773, dropChance = 1.0},
+            {itemId = 3642, dropChance = 1.0}
+        }
+    },
+
+    -- Dustwind Savage
+    ["Dustwind Savage"] = {
+        npcId = 3117,
+        level = {9, 10},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5364, dropChance = 42.1},
+            {itemId = 117, dropChance = 34.8},
+            {itemId = 118, dropChance = 16.5},
+            {itemId = 774, dropChance = 6.1},
+            {itemId = 1368, dropChance = 0.6},
+            {itemId = 1376, dropChance = 0.6},
+            {itemId = 1415, dropChance = 0.6},
+            {itemId = 2598, dropChance = 0.6},
+            {itemId = 3609, dropChance = 0.6},
+            {itemId = 4870, dropChance = 0.6},
+            {itemId = 4873, dropChance = 0.6}
+        }
+    },
+
+    -- Dustwind Storm Witch
+    ["Dustwind Storm Witch"] = {
+        npcId = 3118,
+        level = {10, 11},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5364, dropChance = 43.5},
+            {itemId = 117, dropChance = 39.1},
+            {itemId = 118, dropChance = 11.6},
+            {itemId = 774, dropChance = 2.9},
+            {itemId = 2210, dropChance = 1.4},
+            {itemId = 4873, dropChance = 1.4}
         }
     },
 
@@ -3465,6 +7225,49 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Edwin VanCleef
+    ["Edwin VanCleef"] = {
+        npcId = 639,
+        level = {21, 21},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 16882, dropChance = 60.4},
+            {itemId = 5374, dropChance = 18.9},
+            {itemId = 929, dropChance = 9.4},
+            {itemId = 4538, dropChance = 9.4},
+            {itemId = 4542, dropChance = 7.5},
+            {itemId = 422, dropChance = 3.8},
+            {itemId = 1705, dropChance = 1.9}
+        }
+    },
+
+    -- Eliza
+    ["Eliza"] = {
+        npcId = 314,
+        level = {31, 31},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 4607, dropChance = 41.2},
+            {itemId = 16883, dropChance = 29.4},
+            {itemId = 1710, dropChance = 23.5},
+            {itemId = 5433, dropChance = 17.6},
+            {itemId = 3864, dropChance = 11.8}
+        }
+    },
+
+    -- Emerald Ooze
+    ["Emerald Ooze"] = {
+        npcId = 4469,
+        level = {46, 47},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 4608, dropChance = 36.4},
+            {itemId = 16884, dropChance = 36.4},
+            {itemId = 3419, dropChance = 27.3},
+            {itemId = 3928, dropChance = 18.2}
+        }
+    },
+
     -- Emogg the Crusher
     ["Emogg the Crusher"] = {
         npcId = 14267,
@@ -3520,6 +7323,36 @@ DB.PickpocketLoot = {
             {itemId = 4544, dropChance = 28.6},
             {itemId = 5431, dropChance = 14.3},
             {itemId = 4539, dropChance = 14.3}
+        }
+    },
+
+    -- Erlan Drudgemoor
+    ["Erlan Drudgemoor"] = {
+        npcId = 880,
+        level = {8, 8},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 2070, dropChance = 33.3},
+            {itemId = 6150, dropChance = 26.7},
+            {itemId = 4540, dropChance = 20.0},
+            {itemId = 2598, dropChance = 13.3},
+            {itemId = 774, dropChance = 6.7},
+            {itemId = 779, dropChance = 6.7},
+            {itemId = 5363, dropChance = 6.7}
+        }
+    },
+
+    -- Evolving Ectoplasm
+    ["Evolving Ectoplasm"] = {
+        npcId = 3640,
+        level = {17, 18},
+        zone = "Wailing Caverns",
+        loot = {
+            {itemId = 4605, dropChance = 50.0},
+            {itemId = 5370, dropChance = 36.7},
+            {itemId = 858, dropChance = 16.7},
+            {itemId = 818, dropChance = 3.3},
+            {itemId = 1210, dropChance = 3.3}
         }
     },
 
@@ -3624,6 +7457,52 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Farmer Getz
+    ["Farmer Getz"] = {
+        npcId = 2403,
+        level = {24, 24},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 56.1},
+            {itemId = 5374, dropChance = 31.7},
+            {itemId = 422, dropChance = 12.2},
+            {itemId = 4538, dropChance = 9.8},
+            {itemId = 4542, dropChance = 7.3},
+            {itemId = 929, dropChance = 2.4}
+        }
+    },
+
+    -- Farmer Kalaba
+    ["Farmer Kalaba"] = {
+        npcId = 2451,
+        level = {25, 25},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 42.0},
+            {itemId = 929, dropChance = 34.0},
+            {itemId = 5374, dropChance = 18.0},
+            {itemId = 422, dropChance = 4.0},
+            {itemId = 4542, dropChance = 4.0},
+            {itemId = 4538, dropChance = 2.0}
+        }
+    },
+
+    -- Farmer Ray
+    ["Farmer Ray"] = {
+        npcId = 232,
+        level = {23, 23},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 61.5},
+            {itemId = 5374, dropChance = 17.3},
+            {itemId = 422, dropChance = 15.4},
+            {itemId = 4538, dropChance = 7.7},
+            {itemId = 4542, dropChance = 5.8},
+            {itemId = 929, dropChance = 1.9},
+            {itemId = 1206, dropChance = 1.9}
+        }
+    },
+
     -- Feeboz
     ["Feeboz"] = {
         npcId = 4063,
@@ -3676,6 +7555,66 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Felmusk Felsworn
+    ["Felmusk Felsworn"] = {
+        npcId = 3762,
+        level = {25, 26},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 60.9},
+            {itemId = 5375, dropChance = 23.3},
+            {itemId = 3770, dropChance = 15.6},
+            {itemId = 929, dropChance = 11.5},
+            {itemId = 1206, dropChance = 1.3},
+            {itemId = 1705, dropChance = 0.3}
+        }
+    },
+
+    -- Felmusk Rogue
+    ["Felmusk Rogue"] = {
+        npcId = 3759,
+        level = {26, 27},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 54.9},
+            {itemId = 3770, dropChance = 27.1},
+            {itemId = 5375, dropChance = 24.2},
+            {itemId = 929, dropChance = 12.8},
+            {itemId = 1206, dropChance = 0.4},
+            {itemId = 1705, dropChance = 0.4}
+        }
+    },
+
+    -- Felmusk Satyr
+    ["Felmusk Satyr"] = {
+        npcId = 3758,
+        level = {25, 26},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 52.5},
+            {itemId = 5375, dropChance = 26.7},
+            {itemId = 3770, dropChance = 25.5},
+            {itemId = 929, dropChance = 6.9},
+            {itemId = 1206, dropChance = 2.8},
+            {itemId = 1705, dropChance = 0.3}
+        }
+    },
+
+    -- Felmusk Shadowstalker
+    ["Felmusk Shadowstalker"] = {
+        npcId = 3763,
+        level = {26, 27},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 52.7},
+            {itemId = 5375, dropChance = 32.6},
+            {itemId = 3770, dropChance = 15.0},
+            {itemId = 929, dropChance = 8.0},
+            {itemId = 1705, dropChance = 1.6},
+            {itemId = 1206, dropChance = 1.3}
+        }
+    },
+
     -- Felweaver Scornn
     ["Felweaver Scornn"] = {
         npcId = 5822,
@@ -3693,9 +7632,9 @@ DB.PickpocketLoot = {
         level = {16, 16},
         zone = "Silverpine Forest",
         loot = {
-            {itemId = 4605, dropChance = 50.0},
-            {itemId = 5370, dropChance = 50.0},
-            {itemId = 858, dropChance = 14.3}
+            {itemId = 4605, dropChance = 53.3},
+            {itemId = 5370, dropChance = 46.7},
+            {itemId = 858, dropChance = 13.3}
         }
     },
 
@@ -3707,6 +7646,21 @@ DB.PickpocketLoot = {
         loot = {
             {itemId = 117, dropChance = 26.7},
             {itemId = 5364, dropChance = 26.7}
+        }
+    },
+
+    -- Fetid Corpse
+    ["Fetid Corpse"] = {
+        npcId = 1270,
+        level = {29, 30},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 47.7},
+            {itemId = 5376, dropChance = 32.3},
+            {itemId = 4606, dropChance = 21.4},
+            {itemId = 929, dropChance = 9.8},
+            {itemId = 1206, dropChance = 1.1},
+            {itemId = 1705, dropChance = 0.4}
         }
     },
 
@@ -3874,6 +7828,79 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- First Mate Snellig
+    ["First Mate Snellig"] = {
+        npcId = 1159,
+        level = {29, 29},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 57.1},
+            {itemId = 5376, dropChance = 33.3},
+            {itemId = 4606, dropChance = 19.0},
+            {itemId = 929, dropChance = 9.5}
+        }
+    },
+
+    -- Fizzle Darkstorm
+    ["Fizzle Darkstorm"] = {
+        npcId = 3203,
+        level = {12, 12},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5379, dropChance = 41.7},
+            {itemId = 858, dropChance = 25.0},
+            {itemId = 4541, dropChance = 16.7},
+            {itemId = 1210, dropChance = 8.3},
+            {itemId = 1380, dropChance = 8.3},
+            {itemId = 2287, dropChance = 8.3}
+        }
+    },
+
+    -- Fleet Master Firallon
+    ["Fleet Master Firallon"] = {
+        npcId = 2546,
+        level = {48, 48},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16884, dropChance = 35.0},
+            {itemId = 5432, dropChance = 30.0},
+            {itemId = 3928, dropChance = 20.0},
+            {itemId = 4602, dropChance = 20.0},
+            {itemId = 3927, dropChance = 15.0},
+            {itemId = 4601, dropChance = 5.0},
+            {itemId = 7910, dropChance = 5.0}
+        }
+    },
+
+    -- Flesh Eater
+    ["Flesh Eater"] = {
+        npcId = 3,
+        level = {24, 25},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 57.1},
+            {itemId = 5376, dropChance = 28.4},
+            {itemId = 4606, dropChance = 23.1},
+            {itemId = 929, dropChance = 5.6},
+            {itemId = 1206, dropChance = 0.7},
+            {itemId = 1705, dropChance = 0.3}
+        }
+    },
+
+    -- Flesh Golem
+    ["Flesh Golem"] = {
+        npcId = 1805,
+        level = {56, 57},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 37.3},
+            {itemId = 8948, dropChance = 37.3},
+            {itemId = 16885, dropChance = 20.3},
+            {itemId = 3928, dropChance = 10.2},
+            {itemId = 7910, dropChance = 3.4}
+        }
+    },
+
     -- Fleshflayer Ghoul
     ["Fleshflayer Ghoul"] = {
         npcId = 10407,
@@ -3885,6 +7912,21 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 16.9},
             {itemId = 3928, dropChance = 15.1},
             {itemId = 7910, dropChance = 1.5}
+        }
+    },
+
+    -- Foreman Bonds
+    ["Foreman Bonds"] = {
+        npcId = 2305,
+        level = {30, 30},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 60.0},
+            {itemId = 5374, dropChance = 31.4},
+            {itemId = 4542, dropChance = 11.4},
+            {itemId = 929, dropChance = 8.6},
+            {itemId = 4538, dropChance = 8.6},
+            {itemId = 422, dropChance = 2.9}
         }
     },
 
@@ -3942,6 +7984,363 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Forsaken Assassin
+    ["Forsaken Assassin"] = {
+        npcId = 3807,
+        level = {29, 30},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 54.3},
+            {itemId = 4606, dropChance = 22.2},
+            {itemId = 5376, dropChance = 22.2},
+            {itemId = 929, dropChance = 6.2}
+        }
+    },
+
+    -- Forsaken Bodyguard
+    ["Forsaken Bodyguard"] = {
+        npcId = 2721,
+        level = {35, 35},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 47.1},
+            {itemId = 5433, dropChance = 35.3},
+            {itemId = 4607, dropChance = 23.5},
+            {itemId = 1710, dropChance = 5.9}
+        }
+    },
+
+    -- Forsaken Courier
+    ["Forsaken Courier"] = {
+        npcId = 2714,
+        level = {35, 35},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 4607, dropChance = 33.3},
+            {itemId = 5433, dropChance = 33.3},
+            {itemId = 1529, dropChance = 22.2},
+            {itemId = 16883, dropChance = 22.2}
+        }
+    },
+
+    -- Forsaken Dark Stalker
+    ["Forsaken Dark Stalker"] = {
+        npcId = 3808,
+        level = {28, 29},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 59.2},
+            {itemId = 5376, dropChance = 26.2},
+            {itemId = 4606, dropChance = 19.4},
+            {itemId = 929, dropChance = 2.9},
+            {itemId = 1206, dropChance = 1.9},
+            {itemId = 1705, dropChance = 1.9}
+        }
+    },
+
+    -- Forsaken Herbalist
+    ["Forsaken Herbalist"] = {
+        npcId = 3733,
+        level = {18, 19},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5370, dropChance = 65.8},
+            {itemId = 4605, dropChance = 28.9},
+            {itemId = 858, dropChance = 7.9},
+            {itemId = 1210, dropChance = 2.6},
+            {itemId = 818, dropChance = 1.3},
+            {itemId = 2407, dropChance = 1.3}
+        }
+    },
+
+    -- Forsaken Infiltrator
+    ["Forsaken Infiltrator"] = {
+        npcId = 3806,
+        level = {29, 30},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 52.1},
+            {itemId = 5376, dropChance = 38.5},
+            {itemId = 4606, dropChance = 25.0},
+            {itemId = 929, dropChance = 5.2},
+            {itemId = 1705, dropChance = 3.1},
+            {itemId = 1206, dropChance = 1.0}
+        }
+    },
+
+    -- Forsaken Intruder
+    ["Forsaken Intruder"] = {
+        npcId = 3804,
+        level = {28, 29},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 50.0},
+            {itemId = 4606, dropChance = 31.7},
+            {itemId = 5376, dropChance = 21.7},
+            {itemId = 929, dropChance = 10.0}
+        }
+    },
+
+    -- Forsaken Seeker
+    ["Forsaken Seeker"] = {
+        npcId = 3732,
+        level = {18, 19},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5370, dropChance = 53.9},
+            {itemId = 4605, dropChance = 37.1},
+            {itemId = 858, dropChance = 13.5},
+            {itemId = 818, dropChance = 1.1},
+            {itemId = 1210, dropChance = 1.1},
+            {itemId = 6348, dropChance = 1.1}
+        }
+    },
+
+    -- Forsaken Thug
+    ["Forsaken Thug"] = {
+        npcId = 3734,
+        level = {20, 20},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5370, dropChance = 60.6},
+            {itemId = 858, dropChance = 21.2},
+            {itemId = 4605, dropChance = 21.2},
+            {itemId = 818, dropChance = 3.0},
+            {itemId = 1210, dropChance = 3.0}
+        }
+    },
+
+    -- Foulweald Den Watcher
+    ["Foulweald Den Watcher"] = {
+        npcId = 3746,
+        level = {24, 25},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 51.9},
+            {itemId = 3770, dropChance = 29.6},
+            {itemId = 5375, dropChance = 29.6},
+            {itemId = 929, dropChance = 3.7},
+            {itemId = 1206, dropChance = 1.9}
+        }
+    },
+
+    -- Foulweald Pathfinder
+    ["Foulweald Pathfinder"] = {
+        npcId = 3745,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 59.7},
+            {itemId = 3770, dropChance = 27.4},
+            {itemId = 5375, dropChance = 24.2},
+            {itemId = 929, dropChance = 6.5},
+            {itemId = 1206, dropChance = 1.6},
+            {itemId = 1705, dropChance = 1.6}
+        }
+    },
+
+    -- Foulweald Shaman
+    ["Foulweald Shaman"] = {
+        npcId = 3748,
+        level = {24, 25},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 66.7},
+            {itemId = 5375, dropChance = 27.0},
+            {itemId = 3770, dropChance = 14.4},
+            {itemId = 929, dropChance = 5.4}
+        }
+    },
+
+    -- Foulweald Totemic
+    ["Foulweald Totemic"] = {
+        npcId = 3750,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 54.9},
+            {itemId = 5375, dropChance = 27.3},
+            {itemId = 3770, dropChance = 24.0},
+            {itemId = 929, dropChance = 7.7},
+            {itemId = 1206, dropChance = 1.0},
+            {itemId = 1705, dropChance = 0.6}
+        }
+    },
+
+    -- Foulweald Ursa
+    ["Foulweald Ursa"] = {
+        npcId = 3749,
+        level = {24, 25},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 53.1},
+            {itemId = 5375, dropChance = 30.2},
+            {itemId = 3770, dropChance = 25.0},
+            {itemId = 929, dropChance = 6.3},
+            {itemId = 1206, dropChance = 2.1},
+            {itemId = 1705, dropChance = 1.0}
+        }
+    },
+
+    -- Foulweald Warrior
+    ["Foulweald Warrior"] = {
+        npcId = 3743,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 57.7},
+            {itemId = 5375, dropChance = 29.0},
+            {itemId = 3770, dropChance = 20.1},
+            {itemId = 929, dropChance = 5.4},
+            {itemId = 1705, dropChance = 0.9},
+            {itemId = 1206, dropChance = 0.2}
+        }
+    },
+
+    -- Freezing Ghoul
+    ["Freezing Ghoul"] = {
+        npcId = 1796,
+        level = {55, 56},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 47.6},
+            {itemId = 8948, dropChance = 24.4},
+            {itemId = 16885, dropChance = 18.3},
+            {itemId = 3928, dropChance = 13.4},
+            {itemId = 7910, dropChance = 3.0}
+        }
+    },
+
+    -- Frostmane Headhunter
+    ["Frostmane Headhunter"] = {
+        npcId = 1123,
+        level = {8, 9},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 59.0},
+            {itemId = 4540, dropChance = 18.0},
+            {itemId = 117, dropChance = 17.3},
+            {itemId = 118, dropChance = 12.9},
+            {itemId = 774, dropChance = 5.0},
+            {itemId = 2598, dropChance = 0.7}
+        }
+    },
+
+    -- Frostmane Hideskinner
+    ["Frostmane Hideskinner"] = {
+        npcId = 1122,
+        level = {9, 10},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 70.0},
+            {itemId = 4540, dropChance = 30.0},
+            {itemId = 118, dropChance = 10.0},
+            {itemId = 117, dropChance = 5.0},
+            {itemId = 774, dropChance = 5.0}
+        }
+    },
+
+    -- Frostmane Novice
+    ["Frostmane Novice"] = {
+        npcId = 946,
+        level = {3, 4},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 46.1},
+            {itemId = 4540, dropChance = 23.6},
+            {itemId = 118, dropChance = 18.0},
+            {itemId = 117, dropChance = 16.9},
+            {itemId = 774, dropChance = 3.4},
+            {itemId = 2598, dropChance = 3.4},
+            {itemId = 2211, dropChance = 1.1},
+            {itemId = 2649, dropChance = 1.1},
+            {itemId = 7074, dropChance = 1.1}
+        }
+    },
+
+    -- Frostmane Seer
+    ["Frostmane Seer"] = {
+        npcId = 1397,
+        level = {8, 9},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 2676, dropChance = 67.3},
+            {itemId = 5367, dropChance = 23.1},
+            {itemId = 117, dropChance = 10.6},
+            {itemId = 118, dropChance = 6.1},
+            {itemId = 4540, dropChance = 5.4},
+            {itemId = 774, dropChance = 1.3},
+            {itemId = 755, dropChance = 0.3},
+            {itemId = 1422, dropChance = 0.3},
+            {itemId = 3171, dropChance = 0.3},
+            {itemId = 6515, dropChance = 0.3}
+        }
+    },
+
+    -- Frostmane Shadowcaster
+    ["Frostmane Shadowcaster"] = {
+        npcId = 1124,
+        level = {9, 10},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 46.7},
+            {itemId = 117, dropChance = 20.0},
+            {itemId = 4540, dropChance = 20.0},
+            {itemId = 118, dropChance = 13.3},
+            {itemId = 774, dropChance = 6.7},
+            {itemId = 2211, dropChance = 6.7}
+        }
+    },
+
+    -- Frostmane Snowstrider
+    ["Frostmane Snowstrider"] = {
+        npcId = 1121,
+        level = {8, 9},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 59.1},
+            {itemId = 117, dropChance = 13.6},
+            {itemId = 118, dropChance = 13.6},
+            {itemId = 4540, dropChance = 12.5},
+            {itemId = 774, dropChance = 2.3},
+            {itemId = 2598, dropChance = 2.3},
+            {itemId = 3365, dropChance = 1.1}
+        }
+    },
+
+    -- Frostmane Troll
+    ["Frostmane Troll"] = {
+        npcId = 1120,
+        level = {7, 8},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 68.2},
+            {itemId = 117, dropChance = 22.7},
+            {itemId = 118, dropChance = 9.1},
+            {itemId = 774, dropChance = 4.5},
+            {itemId = 4540, dropChance = 4.5}
+        }
+    },
+
+    -- Frostmane Troll Whelp
+    ["Frostmane Troll Whelp"] = {
+        npcId = 706,
+        level = {3, 4},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 51.2},
+            {itemId = 117, dropChance = 20.8},
+            {itemId = 4540, dropChance = 16.0},
+            {itemId = 118, dropChance = 14.1},
+            {itemId = 774, dropChance = 4.0},
+            {itemId = 1376, dropChance = 0.2},
+            {itemId = 1378, dropChance = 0.2},
+            {itemId = 3609, dropChance = 0.2},
+            {itemId = 4865, dropChance = 0.2},
+            {itemId = 7074, dropChance = 0.2}
+        }
+    },
+
     -- Frostwolf Bowman
     ["Frostwolf Bowman"] = {
         npcId = 13359,
@@ -3982,6 +8381,19 @@ DB.PickpocketLoot = {
             {itemId = 8950, dropChance = 17.4},
             {itemId = 8952, dropChance = 13.0},
             {itemId = 3928, dropChance = 4.3}
+        }
+    },
+
+    -- Fungal Ooze
+    ["Fungal Ooze"] = {
+        npcId = 5235,
+        level = {45, 46},
+        zone = "Unknown",
+        loot = {
+            {itemId = 4608, dropChance = 43.8},
+            {itemId = 3419, dropChance = 28.1},
+            {itemId = 16884, dropChance = 28.1},
+            {itemId = 3928, dropChance = 9.4}
         }
     },
 
@@ -4131,6 +8543,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Gan'zulah
+    ["Gan'zulah"] = {
+        npcId = 1061,
+        level = {41, 41},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16884, dropChance = 35.7},
+            {itemId = 5428, dropChance = 28.6},
+            {itemId = 4599, dropChance = 21.4},
+            {itemId = 4601, dropChance = 14.3},
+            {itemId = 7910, dropChance = 7.1}
+        }
+    },
+
     -- Gangled Golem
     ["Gangled Golem"] = {
         npcId = 8544,
@@ -4141,6 +8567,32 @@ DB.PickpocketLoot = {
             {itemId = 3419, dropChance = 38.9},
             {itemId = 3928, dropChance = 11.1},
             {itemId = 16885, dropChance = 11.1}
+        }
+    },
+
+    -- Garr Salthoof
+    ["Garr Salthoof"] = {
+        npcId = 2549,
+        level = {43, 43},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 60.0},
+            {itemId = 4601, dropChance = 16.7},
+            {itemId = 4599, dropChance = 13.3},
+            {itemId = 3928, dropChance = 10.0},
+            {itemId = 16884, dropChance = 10.0},
+            {itemId = 7909, dropChance = 6.7}
+        }
+    },
+
+    -- Garrick Padfoot
+    ["Garrick Padfoot"] = {
+        npcId = 103,
+        level = {5, 5},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 203723, dropChance = 91.0},
+            {itemId = 203785, dropChance = 12.4}
         }
     },
 
@@ -4155,6 +8607,31 @@ DB.PickpocketLoot = {
             {itemId = 8952, dropChance = 22.6},
             {itemId = 8950, dropChance = 12.9},
             {itemId = 16885, dropChance = 3.2}
+        }
+    },
+
+    -- Gath'Ilzogg
+    ["Gath'Ilzogg"] = {
+        npcId = 334,
+        level = {26, 26},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 57.1},
+            {itemId = 5373, dropChance = 42.9},
+            {itemId = 929, dropChance = 14.3}
+        }
+    },
+
+    -- Gazz'uz
+    ["Gazz'uz"] = {
+        npcId = 3204,
+        level = {14, 14},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5379, dropChance = 45.5},
+            {itemId = 2287, dropChance = 27.3},
+            {itemId = 4541, dropChance = 18.2},
+            {itemId = 858, dropChance = 9.1}
         }
     },
 
@@ -4403,6 +8880,34 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Gilnid
+    ["Gilnid"] = {
+        npcId = 1763,
+        level = {20, 20},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5379, dropChance = 42.9},
+            {itemId = 2287, dropChance = 21.4},
+            {itemId = 858, dropChance = 14.3},
+            {itemId = 4541, dropChance = 14.3},
+            {itemId = 1210, dropChance = 7.1}
+        }
+    },
+
+    -- Glommus
+    ["Glommus"] = {
+        npcId = 2422,
+        level = {39, 39},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 52.4},
+            {itemId = 5427, dropChance = 28.6},
+            {itemId = 4544, dropChance = 14.3},
+            {itemId = 3771, dropChance = 9.5},
+            {itemId = 1710, dropChance = 4.8}
+        }
+    },
+
     -- Glutinous Ooze
     ["Glutinous Ooze"] = {
         npcId = 6559,
@@ -4430,6 +8935,97 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Gnarlpine Ambusher
+    ["Gnarlpine Ambusher"] = {
+        npcId = 2152,
+        level = {6, 7},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 117, dropChance = 43.6},
+            {itemId = 5364, dropChance = 40.9},
+            {itemId = 118, dropChance = 8.7},
+            {itemId = 774, dropChance = 2.7},
+            {itemId = 1476, dropChance = 2.0},
+            {itemId = 2598, dropChance = 1.3},
+            {itemId = 1377, dropChance = 0.7},
+            {itemId = 2589, dropChance = 0.7},
+            {itemId = 4865, dropChance = 0.7},
+            {itemId = 5367, dropChance = 0.7},
+            {itemId = 6889, dropChance = 0.7},
+            {itemId = 7100, dropChance = 0.7}
+        }
+    },
+
+    -- Gnarlpine Augur
+    ["Gnarlpine Augur"] = {
+        npcId = 2011,
+        level = {8, 9},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 49.1},
+            {itemId = 117, dropChance = 36.4},
+            {itemId = 118, dropChance = 13.6},
+            {itemId = 774, dropChance = 5.5},
+            {itemId = 1413, dropChance = 0.9},
+            {itemId = 2589, dropChance = 0.9},
+            {itemId = 3609, dropChance = 0.9},
+            {itemId = 4775, dropChance = 0.9}
+        }
+    },
+
+    -- Gnarlpine Avenger
+    ["Gnarlpine Avenger"] = {
+        npcId = 2013,
+        level = {9, 10},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 56.5},
+            {itemId = 118, dropChance = 22.6},
+            {itemId = 117, dropChance = 21.0},
+            {itemId = 774, dropChance = 9.7}
+        }
+    },
+
+    -- Gnarlpine Defender
+    ["Gnarlpine Defender"] = {
+        npcId = 2010,
+        level = {7, 8},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 49.4},
+            {itemId = 117, dropChance = 36.2},
+            {itemId = 118, dropChance = 13.5},
+            {itemId = 774, dropChance = 5.3},
+            {itemId = 2598, dropChance = 0.9},
+            {itemId = 2589, dropChance = 0.6},
+            {itemId = 1370, dropChance = 0.3},
+            {itemId = 1372, dropChance = 0.3},
+            {itemId = 2774, dropChance = 0.3},
+            {itemId = 4775, dropChance = 0.3},
+            {itemId = 4813, dropChance = 0.3},
+            {itemId = 6889, dropChance = 0.3}
+        }
+    },
+
+    -- Gnarlpine Gardener
+    ["Gnarlpine Gardener"] = {
+        npcId = 2007,
+        level = {5, 6},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 53.1},
+            {itemId = 117, dropChance = 38.8},
+            {itemId = 118, dropChance = 6.1},
+            {itemId = 774, dropChance = 6.1},
+            {itemId = 1370, dropChance = 2.0},
+            {itemId = 1376, dropChance = 2.0},
+            {itemId = 1378, dropChance = 2.0},
+            {itemId = 7073, dropChance = 2.0},
+            {itemId = 7074, dropChance = 2.0},
+            {itemId = 7098, dropChance = 2.0}
+        }
+    },
+
     -- Gnarlpine Mystic
     ["Gnarlpine Mystic"] = {
         npcId = 7235,
@@ -4446,6 +9042,157 @@ DB.PickpocketLoot = {
             {itemId = 7101, dropChance = 1.1},
             {itemId = 3300, dropChance = 1.1},
             {itemId = 4540, dropChance = 1.1}
+        }
+    },
+
+    -- Gnarlpine Pathfinder
+    ["Gnarlpine Pathfinder"] = {
+        npcId = 2012,
+        level = {9, 10},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 58.1},
+            {itemId = 117, dropChance = 29.0},
+            {itemId = 118, dropChance = 11.3},
+            {itemId = 774, dropChance = 3.2},
+            {itemId = 1476, dropChance = 3.2}
+        }
+    },
+
+    -- Gnarlpine Shaman
+    ["Gnarlpine Shaman"] = {
+        npcId = 2009,
+        level = {7, 8},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 50.3},
+            {itemId = 117, dropChance = 36.7},
+            {itemId = 118, dropChance = 11.1},
+            {itemId = 774, dropChance = 3.2},
+            {itemId = 2598, dropChance = 1.3},
+            {itemId = 7100, dropChance = 0.6},
+            {itemId = 1376, dropChance = 0.3},
+            {itemId = 1378, dropChance = 0.3},
+            {itemId = 1476, dropChance = 0.3},
+            {itemId = 2589, dropChance = 0.3},
+            {itemId = 3013, dropChance = 0.3},
+            {itemId = 4536, dropChance = 0.3},
+            {itemId = 4604, dropChance = 0.3},
+            {itemId = 7074, dropChance = 0.3},
+            {itemId = 7101, dropChance = 0.3}
+        }
+    },
+
+    -- Gnarlpine Ursa
+    ["Gnarlpine Ursa"] = {
+        npcId = 2006,
+        level = {5, 6},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 44.2},
+            {itemId = 117, dropChance = 30.2},
+            {itemId = 118, dropChance = 7.0},
+            {itemId = 774, dropChance = 4.7},
+            {itemId = 1369, dropChance = 2.3},
+            {itemId = 1380, dropChance = 2.3},
+            {itemId = 1476, dropChance = 2.3},
+            {itemId = 2643, dropChance = 2.3},
+            {itemId = 2651, dropChance = 2.3}
+        }
+    },
+
+    -- Gnarlpine Warrior
+    ["Gnarlpine Warrior"] = {
+        npcId = 2008,
+        level = {6, 7},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 5364, dropChance = 51.7},
+            {itemId = 117, dropChance = 32.9},
+            {itemId = 118, dropChance = 11.2},
+            {itemId = 774, dropChance = 2.8},
+            {itemId = 7101, dropChance = 2.1},
+            {itemId = 4865, dropChance = 1.4},
+            {itemId = 1372, dropChance = 0.7},
+            {itemId = 2589, dropChance = 0.7},
+            {itemId = 2598, dropChance = 0.7},
+            {itemId = 2649, dropChance = 0.7},
+            {itemId = 2654, dropChance = 0.7},
+            {itemId = 7074, dropChance = 0.7},
+            {itemId = 7100, dropChance = 0.7}
+        }
+    },
+
+    -- Gobbler
+    ["Gobbler"] = {
+        npcId = 1259,
+        level = {22, 22},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 66.7},
+            {itemId = 5377, dropChance = 22.2},
+            {itemId = 929, dropChance = 7.4},
+            {itemId = 6308, dropChance = 7.4}
+        }
+    },
+
+    -- Goblin Craftsman
+    ["Goblin Craftsman"] = {
+        npcId = 1731,
+        level = {18, 19},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5379, dropChance = 50.4},
+            {itemId = 2287, dropChance = 28.0},
+            {itemId = 4541, dropChance = 16.0},
+            {itemId = 858, dropChance = 8.8},
+            {itemId = 818, dropChance = 4.0},
+            {itemId = 1210, dropChance = 1.6}
+        }
+    },
+
+    -- Goblin Engineer
+    ["Goblin Engineer"] = {
+        npcId = 622,
+        level = {18, 19},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5379, dropChance = 41.9},
+            {itemId = 2287, dropChance = 29.0},
+            {itemId = 4541, dropChance = 25.8},
+            {itemId = 858, dropChance = 9.7},
+            {itemId = 818, dropChance = 3.2}
+        }
+    },
+
+    -- Goblin Shipbuilder
+    ["Goblin Shipbuilder"] = {
+        npcId = 3947,
+        level = {19, 20},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5379, dropChance = 56.2},
+            {itemId = 4541, dropChance = 25.7},
+            {itemId = 2287, dropChance = 18.1},
+            {itemId = 858, dropChance = 6.7},
+            {itemId = 1210, dropChance = 2.9},
+            {itemId = 4408, dropChance = 1.0}
+        }
+    },
+
+    -- Goblin Woodcarver
+    ["Goblin Woodcarver"] = {
+        npcId = 641,
+        level = {18, 19},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5379, dropChance = 49.7},
+            {itemId = 2287, dropChance = 28.3},
+            {itemId = 4541, dropChance = 13.6},
+            {itemId = 858, dropChance = 12.6},
+            {itemId = 1210, dropChance = 2.1},
+            {itemId = 818, dropChance = 0.5},
+            {itemId = 3610, dropChance = 0.5}
         }
     },
 
@@ -4488,6 +9235,21 @@ DB.PickpocketLoot = {
             {itemId = 858, dropChance = 6.1},
             {itemId = 818, dropChance = 6.1},
             {itemId = 1210, dropChance = 2.0}
+        }
+    },
+
+    -- Goldtooth
+    ["Goldtooth"] = {
+        npcId = 327,
+        level = {8, 8},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5364, dropChance = 44.8},
+            {itemId = 117, dropChance = 34.5},
+            {itemId = 118, dropChance = 10.3},
+            {itemId = 774, dropChance = 6.9},
+            {itemId = 2654, dropChance = 3.4},
+            {itemId = 6303, dropChance = 3.4}
         }
     },
 
@@ -4842,6 +9604,37 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Grandpa Vishas
+    ["Grandpa Vishas"] = {
+        npcId = 3985,
+        level = {34, 34},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 1710, dropChance = 35.7},
+            {itemId = 16883, dropChance = 28.6},
+            {itemId = 4539, dropChance = 14.3},
+            {itemId = 4544, dropChance = 14.3},
+            {itemId = 1707, dropChance = 7.1},
+            {itemId = 5431, dropChance = 7.1}
+        }
+    },
+
+    -- Grave Robber
+    ["Grave Robber"] = {
+        npcId = 218,
+        level = {24, 25},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 50.6},
+            {itemId = 5374, dropChance = 33.8},
+            {itemId = 4542, dropChance = 9.1},
+            {itemId = 422, dropChance = 5.2},
+            {itemId = 4538, dropChance = 3.9},
+            {itemId = 929, dropChance = 2.6},
+            {itemId = 1206, dropChance = 2.6}
+        }
+    },
+
     -- Gravelsnout Digger
     ["Gravelsnout Digger"] = {
         npcId = 4113,
@@ -4923,6 +9716,59 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Green Sludge
+    ["Green Sludge"] = {
+        npcId = 2655,
+        level = {46, 47},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 3419, dropChance = 43.7},
+            {itemId = 4608, dropChance = 32.6},
+            {itemId = 16884, dropChance = 19.2},
+            {itemId = 3928, dropChance = 8.8},
+            {itemId = 7910, dropChance = 1.0},
+            {itemId = 7909, dropChance = 0.6}
+        }
+    },
+
+    -- Greenpaw
+    ["Greenpaw"] = {
+        npcId = 1993,
+        level = {10, 10},
+        zone = "Teldrassil",
+        loot = {
+            {itemId = 117, dropChance = 83.3},
+            {itemId = 5364, dropChance = 33.3}
+        }
+    },
+
+    -- Gregor Agamand
+    ["Gregor Agamand"] = {
+        npcId = 1654,
+        level = {10, 10},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 46.7},
+            {itemId = 4604, dropChance = 40.0},
+            {itemId = 118, dropChance = 13.3}
+        }
+    },
+
+    -- Grel'borg the Miser
+    ["Grel'borg the Miser"] = {
+        npcId = 2417,
+        level = {39, 39},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5427, dropChance = 48.1},
+            {itemId = 16883, dropChance = 31.5},
+            {itemId = 3771, dropChance = 24.1},
+            {itemId = 1710, dropChance = 5.6},
+            {itemId = 4544, dropChance = 5.6},
+            {itemId = 1529, dropChance = 3.7}
+        }
+    },
+
     -- Grenka Bloodscreech
     ["Grenka Bloodscreech"] = {
         npcId = 4490,
@@ -4931,6 +9777,131 @@ DB.PickpocketLoot = {
         loot = {
             {itemId = 16883, dropChance = 80.0},
             {itemId = 1710, dropChance = 20.0}
+        }
+    },
+
+    -- Greymist Coastrunner
+    ["Greymist Coastrunner"] = {
+        npcId = 2202,
+        level = {12, 13},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 48.9},
+            {itemId = 6289, dropChance = 33.3},
+            {itemId = 858, dropChance = 13.3},
+            {itemId = 1210, dropChance = 6.7},
+            {itemId = 818, dropChance = 4.4}
+        }
+    },
+
+    -- Greymist Hunter
+    ["Greymist Hunter"] = {
+        npcId = 2206,
+        level = {16, 17},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 53.8},
+            {itemId = 6289, dropChance = 33.3},
+            {itemId = 858, dropChance = 15.4},
+            {itemId = 818, dropChance = 2.6}
+        }
+    },
+
+    -- Greymist Netter
+    ["Greymist Netter"] = {
+        npcId = 2204,
+        level = {14, 15},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 6289, dropChance = 53.1},
+            {itemId = 5371, dropChance = 40.6},
+            {itemId = 858, dropChance = 18.8},
+            {itemId = 818, dropChance = 3.1},
+            {itemId = 1210, dropChance = 3.1}
+        }
+    },
+
+    -- Greymist Oracle
+    ["Greymist Oracle"] = {
+        npcId = 2207,
+        level = {18, 19},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 51.1},
+            {itemId = 6289, dropChance = 29.8},
+            {itemId = 818, dropChance = 12.8},
+            {itemId = 858, dropChance = 10.6}
+        }
+    },
+
+    -- Greymist Raider
+    ["Greymist Raider"] = {
+        npcId = 2201,
+        level = {11, 12},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 51.9},
+            {itemId = 6289, dropChance = 29.6},
+            {itemId = 858, dropChance = 14.8},
+            {itemId = 818, dropChance = 3.7},
+            {itemId = 1210, dropChance = 3.7}
+        }
+    },
+
+    -- Greymist Seer
+    ["Greymist Seer"] = {
+        npcId = 2203,
+        level = {13, 14},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 44.9},
+            {itemId = 6289, dropChance = 40.8},
+            {itemId = 858, dropChance = 14.3},
+            {itemId = 1210, dropChance = 2.0},
+            {itemId = 4346, dropChance = 2.0}
+        }
+    },
+
+    -- Greymist Tidehunter
+    ["Greymist Tidehunter"] = {
+        npcId = 2208,
+        level = {19, 20},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 63.6},
+            {itemId = 6289, dropChance = 27.3},
+            {itemId = 858, dropChance = 13.6},
+            {itemId = 1210, dropChance = 4.5}
+        }
+    },
+
+    -- Greymist Warrior
+    ["Greymist Warrior"] = {
+        npcId = 2205,
+        level = {15, 16},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 47.3},
+            {itemId = 6289, dropChance = 40.0},
+            {itemId = 858, dropChance = 10.9},
+            {itemId = 818, dropChance = 1.8},
+            {itemId = 1210, dropChance = 1.8},
+            {itemId = 2408, dropChance = 1.8},
+            {itemId = 6348, dropChance = 1.8}
+        }
+    },
+
+    -- Grik'nir the Cold
+    ["Grik'nir the Cold"] = {
+        npcId = 808,
+        level = {5, 5},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 56.5},
+            {itemId = 4540, dropChance = 17.4},
+            {itemId = 118, dropChance = 13.0},
+            {itemId = 117, dropChance = 8.7},
+            {itemId = 774, dropChance = 4.3}
         }
     },
 
@@ -5297,6 +10268,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Haggard Refugee
+    ["Haggard Refugee"] = {
+        npcId = 2053,
+        level = {18, 19},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 52.9},
+            {itemId = 4537, dropChance = 23.5},
+            {itemId = 414, dropChance = 11.8},
+            {itemId = 858, dropChance = 5.9},
+            {itemId = 4541, dropChance = 5.9}
+        }
+    },
+
     -- Hahk'Zor
     ["Hahk'Zor"] = {
         npcId = 9602,
@@ -5442,6 +10427,22 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Hamhock
+    ["Hamhock"] = {
+        npcId = 1717,
+        level = {28, 28},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 58.8},
+            {itemId = 5373, dropChance = 25.0},
+            {itemId = 3770, dropChance = 19.1},
+            {itemId = 4542, dropChance = 7.4},
+            {itemId = 929, dropChance = 4.4},
+            {itemId = 1705, dropChance = 2.9},
+            {itemId = 1206, dropChance = 1.5}
+        }
+    },
+
     -- Hammered Patron
     ["Hammered Patron"] = {
         npcId = 9554,
@@ -5456,6 +10457,62 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 10.2},
             {itemId = 7910, dropChance = 1.3},
             {itemId = 7909, dropChance = 1.1}
+        }
+    },
+
+    -- Hammerfall Grunt
+    ["Hammerfall Grunt"] = {
+        npcId = 2619,
+        level = {34, 35},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5427, dropChance = 39.4},
+            {itemId = 16883, dropChance = 35.6},
+            {itemId = 4544, dropChance = 16.3},
+            {itemId = 3771, dropChance = 12.5},
+            {itemId = 1710, dropChance = 5.8},
+            {itemId = 3864, dropChance = 2.4},
+            {itemId = 1529, dropChance = 1.0}
+        }
+    },
+
+    -- Hammerfall Peon
+    ["Hammerfall Peon"] = {
+        npcId = 2618,
+        level = {33, 34},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5427, dropChance = 40.1},
+            {itemId = 16883, dropChance = 30.0},
+            {itemId = 3771, dropChance = 15.0},
+            {itemId = 4544, dropChance = 13.2},
+            {itemId = 1710, dropChance = 10.1},
+            {itemId = 3864, dropChance = 1.3}
+        }
+    },
+
+    -- Hammerspine
+    ["Hammerspine"] = {
+        npcId = 1119,
+        level = {12, 12},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 2287, dropChance = 42.9},
+            {itemId = 5379, dropChance = 42.9},
+            {itemId = 858, dropChance = 14.3}
+        }
+    },
+
+    -- Hand of Ravenclaw
+    ["Hand of Ravenclaw"] = {
+        npcId = 1870,
+        level = {15, 16},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 4605, dropChance = 50.0},
+            {itemId = 5370, dropChance = 30.0},
+            {itemId = 858, dropChance = 25.0},
+            {itemId = 818, dropChance = 5.0}
         }
     },
 
@@ -5693,6 +10750,54 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Herod
+    ["Herod"] = {
+        npcId = 3975,
+        level = {40, 40},
+        zone = "Scarlet Monastery",
+        loot = {
+            {itemId = 16883, dropChance = 40.5},
+            {itemId = 5431, dropChance = 35.1},
+            {itemId = 1710, dropChance = 12.6},
+            {itemId = 4544, dropChance = 10.8},
+            {itemId = 4539, dropChance = 9.9},
+            {itemId = 1707, dropChance = 5.4},
+            {itemId = 1529, dropChance = 0.9}
+        }
+    },
+
+    -- Hexed Troll
+    ["Hexed Troll"] = {
+        npcId = 3207,
+        level = {8, 9},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5367, dropChance = 43.5},
+            {itemId = 117, dropChance = 18.1},
+            {itemId = 4540, dropChance = 17.4},
+            {itemId = 118, dropChance = 10.9},
+            {itemId = 774, dropChance = 5.8},
+            {itemId = 3609, dropChance = 2.2},
+            {itemId = 2589, dropChance = 1.4},
+            {itemId = 2598, dropChance = 1.4},
+            {itemId = 1369, dropChance = 0.7},
+            {itemId = 2553, dropChance = 0.7},
+            {itemId = 4563, dropChance = 0.7},
+            {itemId = 4873, dropChance = 0.7}
+        }
+    },
+
+    -- Hezrul Bloodmark
+    ["Hezrul Bloodmark"] = {
+        npcId = 3396,
+        level = {19, 19},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 2287, dropChance = 83.3},
+            {itemId = 5369, dropChance = 16.7}
+        }
+    },
+
     -- High Chief Winterfall
     ["High Chief Winterfall"] = {
         npcId = 10738,
@@ -5753,6 +10858,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- High Priest Thekal
+    ["High Priest Thekal"] = {
+        npcId = 14509,
+        level = {1, 1},
+        zone = "Zul'Gurub",
+        loot = {
+            {itemId = 8952, dropChance = 40.0},
+            {itemId = 16885, dropChance = 33.3},
+            {itemId = 5428, dropChance = 20.0},
+            {itemId = 7910, dropChance = 13.3},
+            {itemId = 8950, dropChance = 6.7}
+        }
+    },
+
     -- High Priestess Arlokk
     ["High Priestess Arlokk"] = {
         npcId = 14515,
@@ -5765,6 +10884,61 @@ DB.PickpocketLoot = {
             {itemId = 8952, dropChance = 13.2},
             {itemId = 3928, dropChance = 7.9},
             {itemId = 7910, dropChance = 2.6}
+        }
+    },
+
+    -- High Priestess Jeklik
+    ["High Priestess Jeklik"] = {
+        npcId = 14517,
+        level = {1, 1},
+        zone = "Zul'Gurub",
+        loot = {
+            {itemId = 5428, dropChance = 38.1},
+            {itemId = 8952, dropChance = 33.3},
+            {itemId = 3928, dropChance = 14.3},
+            {itemId = 8950, dropChance = 14.3},
+            {itemId = 16885, dropChance = 9.5}
+        }
+    },
+
+    -- High Priestess Mar'li
+    ["High Priestess Mar'li"] = {
+        npcId = 14510,
+        level = {1, 1},
+        zone = "Zul'Gurub",
+        loot = {
+            {itemId = 5428, dropChance = 50.0},
+            {itemId = 8952, dropChance = 28.6},
+            {itemId = 16885, dropChance = 14.3},
+            {itemId = 3928, dropChance = 7.1},
+            {itemId = 8950, dropChance = 7.1}
+        }
+    },
+
+    -- High Protector Lorik
+    ["High Protector Lorik"] = {
+        npcId = 1846,
+        level = {61, 61},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 42.9},
+            {itemId = 16885, dropChance = 42.9},
+            {itemId = 8932, dropChance = 28.6}
+        }
+    },
+
+    -- High Protector Tarsen
+    ["High Protector Tarsen"] = {
+        npcId = 1845,
+        level = {59, 59},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 45.5},
+            {itemId = 3928, dropChance = 18.2},
+            {itemId = 8950, dropChance = 18.2},
+            {itemId = 8932, dropChance = 9.1},
+            {itemId = 8953, dropChance = 9.1},
+            {itemId = 16885, dropChance = 9.1}
         }
     },
 
@@ -5795,6 +10969,238 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Highvale Marksman
+    ["Highvale Marksman"] = {
+        npcId = 2693,
+        level = {45, 46},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5432, dropChance = 42.0},
+            {itemId = 16884, dropChance = 20.7},
+            {itemId = 4601, dropChance = 15.2},
+            {itemId = 3928, dropChance = 10.8},
+            {itemId = 3927, dropChance = 8.7},
+            {itemId = 4602, dropChance = 8.7},
+            {itemId = 7909, dropChance = 1.8},
+            {itemId = 7910, dropChance = 1.3}
+        }
+    },
+
+    -- Highvale Outrunner
+    ["Highvale Outrunner"] = {
+        npcId = 2691,
+        level = {43, 44},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5432, dropChance = 43.4},
+            {itemId = 16884, dropChance = 25.9},
+            {itemId = 3927, dropChance = 11.8},
+            {itemId = 4601, dropChance = 9.1},
+            {itemId = 3928, dropChance = 8.8},
+            {itemId = 4602, dropChance = 7.7},
+            {itemId = 7910, dropChance = 0.7}
+        }
+    },
+
+    -- Highvale Ranger
+    ["Highvale Ranger"] = {
+        npcId = 2694,
+        level = {46, 47},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5432, dropChance = 37.3},
+            {itemId = 16884, dropChance = 27.2},
+            {itemId = 3927, dropChance = 11.8},
+            {itemId = 4602, dropChance = 11.8},
+            {itemId = 4601, dropChance = 10.5},
+            {itemId = 3928, dropChance = 7.9},
+            {itemId = 7909, dropChance = 2.2}
+        }
+    },
+
+    -- Highvale Scout
+    ["Highvale Scout"] = {
+        npcId = 2692,
+        level = {44, 45},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5432, dropChance = 44.6},
+            {itemId = 16884, dropChance = 20.6},
+            {itemId = 4602, dropChance = 13.1},
+            {itemId = 3927, dropChance = 12.4},
+            {itemId = 4601, dropChance = 11.2},
+            {itemId = 3928, dropChance = 9.0},
+            {itemId = 7909, dropChance = 1.5},
+            {itemId = 7910, dropChance = 0.7}
+        }
+    },
+
+    -- Hillsbrad Apprentice Blacksmith
+    ["Hillsbrad Apprentice Blacksmith"] = {
+        npcId = 2265,
+        level = {24, 25},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 63.3},
+            {itemId = 5374, dropChance = 22.3},
+            {itemId = 929, dropChance = 11.5},
+            {itemId = 4538, dropChance = 7.2},
+            {itemId = 4542, dropChance = 5.8},
+            {itemId = 422, dropChance = 2.9},
+            {itemId = 1206, dropChance = 1.4}
+        }
+    },
+
+    -- Hillsbrad Councilman
+    ["Hillsbrad Councilman"] = {
+        npcId = 2387,
+        level = {25, 26},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 58.0},
+            {itemId = 5374, dropChance = 21.5},
+            {itemId = 4538, dropChance = 10.0},
+            {itemId = 929, dropChance = 7.3},
+            {itemId = 4542, dropChance = 6.8},
+            {itemId = 422, dropChance = 6.4},
+            {itemId = 1206, dropChance = 0.9},
+            {itemId = 1705, dropChance = 0.9}
+        }
+    },
+
+    -- Hillsbrad Farmer
+    ["Hillsbrad Farmer"] = {
+        npcId = 2266,
+        level = {23, 24},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 59.1},
+            {itemId = 5374, dropChance = 22.7},
+            {itemId = 4542, dropChance = 8.4},
+            {itemId = 422, dropChance = 7.4},
+            {itemId = 929, dropChance = 7.1},
+            {itemId = 4538, dropChance = 6.8},
+            {itemId = 1206, dropChance = 1.7},
+            {itemId = 1705, dropChance = 0.4}
+        }
+    },
+
+    -- Hillsbrad Farmhand
+    ["Hillsbrad Farmhand"] = {
+        npcId = 2360,
+        level = {22, 23},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 58.5},
+            {itemId = 5374, dropChance = 24.2},
+            {itemId = 4538, dropChance = 8.1},
+            {itemId = 4542, dropChance = 8.1},
+            {itemId = 422, dropChance = 7.2},
+            {itemId = 929, dropChance = 6.1},
+            {itemId = 1705, dropChance = 0.6},
+            {itemId = 1206, dropChance = 0.2}
+        }
+    },
+
+    -- Hillsbrad Footman
+    ["Hillsbrad Footman"] = {
+        npcId = 2268,
+        level = {25, 26},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 58.1},
+            {itemId = 5374, dropChance = 27.2},
+            {itemId = 4538, dropChance = 9.0},
+            {itemId = 422, dropChance = 6.2},
+            {itemId = 4542, dropChance = 5.5},
+            {itemId = 929, dropChance = 5.4},
+            {itemId = 1705, dropChance = 0.6},
+            {itemId = 1206, dropChance = 0.2}
+        }
+    },
+
+    -- Hillsbrad Foreman
+    ["Hillsbrad Foreman"] = {
+        npcId = 2503,
+        level = {27, 28},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 70.8},
+            {itemId = 5374, dropChance = 23.8},
+            {itemId = 4542, dropChance = 11.2},
+            {itemId = 929, dropChance = 3.8},
+            {itemId = 4538, dropChance = 3.5},
+            {itemId = 422, dropChance = 3.1},
+            {itemId = 1705, dropChance = 1.2}
+        }
+    },
+
+    -- Hillsbrad Miner
+    ["Hillsbrad Miner"] = {
+        npcId = 2269,
+        level = {26, 27},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 52.9},
+            {itemId = 5374, dropChance = 27.3},
+            {itemId = 4538, dropChance = 9.0},
+            {itemId = 4542, dropChance = 8.9},
+            {itemId = 422, dropChance = 8.1},
+            {itemId = 929, dropChance = 6.0},
+            {itemId = 1705, dropChance = 1.7},
+            {itemId = 1206, dropChance = 0.9}
+        }
+    },
+
+    -- Hillsbrad Peasant
+    ["Hillsbrad Peasant"] = {
+        npcId = 2267,
+        level = {24, 25},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 58.5},
+            {itemId = 5374, dropChance = 26.8},
+            {itemId = 4538, dropChance = 8.3},
+            {itemId = 422, dropChance = 7.2},
+            {itemId = 929, dropChance = 7.2},
+            {itemId = 4542, dropChance = 6.1},
+            {itemId = 1206, dropChance = 0.4},
+            {itemId = 1705, dropChance = 0.2}
+        }
+    },
+
+    -- Hillsbrad Sentry
+    ["Hillsbrad Sentry"] = {
+        npcId = 2270,
+        level = {27, 28},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 58.9},
+            {itemId = 5374, dropChance = 30.4},
+            {itemId = 929, dropChance = 10.7},
+            {itemId = 4542, dropChance = 10.7},
+            {itemId = 4538, dropChance = 6.3},
+            {itemId = 422, dropChance = 4.5},
+            {itemId = 1705, dropChance = 1.8},
+            {itemId = 1206, dropChance = 0.9}
+        }
+    },
+
+    -- Hillsbrad Tailor
+    ["Hillsbrad Tailor"] = {
+        npcId = 2264,
+        level = {24, 25},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 68.8},
+            {itemId = 4538, dropChance = 15.6},
+            {itemId = 929, dropChance = 9.4},
+            {itemId = 5374, dropChance = 9.4},
+            {itemId = 422, dropChance = 6.3},
+            {itemId = 4542, dropChance = 6.3}
+        }
+    },
+
     -- Hitah'ya the Keeper
     ["Hitah'ya the Keeper"] = {
         npcId = 10802,
@@ -5805,6 +11211,20 @@ DB.PickpocketLoot = {
             {itemId = 5428, dropChance = 31.8},
             {itemId = 4599, dropChance = 22.7},
             {itemId = 3928, dropChance = 4.5}
+        }
+    },
+
+    -- Hogger
+    ["Hogger"] = {
+        npcId = 448,
+        level = {11, 11},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 2287, dropChance = 44.1},
+            {itemId = 5369, dropChance = 38.2},
+            {itemId = 858, dropChance = 23.5},
+            {itemId = 818, dropChance = 2.9},
+            {itemId = 2408, dropChance = 2.9}
         }
     },
 
@@ -5914,6 +11334,22 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Houndmaster Loksey
+    ["Houndmaster Loksey"] = {
+        npcId = 3974,
+        level = {34, 34},
+        zone = "Scarlet Monastery",
+        loot = {
+            {itemId = 16883, dropChance = 47.9},
+            {itemId = 5431, dropChance = 27.3},
+            {itemId = 1710, dropChance = 10.7},
+            {itemId = 4539, dropChance = 9.1},
+            {itemId = 4544, dropChance = 9.1},
+            {itemId = 1707, dropChance = 7.4},
+            {itemId = 3864, dropChance = 0.8}
+        }
+    },
+
     -- Hukku
     ["Hukku"] = {
         npcId = 5715,
@@ -5925,6 +11361,23 @@ DB.PickpocketLoot = {
             {itemId = 8950, dropChance = 15.0},
             {itemId = 8952, dropChance = 12.5},
             {itemId = 16885, dropChance = 7.5}
+        }
+    },
+
+    -- Hungering Dead
+    ["Hungering Dead"] = {
+        npcId = 1527,
+        level = {7, 8},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 4604, dropChance = 47.9},
+            {itemId = 5362, dropChance = 31.3},
+            {itemId = 774, dropChance = 12.5},
+            {itemId = 118, dropChance = 4.2},
+            {itemId = 1370, dropChance = 2.1},
+            {itemId = 2589, dropChance = 2.1},
+            {itemId = 2651, dropChance = 2.1},
+            {itemId = 2653, dropChance = 2.1}
         }
     },
 
@@ -6005,6 +11458,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Insane Ghoul
+    ["Insane Ghoul"] = {
+        npcId = 511,
+        level = {26, 26},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 63.2},
+            {itemId = 5376, dropChance = 28.9},
+            {itemId = 4606, dropChance = 13.2},
+            {itemId = 929, dropChance = 7.9},
+            {itemId = 1206, dropChance = 2.6}
+        }
+    },
+
     -- Instructor Malicia
     ["Instructor Malicia"] = {
         npcId = 10505,
@@ -6020,6 +11487,23 @@ DB.PickpocketLoot = {
             {itemId = 7910, dropChance = 2.1},
             {itemId = 24231, dropChance = 1.0},
             {itemId = 24232, dropChance = 1.0}
+        }
+    },
+
+    -- Interrogator Vishas
+    ["Interrogator Vishas"] = {
+        npcId = 3983,
+        level = {32, 32},
+        zone = "Scarlet Monastery",
+        loot = {
+            {itemId = 16883, dropChance = 38.6},
+            {itemId = 5431, dropChance = 36.1},
+            {itemId = 4544, dropChance = 14.5},
+            {itemId = 4539, dropChance = 12.0},
+            {itemId = 1707, dropChance = 6.6},
+            {itemId = 1710, dropChance = 5.4},
+            {itemId = 1529, dropChance = 1.2},
+            {itemId = 3864, dropChance = 1.2}
         }
     },
 
@@ -6148,6 +11632,21 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Ironpatch
+    ["Ironpatch"] = {
+        npcId = 2547,
+        level = {43, 43},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 36.4},
+            {itemId = 4601, dropChance = 27.3},
+            {itemId = 16884, dropChance = 22.7},
+            {itemId = 3928, dropChance = 13.6},
+            {itemId = 4599, dropChance = 4.5},
+            {itemId = 7909, dropChance = 4.5}
+        }
+    },
+
     -- Ironspine
     ["Ironspine"] = {
         npcId = 6489,
@@ -6213,6 +11712,35 @@ DB.PickpocketLoot = {
             {itemId = 8948, dropChance = 42.9},
             {itemId = 16885, dropChance = 14.3},
             {itemId = 3928, dropChance = 3.6}
+        }
+    },
+
+    -- Jade Ooze
+    ["Jade Ooze"] = {
+        npcId = 2656,
+        level = {47, 48},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 3419, dropChance = 44.6},
+            {itemId = 4608, dropChance = 29.9},
+            {itemId = 16884, dropChance = 21.8},
+            {itemId = 3928, dropChance = 12.5},
+            {itemId = 7909, dropChance = 2.2},
+            {itemId = 7910, dropChance = 0.9}
+        }
+    },
+
+    -- Jade Sludge
+    ["Jade Sludge"] = {
+        npcId = 4468,
+        level = {47, 48},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 3419, dropChance = 43.1},
+            {itemId = 4608, dropChance = 33.8},
+            {itemId = 3928, dropChance = 15.4},
+            {itemId = 16884, dropChance = 13.8},
+            {itemId = 7910, dropChance = 4.6}
         }
     },
 
@@ -6422,6 +11950,53 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Jailor Borhuin
+    ["Jailor Borhuin"] = {
+        npcId = 2431,
+        level = {37, 37},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 54.8},
+            {itemId = 1710, dropChance = 19.4},
+            {itemId = 4539, dropChance = 12.9},
+            {itemId = 5431, dropChance = 12.9},
+            {itemId = 4544, dropChance = 3.2}
+        }
+    },
+
+    -- Jailor Eston
+    ["Jailor Eston"] = {
+        npcId = 2427,
+        level = {24, 24},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 55.4},
+            {itemId = 5374, dropChance = 25.6},
+            {itemId = 4538, dropChance = 13.2},
+            {itemId = 422, dropChance = 7.4},
+            {itemId = 4542, dropChance = 7.4},
+            {itemId = 929, dropChance = 5.8},
+            {itemId = 1206, dropChance = 1.7},
+            {itemId = 1705, dropChance = 0.8}
+        }
+    },
+
+    -- Jailor Marlgen
+    ["Jailor Marlgen"] = {
+        npcId = 2428,
+        level = {24, 24},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 50.0},
+            {itemId = 5374, dropChance = 30.2},
+            {itemId = 929, dropChance = 13.8},
+            {itemId = 4542, dropChance = 6.0},
+            {itemId = 1705, dropChance = 5.2},
+            {itemId = 422, dropChance = 4.3},
+            {itemId = 4538, dropChance = 4.3}
+        }
+    },
+
     -- Jammal'an the Prophet
     ["Jammal'an the Prophet"] = {
         npcId = 5710,
@@ -6478,6 +12053,33 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Jin'do the Hexxer
+    ["Jin'do the Hexxer"] = {
+        npcId = 11380,
+        level = {1, 1},
+        zone = "Zul'Gurub",
+        loot = {
+            {itemId = 5428, dropChance = 31.3},
+            {itemId = 8952, dropChance = 31.3},
+            {itemId = 3928, dropChance = 25.0},
+            {itemId = 8950, dropChance = 12.5},
+            {itemId = 16885, dropChance = 6.3}
+        }
+    },
+
+    -- Jon-Jon the Crow
+    ["Jon-Jon the Crow"] = {
+        npcId = 2536,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 3419, dropChance = 40.0},
+            {itemId = 4608, dropChance = 40.0},
+            {itemId = 3928, dropChance = 13.3},
+            {itemId = 16884, dropChance = 13.3}
+        }
+    },
+
     -- Jugkar Grim'rod
     ["Jugkar Grim'rod"] = {
         npcId = 5771,
@@ -6492,6 +12094,34 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Kam Deepfury
+    ["Kam Deepfury"] = {
+        npcId = 1666,
+        level = {27, 27},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 67.2},
+            {itemId = 5374, dropChance = 27.6},
+            {itemId = 4538, dropChance = 6.9},
+            {itemId = 929, dropChance = 5.2},
+            {itemId = 4542, dropChance = 3.4},
+            {itemId = 422, dropChance = 1.7},
+            {itemId = 1206, dropChance = 1.7}
+        }
+    },
+
+    -- Karrel Grayves
+    ["Karrel Grayves"] = {
+        npcId = 1918,
+        level = {2, 3},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 64.7},
+            {itemId = 4604, dropChance = 41.2},
+            {itemId = 774, dropChance = 11.8}
+        }
+    },
+
     -- Kazkaz the Unholy
     ["Kazkaz the Unholy"] = {
         npcId = 5401,
@@ -6503,6 +12133,19 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 20.0},
             {itemId = 4601, dropChance = 10.0},
             {itemId = 16884, dropChance = 10.0}
+        }
+    },
+
+    -- Kegan Darkmar
+    ["Kegan Darkmar"] = {
+        npcId = 2414,
+        level = {35, 35},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 40.6},
+            {itemId = 5433, dropChance = 37.5},
+            {itemId = 4607, dropChance = 25.0},
+            {itemId = 1710, dropChance = 9.4}
         }
     },
 
@@ -6602,6 +12245,127 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Kobold Digger
+    ["Kobold Digger"] = {
+        npcId = 1236,
+        level = {12, 13},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5369, dropChance = 55.7},
+            {itemId = 2287, dropChance = 36.1},
+            {itemId = 858, dropChance = 11.5},
+            {itemId = 1210, dropChance = 4.9}
+        }
+    },
+
+    -- Kobold Geomancer
+    ["Kobold Geomancer"] = {
+        npcId = 476,
+        level = {7, 8},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5364, dropChance = 59.5},
+            {itemId = 117, dropChance = 26.2},
+            {itemId = 118, dropChance = 19.0},
+            {itemId = 3609, dropChance = 2.4}
+        }
+    },
+
+    -- Kobold Laborer
+    ["Kobold Laborer"] = {
+        npcId = 80,
+        level = {3, 4},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5364, dropChance = 50.9},
+            {itemId = 117, dropChance = 37.0},
+            {itemId = 118, dropChance = 14.5},
+            {itemId = 774, dropChance = 4.2},
+            {itemId = 755, dropChance = 0.3},
+            {itemId = 2598, dropChance = 0.3},
+            {itemId = 7074, dropChance = 0.3}
+        }
+    },
+
+    -- Kobold Miner
+    ["Kobold Miner"] = {
+        npcId = 40,
+        level = {6, 7},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5364, dropChance = 48.1},
+            {itemId = 117, dropChance = 39.4},
+            {itemId = 118, dropChance = 9.5},
+            {itemId = 774, dropChance = 6.6},
+            {itemId = 2589, dropChance = 0.4},
+            {itemId = 4536, dropChance = 0.4},
+            {itemId = 7074, dropChance = 0.4},
+            {itemId = 1367, dropChance = 0.2},
+            {itemId = 2070, dropChance = 0.2},
+            {itemId = 2210, dropChance = 0.2},
+            {itemId = 2598, dropChance = 0.2},
+            {itemId = 2656, dropChance = 0.2},
+            {itemId = 2773, dropChance = 0.2},
+            {itemId = 2835, dropChance = 0.2},
+            {itemId = 2842, dropChance = 0.2},
+            {itemId = 2958, dropChance = 0.2},
+            {itemId = 3609, dropChance = 0.2},
+            {itemId = 4604, dropChance = 0.2},
+            {itemId = 6150, dropChance = 0.2},
+            {itemId = 7073, dropChance = 0.2}
+        }
+    },
+
+    -- Kobold Tunneler
+    ["Kobold Tunneler"] = {
+        npcId = 475,
+        level = {5, 6},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5364, dropChance = 45.6},
+            {itemId = 117, dropChance = 37.4},
+            {itemId = 118, dropChance = 13.9},
+            {itemId = 774, dropChance = 4.3},
+            {itemId = 1366, dropChance = 0.7},
+            {itemId = 2057, dropChance = 0.6},
+            {itemId = 4536, dropChance = 0.5},
+            {itemId = 7074, dropChance = 0.5},
+            {itemId = 3609, dropChance = 0.4},
+            {itemId = 2598, dropChance = 0.3}
+        }
+    },
+
+    -- Kobold Vermin
+    ["Kobold Vermin"] = {
+        npcId = 6,
+        level = {1, 2},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5364, dropChance = 48.2},
+            {itemId = 117, dropChance = 37.7},
+            {itemId = 118, dropChance = 13.6},
+            {itemId = 774, dropChance = 8.8},
+            {itemId = 1366, dropChance = 0.4},
+            {itemId = 1380, dropChance = 0.4},
+            {itemId = 2070, dropChance = 0.4},
+            {itemId = 2211, dropChance = 0.4}
+        }
+    },
+
+    -- Kobold Worker
+    ["Kobold Worker"] = {
+        npcId = 257,
+        level = {3, 3},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5364, dropChance = 50.6},
+            {itemId = 117, dropChance = 37.7},
+            {itemId = 118, dropChance = 14.0},
+            {itemId = 774, dropChance = 3.3},
+            {itemId = 2598, dropChance = 0.4}
+        }
+    },
+
     -- Kolkar Battle Lord
     ["Kolkar Battle Lord"] = {
         npcId = 4636,
@@ -6614,6 +12378,19 @@ DB.PickpocketLoot = {
             {itemId = 1710, dropChance = 6.1},
             {itemId = 1529, dropChance = 1.5},
             {itemId = 3864, dropChance = 1.1}
+        }
+    },
+
+    -- Kolkar Bloodcharger
+    ["Kolkar Bloodcharger"] = {
+        npcId = 3397,
+        level = {14, 15},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 45.5},
+            {itemId = 2287, dropChance = 43.4},
+            {itemId = 858, dropChance = 15.2},
+            {itemId = 818, dropChance = 2.0}
         }
     },
 
@@ -6647,6 +12424,23 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Kolkar Drudge
+    ["Kolkar Drudge"] = {
+        npcId = 3119,
+        level = {6, 7},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5364, dropChance = 52.4},
+            {itemId = 117, dropChance = 36.8},
+            {itemId = 118, dropChance = 10.3},
+            {itemId = 774, dropChance = 2.7},
+            {itemId = 2598, dropChance = 1.1},
+            {itemId = 2211, dropChance = 0.5},
+            {itemId = 3609, dropChance = 0.5},
+            {itemId = 7098, dropChance = 0.5}
+        }
+    },
+
     -- Kolkar Invader
     ["Kolkar Invader"] = {
         npcId = 9524,
@@ -6658,6 +12452,19 @@ DB.PickpocketLoot = {
             {itemId = 858, dropChance = 4.3},
             {itemId = 1210, dropChance = 4.3},
             {itemId = 6342, dropChance = 4.3}
+        }
+    },
+
+    -- Kolkar Marauder
+    ["Kolkar Marauder"] = {
+        npcId = 3275,
+        level = {15, 16},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 56.3},
+            {itemId = 2287, dropChance = 36.9},
+            {itemId = 858, dropChance = 14.6},
+            {itemId = 1210, dropChance = 1.0}
         }
     },
 
@@ -6676,6 +12483,34 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Kolkar Outrunner
+    ["Kolkar Outrunner"] = {
+        npcId = 3120,
+        level = {7, 8},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5364, dropChance = 50.0},
+            {itemId = 117, dropChance = 39.1},
+            {itemId = 118, dropChance = 8.7},
+            {itemId = 774, dropChance = 5.4},
+            {itemId = 2589, dropChance = 1.1},
+            {itemId = 3609, dropChance = 1.1}
+        }
+    },
+
+    -- Kolkar Pack Runner
+    ["Kolkar Pack Runner"] = {
+        npcId = 3274,
+        level = {14, 15},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 2287, dropChance = 36.4},
+            {itemId = 5369, dropChance = 36.4},
+            {itemId = 858, dropChance = 31.8},
+            {itemId = 818, dropChance = 4.5}
+        }
+    },
+
     -- Kolkar Scout
     ["Kolkar Scout"] = {
         npcId = 4633,
@@ -6688,6 +12523,22 @@ DB.PickpocketLoot = {
             {itemId = 929, dropChance = 7.7},
             {itemId = 1206, dropChance = 1.4},
             {itemId = 1705, dropChance = 1.2}
+        }
+    },
+
+    -- Kolkar Stormer
+    ["Kolkar Stormer"] = {
+        npcId = 3273,
+        level = {13, 14},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 47.7},
+            {itemId = 2287, dropChance = 39.9},
+            {itemId = 858, dropChance = 15.2},
+            {itemId = 818, dropChance = 2.5},
+            {itemId = 1210, dropChance = 1.4},
+            {itemId = 2407, dropChance = 0.3},
+            {itemId = 4292, dropChance = 0.3}
         }
     },
 
@@ -6719,6 +12570,46 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Kolkar Wrangler
+    ["Kolkar Wrangler"] = {
+        npcId = 3272,
+        level = {12, 13},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 48.0},
+            {itemId = 2287, dropChance = 39.4},
+            {itemId = 858, dropChance = 13.9},
+            {itemId = 1210, dropChance = 3.5},
+            {itemId = 818, dropChance = 2.2},
+            {itemId = 774, dropChance = 0.2}
+        }
+    },
+
+    -- Kor'gresh Coldrage
+    ["Kor'gresh Coldrage"] = {
+        npcId = 2793,
+        level = {39, 39},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 57.8},
+            {itemId = 5427, dropChance = 20.0},
+            {itemId = 4544, dropChance = 11.1},
+            {itemId = 3771, dropChance = 8.9},
+            {itemId = 1710, dropChance = 6.7}
+        }
+    },
+
+    -- Kreenig Snarlsnout
+    ["Kreenig Snarlsnout"] = {
+        npcId = 3438,
+        level = {15, 15},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 71.4},
+            {itemId = 2287, dropChance = 28.6}
+        }
+    },
+
     -- Kregg Keelhaul
     ["Kregg Keelhaul"] = {
         npcId = 8203,
@@ -6743,6 +12634,256 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 11.8},
             {itemId = 3928, dropChance = 8.8},
             {itemId = 7910, dropChance = 2.9}
+        }
+    },
+
+    -- Kul Tiras Marine
+    ["Kul Tiras Marine"] = {
+        npcId = 3129,
+        level = {6, 7},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5363, dropChance = 24.3},
+            {itemId = 6150, dropChance = 22.6},
+            {itemId = 2070, dropChance = 15.1},
+            {itemId = 118, dropChance = 13.4},
+            {itemId = 4536, dropChance = 13.0},
+            {itemId = 4540, dropChance = 10.9},
+            {itemId = 774, dropChance = 4.6},
+            {itemId = 2589, dropChance = 0.8},
+            {itemId = 117, dropChance = 0.4},
+            {itemId = 818, dropChance = 0.4},
+            {itemId = 1210, dropChance = 0.4},
+            {itemId = 1364, dropChance = 0.4},
+            {itemId = 2210, dropChance = 0.4},
+            {itemId = 2651, dropChance = 0.4},
+            {itemId = 3363, dropChance = 0.4},
+            {itemId = 3365, dropChance = 0.4},
+            {itemId = 3370, dropChance = 0.4},
+            {itemId = 3609, dropChance = 0.4},
+            {itemId = 4870, dropChance = 0.4},
+            {itemId = 7100, dropChance = 0.4},
+            {itemId = 7101, dropChance = 0.4}
+        }
+    },
+
+    -- Kul Tiras Sailor
+    ["Kul Tiras Sailor"] = {
+        npcId = 3128,
+        level = {5, 6},
+        zone = "Durotar",
+        loot = {
+            {itemId = 6150, dropChance = 23.5},
+            {itemId = 5363, dropChance = 23.2},
+            {itemId = 118, dropChance = 15.4},
+            {itemId = 2070, dropChance = 13.3},
+            {itemId = 4536, dropChance = 12.3},
+            {itemId = 4540, dropChance = 12.0},
+            {itemId = 774, dropChance = 3.1},
+            {itemId = 2589, dropChance = 0.5},
+            {itemId = 4867, dropChance = 0.5},
+            {itemId = 1181, dropChance = 0.3},
+            {itemId = 1364, dropChance = 0.3},
+            {itemId = 1366, dropChance = 0.3},
+            {itemId = 1369, dropChance = 0.3},
+            {itemId = 1372, dropChance = 0.3},
+            {itemId = 1376, dropChance = 0.3},
+            {itemId = 2598, dropChance = 0.3},
+            {itemId = 3609, dropChance = 0.3},
+            {itemId = 4814, dropChance = 0.3},
+            {itemId = 4865, dropChance = 0.3},
+            {itemId = 5364, dropChance = 0.3},
+            {itemId = 7100, dropChance = 0.3},
+            {itemId = 7101, dropChance = 0.3},
+            {itemId = 15004, dropChance = 0.3}
+        }
+    },
+
+    -- Kurzen Commando
+    ["Kurzen Commando"] = {
+        npcId = 938,
+        level = {34, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 37.0},
+            {itemId = 5431, dropChance = 36.3},
+            {itemId = 4539, dropChance = 10.4},
+            {itemId = 1707, dropChance = 10.0},
+            {itemId = 4544, dropChance = 9.3},
+            {itemId = 1710, dropChance = 7.9},
+            {itemId = 1529, dropChance = 1.2},
+            {itemId = 3864, dropChance = 1.0}
+        }
+    },
+
+    -- Kurzen Elite
+    ["Kurzen Elite"] = {
+        npcId = 939,
+        level = {36, 37},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 39.1},
+            {itemId = 16883, dropChance = 33.0},
+            {itemId = 4544, dropChance = 12.4},
+            {itemId = 1710, dropChance = 9.7},
+            {itemId = 4539, dropChance = 9.4},
+            {itemId = 1707, dropChance = 7.6},
+            {itemId = 1529, dropChance = 0.9},
+            {itemId = 3864, dropChance = 0.6}
+        }
+    },
+
+    -- Kurzen Headshrinker
+    ["Kurzen Headshrinker"] = {
+        npcId = 941,
+        level = {34, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 40.2},
+            {itemId = 5431, dropChance = 36.7},
+            {itemId = 4539, dropChance = 9.9},
+            {itemId = 1710, dropChance = 8.7},
+            {itemId = 4544, dropChance = 7.3},
+            {itemId = 1707, dropChance = 6.5},
+            {itemId = 1529, dropChance = 1.4},
+            {itemId = 3864, dropChance = 0.8}
+        }
+    },
+
+    -- Kurzen Jungle Fighter
+    ["Kurzen Jungle Fighter"] = {
+        npcId = 937,
+        level = {32, 33},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 40.0},
+            {itemId = 16883, dropChance = 35.8},
+            {itemId = 4539, dropChance = 9.8},
+            {itemId = 4544, dropChance = 8.7},
+            {itemId = 1710, dropChance = 7.7},
+            {itemId = 1707, dropChance = 7.4},
+            {itemId = 1529, dropChance = 1.6},
+            {itemId = 3864, dropChance = 0.6}
+        }
+    },
+
+    -- Kurzen Medicine Man
+    ["Kurzen Medicine Man"] = {
+        npcId = 940,
+        level = {32, 33},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 40.1},
+            {itemId = 16883, dropChance = 33.5},
+            {itemId = 4539, dropChance = 11.0},
+            {itemId = 1710, dropChance = 10.1},
+            {itemId = 4544, dropChance = 9.0},
+            {itemId = 1707, dropChance = 8.6},
+            {itemId = 3864, dropChance = 1.9},
+            {itemId = 1529, dropChance = 1.1}
+        }
+    },
+
+    -- Kurzen Shadow Hunter
+    ["Kurzen Shadow Hunter"] = {
+        npcId = 979,
+        level = {38, 38},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 38.3},
+            {itemId = 16883, dropChance = 33.3},
+            {itemId = 1710, dropChance = 11.7},
+            {itemId = 4544, dropChance = 8.3},
+            {itemId = 1707, dropChance = 6.7},
+            {itemId = 4539, dropChance = 6.7},
+            {itemId = 1529, dropChance = 1.7}
+        }
+    },
+
+    -- Kurzen Subchief
+    ["Kurzen Subchief"] = {
+        npcId = 978,
+        level = {38, 38},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 41.0},
+            {itemId = 16883, dropChance = 31.8},
+            {itemId = 1710, dropChance = 9.2},
+            {itemId = 4539, dropChance = 9.2},
+            {itemId = 1707, dropChance = 8.4},
+            {itemId = 4544, dropChance = 7.3},
+            {itemId = 3864, dropChance = 2.7},
+            {itemId = 1529, dropChance = 0.4}
+        }
+    },
+
+    -- Kurzen Witch Doctor
+    ["Kurzen Witch Doctor"] = {
+        npcId = 942,
+        level = {36, 37},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 40.9},
+            {itemId = 5431, dropChance = 37.8},
+            {itemId = 4544, dropChance = 10.9},
+            {itemId = 4539, dropChance = 10.0},
+            {itemId = 1710, dropChance = 7.0},
+            {itemId = 1707, dropChance = 6.5},
+            {itemId = 1529, dropChance = 1.7}
+        }
+    },
+
+    -- Kurzen Wrangler
+    ["Kurzen Wrangler"] = {
+        npcId = 943,
+        level = {34, 34},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 54.5},
+            {itemId = 5431, dropChance = 36.4},
+            {itemId = 4539, dropChance = 9.1}
+        }
+    },
+
+    -- Kurzen's Agent
+    ["Kurzen's Agent"] = {
+        npcId = 775,
+        level = {32, 33},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 40.0},
+            {itemId = 16883, dropChance = 26.7},
+            {itemId = 1707, dropChance = 20.0},
+            {itemId = 1710, dropChance = 13.3},
+            {itemId = 4544, dropChance = 6.7}
+        }
+    },
+
+    -- Kuz
+    ["Kuz"] = {
+        npcId = 3436,
+        level = {21, 21},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 51.1},
+            {itemId = 5375, dropChance = 26.7},
+            {itemId = 3770, dropChance = 22.2},
+            {itemId = 929, dropChance = 15.6},
+            {itemId = 1206, dropChance = 2.2}
+        }
+    },
+
+    -- Lady Anacondra
+    ["Lady Anacondra"] = {
+        npcId = 3671,
+        level = {20, 20},
+        zone = "Wailing Caverns",
+        loot = {
+            {itemId = 16882, dropChance = 63.2},
+            {itemId = 929, dropChance = 31.6},
+            {itemId = 5374, dropChance = 31.6},
+            {itemId = 422, dropChance = 5.3},
+            {itemId = 4542, dropChance = 5.3}
         }
     },
 
@@ -6840,6 +12981,32 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Leper Gnome
+    ["Leper Gnome"] = {
+        npcId = 1211,
+        level = {8, 10},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 6150, dropChance = 24.5},
+            {itemId = 5363, dropChance = 18.5},
+            {itemId = 4536, dropChance = 16.7},
+            {itemId = 118, dropChance = 12.6},
+            {itemId = 4540, dropChance = 12.6},
+            {itemId = 2070, dropChance = 11.3},
+            {itemId = 774, dropChance = 6.2},
+            {itemId = 3609, dropChance = 0.4},
+            {itemId = 117, dropChance = 0.2},
+            {itemId = 1364, dropChance = 0.2},
+            {itemId = 1376, dropChance = 0.2},
+            {itemId = 1380, dropChance = 0.2},
+            {itemId = 2589, dropChance = 0.2},
+            {itemId = 2598, dropChance = 0.2},
+            {itemId = 2649, dropChance = 0.2},
+            {itemId = 3363, dropChance = 0.2},
+            {itemId = 7073, dropChance = 0.2}
+        }
+    },
+
     -- Leprous Assistant
     ["Leprous Assistant"] = {
         npcId = 7603,
@@ -6904,6 +13071,35 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Lesser Felguard
+    ["Lesser Felguard"] = {
+        npcId = 3772,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 58.5},
+            {itemId = 5376, dropChance = 31.9},
+            {itemId = 4606, dropChance = 22.3},
+            {itemId = 929, dropChance = 4.3},
+            {itemId = 1705, dropChance = 2.1},
+            {itemId = 1206, dropChance = 1.1}
+        }
+    },
+
+    -- Lieutenant Benedict
+    ["Lieutenant Benedict"] = {
+        npcId = 3192,
+        level = {8, 8},
+        zone = "Durotar",
+        loot = {
+            {itemId = 4536, dropChance = 30.0},
+            {itemId = 2070, dropChance = 20.0},
+            {itemId = 4540, dropChance = 20.0},
+            {itemId = 6150, dropChance = 20.0},
+            {itemId = 5363, dropChance = 10.0}
+        }
+    },
+
     -- Lieutenant Caldwell
     ["Lieutenant Caldwell"] = {
         npcId = 5046,
@@ -6914,6 +13110,32 @@ DB.PickpocketLoot = {
             {itemId = 1707, dropChance = 20.0},
             {itemId = 4539, dropChance = 20.0},
             {itemId = 5431, dropChance = 20.0}
+        }
+    },
+
+    -- Lieutenant Fangore
+    ["Lieutenant Fangore"] = {
+        npcId = 703,
+        level = {26, 26},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 69.2},
+            {itemId = 5375, dropChance = 30.8},
+            {itemId = 1206, dropChance = 15.4},
+            {itemId = 3770, dropChance = 7.7}
+        }
+    },
+
+    -- Lieutenant Grummus
+    ["Lieutenant Grummus"] = {
+        npcId = 13145,
+        level = {59, 59},
+        zone = "Alterac Valley",
+        loot = {
+            {itemId = 3419, dropChance = 51.9},
+            {itemId = 8948, dropChance = 33.3},
+            {itemId = 3928, dropChance = 18.5},
+            {itemId = 16885, dropChance = 7.4}
         }
     },
 
@@ -6946,6 +13168,32 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Lieutenant Lonadin
+    ["Lieutenant Lonadin"] = {
+        npcId = 13299,
+        level = {59, 59},
+        zone = "Alterac Valley",
+        loot = {
+            {itemId = 5432, dropChance = 50.0},
+            {itemId = 8932, dropChance = 16.7},
+            {itemId = 8950, dropChance = 16.7},
+            {itemId = 16885, dropChance = 16.7}
+        }
+    },
+
+    -- Lieutenant Murp
+    ["Lieutenant Murp"] = {
+        npcId = 13146,
+        level = {59, 59},
+        zone = "Alterac Valley",
+        loot = {
+            {itemId = 3419, dropChance = 43.8},
+            {itemId = 8948, dropChance = 37.5},
+            {itemId = 3928, dropChance = 18.8},
+            {itemId = 16885, dropChance = 18.8}
+        }
+    },
+
     -- Lieutenant Rugba
     ["Lieutenant Rugba"] = {
         npcId = 13137,
@@ -6970,6 +13218,19 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 13.0},
             {itemId = 8952, dropChance = 13.0},
             {itemId = 16885, dropChance = 8.7}
+        }
+    },
+
+    -- Lieutenant Valorcall
+    ["Lieutenant Valorcall"] = {
+        npcId = 2612,
+        level = {38, 38},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 58.3},
+            {itemId = 5431, dropChance = 25.0},
+            {itemId = 1710, dropChance = 16.7},
+            {itemId = 4539, dropChance = 8.3}
         }
     },
 
@@ -7001,6 +13262,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Lok Orcbane
+    ["Lok Orcbane"] = {
+        npcId = 3435,
+        level = {25, 25},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 55.8},
+            {itemId = 5375, dropChance = 39.5},
+            {itemId = 3770, dropChance = 14.0},
+            {itemId = 929, dropChance = 7.0},
+            {itemId = 1705, dropChance = 2.3}
+        }
+    },
+
     -- Lord Alexei Barov
     ["Lord Alexei Barov"] = {
         npcId = 10504,
@@ -7010,6 +13285,21 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 50.0},
             {itemId = 5432, dropChance = 33.3},
             {itemId = 8950, dropChance = 16.7}
+        }
+    },
+
+    -- Lord Aliden Perenolde
+    ["Lord Aliden Perenolde"] = {
+        npcId = 2423,
+        level = {41, 41},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5432, dropChance = 63.6},
+            {itemId = 16884, dropChance = 22.7},
+            {itemId = 3928, dropChance = 18.2},
+            {itemId = 7910, dropChance = 18.2},
+            {itemId = 3927, dropChance = 4.5},
+            {itemId = 7909, dropChance = 4.5}
         }
     },
 
@@ -7023,6 +13313,21 @@ DB.PickpocketLoot = {
             {itemId = 1710, dropChance = 25.0},
             {itemId = 5433, dropChance = 25.0},
             {itemId = 4607, dropChance = 10.0}
+        }
+    },
+
+    -- Lord Cobrahn
+    ["Lord Cobrahn"] = {
+        npcId = 3669,
+        level = {20, 20},
+        zone = "Wailing Caverns",
+        loot = {
+            {itemId = 16882, dropChance = 66.7},
+            {itemId = 5374, dropChance = 18.5},
+            {itemId = 422, dropChance = 11.1},
+            {itemId = 929, dropChance = 7.4},
+            {itemId = 4538, dropChance = 7.4},
+            {itemId = 4542, dropChance = 3.7}
         }
     },
 
@@ -7041,6 +13346,34 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Lord Falconcrest
+    ["Lord Falconcrest"] = {
+        npcId = 2597,
+        level = {40, 40},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 36.8},
+            {itemId = 4544, dropChance = 31.6},
+            {itemId = 5431, dropChance = 26.3},
+            {itemId = 1707, dropChance = 5.3}
+        }
+    },
+
+    -- Lord Gregor Lescovar
+    ["Lord Gregor Lescovar"] = {
+        npcId = 1754,
+        level = {31, 31},
+        zone = "Stormwind City",
+        loot = {
+            {itemId = 5431, dropChance = 43.8},
+            {itemId = 4544, dropChance = 25.0},
+            {itemId = 4539, dropChance = 18.8},
+            {itemId = 1707, dropChance = 12.5},
+            {itemId = 1710, dropChance = 12.5},
+            {itemId = 16883, dropChance = 6.3}
+        }
+    },
+
     -- Lord Kragaru
     ["Lord Kragaru"] = {
         npcId = 12369,
@@ -7052,6 +13385,34 @@ DB.PickpocketLoot = {
             {itemId = 10457, dropChance = 18.8},
             {itemId = 1710, dropChance = 6.3},
             {itemId = 5498, dropChance = 6.3}
+        }
+    },
+
+    -- Lord Pythas
+    ["Lord Pythas"] = {
+        npcId = 3670,
+        level = {21, 21},
+        zone = "Wailing Caverns",
+        loot = {
+            {itemId = 16882, dropChance = 60.0},
+            {itemId = 4538, dropChance = 20.0},
+            {itemId = 5374, dropChance = 20.0},
+            {itemId = 929, dropChance = 10.0}
+        }
+    },
+
+    -- Lord Serpentis
+    ["Lord Serpentis"] = {
+        npcId = 3673,
+        level = {21, 21},
+        zone = "Wailing Caverns",
+        loot = {
+            {itemId = 16882, dropChance = 66.7},
+            {itemId = 4542, dropChance = 16.7},
+            {itemId = 929, dropChance = 5.6},
+            {itemId = 1705, dropChance = 5.6},
+            {itemId = 4538, dropChance = 5.6},
+            {itemId = 5374, dropChance = 5.6}
         }
     },
 
@@ -7123,6 +13484,130 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Lost One Chieftain
+    ["Lost One Chieftain"] = {
+        npcId = 763,
+        level = {39, 39},
+        zone = "Swamp of Sorrows",
+        loot = {
+            {itemId = 3771, dropChance = 75.0},
+            {itemId = 16883, dropChance = 25.0},
+            {itemId = 5429, dropChance = 12.5}
+        }
+    },
+
+    -- Lost One Fisherman
+    ["Lost One Fisherman"] = {
+        npcId = 757,
+        level = {35, 36},
+        zone = "Swamp of Sorrows",
+        loot = {
+            {itemId = 16883, dropChance = 37.7},
+            {itemId = 5429, dropChance = 33.8},
+            {itemId = 3771, dropChance = 30.8},
+            {itemId = 1710, dropChance = 6.9},
+            {itemId = 3864, dropChance = 1.5}
+        }
+    },
+
+    -- Lost One Hunter
+    ["Lost One Hunter"] = {
+        npcId = 759,
+        level = {36, 37},
+        zone = "Swamp of Sorrows",
+        loot = {
+            {itemId = 5429, dropChance = 39.7},
+            {itemId = 16883, dropChance = 35.0},
+            {itemId = 3771, dropChance = 30.0},
+            {itemId = 1710, dropChance = 8.6},
+            {itemId = 3864, dropChance = 1.7},
+            {itemId = 1529, dropChance = 0.6}
+        }
+    },
+
+    -- Lost One Muckdweller
+    ["Lost One Muckdweller"] = {
+        npcId = 760,
+        level = {36, 37},
+        zone = "Swamp of Sorrows",
+        loot = {
+            {itemId = 5429, dropChance = 38.0},
+            {itemId = 16883, dropChance = 34.1},
+            {itemId = 3771, dropChance = 21.8},
+            {itemId = 1710, dropChance = 11.7},
+            {itemId = 1529, dropChance = 3.9},
+            {itemId = 3864, dropChance = 1.1}
+        }
+    },
+
+    -- Lost One Mudlurker
+    ["Lost One Mudlurker"] = {
+        npcId = 755,
+        level = {34, 35},
+        zone = "Swamp of Sorrows",
+        loot = {
+            {itemId = 5429, dropChance = 37.1},
+            {itemId = 16883, dropChance = 35.1},
+            {itemId = 3771, dropChance = 28.9},
+            {itemId = 1710, dropChance = 6.2},
+            {itemId = 3864, dropChance = 2.1}
+        }
+    },
+
+    -- Lost One Riftseeker
+    ["Lost One Riftseeker"] = {
+        npcId = 762,
+        level = {37, 38},
+        zone = "Swamp of Sorrows",
+        loot = {
+            {itemId = 5429, dropChance = 42.2},
+            {itemId = 16883, dropChance = 35.9},
+            {itemId = 3771, dropChance = 21.9},
+            {itemId = 1710, dropChance = 14.1},
+            {itemId = 3864, dropChance = 1.6}
+        }
+    },
+
+    -- Lost One Seer
+    ["Lost One Seer"] = {
+        npcId = 761,
+        level = {37, 38},
+        zone = "Swamp of Sorrows",
+        loot = {
+            {itemId = 16883, dropChance = 40.0},
+            {itemId = 3771, dropChance = 31.1},
+            {itemId = 5429, dropChance = 22.2},
+            {itemId = 1710, dropChance = 11.1}
+        }
+    },
+
+    -- Mad Magglish
+    ["Mad Magglish"] = {
+        npcId = 3655,
+        level = {18, 18},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5379, dropChance = 63.6},
+            {itemId = 858, dropChance = 18.2},
+            {itemId = 2287, dropChance = 18.2},
+            {itemId = 818, dropChance = 9.1}
+        }
+    },
+
+    -- Maggot Eye
+    ["Maggot Eye"] = {
+        npcId = 1753,
+        level = {10, 10},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 35.7},
+            {itemId = 118, dropChance = 28.6},
+            {itemId = 4604, dropChance = 28.6},
+            {itemId = 2598, dropChance = 7.1},
+            {itemId = 7101, dropChance = 7.1}
+        }
+    },
+
     -- Magistrate Barthilas
     ["Magistrate Barthilas"] = {
         npcId = 10435,
@@ -7134,6 +13619,20 @@ DB.PickpocketLoot = {
             {itemId = 8948, dropChance = 20.5},
             {itemId = 3928, dropChance = 9.0},
             {itemId = 7910, dropChance = 2.6}
+        }
+    },
+
+    -- Magistrate Burnside
+    ["Magistrate Burnside"] = {
+        npcId = 2335,
+        level = {30, 30},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 5374, dropChance = 53.6},
+            {itemId = 16882, dropChance = 46.4},
+            {itemId = 4542, dropChance = 10.7},
+            {itemId = 422, dropChance = 3.6},
+            {itemId = 4538, dropChance = 3.6}
         }
     },
 
@@ -7255,6 +13754,34 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Magregan Deepshadow
+    ["Magregan Deepshadow"] = {
+        npcId = 2932,
+        level = {38, 38},
+        zone = "Unknown",
+        loot = {
+            {itemId = 5431, dropChance = 44.7},
+            {itemId = 16883, dropChance = 18.4},
+            {itemId = 1710, dropChance = 13.2},
+            {itemId = 4539, dropChance = 10.5},
+            {itemId = 1707, dropChance = 7.9},
+            {itemId = 4544, dropChance = 5.3}
+        }
+    },
+
+    -- Mai'Zoth
+    ["Mai'Zoth"] = {
+        npcId = 818,
+        level = {47, 47},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 4599, dropChance = 30.0},
+            {itemId = 4601, dropChance = 30.0},
+            {itemId = 5428, dropChance = 30.0},
+            {itemId = 3928, dropChance = 10.0}
+        }
+    },
+
     -- Makrinni Scrabbler
     ["Makrinni Scrabbler"] = {
         npcId = 6370,
@@ -7265,6 +13792,31 @@ DB.PickpocketLoot = {
             {itemId = 8959, dropChance = 30.0},
             {itemId = 3928, dropChance = 10.0},
             {itemId = 16885, dropChance = 10.0}
+        }
+    },
+
+    -- Makrura Clacker
+    ["Makrura Clacker"] = {
+        npcId = 3103,
+        level = {6, 7},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5361, dropChance = 54.5},
+            {itemId = 118, dropChance = 27.3},
+            {itemId = 774, dropChance = 9.1},
+            {itemId = 6303, dropChance = 9.1}
+        }
+    },
+
+    -- Makrura Shellhide
+    ["Makrura Shellhide"] = {
+        npcId = 3104,
+        level = {6, 7},
+        zone = "Durotar",
+        loot = {
+            {itemId = 118, dropChance = 42.9},
+            {itemId = 5361, dropChance = 42.9},
+            {itemId = 6303, dropChance = 28.6}
         }
     },
 
@@ -7500,6 +14052,49 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Marez Cowl
+    ["Marez Cowl"] = {
+        npcId = 2783,
+        level = {40, 40},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5427, dropChance = 39.5},
+            {itemId = 16883, dropChance = 36.8},
+            {itemId = 1710, dropChance = 13.2},
+            {itemId = 3771, dropChance = 5.3},
+            {itemId = 3864, dropChance = 5.3},
+            {itemId = 4544, dropChance = 2.6}
+        }
+    },
+
+    -- Marisa du'Paige
+    ["Marisa du'Paige"] = {
+        npcId = 599,
+        level = {18, 18},
+        zone = "Unknown",
+        loot = {
+            {itemId = 5368, dropChance = 44.4},
+            {itemId = 414, dropChance = 11.1},
+            {itemId = 818, dropChance = 11.1},
+            {itemId = 858, dropChance = 11.1},
+            {itemId = 1210, dropChance = 11.1},
+            {itemId = 4537, dropChance = 11.1}
+        }
+    },
+
+    -- Marzon the Silent Blade
+    ["Marzon the Silent Blade"] = {
+        npcId = 1755,
+        level = {30, 30},
+        zone = "Stormwind City",
+        loot = {
+            {itemId = 16882, dropChance = 63.2},
+            {itemId = 5374, dropChance = 36.8},
+            {itemId = 4542, dropChance = 10.5},
+            {itemId = 422, dropChance = 5.3}
+        }
+    },
+
     -- Master Elemental Shaper Krixix
     ["Master Elemental Shaper Krixix"] = {
         npcId = 14401,
@@ -7508,6 +14103,64 @@ DB.PickpocketLoot = {
         loot = {
             {itemId = 5432, dropChance = 50.0},
             {itemId = 16885, dropChance = 50.0}
+        }
+    },
+
+    -- Maury 'Club Foot' Wilkins
+    ["Maury 'Club Foot' Wilkins"] = {
+        npcId = 2535,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 3419, dropChance = 54.2},
+            {itemId = 4608, dropChance = 41.7},
+            {itemId = 3928, dropChance = 16.7},
+            {itemId = 16884, dropChance = 8.3},
+            {itemId = 7910, dropChance = 4.2}
+        }
+    },
+
+    -- Mavoris Cloudsbreak
+    ["Mavoris Cloudsbreak"] = {
+        npcId = 3942,
+        level = {32, 32},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16883, dropChance = 76.9},
+            {itemId = 5431, dropChance = 15.4},
+            {itemId = 4539, dropChance = 7.7}
+        }
+    },
+
+    -- Mercutio Filthgorger
+    ["Mercutio Filthgorger"] = {
+        npcId = 11886,
+        level = {57, 57},
+        zone = "Eastern Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 37.0},
+            {itemId = 16885, dropChance = 30.4},
+            {itemId = 8950, dropChance = 15.2},
+            {itemId = 3928, dropChance = 8.7},
+            {itemId = 8932, dropChance = 8.7},
+            {itemId = 8953, dropChance = 6.5}
+        }
+    },
+
+    -- Meven Korgal
+    ["Meven Korgal"] = {
+        npcId = 1667,
+        level = {5, 5},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 4540, dropChance = 30.3},
+            {itemId = 5363, dropChance = 30.3},
+            {itemId = 2070, dropChance = 18.2},
+            {itemId = 6150, dropChance = 12.1},
+            {itemId = 4536, dropChance = 9.1},
+            {itemId = 118, dropChance = 7.6},
+            {itemId = 774, dropChance = 4.5},
+            {itemId = 4604, dropChance = 3.0}
         }
     },
 
@@ -7522,6 +14175,37 @@ DB.PickpocketLoot = {
             {itemId = 8950, dropChance = 27.7},
             {itemId = 3928, dropChance = 10.6},
             {itemId = 8952, dropChance = 10.6}
+        }
+    },
+
+    -- Mindless Zombie
+    ["Mindless Zombie"] = {
+        npcId = 1501,
+        level = {1, 1},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 51.7},
+            {itemId = 4604, dropChance = 37.5},
+            {itemId = 118, dropChance = 10.3},
+            {itemId = 774, dropChance = 4.6},
+            {itemId = 1366, dropChance = 0.4},
+            {itemId = 1368, dropChance = 0.4},
+            {itemId = 3264, dropChance = 0.4}
+        }
+    },
+
+    -- Miner Hackett
+    ["Miner Hackett"] = {
+        npcId = 2450,
+        level = {29, 29},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 56.3},
+            {itemId = 4542, dropChance = 18.8},
+            {itemId = 5374, dropChance = 18.8},
+            {itemId = 422, dropChance = 12.5},
+            {itemId = 929, dropChance = 12.5},
+            {itemId = 4538, dropChance = 6.3}
         }
     },
 
@@ -7630,6 +14314,94 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Mo'grosh Brute
+    ["Mo'grosh Brute"] = {
+        npcId = 1180,
+        level = {19, 20},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 41.2},
+            {itemId = 858, dropChance = 19.6},
+            {itemId = 4541, dropChance = 19.6},
+            {itemId = 2287, dropChance = 15.7},
+            {itemId = 1210, dropChance = 5.9},
+            {itemId = 818, dropChance = 2.0}
+        }
+    },
+
+    -- Mo'grosh Enforcer
+    ["Mo'grosh Enforcer"] = {
+        npcId = 1179,
+        level = {18, 19},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 59.5},
+            {itemId = 4541, dropChance = 20.3},
+            {itemId = 2287, dropChance = 16.2},
+            {itemId = 858, dropChance = 8.1},
+            {itemId = 818, dropChance = 2.7}
+        }
+    },
+
+    -- Mo'grosh Mystic
+    ["Mo'grosh Mystic"] = {
+        npcId = 1183,
+        level = {19, 20},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 36.8},
+            {itemId = 2287, dropChance = 26.3},
+            {itemId = 858, dropChance = 19.3},
+            {itemId = 4541, dropChance = 14.0},
+            {itemId = 818, dropChance = 7.0},
+            {itemId = 7288, dropChance = 1.8}
+        }
+    },
+
+    -- Mo'grosh Ogre
+    ["Mo'grosh Ogre"] = {
+        npcId = 1178,
+        level = {18, 19},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 48.2},
+            {itemId = 4541, dropChance = 22.4},
+            {itemId = 2287, dropChance = 17.6},
+            {itemId = 858, dropChance = 15.3},
+            {itemId = 1210, dropChance = 4.7},
+            {itemId = 818, dropChance = 1.2}
+        }
+    },
+
+    -- Mo'grosh Shaman
+    ["Mo'grosh Shaman"] = {
+        npcId = 1181,
+        level = {18, 19},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 44.4},
+            {itemId = 4541, dropChance = 26.3},
+            {itemId = 2287, dropChance = 24.2},
+            {itemId = 858, dropChance = 7.1},
+            {itemId = 1210, dropChance = 4.0}
+        }
+    },
+
+    -- Mogh the Undying
+    ["Mogh the Undying"] = {
+        npcId = 1060,
+        level = {44, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 4601, dropChance = 36.4},
+            {itemId = 4599, dropChance = 27.3},
+            {itemId = 5428, dropChance = 18.2},
+            {itemId = 3928, dropChance = 9.1},
+            {itemId = 7910, dropChance = 9.1},
+            {itemId = 16884, dropChance = 9.1}
+        }
+    },
+
     -- Mojo the Twisted
     ["Mojo the Twisted"] = {
         npcId = 8296,
@@ -7645,6 +14417,97 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Molok the Crusher
+    ["Molok the Crusher"] = {
+        npcId = 2604,
+        level = {39, 39},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 80.0},
+            {itemId = 5427, dropChance = 20.0}
+        }
+    },
+
+    -- Monstrous Ooze
+    ["Monstrous Ooze"] = {
+        npcId = 1033,
+        level = {25, 26},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 65.5},
+            {itemId = 5376, dropChance = 25.5},
+            {itemId = 4606, dropChance = 21.8},
+            {itemId = 929, dropChance = 5.5}
+        }
+    },
+
+    -- Moonrage Elder
+    ["Moonrage Elder"] = {
+        npcId = 1896,
+        level = {14, 15},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5369, dropChance = 62.5},
+            {itemId = 5368, dropChance = 25.0},
+            {itemId = 414, dropChance = 12.5},
+            {itemId = 2287, dropChance = 12.5}
+        }
+    },
+
+    -- Moonrage Sentry
+    ["Moonrage Sentry"] = {
+        npcId = 1893,
+        level = {14, 15},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 2287, dropChance = 39.4},
+            {itemId = 5369, dropChance = 30.3},
+            {itemId = 858, dropChance = 15.2},
+            {itemId = 4537, dropChance = 12.1},
+            {itemId = 4541, dropChance = 6.1},
+            {itemId = 818, dropChance = 3.0},
+            {itemId = 5368, dropChance = 3.0}
+        }
+    },
+
+    -- Moonrage Watcher
+    ["Moonrage Watcher"] = {
+        npcId = 1892,
+        level = {13, 14},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5369, dropChance = 56.7},
+            {itemId = 2287, dropChance = 36.7},
+            {itemId = 858, dropChance = 3.3},
+            {itemId = 5368, dropChance = 3.3}
+        }
+    },
+
+    -- Mor'Ladim
+    ["Mor'Ladim"] = {
+        npcId = 522,
+        level = {35, 35},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16883, dropChance = 47.6},
+            {itemId = 1710, dropChance = 28.6},
+            {itemId = 5433, dropChance = 23.8},
+            {itemId = 4607, dropChance = 9.5}
+        }
+    },
+
+    -- Morbent Fel
+    ["Morbent Fel"] = {
+        npcId = 1200,
+        level = {32, 32},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 5431, dropChance = 71.4},
+            {itemId = 3864, dropChance = 14.3},
+            {itemId = 16883, dropChance = 14.3}
+        }
+    },
+
     -- Mordresh Fire Eye
     ["Mordresh Fire Eye"] = {
         npcId = 7357,
@@ -7655,6 +14518,37 @@ DB.PickpocketLoot = {
             {itemId = 5433, dropChance = 36.4},
             {itemId = 16883, dropChance = 27.3},
             {itemId = 1710, dropChance = 9.1}
+        }
+    },
+
+    -- Morgan the Collector
+    ["Morgan the Collector"] = {
+        npcId = 473,
+        level = {10, 10},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 4540, dropChance = 22.2},
+            {itemId = 118, dropChance = 16.7},
+            {itemId = 2070, dropChance = 16.7},
+            {itemId = 4536, dropChance = 16.7},
+            {itemId = 5363, dropChance = 16.7},
+            {itemId = 6150, dropChance = 11.1},
+            {itemId = 774, dropChance = 5.6},
+            {itemId = 1376, dropChance = 5.6}
+        }
+    },
+
+    -- Morganth
+    ["Morganth"] = {
+        npcId = 397,
+        level = {27, 27},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 60.0},
+            {itemId = 4542, dropChance = 20.0},
+            {itemId = 929, dropChance = 10.0},
+            {itemId = 4538, dropChance = 10.0},
+            {itemId = 5374, dropChance = 10.0}
         }
     },
 
@@ -7682,6 +14576,113 @@ DB.PickpocketLoot = {
             {itemId = 16884, dropChance = 41.7},
             {itemId = 4601, dropChance = 16.7},
             {itemId = 4599, dropChance = 8.3}
+        }
+    },
+
+    -- Mosh'Ogg Brute
+    ["Mosh'Ogg Brute"] = {
+        npcId = 1142,
+        level = {36, 37},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 36.2},
+            {itemId = 5427, dropChance = 31.9},
+            {itemId = 3771, dropChance = 15.3},
+            {itemId = 4544, dropChance = 12.1},
+            {itemId = 1710, dropChance = 9.4},
+            {itemId = 1529, dropChance = 2.0},
+            {itemId = 3864, dropChance = 0.3}
+        }
+    },
+
+    -- Mosh'Ogg Lord
+    ["Mosh'Ogg Lord"] = {
+        npcId = 680,
+        level = {45, 45},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 48.4},
+            {itemId = 16884, dropChance = 25.8},
+            {itemId = 3928, dropChance = 9.7},
+            {itemId = 4601, dropChance = 9.7},
+            {itemId = 4599, dropChance = 6.5}
+        }
+    },
+
+    -- Mosh'Ogg Mauler
+    ["Mosh'Ogg Mauler"] = {
+        npcId = 678,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 47.8},
+            {itemId = 16884, dropChance = 17.4},
+            {itemId = 4599, dropChance = 16.5},
+            {itemId = 4601, dropChance = 13.9},
+            {itemId = 3928, dropChance = 11.3},
+            {itemId = 7910, dropChance = 0.9}
+        }
+    },
+
+    -- Mosh'Ogg Shaman
+    ["Mosh'Ogg Shaman"] = {
+        npcId = 679,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 48.1},
+            {itemId = 16884, dropChance = 22.1},
+            {itemId = 4601, dropChance = 17.3},
+            {itemId = 4599, dropChance = 13.5},
+            {itemId = 3928, dropChance = 11.5},
+            {itemId = 7910, dropChance = 1.0}
+        }
+    },
+
+    -- Mosh'Ogg Spellcrafter
+    ["Mosh'Ogg Spellcrafter"] = {
+        npcId = 710,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 44.9},
+            {itemId = 16884, dropChance = 21.5},
+            {itemId = 4599, dropChance = 15.9},
+            {itemId = 4601, dropChance = 15.0},
+            {itemId = 3928, dropChance = 10.3},
+            {itemId = 7909, dropChance = 1.9}
+        }
+    },
+
+    -- Mosh'Ogg Warmonger
+    ["Mosh'Ogg Warmonger"] = {
+        npcId = 709,
+        level = {41, 42},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 48.7},
+            {itemId = 16884, dropChance = 18.7},
+            {itemId = 4599, dropChance = 17.0},
+            {itemId = 4601, dropChance = 16.1},
+            {itemId = 3928, dropChance = 7.8},
+            {itemId = 7910, dropChance = 1.7},
+            {itemId = 7909, dropChance = 1.3}
+        }
+    },
+
+    -- Mosh'Ogg Witch Doctor
+    ["Mosh'Ogg Witch Doctor"] = {
+        npcId = 1144,
+        level = {36, 37},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5427, dropChance = 40.8},
+            {itemId = 16883, dropChance = 39.9},
+            {itemId = 3771, dropChance = 13.4},
+            {itemId = 4544, dropChance = 10.5},
+            {itemId = 1710, dropChance = 6.7},
+            {itemId = 1529, dropChance = 0.8},
+            {itemId = 3864, dropChance = 0.4}
         }
     },
 
@@ -7736,12 +14737,189 @@ DB.PickpocketLoot = {
         level = {53, 54},
         zone = "Eastern Plaguelands",
         loot = {
-            {itemId = 5428, dropChance = 45.4},
-            {itemId = 16885, dropChance = 25.9},
+            {itemId = 5428, dropChance = 45.5},
+            {itemId = 16885, dropChance = 25.8},
             {itemId = 8952, dropChance = 14.2},
-            {itemId = 8950, dropChance = 14.0},
+            {itemId = 8950, dropChance = 13.9},
             {itemId = 3928, dropChance = 12.1},
             {itemId = 7910, dropChance = 1.1}
+        }
+    },
+
+    -- Mosshide Brute
+    ["Mosshide Brute"] = {
+        npcId = 1012,
+        level = {24, 25},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 57.2},
+            {itemId = 5375, dropChance = 24.4},
+            {itemId = 3770, dropChance = 23.6},
+            {itemId = 929, dropChance = 7.0},
+            {itemId = 1206, dropChance = 1.1},
+            {itemId = 1705, dropChance = 0.4}
+        }
+    },
+
+    -- Mosshide Fenrunner
+    ["Mosshide Fenrunner"] = {
+        npcId = 1010,
+        level = {22, 23},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 54.2},
+            {itemId = 5375, dropChance = 26.5},
+            {itemId = 3770, dropChance = 23.2},
+            {itemId = 929, dropChance = 6.4},
+            {itemId = 1705, dropChance = 1.3},
+            {itemId = 1206, dropChance = 0.9}
+        }
+    },
+
+    -- Mosshide Gnoll
+    ["Mosshide Gnoll"] = {
+        npcId = 1007,
+        level = {20, 21},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 5369, dropChance = 52.8},
+            {itemId = 2287, dropChance = 33.5},
+            {itemId = 858, dropChance = 14.2},
+            {itemId = 1210, dropChance = 4.7},
+            {itemId = 818, dropChance = 2.6}
+        }
+    },
+
+    -- Mosshide Mistweaver
+    ["Mosshide Mistweaver"] = {
+        npcId = 1009,
+        level = {22, 23},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 54.3},
+            {itemId = 5375, dropChance = 26.1},
+            {itemId = 3770, dropChance = 18.5},
+            {itemId = 929, dropChance = 7.6},
+            {itemId = 1206, dropChance = 1.1}
+        }
+    },
+
+    -- Mosshide Mongrel
+    ["Mosshide Mongrel"] = {
+        npcId = 1008,
+        level = {21, 22},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 58.6},
+            {itemId = 3770, dropChance = 22.5},
+            {itemId = 5375, dropChance = 21.9},
+            {itemId = 929, dropChance = 9.6},
+            {itemId = 1705, dropChance = 1.1},
+            {itemId = 1206, dropChance = 0.5}
+        }
+    },
+
+    -- Mosshide Mystic
+    ["Mosshide Mystic"] = {
+        npcId = 1013,
+        level = {25, 26},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 58.8},
+            {itemId = 5375, dropChance = 35.3},
+            {itemId = 929, dropChance = 11.8},
+            {itemId = 3770, dropChance = 11.8}
+        }
+    },
+
+    -- Mosshide Trapper
+    ["Mosshide Trapper"] = {
+        npcId = 1011,
+        level = {23, 24},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 57.5},
+            {itemId = 5375, dropChance = 27.5},
+            {itemId = 3770, dropChance = 18.9},
+            {itemId = 929, dropChance = 7.3},
+            {itemId = 1206, dropChance = 1.7}
+        }
+    },
+
+    -- Mountaineer Dokkin
+    ["Mountaineer Dokkin"] = {
+        npcId = 2105,
+        level = {30, 30},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5374, dropChance = 83.3},
+            {itemId = 16882, dropChance = 33.3}
+        }
+    },
+
+    -- Mountaineer Grugelm
+    ["Mountaineer Grugelm"] = {
+        npcId = 2466,
+        level = {30, 30},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 54.5},
+            {itemId = 5374, dropChance = 36.4},
+            {itemId = 4542, dropChance = 9.1}
+        }
+    },
+
+    -- Mountaineer Rharen
+    ["Mountaineer Rharen"] = {
+        npcId = 2469,
+        level = {30, 30},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 66.7},
+            {itemId = 422, dropChance = 33.3},
+            {itemId = 5374, dropChance = 16.7}
+        }
+    },
+
+    -- Mountaineer Thar
+    ["Mountaineer Thar"] = {
+        npcId = 2468,
+        level = {30, 30},
+        zone = "Wetlands",
+        loot = {
+            {itemId = 16882, dropChance = 42.9},
+            {itemId = 4538, dropChance = 28.6},
+            {itemId = 929, dropChance = 14.3},
+            {itemId = 5374, dropChance = 14.3},
+            {itemId = 1206, dropChance = 14.3}
+        }
+    },
+
+    -- Mr. Smite
+    ["Mr. Smite"] = {
+        npcId = 646,
+        level = {20, 20},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 16882, dropChance = 63.6},
+            {itemId = 5373, dropChance = 31.8},
+            {itemId = 4542, dropChance = 9.1},
+            {itemId = 929, dropChance = 4.5},
+            {itemId = 3770, dropChance = 4.5}
+        }
+    },
+
+    -- Muckrake
+    ["Muckrake"] = {
+        npcId = 2421,
+        level = {40, 40},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 39.1},
+            {itemId = 5427, dropChance = 30.4},
+            {itemId = 3771, dropChance = 26.1},
+            {itemId = 4544, dropChance = 17.4},
+            {itemId = 1710, dropChance = 8.7}
         }
     },
 
@@ -7799,6 +14977,52 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Mudsnout Gnoll
+    ["Mudsnout Gnoll"] = {
+        npcId = 2372,
+        level = {26, 27},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 53.7},
+            {itemId = 5375, dropChance = 31.4},
+            {itemId = 3770, dropChance = 21.6},
+            {itemId = 929, dropChance = 5.5},
+            {itemId = 1705, dropChance = 0.8},
+            {itemId = 1206, dropChance = 0.4}
+        }
+    },
+
+    -- Mudsnout Shaman
+    ["Mudsnout Shaman"] = {
+        npcId = 2373,
+        level = {27, 28},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 54.4},
+            {itemId = 5375, dropChance = 32.5},
+            {itemId = 3770, dropChance = 21.3},
+            {itemId = 929, dropChance = 6.5},
+            {itemId = 1206, dropChance = 1.2},
+            {itemId = 1705, dropChance = 0.6}
+        }
+    },
+
+    -- Mug'thol
+    ["Mug'thol"] = {
+        npcId = 2257,
+        level = {43, 43},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5428, dropChance = 41.2},
+            {itemId = 4599, dropChance = 17.6},
+            {itemId = 16884, dropChance = 17.6},
+            {itemId = 3928, dropChance = 11.8},
+            {itemId = 4601, dropChance = 11.8},
+            {itemId = 7909, dropChance = 5.9},
+            {itemId = 7910, dropChance = 5.9}
+        }
+    },
+
     -- Mummified Atal'ai
     ["Mummified Atal'ai"] = {
         npcId = 5263,
@@ -7812,6 +15036,21 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 12.3},
             {itemId = 7910, dropChance = 2.2},
             {itemId = 7909, dropChance = 1.3}
+        }
+    },
+
+    -- Murdaloc
+    ["Murdaloc"] = {
+        npcId = 2945,
+        level = {42, 42},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5428, dropChance = 64.0},
+            {itemId = 4599, dropChance = 20.0},
+            {itemId = 4601, dropChance = 12.0},
+            {itemId = 16884, dropChance = 8.0},
+            {itemId = 3928, dropChance = 4.0},
+            {itemId = 7909, dropChance = 4.0}
         }
     },
 
@@ -7898,6 +15137,249 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Murloc
+    ["Murloc"] = {
+        npcId = 285,
+        level = {6, 7},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 203786, dropChance = 36.3}
+        }
+    },
+
+    -- Murloc Coastrunner
+    ["Murloc Coastrunner"] = {
+        npcId = 126,
+        level = {12, 13},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5371, dropChance = 54.3},
+            {itemId = 6289, dropChance = 34.0},
+            {itemId = 858, dropChance = 14.9},
+            {itemId = 1210, dropChance = 4.3},
+            {itemId = 6344, dropChance = 1.1}
+        }
+    },
+
+    -- Murloc Flesheater
+    ["Murloc Flesheater"] = {
+        npcId = 422,
+        level = {18, 19},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5371, dropChance = 50.6},
+            {itemId = 6289, dropChance = 38.6},
+            {itemId = 858, dropChance = 13.3},
+            {itemId = 818, dropChance = 6.0},
+            {itemId = 1210, dropChance = 2.4}
+        }
+    },
+
+    -- Murloc Forager
+    ["Murloc Forager"] = {
+        npcId = 46,
+        level = {9, 10},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5361, dropChance = 49.7},
+            {itemId = 6303, dropChance = 34.4},
+            {itemId = 118, dropChance = 6.9},
+            {itemId = 774, dropChance = 5.3},
+            {itemId = 3171, dropChance = 1.1},
+            {itemId = 755, dropChance = 0.5},
+            {itemId = 1364, dropChance = 0.5},
+            {itemId = 1389, dropChance = 0.5},
+            {itemId = 1413, dropChance = 0.5},
+            {itemId = 3299, dropChance = 0.5},
+            {itemId = 3609, dropChance = 0.5},
+            {itemId = 4536, dropChance = 0.5},
+            {itemId = 7073, dropChance = 0.5}
+        }
+    },
+
+    -- Murloc Hunter
+    ["Murloc Hunter"] = {
+        npcId = 458,
+        level = {16, 17},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5371, dropChance = 51.7},
+            {itemId = 6289, dropChance = 31.0},
+            {itemId = 858, dropChance = 13.8},
+            {itemId = 1210, dropChance = 6.9}
+        }
+    },
+
+    -- Murloc Lurker
+    ["Murloc Lurker"] = {
+        npcId = 732,
+        level = {9, 10},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5361, dropChance = 54.7},
+            {itemId = 6303, dropChance = 33.5},
+            {itemId = 118, dropChance = 11.7},
+            {itemId = 774, dropChance = 3.9},
+            {itemId = 117, dropChance = 0.6},
+            {itemId = 2598, dropChance = 0.6},
+            {itemId = 3300, dropChance = 0.6}
+        }
+    },
+
+    -- Murloc Minor Oracle
+    ["Murloc Minor Oracle"] = {
+        npcId = 456,
+        level = {13, 14},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5371, dropChance = 56.5},
+            {itemId = 6289, dropChance = 26.1},
+            {itemId = 858, dropChance = 13.0},
+            {itemId = 3299, dropChance = 4.3}
+        }
+    },
+
+    -- Murloc Minor Tidecaller
+    ["Murloc Minor Tidecaller"] = {
+        npcId = 548,
+        level = {17, 18},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5371, dropChance = 54.4},
+            {itemId = 6289, dropChance = 33.3},
+            {itemId = 858, dropChance = 11.4},
+            {itemId = 818, dropChance = 2.6},
+            {itemId = 1210, dropChance = 1.8}
+        }
+    },
+
+    -- Murloc Netter
+    ["Murloc Netter"] = {
+        npcId = 513,
+        level = {14, 15},
+        zone = "Westfall",
+        loot = {
+            {itemId = 6289, dropChance = 40.0},
+            {itemId = 5371, dropChance = 30.0},
+            {itemId = 858, dropChance = 25.0},
+            {itemId = 1210, dropChance = 5.0}
+        }
+    },
+
+    -- Murloc Oracle
+    ["Murloc Oracle"] = {
+        npcId = 517,
+        level = {17, 18},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5371, dropChance = 53.8},
+            {itemId = 6289, dropChance = 29.0},
+            {itemId = 858, dropChance = 17.2},
+            {itemId = 818, dropChance = 4.3},
+            {itemId = 1210, dropChance = 2.2}
+        }
+    },
+
+    -- Murloc Raider
+    ["Murloc Raider"] = {
+        npcId = 515,
+        level = {11, 12},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5371, dropChance = 56.4},
+            {itemId = 6289, dropChance = 41.0},
+            {itemId = 858, dropChance = 10.3},
+            {itemId = 818, dropChance = 5.1}
+        }
+    },
+
+    -- Murloc Scout
+    ["Murloc Scout"] = {
+        npcId = 578,
+        level = {19, 20},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 6289, dropChance = 41.2},
+            {itemId = 5371, dropChance = 39.2},
+            {itemId = 858, dropChance = 15.7},
+            {itemId = 818, dropChance = 2.0},
+            {itemId = 1210, dropChance = 2.0},
+            {itemId = 4345, dropChance = 2.0}
+        }
+    },
+
+    -- Murloc Shorestriker
+    ["Murloc Shorestriker"] = {
+        npcId = 1083,
+        level = {16, 17},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5371, dropChance = 56.9},
+            {itemId = 6289, dropChance = 34.3},
+            {itemId = 858, dropChance = 8.8},
+            {itemId = 1210, dropChance = 2.9},
+            {itemId = 818, dropChance = 1.0}
+        }
+    },
+
+    -- Murloc Streamrunner
+    ["Murloc Streamrunner"] = {
+        npcId = 735,
+        level = {6, 7},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5361, dropChance = 42.9},
+            {itemId = 6303, dropChance = 38.8},
+            {itemId = 118, dropChance = 18.4},
+            {itemId = 774, dropChance = 3.1},
+            {itemId = 805, dropChance = 1.0},
+            {itemId = 1376, dropChance = 1.0},
+            {itemId = 1377, dropChance = 1.0},
+            {itemId = 2138, dropChance = 1.0},
+            {itemId = 2598, dropChance = 1.0}
+        }
+    },
+
+    -- Murloc Tidecaller
+    ["Murloc Tidecaller"] = {
+        npcId = 545,
+        level = {19, 20},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5371, dropChance = 42.9},
+            {itemId = 6289, dropChance = 42.9},
+            {itemId = 858, dropChance = 21.4},
+            {itemId = 1210, dropChance = 7.1}
+        }
+    },
+
+    -- Murloc Tidehunter
+    ["Murloc Tidehunter"] = {
+        npcId = 127,
+        level = {18, 19},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5371, dropChance = 49.1},
+            {itemId = 6289, dropChance = 41.5},
+            {itemId = 858, dropChance = 7.5},
+            {itemId = 1210, dropChance = 7.5}
+        }
+    },
+
+    -- Murloc Warrior
+    ["Murloc Warrior"] = {
+        npcId = 171,
+        level = {15, 16},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5371, dropChance = 48.3},
+            {itemId = 6289, dropChance = 48.3},
+            {itemId = 858, dropChance = 8.6},
+            {itemId = 1210, dropChance = 5.2},
+            {itemId = 818, dropChance = 1.7}
+        }
+    },
+
     -- Murta Grimgut
     ["Murta Grimgut"] = {
         npcId = 7608,
@@ -7913,6 +15395,18 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Mutanus the Devourer
+    ["Mutanus the Devourer"] = {
+        npcId = 3654,
+        level = {22, 22},
+        zone = "Wailing Caverns",
+        loot = {
+            {itemId = 16882, dropChance = 77.8},
+            {itemId = 5377, dropChance = 33.3},
+            {itemId = 6308, dropChance = 11.1}
+        }
+    },
+
     -- Mutated Venture Co. Drone
     ["Mutated Venture Co. Drone"] = {
         npcId = 7310,
@@ -7923,6 +15417,65 @@ DB.PickpocketLoot = {
             {itemId = 3770, dropChance = 26.2},
             {itemId = 5375, dropChance = 16.7},
             {itemId = 929, dropChance = 2.4}
+        }
+    },
+
+    -- Naga Explorer
+    ["Naga Explorer"] = {
+        npcId = 1907,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5435, dropChance = 42.1},
+            {itemId = 4603, dropChance = 33.3},
+            {itemId = 16884, dropChance = 22.2},
+            {itemId = 3928, dropChance = 10.2},
+            {itemId = 7909, dropChance = 1.5},
+            {itemId = 7910, dropChance = 1.0}
+        }
+    },
+
+    -- Nagaz
+    ["Nagaz"] = {
+        npcId = 2320,
+        level = {40, 40},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5427, dropChance = 52.0},
+            {itemId = 16883, dropChance = 20.0},
+            {itemId = 4544, dropChance = 16.0},
+            {itemId = 1710, dropChance = 12.0},
+            {itemId = 3771, dropChance = 4.0},
+            {itemId = 3864, dropChance = 4.0}
+        }
+    },
+
+    -- Nak
+    ["Nak"] = {
+        npcId = 3434,
+        level = {23, 23},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 54.2},
+            {itemId = 5375, dropChance = 25.0},
+            {itemId = 3770, dropChance = 16.7},
+            {itemId = 929, dropChance = 12.5}
+        }
+    },
+
+    -- Nancy Vishas
+    ["Nancy Vishas"] = {
+        npcId = 3984,
+        level = {33, 33},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5431, dropChance = 34.5},
+            {itemId = 1710, dropChance = 17.2},
+            {itemId = 16883, dropChance = 17.2},
+            {itemId = 1707, dropChance = 10.3},
+            {itemId = 4544, dropChance = 10.3},
+            {itemId = 3864, dropChance = 6.9},
+            {itemId = 4539, dropChance = 6.9}
         }
     },
 
@@ -8076,6 +15629,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Nezzliok the Dire
+    ["Nezzliok the Dire"] = {
+        npcId = 1062,
+        level = {40, 40},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 3771, dropChance = 42.1},
+            {itemId = 4544, dropChance = 26.3},
+            {itemId = 16883, dropChance = 26.3},
+            {itemId = 5427, dropChance = 10.5},
+            {itemId = 1710, dropChance = 5.3}
+        }
+    },
+
     -- Noboru the Cudgel
     ["Noboru the Cudgel"] = {
         npcId = 5477,
@@ -8225,6 +15792,18 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Old Murk-Eye
+    ["Old Murk-Eye"] = {
+        npcId = 391,
+        level = {20, 20},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5371, dropChance = 75.0},
+            {itemId = 6289, dropChance = 25.0},
+            {itemId = 858, dropChance = 12.5}
+        }
+    },
+
     -- Omgorn the Lost
     ["Omgorn the Lost"] = {
         npcId = 8201,
@@ -8248,6 +15827,34 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Or'Kalar
+    ["Or'Kalar"] = {
+        npcId = 2773,
+        level = {40, 40},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5427, dropChance = 35.3},
+            {itemId = 16883, dropChance = 35.3},
+            {itemId = 4544, dropChance = 29.4},
+            {itemId = 3771, dropChance = 11.8},
+            {itemId = 1710, dropChance = 5.9}
+        }
+    },
+
+    -- Orgrimmar Grunt
+    ["Orgrimmar Grunt"] = {
+        npcId = 3296,
+        level = {55, 55},
+        zone = "Orgrimmar",
+        loot = {
+            {itemId = 5428, dropChance = 41.4},
+            {itemId = 16885, dropChance = 25.9},
+            {itemId = 8952, dropChance = 20.7},
+            {itemId = 3928, dropChance = 15.5},
+            {itemId = 8950, dropChance = 13.8}
+        }
+    },
+
     -- Oro Eyegouge
     ["Oro Eyegouge"] = {
         npcId = 7606,
@@ -8258,6 +15865,21 @@ DB.PickpocketLoot = {
             {itemId = 5428, dropChance = 29.4},
             {itemId = 4599, dropChance = 23.5},
             {itemId = 4601, dropChance = 11.8}
+        }
+    },
+
+    -- Otto
+    ["Otto"] = {
+        npcId = 2599,
+        level = {38, 38},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 56.3},
+            {itemId = 1710, dropChance = 18.8},
+            {itemId = 5431, dropChance = 18.8},
+            {itemId = 1529, dropChance = 6.3},
+            {itemId = 4539, dropChance = 6.3},
+            {itemId = 4544, dropChance = 6.3}
         }
     },
 
@@ -8312,6 +15934,30 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Palemane Skinner
+    ["Palemane Skinner"] = {
+        npcId = 2950,
+        level = {6, 7},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5364, dropChance = 62.5},
+            {itemId = 118, dropChance = 25.0},
+            {itemId = 117, dropChance = 12.5}
+        }
+    },
+
+    -- Palemane Tanner
+    ["Palemane Tanner"] = {
+        npcId = 2949,
+        level = {5, 6},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5364, dropChance = 60.0},
+            {itemId = 117, dropChance = 25.0},
+            {itemId = 118, dropChance = 25.0}
+        }
+    },
+
     -- Patchwork Horror
     ["Patchwork Horror"] = {
         npcId = 10414,
@@ -8352,6 +15998,21 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 20.9},
             {itemId = 3928, dropChance = 10.6},
             {itemId = 7910, dropChance = 1.3}
+        }
+    },
+
+    -- Plague Spreader
+    ["Plague Spreader"] = {
+        npcId = 604,
+        level = {27, 28},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 53.9},
+            {itemId = 5376, dropChance = 31.6},
+            {itemId = 4606, dropChance = 23.2},
+            {itemId = 929, dropChance = 6.1},
+            {itemId = 1705, dropChance = 1.0},
+            {itemId = 1206, dropChance = 0.4}
         }
     },
 
@@ -8401,6 +16062,17 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Prince Galen Trollbane
+    ["Prince Galen Trollbane"] = {
+        npcId = 2607,
+        level = {44, 44},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5432, dropChance = 83.3},
+            {itemId = 4601, dropChance = 16.7}
+        }
+    },
+
     -- Prince Xavalis
     ["Prince Xavalis"] = {
         npcId = 9877,
@@ -8410,6 +16082,34 @@ DB.PickpocketLoot = {
             {itemId = 5430, dropChance = 50.0},
             {itemId = 8952, dropChance = 41.7},
             {itemId = 16885, dropChance = 25.0}
+        }
+    },
+
+    -- Private Merle
+    ["Private Merle"] = {
+        npcId = 1421,
+        level = {31, 31},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 70.0},
+            {itemId = 16883, dropChance = 20.0},
+            {itemId = 1710, dropChance = 10.0}
+        }
+    },
+
+    -- Prospector Khazgorm
+    ["Prospector Khazgorm"] = {
+        npcId = 3392,
+        level = {24, 24},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 50.0},
+            {itemId = 5374, dropChance = 45.8},
+            {itemId = 929, dropChance = 8.3},
+            {itemId = 4538, dropChance = 8.3},
+            {itemId = 422, dropChance = 4.2},
+            {itemId = 1705, dropChance = 4.2},
+            {itemId = 4542, dropChance = 4.2}
         }
     },
 
@@ -8453,6 +16153,57 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 11.3},
             {itemId = 7909, dropChance = 2.8},
             {itemId = 7910, dropChance = 0.7}
+        }
+    },
+
+    -- Pyrewood Elder
+    ["Pyrewood Elder"] = {
+        npcId = 1895,
+        level = {14, 15},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 45.5},
+            {itemId = 414, dropChance = 15.2},
+            {itemId = 858, dropChance = 15.2},
+            {itemId = 4537, dropChance = 15.2},
+            {itemId = 2287, dropChance = 6.1},
+            {itemId = 5369, dropChance = 6.1},
+            {itemId = 818, dropChance = 3.0},
+            {itemId = 4541, dropChance = 3.0}
+        }
+    },
+
+    -- Pyrewood Sentry
+    ["Pyrewood Sentry"] = {
+        npcId = 1894,
+        level = {14, 15},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 42.2},
+            {itemId = 4541, dropChance = 17.2},
+            {itemId = 858, dropChance = 12.5},
+            {itemId = 4537, dropChance = 12.5},
+            {itemId = 1210, dropChance = 9.4},
+            {itemId = 414, dropChance = 7.8},
+            {itemId = 2287, dropChance = 3.1},
+            {itemId = 5369, dropChance = 3.1},
+            {itemId = 6348, dropChance = 1.6}
+        }
+    },
+
+    -- Pyrewood Watcher
+    ["Pyrewood Watcher"] = {
+        npcId = 1891,
+        level = {13, 14},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 45.6},
+            {itemId = 4541, dropChance = 14.7},
+            {itemId = 4537, dropChance = 13.2},
+            {itemId = 858, dropChance = 11.8},
+            {itemId = 414, dropChance = 8.8},
+            {itemId = 818, dropChance = 8.8},
+            {itemId = 1210, dropChance = 4.4}
         }
     },
 
@@ -8546,6 +16297,22 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Rabid Shadowhide Gnoll
+    ["Rabid Shadowhide Gnoll"] = {
+        npcId = 434,
+        level = {21, 22},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 59.7},
+            {itemId = 5375, dropChance = 22.8},
+            {itemId = 3770, dropChance = 22.0},
+            {itemId = 929, dropChance = 7.1},
+            {itemId = 1206, dropChance = 1.1},
+            {itemId = 1705, dropChance = 0.7},
+            {itemId = 6570, dropChance = 0.4}
+        }
+    },
+
     -- Rageclaw
     ["Rageclaw"] = {
         npcId = 7318,
@@ -8601,6 +16368,19 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Raging Rot Hide
+    ["Raging Rot Hide"] = {
+        npcId = 1943,
+        level = {18, 19},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5370, dropChance = 58.5},
+            {itemId = 4605, dropChance = 31.7},
+            {itemId = 858, dropChance = 12.2},
+            {itemId = 1210, dropChance = 2.4}
+        }
+    },
+
     -- Ramstein the Gorger
     ["Ramstein the Gorger"] = {
         npcId = 10439,
@@ -8612,6 +16392,19 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 16.2},
             {itemId = 3928, dropChance = 16.2},
             {itemId = 7910, dropChance = 1.5}
+        }
+    },
+
+    -- Ran Bloodtooth
+    ["Ran Bloodtooth"] = {
+        npcId = 3696,
+        level = {30, 30},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 43.8},
+            {itemId = 5375, dropChance = 31.3},
+            {itemId = 929, dropChance = 25.0},
+            {itemId = 3770, dropChance = 25.0}
         }
     },
 
@@ -8643,6 +16436,39 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Rattlecage Skeleton
+    ["Rattlecage Skeleton"] = {
+        npcId = 1890,
+        level = {2, 3},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 48.6},
+            {itemId = 4604, dropChance = 41.4},
+            {itemId = 118, dropChance = 12.9},
+            {itemId = 774, dropChance = 3.6},
+            {itemId = 2598, dropChance = 0.7}
+        }
+    },
+
+    -- Rattlecage Soldier
+    ["Rattlecage Soldier"] = {
+        npcId = 1520,
+        level = {6, 7},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 42.2},
+            {itemId = 4604, dropChance = 37.1},
+            {itemId = 118, dropChance = 13.4},
+            {itemId = 774, dropChance = 4.3},
+            {itemId = 2589, dropChance = 0.9},
+            {itemId = 2598, dropChance = 0.9},
+            {itemId = 7073, dropChance = 0.9},
+            {itemId = 1420, dropChance = 0.4},
+            {itemId = 4536, dropChance = 0.4},
+            {itemId = 6150, dropChance = 0.4}
+        }
+    },
+
     -- Rattlegore
     ["Rattlegore"] = {
         npcId = 11622,
@@ -8671,6 +16497,32 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Ravaged Corpse
+    ["Ravaged Corpse"] = {
+        npcId = 1526,
+        level = {6, 7},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 45.4},
+            {itemId = 4604, dropChance = 33.2},
+            {itemId = 118, dropChance = 10.6},
+            {itemId = 2070, dropChance = 4.1},
+            {itemId = 2652, dropChance = 4.1},
+            {itemId = 774, dropChance = 3.5},
+            {itemId = 2598, dropChance = 0.7},
+            {itemId = 3609, dropChance = 0.7},
+            {itemId = 1378, dropChance = 0.5},
+            {itemId = 2210, dropChance = 0.5},
+            {itemId = 1411, dropChance = 0.2},
+            {itemId = 1476, dropChance = 0.2},
+            {itemId = 2650, dropChance = 0.2},
+            {itemId = 2672, dropChance = 0.2},
+            {itemId = 3264, dropChance = 0.2},
+            {itemId = 6296, dropChance = 0.2},
+            {itemId = 7073, dropChance = 0.2}
+        }
+    },
+
     -- Raven
     ["Raven"] = {
         npcId = 7605,
@@ -8683,6 +16535,86 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 12.5},
             {itemId = 4601, dropChance = 8.3},
             {itemId = 4602, dropChance = 8.3}
+        }
+    },
+
+    -- Ravenclaw Champion
+    ["Ravenclaw Champion"] = {
+        npcId = 1869,
+        level = {14, 15},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 4605, dropChance = 55.6},
+            {itemId = 5370, dropChance = 33.3},
+            {itemId = 858, dropChance = 7.4},
+            {itemId = 818, dropChance = 3.7},
+            {itemId = 4293, dropChance = 3.7}
+        }
+    },
+
+    -- Ravenclaw Drudger
+    ["Ravenclaw Drudger"] = {
+        npcId = 1974,
+        level = {19, 20},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5370, dropChance = 42.1},
+            {itemId = 4605, dropChance = 40.4},
+            {itemId = 858, dropChance = 14.0},
+            {itemId = 818, dropChance = 5.3},
+            {itemId = 1210, dropChance = 1.8},
+            {itemId = 2406, dropChance = 1.8}
+        }
+    },
+
+    -- Ravenclaw Guardian
+    ["Ravenclaw Guardian"] = {
+        npcId = 1973,
+        level = {20, 21},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5370, dropChance = 58.0},
+            {itemId = 4605, dropChance = 34.0},
+            {itemId = 858, dropChance = 14.0},
+            {itemId = 1210, dropChance = 2.0}
+        }
+    },
+
+    -- Ravenclaw Raider
+    ["Ravenclaw Raider"] = {
+        npcId = 1865,
+        level = {12, 13},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5370, dropChance = 50.0},
+            {itemId = 4605, dropChance = 27.3},
+            {itemId = 858, dropChance = 22.7},
+            {itemId = 2881, dropChance = 4.5}
+        }
+    },
+
+    -- Ravenclaw Servant
+    ["Ravenclaw Servant"] = {
+        npcId = 1868,
+        level = {13, 14},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 4605, dropChance = 42.9},
+            {itemId = 5370, dropChance = 42.9},
+            {itemId = 818, dropChance = 7.1},
+            {itemId = 1210, dropChance = 7.1}
+        }
+    },
+
+    -- Ravenclaw Slave
+    ["Ravenclaw Slave"] = {
+        npcId = 1866,
+        level = {11, 12},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 4605, dropChance = 49.1},
+            {itemId = 5370, dropChance = 47.3},
+            {itemId = 858, dropChance = 5.5}
         }
     },
 
@@ -8919,6 +16851,213 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Razormane Battleguard
+    ["Razormane Battleguard"] = {
+        npcId = 3114,
+        level = {9, 10},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5364, dropChance = 47.5},
+            {itemId = 117, dropChance = 26.2},
+            {itemId = 118, dropChance = 14.8},
+            {itemId = 774, dropChance = 8.2},
+            {itemId = 1370, dropChance = 1.6},
+            {itemId = 1374, dropChance = 1.6},
+            {itemId = 2656, dropChance = 1.6},
+            {itemId = 7101, dropChance = 1.6}
+        }
+    },
+
+    -- Razormane Defender
+    ["Razormane Defender"] = {
+        npcId = 3266,
+        level = {12, 13},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 56.5},
+            {itemId = 2287, dropChance = 29.8},
+            {itemId = 858, dropChance = 14.3},
+            {itemId = 818, dropChance = 2.5},
+            {itemId = 1210, dropChance = 1.9}
+        }
+    },
+
+    -- Razormane Dustrunner
+    ["Razormane Dustrunner"] = {
+        npcId = 3113,
+        level = {8, 9},
+        zone = "Durotar",
+        loot = {
+            {itemId = 117, dropChance = 47.9},
+            {itemId = 5364, dropChance = 43.8},
+            {itemId = 118, dropChance = 16.4},
+            {itemId = 2589, dropChance = 1.4},
+            {itemId = 2598, dropChance = 1.4}
+        }
+    },
+
+    -- Razormane Geomancer
+    ["Razormane Geomancer"] = {
+        npcId = 3269,
+        level = {12, 13},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 50.0},
+            {itemId = 2287, dropChance = 35.8},
+            {itemId = 858, dropChance = 14.9},
+            {itemId = 818, dropChance = 3.4},
+            {itemId = 1210, dropChance = 3.4},
+            {itemId = 1370, dropChance = 0.7},
+            {itemId = 1372, dropChance = 0.7},
+            {itemId = 2651, dropChance = 0.7}
+        }
+    },
+
+    -- Razormane Hunter
+    ["Razormane Hunter"] = {
+        npcId = 3265,
+        level = {11, 12},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 2287, dropChance = 54.5},
+            {itemId = 5369, dropChance = 42.4},
+            {itemId = 858, dropChance = 9.1},
+            {itemId = 1210, dropChance = 3.0}
+        }
+    },
+
+    -- Razormane Mystic
+    ["Razormane Mystic"] = {
+        npcId = 3271,
+        level = {13, 14},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 64.1},
+            {itemId = 2287, dropChance = 24.4},
+            {itemId = 858, dropChance = 7.7},
+            {itemId = 1210, dropChance = 2.6},
+            {itemId = 7288, dropChance = 1.3}
+        }
+    },
+
+    -- Razormane Pathfinder
+    ["Razormane Pathfinder"] = {
+        npcId = 3456,
+        level = {20, 21},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 2287, dropChance = 49.2},
+            {itemId = 5369, dropChance = 42.5},
+            {itemId = 858, dropChance = 11.7},
+            {itemId = 818, dropChance = 2.5}
+        }
+    },
+
+    -- Razormane Quilboar
+    ["Razormane Quilboar"] = {
+        npcId = 3111,
+        level = {6, 7},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5364, dropChance = 51.4},
+            {itemId = 117, dropChance = 31.8},
+            {itemId = 118, dropChance = 11.2},
+            {itemId = 774, dropChance = 5.6},
+            {itemId = 2070, dropChance = 0.9},
+            {itemId = 2589, dropChance = 0.9},
+            {itemId = 3609, dropChance = 0.9},
+            {itemId = 4540, dropChance = 0.9}
+        }
+    },
+
+    -- Razormane Scout
+    ["Razormane Scout"] = {
+        npcId = 3112,
+        level = {7, 8},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5364, dropChance = 50.0},
+            {itemId = 117, dropChance = 31.4},
+            {itemId = 118, dropChance = 20.6},
+            {itemId = 774, dropChance = 3.9},
+            {itemId = 2589, dropChance = 1.0},
+            {itemId = 2598, dropChance = 1.0}
+        }
+    },
+
+    -- Razormane Seer
+    ["Razormane Seer"] = {
+        npcId = 3458,
+        level = {23, 24},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 50.8},
+            {itemId = 5375, dropChance = 29.0},
+            {itemId = 3770, dropChance = 22.7},
+            {itemId = 929, dropChance = 7.6},
+            {itemId = 1705, dropChance = 1.0},
+            {itemId = 1206, dropChance = 0.3}
+        }
+    },
+
+    -- Razormane Stalker
+    ["Razormane Stalker"] = {
+        npcId = 3457,
+        level = {22, 23},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 56.2},
+            {itemId = 5375, dropChance = 27.4},
+            {itemId = 3770, dropChance = 20.8},
+            {itemId = 929, dropChance = 9.7},
+            {itemId = 1705, dropChance = 2.2},
+            {itemId = 1206, dropChance = 0.4}
+        }
+    },
+
+    -- Razormane Thornweaver
+    ["Razormane Thornweaver"] = {
+        npcId = 3268,
+        level = {10, 11},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5364, dropChance = 50.0},
+            {itemId = 117, dropChance = 42.7},
+            {itemId = 118, dropChance = 12.5},
+            {itemId = 774, dropChance = 2.1},
+            {itemId = 14094, dropChance = 1.0}
+        }
+    },
+
+    -- Razormane Warfrenzy
+    ["Razormane Warfrenzy"] = {
+        npcId = 3459,
+        level = {24, 25},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 55.8},
+            {itemId = 5375, dropChance = 27.6},
+            {itemId = 3770, dropChance = 22.1},
+            {itemId = 929, dropChance = 8.5},
+            {itemId = 1705, dropChance = 3.1},
+            {itemId = 1206, dropChance = 1.0}
+        }
+    },
+
+    -- Razormane Water Seeker
+    ["Razormane Water Seeker"] = {
+        npcId = 3267,
+        level = {10, 11},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5364, dropChance = 51.6},
+            {itemId = 117, dropChance = 34.1},
+            {itemId = 118, dropChance = 15.4},
+            {itemId = 774, dropChance = 6.6},
+            {itemId = 2598, dropChance = 1.1}
+        }
+    },
+
     -- Reanimated Corpse
     ["Reanimated Corpse"] = {
         npcId = 10481,
@@ -8930,6 +17069,124 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 19.5},
             {itemId = 3928, dropChance = 12.4},
             {itemId = 7910, dropChance = 1.8}
+        }
+    },
+
+    -- Redridge Alpha
+    ["Redridge Alpha"] = {
+        npcId = 445,
+        level = {21, 22},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 53.6},
+            {itemId = 5375, dropChance = 32.6},
+            {itemId = 3770, dropChance = 26.1},
+            {itemId = 929, dropChance = 4.3}
+        }
+    },
+
+    -- Redridge Basher
+    ["Redridge Basher"] = {
+        npcId = 446,
+        level = {19, 20},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5369, dropChance = 51.7},
+            {itemId = 2287, dropChance = 38.9},
+            {itemId = 858, dropChance = 10.0},
+            {itemId = 1210, dropChance = 1.9},
+            {itemId = 818, dropChance = 1.2}
+        }
+    },
+
+    -- Redridge Brute
+    ["Redridge Brute"] = {
+        npcId = 426,
+        level = {17, 18},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5369, dropChance = 48.4},
+            {itemId = 2287, dropChance = 36.2},
+            {itemId = 858, dropChance = 12.7},
+            {itemId = 818, dropChance = 5.9},
+            {itemId = 1210, dropChance = 2.3}
+        }
+    },
+
+    -- Redridge Drudger
+    ["Redridge Drudger"] = {
+        npcId = 580,
+        level = {20, 21},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5369, dropChance = 48.3},
+            {itemId = 2287, dropChance = 42.9},
+            {itemId = 858, dropChance = 11.3},
+            {itemId = 1210, dropChance = 3.4},
+            {itemId = 818, dropChance = 0.8},
+            {itemId = 2553, dropChance = 0.4},
+            {itemId = 3610, dropChance = 0.4},
+            {itemId = 4346, dropChance = 0.4}
+        }
+    },
+
+    -- Redridge Mongrel
+    ["Redridge Mongrel"] = {
+        npcId = 423,
+        level = {15, 16},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5369, dropChance = 55.9},
+            {itemId = 2287, dropChance = 34.4},
+            {itemId = 858, dropChance = 6.6},
+            {itemId = 1210, dropChance = 3.1},
+            {itemId = 818, dropChance = 2.7},
+            {itemId = 4408, dropChance = 0.4}
+        }
+    },
+
+    -- Redridge Mystic
+    ["Redridge Mystic"] = {
+        npcId = 430,
+        level = {18, 19},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5369, dropChance = 48.5},
+            {itemId = 2287, dropChance = 41.8},
+            {itemId = 858, dropChance = 11.1},
+            {itemId = 1210, dropChance = 2.3},
+            {itemId = 818, dropChance = 1.3},
+            {itemId = 2555, dropChance = 0.8},
+            {itemId = 4345, dropChance = 0.5},
+            {itemId = 6342, dropChance = 0.3}
+        }
+    },
+
+    -- Redridge Poacher
+    ["Redridge Poacher"] = {
+        npcId = 424,
+        level = {16, 17},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5369, dropChance = 52.1},
+            {itemId = 2287, dropChance = 42.9},
+            {itemId = 858, dropChance = 8.0},
+            {itemId = 818, dropChance = 3.1},
+            {itemId = 1210, dropChance = 1.2}
+        }
+    },
+
+    -- Redridge Thrasher
+    ["Redridge Thrasher"] = {
+        npcId = 712,
+        level = {14, 15},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 5369, dropChance = 47.3},
+            {itemId = 2287, dropChance = 39.2},
+            {itemId = 858, dropChance = 12.8},
+            {itemId = 1210, dropChance = 4.1},
+            {itemId = 818, dropChance = 3.4}
         }
     },
 
@@ -8945,6 +17202,20 @@ DB.PickpocketLoot = {
             {itemId = 1710, dropChance = 11.4},
             {itemId = 4544, dropChance = 5.7},
             {itemId = 1529, dropChance = 2.9}
+        }
+    },
+
+    -- Rhahk'Zor
+    ["Rhahk'Zor"] = {
+        npcId = 644,
+        level = {19, 19},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 5379, dropChance = 60.0},
+            {itemId = 4541, dropChance = 20.0},
+            {itemId = 858, dropChance = 16.0},
+            {itemId = 2287, dropChance = 12.0},
+            {itemId = 1210, dropChance = 8.0}
         }
     },
 
@@ -8975,6 +17246,20 @@ DB.PickpocketLoot = {
             {itemId = 4602, dropChance = 12.5},
             {itemId = 3927, dropChance = 4.2},
             {itemId = 7909, dropChance = 2.1}
+        }
+    },
+
+    -- Ricter
+    ["Ricter"] = {
+        npcId = 2411,
+        level = {33, 33},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 16883, dropChance = 45.5},
+            {itemId = 5433, dropChance = 40.9},
+            {itemId = 1710, dropChance = 9.1},
+            {itemId = 4607, dropChance = 9.1},
+            {itemId = 1529, dropChance = 4.5}
         }
     },
 
@@ -9061,6 +17346,425 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Riverpaw Bandit
+    ["Riverpaw Bandit"] = {
+        npcId = 452,
+        level = {16, 17},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5369, dropChance = 52.8},
+            {itemId = 2287, dropChance = 38.2},
+            {itemId = 858, dropChance = 11.2},
+            {itemId = 818, dropChance = 4.5},
+            {itemId = 1210, dropChance = 1.1},
+            {itemId = 2408, dropChance = 1.1}
+        }
+    },
+
+    -- Riverpaw Brute
+    ["Riverpaw Brute"] = {
+        npcId = 124,
+        level = {15, 16},
+        zone = "Westfall",
+        loot = {
+            {itemId = 2287, dropChance = 41.8},
+            {itemId = 5369, dropChance = 40.3},
+            {itemId = 858, dropChance = 16.4},
+            {itemId = 1210, dropChance = 3.0},
+            {itemId = 818, dropChance = 1.5}
+        }
+    },
+
+    -- Riverpaw Gnoll
+    ["Riverpaw Gnoll"] = {
+        npcId = 117,
+        level = {11, 12},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5369, dropChance = 45.5},
+            {itemId = 2287, dropChance = 40.3},
+            {itemId = 858, dropChance = 14.3},
+            {itemId = 1210, dropChance = 3.5},
+            {itemId = 818, dropChance = 3.0},
+            {itemId = 6342, dropChance = 0.4}
+        }
+    },
+
+    -- Riverpaw Herbalist
+    ["Riverpaw Herbalist"] = {
+        npcId = 501,
+        level = {14, 15},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5369, dropChance = 65.8},
+            {itemId = 2287, dropChance = 36.8},
+            {itemId = 818, dropChance = 5.3},
+            {itemId = 858, dropChance = 5.3},
+            {itemId = 1210, dropChance = 5.3}
+        }
+    },
+
+    -- Riverpaw Miner
+    ["Riverpaw Miner"] = {
+        npcId = 1426,
+        level = {14, 15},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5369, dropChance = 57.4},
+            {itemId = 2287, dropChance = 38.2},
+            {itemId = 858, dropChance = 5.9},
+            {itemId = 1210, dropChance = 5.9},
+            {itemId = 818, dropChance = 1.5}
+        }
+    },
+
+    -- Riverpaw Mongrel
+    ["Riverpaw Mongrel"] = {
+        npcId = 123,
+        level = {13, 14},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5369, dropChance = 47.4},
+            {itemId = 2287, dropChance = 35.5},
+            {itemId = 858, dropChance = 14.5},
+            {itemId = 818, dropChance = 5.3},
+            {itemId = 1210, dropChance = 2.6}
+        }
+    },
+
+    -- Riverpaw Mystic
+    ["Riverpaw Mystic"] = {
+        npcId = 453,
+        level = {18, 19},
+        zone = "Westfall",
+        loot = {
+            {itemId = 2287, dropChance = 50.0},
+            {itemId = 5369, dropChance = 46.2},
+            {itemId = 1210, dropChance = 7.7}
+        }
+    },
+
+    -- Riverpaw Outrunner
+    ["Riverpaw Outrunner"] = {
+        npcId = 478,
+        level = {9, 10},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5364, dropChance = 54.0},
+            {itemId = 117, dropChance = 33.6},
+            {itemId = 118, dropChance = 11.7},
+            {itemId = 774, dropChance = 4.6},
+            {itemId = 4536, dropChance = 0.7},
+            {itemId = 1368, dropChance = 0.2},
+            {itemId = 1429, dropChance = 0.2},
+            {itemId = 2589, dropChance = 0.2},
+            {itemId = 3609, dropChance = 0.2},
+            {itemId = 7074, dropChance = 0.2}
+        }
+    },
+
+    -- Riverpaw Runt
+    ["Riverpaw Runt"] = {
+        npcId = 97,
+        level = {8, 9},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5364, dropChance = 53.7},
+            {itemId = 203787, dropChance = 35.6},
+            {itemId = 117, dropChance = 28.0},
+            {itemId = 118, dropChance = 13.4},
+            {itemId = 774, dropChance = 6.1},
+            {itemId = 2598, dropChance = 2.4},
+            {itemId = 3609, dropChance = 1.2}
+        }
+    },
+
+    -- Riverpaw Scout
+    ["Riverpaw Scout"] = {
+        npcId = 500,
+        level = {12, 13},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5369, dropChance = 56.4},
+            {itemId = 2287, dropChance = 33.1},
+            {itemId = 858, dropChance = 14.3},
+            {itemId = 818, dropChance = 2.3},
+            {itemId = 1210, dropChance = 1.5},
+            {itemId = 6342, dropChance = 0.8}
+        }
+    },
+
+    -- Riverpaw Taskmaster
+    ["Riverpaw Taskmaster"] = {
+        npcId = 98,
+        level = {17, 18},
+        zone = "Westfall",
+        loot = {
+            {itemId = 5369, dropChance = 58.2},
+            {itemId = 2287, dropChance = 29.1},
+            {itemId = 858, dropChance = 14.5},
+            {itemId = 818, dropChance = 5.5},
+            {itemId = 1210, dropChance = 3.6}
+        }
+    },
+
+    -- Rockjaw Ambusher
+    ["Rockjaw Ambusher"] = {
+        npcId = 1116,
+        level = {9, 10},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 52.5},
+            {itemId = 3299, dropChance = 35.0},
+            {itemId = 117, dropChance = 5.0},
+            {itemId = 774, dropChance = 5.0},
+            {itemId = 118, dropChance = 2.5},
+            {itemId = 4540, dropChance = 2.5}
+        }
+    },
+
+    -- Rockjaw Bonesnapper
+    ["Rockjaw Bonesnapper"] = {
+        npcId = 1117,
+        level = {9, 10},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 48.1},
+            {itemId = 117, dropChance = 18.7},
+            {itemId = 4540, dropChance = 15.5},
+            {itemId = 118, dropChance = 12.8},
+            {itemId = 774, dropChance = 5.3},
+            {itemId = 1181, dropChance = 0.5},
+            {itemId = 2589, dropChance = 0.5},
+            {itemId = 2598, dropChance = 0.5},
+            {itemId = 3189, dropChance = 0.5},
+            {itemId = 3609, dropChance = 0.5},
+            {itemId = 7073, dropChance = 0.5},
+            {itemId = 7101, dropChance = 0.5}
+        }
+    },
+
+    -- Rockjaw Raider
+    ["Rockjaw Raider"] = {
+        npcId = 1718,
+        level = {3, 4},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 52.0},
+            {itemId = 4540, dropChance = 20.0},
+            {itemId = 117, dropChance = 19.7},
+            {itemId = 118, dropChance = 10.2},
+            {itemId = 774, dropChance = 4.9},
+            {itemId = 4865, dropChance = 0.6},
+            {itemId = 2598, dropChance = 0.3},
+            {itemId = 2656, dropChance = 0.3},
+            {itemId = 3609, dropChance = 0.3},
+            {itemId = 7074, dropChance = 0.3}
+        }
+    },
+
+    -- Rockjaw Skullthumper
+    ["Rockjaw Skullthumper"] = {
+        npcId = 1115,
+        level = {8, 9},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 50.6},
+            {itemId = 4540, dropChance = 17.8},
+            {itemId = 117, dropChance = 17.5},
+            {itemId = 118, dropChance = 9.7},
+            {itemId = 774, dropChance = 2.6},
+            {itemId = 2589, dropChance = 2.2},
+            {itemId = 1370, dropChance = 0.7},
+            {itemId = 1417, dropChance = 0.7},
+            {itemId = 2070, dropChance = 0.7},
+            {itemId = 2211, dropChance = 0.7},
+            {itemId = 1427, dropChance = 0.4}
+        }
+    },
+
+    -- Rockjaw Trogg
+    ["Rockjaw Trogg"] = {
+        npcId = 707,
+        level = {1, 2},
+        zone = "Dun Morogh",
+        loot = {
+            {itemId = 5367, dropChance = 56.7},
+            {itemId = 117, dropChance = 22.4},
+            {itemId = 4540, dropChance = 14.9},
+            {itemId = 118, dropChance = 11.9},
+            {itemId = 774, dropChance = 3.0}
+        }
+    },
+
+    -- Rot Hide Brute
+    ["Rot Hide Brute"] = {
+        npcId = 1939,
+        level = {16, 17},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5370, dropChance = 49.0},
+            {itemId = 4605, dropChance = 36.6},
+            {itemId = 858, dropChance = 14.9},
+            {itemId = 818, dropChance = 3.0},
+            {itemId = 1210, dropChance = 2.5},
+            {itemId = 2555, dropChance = 0.5}
+        }
+    },
+
+    -- Rot Hide Gladerunner
+    ["Rot Hide Gladerunner"] = {
+        npcId = 1772,
+        level = {11, 12},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 4605, dropChance = 44.4},
+            {itemId = 5370, dropChance = 44.4},
+            {itemId = 858, dropChance = 11.1},
+            {itemId = 2589, dropChance = 2.8}
+        }
+    },
+
+    -- Rot Hide Gnoll
+    ["Rot Hide Gnoll"] = {
+        npcId = 1674,
+        level = {6, 7},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 62.6},
+            {itemId = 4604, dropChance = 26.6},
+            {itemId = 118, dropChance = 10.1},
+            {itemId = 774, dropChance = 5.8},
+            {itemId = 2589, dropChance = 1.4},
+            {itemId = 1370, dropChance = 0.7},
+            {itemId = 1378, dropChance = 0.7},
+            {itemId = 2210, dropChance = 0.7},
+            {itemId = 2653, dropChance = 0.7},
+            {itemId = 4540, dropChance = 0.7}
+        }
+    },
+
+    -- Rot Hide Graverobber
+    ["Rot Hide Graverobber"] = {
+        npcId = 1941,
+        level = {6, 7},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 42.4},
+            {itemId = 4604, dropChance = 31.8},
+            {itemId = 774, dropChance = 12.2},
+            {itemId = 1380, dropChance = 7.1},
+            {itemId = 118, dropChance = 6.3},
+            {itemId = 2589, dropChance = 0.8},
+            {itemId = 2598, dropChance = 0.4},
+            {itemId = 2644, dropChance = 0.4},
+            {itemId = 3190, dropChance = 0.4},
+            {itemId = 3300, dropChance = 0.4},
+            {itemId = 3363, dropChance = 0.4},
+            {itemId = 4536, dropChance = 0.4},
+            {itemId = 4865, dropChance = 0.4},
+            {itemId = 7074, dropChance = 0.4}
+        }
+    },
+
+    -- Rot Hide Mongrel
+    ["Rot Hide Mongrel"] = {
+        npcId = 1675,
+        level = {7, 8},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 50.0},
+            {itemId = 4604, dropChance = 35.3},
+            {itemId = 118, dropChance = 11.5},
+            {itemId = 2598, dropChance = 1.3},
+            {itemId = 774, dropChance = 0.6},
+            {itemId = 1370, dropChance = 0.6},
+            {itemId = 1418, dropChance = 0.6},
+            {itemId = 3363, dropChance = 0.6},
+            {itemId = 3609, dropChance = 0.6},
+            {itemId = 4865, dropChance = 0.6},
+            {itemId = 6150, dropChance = 0.6},
+            {itemId = 7073, dropChance = 0.6},
+            {itemId = 7101, dropChance = 0.6}
+        }
+    },
+
+    -- Rot Hide Mystic
+    ["Rot Hide Mystic"] = {
+        npcId = 1773,
+        level = {12, 13},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5370, dropChance = 47.1},
+            {itemId = 4605, dropChance = 35.3},
+            {itemId = 858, dropChance = 11.8},
+            {itemId = 818, dropChance = 5.9},
+            {itemId = 1210, dropChance = 5.9}
+        }
+    },
+
+    -- Rot Hide Plague Weaver
+    ["Rot Hide Plague Weaver"] = {
+        npcId = 1940,
+        level = {17, 18},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5370, dropChance = 52.4},
+            {itemId = 4605, dropChance = 39.0},
+            {itemId = 858, dropChance = 7.6},
+            {itemId = 1210, dropChance = 5.7},
+            {itemId = 818, dropChance = 2.9},
+            {itemId = 6342, dropChance = 1.0},
+            {itemId = 6344, dropChance = 1.0}
+        }
+    },
+
+    -- Rot Hide Savage
+    ["Rot Hide Savage"] = {
+        npcId = 1942,
+        level = {18, 19},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5370, dropChance = 48.0},
+            {itemId = 4605, dropChance = 41.3},
+            {itemId = 858, dropChance = 16.0},
+            {itemId = 818, dropChance = 4.0},
+            {itemId = 1210, dropChance = 1.3}
+        }
+    },
+
+    -- Rotted One
+    ["Rotted One"] = {
+        npcId = 948,
+        level = {25, 26},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 61.4},
+            {itemId = 5376, dropChance = 22.2},
+            {itemId = 4606, dropChance = 20.3},
+            {itemId = 929, dropChance = 8.4},
+            {itemId = 1705, dropChance = 1.6}
+        }
+    },
+
+    -- Rotting Ancestor
+    ["Rotting Ancestor"] = {
+        npcId = 1530,
+        level = {10, 11},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 40.5},
+            {itemId = 4604, dropChance = 34.6},
+            {itemId = 118, dropChance = 22.2},
+            {itemId = 774, dropChance = 2.0},
+            {itemId = 3609, dropChance = 2.0},
+            {itemId = 779, dropChance = 0.7},
+            {itemId = 1368, dropChance = 0.7},
+            {itemId = 2589, dropChance = 0.7},
+            {itemId = 12223, dropChance = 0.7}
+        }
+    },
+
     -- Rotting Cadaver
     ["Rotting Cadaver"] = {
         npcId = 4474,
@@ -9072,6 +17776,66 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 25.6},
             {itemId = 3928, dropChance = 9.3},
             {itemId = 7910, dropChance = 2.1}
+        }
+    },
+
+    -- Rotting Dead
+    ["Rotting Dead"] = {
+        npcId = 1525,
+        level = {5, 6},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 51.6},
+            {itemId = 4604, dropChance = 37.1},
+            {itemId = 118, dropChance = 8.2},
+            {itemId = 774, dropChance = 3.2},
+            {itemId = 2210, dropChance = 3.2},
+            {itemId = 3609, dropChance = 0.5},
+            {itemId = 7101, dropChance = 0.5},
+            {itemId = 2589, dropChance = 0.4},
+            {itemId = 2652, dropChance = 0.4},
+            {itemId = 3261, dropChance = 0.4},
+            {itemId = 3363, dropChance = 0.4},
+            {itemId = 117, dropChance = 0.2},
+            {itemId = 1370, dropChance = 0.2},
+            {itemId = 1377, dropChance = 0.2},
+            {itemId = 1476, dropChance = 0.2},
+            {itemId = 2070, dropChance = 0.2},
+            {itemId = 2598, dropChance = 0.2},
+            {itemId = 2651, dropChance = 0.2},
+            {itemId = 2653, dropChance = 0.2},
+            {itemId = 3264, dropChance = 0.2},
+            {itemId = 4536, dropChance = 0.2},
+            {itemId = 4865, dropChance = 0.2},
+            {itemId = 7074, dropChance = 0.2}
+        }
+    },
+
+    -- Rotting Ghoul
+    ["Rotting Ghoul"] = {
+        npcId = 1793,
+        level = {54, 55},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 41.5},
+            {itemId = 8948, dropChance = 32.3},
+            {itemId = 16885, dropChance = 25.6},
+            {itemId = 3928, dropChance = 9.1},
+            {itemId = 7910, dropChance = 1.2}
+        }
+    },
+
+    -- Rotting Slime
+    ["Rotting Slime"] = {
+        npcId = 3928,
+        level = {20, 22},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 61.7},
+            {itemId = 5376, dropChance = 33.6},
+            {itemId = 4606, dropChance = 18.0},
+            {itemId = 929, dropChance = 3.1},
+            {itemId = 1206, dropChance = 0.8}
         }
     },
 
@@ -9088,6 +17852,18 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Ruuzel
+    ["Ruuzel"] = {
+        npcId = 3943,
+        level = {22, 22},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 50.0},
+            {itemId = 5377, dropChance = 37.5},
+            {itemId = 6308, dropChance = 12.5}
+        }
+    },
+
     -- Ruuzlu
     ["Ruuzlu"] = {
         npcId = 7797,
@@ -9100,6 +17876,141 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 13.2},
             {itemId = 4599, dropChance = 13.2},
             {itemId = 7909, dropChance = 3.8}
+        }
+    },
+
+    -- Saltscale Forager
+    ["Saltscale Forager"] = {
+        npcId = 877,
+        level = {35, 36},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 43.3},
+            {itemId = 10457, dropChance = 38.3},
+            {itemId = 6362, dropChance = 21.7},
+            {itemId = 1710, dropChance = 1.7}
+        }
+    },
+
+    -- Saltscale Hunter
+    ["Saltscale Hunter"] = {
+        npcId = 879,
+        level = {35, 36},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 10457, dropChance = 48.5},
+            {itemId = 16883, dropChance = 31.1},
+            {itemId = 6362, dropChance = 20.4},
+            {itemId = 1710, dropChance = 14.6},
+            {itemId = 5500, dropChance = 2.9},
+            {itemId = 1529, dropChance = 1.9},
+            {itemId = 3864, dropChance = 1.0}
+        }
+    },
+
+    -- Saltscale Oracle
+    ["Saltscale Oracle"] = {
+        npcId = 873,
+        level = {36, 37},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 10457, dropChance = 52.6},
+            {itemId = 6362, dropChance = 31.6},
+            {itemId = 1710, dropChance = 21.1},
+            {itemId = 16883, dropChance = 5.3}
+        }
+    },
+
+    -- Saltscale Tide Lord
+    ["Saltscale Tide Lord"] = {
+        npcId = 875,
+        level = {37, 37},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 6362, dropChance = 53.3},
+            {itemId = 10457, dropChance = 20.0},
+            {itemId = 1710, dropChance = 13.3},
+            {itemId = 16883, dropChance = 13.3}
+        }
+    },
+
+    -- Saltscale Warrior
+    ["Saltscale Warrior"] = {
+        npcId = 871,
+        level = {35, 36},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 51.5},
+            {itemId = 10457, dropChance = 28.8},
+            {itemId = 6362, dropChance = 18.2},
+            {itemId = 1710, dropChance = 7.6},
+            {itemId = 5498, dropChance = 3.0}
+        }
+    },
+
+    -- Saltspittle Muckdweller
+    ["Saltspittle Muckdweller"] = {
+        npcId = 3740,
+        level = {20, 21},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5371, dropChance = 68.2},
+            {itemId = 6289, dropChance = 27.3},
+            {itemId = 858, dropChance = 9.1}
+        }
+    },
+
+    -- Saltspittle Oracle
+    ["Saltspittle Oracle"] = {
+        npcId = 3742,
+        level = {20, 21},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 6289, dropChance = 51.7},
+            {itemId = 5371, dropChance = 27.6},
+            {itemId = 858, dropChance = 13.8},
+            {itemId = 818, dropChance = 6.9},
+            {itemId = 1210, dropChance = 3.4}
+        }
+    },
+
+    -- Saltspittle Puddlejumper
+    ["Saltspittle Puddlejumper"] = {
+        npcId = 3737,
+        level = {19, 20},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5371, dropChance = 59.5},
+            {itemId = 6289, dropChance = 35.1},
+            {itemId = 818, dropChance = 2.7},
+            {itemId = 858, dropChance = 2.7}
+        }
+    },
+
+    -- Saltspittle Warrior
+    ["Saltspittle Warrior"] = {
+        npcId = 3739,
+        level = {19, 20},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5371, dropChance = 47.4},
+            {itemId = 6289, dropChance = 40.4},
+            {itemId = 858, dropChance = 15.8},
+            {itemId = 1210, dropChance = 3.5},
+            {itemId = 818, dropChance = 1.8}
+        }
+    },
+
+    -- Samuel Fipps
+    ["Samuel Fipps"] = {
+        npcId = 1919,
+        level = {5, 5},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 41.5},
+            {itemId = 4604, dropChance = 29.3},
+            {itemId = 118, dropChance = 22.0},
+            {itemId = 774, dropChance = 12.2}
         }
     },
 
@@ -9333,6 +18244,31 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Sap Beast
+    ["Sap Beast"] = {
+        npcId = 4020,
+        level = {22, 23},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 47.1},
+            {itemId = 5376, dropChance = 37.9},
+            {itemId = 4606, dropChance = 23.6},
+            {itemId = 929, dropChance = 5.7}
+        }
+    },
+
+    -- Sarilus Foulborne
+    ["Sarilus Foulborne"] = {
+        npcId = 3986,
+        level = {25, 25},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 16882, dropChance = 76.5},
+            {itemId = 5376, dropChance = 23.5},
+            {itemId = 1206, dropChance = 11.8}
+        }
+    },
+
     -- Saturated Ooze
     ["Saturated Ooze"] = {
         npcId = 5228,
@@ -9446,6 +18382,38 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Scarlet Bodyguard
+    ["Scarlet Bodyguard"] = {
+        npcId = 1660,
+        level = {8, 8},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5363, dropChance = 32.1},
+            {itemId = 4536, dropChance = 21.4},
+            {itemId = 118, dropChance = 14.3},
+            {itemId = 4540, dropChance = 14.3},
+            {itemId = 6150, dropChance = 14.3},
+            {itemId = 774, dropChance = 10.7},
+            {itemId = 2070, dropChance = 3.6}
+        }
+    },
+
+    -- Scarlet Cavalier
+    ["Scarlet Cavalier"] = {
+        npcId = 1836,
+        level = {57, 58},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 45.2},
+            {itemId = 8953, dropChance = 16.1},
+            {itemId = 16885, dropChance = 16.1},
+            {itemId = 3928, dropChance = 12.9},
+            {itemId = 8932, dropChance = 9.7},
+            {itemId = 8950, dropChance = 9.7},
+            {itemId = 7910, dropChance = 3.2}
+        }
+    },
+
     -- Scarlet Centurion
     ["Scarlet Centurion"] = {
         npcId = 4301,
@@ -9513,6 +18481,23 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Scarlet Commander Mograine
+    ["Scarlet Commander Mograine"] = {
+        npcId = 3976,
+        level = {42, 42},
+        zone = "Scarlet Monastery",
+        loot = {
+            {itemId = 5432, dropChance = 43.8},
+            {itemId = 3927, dropChance = 20.0},
+            {itemId = 16884, dropChance = 17.5},
+            {itemId = 4601, dropChance = 12.5},
+            {itemId = 4602, dropChance = 11.3},
+            {itemId = 3928, dropChance = 8.8},
+            {itemId = 7909, dropChance = 1.3},
+            {itemId = 7910, dropChance = 1.3}
+        }
+    },
+
     -- Scarlet Conjuror
     ["Scarlet Conjuror"] = {
         npcId = 4297,
@@ -9527,6 +18512,28 @@ DB.PickpocketLoot = {
             {itemId = 1710, dropChance = 5.6},
             {itemId = 1529, dropChance = 1.7},
             {itemId = 3864, dropChance = 1.7}
+        }
+    },
+
+    -- Scarlet Convert
+    ["Scarlet Convert"] = {
+        npcId = 1506,
+        level = {3, 3},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5363, dropChance = 26.5},
+            {itemId = 6150, dropChance = 24.5},
+            {itemId = 4540, dropChance = 15.3},
+            {itemId = 2070, dropChance = 14.9},
+            {itemId = 118, dropChance = 11.9},
+            {itemId = 4536, dropChance = 10.7},
+            {itemId = 774, dropChance = 5.2},
+            {itemId = 2598, dropChance = 0.3},
+            {itemId = 2651, dropChance = 0.3},
+            {itemId = 4865, dropChance = 0.3},
+            {itemId = 7073, dropChance = 0.3},
+            {itemId = 1376, dropChance = 0.2},
+            {itemId = 3609, dropChance = 0.1}
         }
     },
 
@@ -9629,6 +18636,26 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Scarlet Friar
+    ["Scarlet Friar"] = {
+        npcId = 1538,
+        level = {9, 10},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 6150, dropChance = 25.3},
+            {itemId = 5363, dropChance = 22.0},
+            {itemId = 4536, dropChance = 16.0},
+            {itemId = 4540, dropChance = 15.3},
+            {itemId = 118, dropChance = 14.0},
+            {itemId = 774, dropChance = 7.3},
+            {itemId = 2070, dropChance = 5.3},
+            {itemId = 1421, dropChance = 0.7},
+            {itemId = 2589, dropChance = 0.7},
+            {itemId = 2672, dropChance = 0.7},
+            {itemId = 4865, dropChance = 0.7}
+        }
+    },
+
     -- Scarlet Gallant
     ["Scarlet Gallant"] = {
         npcId = 4287,
@@ -9663,6 +18690,105 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Scarlet Hunter
+    ["Scarlet Hunter"] = {
+        npcId = 1831,
+        level = {52, 53},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 36.6},
+            {itemId = 16885, dropChance = 26.8},
+            {itemId = 3928, dropChance = 15.9},
+            {itemId = 8932, dropChance = 12.2},
+            {itemId = 8950, dropChance = 11.0},
+            {itemId = 8953, dropChance = 8.5}
+        }
+    },
+
+    -- Scarlet Initiate
+    ["Scarlet Initiate"] = {
+        npcId = 1507,
+        level = {3, 4},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5363, dropChance = 31.3},
+            {itemId = 6150, dropChance = 23.0},
+            {itemId = 4540, dropChance = 13.3},
+            {itemId = 4536, dropChance = 11.2},
+            {itemId = 118, dropChance = 10.8},
+            {itemId = 2070, dropChance = 9.0},
+            {itemId = 774, dropChance = 5.0},
+            {itemId = 2598, dropChance = 1.1},
+            {itemId = 2650, dropChance = 0.4},
+            {itemId = 2656, dropChance = 0.4},
+            {itemId = 3609, dropChance = 0.4}
+        }
+    },
+
+    -- Scarlet Invoker
+    ["Scarlet Invoker"] = {
+        npcId = 1835,
+        level = {53, 54},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 35.9},
+            {itemId = 16885, dropChance = 24.8},
+            {itemId = 8950, dropChance = 14.4},
+            {itemId = 8932, dropChance = 13.7},
+            {itemId = 3928, dropChance = 10.5},
+            {itemId = 8953, dropChance = 6.5},
+            {itemId = 7910, dropChance = 0.7}
+        }
+    },
+
+    -- Scarlet Knight
+    ["Scarlet Knight"] = {
+        npcId = 1833,
+        level = {54, 55},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 44.3},
+            {itemId = 16885, dropChance = 17.3},
+            {itemId = 8932, dropChance = 12.8},
+            {itemId = 8950, dropChance = 10.7},
+            {itemId = 8953, dropChance = 10.2},
+            {itemId = 3928, dropChance = 9.0},
+            {itemId = 7910, dropChance = 1.7}
+        }
+    },
+
+    -- Scarlet Lumberjack
+    ["Scarlet Lumberjack"] = {
+        npcId = 1884,
+        level = {54, 56},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 41.2},
+            {itemId = 16885, dropChance = 22.7},
+            {itemId = 8950, dropChance = 13.0},
+            {itemId = 8932, dropChance = 12.3},
+            {itemId = 3928, dropChance = 10.7},
+            {itemId = 8953, dropChance = 8.8},
+            {itemId = 7910, dropChance = 1.3}
+        }
+    },
+
+    -- Scarlet Mage
+    ["Scarlet Mage"] = {
+        npcId = 1826,
+        level = {55, 56},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 45.2},
+            {itemId = 16885, dropChance = 23.7},
+            {itemId = 8932, dropChance = 13.6},
+            {itemId = 8950, dropChance = 11.8},
+            {itemId = 8953, dropChance = 10.5},
+            {itemId = 3928, dropChance = 8.3},
+            {itemId = 7910, dropChance = 0.9}
+        }
+    },
+
     -- Scarlet Magician
     ["Scarlet Magician"] = {
         npcId = 4282,
@@ -9675,6 +18801,20 @@ DB.PickpocketLoot = {
             {itemId = 422, dropChance = 6.6},
             {itemId = 4538, dropChance = 6.6},
             {itemId = 4542, dropChance = 6.6}
+        }
+    },
+
+    -- Scarlet Magus
+    ["Scarlet Magus"] = {
+        npcId = 1832,
+        level = {56, 57},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 16885, dropChance = 32.0},
+            {itemId = 5432, dropChance = 24.0},
+            {itemId = 3928, dropChance = 20.0},
+            {itemId = 8932, dropChance = 16.0},
+            {itemId = 8953, dropChance = 16.0}
         }
     },
 
@@ -9691,6 +18831,35 @@ DB.PickpocketLoot = {
             {itemId = 8953, dropChance = 10.8},
             {itemId = 8950, dropChance = 7.5},
             {itemId = 7910, dropChance = 0.8}
+        }
+    },
+
+    -- Scarlet Missionary
+    ["Scarlet Missionary"] = {
+        npcId = 1536,
+        level = {7, 8},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 6150, dropChance = 24.9},
+            {itemId = 5363, dropChance = 23.3},
+            {itemId = 118, dropChance = 14.8},
+            {itemId = 4536, dropChance = 11.3},
+            {itemId = 774, dropChance = 9.7},
+            {itemId = 2070, dropChance = 9.7},
+            {itemId = 4540, dropChance = 7.4},
+            {itemId = 2589, dropChance = 1.9},
+            {itemId = 4604, dropChance = 1.2},
+            {itemId = 1380, dropChance = 0.8},
+            {itemId = 117, dropChance = 0.4},
+            {itemId = 1364, dropChance = 0.4},
+            {itemId = 1369, dropChance = 0.4},
+            {itemId = 1376, dropChance = 0.4},
+            {itemId = 2138, dropChance = 0.4},
+            {itemId = 2598, dropChance = 0.4},
+            {itemId = 3264, dropChance = 0.4},
+            {itemId = 3365, dropChance = 0.4},
+            {itemId = 7073, dropChance = 0.4},
+            {itemId = 7099, dropChance = 0.4}
         }
     },
 
@@ -9725,6 +18894,38 @@ DB.PickpocketLoot = {
             {itemId = 4539, dropChance = 8.2},
             {itemId = 3864, dropChance = 1.1},
             {itemId = 1529, dropChance = 1.1}
+        }
+    },
+
+    -- Scarlet Neophyte
+    ["Scarlet Neophyte"] = {
+        npcId = 1539,
+        level = {10, 11},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 6150, dropChance = 52.1},
+            {itemId = 5363, dropChance = 12.3},
+            {itemId = 118, dropChance = 9.6},
+            {itemId = 4540, dropChance = 9.6},
+            {itemId = 4536, dropChance = 8.2},
+            {itemId = 774, dropChance = 6.8},
+            {itemId = 2070, dropChance = 2.7}
+        }
+    },
+
+    -- Scarlet Paladin
+    ["Scarlet Paladin"] = {
+        npcId = 1834,
+        level = {55, 56},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 38.0},
+            {itemId = 16885, dropChance = 22.3},
+            {itemId = 8932, dropChance = 15.1},
+            {itemId = 3928, dropChance = 12.3},
+            {itemId = 8950, dropChance = 10.2},
+            {itemId = 8953, dropChance = 8.4},
+            {itemId = 7910, dropChance = 2.1}
         }
     },
 
@@ -9822,6 +19023,22 @@ DB.PickpocketLoot = {
             {itemId = 422, dropChance = 5.8},
             {itemId = 1705, dropChance = 1.1},
             {itemId = 1206, dropChance = 0.6}
+        }
+    },
+
+    -- Scarlet Sentinel
+    ["Scarlet Sentinel"] = {
+        npcId = 1827,
+        level = {55, 56},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 43.6},
+            {itemId = 16885, dropChance = 22.8},
+            {itemId = 8932, dropChance = 13.9},
+            {itemId = 8953, dropChance = 8.9},
+            {itemId = 3928, dropChance = 7.9},
+            {itemId = 8950, dropChance = 7.9},
+            {itemId = 7910, dropChance = 1.0}
         }
     },
 
@@ -9939,6 +19156,22 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Scarlet Vanguard
+    ["Scarlet Vanguard"] = {
+        npcId = 1540,
+        level = {10, 11},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 4540, dropChance = 25.5},
+            {itemId = 6150, dropChance = 23.6},
+            {itemId = 118, dropChance = 14.5},
+            {itemId = 2070, dropChance = 14.5},
+            {itemId = 4536, dropChance = 10.9},
+            {itemId = 5363, dropChance = 10.9},
+            {itemId = 774, dropChance = 5.5}
+        }
+    },
+
     -- Scarlet Warder
     ["Scarlet Warder"] = {
         npcId = 9447,
@@ -9952,6 +19185,32 @@ DB.PickpocketLoot = {
             {itemId = 8950, dropChance = 10.7},
             {itemId = 3928, dropChance = 10.3},
             {itemId = 7910, dropChance = 1.2}
+        }
+    },
+
+    -- Scarlet Warrior
+    ["Scarlet Warrior"] = {
+        npcId = 1535,
+        level = {6, 7},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5363, dropChance = 28.2},
+            {itemId = 6150, dropChance = 22.8},
+            {itemId = 4536, dropChance = 16.9},
+            {itemId = 4540, dropChance = 13.4},
+            {itemId = 2070, dropChance = 11.9},
+            {itemId = 118, dropChance = 7.5},
+            {itemId = 774, dropChance = 4.8},
+            {itemId = 2589, dropChance = 0.4},
+            {itemId = 4604, dropChance = 0.4},
+            {itemId = 7073, dropChance = 0.4},
+            {itemId = 1366, dropChance = 0.2},
+            {itemId = 1411, dropChance = 0.2},
+            {itemId = 2598, dropChance = 0.2},
+            {itemId = 3300, dropChance = 0.2},
+            {itemId = 3363, dropChance = 0.2},
+            {itemId = 3609, dropChance = 0.2},
+            {itemId = 6507, dropChance = 0.2}
         }
     },
 
@@ -9969,6 +19228,58 @@ DB.PickpocketLoot = {
             {itemId = 4544, dropChance = 8.4},
             {itemId = 3864, dropChance = 1.5},
             {itemId = 1529, dropChance = 1.4}
+        }
+    },
+
+    -- Scarlet Worker
+    ["Scarlet Worker"] = {
+        npcId = 1883,
+        level = {55, 57},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 5432, dropChance = 45.9},
+            {itemId = 16885, dropChance = 21.5},
+            {itemId = 3928, dropChance = 10.7},
+            {itemId = 8953, dropChance = 10.5},
+            {itemId = 8932, dropChance = 9.8},
+            {itemId = 8950, dropChance = 9.3},
+            {itemId = 7910, dropChance = 0.7}
+        }
+    },
+
+    -- Scarlet Zealot
+    ["Scarlet Zealot"] = {
+        npcId = 1537,
+        level = {8, 9},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 6150, dropChance = 26.4},
+            {itemId = 5363, dropChance = 20.5},
+            {itemId = 4536, dropChance = 13.8},
+            {itemId = 118, dropChance = 13.3},
+            {itemId = 4540, dropChance = 13.1},
+            {itemId = 2070, dropChance = 12.1},
+            {itemId = 774, dropChance = 4.2},
+            {itemId = 1372, dropChance = 0.7},
+            {itemId = 3609, dropChance = 0.7},
+            {itemId = 2589, dropChance = 0.5},
+            {itemId = 2646, dropChance = 0.5},
+            {itemId = 4604, dropChance = 0.5},
+            {itemId = 828, dropChance = 0.2},
+            {itemId = 1368, dropChance = 0.2},
+            {itemId = 1369, dropChance = 0.2},
+            {itemId = 1378, dropChance = 0.2},
+            {itemId = 1416, dropChance = 0.2},
+            {itemId = 2211, dropChance = 0.2},
+            {itemId = 2835, dropChance = 0.2},
+            {itemId = 3299, dropChance = 0.2},
+            {itemId = 3365, dropChance = 0.2},
+            {itemId = 4496, dropChance = 0.2},
+            {itemId = 4563, dropChance = 0.2},
+            {itemId = 4865, dropChance = 0.2},
+            {itemId = 6506, dropChance = 0.2},
+            {itemId = 7073, dropChance = 0.2},
+            {itemId = 7074, dropChance = 0.2}
         }
     },
 
@@ -10384,6 +19695,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Searing Ghoul
+    ["Searing Ghoul"] = {
+        npcId = 1795,
+        level = {55, 56},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 41.4},
+            {itemId = 8948, dropChance = 34.8},
+            {itemId = 16885, dropChance = 21.0},
+            {itemId = 3928, dropChance = 10.8},
+            {itemId = 7910, dropChance = 1.2}
+        }
+    },
+
     -- Seasoned Coldmine Explorer
     ["Seasoned Coldmine Explorer"] = {
         npcId = 13546,
@@ -10458,6 +19783,18 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Serena Bloodfeather
+    ["Serena Bloodfeather"] = {
+        npcId = 3452,
+        level = {20, 20},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 60.0},
+            {itemId = 858, dropChance = 20.0},
+            {itemId = 2287, dropChance = 20.0}
+        }
+    },
+
     -- Sergeant Bly
     ["Sergeant Bly"] = {
         npcId = 7604,
@@ -10468,6 +19805,19 @@ DB.PickpocketLoot = {
             {itemId = 16884, dropChance = 30.8},
             {itemId = 3928, dropChance = 7.7},
             {itemId = 4602, dropChance = 7.7}
+        }
+    },
+
+    -- Sergeant Malthus
+    ["Sergeant Malthus"] = {
+        npcId = 814,
+        level = {38, 38},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5431, dropChance = 60.0},
+            {itemId = 1707, dropChance = 20.0},
+            {itemId = 1710, dropChance = 10.0},
+            {itemId = 16883, dropChance = 10.0}
         }
     },
 
@@ -10540,6 +19890,68 @@ DB.PickpocketLoot = {
             {itemId = 1366, dropChance = 0.3},
             {itemId = 1476, dropChance = 0.3},
             {itemId = 7074, dropChance = 0.3}
+        }
+    },
+
+    -- Severed Dreamer
+    ["Severed Dreamer"] = {
+        npcId = 3802,
+        level = {29, 30},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 62.7},
+            {itemId = 5374, dropChance = 23.5},
+            {itemId = 929, dropChance = 8.8},
+            {itemId = 4542, dropChance = 8.8},
+            {itemId = 4538, dropChance = 6.9},
+            {itemId = 422, dropChance = 3.9}
+        }
+    },
+
+    -- Severed Druid
+    ["Severed Druid"] = {
+        npcId = 3799,
+        level = {28, 29},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 57.0},
+            {itemId = 5374, dropChance = 20.9},
+            {itemId = 422, dropChance = 12.8},
+            {itemId = 929, dropChance = 8.1},
+            {itemId = 4542, dropChance = 7.0},
+            {itemId = 4538, dropChance = 2.3}
+        }
+    },
+
+    -- Severed Keeper
+    ["Severed Keeper"] = {
+        npcId = 3803,
+        level = {29, 30},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 57.1},
+            {itemId = 5374, dropChance = 27.6},
+            {itemId = 929, dropChance = 8.6},
+            {itemId = 4542, dropChance = 8.6},
+            {itemId = 422, dropChance = 4.8},
+            {itemId = 4538, dropChance = 3.8},
+            {itemId = 1705, dropChance = 1.0}
+        }
+    },
+
+    -- Severed Sleeper
+    ["Severed Sleeper"] = {
+        npcId = 3801,
+        level = {28, 29},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 53.8},
+            {itemId = 5374, dropChance = 33.3},
+            {itemId = 422, dropChance = 9.7},
+            {itemId = 929, dropChance = 5.4},
+            {itemId = 4538, dropChance = 4.3},
+            {itemId = 1206, dropChance = 3.2},
+            {itemId = 4542, dropChance = 3.2}
         }
     },
 
@@ -10616,6 +20028,23 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Shadowforge Chanter
+    ["Shadowforge Chanter"] = {
+        npcId = 2742,
+        level = {38, 39},
+        zone = "Badlands",
+        loot = {
+            {itemId = 16883, dropChance = 38.6},
+            {itemId = 5431, dropChance = 35.8},
+            {itemId = 4544, dropChance = 10.1},
+            {itemId = 4539, dropChance = 8.7},
+            {itemId = 1707, dropChance = 8.6},
+            {itemId = 1710, dropChance = 8.2},
+            {itemId = 3864, dropChance = 1.2},
+            {itemId = 1529, dropChance = 0.5}
+        }
+    },
+
     -- Shadowforge Citizen
     ["Shadowforge Citizen"] = {
         npcId = 8902,
@@ -10632,6 +20061,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Shadowforge Commander
+    ["Shadowforge Commander"] = {
+        npcId = 2744,
+        level = {40, 40},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5431, dropChance = 36.4},
+            {itemId = 16883, dropChance = 36.4},
+            {itemId = 1710, dropChance = 18.2},
+            {itemId = 3864, dropChance = 9.1},
+            {itemId = 4539, dropChance = 9.1}
+        }
+    },
+
     -- Shadowforge Darkcaster
     ["Shadowforge Darkcaster"] = {
         npcId = 4848,
@@ -10644,6 +20087,22 @@ DB.PickpocketLoot = {
             {itemId = 4602, dropChance = 11.1},
             {itemId = 3927, dropChance = 11.1},
             {itemId = 16884, dropChance = 11.1}
+        }
+    },
+
+    -- Shadowforge Darkweaver
+    ["Shadowforge Darkweaver"] = {
+        npcId = 2740,
+        level = {36, 37},
+        zone = "Badlands",
+        loot = {
+            {itemId = 16883, dropChance = 40.0},
+            {itemId = 5431, dropChance = 38.4},
+            {itemId = 4544, dropChance = 15.8},
+            {itemId = 1710, dropChance = 11.6},
+            {itemId = 4539, dropChance = 11.6},
+            {itemId = 1707, dropChance = 4.7},
+            {itemId = 1529, dropChance = 1.1}
         }
     },
 
@@ -10793,6 +20252,125 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Shadowforge Tunneler
+    ["Shadowforge Tunneler"] = {
+        npcId = 2739,
+        level = {35, 36},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5431, dropChance = 36.4},
+            {itemId = 16883, dropChance = 35.1},
+            {itemId = 4544, dropChance = 10.7},
+            {itemId = 4539, dropChance = 10.2},
+            {itemId = 1707, dropChance = 8.0},
+            {itemId = 1710, dropChance = 8.0},
+            {itemId = 3864, dropChance = 1.8},
+            {itemId = 1529, dropChance = 0.4}
+        }
+    },
+
+    -- Shadowforge Warrior
+    ["Shadowforge Warrior"] = {
+        npcId = 2743,
+        level = {38, 39},
+        zone = "Badlands",
+        loot = {
+            {itemId = 16883, dropChance = 37.3},
+            {itemId = 5431, dropChance = 34.2},
+            {itemId = 1707, dropChance = 9.9},
+            {itemId = 1710, dropChance = 9.7},
+            {itemId = 4544, dropChance = 9.6},
+            {itemId = 4539, dropChance = 8.5},
+            {itemId = 3864, dropChance = 2.0},
+            {itemId = 1529, dropChance = 1.1}
+        }
+    },
+
+    -- Shadowhide Assassin
+    ["Shadowhide Assassin"] = {
+        npcId = 579,
+        level = {23, 24},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 50.0},
+            {itemId = 5375, dropChance = 32.4},
+            {itemId = 3770, dropChance = 29.4},
+            {itemId = 929, dropChance = 2.9}
+        }
+    },
+
+    -- Shadowhide Brute
+    ["Shadowhide Brute"] = {
+        npcId = 432,
+        level = {23, 24},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 55.2},
+            {itemId = 5375, dropChance = 28.5},
+            {itemId = 3770, dropChance = 23.8},
+            {itemId = 929, dropChance = 7.6},
+            {itemId = 1206, dropChance = 1.1}
+        }
+    },
+
+    -- Shadowhide Darkweaver
+    ["Shadowhide Darkweaver"] = {
+        npcId = 429,
+        level = {25, 26},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 58.5},
+            {itemId = 5375, dropChance = 26.6},
+            {itemId = 3770, dropChance = 23.7},
+            {itemId = 929, dropChance = 5.8},
+            {itemId = 1206, dropChance = 1.0},
+            {itemId = 1705, dropChance = 1.0}
+        }
+    },
+
+    -- Shadowhide Gnoll
+    ["Shadowhide Gnoll"] = {
+        npcId = 433,
+        level = {22, 23},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 59.5},
+            {itemId = 5375, dropChance = 27.0},
+            {itemId = 3770, dropChance = 18.2},
+            {itemId = 929, dropChance = 6.1},
+            {itemId = 1705, dropChance = 1.4}
+        }
+    },
+
+    -- Shadowhide Slayer
+    ["Shadowhide Slayer"] = {
+        npcId = 431,
+        level = {25, 26},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 53.2},
+            {itemId = 5375, dropChance = 28.8},
+            {itemId = 3770, dropChance = 25.0},
+            {itemId = 929, dropChance = 7.7},
+            {itemId = 1705, dropChance = 0.6}
+        }
+    },
+
+    -- Shadowhide Warrior
+    ["Shadowhide Warrior"] = {
+        npcId = 568,
+        level = {24, 25},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 57.6},
+            {itemId = 5375, dropChance = 25.1},
+            {itemId = 3770, dropChance = 24.1},
+            {itemId = 929, dropChance = 7.3},
+            {itemId = 1206, dropChance = 0.8},
+            {itemId = 1705, dropChance = 0.8}
+        }
+    },
+
     -- Shadowmage
     ["Shadowmage"] = {
         npcId = 8550,
@@ -10926,6 +20504,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Shambling Horror
+    ["Shambling Horror"] = {
+        npcId = 1528,
+        level = {8, 9},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 118, dropChance = 46.0},
+            {itemId = 4604, dropChance = 32.0},
+            {itemId = 5362, dropChance = 22.0},
+            {itemId = 774, dropChance = 4.0},
+            {itemId = 2589, dropChance = 2.0}
+        }
+    },
+
     -- Shatterspear Troll
     ["Shatterspear Troll"] = {
         npcId = 10919,
@@ -10952,6 +20544,22 @@ DB.PickpocketLoot = {
             {itemId = 8932, dropChance = 21.4},
             {itemId = 3928, dropChance = 7.1},
             {itemId = 16885, dropChance = 7.1}
+        }
+    },
+
+    -- Sickly Refugee
+    ["Sickly Refugee"] = {
+        npcId = 2054,
+        level = {19, 20},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5368, dropChance = 33.3},
+            {itemId = 4537, dropChance = 25.0},
+            {itemId = 414, dropChance = 16.7},
+            {itemId = 818, dropChance = 8.3},
+            {itemId = 858, dropChance = 8.3},
+            {itemId = 1210, dropChance = 8.3},
+            {itemId = 4541, dropChance = 8.3}
         }
     },
 
@@ -10986,6 +20594,18 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Singer
+    ["Singer"] = {
+        npcId = 2600,
+        level = {34, 34},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 60.0},
+            {itemId = 4539, dropChance = 20.0},
+            {itemId = 5431, dropChance = 20.0}
+        }
+    },
+
     -- Sister of Celebrian
     ["Sister of Celebrian"] = {
         npcId = 11794,
@@ -11003,6 +20623,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Skeletal Acolyte
+    ["Skeletal Acolyte"] = {
+        npcId = 1789,
+        level = {55, 56},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 42.1},
+            {itemId = 8948, dropChance = 33.9},
+            {itemId = 16885, dropChance = 21.2},
+            {itemId = 3928, dropChance = 10.5},
+            {itemId = 7910, dropChance = 1.2}
+        }
+    },
+
     -- Skeletal Berserker
     ["Skeletal Berserker"] = {
         npcId = 10391,
@@ -11014,6 +20648,50 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 21.8},
             {itemId = 3928, dropChance = 12.2},
             {itemId = 7910, dropChance = 1.7}
+        }
+    },
+
+    -- Skeletal Executioner
+    ["Skeletal Executioner"] = {
+        npcId = 1787,
+        level = {54, 55},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 41.2},
+            {itemId = 8948, dropChance = 33.4},
+            {itemId = 16885, dropChance = 24.1},
+            {itemId = 3928, dropChance = 9.3},
+            {itemId = 7910, dropChance = 1.5}
+        }
+    },
+
+    -- Skeletal Fiend
+    ["Skeletal Fiend"] = {
+        npcId = 531,
+        level = {24, 25},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 58.4},
+            {itemId = 5376, dropChance = 25.9},
+            {itemId = 4606, dropChance = 19.5},
+            {itemId = 929, dropChance = 8.7},
+            {itemId = 1705, dropChance = 1.4},
+            {itemId = 1206, dropChance = 0.9}
+        }
+    },
+
+    -- Skeletal Flayer
+    ["Skeletal Flayer"] = {
+        npcId = 1783,
+        level = {50, 51},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 43.6},
+            {itemId = 4608, dropChance = 31.8},
+            {itemId = 16884, dropChance = 20.2},
+            {itemId = 3928, dropChance = 12.7},
+            {itemId = 7910, dropChance = 1.6},
+            {itemId = 7909, dropChance = 1.1}
         }
     },
 
@@ -11044,6 +20722,92 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Skeletal Healer
+    ["Skeletal Healer"] = {
+        npcId = 787,
+        level = {26, 27},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 57.4},
+            {itemId = 5376, dropChance = 26.1},
+            {itemId = 4606, dropChance = 18.2},
+            {itemId = 929, dropChance = 5.8},
+            {itemId = 1206, dropChance = 1.4},
+            {itemId = 1705, dropChance = 0.3}
+        }
+    },
+
+    -- Skeletal Horror
+    ["Skeletal Horror"] = {
+        npcId = 202,
+        level = {23, 24},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 52.6},
+            {itemId = 5376, dropChance = 31.1},
+            {itemId = 4606, dropChance = 21.5},
+            {itemId = 929, dropChance = 7.1},
+            {itemId = 1206, dropChance = 1.0},
+            {itemId = 1705, dropChance = 0.6}
+        }
+    },
+
+    -- Skeletal Mage
+    ["Skeletal Mage"] = {
+        npcId = 203,
+        level = {22, 23},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 63.4},
+            {itemId = 5376, dropChance = 29.5},
+            {itemId = 4606, dropChance = 18.1},
+            {itemId = 929, dropChance = 6.4},
+            {itemId = 1206, dropChance = 0.5},
+            {itemId = 1705, dropChance = 0.5}
+        }
+    },
+
+    -- Skeletal Miner
+    ["Skeletal Miner"] = {
+        npcId = 623,
+        level = {17, 18},
+        zone = "Unknown",
+        loot = {
+            {itemId = 5370, dropChance = 45.7},
+            {itemId = 4605, dropChance = 41.3},
+            {itemId = 858, dropChance = 17.4}
+        }
+    },
+
+    -- Skeletal Raider
+    ["Skeletal Raider"] = {
+        npcId = 1110,
+        level = {27, 28},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 54.6},
+            {itemId = 5376, dropChance = 27.9},
+            {itemId = 4606, dropChance = 24.0},
+            {itemId = 929, dropChance = 5.5},
+            {itemId = 1206, dropChance = 0.7},
+            {itemId = 1705, dropChance = 0.6}
+        }
+    },
+
+    -- Skeletal Sorcerer
+    ["Skeletal Sorcerer"] = {
+        npcId = 1784,
+        level = {51, 52},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 41.6},
+            {itemId = 8948, dropChance = 29.8},
+            {itemId = 16885, dropChance = 24.1},
+            {itemId = 3928, dropChance = 11.8},
+            {itemId = 7910, dropChance = 1.4}
+        }
+    },
+
     -- Skeletal Summoner
     ["Skeletal Summoner"] = {
         npcId = 7342,
@@ -11058,6 +20822,64 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Skeletal Terror
+    ["Skeletal Terror"] = {
+        npcId = 1785,
+        level = {52, 54},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 39.4},
+            {itemId = 8948, dropChance = 37.4},
+            {itemId = 16885, dropChance = 21.3},
+            {itemId = 3928, dropChance = 9.1},
+            {itemId = 7910, dropChance = 0.8}
+        }
+    },
+
+    -- Skeletal Warder
+    ["Skeletal Warder"] = {
+        npcId = 785,
+        level = {28, 29},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 54.9},
+            {itemId = 5376, dropChance = 27.1},
+            {itemId = 4606, dropChance = 26.6},
+            {itemId = 929, dropChance = 6.6},
+            {itemId = 1705, dropChance = 1.4},
+            {itemId = 1206, dropChance = 0.6}
+        }
+    },
+
+    -- Skeletal Warlord
+    ["Skeletal Warlord"] = {
+        npcId = 1788,
+        level = {56, 57},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 46.9},
+            {itemId = 8948, dropChance = 28.3},
+            {itemId = 16885, dropChance = 24.8},
+            {itemId = 3928, dropChance = 10.3},
+            {itemId = 7910, dropChance = 0.7}
+        }
+    },
+
+    -- Skeletal Warrior
+    ["Skeletal Warrior"] = {
+        npcId = 48,
+        level = {21, 22},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 57.7},
+            {itemId = 5376, dropChance = 29.8},
+            {itemId = 4606, dropChance = 20.9},
+            {itemId = 929, dropChance = 5.2},
+            {itemId = 1705, dropChance = 1.8},
+            {itemId = 1206, dropChance = 0.7}
+        }
+    },
+
     -- Skul
     ["Skul"] = {
         npcId = 10393,
@@ -11067,6 +20889,163 @@ DB.PickpocketLoot = {
             {itemId = 3419, dropChance = 50.0},
             {itemId = 16885, dropChance = 30.0},
             {itemId = 8948, dropChance = 20.0}
+        }
+    },
+
+    -- Skullsplitter Axe Thrower
+    ["Skullsplitter Axe Thrower"] = {
+        npcId = 696,
+        level = {39, 40},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5427, dropChance = 38.7},
+            {itemId = 16883, dropChance = 37.3},
+            {itemId = 3771, dropChance = 13.9},
+            {itemId = 4544, dropChance = 10.9},
+            {itemId = 1710, dropChance = 8.6},
+            {itemId = 3864, dropChance = 1.2},
+            {itemId = 1529, dropChance = 1.2}
+        }
+    },
+
+    -- Skullsplitter Beastmaster
+    ["Skullsplitter Beastmaster"] = {
+        npcId = 784,
+        level = {41, 42},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 44.4},
+            {itemId = 4599, dropChance = 20.4},
+            {itemId = 4601, dropChance = 14.8},
+            {itemId = 16884, dropChance = 13.0},
+            {itemId = 3928, dropChance = 9.3},
+            {itemId = 7909, dropChance = 1.9}
+        }
+    },
+
+    -- Skullsplitter Berserker
+    ["Skullsplitter Berserker"] = {
+        npcId = 783,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 47.3},
+            {itemId = 16884, dropChance = 23.3},
+            {itemId = 4601, dropChance = 16.3},
+            {itemId = 3928, dropChance = 9.3},
+            {itemId = 4599, dropChance = 9.3},
+            {itemId = 7909, dropChance = 3.1},
+            {itemId = 7910, dropChance = 1.6}
+        }
+    },
+
+    -- Skullsplitter Headhunter
+    ["Skullsplitter Headhunter"] = {
+        npcId = 781,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 47.9},
+            {itemId = 16884, dropChance = 24.3},
+            {itemId = 4599, dropChance = 15.3},
+            {itemId = 4601, dropChance = 12.5},
+            {itemId = 3928, dropChance = 10.4},
+            {itemId = 7909, dropChance = 0.7}
+        }
+    },
+
+    -- Skullsplitter Hunter
+    ["Skullsplitter Hunter"] = {
+        npcId = 669,
+        level = {41, 42},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 43.9},
+            {itemId = 4599, dropChance = 20.3},
+            {itemId = 16884, dropChance = 19.4},
+            {itemId = 4601, dropChance = 14.3},
+            {itemId = 3928, dropChance = 8.0},
+            {itemId = 7910, dropChance = 2.1},
+            {itemId = 7909, dropChance = 0.4}
+        }
+    },
+
+    -- Skullsplitter Mystic
+    ["Skullsplitter Mystic"] = {
+        npcId = 780,
+        level = {39, 40},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 36.7},
+            {itemId = 5427, dropChance = 35.3},
+            {itemId = 3771, dropChance = 14.2},
+            {itemId = 4544, dropChance = 13.3},
+            {itemId = 1710, dropChance = 8.8},
+            {itemId = 1529, dropChance = 1.8},
+            {itemId = 3864, dropChance = 0.9}
+        }
+    },
+
+    -- Skullsplitter Scout
+    ["Skullsplitter Scout"] = {
+        npcId = 782,
+        level = {41, 42},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 44.1},
+            {itemId = 16884, dropChance = 22.3},
+            {itemId = 4599, dropChance = 17.7},
+            {itemId = 4601, dropChance = 13.2},
+            {itemId = 3928, dropChance = 10.0},
+            {itemId = 7910, dropChance = 1.4},
+            {itemId = 7909, dropChance = 0.9}
+        }
+    },
+
+    -- Skullsplitter Spiritchaser
+    ["Skullsplitter Spiritchaser"] = {
+        npcId = 672,
+        level = {44, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 42.4},
+            {itemId = 4601, dropChance = 20.0},
+            {itemId = 16884, dropChance = 20.0},
+            {itemId = 4599, dropChance = 15.8},
+            {itemId = 3928, dropChance = 10.9},
+            {itemId = 7909, dropChance = 1.8},
+            {itemId = 7910, dropChance = 0.6}
+        }
+    },
+
+    -- Skullsplitter Warrior
+    ["Skullsplitter Warrior"] = {
+        npcId = 667,
+        level = {39, 40},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 38.0},
+            {itemId = 5427, dropChance = 35.6},
+            {itemId = 3771, dropChance = 14.9},
+            {itemId = 4544, dropChance = 13.2},
+            {itemId = 1710, dropChance = 7.9},
+            {itemId = 1529, dropChance = 1.8},
+            {itemId = 3864, dropChance = 1.4}
+        }
+    },
+
+    -- Skullsplitter Witch Doctor
+    ["Skullsplitter Witch Doctor"] = {
+        npcId = 670,
+        level = {41, 42},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 49.0},
+            {itemId = 4599, dropChance = 19.1},
+            {itemId = 16884, dropChance = 18.5},
+            {itemId = 4601, dropChance = 11.5},
+            {itemId = 3928, dropChance = 10.2},
+            {itemId = 7910, dropChance = 0.6}
         }
     },
 
@@ -11098,6 +21077,34 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 9.7},
             {itemId = 7910, dropChance = 1.3},
             {itemId = 7909, dropChance = 1.0}
+        }
+    },
+
+    -- Slavering Ghoul
+    ["Slavering Ghoul"] = {
+        npcId = 1791,
+        level = {50, 52},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 42.0},
+            {itemId = 4608, dropChance = 31.2},
+            {itemId = 16884, dropChance = 20.9},
+            {itemId = 3928, dropChance = 10.0},
+            {itemId = 7909, dropChance = 1.7},
+            {itemId = 7910, dropChance = 1.4}
+        }
+    },
+
+    -- Sleeby
+    ["Sleeby"] = {
+        npcId = 2764,
+        level = {40, 40},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 1710, dropChance = 36.4},
+            {itemId = 16883, dropChance = 36.4},
+            {itemId = 3771, dropChance = 18.2},
+            {itemId = 5429, dropChance = 18.2}
         }
     },
 
@@ -11356,6 +21363,98 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Sneed
+    ["Sneed"] = {
+        npcId = 643,
+        level = {20, 20},
+        zone = "The Deadmines",
+        loot = {
+            {itemId = 16882, dropChance = 46.2},
+            {itemId = 5373, dropChance = 38.5},
+            {itemId = 929, dropChance = 7.7},
+            {itemId = 3770, dropChance = 7.7},
+            {itemId = 4542, dropChance = 7.7}
+        }
+    },
+
+    -- Sorcerer Ashcrombe
+    ["Sorcerer Ashcrombe"] = {
+        npcId = 3850,
+        level = {18, 18},
+        zone = "Shadowfang Keep",
+        loot = {
+            {itemId = 5368, dropChance = 60.0},
+            {itemId = 858, dropChance = 40.0},
+            {itemId = 4541, dropChance = 20.0}
+        }
+    },
+
+    -- Soulless Ghoul
+    ["Soulless Ghoul"] = {
+        npcId = 1794,
+        level = {54, 55},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 42.6},
+            {itemId = 8948, dropChance = 32.7},
+            {itemId = 16885, dropChance = 20.6},
+            {itemId = 3928, dropChance = 11.1},
+            {itemId = 7910, dropChance = 1.9}
+        }
+    },
+
+    -- Southsea Brigand
+    ["Southsea Brigand"] = {
+        npcId = 3381,
+        level = {12, 13},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5368, dropChance = 47.5},
+            {itemId = 4541, dropChance = 15.7},
+            {itemId = 414, dropChance = 15.4},
+            {itemId = 858, dropChance = 13.1},
+            {itemId = 4537, dropChance = 9.3},
+            {itemId = 818, dropChance = 3.8},
+            {itemId = 1210, dropChance = 2.5},
+            {itemId = 4409, dropChance = 0.3},
+            {itemId = 6716, dropChance = 0.3}
+        }
+    },
+
+    -- Southsea Cannoneer
+    ["Southsea Cannoneer"] = {
+        npcId = 3382,
+        level = {13, 14},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5368, dropChance = 50.7},
+            {itemId = 414, dropChance = 15.5},
+            {itemId = 858, dropChance = 15.1},
+            {itemId = 4541, dropChance = 13.7},
+            {itemId = 4537, dropChance = 11.3},
+            {itemId = 818, dropChance = 3.5},
+            {itemId = 1210, dropChance = 2.1},
+            {itemId = 4292, dropChance = 0.4}
+        }
+    },
+
+    -- Southsea Cutthroat
+    ["Southsea Cutthroat"] = {
+        npcId = 3383,
+        level = {14, 15},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5368, dropChance = 63.6},
+            {itemId = 208768, dropChance = 52.4},
+            {itemId = 1210, dropChance = 13.6},
+            {itemId = 414, dropChance = 9.5},
+            {itemId = 858, dropChance = 9.1},
+            {itemId = 4537, dropChance = 9.1},
+            {itemId = 4293, dropChance = 4.5},
+            {itemId = 4541, dropChance = 4.5}
+        }
+    },
+
     -- Southsea Dock Worker
     ["Southsea Dock Worker"] = {
         npcId = 7857,
@@ -11407,6 +21506,21 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Southsea Privateer
+    ["Southsea Privateer"] = {
+        npcId = 3384,
+        level = {14, 15},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5368, dropChance = 55.6},
+            {itemId = 414, dropChance = 11.1},
+            {itemId = 858, dropChance = 11.1},
+            {itemId = 4537, dropChance = 11.1},
+            {itemId = 4541, dropChance = 11.1},
+            {itemId = 1210, dropChance = 5.6}
+        }
+    },
+
     -- Southsea Swashbuckler
     ["Southsea Swashbuckler"] = {
         npcId = 7858,
@@ -11421,6 +21535,19 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 9.5},
             {itemId = 7910, dropChance = 1.8},
             {itemId = 7909, dropChance = 1.1}
+        }
+    },
+
+    -- Southshore Guard
+    ["Southshore Guard"] = {
+        npcId = 2386,
+        level = {55, 55},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 5432, dropChance = 50.0},
+            {itemId = 16884, dropChance = 50.0},
+            {itemId = 3928, dropChance = 16.7},
+            {itemId = 4601, dropChance = 16.7}
         }
     },
 
@@ -11655,6 +21782,97 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Splinter Fist Enslaver
+    ["Splinter Fist Enslaver"] = {
+        npcId = 1487,
+        level = {30, 31},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 51.4},
+            {itemId = 4542, dropChance = 20.0},
+            {itemId = 5373, dropChance = 17.1},
+            {itemId = 929, dropChance = 11.4},
+            {itemId = 3770, dropChance = 8.6},
+            {itemId = 1206, dropChance = 2.9},
+            {itemId = 1705, dropChance = 2.9}
+        }
+    },
+
+    -- Splinter Fist Fire Weaver
+    ["Splinter Fist Fire Weaver"] = {
+        npcId = 891,
+        level = {26, 27},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 47.3},
+            {itemId = 5373, dropChance = 33.8},
+            {itemId = 3770, dropChance = 17.6},
+            {itemId = 4542, dropChance = 14.9},
+            {itemId = 929, dropChance = 4.1},
+            {itemId = 1705, dropChance = 1.4}
+        }
+    },
+
+    -- Splinter Fist Firemonger
+    ["Splinter Fist Firemonger"] = {
+        npcId = 1251,
+        level = {28, 29},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 53.4},
+            {itemId = 5373, dropChance = 27.3},
+            {itemId = 4542, dropChance = 12.4},
+            {itemId = 3770, dropChance = 11.8},
+            {itemId = 929, dropChance = 10.6},
+            {itemId = 1705, dropChance = 0.6}
+        }
+    },
+
+    -- Splinter Fist Ogre
+    ["Splinter Fist Ogre"] = {
+        npcId = 889,
+        level = {25, 26},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 63.5},
+            {itemId = 5373, dropChance = 24.3},
+            {itemId = 3770, dropChance = 10.8},
+            {itemId = 929, dropChance = 6.8},
+            {itemId = 4542, dropChance = 6.8}
+        }
+    },
+
+    -- Splinter Fist Taskmaster
+    ["Splinter Fist Taskmaster"] = {
+        npcId = 892,
+        level = {27, 28},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 53.2},
+            {itemId = 5373, dropChance = 25.3},
+            {itemId = 3770, dropChance = 12.7},
+            {itemId = 929, dropChance = 8.9},
+            {itemId = 4542, dropChance = 6.3},
+            {itemId = 1206, dropChance = 1.3}
+        }
+    },
+
+    -- Splinter Fist Warrior
+    ["Splinter Fist Warrior"] = {
+        npcId = 212,
+        level = {29, 30},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16882, dropChance = 57.0},
+            {itemId = 5373, dropChance = 28.6},
+            {itemId = 4542, dropChance = 11.3},
+            {itemId = 3770, dropChance = 7.9},
+            {itemId = 929, dropChance = 7.1},
+            {itemId = 1206, dropChance = 0.8},
+            {itemId = 1705, dropChance = 0.8}
+        }
+    },
+
     -- Splinterbone Captain
     ["Splinterbone Captain"] = {
         npcId = 7345,
@@ -11713,6 +21931,31 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Stalvan Mistmantle
+    ["Stalvan Mistmantle"] = {
+        npcId = 315,
+        level = {32, 32},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 4607, dropChance = 34.6},
+            {itemId = 5433, dropChance = 30.8},
+            {itemId = 16883, dropChance = 23.1},
+            {itemId = 1710, dropChance = 19.2},
+            {itemId = 3864, dropChance = 3.8}
+        }
+    },
+
+    -- Stephen Bhartec
+    ["Stephen Bhartec"] = {
+        npcId = 1916,
+        level = {2, 3},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 68.8},
+            {itemId = 4604, dropChance = 31.3}
+        }
+    },
+
     -- Stitched Horror
     ["Stitched Horror"] = {
         npcId = 8543,
@@ -11724,6 +21967,174 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 22.7},
             {itemId = 3928, dropChance = 8.7},
             {itemId = 7910, dropChance = 0.6}
+        }
+    },
+
+    -- Stitches
+    ["Stitches"] = {
+        npcId = 412,
+        level = {35, 35},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 16883, dropChance = 47.1},
+            {itemId = 5433, dropChance = 41.2},
+            {itemId = 4607, dropChance = 11.8},
+            {itemId = 1710, dropChance = 5.9}
+        }
+    },
+
+    -- Stonard Explorer
+    ["Stonard Explorer"] = {
+        npcId = 862,
+        level = {37, 38},
+        zone = "Swamp of Sorrows",
+        loot = {
+            {itemId = 5427, dropChance = 43.8},
+            {itemId = 16883, dropChance = 37.5},
+            {itemId = 3771, dropChance = 12.5},
+            {itemId = 4544, dropChance = 6.3}
+        }
+    },
+
+    -- Stonard Scout
+    ["Stonard Scout"] = {
+        npcId = 861,
+        level = {36, 37},
+        zone = "Swamp of Sorrows",
+        loot = {
+            {itemId = 4544, dropChance = 29.4},
+            {itemId = 16883, dropChance = 29.4},
+            {itemId = 3771, dropChance = 23.5},
+            {itemId = 5427, dropChance = 17.6}
+        }
+    },
+
+    -- Stonesplinter Bonesnapper
+    ["Stonesplinter Bonesnapper"] = {
+        npcId = 1164,
+        level = {15, 16},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 52.4},
+            {itemId = 858, dropChance = 20.7},
+            {itemId = 2287, dropChance = 15.9},
+            {itemId = 4541, dropChance = 15.9},
+            {itemId = 1210, dropChance = 2.4}
+        }
+    },
+
+    -- Stonesplinter Digger
+    ["Stonesplinter Digger"] = {
+        npcId = 1167,
+        level = {18, 19},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 51.1},
+            {itemId = 2287, dropChance = 20.9},
+            {itemId = 4541, dropChance = 19.4},
+            {itemId = 858, dropChance = 10.1},
+            {itemId = 818, dropChance = 3.6},
+            {itemId = 1210, dropChance = 2.2}
+        }
+    },
+
+    -- Stonesplinter Geomancer
+    ["Stonesplinter Geomancer"] = {
+        npcId = 1165,
+        level = {17, 18},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 57.0},
+            {itemId = 2287, dropChance = 21.5},
+            {itemId = 858, dropChance = 18.1},
+            {itemId = 4541, dropChance = 13.4},
+            {itemId = 818, dropChance = 3.4},
+            {itemId = 1210, dropChance = 0.7},
+            {itemId = 2555, dropChance = 0.7},
+            {itemId = 6344, dropChance = 0.7}
+        }
+    },
+
+    -- Stonesplinter Scout
+    ["Stonesplinter Scout"] = {
+        npcId = 1162,
+        level = {11, 12},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 48.4},
+            {itemId = 4541, dropChance = 23.1},
+            {itemId = 2287, dropChance = 16.7},
+            {itemId = 858, dropChance = 12.4},
+            {itemId = 818, dropChance = 2.2},
+            {itemId = 1210, dropChance = 1.6},
+            {itemId = 2555, dropChance = 0.5},
+            {itemId = 2654, dropChance = 0.5},
+            {itemId = 5367, dropChance = 0.5}
+        }
+    },
+
+    -- Stonesplinter Seer
+    ["Stonesplinter Seer"] = {
+        npcId = 1166,
+        level = {13, 14},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 56.9},
+            {itemId = 2287, dropChance = 22.9},
+            {itemId = 4541, dropChance = 12.8},
+            {itemId = 858, dropChance = 12.2},
+            {itemId = 1210, dropChance = 3.7},
+            {itemId = 818, dropChance = 2.1},
+            {itemId = 4292, dropChance = 1.1},
+            {itemId = 7288, dropChance = 0.5}
+        }
+    },
+
+    -- Stonesplinter Shaman
+    ["Stonesplinter Shaman"] = {
+        npcId = 1197,
+        level = {15, 16},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 54.3},
+            {itemId = 2287, dropChance = 20.2},
+            {itemId = 4541, dropChance = 16.0},
+            {itemId = 858, dropChance = 13.8}
+        }
+    },
+
+    -- Stonesplinter Skullthumper
+    ["Stonesplinter Skullthumper"] = {
+        npcId = 1163,
+        level = {13, 14},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 55.9},
+            {itemId = 2287, dropChance = 20.5},
+            {itemId = 4541, dropChance = 18.5},
+            {itemId = 858, dropChance = 10.8},
+            {itemId = 818, dropChance = 2.6},
+            {itemId = 1210, dropChance = 0.5},
+            {itemId = 4409, dropChance = 0.5}
+        }
+    },
+
+    -- Stonesplinter Trogg
+    ["Stonesplinter Trogg"] = {
+        npcId = 1161,
+        level = {11, 12},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5379, dropChance = 49.7},
+            {itemId = 2287, dropChance = 19.9},
+            {itemId = 858, dropChance = 15.2},
+            {itemId = 4541, dropChance = 15.2},
+            {itemId = 818, dropChance = 2.3},
+            {itemId = 117, dropChance = 1.2},
+            {itemId = 6716, dropChance = 1.2},
+            {itemId = 1210, dropChance = 0.6},
+            {itemId = 2653, dropChance = 0.6},
+            {itemId = 6348, dropChance = 0.6}
         }
     },
 
@@ -11753,6 +22164,22 @@ DB.PickpocketLoot = {
             {itemId = 4544, dropChance = 10.0},
             {itemId = 1529, dropChance = 4.4},
             {itemId = 3864, dropChance = 1.1}
+        }
+    },
+
+    -- Stonevault Bonesnapper
+    ["Stonevault Bonesnapper"] = {
+        npcId = 2893,
+        level = {39, 40},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5427, dropChance = 40.6},
+            {itemId = 16883, dropChance = 36.2},
+            {itemId = 4544, dropChance = 13.7},
+            {itemId = 3771, dropChance = 13.4},
+            {itemId = 1710, dropChance = 8.1},
+            {itemId = 3864, dropChance = 1.2},
+            {itemId = 1529, dropChance = 0.7}
         }
     },
 
@@ -11873,6 +22300,37 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Stonevault Seer
+    ["Stonevault Seer"] = {
+        npcId = 2892,
+        level = {39, 40},
+        zone = "Badlands",
+        loot = {
+            {itemId = 5427, dropChance = 38.8},
+            {itemId = 16883, dropChance = 38.8},
+            {itemId = 3771, dropChance = 18.8},
+            {itemId = 4544, dropChance = 17.6},
+            {itemId = 1710, dropChance = 9.4},
+            {itemId = 1529, dropChance = 1.2}
+        }
+    },
+
+    -- Stonevault Shaman
+    ["Stonevault Shaman"] = {
+        npcId = 2894,
+        level = {40, 41},
+        zone = "Badlands",
+        loot = {
+            {itemId = 16883, dropChance = 39.1},
+            {itemId = 5427, dropChance = 36.8},
+            {itemId = 3771, dropChance = 12.8},
+            {itemId = 4544, dropChance = 12.0},
+            {itemId = 1710, dropChance = 8.5},
+            {itemId = 1529, dropChance = 0.8},
+            {itemId = 3864, dropChance = 0.4}
+        }
+    },
+
     -- Storm Bay Oracle
     ["Storm Bay Oracle"] = {
         npcId = 6351,
@@ -11939,6 +22397,88 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 19.0},
             {itemId = 8950, dropChance = 9.5},
             {itemId = 8932, dropChance = 9.5}
+        }
+    },
+
+    -- Stormscale Myrmidon
+    ["Stormscale Myrmidon"] = {
+        npcId = 2181,
+        level = {18, 19},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 47.3},
+            {itemId = 6289, dropChance = 39.6},
+            {itemId = 858, dropChance = 11.0},
+            {itemId = 818, dropChance = 3.3},
+            {itemId = 1210, dropChance = 3.3},
+            {itemId = 4293, dropChance = 1.1}
+        }
+    },
+
+    -- Stormscale Siren
+    ["Stormscale Siren"] = {
+        npcId = 2180,
+        level = {16, 17},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 52.8},
+            {itemId = 6289, dropChance = 33.3},
+            {itemId = 858, dropChance = 13.0},
+            {itemId = 818, dropChance = 4.6},
+            {itemId = 1210, dropChance = 0.9}
+        }
+    },
+
+    -- Stormscale Sorceress
+    ["Stormscale Sorceress"] = {
+        npcId = 2182,
+        level = {19, 20},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 50.9},
+            {itemId = 6289, dropChance = 40.0},
+            {itemId = 858, dropChance = 20.0},
+            {itemId = 1210, dropChance = 3.6}
+        }
+    },
+
+    -- Stormscale Warrior
+    ["Stormscale Warrior"] = {
+        npcId = 2183,
+        level = {20, 21},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 52.9},
+            {itemId = 6289, dropChance = 38.2},
+            {itemId = 858, dropChance = 17.6},
+            {itemId = 1210, dropChance = 5.9}
+        }
+    },
+
+    -- Stormscale Wave Rider
+    ["Stormscale Wave Rider"] = {
+        npcId = 2179,
+        level = {15, 16},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5371, dropChance = 46.0},
+            {itemId = 6289, dropChance = 42.9},
+            {itemId = 858, dropChance = 11.1},
+            {itemId = 1210, dropChance = 4.0},
+            {itemId = 818, dropChance = 2.4},
+            {itemId = 6347, dropChance = 0.8}
+        }
+    },
+
+    -- Stormwind Guard
+    ["Stormwind Guard"] = {
+        npcId = 1423,
+        level = {22, 25},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 5374, dropChance = 66.7},
+            {itemId = 16882, dropChance = 22.2},
+            {itemId = 4542, dropChance = 11.1}
         }
     },
 
@@ -12022,6 +22562,72 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Stromgarde Cavalryman
+    ["Stromgarde Cavalryman"] = {
+        npcId = 2738,
+        level = {36, 37},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5431, dropChance = 30.8},
+            {itemId = 16883, dropChance = 30.8},
+            {itemId = 1707, dropChance = 15.4},
+            {itemId = 1710, dropChance = 7.7},
+            {itemId = 4539, dropChance = 7.7},
+            {itemId = 4544, dropChance = 7.7}
+        }
+    },
+
+    -- Stromgarde Defender
+    ["Stromgarde Defender"] = {
+        npcId = 2584,
+        level = {38, 39},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 35.3},
+            {itemId = 5431, dropChance = 28.0},
+            {itemId = 1707, dropChance = 13.0},
+            {itemId = 4544, dropChance = 12.1},
+            {itemId = 1710, dropChance = 8.7},
+            {itemId = 4539, dropChance = 7.2},
+            {itemId = 3864, dropChance = 3.4},
+            {itemId = 1529, dropChance = 1.9}
+        }
+    },
+
+    -- Stromgarde Troll Hunter
+    ["Stromgarde Troll Hunter"] = {
+        npcId = 2583,
+        level = {37, 38},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5431, dropChance = 36.7},
+            {itemId = 16883, dropChance = 35.3},
+            {itemId = 4539, dropChance = 13.5},
+            {itemId = 1707, dropChance = 10.6},
+            {itemId = 1710, dropChance = 10.1},
+            {itemId = 4544, dropChance = 7.2},
+            {itemId = 1529, dropChance = 1.0},
+            {itemId = 3864, dropChance = 1.0}
+        }
+    },
+
+    -- Stromgarde Vindicator
+    ["Stromgarde Vindicator"] = {
+        npcId = 2585,
+        level = {39, 40},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5431, dropChance = 44.6},
+            {itemId = 16883, dropChance = 35.4},
+            {itemId = 4544, dropChance = 12.3},
+            {itemId = 1710, dropChance = 9.2},
+            {itemId = 1707, dropChance = 6.9},
+            {itemId = 4539, dropChance = 6.9},
+            {itemId = 3864, dropChance = 2.3},
+            {itemId = 1529, dropChance = 0.8}
+        }
+    },
+
     -- Suffering Victim
     ["Suffering Victim"] = {
         npcId = 6547,
@@ -12036,6 +22642,34 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Supervisor Lugwizzle
+    ["Supervisor Lugwizzle"] = {
+        npcId = 3445,
+        level = {18, 18},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5379, dropChance = 40.0},
+            {itemId = 4541, dropChance = 30.0},
+            {itemId = 858, dropChance = 20.0},
+            {itemId = 2287, dropChance = 20.0}
+        }
+    },
+
+    -- Surena Caledon
+    ["Surena Caledon"] = {
+        npcId = 881,
+        level = {9, 9},
+        zone = "Elwynn Forest",
+        loot = {
+            {itemId = 118, dropChance = 25.0},
+            {itemId = 2070, dropChance = 25.0},
+            {itemId = 6150, dropChance = 25.0},
+            {itemId = 4536, dropChance = 12.5},
+            {itemId = 5363, dropChance = 12.5},
+            {itemId = 4540, dropChance = 6.3}
+        }
+    },
+
     -- Swamp Ooze
     ["Swamp Ooze"] = {
         npcId = 4391,
@@ -12045,6 +22679,306 @@ DB.PickpocketLoot = {
             {itemId = 5433, dropChance = 50.0},
             {itemId = 16883, dropChance = 33.3},
             {itemId = 1710, dropChance = 16.7}
+        }
+    },
+
+    -- Syndicate Assassin
+    ["Syndicate Assassin"] = {
+        npcId = 2246,
+        level = {38, 39},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 17124, dropChance = 99.5},
+            {itemId = 5431, dropChance = 8.4},
+            {itemId = 16883, dropChance = 8.0},
+            {itemId = 1707, dropChance = 2.8},
+            {itemId = 1710, dropChance = 2.8},
+            {itemId = 4544, dropChance = 2.3},
+            {itemId = 4539, dropChance = 2.1},
+            {itemId = 1529, dropChance = 0.5},
+            {itemId = 3864, dropChance = 0.3}
+        }
+    },
+
+    -- Syndicate Conjuror
+    ["Syndicate Conjuror"] = {
+        npcId = 2590,
+        level = {35, 36},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 17124, dropChance = 99.6},
+            {itemId = 5431, dropChance = 11.6},
+            {itemId = 16883, dropChance = 10.9},
+            {itemId = 4539, dropChance = 3.1},
+            {itemId = 1707, dropChance = 2.6},
+            {itemId = 1710, dropChance = 1.9},
+            {itemId = 4544, dropChance = 1.5},
+            {itemId = 3864, dropChance = 0.2}
+        }
+    },
+
+    -- Syndicate Enforcer
+    ["Syndicate Enforcer"] = {
+        npcId = 2247,
+        level = {39, 40},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 17124, dropChance = 99.3},
+            {itemId = 16883, dropChance = 11.5},
+            {itemId = 5431, dropChance = 8.3},
+            {itemId = 4539, dropChance = 3.6},
+            {itemId = 4544, dropChance = 2.6},
+            {itemId = 1707, dropChance = 2.1},
+            {itemId = 1710, dropChance = 2.1},
+            {itemId = 1529, dropChance = 0.3}
+        }
+    },
+
+    -- Syndicate Footpad
+    ["Syndicate Footpad"] = {
+        npcId = 2240,
+        level = {32, 33},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 17124, dropChance = 99.3},
+            {itemId = 16883, dropChance = 10.3},
+            {itemId = 5431, dropChance = 9.6},
+            {itemId = 4544, dropChance = 2.6},
+            {itemId = 4539, dropChance = 2.4},
+            {itemId = 1710, dropChance = 1.9},
+            {itemId = 1707, dropChance = 1.9},
+            {itemId = 1529, dropChance = 0.3},
+            {itemId = 3864, dropChance = 0.3}
+        }
+    },
+
+    -- Syndicate Highwayman
+    ["Syndicate Highwayman"] = {
+        npcId = 2586,
+        level = {30, 31},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 17124, dropChance = 99.3},
+            {itemId = 16883, dropChance = 10.6},
+            {itemId = 5431, dropChance = 9.6},
+            {itemId = 4544, dropChance = 3.0},
+            {itemId = 1710, dropChance = 2.7},
+            {itemId = 4539, dropChance = 2.7},
+            {itemId = 1707, dropChance = 2.6},
+            {itemId = 1529, dropChance = 0.3},
+            {itemId = 3864, dropChance = 0.2}
+        }
+    },
+
+    -- Syndicate Magus
+    ["Syndicate Magus"] = {
+        npcId = 2591,
+        level = {37, 38},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 17124, dropChance = 100.0},
+            {itemId = 5431, dropChance = 12.4},
+            {itemId = 16883, dropChance = 11.7},
+            {itemId = 4544, dropChance = 2.6},
+            {itemId = 1707, dropChance = 2.3},
+            {itemId = 1710, dropChance = 2.1},
+            {itemId = 4539, dropChance = 1.7},
+            {itemId = 1529, dropChance = 0.6},
+            {itemId = 3864, dropChance = 0.2}
+        }
+    },
+
+    -- Syndicate Mercenary
+    ["Syndicate Mercenary"] = {
+        npcId = 2589,
+        level = {31, 32},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 17124, dropChance = 99.2},
+            {itemId = 16883, dropChance = 11.3},
+            {itemId = 5431, dropChance = 9.6},
+            {itemId = 4544, dropChance = 2.5},
+            {itemId = 1707, dropChance = 2.4},
+            {itemId = 1710, dropChance = 2.4},
+            {itemId = 4539, dropChance = 2.2},
+            {itemId = 1529, dropChance = 0.4},
+            {itemId = 3864, dropChance = 0.4}
+        }
+    },
+
+    -- Syndicate Pathstalker
+    ["Syndicate Pathstalker"] = {
+        npcId = 2587,
+        level = {32, 33},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 17124, dropChance = 99.8},
+            {itemId = 16883, dropChance = 10.0},
+            {itemId = 5431, dropChance = 8.8},
+            {itemId = 4544, dropChance = 3.1},
+            {itemId = 4539, dropChance = 2.5},
+            {itemId = 1707, dropChance = 2.4},
+            {itemId = 1710, dropChance = 2.4},
+            {itemId = 1529, dropChance = 0.4}
+        }
+    },
+
+    -- Syndicate Prowler
+    ["Syndicate Prowler"] = {
+        npcId = 2588,
+        level = {36, 37},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 17124, dropChance = 99.7},
+            {itemId = 16883, dropChance = 10.6},
+            {itemId = 5431, dropChance = 9.8},
+            {itemId = 1707, dropChance = 3.0},
+            {itemId = 1710, dropChance = 2.8},
+            {itemId = 4544, dropChance = 2.4},
+            {itemId = 4539, dropChance = 2.3},
+            {itemId = 1529, dropChance = 0.3},
+            {itemId = 3864, dropChance = 0.3}
+        }
+    },
+
+    -- Syndicate Rogue
+    ["Syndicate Rogue"] = {
+        npcId = 2260,
+        level = {21, 22},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 17124, dropChance = 73.7},
+            {itemId = 16882, dropChance = 29.4},
+            {itemId = 5374, dropChance = 15.1},
+            {itemId = 4538, dropChance = 4.1},
+            {itemId = 422, dropChance = 4.0},
+            {itemId = 4542, dropChance = 3.5},
+            {itemId = 929, dropChance = 3.5},
+            {itemId = 1705, dropChance = 0.4},
+            {itemId = 1206, dropChance = 0.4}
+        }
+    },
+
+    -- Syndicate Saboteur
+    ["Syndicate Saboteur"] = {
+        npcId = 2245,
+        level = {37, 38},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 17124, dropChance = 99.4},
+            {itemId = 5431, dropChance = 11.0},
+            {itemId = 16883, dropChance = 9.6},
+            {itemId = 1710, dropChance = 3.7},
+            {itemId = 4539, dropChance = 3.3},
+            {itemId = 4544, dropChance = 2.2},
+            {itemId = 1707, dropChance = 1.3},
+            {itemId = 1529, dropChance = 0.3}
+        }
+    },
+
+    -- Syndicate Sentry
+    ["Syndicate Sentry"] = {
+        npcId = 2243,
+        level = {36, 37},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 17124, dropChance = 99.7},
+            {itemId = 5431, dropChance = 10.6},
+            {itemId = 16883, dropChance = 9.8},
+            {itemId = 4544, dropChance = 2.7},
+            {itemId = 4539, dropChance = 2.5},
+            {itemId = 1707, dropChance = 2.0},
+            {itemId = 1710, dropChance = 1.2},
+            {itemId = 1529, dropChance = 0.7}
+        }
+    },
+
+    -- Syndicate Shadow Mage
+    ["Syndicate Shadow Mage"] = {
+        npcId = 2244,
+        level = {21, 22},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 17124, dropChance = 73.8},
+            {itemId = 16882, dropChance = 30.4},
+            {itemId = 5374, dropChance = 14.5},
+            {itemId = 4542, dropChance = 3.7},
+            {itemId = 929, dropChance = 3.7},
+            {itemId = 4538, dropChance = 3.5},
+            {itemId = 422, dropChance = 3.1},
+            {itemId = 1206, dropChance = 0.6},
+            {itemId = 1705, dropChance = 0.4}
+        }
+    },
+
+    -- Syndicate Spy
+    ["Syndicate Spy"] = {
+        npcId = 2242,
+        level = {35, 36},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 17124, dropChance = 99.7},
+            {itemId = 16883, dropChance = 10.6},
+            {itemId = 5431, dropChance = 9.5},
+            {itemId = 4539, dropChance = 3.3},
+            {itemId = 4544, dropChance = 2.4},
+            {itemId = 1707, dropChance = 2.3},
+            {itemId = 1710, dropChance = 1.7},
+            {itemId = 3864, dropChance = 0.4},
+            {itemId = 1529, dropChance = 0.2}
+        }
+    },
+
+    -- Syndicate Thief
+    ["Syndicate Thief"] = {
+        npcId = 2241,
+        level = {33, 34},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 17124, dropChance = 99.6},
+            {itemId = 5431, dropChance = 9.5},
+            {itemId = 16883, dropChance = 9.5},
+            {itemId = 1707, dropChance = 2.8},
+            {itemId = 4539, dropChance = 2.8},
+            {itemId = 1710, dropChance = 2.5},
+            {itemId = 4544, dropChance = 2.2},
+            {itemId = 1529, dropChance = 0.4},
+            {itemId = 3864, dropChance = 0.3}
+        }
+    },
+
+    -- Syndicate Watchman
+    ["Syndicate Watchman"] = {
+        npcId = 2261,
+        level = {20, 21},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 17124, dropChance = 72.8},
+            {itemId = 16882, dropChance = 30.1},
+            {itemId = 5374, dropChance = 14.7},
+            {itemId = 4538, dropChance = 3.7},
+            {itemId = 422, dropChance = 3.7},
+            {itemId = 929, dropChance = 3.6},
+            {itemId = 4542, dropChance = 3.6},
+            {itemId = 1206, dropChance = 0.5},
+            {itemId = 1705, dropChance = 0.5}
+        }
+    },
+
+    -- Syndicate Wizard
+    ["Syndicate Wizard"] = {
+        npcId = 2319,
+        level = {34, 35},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 17124, dropChance = 99.6},
+            {itemId = 16883, dropChance = 10.3},
+            {itemId = 5431, dropChance = 8.5},
+            {itemId = 4539, dropChance = 2.6},
+            {itemId = 1710, dropChance = 2.3},
+            {itemId = 4544, dropChance = 2.1},
+            {itemId = 1707, dropChance = 2.0},
+            {itemId = 1529, dropChance = 0.3}
         }
     },
 
@@ -12075,6 +23009,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Taneel Darkwood
+    ["Taneel Darkwood"] = {
+        npcId = 3940,
+        level = {32, 32},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16883, dropChance = 36.4},
+            {itemId = 4544, dropChance = 27.3},
+            {itemId = 5431, dropChance = 18.2},
+            {itemId = 1710, dropChance = 9.1},
+            {itemId = 4539, dropChance = 9.1}
+        }
+    },
+
     -- Taragaman the Hungerer
     ["Taragaman the Hungerer"] = {
         npcId = 11520,
@@ -12084,6 +23032,49 @@ DB.PickpocketLoot = {
             {itemId = 4605, dropChance = 61.1},
             {itemId = 5370, dropChance = 27.8},
             {itemId = 858, dropChance = 11.1}
+        }
+    },
+
+    -- Targ
+    ["Targ"] = {
+        npcId = 2420,
+        level = {41, 41},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5428, dropChance = 52.6},
+            {itemId = 4599, dropChance = 26.3},
+            {itemId = 16884, dropChance = 15.8},
+            {itemId = 3928, dropChance = 10.5},
+            {itemId = 4601, dropChance = 10.5}
+        }
+    },
+
+    -- Targorr the Dread
+    ["Targorr the Dread"] = {
+        npcId = 1696,
+        level = {24, 24},
+        zone = "The Stockade",
+        loot = {
+            {itemId = 16882, dropChance = 51.2},
+            {itemId = 5374, dropChance = 30.5},
+            {itemId = 422, dropChance = 15.9},
+            {itemId = 4538, dropChance = 7.3},
+            {itemId = 4542, dropChance = 7.3},
+            {itemId = 929, dropChance = 6.1},
+            {itemId = 1206, dropChance = 2.4},
+            {itemId = 1705, dropChance = 1.2}
+        }
+    },
+
+    -- Tarren Mill Deathguard
+    ["Tarren Mill Deathguard"] = {
+        npcId = 2405,
+        level = {55, 55},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 3419, dropChance = 81.8},
+            {itemId = 4608, dropChance = 27.3},
+            {itemId = 3928, dropChance = 9.1}
         }
     },
 
@@ -12123,6 +23114,18 @@ DB.PickpocketLoot = {
             {itemId = 414, dropChance = 21.1},
             {itemId = 858, dropChance = 10.5},
             {itemId = 4541, dropChance = 10.5}
+        }
+    },
+
+    -- Tharil'zun
+    ["Tharil'zun"] = {
+        npcId = 486,
+        level = {24, 24},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 66.7},
+            {itemId = 5373, dropChance = 44.4},
+            {itemId = 4542, dropChance = 11.1}
         }
     },
 
@@ -12258,6 +23261,40 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Theramore Marine
+    ["Theramore Marine"] = {
+        npcId = 3385,
+        level = {15, 16},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5368, dropChance = 52.1},
+            {itemId = 4541, dropChance = 14.1},
+            {itemId = 858, dropChance = 12.2},
+            {itemId = 4537, dropChance = 12.0},
+            {itemId = 414, dropChance = 11.5},
+            {itemId = 818, dropChance = 2.6},
+            {itemId = 1210, dropChance = 2.1},
+            {itemId = 6271, dropChance = 0.2}
+        }
+    },
+
+    -- Theramore Preserver
+    ["Theramore Preserver"] = {
+        npcId = 3386,
+        level = {16, 17},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5368, dropChance = 56.2},
+            {itemId = 858, dropChance = 18.1},
+            {itemId = 4541, dropChance = 15.2},
+            {itemId = 414, dropChance = 9.5},
+            {itemId = 4537, dropChance = 6.7},
+            {itemId = 818, dropChance = 1.9},
+            {itemId = 1210, dropChance = 1.0},
+            {itemId = 2881, dropChance = 1.0}
+        }
+    },
+
     -- Theramore Sentry
     ["Theramore Sentry"] = {
         npcId = 5184,
@@ -12273,6 +23310,93 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Thistlefur Avenger
+    ["Thistlefur Avenger"] = {
+        npcId = 3925,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 58.6},
+            {itemId = 5375, dropChance = 25.2},
+            {itemId = 3770, dropChance = 19.4},
+            {itemId = 929, dropChance = 7.3},
+            {itemId = 1206, dropChance = 0.9},
+            {itemId = 1705, dropChance = 0.5}
+        }
+    },
+
+    -- Thistlefur Den Watcher
+    ["Thistlefur Den Watcher"] = {
+        npcId = 3923,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 53.2},
+            {itemId = 5375, dropChance = 30.6},
+            {itemId = 929, dropChance = 14.5},
+            {itemId = 3770, dropChance = 14.5},
+            {itemId = 1206, dropChance = 1.6}
+        }
+    },
+
+    -- Thistlefur Pathfinder
+    ["Thistlefur Pathfinder"] = {
+        npcId = 3926,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 45.8},
+            {itemId = 3770, dropChance = 33.9},
+            {itemId = 5375, dropChance = 24.6},
+            {itemId = 929, dropChance = 9.3}
+        }
+    },
+
+    -- Thistlefur Shaman
+    ["Thistlefur Shaman"] = {
+        npcId = 3924,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 55.7},
+            {itemId = 5375, dropChance = 29.6},
+            {itemId = 3770, dropChance = 21.1},
+            {itemId = 929, dropChance = 5.8},
+            {itemId = 1705, dropChance = 1.6},
+            {itemId = 1206, dropChance = 1.1}
+        }
+    },
+
+    -- Thistlefur Totemic
+    ["Thistlefur Totemic"] = {
+        npcId = 3922,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 53.7},
+            {itemId = 5375, dropChance = 30.5},
+            {itemId = 3770, dropChance = 21.1},
+            {itemId = 929, dropChance = 6.6},
+            {itemId = 1705, dropChance = 1.1},
+            {itemId = 1206, dropChance = 0.8}
+        }
+    },
+
+    -- Thistlefur Ursa
+    ["Thistlefur Ursa"] = {
+        npcId = 3921,
+        level = {23, 24},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 57.6},
+            {itemId = 5375, dropChance = 31.5},
+            {itemId = 3770, dropChance = 14.8},
+            {itemId = 929, dropChance = 8.5},
+            {itemId = 1705, dropChance = 1.7},
+            {itemId = 1206, dropChance = 0.7}
+        }
+    },
+
     -- Thorn Eater Ghoul
     ["Thorn Eater Ghoul"] = {
         npcId = 7348,
@@ -12285,6 +23409,33 @@ DB.PickpocketLoot = {
             {itemId = 1710, dropChance = 8.6},
             {itemId = 3864, dropChance = 0.7},
             {itemId = 1529, dropChance = 0.4}
+        }
+    },
+
+    -- Thule Ravenclaw
+    ["Thule Ravenclaw"] = {
+        npcId = 1947,
+        level = {24, 24},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 16882, dropChance = 57.1},
+            {itemId = 4538, dropChance = 28.6},
+            {itemId = 4542, dropChance = 28.6},
+            {itemId = 5374, dropChance = 28.6}
+        }
+    },
+
+    -- Thurman Agamand
+    ["Thurman Agamand"] = {
+        npcId = 1656,
+        level = {10, 10},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 60.0},
+            {itemId = 118, dropChance = 20.0},
+            {itemId = 4604, dropChance = 20.0},
+            {itemId = 159, dropChance = 10.0},
+            {itemId = 1476, dropChance = 10.0}
         }
     },
 
@@ -12488,6 +23639,136 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Tinkerer Sniggles
+    ["Tinkerer Sniggles"] = {
+        npcId = 3471,
+        level = {16, 16},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5379, dropChance = 60.0},
+            {itemId = 2287, dropChance = 20.0},
+            {itemId = 4541, dropChance = 20.0},
+            {itemId = 1210, dropChance = 6.7}
+        }
+    },
+
+    -- Tirisfal Farmer
+    ["Tirisfal Farmer"] = {
+        npcId = 1934,
+        level = {6, 7},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 118, dropChance = 27.6},
+            {itemId = 6150, dropChance = 21.4},
+            {itemId = 5363, dropChance = 16.3},
+            {itemId = 4536, dropChance = 13.3},
+            {itemId = 2070, dropChance = 9.2},
+            {itemId = 4540, dropChance = 8.2},
+            {itemId = 774, dropChance = 5.1},
+            {itemId = 1367, dropChance = 1.0},
+            {itemId = 1376, dropChance = 1.0},
+            {itemId = 3264, dropChance = 1.0},
+            {itemId = 4865, dropChance = 1.0}
+        }
+    },
+
+    -- Tirisfal Farmhand
+    ["Tirisfal Farmhand"] = {
+        npcId = 1935,
+        level = {5, 6},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 6150, dropChance = 32.2},
+            {itemId = 2070, dropChance = 21.5},
+            {itemId = 4540, dropChance = 21.5},
+            {itemId = 5363, dropChance = 13.6},
+            {itemId = 4536, dropChance = 7.9},
+            {itemId = 118, dropChance = 4.0},
+            {itemId = 774, dropChance = 2.3},
+            {itemId = 1476, dropChance = 0.6},
+            {itemId = 2653, dropChance = 0.6},
+            {itemId = 7074, dropChance = 0.6}
+        }
+    },
+
+    -- Tormented Officer
+    ["Tormented Officer"] = {
+        npcId = 3873,
+        level = {23, 24},
+        zone = "Shadowfang Keep",
+        loot = {
+            {itemId = 16882, dropChance = 51.1},
+            {itemId = 5376, dropChance = 31.1},
+            {itemId = 4606, dropChance = 17.8},
+            {itemId = 929, dropChance = 2.2}
+        }
+    },
+
+    -- Torn Fin Coastrunner
+    ["Torn Fin Coastrunner"] = {
+        npcId = 2375,
+        level = {29, 30},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 55.6},
+            {itemId = 5377, dropChance = 29.3},
+            {itemId = 6308, dropChance = 20.0},
+            {itemId = 929, dropChance = 5.9},
+            {itemId = 1705, dropChance = 0.4},
+            {itemId = 5498, dropChance = 0.4}
+        }
+    },
+
+    -- Torn Fin Muckdweller
+    ["Torn Fin Muckdweller"] = {
+        npcId = 2374,
+        level = {28, 29},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 58.6},
+            {itemId = 5377, dropChance = 32.6},
+            {itemId = 6308, dropChance = 21.3},
+            {itemId = 929, dropChance = 6.3},
+            {itemId = 1206, dropChance = 0.4},
+            {itemId = 1705, dropChance = 0.4},
+            {itemId = 5498, dropChance = 0.4},
+            {itemId = 5500, dropChance = 0.4}
+        }
+    },
+
+    -- Torn Fin Oracle
+    ["Torn Fin Oracle"] = {
+        npcId = 2376,
+        level = {30, 31},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16882, dropChance = 59.0},
+            {itemId = 5377, dropChance = 26.6},
+            {itemId = 6308, dropChance = 20.2},
+            {itemId = 929, dropChance = 6.5},
+            {itemId = 5498, dropChance = 0.6},
+            {itemId = 1705, dropChance = 0.3},
+            {itemId = 5500, dropChance = 0.3}
+        }
+    },
+
+    -- Torn Fin Tidehunter
+    ["Torn Fin Tidehunter"] = {
+        npcId = 2377,
+        level = {31, 32},
+        zone = "Hillsbrad Foothills",
+        loot = {
+            {itemId = 16883, dropChance = 41.7},
+            {itemId = 10457, dropChance = 31.0},
+            {itemId = 6362, dropChance = 27.1},
+            {itemId = 1710, dropChance = 9.1},
+            {itemId = 5498, dropChance = 1.1},
+            {itemId = 5500, dropChance = 0.8},
+            {itemId = 1529, dropChance = 0.6},
+            {itemId = 3864, dropChance = 0.2}
+        }
+    },
+
     -- Tortured Druid
     ["Tortured Druid"] = {
         npcId = 12178,
@@ -12531,6 +23812,106 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 16.7},
             {itemId = 4601, dropChance = 16.7},
             {itemId = 4602, dropChance = 16.7}
+        }
+    },
+
+    -- Tunnel Rat Digger
+    ["Tunnel Rat Digger"] = {
+        npcId = 1175,
+        level = {12, 13},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 2287, dropChance = 49.0},
+            {itemId = 5369, dropChance = 39.2},
+            {itemId = 858, dropChance = 12.7},
+            {itemId = 818, dropChance = 4.9},
+            {itemId = 1210, dropChance = 2.9}
+        }
+    },
+
+    -- Tunnel Rat Forager
+    ["Tunnel Rat Forager"] = {
+        npcId = 1176,
+        level = {11, 12},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5369, dropChance = 44.4},
+            {itemId = 2287, dropChance = 35.6},
+            {itemId = 858, dropChance = 20.0},
+            {itemId = 818, dropChance = 2.2},
+            {itemId = 2408, dropChance = 2.2}
+        }
+    },
+
+    -- Tunnel Rat Geomancer
+    ["Tunnel Rat Geomancer"] = {
+        npcId = 1174,
+        level = {12, 13},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5369, dropChance = 51.4},
+            {itemId = 2287, dropChance = 37.4},
+            {itemId = 858, dropChance = 11.2},
+            {itemId = 818, dropChance = 3.7},
+            {itemId = 1210, dropChance = 3.7}
+        }
+    },
+
+    -- Tunnel Rat Kobold
+    ["Tunnel Rat Kobold"] = {
+        npcId = 1202,
+        level = {11, 12},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 2287, dropChance = 50.0},
+            {itemId = 5369, dropChance = 36.4},
+            {itemId = 858, dropChance = 11.4},
+            {itemId = 1210, dropChance = 4.5},
+            {itemId = 818, dropChance = 2.3}
+        }
+    },
+
+    -- Tunnel Rat Scout
+    ["Tunnel Rat Scout"] = {
+        npcId = 1173,
+        level = {10, 11},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5364, dropChance = 51.5},
+            {itemId = 117, dropChance = 31.1},
+            {itemId = 118, dropChance = 12.1},
+            {itemId = 774, dropChance = 6.8},
+            {itemId = 3609, dropChance = 1.5}
+        }
+    },
+
+    -- Tunnel Rat Surveyor
+    ["Tunnel Rat Surveyor"] = {
+        npcId = 1177,
+        level = {14, 14},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 2287, dropChance = 50.0},
+            {itemId = 5369, dropChance = 30.0},
+            {itemId = 1210, dropChance = 10.0},
+            {itemId = 4293, dropChance = 10.0}
+        }
+    },
+
+    -- Tunnel Rat Vermin
+    ["Tunnel Rat Vermin"] = {
+        npcId = 1172,
+        level = {10, 11},
+        zone = "Loch Modan",
+        loot = {
+            {itemId = 5364, dropChance = 47.1},
+            {itemId = 117, dropChance = 36.9},
+            {itemId = 118, dropChance = 12.4},
+            {itemId = 774, dropChance = 6.2},
+            {itemId = 2138, dropChance = 0.4},
+            {itemId = 2835, dropChance = 0.4},
+            {itemId = 3609, dropChance = 0.4},
+            {itemId = 7074, dropChance = 0.4}
         }
     },
 
@@ -12608,6 +23989,21 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 8.0},
             {itemId = 7909, dropChance = 2.5},
             {itemId = 7910, dropChance = 1.5}
+        }
+    },
+
+    -- Twilight Disciple
+    ["Twilight Disciple"] = {
+        npcId = 2338,
+        level = {16, 17},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5379, dropChance = 46.1},
+            {itemId = 2287, dropChance = 22.5},
+            {itemId = 4541, dropChance = 20.6},
+            {itemId = 858, dropChance = 13.7},
+            {itemId = 1210, dropChance = 2.9},
+            {itemId = 818, dropChance = 2.0}
         }
     },
 
@@ -12739,6 +24135,34 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Twilight Keeper Havunth
+    ["Twilight Keeper Havunth"] = {
+        npcId = 11804,
+        level = {60, 60},
+        zone = "Silithus",
+        loot = {
+            {itemId = 5428, dropChance = 62.5},
+            {itemId = 8952, dropChance = 21.9},
+            {itemId = 8950, dropChance = 12.5},
+            {itemId = 16885, dropChance = 9.4},
+            {itemId = 3928, dropChance = 3.1}
+        }
+    },
+
+    -- Twilight Keeper Mayna
+    ["Twilight Keeper Mayna"] = {
+        npcId = 15200,
+        level = {60, 60},
+        zone = "Silithus",
+        loot = {
+            {itemId = 5432, dropChance = 46.7},
+            {itemId = 3928, dropChance = 20.0},
+            {itemId = 8932, dropChance = 20.0},
+            {itemId = 16885, dropChance = 20.0},
+            {itemId = 8953, dropChance = 6.7}
+        }
+    },
+
     -- Twilight Lord Everun
     ["Twilight Lord Everun"] = {
         npcId = 14479,
@@ -12813,6 +24237,19 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Twilight Prophet
+    ["Twilight Prophet"] = {
+        npcId = 15308,
+        level = {60, 60},
+        zone = "Silithus",
+        loot = {
+            {itemId = 5430, dropChance = 41.7},
+            {itemId = 8952, dropChance = 33.3},
+            {itemId = 16885, dropChance = 25.0},
+            {itemId = 7910, dropChance = 4.2}
+        }
+    },
+
     -- Twilight Reaver
     ["Twilight Reaver"] = {
         npcId = 4810,
@@ -12855,6 +24292,21 @@ DB.PickpocketLoot = {
             {itemId = 8932, dropChance = 9.3},
             {itemId = 8953, dropChance = 9.0},
             {itemId = 7910, dropChance = 1.3}
+        }
+    },
+
+    -- Twilight Thug
+    ["Twilight Thug"] = {
+        npcId = 2339,
+        level = {17, 18},
+        zone = "Darkshore",
+        loot = {
+            {itemId = 5379, dropChance = 53.2},
+            {itemId = 2287, dropChance = 19.0},
+            {itemId = 4541, dropChance = 15.9},
+            {itemId = 858, dropChance = 15.1},
+            {itemId = 818, dropChance = 3.2},
+            {itemId = 1210, dropChance = 2.4}
         }
     },
 
@@ -12921,6 +24373,45 @@ DB.PickpocketLoot = {
             {itemId = 1707, dropChance = 10.4},
             {itemId = 1710, dropChance = 8.3},
             {itemId = 1529, dropChance = 2.1}
+        }
+    },
+
+    -- Umi Thorson
+    ["Umi Thorson"] = {
+        npcId = 13078,
+        level = {58, 58},
+        zone = "Alterac Valley",
+        loot = {
+            {itemId = 5432, dropChance = 63.6},
+            {itemId = 8953, dropChance = 18.2},
+            {itemId = 8950, dropChance = 9.1},
+            {itemId = 16885, dropChance = 9.1}
+        }
+    },
+
+    -- Undead Dynamiter
+    ["Undead Dynamiter"] = {
+        npcId = 625,
+        level = {17, 18},
+        zone = "Unknown",
+        loot = {
+            {itemId = 5370, dropChance = 56.7},
+            {itemId = 4605, dropChance = 36.7},
+            {itemId = 858, dropChance = 10.0},
+            {itemId = 818, dropChance = 3.3}
+        }
+    },
+
+    -- Undead Excavator
+    ["Undead Excavator"] = {
+        npcId = 624,
+        level = {17, 18},
+        zone = "Unknown",
+        loot = {
+            {itemId = 4605, dropChance = 48.6},
+            {itemId = 5370, dropChance = 37.8},
+            {itemId = 858, dropChance = 10.8},
+            {itemId = 818, dropChance = 2.7}
         }
     },
 
@@ -13017,6 +24508,46 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Uthil Mooncall
+    ["Uthil Mooncall"] = {
+        npcId = 3941,
+        level = {32, 32},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5431, dropChance = 40.0},
+            {itemId = 16883, dropChance = 40.0},
+            {itemId = 4539, dropChance = 20.0},
+            {itemId = 4544, dropChance = 13.3}
+        }
+    },
+
+    -- Valdred Moray
+    ["Valdred Moray"] = {
+        npcId = 2332,
+        level = {21, 21},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 16882, dropChance = 91.7},
+            {itemId = 5374, dropChance = 16.7},
+            {itemId = 929, dropChance = 8.3}
+        }
+    },
+
+    -- Vanndar Stormpike
+    ["Vanndar Stormpike"] = {
+        npcId = 11948,
+        level = {1, 1},
+        zone = "Alterac Valley",
+        loot = {
+            {itemId = 5432, dropChance = 33.3},
+            {itemId = 16885, dropChance = 27.3},
+            {itemId = 3928, dropChance = 15.2},
+            {itemId = 8953, dropChance = 15.2},
+            {itemId = 8950, dropChance = 12.1},
+            {itemId = 8932, dropChance = 9.1}
+        }
+    },
+
     -- Vectus
     ["Vectus"] = {
         npcId = 10432,
@@ -13059,6 +24590,24 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Venture Co. Deforester
+    ["Venture Co. Deforester"] = {
+        npcId = 3991,
+        level = {19, 20},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 5379, dropChance = 49.6},
+            {itemId = 4541, dropChance = 19.9},
+            {itemId = 2287, dropChance = 18.9},
+            {itemId = 858, dropChance = 12.5},
+            {itemId = 1210, dropChance = 2.8},
+            {itemId = 818, dropChance = 2.3},
+            {itemId = 2406, dropChance = 0.3},
+            {itemId = 4292, dropChance = 0.3},
+            {itemId = 4409, dropChance = 0.3}
+        }
+    },
+
     -- Venture Co. Drone
     ["Venture Co. Drone"] = {
         npcId = 7067,
@@ -13070,6 +24619,119 @@ DB.PickpocketLoot = {
             {itemId = 5376, dropChance = 24.3},
             {itemId = 929, dropChance = 8.7},
             {itemId = 1705, dropChance = 1.0}
+        }
+    },
+
+    -- Venture Co. Drudger
+    ["Venture Co. Drudger"] = {
+        npcId = 3284,
+        level = {14, 15},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5379, dropChance = 50.5},
+            {itemId = 4541, dropChance = 20.4},
+            {itemId = 2287, dropChance = 19.4},
+            {itemId = 858, dropChance = 11.0},
+            {itemId = 818, dropChance = 3.4},
+            {itemId = 1210, dropChance = 3.4},
+            {itemId = 4346, dropChance = 0.3},
+            {itemId = 6344, dropChance = 0.3}
+        }
+    },
+
+    -- Venture Co. Enforcer
+    ["Venture Co. Enforcer"] = {
+        npcId = 3283,
+        level = {16, 17},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5379, dropChance = 56.5},
+            {itemId = 2287, dropChance = 17.4},
+            {itemId = 4541, dropChance = 17.2},
+            {itemId = 858, dropChance = 9.6},
+            {itemId = 1210, dropChance = 2.3},
+            {itemId = 818, dropChance = 2.1},
+            {itemId = 2407, dropChance = 0.5},
+            {itemId = 2553, dropChance = 0.3},
+            {itemId = 3610, dropChance = 0.3},
+            {itemId = 7288, dropChance = 0.3}
+        }
+    },
+
+    -- Venture Co. Engineer
+    ["Venture Co. Engineer"] = {
+        npcId = 3992,
+        level = {20, 21},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 48.3},
+            {itemId = 5373, dropChance = 40.1},
+            {itemId = 3770, dropChance = 11.6},
+            {itemId = 4542, dropChance = 8.2},
+            {itemId = 929, dropChance = 4.8},
+            {itemId = 1206, dropChance = 0.7}
+        }
+    },
+
+    -- Venture Co. Foreman
+    ["Venture Co. Foreman"] = {
+        npcId = 675,
+        level = {42, 42},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 41.8},
+            {itemId = 16884, dropChance = 23.1},
+            {itemId = 4601, dropChance = 18.7},
+            {itemId = 4599, dropChance = 16.5},
+            {itemId = 3928, dropChance = 11.0},
+            {itemId = 7910, dropChance = 2.2},
+            {itemId = 7909, dropChance = 1.1}
+        }
+    },
+
+    -- Venture Co. Geologist
+    ["Venture Co. Geologist"] = {
+        npcId = 1096,
+        level = {35, 36},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5427, dropChance = 36.7},
+            {itemId = 16883, dropChance = 36.5},
+            {itemId = 3771, dropChance = 14.3},
+            {itemId = 4544, dropChance = 10.9},
+            {itemId = 1710, dropChance = 10.1},
+            {itemId = 3864, dropChance = 1.3},
+            {itemId = 1529, dropChance = 1.0}
+        }
+    },
+
+    -- Venture Co. Laborer
+    ["Venture Co. Laborer"] = {
+        npcId = 2976,
+        level = {6, 7},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5367, dropChance = 36.4},
+            {itemId = 4540, dropChance = 27.3},
+            {itemId = 118, dropChance = 18.2},
+            {itemId = 117, dropChance = 9.1},
+            {itemId = 774, dropChance = 9.1}
+        }
+    },
+
+    -- Venture Co. Logger
+    ["Venture Co. Logger"] = {
+        npcId = 3989,
+        level = {18, 19},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 5379, dropChance = 51.6},
+            {itemId = 2287, dropChance = 19.9},
+            {itemId = 4541, dropChance = 15.9},
+            {itemId = 858, dropChance = 14.3},
+            {itemId = 818, dropChance = 2.8},
+            {itemId = 1210, dropChance = 1.4},
+            {itemId = 3610, dropChance = 0.3}
         }
     },
 
@@ -13088,6 +24750,111 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Venture Co. Lumberjack
+    ["Venture Co. Lumberjack"] = {
+        npcId = 921,
+        level = {34, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5427, dropChance = 47.2},
+            {itemId = 16883, dropChance = 26.4},
+            {itemId = 4544, dropChance = 20.8},
+            {itemId = 3771, dropChance = 13.2},
+            {itemId = 1710, dropChance = 3.8}
+        }
+    },
+
+    -- Venture Co. Machine Smith
+    ["Venture Co. Machine Smith"] = {
+        npcId = 3993,
+        level = {21, 22},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 59.0},
+            {itemId = 5373, dropChance = 22.3},
+            {itemId = 4542, dropChance = 12.9},
+            {itemId = 3770, dropChance = 7.9},
+            {itemId = 929, dropChance = 6.5}
+        }
+    },
+
+    -- Venture Co. Mechanic
+    ["Venture Co. Mechanic"] = {
+        npcId = 1097,
+        level = {34, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 16883, dropChance = 35.6},
+            {itemId = 5427, dropChance = 31.1},
+            {itemId = 3771, dropChance = 21.7},
+            {itemId = 4544, dropChance = 12.8},
+            {itemId = 1710, dropChance = 6.7},
+            {itemId = 1529, dropChance = 2.8},
+            {itemId = 3864, dropChance = 1.1}
+        }
+    },
+
+    -- Venture Co. Mercenary
+    ["Venture Co. Mercenary"] = {
+        npcId = 3282,
+        level = {15, 16},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5379, dropChance = 55.8},
+            {itemId = 2287, dropChance = 19.2},
+            {itemId = 858, dropChance = 14.2},
+            {itemId = 4541, dropChance = 11.7},
+            {itemId = 818, dropChance = 3.3},
+            {itemId = 1210, dropChance = 1.7}
+        }
+    },
+
+    -- Venture Co. Miner
+    ["Venture Co. Miner"] = {
+        npcId = 1094,
+        level = {34, 35},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5427, dropChance = 40.6},
+            {itemId = 16883, dropChance = 37.5},
+            {itemId = 4544, dropChance = 14.6},
+            {itemId = 3771, dropChance = 7.3},
+            {itemId = 1710, dropChance = 6.3},
+            {itemId = 1529, dropChance = 1.0}
+        }
+    },
+
+    -- Venture Co. Operator
+    ["Venture Co. Operator"] = {
+        npcId = 3988,
+        level = {19, 20},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 5379, dropChance = 53.1},
+            {itemId = 4541, dropChance = 16.9},
+            {itemId = 2287, dropChance = 14.6},
+            {itemId = 858, dropChance = 11.8},
+            {itemId = 1210, dropChance = 3.5},
+            {itemId = 818, dropChance = 2.8},
+            {itemId = 4346, dropChance = 0.4}
+        }
+    },
+
+    -- Venture Co. Overseer
+    ["Venture Co. Overseer"] = {
+        npcId = 3286,
+        level = {17, 18},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5379, dropChance = 57.1},
+            {itemId = 4541, dropChance = 17.7},
+            {itemId = 2287, dropChance = 16.7},
+            {itemId = 858, dropChance = 9.1},
+            {itemId = 1210, dropChance = 3.0},
+            {itemId = 818, dropChance = 2.0}
+        }
+    },
+
     -- Venture Co. Patroller
     ["Venture Co. Patroller"] = {
         npcId = 7308,
@@ -13099,6 +24866,125 @@ DB.PickpocketLoot = {
             {itemId = 4542, dropChance = 6.3},
             {itemId = 3770, dropChance = 4.7},
             {itemId = 929, dropChance = 3.1}
+        }
+    },
+
+    -- Venture Co. Peon
+    ["Venture Co. Peon"] = {
+        npcId = 3285,
+        level = {13, 14},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5379, dropChance = 41.3},
+            {itemId = 2287, dropChance = 25.7},
+            {itemId = 4541, dropChance = 19.3},
+            {itemId = 858, dropChance = 12.8},
+            {itemId = 1210, dropChance = 4.6},
+            {itemId = 818, dropChance = 2.8},
+            {itemId = 2406, dropChance = 0.9}
+        }
+    },
+
+    -- Venture Co. Strip Miner
+    ["Venture Co. Strip Miner"] = {
+        npcId = 674,
+        level = {40, 41},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5432, dropChance = 44.2},
+            {itemId = 16884, dropChance = 19.9},
+            {itemId = 4602, dropChance = 11.9},
+            {itemId = 3927, dropChance = 10.6},
+            {itemId = 3928, dropChance = 10.3},
+            {itemId = 4601, dropChance = 10.1},
+            {itemId = 7910, dropChance = 1.8},
+            {itemId = 7909, dropChance = 1.6}
+        }
+    },
+
+    -- Venture Co. Supervisor
+    ["Venture Co. Supervisor"] = {
+        npcId = 2979,
+        level = {9, 10},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5367, dropChance = 54.5},
+            {itemId = 117, dropChance = 36.4},
+            {itemId = 774, dropChance = 9.1}
+        }
+    },
+
+    -- Venture Co. Surveyor
+    ["Venture Co. Surveyor"] = {
+        npcId = 676,
+        level = {41, 42},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 34.0},
+            {itemId = 16884, dropChance = 28.0},
+            {itemId = 4599, dropChance = 20.0},
+            {itemId = 4601, dropChance = 14.0},
+            {itemId = 3928, dropChance = 4.0},
+            {itemId = 7909, dropChance = 2.0},
+            {itemId = 7910, dropChance = 2.0}
+        }
+    },
+
+    -- Venture Co. Taskmaster
+    ["Venture Co. Taskmaster"] = {
+        npcId = 2977,
+        level = {7, 8},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5367, dropChance = 57.1},
+            {itemId = 117, dropChance = 14.3},
+            {itemId = 774, dropChance = 14.3},
+            {itemId = 4540, dropChance = 14.3}
+        }
+    },
+
+    -- Venture Co. Tinkerer
+    ["Venture Co. Tinkerer"] = {
+        npcId = 677,
+        level = {40, 41},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5432, dropChance = 34.7},
+            {itemId = 16884, dropChance = 16.9},
+            {itemId = 3928, dropChance = 15.3},
+            {itemId = 4602, dropChance = 12.7},
+            {itemId = 3927, dropChance = 11.9},
+            {itemId = 4601, dropChance = 10.2},
+            {itemId = 7910, dropChance = 3.4},
+            {itemId = 7909, dropChance = 2.5}
+        }
+    },
+
+    -- Venture Co. Workboss
+    ["Venture Co. Workboss"] = {
+        npcId = 1095,
+        level = {36, 36},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 3771, dropChance = 27.3},
+            {itemId = 4544, dropChance = 27.3},
+            {itemId = 16883, dropChance = 27.3},
+            {itemId = 5427, dropChance = 18.2},
+            {itemId = 1710, dropChance = 9.1}
+        }
+    },
+
+    -- Venture Co. Worker
+    ["Venture Co. Worker"] = {
+        npcId = 2978,
+        level = {8, 9},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5367, dropChance = 48.6},
+            {itemId = 117, dropChance = 22.9},
+            {itemId = 4540, dropChance = 17.1},
+            {itemId = 118, dropChance = 8.6},
+            {itemId = 774, dropChance = 8.6}
         }
     },
 
@@ -13170,6 +25056,115 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Vile Fin Lakestalker
+    ["Vile Fin Lakestalker"] = {
+        npcId = 1909,
+        level = {18, 19},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 6289, dropChance = 47.1},
+            {itemId = 5371, dropChance = 35.3},
+            {itemId = 858, dropChance = 17.6}
+        }
+    },
+
+    -- Vile Fin Minor Oracle
+    ["Vile Fin Minor Oracle"] = {
+        npcId = 1544,
+        level = {8, 9},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5361, dropChance = 46.0},
+            {itemId = 6303, dropChance = 41.0},
+            {itemId = 118, dropChance = 20.9},
+            {itemId = 774, dropChance = 3.6},
+            {itemId = 159, dropChance = 1.4},
+            {itemId = 1476, dropChance = 1.4},
+            {itemId = 2589, dropChance = 1.4},
+            {itemId = 3365, dropChance = 1.4},
+            {itemId = 12223, dropChance = 1.4},
+            {itemId = 2070, dropChance = 0.7},
+            {itemId = 2210, dropChance = 0.7},
+            {itemId = 2648, dropChance = 0.7}
+        }
+    },
+
+    -- Vile Fin Muckdweller
+    ["Vile Fin Muckdweller"] = {
+        npcId = 1545,
+        level = {9, 10},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5361, dropChance = 38.3},
+            {itemId = 6303, dropChance = 38.3},
+            {itemId = 118, dropChance = 8.5},
+            {itemId = 774, dropChance = 2.1},
+            {itemId = 1415, dropChance = 2.1},
+            {itemId = 2598, dropChance = 2.1},
+            {itemId = 2672, dropChance = 2.1}
+        }
+    },
+
+    -- Vile Fin Puddlejumper
+    ["Vile Fin Puddlejumper"] = {
+        npcId = 1543,
+        level = {7, 8},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 6303, dropChance = 40.3},
+            {itemId = 5361, dropChance = 34.5},
+            {itemId = 118, dropChance = 18.7},
+            {itemId = 774, dropChance = 6.5},
+            {itemId = 159, dropChance = 0.7},
+            {itemId = 1423, dropChance = 0.7},
+            {itemId = 2589, dropChance = 0.7},
+            {itemId = 3365, dropChance = 0.7},
+            {itemId = 3609, dropChance = 0.7},
+            {itemId = 4604, dropChance = 0.7},
+            {itemId = 7074, dropChance = 0.7}
+        }
+    },
+
+    -- Vile Fin Shorecreeper
+    ["Vile Fin Shorecreeper"] = {
+        npcId = 1957,
+        level = {16, 17},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5371, dropChance = 57.1},
+            {itemId = 818, dropChance = 14.3},
+            {itemId = 858, dropChance = 14.3},
+            {itemId = 1210, dropChance = 14.3},
+            {itemId = 6289, dropChance = 14.3}
+        }
+    },
+
+    -- Vile Fin Shredder
+    ["Vile Fin Shredder"] = {
+        npcId = 1767,
+        level = {12, 13},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 5371, dropChance = 41.2},
+            {itemId = 6289, dropChance = 41.2},
+            {itemId = 858, dropChance = 17.6},
+            {itemId = 818, dropChance = 5.9}
+        }
+    },
+
+    -- Vile Fin Tidecaller
+    ["Vile Fin Tidecaller"] = {
+        npcId = 1958,
+        level = {17, 18},
+        zone = "Silverpine Forest",
+        loot = {
+            {itemId = 6289, dropChance = 66.7},
+            {itemId = 5371, dropChance = 19.0},
+            {itemId = 818, dropChance = 14.3},
+            {itemId = 858, dropChance = 4.8}
+        }
+    },
+
     -- Vile Ooze
     ["Vile Ooze"] = {
         npcId = 7093,
@@ -13198,6 +25193,20 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Vile Slime
+    ["Vile Slime"] = {
+        npcId = 1806,
+        level = {54, 55},
+        zone = "Western Plaguelands",
+        loot = {
+            {itemId = 3419, dropChance = 38.3},
+            {itemId = 8948, dropChance = 34.6},
+            {itemId = 16885, dropChance = 20.8},
+            {itemId = 3928, dropChance = 11.7},
+            {itemId = 7910, dropChance = 2.3}
+        }
+    },
+
     -- Vile Tutor
     ["Vile Tutor"] = {
         npcId = 8548,
@@ -13213,6 +25222,22 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Vilebranch Aman'zasi Guard
+    ["Vilebranch Aman'zasi Guard"] = {
+        npcId = 2648,
+        level = {50, 51},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 41.1},
+            {itemId = 16884, dropChance = 21.4},
+            {itemId = 4599, dropChance = 18.4},
+            {itemId = 4601, dropChance = 15.2},
+            {itemId = 3928, dropChance = 10.6},
+            {itemId = 7910, dropChance = 1.5},
+            {itemId = 7909, dropChance = 1.0}
+        }
+    },
+
     -- Vilebranch Ambusher
     ["Vilebranch Ambusher"] = {
         npcId = 7809,
@@ -13224,6 +25249,86 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 20.0},
             {itemId = 4601, dropChance = 20.0},
             {itemId = 16884, dropChance = 10.0}
+        }
+    },
+
+    -- Vilebranch Axe Thrower
+    ["Vilebranch Axe Thrower"] = {
+        npcId = 2639,
+        level = {45, 46},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 41.3},
+            {itemId = 16884, dropChance = 33.8},
+            {itemId = 4599, dropChance = 13.9},
+            {itemId = 4601, dropChance = 13.9},
+            {itemId = 3928, dropChance = 3.5},
+            {itemId = 7909, dropChance = 1.0},
+            {itemId = 7910, dropChance = 0.5}
+        }
+    },
+
+    -- Vilebranch Berserker
+    ["Vilebranch Berserker"] = {
+        npcId = 2643,
+        level = {47, 48},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 41.3},
+            {itemId = 16884, dropChance = 21.6},
+            {itemId = 4599, dropChance = 18.3},
+            {itemId = 4601, dropChance = 15.1},
+            {itemId = 3928, dropChance = 11.0},
+            {itemId = 7910, dropChance = 1.9},
+            {itemId = 7909, dropChance = 1.6}
+        }
+    },
+
+    -- Vilebranch Blood Drinker
+    ["Vilebranch Blood Drinker"] = {
+        npcId = 2646,
+        level = {49, 50},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 42.7},
+            {itemId = 16884, dropChance = 22.2},
+            {itemId = 4599, dropChance = 16.2},
+            {itemId = 3928, dropChance = 14.1},
+            {itemId = 4601, dropChance = 11.2},
+            {itemId = 7909, dropChance = 1.0},
+            {itemId = 7910, dropChance = 0.2}
+        }
+    },
+
+    -- Vilebranch Headhunter
+    ["Vilebranch Headhunter"] = {
+        npcId = 2641,
+        level = {46, 47},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 38.9},
+            {itemId = 16884, dropChance = 21.1},
+            {itemId = 4599, dropChance = 18.4},
+            {itemId = 4601, dropChance = 17.4},
+            {itemId = 3928, dropChance = 9.5},
+            {itemId = 7910, dropChance = 1.6},
+            {itemId = 7909, dropChance = 0.5}
+        }
+    },
+
+    -- Vilebranch Hideskinner
+    ["Vilebranch Hideskinner"] = {
+        npcId = 2644,
+        level = {48, 49},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 39.6},
+            {itemId = 16884, dropChance = 22.9},
+            {itemId = 4601, dropChance = 17.1},
+            {itemId = 4599, dropChance = 16.4},
+            {itemId = 3928, dropChance = 13.9},
+            {itemId = 7909, dropChance = 0.4},
+            {itemId = 7910, dropChance = 0.4}
         }
     },
 
@@ -13243,6 +25348,38 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Vilebranch Shadow Hunter
+    ["Vilebranch Shadow Hunter"] = {
+        npcId = 2645,
+        level = {48, 49},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 37.8},
+            {itemId = 16884, dropChance = 21.6},
+            {itemId = 4599, dropChance = 18.8},
+            {itemId = 4601, dropChance = 17.7},
+            {itemId = 3928, dropChance = 11.5},
+            {itemId = 7909, dropChance = 1.1},
+            {itemId = 7910, dropChance = 0.2}
+        }
+    },
+
+    -- Vilebranch Shadowcaster
+    ["Vilebranch Shadowcaster"] = {
+        npcId = 2642,
+        level = {47, 48},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 47.6},
+            {itemId = 16884, dropChance = 20.2},
+            {itemId = 4601, dropChance = 15.1},
+            {itemId = 4599, dropChance = 13.6},
+            {itemId = 3928, dropChance = 11.1},
+            {itemId = 7910, dropChance = 0.6},
+            {itemId = 7909, dropChance = 0.3}
+        }
+    },
+
     -- Vilebranch Soothsayer
     ["Vilebranch Soothsayer"] = {
         npcId = 4467,
@@ -13256,6 +25393,22 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 12.4},
             {itemId = 7909, dropChance = 2.0},
             {itemId = 7910, dropChance = 1.1}
+        }
+    },
+
+    -- Vilebranch Soul Eater
+    ["Vilebranch Soul Eater"] = {
+        npcId = 2647,
+        level = {49, 50},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 40.4},
+            {itemId = 16884, dropChance = 26.2},
+            {itemId = 4599, dropChance = 16.2},
+            {itemId = 4601, dropChance = 13.5},
+            {itemId = 3928, dropChance = 11.9},
+            {itemId = 7909, dropChance = 2.3},
+            {itemId = 7910, dropChance = 1.2}
         }
     },
 
@@ -13284,6 +25437,52 @@ DB.PickpocketLoot = {
             {itemId = 3928, dropChance = 7.0},
             {itemId = 7909, dropChance = 1.6},
             {itemId = 7910, dropChance = 1.2}
+        }
+    },
+
+    -- Vilebranch Witch Doctor
+    ["Vilebranch Witch Doctor"] = {
+        npcId = 2640,
+        level = {46, 47},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 49.3},
+            {itemId = 4599, dropChance = 18.6},
+            {itemId = 16884, dropChance = 17.9},
+            {itemId = 4601, dropChance = 12.1},
+            {itemId = 3928, dropChance = 9.3},
+            {itemId = 7910, dropChance = 2.9},
+            {itemId = 7909, dropChance = 2.1}
+        }
+    },
+
+    -- Voodoo Troll
+    ["Voodoo Troll"] = {
+        npcId = 3206,
+        level = {8, 9},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5367, dropChance = 47.1},
+            {itemId = 117, dropChance = 23.1},
+            {itemId = 4540, dropChance = 16.5},
+            {itemId = 118, dropChance = 13.2},
+            {itemId = 774, dropChance = 5.8},
+            {itemId = 1378, dropChance = 0.8}
+        }
+    },
+
+    -- Wailing Ancestor
+    ["Wailing Ancestor"] = {
+        npcId = 1534,
+        level = {9, 10},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 59.5},
+            {itemId = 118, dropChance = 30.7},
+            {itemId = 4604, dropChance = 30.7},
+            {itemId = 774, dropChance = 8.6},
+            {itemId = 2589, dropChance = 1.2},
+            {itemId = 5361, dropChance = 0.6}
         }
     },
 
@@ -13342,6 +25541,21 @@ DB.PickpocketLoot = {
             {itemId = 16883, dropChance = 27.3},
             {itemId = 1710, dropChance = 13.6},
             {itemId = 1529, dropChance = 4.5}
+        }
+    },
+
+    -- Warden Belamoore
+    ["Warden Belamoore"] = {
+        npcId = 2415,
+        level = {36, 36},
+        zone = "Alterac Mountains",
+        loot = {
+            {itemId = 5431, dropChance = 38.5},
+            {itemId = 4539, dropChance = 23.1},
+            {itemId = 16883, dropChance = 23.1},
+            {itemId = 1707, dropChance = 15.4},
+            {itemId = 1710, dropChance = 7.7},
+            {itemId = 4544, dropChance = 7.7}
         }
     },
 
@@ -13624,6 +25838,110 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Windfury Harpy
+    ["Windfury Harpy"] = {
+        npcId = 2962,
+        level = {7, 8},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5364, dropChance = 83.3},
+            {itemId = 117, dropChance = 16.7},
+            {itemId = 118, dropChance = 16.7}
+        }
+    },
+
+    -- Windfury Matriarch
+    ["Windfury Matriarch"] = {
+        npcId = 2965,
+        level = {10, 11},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 117, dropChance = 50.0},
+            {itemId = 5364, dropChance = 39.3},
+            {itemId = 118, dropChance = 21.4}
+        }
+    },
+
+    -- Windfury Sorceress
+    ["Windfury Sorceress"] = {
+        npcId = 2964,
+        level = {9, 10},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5364, dropChance = 50.0},
+            {itemId = 117, dropChance = 42.3},
+            {itemId = 118, dropChance = 15.4},
+            {itemId = 774, dropChance = 3.8}
+        }
+    },
+
+    -- Windfury Wind Witch
+    ["Windfury Wind Witch"] = {
+        npcId = 2963,
+        level = {8, 9},
+        zone = "Mulgore",
+        loot = {
+            {itemId = 5364, dropChance = 80.0},
+            {itemId = 117, dropChance = 30.0}
+        }
+    },
+
+    -- Windshear Digger
+    ["Windshear Digger"] = {
+        npcId = 3999,
+        level = {21, 22},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 60.8},
+            {itemId = 5375, dropChance = 25.0},
+            {itemId = 3770, dropChance = 19.3},
+            {itemId = 929, dropChance = 5.9},
+            {itemId = 1705, dropChance = 0.8},
+            {itemId = 1206, dropChance = 0.7}
+        }
+    },
+
+    -- Windshear Geomancer
+    ["Windshear Geomancer"] = {
+        npcId = 4003,
+        level = {20, 21},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 58.5},
+            {itemId = 5375, dropChance = 24.1},
+            {itemId = 3770, dropChance = 23.2},
+            {itemId = 929, dropChance = 6.6},
+            {itemId = 1705, dropChance = 0.8},
+            {itemId = 1206, dropChance = 0.4}
+        }
+    },
+
+    -- Windshear Overlord
+    ["Windshear Overlord"] = {
+        npcId = 4004,
+        level = {21, 22},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 58.1},
+            {itemId = 3770, dropChance = 24.4},
+            {itemId = 5375, dropChance = 23.1},
+            {itemId = 929, dropChance = 6.9},
+            {itemId = 1206, dropChance = 0.6}
+        }
+    },
+
+    -- Windshear Stonecutter
+    ["Windshear Stonecutter"] = {
+        npcId = 4002,
+        level = {22, 23},
+        zone = "Stonetalon Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 80.0},
+            {itemId = 5375, dropChance = 20.0},
+            {itemId = 929, dropChance = 10.0}
+        }
+    },
+
     -- Wing Commander Guse
     ["Wing Commander Guse"] = {
         npcId = 13179,
@@ -13647,6 +25965,19 @@ DB.PickpocketLoot = {
             {itemId = 16885, dropChance = 33.3},
             {itemId = 3419, dropChance = 16.7},
             {itemId = 3928, dropChance = 16.7}
+        }
+    },
+
+    -- Wing Commander Mulverick
+    ["Wing Commander Mulverick"] = {
+        npcId = 13181,
+        level = {60, 60},
+        zone = "Alterac Valley",
+        loot = {
+            {itemId = 5428, dropChance = 75.0},
+            {itemId = 7910, dropChance = 25.0},
+            {itemId = 8950, dropChance = 12.5},
+            {itemId = 16885, dropChance = 12.5}
         }
     },
 
@@ -13746,6 +26077,274 @@ DB.PickpocketLoot = {
             {itemId = 4599, dropChance = 18.5},
             {itemId = 3928, dropChance = 10.8},
             {itemId = 7910, dropChance = 1.5}
+        }
+    },
+
+    -- Witchwing Ambusher
+    ["Witchwing Ambusher"] = {
+        npcId = 3279,
+        level = {17, 18},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 2287, dropChance = 60.0},
+            {itemId = 5369, dropChance = 40.0}
+        }
+    },
+
+    -- Witchwing Harpy
+    ["Witchwing Harpy"] = {
+        npcId = 3276,
+        level = {14, 15},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 49.2},
+            {itemId = 2287, dropChance = 33.1},
+            {itemId = 858, dropChance = 18.5},
+            {itemId = 1210, dropChance = 3.8},
+            {itemId = 818, dropChance = 2.3},
+            {itemId = 2553, dropChance = 0.8},
+            {itemId = 4345, dropChance = 0.8}
+        }
+    },
+
+    -- Witchwing Roguefeather
+    ["Witchwing Roguefeather"] = {
+        npcId = 3277,
+        level = {15, 16},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 53.9},
+            {itemId = 2287, dropChance = 36.3},
+            {itemId = 858, dropChance = 12.7},
+            {itemId = 818, dropChance = 2.0}
+        }
+    },
+
+    -- Witchwing Slayer
+    ["Witchwing Slayer"] = {
+        npcId = 3278,
+        level = {16, 17},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 48.1},
+            {itemId = 2287, dropChance = 39.0},
+            {itemId = 858, dropChance = 13.9},
+            {itemId = 818, dropChance = 3.7},
+            {itemId = 1210, dropChance = 2.7}
+        }
+    },
+
+    -- Witchwing Windcaller
+    ["Witchwing Windcaller"] = {
+        npcId = 3280,
+        level = {17, 18},
+        zone = "The Barrens",
+        loot = {
+            {itemId = 5369, dropChance = 61.8},
+            {itemId = 2287, dropChance = 29.4},
+            {itemId = 858, dropChance = 8.8},
+            {itemId = 2553, dropChance = 2.9}
+        }
+    },
+
+    -- Witherbark Axe Thrower
+    ["Witherbark Axe Thrower"] = {
+        npcId = 2554,
+        level = {32, 33},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 39.7},
+            {itemId = 5427, dropChance = 37.5},
+            {itemId = 3771, dropChance = 13.3},
+            {itemId = 4544, dropChance = 12.1},
+            {itemId = 1710, dropChance = 8.3},
+            {itemId = 1529, dropChance = 1.3},
+            {itemId = 3864, dropChance = 1.3}
+        }
+    },
+
+    -- Witherbark Berserker
+    ["Witherbark Berserker"] = {
+        npcId = 2558,
+        level = {36, 37},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 49.2},
+            {itemId = 5427, dropChance = 25.4},
+            {itemId = 4544, dropChance = 15.3},
+            {itemId = 1710, dropChance = 10.2},
+            {itemId = 3771, dropChance = 10.2},
+            {itemId = 1529, dropChance = 1.7}
+        }
+    },
+
+    -- Witherbark Caller
+    ["Witherbark Caller"] = {
+        npcId = 2654,
+        level = {45, 46},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 36.2},
+            {itemId = 4599, dropChance = 31.9},
+            {itemId = 16884, dropChance = 14.9},
+            {itemId = 3928, dropChance = 10.6},
+            {itemId = 4601, dropChance = 6.4},
+            {itemId = 7909, dropChance = 2.1}
+        }
+    },
+
+    -- Witherbark Headhunter
+    ["Witherbark Headhunter"] = {
+        npcId = 2556,
+        level = {34, 35},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 36.2},
+            {itemId = 5427, dropChance = 36.2},
+            {itemId = 3771, dropChance = 16.0},
+            {itemId = 4544, dropChance = 13.6},
+            {itemId = 1710, dropChance = 9.8},
+            {itemId = 3864, dropChance = 1.4},
+            {itemId = 1529, dropChance = 1.3}
+        }
+    },
+
+    -- Witherbark Hideskinner
+    ["Witherbark Hideskinner"] = {
+        npcId = 2651,
+        level = {42, 43},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 38.3},
+            {itemId = 16884, dropChance = 26.8},
+            {itemId = 4599, dropChance = 17.0},
+            {itemId = 4601, dropChance = 13.5},
+            {itemId = 3928, dropChance = 10.4},
+            {itemId = 7910, dropChance = 1.2},
+            {itemId = 7909, dropChance = 0.6}
+        }
+    },
+
+    -- Witherbark Sadist
+    ["Witherbark Sadist"] = {
+        npcId = 2653,
+        level = {44, 45},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 45.3},
+            {itemId = 16884, dropChance = 23.2},
+            {itemId = 4601, dropChance = 15.3},
+            {itemId = 4599, dropChance = 14.3},
+            {itemId = 3928, dropChance = 12.8},
+            {itemId = 7909, dropChance = 2.5}
+        }
+    },
+
+    -- Witherbark Scalper
+    ["Witherbark Scalper"] = {
+        npcId = 2649,
+        level = {40, 41},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5427, dropChance = 40.0},
+            {itemId = 16883, dropChance = 36.0},
+            {itemId = 3771, dropChance = 14.9},
+            {itemId = 4544, dropChance = 13.0},
+            {itemId = 1710, dropChance = 7.3},
+            {itemId = 1529, dropChance = 1.3},
+            {itemId = 3864, dropChance = 1.0}
+        }
+    },
+
+    -- Witherbark Shadow Hunter
+    ["Witherbark Shadow Hunter"] = {
+        npcId = 2557,
+        level = {35, 36},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 38.6},
+            {itemId = 5427, dropChance = 36.7},
+            {itemId = 3771, dropChance = 16.2},
+            {itemId = 4544, dropChance = 13.0},
+            {itemId = 1710, dropChance = 7.5},
+            {itemId = 3864, dropChance = 1.7},
+            {itemId = 1529, dropChance = 0.7}
+        }
+    },
+
+    -- Witherbark Shadowcaster
+    ["Witherbark Shadowcaster"] = {
+        npcId = 2553,
+        level = {31, 32},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 5427, dropChance = 31.4},
+            {itemId = 16883, dropChance = 31.4},
+            {itemId = 3771, dropChance = 21.6},
+            {itemId = 4544, dropChance = 15.7},
+            {itemId = 1710, dropChance = 13.7}
+        }
+    },
+
+    -- Witherbark Troll
+    ["Witherbark Troll"] = {
+        npcId = 2552,
+        level = {30, 31},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16882, dropChance = 57.4},
+            {itemId = 5373, dropChance = 33.8},
+            {itemId = 4542, dropChance = 10.3},
+            {itemId = 929, dropChance = 8.8},
+            {itemId = 3770, dropChance = 7.4}
+        }
+    },
+
+    -- Witherbark Venomblood
+    ["Witherbark Venomblood"] = {
+        npcId = 2652,
+        level = {43, 43},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 44.9},
+            {itemId = 4599, dropChance = 19.6},
+            {itemId = 3928, dropChance = 15.9},
+            {itemId = 4601, dropChance = 13.8},
+            {itemId = 16884, dropChance = 13.8},
+            {itemId = 7909, dropChance = 2.2},
+            {itemId = 7910, dropChance = 0.7}
+        }
+    },
+
+    -- Witherbark Witch Doctor
+    ["Witherbark Witch Doctor"] = {
+        npcId = 2555,
+        level = {33, 34},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 37.9},
+            {itemId = 5427, dropChance = 35.6},
+            {itemId = 3771, dropChance = 12.4},
+            {itemId = 1710, dropChance = 10.6},
+            {itemId = 4544, dropChance = 10.3},
+            {itemId = 1529, dropChance = 1.4},
+            {itemId = 3864, dropChance = 1.2}
+        }
+    },
+
+    -- Witherbark Zealot
+    ["Witherbark Zealot"] = {
+        npcId = 2650,
+        level = {41, 42},
+        zone = "The Hinterlands",
+        loot = {
+            {itemId = 5428, dropChance = 44.5},
+            {itemId = 16884, dropChance = 16.5},
+            {itemId = 4599, dropChance = 16.2},
+            {itemId = 4601, dropChance = 16.2},
+            {itemId = 3928, dropChance = 12.1},
+            {itemId = 7910, dropChance = 1.6},
+            {itemId = 7909, dropChance = 0.8}
         }
     },
 
@@ -13913,6 +26512,93 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Wrathtail Myrmidon
+    ["Wrathtail Myrmidon"] = {
+        npcId = 3711,
+        level = {20, 21},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5371, dropChance = 45.8},
+            {itemId = 6289, dropChance = 39.6},
+            {itemId = 858, dropChance = 10.4},
+            {itemId = 818, dropChance = 4.2}
+        }
+    },
+
+    -- Wrathtail Priestess
+    ["Wrathtail Priestess"] = {
+        npcId = 3944,
+        level = {20, 21},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5371, dropChance = 45.2},
+            {itemId = 6289, dropChance = 33.3},
+            {itemId = 858, dropChance = 11.9},
+            {itemId = 818, dropChance = 7.1},
+            {itemId = 1210, dropChance = 2.4},
+            {itemId = 7288, dropChance = 2.4}
+        }
+    },
+
+    -- Wrathtail Razortail
+    ["Wrathtail Razortail"] = {
+        npcId = 3712,
+        level = {19, 20},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5371, dropChance = 50.0},
+            {itemId = 6289, dropChance = 36.0},
+            {itemId = 858, dropChance = 17.4},
+            {itemId = 818, dropChance = 4.7},
+            {itemId = 1210, dropChance = 4.7}
+        }
+    },
+
+    -- Wrathtail Sea Witch
+    ["Wrathtail Sea Witch"] = {
+        npcId = 3715,
+        level = {19, 20},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5371, dropChance = 45.6},
+            {itemId = 858, dropChance = 29.4},
+            {itemId = 6289, dropChance = 27.9},
+            {itemId = 818, dropChance = 7.4},
+            {itemId = 1210, dropChance = 1.5},
+            {itemId = 6271, dropChance = 1.5}
+        }
+    },
+
+    -- Wrathtail Sorceress
+    ["Wrathtail Sorceress"] = {
+        npcId = 3717,
+        level = {18, 19},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5371, dropChance = 56.0},
+            {itemId = 6289, dropChance = 35.9},
+            {itemId = 858, dropChance = 11.5},
+            {itemId = 818, dropChance = 2.5},
+            {itemId = 1210, dropChance = 2.5}
+        }
+    },
+
+    -- Wrathtail Wave Rider
+    ["Wrathtail Wave Rider"] = {
+        npcId = 3713,
+        level = {18, 19},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 5371, dropChance = 47.8},
+            {itemId = 6289, dropChance = 38.9},
+            {itemId = 858, dropChance = 14.1},
+            {itemId = 1210, dropChance = 3.7},
+            {itemId = 818, dropChance = 2.3},
+            {itemId = 2407, dropChance = 0.3},
+            {itemId = 6716, dropChance = 0.3}
+        }
+    },
+
     -- Wretched Lost One
     ["Wretched Lost One"] = {
         npcId = 5979,
@@ -13923,6 +26609,23 @@ DB.PickpocketLoot = {
             {itemId = 5430, dropChance = 28.6},
             {itemId = 16884, dropChance = 28.6},
             {itemId = 3928, dropChance = 16.3}
+        }
+    },
+
+    -- Wretched Zombie
+    ["Wretched Zombie"] = {
+        npcId = 1502,
+        level = {1, 2},
+        zone = "Tirisfal Glades",
+        loot = {
+            {itemId = 5362, dropChance = 50.6},
+            {itemId = 4604, dropChance = 37.7},
+            {itemId = 118, dropChance = 14.3},
+            {itemId = 774, dropChance = 3.5},
+            {itemId = 2649, dropChance = 0.4},
+            {itemId = 3363, dropChance = 0.4},
+            {itemId = 3609, dropChance = 0.4},
+            {itemId = 7074, dropChance = 0.4}
         }
     },
 
@@ -13952,6 +26655,100 @@ DB.PickpocketLoot = {
         }
     },
 
+    -- Xavian Betrayer
+    ["Xavian Betrayer"] = {
+        npcId = 3754,
+        level = {28, 29},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 59.6},
+            {itemId = 5375, dropChance = 38.3},
+            {itemId = 3770, dropChance = 12.8},
+            {itemId = 929, dropChance = 4.3}
+        }
+    },
+
+    -- Xavian Felsworn
+    ["Xavian Felsworn"] = {
+        npcId = 3755,
+        level = {28, 29},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 55.1},
+            {itemId = 5375, dropChance = 30.9},
+            {itemId = 3770, dropChance = 18.8},
+            {itemId = 929, dropChance = 10.6},
+            {itemId = 1206, dropChance = 1.0}
+        }
+    },
+
+    -- Xavian Hellcaller
+    ["Xavian Hellcaller"] = {
+        npcId = 3757,
+        level = {29, 30},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 65.6},
+            {itemId = 5375, dropChance = 22.7},
+            {itemId = 3770, dropChance = 15.3},
+            {itemId = 929, dropChance = 9.8},
+            {itemId = 1705, dropChance = 2.5}
+        }
+    },
+
+    -- Xavian Rogue
+    ["Xavian Rogue"] = {
+        npcId = 3752,
+        level = {29, 30},
+        zone = "Ashenvale",
+        loot = {
+            {itemId = 16882, dropChance = 53.6},
+            {itemId = 5375, dropChance = 26.3},
+            {itemId = 3770, dropChance = 23.4},
+            {itemId = 929, dropChance = 6.9},
+            {itemId = 1206, dropChance = 1.5}
+        }
+    },
+
+    -- Yarrog Baneshadow
+    ["Yarrog Baneshadow"] = {
+        npcId = 3183,
+        level = {5, 5},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5367, dropChance = 71.4},
+            {itemId = 4540, dropChance = 57.1}
+        }
+    },
+
+    -- Yenniku
+    ["Yenniku"] = {
+        npcId = 2530,
+        level = {41, 41},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 35.1},
+            {itemId = 4599, dropChance = 21.6},
+            {itemId = 4601, dropChance = 21.6},
+            {itemId = 16884, dropChance = 21.6},
+            {itemId = 3928, dropChance = 8.1},
+            {itemId = 7909, dropChance = 2.7}
+        }
+    },
+
+    -- Yowler
+    ["Yowler"] = {
+        npcId = 518,
+        level = {25, 25},
+        zone = "Redridge Mountains",
+        loot = {
+            {itemId = 16882, dropChance = 45.5},
+            {itemId = 5375, dropChance = 40.9},
+            {itemId = 929, dropChance = 13.6},
+            {itemId = 3770, dropChance = 9.1}
+        }
+    },
+
     -- Zaeldarr the Outcast
     ["Zaeldarr the Outcast"] = {
         npcId = 12250,
@@ -13963,6 +26760,93 @@ DB.PickpocketLoot = {
             {itemId = 8952, dropChance = 13.8},
             {itemId = 3928, dropChance = 13.8},
             {itemId = 16885, dropChance = 13.8}
+        }
+    },
+
+    -- Zalazane
+    ["Zalazane"] = {
+        npcId = 3205,
+        level = {10, 10},
+        zone = "Durotar",
+        loot = {
+            {itemId = 5367, dropChance = 55.6},
+            {itemId = 4540, dropChance = 33.3},
+            {itemId = 118, dropChance = 22.2}
+        }
+    },
+
+    -- Zanzil Hunter
+    ["Zanzil Hunter"] = {
+        npcId = 1489,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 3419, dropChance = 38.5},
+            {itemId = 4608, dropChance = 35.5},
+            {itemId = 16884, dropChance = 22.1},
+            {itemId = 3928, dropChance = 12.2},
+            {itemId = 7910, dropChance = 0.9},
+            {itemId = 7909, dropChance = 0.6}
+        }
+    },
+
+    -- Zanzil Naga
+    ["Zanzil Naga"] = {
+        npcId = 1491,
+        level = {44, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 3419, dropChance = 48.8},
+            {itemId = 4608, dropChance = 29.0},
+            {itemId = 16884, dropChance = 18.0},
+            {itemId = 3928, dropChance = 11.5},
+            {itemId = 7909, dropChance = 1.8},
+            {itemId = 7910, dropChance = 0.9}
+        }
+    },
+
+    -- Zanzil Witch Doctor
+    ["Zanzil Witch Doctor"] = {
+        npcId = 1490,
+        level = {44, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 45.7},
+            {itemId = 16884, dropChance = 18.1},
+            {itemId = 4599, dropChance = 17.6},
+            {itemId = 4601, dropChance = 15.1},
+            {itemId = 3928, dropChance = 13.4},
+            {itemId = 7909, dropChance = 1.5},
+            {itemId = 7910, dropChance = 0.5}
+        }
+    },
+
+    -- Zanzil Zombie
+    ["Zanzil Zombie"] = {
+        npcId = 1488,
+        level = {43, 44},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 3419, dropChance = 43.0},
+            {itemId = 4608, dropChance = 35.0},
+            {itemId = 16884, dropChance = 20.1},
+            {itemId = 3928, dropChance = 8.9},
+            {itemId = 7909, dropChance = 1.3},
+            {itemId = 7910, dropChance = 0.3}
+        }
+    },
+
+    -- Zanzil the Outcast
+    ["Zanzil the Outcast"] = {
+        npcId = 2534,
+        level = {46, 46},
+        zone = "Stranglethorn Vale",
+        loot = {
+            {itemId = 5428, dropChance = 50.0},
+            {itemId = 3928, dropChance = 25.0},
+            {itemId = 16884, dropChance = 20.0},
+            {itemId = 4599, dropChance = 10.0},
+            {itemId = 4601, dropChance = 10.0}
         }
     },
 
@@ -13979,6 +26863,18 @@ DB.PickpocketLoot = {
             {itemId = 7910, dropChance = 8.0},
             {itemId = 3928, dropChance = 4.0},
             {itemId = 7909, dropChance = 4.0}
+        }
+    },
+
+    -- Znort
+    ["Znort"] = {
+        npcId = 2765,
+        level = {39, 39},
+        zone = "Arathi Highlands",
+        loot = {
+            {itemId = 16883, dropChance = 66.7},
+            {itemId = 1710, dropChance = 16.7},
+            {itemId = 3771, dropChance = 16.7}
         }
     },
 
@@ -14035,6 +26931,20 @@ DB.PickpocketLoot = {
             {itemId = 8950, dropChance = 22.0},
             {itemId = 8952, dropChance = 19.5},
             {itemId = 3928, dropChance = 2.4}
+        }
+    },
+
+    -- Zzarc' Vul
+    ["Zzarc' Vul"] = {
+        npcId = 300,
+        level = {30, 30},
+        zone = "Duskwood",
+        loot = {
+            {itemId = 5427, dropChance = 51.5},
+            {itemId = 16883, dropChance = 27.3},
+            {itemId = 3771, dropChance = 12.1},
+            {itemId = 4544, dropChance = 12.1},
+            {itemId = 1710, dropChance = 6.1}
         }
     },
 }

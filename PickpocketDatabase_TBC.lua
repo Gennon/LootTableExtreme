@@ -1,5 +1,5 @@
 -- Auto-generated pickpocket database from Wowhead Classic
--- Generated: 2025-11-22T13:14:59.807Z
+-- Generated: 2025-11-23T16:58:24.396Z
 -- Total NPCs: 2497
 -- 
 -- This file is automatically loaded by Database.lua

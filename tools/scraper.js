@@ -34,11 +34,21 @@ class WowheadScraper {
 
     async initialize() {
         console.log('Initializing browser...');
-        this.browser = await chromium.launch({ 
-            headless: !this.debug, // Show browser in debug mode
-            timeout: 60000
+        // Launch browser with safer defaults and some flags to reduce headless detection.
+        // When debug=true, keep the browser visible; otherwise run headless but with args.
+        this.browser = await chromium.launch({
+            headless: !this.debug,
+            timeout: 60000,
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-blink-features=AutomationControlled'
+            ],
+            // Avoid the default automation arg which can reveal headless mode
+            ignoreDefaultArgs: ['--enable-automation']
         });
-        
+
         this.context = await this.browser.newContext({
             // Block notifications
             permissions: [],
@@ -79,6 +89,23 @@ class WowheadScraper {
             console.log(`⚠️  Dialog detected: ${dialog.message()}`);
             await dialog.dismiss();
         });
+        
+        // Add small anti-detection init script for each new page in this context
+        try {
+            await this.context.addInitScript(() => {
+                // navigator.webdriver -> false
+                Object.defineProperty(navigator, 'webdriver', { get: () => false });
+                // Provide a minimal chrome object
+                // eslint-disable-next-line no-undef
+                window.chrome = window.chrome || { runtime: {} };
+                // Languages
+                Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
+                // Plugins
+                Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
+            });
+        } catch (e) {
+            // Not critical if this fails
+        }
     }
     
     /**
@@ -243,10 +270,55 @@ class WowheadScraper {
             // Take initial screenshot
             await this.takeScreenshot('01_page_loaded');
 
-            // Extract enemy name from the page title or h1
+            // Log the final URL (after any server-side redirects)
+            try {
+                const finalUrl = this.page.url();
+                console.log(`✓ Final URL: ${finalUrl}`);
+            } catch (e) {
+                // ignore
+            }
+
+            // Extract enemy name from multiple possible sources (h1, og:title, document.title, meta title),
+            // or fall back to the URL slug (npc=ID may redirect to /npc=ID/slug)
             const enemyName = await this.page.evaluate(() => {
-                const h1 = document.querySelector('h1.heading-size-1');
-                return h1 ? h1.textContent.trim() : null;
+                // Helper to title-case a slug
+                function slugToName(slug) {
+                    if (!slug) return null;
+                    // remove file extension or query
+                    slug = slug.split('?')[0].split('#')[0];
+                    const parts = slug.split('/').filter(Boolean);
+                    if (parts.length === 0) return null;
+                    const last = parts[parts.length - 1];
+                    // strip numeric prefixes like npc=123 or npc=123-slug
+                    const cleaned = last.replace(/^npc=\d+-?/, '').replace(/[-_]+/g, ' ');
+                    return cleaned.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                }
+
+                // 1) Primary selector - Wowhead's H1
+                const h1 = document.querySelector('h1.heading-size-1') || document.querySelector('h1');
+                if (h1 && h1.textContent.trim()) return h1.textContent.trim();
+
+                // 2) Open Graph / meta title
+                const og = document.querySelector('meta[property="og:title"]') || document.querySelector('meta[name="title"]');
+                if (og && og.content) return og.content.trim();
+
+                // 3) Document title
+                if (document.title && document.title.trim()) {
+                    // strip site suffix like ' - Classic WoW' or similar
+                    const parts = document.title.split('-').map(p => p.trim());
+                    if (parts.length > 0) return parts[0];
+                }
+
+                // 4) Fallback: construct from URL path
+                try {
+                    const path = window.location.pathname || window.location.href;
+                    const nameFromSlug = slugToName(path);
+                    if (nameFromSlug) return nameFromSlug;
+                } catch (e) {
+                    // ignore
+                }
+
+                return null;
             });
 
             console.log(`✓ Enemy Name: ${enemyName}`);
