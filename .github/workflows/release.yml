@@ -108,10 +108,12 @@ jobs:
           rm -f package/tbc/LootTableExtreme/*_Vanilla.toc || true
           rm -f package/tbc/LootTableExtreme/LootTableExtreme.toc || true
 
-          # Zip the packages
+          # Zip the packages so each archive has LootTableExtreme/ at the root
           cd package
-          zip -r "../$VANILLA_FILE" vanilla/LootTableExtreme/ >/dev/null
-          zip -r "../$TBC_FILE" tbc/LootTableExtreme/ >/dev/null
+          # Create vanilla zip: change into the LootTableExtreme dir so the archive root is LootTableExtreme/
+          (cd vanilla && zip -r "../$VANILLA_FILE" LootTableExtreme/) >/dev/null
+          # Create tbc zip: same approach
+          (cd tbc && zip -r "../$TBC_FILE" LootTableExtreme/) >/dev/null
           cd ..
 
           echo "Created packages: $VANILLA_FILE and $TBC_FILE"
