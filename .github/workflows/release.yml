@@ -73,30 +73,49 @@ jobs:
           sed -i "s/^LootTableExtreme.version = \".*\"/LootTableExtreme.version = \"${{ steps.version.outputs.new_version }}\"/" Core.lua || true
           echo "Updated TOC files and Core.lua to version ${{ steps.version.outputs.new_version }}"
       
-      - name: Create release package
+      - name: Create release packages
         id: package
         run: |
           VERSION="${{ steps.version.outputs.new_version }}.${{ steps.build.outputs.number }}"
-          FILENAME="LootTableExtreme_${VERSION}_Vanilla.zip"
-          
+          VANILLA_FILE="LootTableExtreme_${VERSION}_Vanilla.zip"
+          TBC_FILE="LootTableExtreme_${VERSION}_TBC.zip"
+
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "filename=$FILENAME" >> $GITHUB_OUTPUT
-          
-          # Create temporary directory with addon structure
-          mkdir -p package/LootTableExtreme
-          
-          # Copy addon files (exclude tooling, git files, and metadata)
-          cp *.lua package/LootTableExtreme/
-          cp *.xml package/LootTableExtreme/
-          cp *.toc package/LootTableExtreme/
-          
-          # Create zip file
+          echo "vanilla_filename=$VANILLA_FILE" >> $GITHUB_OUTPUT
+          echo "tbc_filename=$TBC_FILE" >> $GITHUB_OUTPUT
+
+          # Prepare directories
+          rm -rf package || true
+          mkdir -p package/vanilla/LootTableExtreme
+          mkdir -p package/tbc/LootTableExtreme
+
+          # Copy all candidate addon files into both packages
+          cp *.lua package/vanilla/LootTableExtreme/ || true
+          cp *.xml package/vanilla/LootTableExtreme/ || true
+          cp *.toc package/vanilla/LootTableExtreme/ || true
+
+          cp *.lua package/tbc/LootTableExtreme/ || true
+          cp *.xml package/tbc/LootTableExtreme/ || true
+          cp *.toc package/tbc/LootTableExtreme/ || true
+
+          # For Vanilla package: remove TBC-specific files
+          rm -f package/vanilla/LootTableExtreme/*_TBC.lua || true
+          rm -f package/vanilla/LootTableExtreme/*_TBC.toc || true
+          rm -f package/vanilla/LootTableExtreme/LootTableExtreme_TBC.toc || true
+
+          # For TBC package: remove Vanilla-specific files
+          rm -f package/tbc/LootTableExtreme/*_Vanilla.lua || true
+          rm -f package/tbc/LootTableExtreme/*_Vanilla.toc || true
+          rm -f package/tbc/LootTableExtreme/LootTableExtreme.toc || true
+
+          # Zip the packages
           cd package
-          zip -r "../$FILENAME" LootTableExtreme/
+          zip -r "../$VANILLA_FILE" vanilla/LootTableExtreme/ >/dev/null
+          zip -r "../$TBC_FILE" tbc/LootTableExtreme/ >/dev/null
           cd ..
-          
-          echo "Created package: $FILENAME"
-          ls -lh "$FILENAME"
+
+          echo "Created packages: $VANILLA_FILE and $TBC_FILE"
+          ls -lh "$VANILLA_FILE" "$TBC_FILE"
       
       - name: Generate changelog
         id: changelog
@@ -128,27 +147,33 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ steps.package.outputs.version }}
-          name: LootTableExtreme v${{ steps.package.outputs.version }} (Vanilla)
+          name: LootTableExtreme v${{ steps.package.outputs.version }} (Vanilla & TBC)
           body: |
             ## LootTableExtreme v${{ steps.package.outputs.version }}
-            
-            **WoW Classic (Vanilla) Release**
-            
-            ### Installation
-            1. Download `${{ steps.package.outputs.filename }}`
+
+            **WoW Classic (Vanilla) and TBC Release**
+
+            ### Installation (Vanilla)
+            1. Download `${{ steps.package.outputs.vanilla_filename }}`
             2. Extract the zip file
             3. Move the `LootTableExtreme` folder to your `World of Warcraft\_classic_era_\Interface\AddOns\` directory
-            4. Restart WoW if it's running
-            
+
+            ### Installation (TBC)
+            1. Download `${{ steps.package.outputs.tbc_filename }}`
+            2. Extract the zip file
+            3. Move the `LootTableExtreme` folder to your `World of Warcraft\_classic_\Interface\AddOns\` directory
+
             ### Version Info
             - Base Version: ${{ steps.version.outputs.new_version }}
             - Build Number: ${{ steps.build.outputs.number }}
             - Full Version: ${{ steps.package.outputs.version }}
-            
+
             ### Changes
             ${{ steps.changelog.outputs.changes }}
           body_path: changelog.txt
-          files: ${{ steps.package.outputs.filename }}
+          files: |
+            ${{ steps.package.outputs.vanilla_filename }}
+            ${{ steps.package.outputs.tbc_filename }}
           draft: false
           prerelease: false
         env:
