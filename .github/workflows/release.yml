@@ -111,9 +111,10 @@ jobs:
           # Zip the packages so each archive has LootTableExtreme/ at the root
           cd package
           # Create vanilla zip: change into the LootTableExtreme dir so the archive root is LootTableExtreme/
-          (cd vanilla && zip -r "../$VANILLA_FILE" LootTableExtreme/) >/dev/null
+          # From package/vanilla the parent (..) is package/, so use ../../ to write to the repo root
+          (cd vanilla && zip -r "../../$VANILLA_FILE" LootTableExtreme/) >/dev/null
           # Create tbc zip: same approach
-          (cd tbc && zip -r "../$TBC_FILE" LootTableExtreme/) >/dev/null
+          (cd tbc && zip -r "../../$TBC_FILE" LootTableExtreme/) >/dev/null
           cd ..
 
           echo "Created packages: $VANILLA_FILE and $TBC_FILE"
