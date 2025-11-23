@@ -49,6 +49,29 @@ function LootTableExtreme:InitializeSettings()
             LootTableExtremeDB.pickpocket.autoShowWhenMainHidden = self:GetChecked()
         end)
     end
+
+    -- Ensure top-level defaults exist
+    if not LootTableExtremeDB then LootTableExtremeDB = {} end
+    if LootTableExtremeDB.showDropSource == nil then LootTableExtremeDB.showDropSource = true end
+    if LootTableExtremeDB.showVendorSource == nil then LootTableExtremeDB.showVendorSource = true end
+
+    -- Wire Show Drop Source checkbox
+    local showDrop = _G["LTE_ShowDropSource"]
+    if showDrop then
+        showDrop:SetChecked(LootTableExtremeDB.showDropSource)
+        showDrop:SetScript("OnClick", function(self)
+            LootTableExtremeDB.showDropSource = self:GetChecked()
+        end)
+    end
+
+    -- Wire Show Vendor Source checkbox
+    local showVendor = _G["LTE_ShowVendorSource"]
+    if showVendor then
+        showVendor:SetChecked(LootTableExtremeDB.showVendorSource)
+        showVendor:SetScript("OnClick", function(self)
+            LootTableExtremeDB.showVendorSource = self:GetChecked()
+        end)
+    end
 end
 
 function LootTableExtreme:ToggleSettings()

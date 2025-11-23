@@ -23,11 +23,17 @@ function LootTableExtreme:EnhanceItemTooltip(tooltip)
     local itemId = self:GetItemIdFromLink(itemLink)
     if not itemId then return end
     
-    -- Get top sources for this item
-    local sources = self.Database:GetTopItemSources(itemId, 3)
-    
+    -- Get top sources and vendors for this item
+    local sources = nil
+    if not LootTableExtremeDB or LootTableExtremeDB.showDropSource ~= false then
+        sources = self.Database:GetTopItemSources(itemId, 3)
+    end
+
     -- Get more vendors initially so we have enough after faction filtering
-    local allVendors = self.Database:GetTopItemVendors(itemId, 10)
+    local allVendors = nil
+    if not LootTableExtremeDB or LootTableExtremeDB.showVendorSource ~= false then
+        allVendors = self.Database:GetTopItemVendors(itemId, 10)
+    end
     
     -- Determine player faction
     local playerFaction = UnitFactionGroup("player") -- Returns "Alliance" or "Horde"
@@ -63,8 +69,9 @@ function LootTableExtreme:EnhanceItemTooltip(tooltip)
         -- Add a blank line separator
         tooltip:AddLine(" ")
     end
-    
-    if sources and #sources > 0 then
+    if LootTableExtremeDB and LootTableExtremeDB.showDropSource == false then
+        -- Do not show drop sources
+    elseif sources and #sources > 0 then
         -- Add header
         tooltip:AddLine("|cff00ff00Drop Sources:|r", 1, 1, 1)
         
@@ -82,8 +89,10 @@ function LootTableExtreme:EnhanceItemTooltip(tooltip)
             tooltip:AddLine(line, 0.8, 0.8, 0.8, true)
         end
     end
-    
-    if #accessibleVendors > 0 then
+
+    if LootTableExtremeDB and LootTableExtremeDB.showVendorSource == false then
+        -- Do not show vendor sources
+    elseif #accessibleVendors > 0 then
         -- Add header
         tooltip:AddLine("|cff00ff00Sold by:|r", 1, 1, 1)
         

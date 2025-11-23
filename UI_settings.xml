@@ -2,7 +2,7 @@
 ..\FrameXML\UI.xsd">
     <!-- Loot Table Viewer - Settings window -->
     <Frame name="LTE_Settings" parent="UIParent" frameStrata="DIALOG" toplevel="true" movable="true" enableMouse="true" hidden="true">
-        <Size x="260" y="300"/>
+        <Size x="260" y="360"/>
         <Anchors>
             <Anchor point="CENTER"/>
         </Anchors>
@@ -67,6 +67,48 @@
                         <FontString name="LTE_AutoShowPickpocketText" inherits="GameFontNormal" text="Auto-show pickpocket">
                             <Anchors>
                                 <Anchor point="LEFT" relativeTo="LTE_AutoShowPickpocket" relativePoint="RIGHT">
+                                    <Offset x="5" y="0"/>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </CheckButton>
+
+            <!-- Show drop source checkbox -->
+            <CheckButton name="LTE_ShowDropSource" inherits="UICheckButtonTemplate">
+                <Size x="24" y="24"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="LTE_AutoShowPickpocket" relativePoint="BOTTOMLEFT">
+                        <Offset x="0" y="-8"/>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="ARTWORK">                        
+                        <FontString name="LTE_ShowDropSourceText" inherits="GameFontNormal" text="Show drop source">
+                            <Anchors>
+                                <Anchor point="LEFT" relativeTo="LTE_ShowDropSource" relativePoint="RIGHT">
+                                    <Offset x="5" y="0"/>
+                                </Anchor>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </CheckButton>
+
+            <!-- Show vendor source checkbox -->
+            <CheckButton name="LTE_ShowVendorSource" inherits="UICheckButtonTemplate">
+                <Size x="24" y="24"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="LTE_ShowDropSource" relativePoint="BOTTOMLEFT">
+                        <Offset x="0" y="-8"/>
+                    </Anchor>
+                </Anchors>
+                <Layers>
+                    <Layer level="ARTWORK">                        
+                        <FontString name="LTE_ShowVendorSourceText" inherits="GameFontNormal" text="Show vendor source">
+                            <Anchors>
+                                <Anchor point="LEFT" relativeTo="LTE_ShowVendorSource" relativePoint="RIGHT">
                                     <Offset x="5" y="0"/>
                                 </Anchor>
                             </Anchors>
