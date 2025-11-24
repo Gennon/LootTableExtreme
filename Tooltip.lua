@@ -254,10 +254,41 @@ function LootTableExtreme:InitializeMinimapButton()
     
     -- Click handler
     minimapButton:SetScript("OnClick", function(self, button)
-        if button == "LeftButton" then
-            LootTableExtreme:ToggleLootFrame()
-        elseif button == "RightButton" then
+        -- Normalize button string and check modifiers
+        local btn = tostring(button or "")
+
+        -- Shift + Left click: toggle pickpocket auto-show setting
+        if IsShiftKeyDown() and string.find(btn, "Left") then
+            if not LootTableExtremeDB then LootTableExtremeDB = {} end
+            if not LootTableExtremeDB.pickpocket then LootTableExtremeDB.pickpocket = {} end
+            LootTableExtremeDB.pickpocket.autoShowWhenMainHidden = not LootTableExtremeDB.pickpocket.autoShowWhenMainHidden
+            if LootTableExtremeDB.pickpocket.autoShowWhenMainHidden then
+                LootTableExtreme:Print("Pickpocket auto-show when main hidden: ON")
+            else
+                LootTableExtreme:Print("Pickpocket auto-show when main hidden: OFF")
+            end
+
+            -- If settings UI exists, update the checkbox state to reflect the change
+            local checkbox = _G and _G["LTE_AutoShowPickpocket"]
+            if checkbox and checkbox.SetChecked then
+                checkbox:SetChecked(LootTableExtremeDB.pickpocket.autoShowWhenMainHidden)
+            end
+
+            return
+        end
+
+        -- Plain Left click: show target loot (moved from Right click)
+        if string.find(btn, "Left") then
             LootTableExtreme:ShowTargetLoot()
+            return
+        end
+
+        -- Right click: toggle settings window
+        if string.find(btn, "Right") then
+            if LootTableExtreme.ToggleSettings then
+                LootTableExtreme:ToggleSettings()
+            end
+            return
         end
     end)
     
@@ -265,8 +296,9 @@ function LootTableExtreme:InitializeMinimapButton()
     minimapButton:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_LEFT")
         GameTooltip:SetText("LootTableExtreme", 1, 1, 1)
-        GameTooltip:AddLine("Left-click: Toggle loot window", 0.8, 0.8, 0.8)
-        GameTooltip:AddLine("Right-click: Show target loot", 0.8, 0.8, 0.8)
+        GameTooltip:AddLine("Left-click: Show target loot", 0.8, 0.8, 0.8)
+        GameTooltip:AddLine("Right-click: Open settings", 0.8, 0.8, 0.8)
+        GameTooltip:AddLine("Shift+Left: Toggle pickpocket auto-show", 0.8, 0.8, 0.8)
         GameTooltip:Show()
     end)
     
