@@ -2,7 +2,7 @@
 -- Main addon initialization and core functionality
 
 LootTableExtreme = {}
-LootTableExtreme.version = "1.0.0"
+LootTableExtreme.version = "1.0.1"
 
 -- UI constants (used across modules)
 LootTableExtreme.UI_MARGIN = 10        -- standard side/top/bottom margin
