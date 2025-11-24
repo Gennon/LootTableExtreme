@@ -5,20 +5,137 @@ local frame = nil
 local scrollFrame = nil
 local lootRows = {}
 
--- Constants
-local LOOT_ROW_HEIGHT = 20
-local MAX_DISPLAYED_ROWS = 15
+-- Default constants (will be overridden by ApplyUiSize)
+local LOOT_ROW_HEIGHT = LootTableExtreme and LootTableExtreme.UI_ROW_HEIGHT or 20
+local MAX_DISPLAYED_ROWS = LootTableExtreme and LootTableExtreme.UI_MAX_ROWS or 15
+
+-- Apply UI size preset ("normal" or "small"). This updates constants used by layout
+function LootTableExtreme:ApplyUiSize(size)
+    size = size or (LootTableExtreme and LootTableExtremeDB and LootTableExtremeDB.ui and LootTableExtremeDB.ui.size) or "normal"
+    -- debug prints removed
+    if size ~= "small" then
+        -- Normal (medium) preset
+        LOOT_ROW_HEIGHT = LootTableExtreme.UI_ROW_HEIGHT_MEDIUM
+        LootTableExtreme.UI_MARGIN = LootTableExtreme.UI_MARGIN_MEDIUM
+        LootTableExtreme.UI_HEADER_HEIGHT = LootTableExtreme.UI_HEADER_HEIGHT_MEDIUM
+        LootTableExtreme.UI_ICON_SIZE = LootTableExtreme.UI_ICON_SIZE_MEDIUM
+        LootTableExtreme.UI_SCROLLBAR_WIDTH = LootTableExtreme.UI_SCROLLBAR_WIDTH_MEDIUM
+        MAX_DISPLAYED_ROWS = LootTableExtreme.UI_MAX_ROWS_MEDIUM
+        -- Default frame size in XML will be used, but ensure minimums are compatible
+        if frame and frame.SetMinResize then frame:SetMinResize(300, 250) end
+    else
+        -- Small preset
+        LOOT_ROW_HEIGHT = LootTableExtreme.UI_ROW_HEIGHT_SMALL
+        LootTableExtreme.UI_MARGIN = LootTableExtreme.UI_MARGIN_SMALL
+        LootTableExtreme.UI_HEADER_HEIGHT = LootTableExtreme.UI_HEADER_HEIGHT_SMALL
+        LootTableExtreme.UI_ICON_SIZE = LootTableExtreme.UI_ICON_SIZE_SMALL
+        LootTableExtreme.UI_SCROLLBAR_WIDTH = LootTableExtreme.UI_SCROLLBAR_WIDTH_SMALL
+        MAX_DISPLAYED_ROWS = LootTableExtreme.UI_MAX_ROWS_SMALL
+        if frame and frame.SetMinResize then frame:SetMinResize(100, 100) end
+    end
+
+    -- Update existing UI elements to reflect new sizes
+    if frame and frame:IsShown() then
+        if LootTableExtreme and LootTableExtreme.UpdateRowWidths then LootTableExtreme:UpdateRowWidths() end
+        LootTableExtreme:UpdateLootDisplay()
+    end
+    -- Update existing rows to match the new size preset
+    for i, row in pairs(lootRows) do
+        if row and row.SetHeight then
+            row:SetHeight(LOOT_ROW_HEIGHT)
+        end
+        -- update icon size
+        if row and row.icon and row.icon.SetWidth and row.icon.SetHeight then
+            local iconSize = LootTableExtreme.UI_ICON_SIZE or 16
+            row.icon:SetWidth(iconSize)
+            row.icon:SetHeight(iconSize)
+        end
+        -- update fonts for name/chance/questMarker
+        if row and row.name and row.name.SetFontObject then
+            if size == "small" then
+                row.name:SetFontObject(GameFontNormalSmall)
+            else
+                row.name:SetFontObject(GameFontNormal)
+            end
+        end
+        if row and row.chance and row.chance.SetFontObject then
+            if size == "small" then
+                row.chance:SetFontObject(GameFontNormalSmall)
+            else
+                row.chance:SetFontObject(GameFontNormal)
+            end
+        end
+        if row and row.questMarker and row.questMarker.SetFontObject then
+            if size == "small" then
+                row.questMarker:SetFontObject(GameFontNormalSmall)
+            else
+                row.questMarker:SetFontObject(GameFontNormal)
+            end
+        end
+        -- adjust name anchor relative to icon using current margin
+        if row and row.name and row.icon and row.name.ClearAllPoints and row.name.SetPoint then
+            local margin = LootTableExtreme.UI_MARGIN or 8
+            row.name:ClearAllPoints()
+            row.name:SetPoint("LEFT", row.icon, "RIGHT", margin / 2, 0)
+        end
+    end
+    -- Adjust header frame height if present and log diagnostics
+    local header = _G["LootTableExtremeFrameHeader"]
+    if header and header.SetHeight and LootTableExtreme.UI_HEADER_HEIGHT and frame then
+        local ok, oldH = pcall(function() return header:GetHeight() end)
+        if not ok then oldH = "?" end
+        -- Re-anchor header to the main frame to enforce size/width
+        header:ClearAllPoints()
+        header:SetPoint("TOPLEFT", frame, "TOPLEFT", 0, 0)
+        header:SetPoint("TOPRIGHT", frame, "TOPRIGHT", 0, 0)
+        header:SetHeight(LootTableExtreme.UI_HEADER_HEIGHT)
+        -- header re-anchored (debug print removed)
+    else
+        -- header not found or cannot set height (debug print removed)
+    end
+    -- Re-anchor the scroll frame to the header bottom to ensure it moves up/down
+    local scroll = _G["LootTableExtremeFrameScrollFrame"]
+    if scroll and scroll.ClearAllPoints and header and frame then
+        scroll:ClearAllPoints()
+        local xOff = LootTableExtreme.UI_MARGIN or 8
+        local yOff = -(LootTableExtreme.UI_MARGIN + 4)
+        -- Anchor scroll frame below header and to the right/bottom edges of the main frame
+        scroll:SetPoint("TOPLEFT", header, "BOTTOMLEFT", xOff, yOff)
+        scroll:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", - (LootTableExtreme.UI_SCROLLBAR_WIDTH + 8), LootTableExtreme.UI_MARGIN + 20)
+    end
+    -- Adjust header title/subtitle fonts and anchors for small vs normal
+    local title = _G["LootTableExtremeFrameHeaderTitle"]
+    local subtitle = _G["LootTableExtremeFrameHeaderSubtitle"]
+    if title then
+        if size == "small" then
+            if title.SetFontObject then title:SetFontObject(GameFontNormal) end
+            title:ClearAllPoints()
+            title:SetPoint("TOPLEFT", header or frame, "TOPLEFT", 6, -6)
+        else
+            if title.SetFontObject then title:SetFontObject(GameFontNormalLarge) end
+            title:ClearAllPoints()
+            title:SetPoint("TOPLEFT", header or frame, "TOPLEFT", 10, -10)
+        end
+    end
+    if subtitle then
+        if size == "small" then
+            if subtitle.SetFontObject then subtitle:SetFontObject(GameFontNormalSmall) end
+            subtitle:ClearAllPoints()
+            subtitle:SetPoint("TOPLEFT", title or header or frame, "BOTTOMLEFT", 0, -3)
+        else
+            if subtitle.SetFontObject then subtitle:SetFontObject(GameFontNormal) end
+            subtitle:ClearAllPoints()
+            subtitle:SetPoint("TOPLEFT", title or header or frame, "BOTTOMLEFT", 0, -5)
+        end
+    end
+end
 
 -- Debug flag for layout/scroll diagnostics (set to true to enable)
 local LTX_DEBUG = false
 
 local function LTX_Debug(msg)
-    if not LTX_DEBUG then return end
-    if LootTableExtreme and LootTableExtreme.Print then
-        LootTableExtreme:Print(msg)
-    elseif DEFAULT_CHAT_FRAME and DEFAULT_CHAT_FRAME.AddMessage then
-        DEFAULT_CHAT_FRAME:AddMessage("[LTE-debug] " .. tostring(msg))
-    end
+    -- no-op debug helper (disabled)
+    return
 end
 
 -- Current state
@@ -196,27 +313,41 @@ local function CreateOrGetRow(index)
     local w = 300
     if parent and parent.GetWidth then
         local ok, pw = pcall(function() return parent:GetWidth() end)
-        if ok and pw then w = pw - (LootTableExtreme.UI_SCROLLBAR_WIDTH or 0) end
+        if ok and pw then w = pw - LootTableExtreme.UI_SCROLLBAR_WIDTH end
     end
     row:SetWidth(w)
 
     row.icon = row:CreateTexture(nil, "ARTWORK")
-    row.icon:SetWidth(16)
-    row.icon:SetHeight(16)
+    local iconSize = LootTableExtreme.UI_ICON_SIZE
+    row.icon:SetWidth(iconSize)
+    row.icon:SetHeight(iconSize)
     row.icon:SetPoint("LEFT", 0, 0)
-
-    row.name = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    row.name:SetPoint("LEFT", row.icon, "RIGHT", (LootTableExtreme.UI_MARGIN or 8) / 2, 0)
+    -- Name font should follow the UI size preset
+    local nameFont = "GameFontNormal"
+    if LootTableExtreme and LootTableExtreme.UI_ICON_SIZE and LootTableExtreme.UI_ICON_SIZE == LootTableExtreme.UI_ICON_SIZE_SMALL then
+        nameFont = "GameFontNormalSmall"
+    end
+    row.name = row:CreateFontString(nil, "ARTWORK", nameFont)
+    local margin = LootTableExtreme.UI_MARGIN
+    row.name:SetPoint("LEFT", row.icon, "RIGHT", margin / 2, 0)
     row.name:SetWidth(250)
     row.name:SetJustifyH("LEFT")
 
-    row.chance = row:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-    row.chance:SetPoint("RIGHT", LootTableExtreme.UI_MARGIN, 0)
+    local chanceFont = "GameFontNormal"
+    if LootTableExtreme and LootTableExtreme.UI_ICON_SIZE and LootTableExtreme.UI_ICON_SIZE == LootTableExtreme.UI_ICON_SIZE_SMALL then
+        chanceFont = "GameFontNormalSmall"
+    end
+    row.chance = row:CreateFontString(nil, "ARTWORK", chanceFont)
+    row.chance:SetPoint("RIGHT", margin, 0)
     row.chance:SetWidth(60)
     row.chance:SetJustifyH("RIGHT")
 
-    row.questMarker = row:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", LootTableExtreme.UI_MARGIN, 0)
+    local questFont = "GameFontNormal"
+    if LootTableExtreme and LootTableExtreme.UI_ICON_SIZE and LootTableExtreme.UI_ICON_SIZE == LootTableExtreme.UI_ICON_SIZE_SMALL then
+        questFont = "GameFontNormalSmall"
+    end
+    row.questMarker = row:CreateFontString(nil, "OVERLAY", questFont)
+    row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", margin, 0)
     row.questMarker:SetText("Q")
     row.questMarker:SetTextColor(1, 0.82, 0)
     row.questMarker:SetJustifyH("RIGHT")
@@ -245,7 +376,7 @@ local function UpdateRowWidths()
     local ok, frameWidth = pcall(function() return scrollFrame:GetWidth() end)
     if not ok or not frameWidth then return end
     
-    local rowWidth = frameWidth - (LootTableExtreme.UI_SCROLLBAR_WIDTH or 16)
+    local rowWidth = frameWidth - LootTableExtreme.UI_SCROLLBAR_WIDTH
     
     for _, row in pairs(lootRows) do
         if row and row.SetWidth then
@@ -259,6 +390,9 @@ local function UpdateRowWidths()
         end
     end
 end
+
+-- Expose for other modules to call
+LootTableExtreme.UpdateRowWidths = UpdateRowWidths
 
 -- Top-level helpers for InitializeLootFrame (moved out for clarity & testability)
 local function SetupBackground()
@@ -312,7 +446,7 @@ end
 
 local function SetupEmptyMessage()
     if scrollFrame and not emptyMessage then
-        emptyMessage = scrollFrame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
+        emptyMessage = scrollFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
         emptyMessage:SetPoint("CENTER", scrollFrame, "CENTER", 0, 0)
         emptyMessage:SetText("No loot available")
         emptyMessage:SetJustifyH("CENTER")
@@ -372,6 +506,9 @@ function LootTableExtreme:InitializeLootFrame()
     scrollFrame = _G["LootTableExtremeFrameScrollFrame"]
     if not frame then return end
 
+    -- Apply UI size preset from saved settings (before creating rows)
+    if LootTableExtreme.ApplyUiSize then LootTableExtreme:ApplyUiSize() end
+
     -- Run all initialization steps (helpers are defined at file scope)
     SetupBackground()
     if scrollFrame and scrollFrame.Show then scrollFrame:Show() end
@@ -385,6 +522,18 @@ function LootTableExtreme:InitializeLootFrame()
         LootTableExtreme:InitializeSettings()
     end
     SetupCloseButton()
+    -- Ensure sizes are applied when the frame is shown (covers cases where XML resets anchors after init)
+    if not frame._LTX_OnShowApplySize then
+        frame:SetScript("OnShow", function(self)
+            if LootTableExtreme and LootTableExtreme.ApplyUiSize then
+                LootTableExtreme:ApplyUiSize(LootTableExtremeDB and LootTableExtremeDB.ui and LootTableExtremeDB.ui.size)
+            end
+            -- Recompute widths/layout
+            UpdateRowWidths()
+            LootTableExtreme:UpdateLootDisplay()
+        end)
+        frame._LTX_OnShowApplySize = true
+    end
 end
 
 -- Show loot for a specific NPC (by name or NPC ID)
@@ -401,7 +550,7 @@ function LootTableExtreme:ShowNpcLoot(npcNameOrId)
     
     if not npcData then
         -- No data found: show an empty window instead of returning so old loot doesn't remain visible
-        self:Print("No loot data found for: " .. tostring(npcNameOrId))
+        self:Print("No loot data found for:\n" .. tostring(npcNameOrId))
 
         -- Use a display name for headers (prefer the in-game unit name if targetable)
         local displayName = nil
@@ -445,7 +594,7 @@ function LootTableExtreme:ShowNpcLoot(npcNameOrId)
         filteredLoot = {}
         -- Update the empty message text to be more specific
         if emptyMessage then
-            emptyMessage:SetText("No loot recorded for: " .. displayName)
+            emptyMessage:SetText("No loot recorded for: \n" .. displayName)
         end
         self:UpdateLootDisplay()
         if frame then frame:Show() end

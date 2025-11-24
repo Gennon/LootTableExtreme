@@ -158,27 +158,29 @@ local function CreateOrGetRow(index)
     local w = 300
     if parent and parent.GetWidth then
         local ok, pw = pcall(function() return parent:GetWidth() end)
-        if ok and pw then w = pw - (LootTableExtreme.UI_SCROLLBAR_WIDTH or 0) end
+        if ok and pw then w = pw - LootTableExtreme.UI_SCROLLBAR_WIDTH end
     end
     row:SetWidth(w)
 
     row.icon = row:CreateTexture(nil, "ARTWORK")
-    row.icon:SetWidth(16)
-    row.icon:SetHeight(16)
-    row.icon:SetPoint("LEFT", row, "LEFT", 4, 0)
+    local iconSize = LootTableExtreme.UI_ICON_SIZE
+    row.icon:SetWidth(iconSize)
+    row.icon:SetHeight(iconSize)
+    local margin = LootTableExtreme.UI_MARGIN
+    row.icon:SetPoint("LEFT", row, "LEFT", margin / 2, 0)
 
     row.name = row:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
-    row.name:SetPoint("LEFT", row.icon, "RIGHT", (LootTableExtreme.UI_MARGIN or 8) / 2, 0)
+    row.name:SetPoint("LEFT", row.icon, "RIGHT", margin / 2, 0)
     row.name:SetWidth(180)
     row.name:SetJustifyH("LEFT")
 
     row.chance = row:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
-    row.chance:SetPoint("RIGHT", row, "RIGHT", (LootTableExtreme.UI_MARGIN or 8)*2, 0)
+    row.chance:SetPoint("RIGHT", row, "RIGHT", margin*2, 0)
     row.chance:SetWidth(40)
     row.chance:SetJustifyH("RIGHT")
 
     row.questMarker = row:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", -(LootTableExtreme.UI_MARGIN or 6), 0)
+    row.questMarker:SetPoint("RIGHT", row.chance, "LEFT", -margin, 0)
     row.questMarker:SetText("Q")
     row.questMarker:SetTextColor(1, 0.82, 0)
     row.questMarker:SetJustifyH("RIGHT")

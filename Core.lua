@@ -8,6 +8,31 @@ LootTableExtreme.version = "1.0.0"
 LootTableExtreme.UI_MARGIN = 10        -- standard side/top/bottom margin
 LootTableExtreme.UI_HEADER_HEIGHT = 50 -- header height used in XML
 LootTableExtreme.UI_SCROLLBAR_WIDTH = 20 -- width of the scrollbar
+-- Additional size variants for compact/medium layouts
+LootTableExtreme.UI_ICON_SIZE_SMALL = 14
+LootTableExtreme.UI_ICON_SIZE_MEDIUM = 16
+LootTableExtreme.UI_MARGIN_SMALL = 6
+LootTableExtreme.UI_MARGIN_MEDIUM = 10
+
+-- Additional UI size variants
+LootTableExtreme.UI_HEADER_HEIGHT_SMALL = 38
+LootTableExtreme.UI_HEADER_HEIGHT_MEDIUM = 50
+LootTableExtreme.UI_SCROLLBAR_WIDTH_SMALL = 16
+LootTableExtreme.UI_SCROLLBAR_WIDTH_MEDIUM = 20
+LootTableExtreme.UI_ROW_HEIGHT_SMALL = 16
+LootTableExtreme.UI_ROW_HEIGHT_MEDIUM = 20
+LootTableExtreme.UI_MAX_ROWS_SMALL = 12
+LootTableExtreme.UI_MAX_ROWS_MEDIUM = 15
+
+-- Initialize active UI constants to medium defaults so other modules don't need
+-- to repeatedly fall back to hardcoded numbers.
+LootTableExtreme.UI_ICON_SIZE = LootTableExtreme.UI_ICON_SIZE or LootTableExtreme.UI_ICON_SIZE_MEDIUM
+LootTableExtreme.UI_MARGIN = LootTableExtreme.UI_MARGIN or LootTableExtreme.UI_MARGIN_MEDIUM
+-- Initialize other active UI constants to medium defaults
+LootTableExtreme.UI_HEADER_HEIGHT = LootTableExtreme.UI_HEADER_HEIGHT or LootTableExtreme.UI_HEADER_HEIGHT_MEDIUM
+LootTableExtreme.UI_SCROLLBAR_WIDTH = LootTableExtreme.UI_SCROLLBAR_WIDTH or LootTableExtreme.UI_SCROLLBAR_WIDTH_MEDIUM
+LootTableExtreme.UI_ROW_HEIGHT = LootTableExtreme.UI_ROW_HEIGHT or LootTableExtreme.UI_ROW_HEIGHT_MEDIUM
+LootTableExtreme.UI_MAX_ROWS = LootTableExtreme.UI_MAX_ROWS or LootTableExtreme.UI_MAX_ROWS_MEDIUM
 
 
 -- Default settings
@@ -30,6 +55,10 @@ local defaults = {
         -- targeting an NPC that can be pickpocketed, but only when the main
         -- loot window is NOT visible.
         autoShowWhenMainHidden = false,
+    },
+    ui = {
+        -- Available values: "normal", "small"
+        size = "normal",
     },
 }
 

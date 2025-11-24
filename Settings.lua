@@ -54,6 +54,8 @@ function LootTableExtreme:InitializeSettings()
     if not LootTableExtremeDB then LootTableExtremeDB = {} end
     if LootTableExtremeDB.showDropSource == nil then LootTableExtremeDB.showDropSource = true end
     if LootTableExtremeDB.showVendorSource == nil then LootTableExtremeDB.showVendorSource = true end
+    if not LootTableExtremeDB.ui then LootTableExtremeDB.ui = {} end
+    if LootTableExtremeDB.ui.size == nil then LootTableExtremeDB.ui.size = "normal" end
 
     -- Wire Show Drop Source checkbox
     local showDrop = _G["LTE_ShowDropSource"]
@@ -70,6 +72,20 @@ function LootTableExtreme:InitializeSettings()
         showVendor:SetChecked(LootTableExtremeDB.showVendorSource)
         showVendor:SetScript("OnClick", function(self)
             LootTableExtremeDB.showVendorSource = self:GetChecked()
+        end)
+    end
+
+    -- Wire UI size checkbox
+    local uiSmall = _G["LTE_UseSmallUI"]
+    if uiSmall then
+        uiSmall:SetChecked(LootTableExtremeDB.ui.size == "small")
+        uiSmall:SetScript("OnClick", function(self)
+            if not LootTableExtremeDB then LootTableExtremeDB = {} end
+            if not LootTableExtremeDB.ui then LootTableExtremeDB.ui = {} end
+            LootTableExtremeDB.ui.size = self:GetChecked() and "small" or "normal"
+            if LootTableExtreme.ApplyUiSize then
+                LootTableExtreme:ApplyUiSize(LootTableExtremeDB.ui.size)
+            end
         end)
     end
 end

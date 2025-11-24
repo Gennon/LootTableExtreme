@@ -7,7 +7,7 @@
             <Anchor point="CENTER"/>
         </Anchors>
         <ResizeBounds>
-            <minResize x="300" y="250"/>
+            <minResize x="200" y="150"/>
             <maxResize x="600" y="600"/>
         </ResizeBounds>
 
