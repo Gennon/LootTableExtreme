@@ -92,15 +92,16 @@ A World of Warcraft Classic addon that provides comprehensive loot table informa
 
 ### Minimap Button
 
-- **Left-click**: Open/close the loot table viewer
-- **Right-click**: Show loot for your current target
+- **Left-click**: Show loot for your current target
+- **Right-click**: Open settings
+- **Shift + Left-click**: Toggle pickpocket auto-show when main window is hidden
 - **Drag**: Reposition the button around the minimap
 
 ### Loot Table Viewer
 
 The main window allows you to:
 
-1. **Show target loot**: Click "Show Target" button or target an NPC and right-click the minimap button
+1. **Show target loot**: Click the "Show Target" button or target an NPC and left-click the minimap button
 2. **Filter items**: Use the checkboxes to show/hide specific item qualities
 3. **Adjust minimum drop chance**: Use the slider to only show items above a certain drop percentage
 
